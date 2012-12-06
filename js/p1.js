@@ -458,7 +458,7 @@
           $session.popover("destroy");
 
           // Unschedule session in the database
-          unscheduleSession(allSession[id]);
+          unscheduleSession(allSessions[id]);
           console.log(unscheduled);
 
           $(".selected").removeClass("selected");
