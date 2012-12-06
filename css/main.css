@@ -1,0 +1,163 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+            body {
+                font-size: 12px;
+            }
+
+
+            .left-sidebar, .main {
+                margin-left: 10px;
+            }
+
+/* ==========================================================================
+   Left Sidebar with options
+   ========================================================================== */
+
+            .left-sidebar {
+                /*position: fixed;*/
+            }
+
+            .left-sidebar h4 {
+                margin: 0px;
+            }
+
+            .left-sidebar li {
+                line-height: 18px;               
+            }
+
+            .view-option-active {
+                font-weight: bold;
+                background-color: #dddddd;
+            }
+            
+/* ==========================================================================
+   Main program
+   ========================================================================== */
+
+            #program {
+                border-color: #bbbbbb;
+            }
+
+            #program .cell {
+                font-size: 10px;
+                padding: 3px;
+                line-height: 12px;
+                border-color: #bbbbbb;
+            }
+
+            #program .slot, div#unscheduled .slot {
+                font-size: 10px;
+                cursor: pointer;
+                line-height: 12px;
+            }
+
+            #program .cell .title, div#unscheduled .cell .title {
+                width: 48px;
+                height: 38px;                
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+
+            #program .cell .display, div#unscheduled .cell .display {
+                width: 48px;
+                height: 30px;
+                border-top: solid 1px #dddddd;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                color: #aaaaaa;
+            }
+
+            #program .cell .display .icon, div#unscheduled .cell .display .icon {
+                width: 24px;
+            }
+
+            #program .header-row {
+                /*position: fixed;*/
+            }
+
+            #program .selected {
+                background: #ffb7b7;
+            }
+
+            #program .swap-selected {
+                background: yellow;
+            }
+
+            #program .empty {
+                background: #eeeeee;
+            }
+
+            #program .proposed-swap {
+                background: #FF8C00;
+                cursor: pointer;
+            }
+
+            #program .highlight {
+            	outline: 2px solid black;
+            }
+
+
+/* ==========================================================================
+   Unscheduled workspace
+   ========================================================================== */
+
+            div#unscheduled {
+                border: solid 1px #dddddd;
+                height: 71px;
+                margin-bottom: 15px;
+            }
+
+            div#unscheduled .slot {
+                border: solid 1px #dddddd;
+            }
+
+/* ==========================================================================
+   Interface snippets
+   ========================================================================== */
+
+            /* apply alternating gray in the paper listing inside a popover */
+            .list-submissions li {
+                padding: 5px;
+            }
+
+            .list-submissions li:nth-child(even) {
+                background: #dddddd;
+            }
+
+            /* color-coded rectangle in the legend */
+            .palette {
+                padding-left: 10px;
+                margin-left: 3px;
+                margin-right: 2px;
+                cursor: pointer;
+            }
+
+            .popover {
+                width: 400px;
+            }
+            .popover-inner {
+                width: 400px;
+                font-size: 11px;
+            }
+
+            .popover-inner li {
+                line-height: 12px;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
