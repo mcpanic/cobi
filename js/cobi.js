@@ -40,6 +40,7 @@ function unscheduleSession(s){
     allSessions[s.id]['time'] = "";
     allSessions[s.id]['room'] = "";
     allSessions[s.id]['endTime'] = "";
+    unscheduled[s.id] = s;
 
     // unschedule on server
         $.ajax({
