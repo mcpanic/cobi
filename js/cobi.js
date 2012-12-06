@@ -13,7 +13,7 @@ function loadSchedule(){
     // load scheduled sessions
    $.ajax({
 	   async: false,
-	    type: 'GET',
+	    type: 'GET',		
 		url: "http://people.csail.mit.edu/hqz/cobi/php/loadDBtoJSON.php",
 	       success: function(m){
 	       //  alert(JSON.stringify(m));
