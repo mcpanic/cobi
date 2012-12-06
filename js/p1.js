@@ -732,6 +732,12 @@
 	    return false;
 	});
 
+     function displayUnscheduled(){
+          keys(unscheduled).map(function(session){
+               var cell = getSessionCell(session);
+               $("#unscheduled").append(cell);           
+          });
+     }
 
 	function displayConstraints(){
      	$.each(constraints_list, function(index, constraint){
@@ -821,6 +827,7 @@
 	     scheduleMatrix = makeProgram();
 	     displayProgram(scheduleMatrix);
 
+          displayUnscheduled();
      	displayConstraints();
      	displayViewOptions();
      	displayPersonas();
