@@ -14,7 +14,7 @@ function loadSchedule(){
    $.ajax({
 	   async: false,
 	    type: 'GET',
-		url: "http://people.csail.mit.edu/hqz/cobi/php/loadDBtoJSON.php",
+		url: "./php/loadDBtoJSON.php",
 	       success: function(m){
 	       //  alert(JSON.stringify(m));
 	       schedule = m['schedule'];
@@ -52,7 +52,7 @@ function unscheduleSession(s){
 			time: stime,
 			room: sroom
 			}, 
-		url: "http://people.csail.mit.edu/hqz/cobi/php/changeSchedule.php",
+		url: "./php/changeSchedule.php",
 		success: function(m){
 		
  	    },
@@ -86,7 +86,7 @@ function scheduleSession(s, sdate, stime, sroom, sendTime){
 			time: stime,
 			room: sroom,
 			endTime: s.endTime}, 
-		url: "http://people.csail.mit.edu/hqz/cobi/php/changeSchedule.php",
+		url: "./php/changeSchedule.php",
 		success: function(m){
 		
  	    },
@@ -135,7 +135,7 @@ function swapSessions(s1, s2){
 			s2time: s2time,
 			s2room: s2room
 			}, 
-		url: "http://people.csail.mit.edu/hqz/cobi/php/changeSchedule.php",
+		url: "./php/changeSchedule.php",
 		success: function(m){
 		
  	    },
