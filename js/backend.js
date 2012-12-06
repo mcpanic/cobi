@@ -1,7 +1,7 @@
 // function loadSchedule(){
 //    $.ajax({
 // 	    type: 'GET',
-// 		url: "http://people.csail.mit.edu/hqz/cobi/loadDBtoJSON.php",
+// 		url: "http://people.csail.mit.edu/hqz/cobi/php/loadDBtoJSON.php",
 // 	       success: function(m){
 // 	       alert(JSON.stringify(m, undefined, 2));
 // 	   },
@@ -12,7 +12,7 @@
 function createDatabase() {
     $.ajax({
 	    type: 'POST',
-		url: "http://people.csail.mit.edu/hqz/cobi/createDb.php",
+		url: "http://people.csail.mit.edu/hqz/cobi/php/createDb.php",
 		data: 
 	    {test: "hi"},
 		success: function(m){
@@ -28,7 +28,7 @@ function sendJSON() {
 	$.ajax({
 		type: 'POST',
 		    async: false,
-		    url: "http://people.csail.mit.edu/hqz/cobi/initDBfromJSON.php",
+		    url: "http://people.csail.mit.edu/hqz/cobi/php/initDBfromJSON.php",
 		    data: {date: date,
 			mydata: JSON.stringify(schedule[date])},
 		    success: function(m){
