@@ -13,7 +13,6 @@ var frontEndOnly = false;
 function loadSchedule(){
     // load scheduled sessions
 
-    if(!frontEndOnly){
 	$.ajax({
 	   async: false,
 	    type: 'GET',
@@ -28,7 +27,7 @@ function loadSchedule(){
 	   },
 	       dataType: "json"
 	       });
-    }
+
 }
 
 // Unschedule a session
