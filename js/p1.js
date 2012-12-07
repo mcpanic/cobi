@@ -174,7 +174,7 @@
      }
 
 
-     function getPreviewSwap(dst_id, swapValues){
+     function getPreviewSwap(dst_id, swap){
           var $session = $(".selected").first();
           var id = $session.attr("id").substr(8);
           //var session = allSessions[id];
@@ -182,16 +182,17 @@
 
           //var swapValues = proposeSwap(allSessions[id]);
           var html = "";
-          html += "<h4>Overall, " + swapValues[dst_id].value
+          html += "<h4>Overall, " + swap.value
                + " conflicts will be resolved.</h4>" 
-               + "<h5>" + swapValues[dst_id].addedSrc.length + " conflicts added to source session</h5>"
-               + swapValues[dst_id].addedSrc.map(function(co) {return "<li>" + co.description + "</li>";})
-               + "<h5>" + swapValues[dst_id].removedSrc.length + " conflicts removed from source session</h5>"
-               + swapValues[dst_id].removedSrc.map(function(co) {return "<li>" + co.description + "</li>";})
-               + "<h5>" + swapValues[dst_id].addedDest.length + " conflicts added to this session</h5>"
-               + swapValues[dst_id].addedDest.map(function(co) {return "<li>" + co.description + "</li>";})
-               + "<h5>" + swapValues[dst_id].removedDest.length + " conflicts removed from this session </h5>"
-               + swapValues[dst_id].removedDest.map(function(co) {return "<li>" + co.description + "</li>";});
+               + "<h5>" + swap.addedSrc.length + " conflicts added to source session</h5>"
+               + swap.addedSrc.map(function(co) {return "<li>" + co.description + "</li>";})
+               + "<h5>" + swap.removedSrc.length + " conflicts removed from source session</h5>"
+               + swap.removedSrc.map(function(co) {return "<li>" + co.description + "</li>";})
+               + "<h5>" + swap.addedDest.length + " conflicts added to this session</h5>"
+               + swap.addedDest.map(function(co) {return "<li>" + co.description + "</li>";})
+               + "<h5>" + swap.removedDest.length + " conflicts removed from this session </h5>"
+               + swap.removedDest.map(function(co) {return "<li>" + co.description + "</li>";});
+               console.log(html);
           return html;
      }
 
@@ -218,26 +219,18 @@
 		var id = $session.attr("id").substr(8);  	
 
 		var swapValues = proposeSwap(allSessions[id]);
- 	     //console.log(JSON.stringify(swapValues));
-          var sortedSwaps = swapValues.sort(function(a, b) {return swapValues[b].value - swapValues[a].value ;});
+          swapValues.sort(function(a, b) {return b.value - a.value ;});
           //console.log(JSON.stringify(sortedSwaps));
 
  	     var swapContent = "";
- 	     for(var i = 0; i < 5; i++){
-               
- 	     	$("#program #session-" + sortedSwaps[i].target.session.id).addClass("proposed-swap");
- 		 	swapContent += "<li data-session-id='" + sortedSwaps[i].target.session.id + "'>" //+ sortedSwaps[i] 
+ 	     for(var i = 0; i < 5; i++){               
+               $("#program #session-" + swapValues[i].target.session).addClass("proposed-swap");
+ 		 	swapContent += "<li data-session-id='" + swapValues[i].target.session + "' data-rank-order='" + i + "'>" //+ swapValues[i] 
                + "<a href='#' class='swap-preview-link'>[preview]</a> "
-               + "resolving " + swapValues[sortedSwaps[i]].value  
-               + ": <a href='#' class='swap-review-link'>" + allSessions[sortedSwaps[i].target.session.id].title + "</a>" 
-               /*
-               + swapValues[sortedSwaps[i]].addedSrc 
-               + swapValues[sortedSwaps[i]].removedSrc 
-               + swapValues[sortedSwaps[i]].addedDest 
-               + swapValues[sortedSwaps[i]].removedDest
-               */
+               + "resolving " + swapValues[i].value  
+               + ": <a href='#' class='swap-review-link'>" + allSessions[swapValues[i].target.session].title + "</a>" 
                + "</li>";
-               console.log(swapValues[sortedSwaps[i]].addedSrc, swapValues[sortedSwaps[i]].removedSrc, swapValues[sortedSwaps[i]].addedDest, swapValues[sortedSwaps[i]].removedDest)
+               
  	     }
 
           /*
@@ -300,7 +293,8 @@
                },
                content:function(){
                     var id = $(this).parent().data("session-id");
-                    return getPreviewSwap(id, swapValues);
+                    var rank = $(this).parent().data("rank-order");
+                    return getPreviewSwap(id, swapValues[rank]);
                }
           });
      });
