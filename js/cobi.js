@@ -176,6 +176,29 @@ function initialize(){
     initializePersonaConflictsAmongSessions(); // this can be loaded from a file
   
     getAllConflicts();
+
+//     // setup polling server for changes
+//     (function poll(){
+// 	$.ajax({ url: "server", success: function(data){
+// 		    //Update your dashboard gauge
+// 		    	   async: false,
+// 	    type: 'GET',
+// 		url: "./php/loadDBtoJSON.php",
+// 		    salesGauge.setValue(data.value);
+
+// 		}, dataType: "json", complete: poll, timeout: 5000 });
+//     })();
+
+
+// 		var serverData = loadScheduleChanges();
+// 		if(!scheduleIsConsistent(schedule, unscheduled, serverData)){
+// 		    // write code to update on changes...
+// 		}
+// 		$('#storedValue').text(val); 
+// 		poll();
+// 		//            google.script.run.withSuccessHandler(onSuccess).getValue();     
+// 	    }, 5000);
+//     })();
 }
 
 function keys(obj){
@@ -678,8 +701,12 @@ function attachPersonas(){
 		     scheduleAtTime.push("");
 		 }   
 		 for(var room in schedule[day][time]){
-		     for(var ses in schedule[day][time][room]){
-			 scheduleAtTime[rooms[room]+2] = schedule[day][time][room][ses];
+		     if(keys(schedule[day][time][room]).length == 0){
+			 scheduleAtTime[rooms[room]+2] = -1;
+		     }else{
+			 for(var ses in schedule[day][time][room]){
+			     scheduleAtTime[rooms[room]+2] = schedule[day][time][room][ses];
+			 }
 		     }
 		 }
 		 scheduleMatrix.push(scheduleAtTime);
