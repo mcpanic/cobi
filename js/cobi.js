@@ -382,7 +382,7 @@ function proposeSwap(s) {
 			conflictsCausedByItem.length - 
 			conflictsCausedByOffending.length - 
 			conflictsCausedByCandidateAtOffending.length;
-		    swapValue.push(new swapDetails(new slot(s2.date, s2.time, s2.room, s2),
+		    swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
 						   conflictsResolved,
 						   conflictsCausedByCandidateAtOffending,
 						   conflictsCausedByOffending,
@@ -394,7 +394,7 @@ function proposeSwap(s) {
     }
     
     return swapValue;
-
+    
 }
 
 // Computes a score for every possible session that s can move into
@@ -479,7 +479,7 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
 	    }
 	}
 	
-	moveValue.push(new swapDetails(new slot(s.date, s.time, s.room, s),
+	moveValue.push(new swapDetails(new slot(allSessions[s].date, allSessions[s].time, allSessions[s].room, s),
 				       -conflictsWithSession[s].length,
 				       null,
 				       conflictsWithSession[s],
