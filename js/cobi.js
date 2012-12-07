@@ -6,12 +6,15 @@ var conflictsByTime = null;
 var conflictsBySession = null;
 var unscheduled = null;
 var schedule = null;
+var frontEndOnly = false;
 ///////functions for interacting with the DB ///////////
 
 // Read data from the server
 function loadSchedule(){
     // load scheduled sessions
-   $.ajax({
+
+    if(!frontEndOnly){
+	$.ajax({
 	   async: false,
 	    type: 'GET',
 		url: "./php/loadDBtoJSON.php",
@@ -25,6 +28,7 @@ function loadSchedule(){
 	   },
 	       dataType: "json"
 	       });
+    }
 }
 
 // Unschedule a session
@@ -43,6 +47,7 @@ function unscheduleSession(s){
     unscheduled[s.id] = s;
 
     // unschedule on server
+    if(!frontEndOnly){
         $.ajax({
  	    async: false,
 		type: 'POST',
@@ -61,7 +66,7 @@ function unscheduleSession(s){
 	    },
 		dataType: "json"
 		 });
-
+    }
 }
 
 // schedule a session
@@ -77,6 +82,7 @@ function scheduleSession(s, sdate, stime, sroom, sendTime){
     s['endTime'] = sendTime;
 
     // schedule on server
+    if(!frontEndOnly){
         $.ajax({
  	    async: false,
 		type: 'POST',
@@ -95,6 +101,7 @@ function scheduleSession(s, sdate, stime, sroom, sendTime){
 	    },
 		dataType: "json"
 		 });
+    }
 }
 
 
@@ -122,6 +129,7 @@ function swapSessions(s1, s2){
     delete schedule[s2date][s2time][s2room][s2.id];
 
     // perform swap on server
+    if(!frontEndOnly){
         $.ajax({
  	    async: false,
 		type: 'POST',
@@ -145,7 +153,7 @@ function swapSessions(s1, s2){
 		dataType: "json"
 		 });
 
-
+    }
     //    alert(JSON.stringify(schedule[s1date][s1time][s1room]));
     //    alert(JSON.stringify(schedule[s2date][s2time][s2room]));
 }
@@ -387,6 +395,92 @@ function proposeSwap(s) {
     
     return swapValue;
 
+}
+
+// Computes a score for every possible session that s can move into
+// TODO: can currently only schedule to an empty slot
+function proposeSlot(s) {
+    var moveValue = {};
+
+    // for each item, compute: 
+    // number of conflicts caused by moving offending item to there (empty slot)
+    
+    // calculate number of conflicts caused by moving item into another row
+    var conflictsWithRow = {};
+    
+    for(var day in schedule){
+	conflictsWithRow[day] = {}
+	for(var time in schedule[day]){
+	    //    if(day == s.date && time == s.time) continue;
+	    conflictsWithRow[day][time] = {};
+	    conflictsWithRow[day][time]["sum"] = [];
+	    conflictsWithRow[day][time]["session"] = {};
+	    
+	    for(var room in schedule[day][time]){
+		// in case there are multiple sessions in a room, shouldn't be
+		for(var s2 in schedule[day][time][room]){
+		    var conflicts = authorConflictsAmongSessions[s.id][s2];
+		    conflicts.concat(personaConflictsAmongSessions[s.id][s2]);
+		    conflictsWithRow[day][time]["session"][s2] = conflicts;
+		    conflictsWithRow[day][time]["sum"] = conflictsWithRow[day][time]["sum"].concat(conflicts);
+		}
+	    }
+	    
+	    for(var room in schedule[day][time]){
+		// only consider rooms that are empty
+		if(keys(schedule[day][time][room]).length != 0) continue;
+		moveValue[day] = {};
+		moveValue[day][time] = {};
+
+		
+		// 1. number of conflicts caused by moving offending item to there
+		var conflictsCausedByOffending = conflictsWithRow[day][time]["sum"];
+
+		var conflictsResolved = -conflictsCausedByOffending.length;
+
+		moveValue[day][time][room] = new swapDetails(conflictsResolved,
+							     null,
+							     conflictsCausedByOffending,
+							     null,
+							     null);
+	    }
+	}
+    }
+    return moveValue;
+}
+
+
+// Computes a score for every possible unschedule session that can move into slot
+// TODO: can also think about moving scheduled session here...
+function proposeUnscheduledSessionForSlot(day, time, room) {
+    // ASSUME: day time room points to a currently unscheduled slot
+    if(keys(schedule[day][time][room]).length != 0){
+	alert("There is already a session scheduled here.");
+	return;
+    }
+
+    var moveValue = {};
+    var conflictsWithSession = {};
+
+    for(var s in unscheduled){
+	conflictsWithSession[s] = [];
+	// what conflicts does the session have with other sessions at this day and time
+	for(var r2 in schedule[day][time]){
+	    // in case there are multiple sessions in a room, shouldn't be
+	    for(var s2 in schedule[day][time][r2]){
+		var conflicts = authorConflictsAmongSessions[s.id][s2];
+		conflicts.concat(personaConflictsAmongSessions[s.id][s2]);
+		conflictsWithSession[s] = conflictsWithSession[s].concat(conflicts);
+	    }
+	}
+	
+	moveValue[s] = new swapDetails(-conflictsWithSession[s].length,
+				       null,
+				       conflictsWithSession[s],
+				       null,
+				       null);
+    }
+    return moveValue;
 }
 
 function swapDetails(value, addedSrc, addedDest, removedSrc, removedDest){
