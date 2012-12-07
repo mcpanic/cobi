@@ -6,7 +6,7 @@ var conflictsByTime = null;
 var conflictsBySession = null;
 var unscheduled = null;
 var schedule = null;
-var frontEndOnly = false;
+var frontEndOnly = true;
 ///////functions for interacting with the DB ///////////
 
 // Read data from the server

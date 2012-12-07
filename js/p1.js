@@ -13,6 +13,10 @@
 
      // Getting html for session details with individual paper info
      function getSessionDetail(submissions){
+          if (typeof submissions == "undefined") {
+               console.log("undefined!!1");
+               return;
+          }
      	var html = "<button class='btn btn-info button-propose-swap'>Propose Swaps</button>"
      		+ "  <button class='btn btn-danger button-unschedule'>Unschedule</button> "
      		+ " <ul class='list-submissions'>";
@@ -64,7 +68,15 @@
 			 $(cell).addClass("cell slot")
                     .append("<div class='title'/><div class='display'/>");
 			 
-			 if(session != ""){
+                console.log("session", typeof session);
+
+			 if (session == -1){
+                    console.log("-1");
+                    $(cell).addClass("empty").html("<a href='#'><i class='icon-plus'></i></a>");
+                } else if (session == "") {
+                    console.log("unavailable");
+                    $(cell).addClass("unavailable");
+                } else {
 			 	$(cell).attr("id", "session-" + session.id);
 			 	$(cell).data("session-id", session.id);
 			 	$(cell).data("title", session.title);
@@ -88,15 +100,15 @@
 			    $(detail).hide();	
 			    $(detail).addClass("detail").html(getSessionDetail(session.submissions));
 			    $(cell).append($(detail));
-			 } else {
-			 	$(cell).addClass("empty");
-			 }
+			 } 
 			 return cell;
      }
 
      // Given an array of "conflicts", display the palette and count for each constraint in the "element"
      // Can be used both for individual sessions and entire rows
      function displayConflicts(conflicts, element){
+          if (typeof conflicts === "undefined")
+               return;
           var conflicts_array = conflicts.map(function(co) {return co.type});
           
           // for each constraint, count and add a modal dialog with descriptions
@@ -546,9 +558,16 @@
      	// if reselected, do nothing.
      	if (isSelected)
      		return;
-          // if empty, do nothing. TODO: do something.
-          if ($(this).hasClass("empty"))
+          // do nothing for unavailable slots
+          if ($(this).hasClass("unavailable"))
                return;
+          // if empty, show available schedule options.
+          if ($(this).hasClass("empty")){
+               //TODO: show available options
+               return;
+          }
+               
+
      	var id = $(this).attr("id").substr(8);
 		var session = allSessions[id];
      	$(this).addClass("selected");
@@ -618,7 +637,7 @@
           if (toggle)
               $(this).parent().addClass("view-option-active");
           var selected_constraint = $(this).parent().data("type");
-          $(".slot:not('.empty')").each(function(index, item){
+          $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                $(item).css("background-color", "white");
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
@@ -641,14 +660,14 @@
      	$(this).parent().addClass("view-option-active");
      	switch($(this).parent().data("type")){
      		case "session-type":
-     			$(".slot:not('.empty')").each(function(index, item){
+     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
      				var id = $(item).attr("id").substr(8);
 					var session = allSessions[id];
 					$(item).find(".display").html(session.type);
      			});
      		break;
                case "conflicts":
-                    $(".slot:not('.empty')").each(function(index, item){
+                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);
                          $(item).find(".display").html("");
                          displayConflicts(conflictsBySession[id], $(item).find(".display"));
@@ -656,25 +675,25 @@
                     });
                break;                 
                case "popularity":
-                    $(".slot:not('.empty')").each(function(index, item){
+                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);
                          $(item).find(".display").html(sessionPopularity[id]);
                     });
                break;               
      		case "num-papers":
-     			$(".slot:not('.empty')").each(function(index, item){
+     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
      				var id = $(item).attr("id").substr(8);
 					var session = allSessions[id];
      				$(item).find(".display").html(getSessionNumSubmissions(session.submissions));
      			});
      		break;
      		case "duration":
-     			$(".slot:not('.empty')").each(function(index, item){
+     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
      				$(item).find(".display").html("80");
      			});
      		break;
      		case "awards":
-     			$(".slot:not('.empty')").each(function(index, item){
+     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
      				var id = $(item).attr("id").substr(8);
 					var session = allSessions[id];
      				if (session.hasAward)
@@ -684,7 +703,7 @@
      			});
      		break;
      		case "honorable-mentions":
-     			$(".slot:not('.empty')").each(function(index, item){
+     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
      				var id = $(item).attr("id").substr(8);
 					var session = allSessions[id];     				
      				if (session.hasHonorableMention)
@@ -694,7 +713,7 @@
      			});     		     		
      		break;
      		case "persona":
-     			$(".slot:not('.empty')").each(function(index, item){
+     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
      				var id = $(item).attr("id").substr(8);
 					var session = allSessions[id];
      				$(item).find(".display").html(keys(session.personas).map(function(x) {return personaHash[x]}));
@@ -715,7 +734,7 @@
           if (toggle)
      	    $(this).parent().addClass("view-option-active");
      	var selected_persona = $(this).parent().data("type");
-		$(".slot:not('.empty')").each(function(index, item){
+		$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
 			$(item).css("background-color", "white");
 			var id = $(item).attr("id").substr(8);
 			var session = allSessions[id];	
@@ -733,9 +752,9 @@
 	});
 
      function displayUnscheduled(){
-          keys(unscheduled).map(function(session){
-               var cell = getSessionCell(session);
-               $("#unscheduled").append(cell);           
+          keys(unscheduled).map(function(id){
+               var cell = getSessionCell(allSessions[id]);
+               $("#unscheduled").append(cell);         
           });
      }
 
