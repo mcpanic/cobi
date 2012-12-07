@@ -604,8 +604,9 @@ function getSessionPersonas(s){
 }
 
 
-function conflictObject(entities, type, description){
+function conflictObject(entities, type, conflict, description){
     this.entities = entities;
+    this.conflict = conflict;
     this.type = type;
     this.description = description;
 }
@@ -618,7 +619,9 @@ function computeAuthorConflicts(s1, s2){
     for(var s1author in s1authors){
 	for(var s2author in s2authors){
 	    if(s1author == s2author){
-		conflicts.push(new conflictObject([s1.id, s2.id], "authorInTwoSessions", 
+		conflicts.push(new conflictObject([s1.id, s2.id], 
+						  "authorInTwoSessions", 
+						  s1author, 
 						  s1author + " is in both '" + s1.title + 
 						  "' and '" + s2.title + "'\n"));
 	    }
@@ -635,7 +638,9 @@ function computePersonaConflicts(s1, s2){
     for(var s1persona in s1personas){
 	for(var s2persona in s2personas){
 	    if(s1persona == s2persona){
-		conflicts.push(new conflictObject([s1.id, s2.id], "personaInTwoSessions", 
+		conflicts.push(new conflictObject([s1.id, s2.id], 
+						  "personaInTwoSessions", 
+						  personaHash[s1persona],
 						  "Someone interested in " + personaHash[s1persona] + " may want to see both '" + s1.title + 
 						  "' and '" + s2.title + "'"));
 	    }
