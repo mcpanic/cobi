@@ -174,13 +174,13 @@
      }
 
 
-     function getPreviewSwap(dst_id){
+     function getPreviewSwap(dst_id, swapValues){
           var $session = $(".selected").first();
           var id = $session.attr("id").substr(8);
           //var session = allSessions[id];
           //console.log(session.title);      
 
-          var swapValues = proposeSwap(allSessions[id]);
+          //var swapValues = proposeSwap(allSessions[id]);
           var html = "";
           html += "<h4>Overall, " + swapValues[dst_id].value
                + " conflicts will be resolved.</h4>" 
@@ -300,7 +300,7 @@
                },
                content:function(){
                     var id = $(this).parent().data("session-id");
-                    return getPreviewSwap(id);
+                    return getPreviewSwap(id, swapValues);
                }
           });
      });
@@ -396,6 +396,26 @@
           $("#alert .palette").css("background-color", "#FF8C00");
      });
 */
+
+     // Display schedule options inside a popover
+     function displayScheduleOptions(id){
+          if (typeof submissions == "undefined") {
+               return;
+          }
+          var html = "<button class='btn btn-info button-propose-swap'>Propose Swaps</button>"
+               + "  <button class='btn btn-danger button-unschedule'>Unschedule</button> "
+               + " <ul class='list-submissions'>";
+          $.each(submissions, function(index, submission){
+               html += "<li class='submission'><strong>" + submission.type + "</strong>: " 
+                    + getAuthorDisplay(submission.authors) + "<br>"
+                    + "<strong>" + submission.title + "</strong></li>";
+
+          });
+          html += "</ul>";
+          return html;
+
+     }
+
      // When the unschedule button is clicked. Move the item to the unscheduled workspace.
      $("body").on("click", ".popover .button-unschedule", function(){
      	var $session = $(".selected").first();
@@ -427,7 +447,8 @@
                     return allSessions[$(this).data("session-id")].title;
                },
                content:function(){
-                    return $(this).find(".detail").html();
+                    return displayScheduleOptions(id);
+                    //return $(this).find(".detail").html();
                }
           });
           //$cloned_session.removeClass("selected");
