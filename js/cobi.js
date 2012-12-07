@@ -319,7 +319,7 @@ function initializePersonaConflictsAmongSessions(){
 function proposeSwap(s) {
     // how many conflicts are caused by the offending item
     var conflictsCausedByItem = calculateConflictsCausedBy(s);
-    var swapValue = {};
+    var swapValue = [];
 
     // for each item, compute: 
     // 1. number of conflicts caused by moving offending item to there
@@ -382,11 +382,12 @@ function proposeSwap(s) {
 			conflictsCausedByItem.length - 
 			conflictsCausedByOffending.length - 
 			conflictsCausedByCandidateAtOffending.length;
-		    swapValue[s2] = new swapDetails(conflictsResolved,
-						    conflictsCausedByCandidateAtOffending,
-						    conflictsCausedByOffending,
-						    conflictsCausedByCandidate,
-						    conflictsCausedByItem);
+		    swapValue.push(new swapDetails(new slot(s2.date, s2.time, s2.room, s2),
+						   conflictsResolved,
+						   conflictsCausedByCandidateAtOffending,
+						   conflictsCausedByOffending,
+						   conflictsCausedByCandidate,
+						   conflictsCausedByItem));
 		}
 	    }
 	}
@@ -399,7 +400,7 @@ function proposeSwap(s) {
 // Computes a score for every possible session that s can move into
 // TODO: can currently only schedule to an empty slot
 function proposeSlot(s) {
-    var moveValue = {};
+    var moveValue = [];
 
     // for each item, compute: 
     // number of conflicts caused by moving offending item to there (empty slot)
@@ -428,8 +429,6 @@ function proposeSlot(s) {
 	    for(var room in schedule[day][time]){
 		// only consider rooms that are empty
 		if(keys(schedule[day][time][room]).length != 0) continue;
-		moveValue[day] = {};
-		moveValue[day][time] = {};
 
 		
 		// 1. number of conflicts caused by moving offending item to there
@@ -437,17 +436,24 @@ function proposeSlot(s) {
 
 		var conflictsResolved = -conflictsCausedByOffending.length;
 
-		moveValue[day][time][room] = new swapDetails(conflictsResolved,
-							     null,
-							     conflictsCausedByOffending,
-							     null,
-							     null);
+		moveValue.push(new swapDetails(new slot(day, time, room, null),
+					       conflictsResolved,
+					       null,
+					       conflictsCausedByOffending,
+					       null,
+					       null));
 	    }
 	}
     }
     return moveValue;
 }
 
+function slot(day, time, room, session){
+    this.day = day;
+    this.time = time;
+    this.room = room;
+    this.session = session;
+}
 
 // Computes a score for every possible unschedule session that can move into slot
 // TODO: can also think about moving scheduled session here...
@@ -458,7 +464,7 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
 	return;
     }
 
-    var moveValue = {};
+    var moveValue = [];
     var conflictsWithSession = {};
 
     for(var s in unscheduled){
@@ -473,16 +479,18 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
 	    }
 	}
 	
-	moveValue[s] = new swapDetails(-conflictsWithSession[s].length,
+	moveValue.push(new swapDetails(new slot(s.date, s.time, s.room, s),
+				       -conflictsWithSession[s].length,
 				       null,
 				       conflictsWithSession[s],
 				       null,
-				       null);
+				       null));
     }
     return moveValue;
 }
 
-function swapDetails(value, addedSrc, addedDest, removedSrc, removedDest){
+function swapDetails(target, value, addedSrc, addedDest, removedSrc, removedDest){
+    this.target = target;
     this.value = value;
     this.addedSrc = addedSrc;
     this.addedDest = addedDest;

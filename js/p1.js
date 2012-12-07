@@ -219,17 +219,17 @@
 
 		var swapValues = proposeSwap(allSessions[id]);
  	     //console.log(JSON.stringify(swapValues));
-          var sortedSwaps = keys(swapValues).sort(function(a, b) {return swapValues[b].value - swapValues[a].value ;});
+          var sortedSwaps = swapValues.sort(function(a, b) {return swapValues[b].value - swapValues[a].value ;});
           //console.log(JSON.stringify(sortedSwaps));
 
  	     var swapContent = "";
  	     for(var i = 0; i < 5; i++){
                
- 	     	$("#program #session-" + sortedSwaps[i]).addClass("proposed-swap");
- 		 	swapContent += "<li data-session-id='" + sortedSwaps[i] + "'>" //+ sortedSwaps[i] 
+ 	     	$("#program #session-" + sortedSwaps[i].target.session.id).addClass("proposed-swap");
+ 		 	swapContent += "<li data-session-id='" + sortedSwaps[i].target.session.id + "'>" //+ sortedSwaps[i] 
                + "<a href='#' class='swap-preview-link'>[preview]</a> "
                + "resolving " + swapValues[sortedSwaps[i]].value  
-               + ": <a href='#' class='swap-review-link'>" + allSessions[sortedSwaps[i]].title + "</a>" 
+               + ": <a href='#' class='swap-review-link'>" + allSessions[sortedSwaps[i].target.session.id].title + "</a>" 
                /*
                + swapValues[sortedSwaps[i]].addedSrc 
                + swapValues[sortedSwaps[i]].removedSrc 
