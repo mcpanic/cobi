@@ -11,10 +11,17 @@
           return $(html).find("button").hide().html();
      }
 
+     function getAuthorDisplay(authors){
+          var html = "";         
+          $.each(authors, function(i, author){
+               html += author.firstName + " " + author.lastName + ", ";
+          }); 
+          return html;
+     }
+
      // Getting html for session details with individual paper info
      function getSessionDetail(submissions){
           if (typeof submissions == "undefined") {
-               console.log("undefined!!1");
                return;
           }
      	var html = "<button class='btn btn-info button-propose-swap'>Propose Swaps</button>"
@@ -22,8 +29,9 @@
      		+ " <ul class='list-submissions'>";
      	$.each(submissions, function(index, submission){
      		html += "<li class='submission'><strong>" + submission.type + "</strong>: " 
-                    + keys(submission.authors) + "<br>"
+                    + getAuthorDisplay(submission.authors) + "<br>"
                     + "<strong>" + submission.title + "</strong></li>";
+
      	});
      	html += "</ul>";
      	return html;
@@ -68,7 +76,7 @@
 			 $(cell).addClass("cell slot")
                     .append("<div class='title'/><div class='display'/>");
 			 
-                console.log("session", typeof session);
+                // console.log("session", typeof session);
 
 			 if (session == -1){
                     console.log("-1");
@@ -115,8 +123,13 @@
           $.each(constraints_list, function(index, conflict){
                var filtered_array = conflicts_array.filter(function(x){return x==conflict.type});
                if (filtered_array.length > 0) {
-                    var $palette = $("<span class='palette'></span>").css("background-color", conflict.color);
-                    element.append($palette).append(filtered_array.length);
+                    var html = "";
+                    var i;
+                    for (i=0; i<filtered_array.length; i++) {
+                         html += "<span class='conflict-display'></span>";
+                    }
+                    var $palette = $(html).css("background-color", conflict.color);
+                    element.append(filtered_array.length).append($palette);
                     var palette_title = "Conflicts: " + conflict.label;
                     var palette_content = conflicts.map(function(co) {
                          if (co.type == conflict.type)
@@ -160,73 +173,6 @@
           return str; 
      }
 
-     function displayProgram(schedule){
-		var orderedRooms = keys(allRooms).sort(function(a,b) { return allRooms[a] - allRooms[b];});
-          // Table Header
-          var table = document.createElement('table'); 
-		var header = document.createElement('tr');
-		var firstcell = $(document.createElement('td')).addClass("cell").append("<div>Time</div>");
-		var secondcell = $(document.createElement('td')).addClass("cell").append("<div>Conflicts</div>");
-		$(header).addClass("header-row").append(firstcell).append(secondcell);
-		for(var i = 0; i < orderedRooms.length; i++){
-		     var cell = document.createElement('td');
-		     $(cell).addClass("cell").append("<div>" + orderedRooms[i] + "</div>");
-		     $(header).append(cell);
-		}
-		$("#program").append(header);
-
-          // Main content
-		for(var i = 0; i < schedule.length; i++){
-		     var row = document.createElement('tr');
-		     var slot = document.createElement('td');
-//		     var conflicts = document.createElement('td');
-		     $(slot).addClass("cell").append(shortenDate(schedule[i][0]) + " " + schedule[i][1]); // schedule[i][0]: full date. schedule[i][1]: time
-		     $(row).append(slot);
-
-		     var conflicts = document.createElement('td');
-		     $(conflicts).addClass("cell conflicts");
-
-               displayConflicts(conflictsByTime[schedule[i][0]][schedule[i][1]], $(conflicts));
-               /*
-		     // TODO: make it scalable. avoid miopic hacks.
-		     var conflicts_array = conflictsByTime[schedule[i][0]][schedule[i][1]].map(function(co) {return co.type});
-		     
-		     // for each constraint, count and add a modal dialog with descriptions
-		     $.each(constraints_list, function(index, conflict){
-		     	var filtered_array = conflicts_array.filter(function(x){return x==conflict.type});
-		     	if (filtered_array.length > 0) {
-		     		var $palette = $("<span class='palette'></span>").css("background-color", conflict.color);
-		     		$(conflicts).append($palette).append(filtered_array.length);
-		     		var palette_title = "Conflicts: " + conflict.label;
-		     		var palette_content = conflictsByTime[schedule[i][0]][schedule[i][1]].map(function(co) {
-		     			if (co.type == conflict.type)
-		     				return "<li>"+co.description+"</li>";
-		     		}).join("");
-		     		$palette.popover({
-			     		html:true,
-			     		placement: "bottom",
-			     		title:function(){
-			     			return palette_title;
-			     		},
-			     		content:function(){
-			     			return palette_content;
-			     		}
-			     	});
-			     	$palette.popover();   		
-		     	}
-		     });
-*/
-		     //var violation = constraints_list[Math.floor(Math.random()*constraints_list.length)];
-
-		     $(row).append(conflicts);
-
-		     for(var j = 2; j < schedule[i].length; j++){
-		     	var cell = getSessionCell(schedule[i][j]);
-				$(row).append(cell);
-		     }
-		 	$('#program').append(row);
-		 }
-     }
 
      function getPreviewSwap(dst_id){
           var $session = $(".selected").first();
@@ -269,16 +215,12 @@
 
      $("body").on("click", ".popover .button-propose-swap", function(){
 		var $session = $(".selected").first();
-		var id = $session.attr("id").substr(8);
-		//var session = allSessions[id];
-		//console.log(session.title);     	
+		var id = $session.attr("id").substr(8);  	
 
 		var swapValues = proposeSwap(allSessions[id]);
- 	     console.log(JSON.stringify(swapValues));
-
+ 	     //console.log(JSON.stringify(swapValues));
           var sortedSwaps = keys(swapValues).sort(function(a, b) {return swapValues[b].value - swapValues[a].value ;});
-
-          console.log(JSON.stringify(sortedSwaps));
+          //console.log(JSON.stringify(sortedSwaps));
 
  	     var swapContent = "";
  	     for(var i = 0; i < 5; i++){
@@ -459,19 +401,13 @@
      	var $session = $(".selected").first();
      	var id = $session.attr("id").substr(8);
 
-     	//var $cloned_session = $session.clone();
-     	//var $cloned_session = $session.clone(true, true);
           var new_session = getSessionCell(allSessions[id]);
           $("#unscheduled").append(new_session);
-
-     	//$cloned_session = $.extend({}, $cloned_session)
-     	// not using clone(true) because it copies the events as well. Manually copy data
      	$session.removeClass("selected").popover("hide").addClass("empty").html("").removeAttr("id").removeData();
           $session.popover("destroy");
 
           // Unschedule session in the database
           unscheduleSession(allSessions[id]);
-          console.log(unscheduled);
 
           $(".selected").removeClass("selected");
           $("#alert").html("<div class='alert alert-success'>"
@@ -483,10 +419,6 @@
           $("#list-history").prepend("<li>unschedule: " 
                + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
 
-          //$("#unscheduled").append($cloned_session);
-
-          //$cloned_session.popover("destroy");
-          // console.log($cloned_session);
           $(new_session).popover({
               html:true,
               placement: "bottom",
@@ -495,19 +427,11 @@
                     return allSessions[$(this).data("session-id")].title;
                },
                content:function(){
-                    //return "ohoh";
                     return $(this).find(".detail").html();
                }
           });
           //$cloned_session.removeClass("selected");
           updateUnscheduledCount();
-
-/*          
-          // the frontend swap
-          swapSessionCell(src_id, dst_id);
-          // the backend swap
-          swapSessions(allSessions[src_id], allSessions[dst_id]);
-*/
           // the backend conflicts update
           getAllConflicts();
           // the frontend conflicts update: the row view of conflicts.
@@ -754,7 +678,18 @@
      function displayUnscheduled(){
           keys(unscheduled).map(function(id){
                var cell = getSessionCell(allSessions[id]);
-               $("#unscheduled").append(cell);         
+               $("#unscheduled").append(cell); 
+               $(cell).popover({
+                   html:true,
+                   placement: "bottom",
+                   trigger: "click",
+                    title:function(){
+                         return allSessions[$(this).data("session-id")].title;
+                    },
+                    content:function(){
+                         return $(this).find(".detail").html();
+                    }
+               });        
           });
      }
 
@@ -797,6 +732,44 @@
 		*/
      }
 
+
+     function displayProgram(schedule){
+          var orderedRooms = keys(allRooms).sort(function(a,b) { return allRooms[a] - allRooms[b];});
+          // Table Header
+          var table = document.createElement('table'); 
+          var header = document.createElement('tr');
+          var firstcell = $(document.createElement('td')).addClass("cell").append("<div>Time</div>");
+          //var secondcell = $(document.createElement('td')).addClass("cell").append("<div>Conflicts</div>");
+          $(header).addClass("header-row").append(firstcell); //.append(secondcell);
+          for(var i = 0; i < orderedRooms.length; i++){
+               var cell = document.createElement('td');
+               $(cell).addClass("cell").append("<div>" + orderedRooms[i] + "</div>");
+               $(header).append(cell);
+          }
+          $("#program").append(header);
+
+          // Main content
+          for(var i = 0; i < schedule.length; i++){
+               var row = document.createElement('tr');
+               var slot = document.createElement('td');
+//             var conflicts = document.createElement('td');
+               $(slot).addClass("cell").append(shortenDate(schedule[i][0]) + " " + schedule[i][1]); // schedule[i][0]: full date. schedule[i][1]: time
+               $(row).append(slot);
+
+               /* Displaying conflicts 
+               var conflicts = document.createElement('td');
+               $(conflicts).addClass("cell conflicts");
+               displayConflicts(conflictsByTime[schedule[i][0]][schedule[i][1]], $(conflicts));               
+               $(row).append(conflicts);
+               */
+
+               for(var j = 2; j < schedule[i].length; j++){
+                    var cell = getSessionCell(schedule[i][j]);
+                    $(row).append(cell);
+               }
+               $('#program').append(row);
+           }
+     }
 
      var scheduleMatrix = [];
 
