@@ -460,8 +460,8 @@ function slot(day, time, room, session){
 function proposeUnscheduledSessionForSlot(day, time, room) {
     // ASSUME: day time room points to a currently unscheduled slot
     if(keys(schedule[day][time][room]).length != 0){
-	alert("There is already a session scheduled here.");
-	return;
+		alert("There is already a session scheduled here.");
+		return;
     }
 
     var moveValue = [];

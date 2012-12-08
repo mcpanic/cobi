@@ -6,7 +6,8 @@ $username = "cobi";
 $password = "su4Biha";
 $database = "cobi";
 
-$mysqli = mysqli_connect('mysql.csail.mit.edu', $username, $password, $database);
+//$mysqli = mysqli_connect('mysql.csail.mit.edu', $username, $password, $database);
+$mysqli = mysqli_connect('localhost', $username, $password, $database);
 
 // Get the schedule table
 $scheduleQ = "select * from schedule"; 

@@ -1,7 +1,4 @@
 
-	function getRandomColor(){
-		return '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
-	}
 
      // Temp function to remove buttons from the detail html.
      // TODO: replace with something more reasonable and scalable.
@@ -20,29 +17,28 @@
      }
 
      // Getting html for session details with individual paper info
-     function getSessionDetail(submissions){
-          if (typeof submissions == "undefined") {
-               return;
+     function getSessionDetail(type, session){
+     	var html = ""; 
+          if (type == "scheduled") {
+               html += "<button class='btn btn-info button-propose-swap'>Propose Swaps</button>"
+                    + "  <button class='btn btn-danger button-unschedule'>Unschedule</button> ";
+          } else if (type == "unscheduled") {
+               html += "<button class='btn btn-info button-propose-unscheduled'>Propose Slots</button>";
+          } else if (type == "empty") {
+               html += "<button class='btn btn-info button-propose-empty'>Propose Slots</button>";
           }
-     	var html = "<button class='btn btn-info button-propose-swap'>Propose Swaps</button>"
-     		+ "  <button class='btn btn-danger button-unschedule'>Unschedule</button> "
-     		+ " <ul class='list-submissions'>";
-     	$.each(submissions, function(index, submission){
-     		html += "<li class='submission'><strong>" + submission.type + "</strong>: " 
-                    + getAuthorDisplay(submission.authors) + "<br>"
-                    + "<strong>" + submission.title + "</strong></li>";
 
-     	});
-     	html += "</ul>";
+          if (typeof session !== "undefined" && typeof session.submissions !== "undefined") {
+               html += " <ul class='list-submissions'>";
+               $.each(session.submissions, function(index, submission){
+                    html += "<li class='submission'><strong>" + submission.type + "</strong>: " 
+                         + getAuthorDisplay(submission.authors) + "<br>"
+                         + "<strong>" + submission.title + "</strong></li>";
+
+               });
+               html += "</ul>";
+          }
      	return html;
-     }
-
-     function getSessionNumSubmissions(submissions){
-     	var key, count = 0;
-     	for (key in submissions){
-     		count++;
-     	}
-     	return count;
      }
 
      function swapNodes(a, b) {
@@ -71,43 +67,51 @@
           */
      }
 
-     function getSessionCell(session){
+     // For each session item, display the session information
+     function getSessionCell(type, session){
 			 var cell = document.createElement('td');
 			 $(cell).addClass("cell slot")
                     .append("<div class='title'/><div class='display'/>");
 			 
                 // console.log("session", typeof session);
 
-			 if (session == -1){
-                    console.log("-1");
-                    $(cell).addClass("empty").html("<a href='#'><i class='icon-plus'></i></a>");
-                } else if (session == "") {
+                // Empty Session
+			 if (type == "empty" || session == -1){
+                    console.log("empty");
+                    var detail = document.createElement("div");
+                    $(detail).hide()
+                         .addClass("detail")
+                         .html(getSessionDetail(type, session));
+                    // TODO: how to easily get day, time, room info
+                    $(cell)
+                         //.attr("id", "session-" + session.id)
+                         //.data("session-id", session.id)
+                         .addClass("empty")
+                         .append($(detail))
+                         .html("<i class='icon-plus'></i>");
+
+               // Unavailable / Locked Session                         
+                } else if (type == "unavailable" || session == "") {
                     console.log("unavailable");
                     $(cell).addClass("unavailable");
+               
+               // Scheduled / Unscheduled Session
                 } else {
-			 	$(cell).attr("id", "session-" + session.id);
-			 	$(cell).data("session-id", session.id);
-			 	$(cell).data("title", session.title);
-			 	$(cell).data("session-type", session.type);
-			 	$(cell).data("num-papers", getSessionNumSubmissions(session.submissions));
-			 	$(cell).data("awards", session.hasAward);
-			 	$(cell).data("honorable-mentions", session.hasHonorableMention);
-			 	$(cell).data("duration", 80);
-			 	$(cell).data("persona", keys(session.personas).map(function(x) {return personaHash[x]}));
-			 	// getting a random persona for now
-			 	//var persona = personas_list[Math.floor(Math.random()*personas_list.length)];
-			 	//$(cell).data("persona", persona.id);
-
-			 	// default view: session type
+                    var detail = document.createElement("div");
+                    $(detail).hide()
+                         .addClass("detail")
+                         .html(getSessionDetail(type, session));
+			 	
+                    $(cell).attr("id", "session-" + session.id)
+                         .data("session-id", session.id)
+                         .append($(detail));
+                    
                     if (typeof session.title !== "undefined")
                          $(cell).find(".title").html(session.title);
-			    //$(cell).find(".display").html(session.type);
-                   displayConflicts(conflictsBySession[session.id], $(cell).find(".display"));
-			    
-			    var detail = document.createElement("div");
-			    $(detail).hide();	
-			    $(detail).addClass("detail").html(getSessionDetail(session.submissions));
-			    $(cell).append($(detail));
+                    
+                    // default view: conflicts
+                    displayConflicts(conflictsBySession[session.id], $(cell).find(".display"));
+                    //$(cell).find(".display").html(session.type);
 			 } 
 			 return cell;
      }
@@ -117,6 +121,7 @@
      function displayConflicts(conflicts, element){
           if (typeof conflicts === "undefined")
                return;
+          element.html("");
           var conflicts_array = conflicts.map(function(co) {return co.type});
           
           // for each constraint, count and add a modal dialog with descriptions
@@ -151,32 +156,23 @@
           });
      }
 
-     // For each row, update conflicts display
+     // Refresh conflicts information display.
+     // Called after an interaction occurs that affects conflicts. (swap, unschedule, schedule)
      function updateConflicts(){
-          $(".conflicts").each(function(index){
-               $(this).html("");
-               displayConflicts(conflictsByTime[scheduleMatrix[index][0]][scheduleMatrix[index][1]], $(this));
+          // Lazy operation: only run when the view mode is conflicts
+          if (getActiveOptions("view-options").indexOf("conflicts") === -1)
+               return;
+          $(".slot").each(function(){
+               var id = getID($(this));
+               if (id !== -1)
+                    displayConflicts(conflictsBySession[id], $(this).find(".display"));
           });
           
      }
 
-     function shortenDate(date){
-          var str = "";
-          if (date == "May 7, 2012")
-               str = "MON 5/7";
-          else if (date == "May 8, 2012")
-               str = "TUE 5/8";
-          else if (date == "May 9, 2012")
-               str = "WED 5/9";
-          else if (date == "May 10, 2012")
-               str = "THU 5/10";
-          return str; 
-     }
-
-
-     function getPreviewSwap(dst_id, swap){
-          var $session = $(".selected").first();
-          var id = $session.attr("id").substr(8);
+     function getPreviewSwap(swap){
+          //var $session = $(".selected").first();
+          //var id = getID($session);
           //var session = allSessions[id];
           //console.log(session.title);      
 
@@ -195,11 +191,11 @@
                console.log(html);
           return html;
      }
-
+/*
      $("#alert").on("click", ".swap-preview-link", function(){
           return false;
      });
-
+*/
      $("#alert").on("click", ".swap-review-link", function(){
           var id = $(this).parent().data("session-id");
           $(this).toggleClass("view-option-active");
@@ -214,42 +210,72 @@
           return false;
      });
 
-     $("body").on("click", ".popover .button-propose-swap", function(){
-		var $session = $(".selected").first();
-		var id = $session.attr("id").substr(8);  	
+     // Handle a propose (swap, unschedule, schedule) request
+     function proposeHandler(event){
+          var $session = $(".selected").first();
+//          console.log($session);
+          var id = getID($session);  
+          
+          var swapValues; 
+          if (event.data.type == "swap")
+               swapValues = proposeSwap(allSessions[id]);
+          else if (event.data.type == "unscheduled") {
+               swapValues = proposeSlot(allSessions[id]);
+          }
+          else if (event.data.type == "empty") {
+               console.log($session, $session.data(), $session.data("date"), event.data.type, event.target);
+               console.log($session.data("date"), $session.data("time"), $session.data("room"), schedule[$session.data("date")][$session.data("time")][$session.data("room")]);
+               proposeUnscheduledSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
+          } else {
+               return;
+          }
 
-		var swapValues = proposeSwap(allSessions[id]);
-          swapValues.sort(function(a, b) {return b.value - a.value ;});
-          //console.log(JSON.stringify(sortedSwaps));
+          swapValues.sort(function(a, b) {return b.value - a.value;});
+          console.log(JSON.stringify(swapValues));
 
- 	     var swapContent = "";
- 	     for(var i = 0; i < 5; i++){               
-               $("#program #session-" + swapValues[i].target.session).addClass("proposed-swap");
- 		 	swapContent += "<li data-session-id='" + swapValues[i].target.session + "' data-rank-order='" + i + "'>" //+ swapValues[i] 
-               + "<a href='#' class='swap-preview-link'>[preview]</a> "
-               + "resolving " + swapValues[i].value  
-               + ": <a href='#' class='swap-review-link'>" + allSessions[swapValues[i].target.session].title + "</a>" 
-               + "</li>";
+          var count = Math.min(swapValues.length, 5);
+          console.log("count", count);
+          var swapContent = "";
+          for(var i = 0; i < count; i++){    
+               if (event.data.type == "swap"){
+                    $("#program #session-" + swapValues[i].target.session).addClass("proposed-swap");
+                    swapContent += "<li data-session-id='" + swapValues[i].target.session + "' data-rank-order='" + i + "'>" //+ swapValues[i] 
+                    + "<a href='#' class='swap-preview-link'>[preview]</a> "
+                    + "resolving " + swapValues[i].value  
+                    + ": <a href='#' class='swap-review-link'>" + allSessions[swapValues[i].target.session].title + "</a>" 
+                    + "</li>";
+               } else if (event.data.type == "unscheduled"){
+                    //$("#program #session-" + swapValues[i].target.session).addClass("proposed-swap");
+                    swapContent += "<li data-session-id='" + swapValues[i].target.session + "' data-rank-order='" + i + "'>" //+ swapValues[i] 
+                    + "<a href='#' class='swap-preview-link'>[preview]</a> "
+                    + "resolving " + swapValues[i].value  
+                    + ": <a href='#' class='swap-review-link'>" 
+                    + allSessions[swapValues[i].target.session].date 
+                    + allSessions[swapValues[i].target.session].time 
+                    + allSessions[swapValues[i].target.session].room 
+                    + "</a>" 
+                    + "</li>";                    
+               }
                
- 	     }
+          }
 
           /*
- 	     var html = '<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">'
-		  + '<div class="modal-header">'
-		  + '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">Ã—</button>'
-		  + '  <h3 id="myModalLabel">' + "Swap suggestions for session " + id + ": " + session.title + '</h3>'
-		  + '</div>'
-		  + '<div class="modal-body">'
-		  + '  <p>' + swapContent + '</p>'
-		  + '<p>Review highlighted swap suggestions and select one, or click Cancel to go back.</p>'
-		  + '</div>'
-		  + '<div class="modal-footer">'
-		  + '  <button class="btn btn-primary" id="swap-review-button">Review</button>'
-		  + '  <button class="btn" data-dismiss="modal" aria-hidden="true" id="swap-cancel-button">Cancel</button>'		  
-		  + '</div>'
-		+ '</div>';
-		$session.append(html);
-		$("#myModal").modal();
+          var html = '<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">'
+            + '<div class="modal-header">'
+            + '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">Ã—</button>'
+            + '  <h3 id="myModalLabel">' + "Swap suggestions for session " + id + ": " + session.title + '</h3>'
+            + '</div>'
+            + '<div class="modal-body">'
+            + '  <p>' + swapContent + '</p>'
+            + '<p>Review highlighted swap suggestions and select one, or click Cancel to go back.</p>'
+            + '</div>'
+            + '<div class="modal-footer">'
+            + '  <button class="btn btn-primary" id="swap-review-button">Review</button>'
+            + '  <button class="btn" data-dismiss="modal" aria-hidden="true" id="swap-cancel-button">Cancel</button>'          
+            + '</div>'
+          + '</div>';
+          $session.append(html);
+          $("#myModal").modal();
           */
 
 
@@ -294,17 +320,21 @@
                content:function(){
                     var id = $(this).parent().data("session-id");
                     var rank = $(this).parent().data("rank-order");
-                    return getPreviewSwap(id, swapValues[rank]);
+                    return getPreviewSwap(swapValues[rank]);
                }
           });
-     });
+     }
+
+     $("body").on("click", ".popover .button-propose-swap", {type: "swap"}, proposeHandler);
+     $("body").on("click", ".popover .button-propose-unscheduled", {type: "unscheduled"}, proposeHandler);
+     $("body").on("click", ".popover .button-propose-empty", {type: "empty"}, proposeHandler);
 
      // clicking the 'swap' button from one of the proposed swaps.
      // should perform swap and return to the clean state with no selection and proposals.
      $("body").on("click", ".popover #swap-button", function(){
      	     	
      	var $source = $(".swap-selected").first();
-          var src_id = $source.attr("id").substr(8);
+          var src_id = getID($source);
      	var dst_id = $(this).data("session-id");
      	$(".proposed-swap").popover("destroy");
           $(".proposed-swap").popover({
@@ -324,11 +354,7 @@
           $(".swap-selected").removeClass("swap-selected");
      	$(".proposed-swap").removeClass("proposed-swap");   
           $(".highlight").removeClass("highlight");  
-          $("#alert").html("<div class='alert alert-success'>"
-          //+ "<button type='button' class='close' data-dismiss='alert'>×</button>"
-          + "<strong>Swap successful</strong>."
-          + "</div>");
-          $("#alert .alert").delay(10000).fadeOut("slow", function () { $(this).remove(); });
+          displayAlert("Swap successful");
 
           $("#list-history").prepend("<li>swapped: " 
                + "<a href='#' class='history-link' data-session-id='" + src_id + "'>" + allSessions[src_id].title + 
@@ -391,45 +417,38 @@
      });
 */
 
-     // Display schedule options inside a popover
-     function displayScheduleOptions(id){
-          if (typeof submissions == "undefined") {
-               return;
-          }
-          var html = "<button class='btn btn-info button-propose-swap'>Propose Swaps</button>"
-               + "  <button class='btn btn-danger button-unschedule'>Unschedule</button> "
-               + " <ul class='list-submissions'>";
-          $.each(submissions, function(index, submission){
-               html += "<li class='submission'><strong>" + submission.type + "</strong>: " 
-                    + getAuthorDisplay(submission.authors) + "<br>"
-                    + "<strong>" + submission.title + "</strong></li>";
-
-          });
-          html += "</ul>";
-          return html;
-
-     }
 
      // When the unschedule button is clicked. Move the item to the unscheduled workspace.
      $("body").on("click", ".popover .button-unschedule", function(){
      	var $session = $(".selected").first();
-     	var id = $session.attr("id").substr(8);
+     	var id = getID($session);
 
-          var new_session = getSessionCell(allSessions[id]);
+          var new_session = getSessionCell("unscheduled", allSessions[id]);
           $("#unscheduled").append(new_session);
-     	$session.removeClass("selected").popover("hide").addClass("empty").html("").removeAttr("id").removeData();
-          $session.popover("destroy");
-
+     	$session.removeClass("selected").popover("destroy").removeAttr("id").removeData();
+          var after = getSessionCell("empty");
+          // Watch out! jQuery replaceWith returns the original element, not the replaced element.
+          $session.replaceWith(after); 
+          $(after).popover({
+              html:true,
+              placement: "bottom",
+              trigger: "click",
+               title:function(){
+                    return "Empty slot";
+               },
+               content:function(){
+                    return getSessionDetail("empty", -1);
+               }
+          });
+          // For now, simply assign date, time, and room info to an empty session
+          // TODO: maybe hook up to an empty session so that data() isn't necessary?
+          $(after).data("date", allSessions[id].date).data("time", allSessions[id].time).data("room", allSessions[id].room);
+          console.log($(after), $(after).data("date"), $(after).data("time"), $(after).data("room"));
           // Unschedule session in the database
           unscheduleSession(allSessions[id]);
 
           $(".selected").removeClass("selected");
-          $("#alert").html("<div class='alert alert-success'>"
-          //+ "<button type='button' class='close' data-dismiss='alert'>×</button>"
-          + "<strong>Unschedule successful</strong>."
-          + "</div>");
-          $("#alert .alert").delay(10000).fadeOut("slow", function () { $(this).remove(); });
-
+          displayAlert("Unschedule successful");
           $("#list-history").prepend("<li>unschedule: " 
                + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
 
@@ -438,11 +457,10 @@
               placement: "bottom",
               trigger: "click",
                title:function(){
-                    return allSessions[$(this).data("session-id")].title;
+                    return allSessions[id].title;
                },
                content:function(){
-                    return displayScheduleOptions(id);
-                    //return $(this).find(".detail").html();
+                    return getSessionDetail("unscheduled", allSessions[id]);
                }
           });
           //$cloned_session.removeClass("selected");
@@ -469,7 +487,7 @@
      	// if reselected, do nothing.
      	if (isSelected)
      		return;
-     	var id = $(this).attr("id").substr(8);
+     	var id = getID($(this));
      	$(this).addClass("selected");
 /*
      	$(this).popover({
@@ -503,11 +521,12 @@
           // if empty, show available schedule options.
           if ($(this).hasClass("empty")){
                //TODO: show available options
+               $(this).addClass("selected");
                return;
           }
                
 
-     	var id = $(this).attr("id").substr(8);
+     	var id = getID($(this));
 		var session = allSessions[id];
      	$(this).addClass("selected");
      	$(this).popover({
@@ -523,230 +542,6 @@
      	});
      	$(this).popover("show");
      });
-/*
-     // Event handler for mouse hovering an individual session
-     $("#program").on("mouseenter", ".slot", function(){
-     	// ignore if the current item is "selected"
-     	console.log($(this).hasClass("selected"));
-     	if ($(this).hasClass("selected") || $("#program .selected").length != 0 || $(this).hasClass("empty"))
-     		return;
-          // detect if the currently selected item is selected again.
-          //var $selection = $("#program .selected");
-          //var isSelected = $selection[0] == $(this)[0];
-          //$selection.removeClass("selected").popover("hide");
-
-          // if reselected, do nothing.
-          //if (isSelected)
-          //     return;
-        else{
-          //$(this).addClass("hovered");
-          $(this).popover({
-               html:true,
-               placement: "bottom",
-               trigger: "hover",
-               title:function(){
-                    return $(this).data("title");
-               },
-               content:function(){
-                    return $(this).find(".detail").html();
-               }
-          });
-          $(this).popover("show");
-        }
-     });
-
-     // Event handler for mouse hovering an individual session
-     $("#program").on("mouseleave", ".slot", function(){
-     	// ignore if the current item is "selected"
-     	//console.log($(this).hasClass("selected"));
-     	if ($(this).hasClass("selected"))
-     		return;
-     	else
-        	$(this).popover("hide");        
-     });
-*/
-
-     // Upon selecting a constraint, highlight the ones that violate the selected constraint.
-     $("#list-constraints").on("click", "li a", function(){
-          var $this = $(this);
-          var toggle = true;
-          if ($(this).parent().hasClass("view-option-active"))
-               toggle = false;
-          $("#list-constraints .view-option-active").removeClass("view-option-active");
-          if (toggle)
-              $(this).parent().addClass("view-option-active");
-          var selected_constraint = $(this).parent().data("type");
-          $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-               $(item).css("background-color", "white");
-               var id = $(item).attr("id").substr(8);
-               var session = allSessions[id];     
-               var color = "#FFFFFF"; // default white
-               if (toggle)
-                    color = $this.find(".palette").css("background-color");
-               //session.personas.contains(selected_persona);
-               $.each(conflictsBySession[id], function(index, constraint){
-                    if (constraint.type == selected_constraint){
-                         $(item).css("background-color", color);
-                    }
-               });
-          });
-         return false;
-     });
-
-     // Upon selecting a view option, change the view
-     $("#list-view-options").on("click", "li a", function(){
-     	$("#list-view-options .view-option-active").removeClass("view-option-active");
-     	$(this).parent().addClass("view-option-active");
-     	switch($(this).parent().data("type")){
-     		case "session-type":
-     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-     				var id = $(item).attr("id").substr(8);
-					var session = allSessions[id];
-					$(item).find(".display").html(session.type);
-     			});
-     		break;
-               case "conflicts":
-                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-                         var id = $(item).attr("id").substr(8);
-                         $(item).find(".display").html("");
-                         displayConflicts(conflictsBySession[id], $(item).find(".display"));
-                         //$(item).find(".display").html(conflictsBySession[id]);
-                    });
-               break;                 
-               case "popularity":
-                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-                         var id = $(item).attr("id").substr(8);
-                         $(item).find(".display").html(sessionPopularity[id]);
-                    });
-               break;               
-     		case "num-papers":
-     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-     				var id = $(item).attr("id").substr(8);
-					var session = allSessions[id];
-     				$(item).find(".display").html(getSessionNumSubmissions(session.submissions));
-     			});
-     		break;
-     		case "duration":
-     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-     				$(item).find(".display").html("80");
-     			});
-     		break;
-     		case "awards":
-     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-     				var id = $(item).attr("id").substr(8);
-					var session = allSessions[id];
-     				if (session.hasAward)
-     					$(item).find(".display").html("<img src='img/best-paper.png' class='icon'/>");
-                         else
-                              $(item).find(".display").html("");
-     			});
-     		break;
-     		case "honorable-mentions":
-     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-     				var id = $(item).attr("id").substr(8);
-					var session = allSessions[id];     				
-     				if (session.hasHonorableMention)
-     				    $(item).find(".display").html("<img src='img/nominee.png' class='icon'/>");
-                         else
-                             $(item).find(".display").html(""); 
-     			});     		     		
-     		break;
-     		case "persona":
-     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-     				var id = $(item).attr("id").substr(8);
-					var session = allSessions[id];
-     				$(item).find(".display").html(keys(session.personas).map(function(x) {return personaHash[x]}));
-     			});
-     		break;
-     		default:
-     		break;
-     	}
-          return false;
-     });
-
-	$("#list-personas").on("click", "li a", function(){
-		var $this = $(this);
-     	var toggle = true;
-          if ($(this).parent().hasClass("view-option-active"))
-               toggle = false;
-          $("#list-personas .view-option-active").removeClass("view-option-active");
-          if (toggle)
-     	    $(this).parent().addClass("view-option-active");
-     	var selected_persona = $(this).parent().data("type");
-		$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-			$(item).css("background-color", "white");
-			var id = $(item).attr("id").substr(8);
-			var session = allSessions[id];	
-			var color = "#FFFFFF"; // default white
-               if (toggle)
-                    color = $this.find(".palette").css("background-color");
-			//session.personas.contains(selected_persona);
-			$.each(keys(session.personas), function(index, key){
-				if (key == selected_persona){
-					$(item).css("background-color", color);
-				}
-			});
-		});
-	    return false;
-	});
-
-     function displayUnscheduled(){
-          keys(unscheduled).map(function(id){
-               var cell = getSessionCell(allSessions[id]);
-               $("#unscheduled").append(cell); 
-               $(cell).popover({
-                   html:true,
-                   placement: "bottom",
-                   trigger: "click",
-                    title:function(){
-                         return allSessions[$(this).data("session-id")].title;
-                    },
-                    content:function(){
-                         return $(this).find(".detail").html();
-                    }
-               });        
-          });
-     }
-
-	function displayConstraints(){
-     	$.each(constraints_list, function(index, constraint){
-     		var item = document.createElement("li");
-     		$(item).data("type", constraint.type).html("<a href='#'><span class='palette'></span>" + constraint.label + "</a>");
-     		$("#list-constraints").append($(item));
-     		$(item).find("span.palette").css("background-color", constraint.color);
-      	});
-	}
-
-     // Populate the View options list
-     function displayViewOptions(){
-     	$.each(options_list, function(index, option){
-     		var item = document.createElement("li");
-     		$(item).data("type", option.id).html("<a href='#'>" + option.label + "</a>");
-     		$("#list-view-options").append($(item));
-      	});
-      	$("#list-view-options li:first-child").addClass("view-option-active");
-     }
-
-     // Display the persona list
-     function displayPersonas(){
-          var color_index = 0;
-     	$.each(personaHash, function(index, persona){
-     		var item = document.createElement("li");
-      		$(item).data("type", index).html("<a href='#'><span class='palette'></span>" + persona + "</a>");
-     		$("#list-personas").append($(item));    		
-     		$(item).find("span.palette").css("background-color", color_palette_1[color_index]);
-               color_index++;
-     	});
-     	/*
-     	$.each(personas_list, function(index, persona){
-     		var item = document.createElement("li");
-      		$(item).data("type", persona.id).html("<a href='#'><span class='palette'></span>" + persona.label + "</a>");
-     		$("#list-personas").append($(item));    		
-     		$(item).find("span.palette").css("background-color", persona.color);
-     	});
-		*/
-     }
-
 
      function displayProgram(schedule){
           var orderedRooms = keys(allRooms).sort(function(a,b) { return allRooms[a] - allRooms[b];});
@@ -779,11 +574,12 @@
                */
 
                for(var j = 2; j < schedule[i].length; j++){
-                    var cell = getSessionCell(schedule[i][j]);
+                    var cell = getSessionCell("scheduled", schedule[i][j]);
                     $(row).append(cell);
                }
                $('#program').append(row);
-           }
+          }
+          updateUnscheduledCount();
      }
 
      var scheduleMatrix = [];
@@ -837,9 +633,7 @@
           displayUnscheduled();
      	displayConstraints();
      	displayViewOptions();
-     	displayPersonas();
-          updateUnscheduledCount();
-
+     	displayPersonas();          
 	 });
 
 
