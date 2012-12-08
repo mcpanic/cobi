@@ -181,7 +181,11 @@ function initialize(){
     initializePersonaConflictsAmongSessions(); // this can be loaded from a file
   
     getAllConflicts();
-    
+
+    //    proposeUnscheduledSessionForSlot("May 7, 2012", "08:30", "Ballroom D");
+
+
+
     // Traditional polling for now...
  //    (function poll(){
 // 	setTimeout(function(){
