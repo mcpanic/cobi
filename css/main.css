@@ -79,13 +79,14 @@
 
             #program .header-row {
                 /*position: fixed;*/
+                font-weight: bold;
             }
 
-            #program .selected {
+            #program .selected, div#unscheduled .selected {
                 background: #ffb7b7;
             }
 
-            #program .swap-selected {
+            #program .swap-selected, div#unscheduled .swap-selected {
                 background: yellow;
             }
 
@@ -106,12 +107,12 @@
                 opacity: 1;
             }
 
-            #program .proposed-swap {
+            #program .proposed-swap, div#unscheduled .proposed-swap {
                 background: #FF8C00;
                 cursor: pointer;
             }
 
-            #program .highlight {
+            #program .highlight, div#unscheduled .highlight {
             	outline: 2px solid black;
             }
 

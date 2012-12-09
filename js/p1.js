@@ -41,13 +41,8 @@
      	return html;
      }
 
-     function swapNodes(a, b) {
-         var aparent= a.parentNode;
-         var asibling= a.nextSibling===b? a : a.nextSibling;
-         b.parentNode.insertBefore(a, b);
-         aparent.insertBefore(b, asibling);
-     }
 
+     // Visually swap two session cells
      function swapSessionCell(id1, id2){
           swapNodes($("#program #session-" + id1)[0], $("#program #session-" + id2)[0]);
           $("#program #session-" + id1).css("background-color", "white").effect("highlight", {color: "yellow"}, 10000);
@@ -66,6 +61,16 @@
      	$org2.replaceWith($session1);
           */
      }
+
+     // move the session of id into cell
+     function scheduleSessionCell(id, $emptySlot, $curSession){
+          var session = getSessionCell("scheduled", allSessions[id]);
+          //swapNodes(session, $cell[0]);
+          $emptySlot.replaceWith($(session));
+          $(session).css("background-color", "white").effect("highlight", {color: "yellow"}, 10000)
+          $curSession.remove();
+          
+    }
 
      // For each session item, display the session information
      function getSessionCell(type, session){
@@ -170,6 +175,35 @@
           
      }
 
+     function getLength(item) {
+          if (item === null || typeof item === "undefined")
+               return 0;
+          else 
+               return item.length;
+     }
+
+     // for each conflict preview tpe (addedSrc, removedSrc, addedDest, removedDest),
+     // display appropriate message
+     function displayPreviewByType(type, item) {
+          var html = "";
+          var length = getLength(item);
+          var typeMessage = "";
+          if (type === "addedSrc") 
+               typeMessage = " conflicts added to source session";
+          else if (type === "removedSrc")
+               typeMessage = " conflicts removed from source session";
+          else if (type === "addedDest")
+               typeMessage = " conflicts added to this session";
+          else if (type === "removedDest")
+               typeMessage = " conflicts removed to this session";
+          
+          html = "<h5>" + length + typeMessage + "</h5>"
+          if (length > 0) 
+               item.map(function(co) {return html + "<li>" + co.description + "</li>";})         
+          else
+               return html;
+     }
+
      function getPreviewSwap(swap){
           //var $session = $(".selected").first();
           //var id = getID($session);
@@ -180,40 +214,84 @@
           var html = "";
           html += "<h4>Overall, " + swap.value
                + " conflicts will be resolved.</h4>" 
-               + "<h5>" + swap.addedSrc.length + " conflicts added to source session</h5>"
-               + swap.addedSrc.map(function(co) {return "<li>" + co.description + "</li>";})
-               + "<h5>" + swap.removedSrc.length + " conflicts removed from source session</h5>"
-               + swap.removedSrc.map(function(co) {return "<li>" + co.description + "</li>";})
-               + "<h5>" + swap.addedDest.length + " conflicts added to this session</h5>"
-               + swap.addedDest.map(function(co) {return "<li>" + co.description + "</li>";})
-               + "<h5>" + swap.removedDest.length + " conflicts removed from this session </h5>"
-               + swap.removedDest.map(function(co) {return "<li>" + co.description + "</li>";});
-               console.log(html);
+               + displayPreviewByType("addedSrc", swap.addedSrc)
+               + displayPreviewByType("removedSrc", swap.removedSrc)
+               + displayPreviewByType("addedDest", swap.addedDest)
+               + displayPreviewByType("removedDest", swap.removedDest);
+               //console.log(html);
           return html;
      }
-/*
-     $("#alert").on("click", ".swap-preview-link", function(){
-          return false;
-     });
-*/
-     $("#alert").on("click", ".swap-review-link", function(){
-          var id = $(this).parent().data("session-id");
-          $(this).toggleClass("view-option-active");
-          $("#program #session-" + id).toggleClass("highlight").popover("toggle");
-          return false;
-     });
 
-     $("#list-history").on("click", ".history-link", function(){
-          var id = $(this).data("session-id");
-          $(this).toggleClass("view-option-active");
-          $("#session-" + id).toggleClass("highlight").popover("toggle");
-          return false;
-     });
+     // Locate an empty session by its date, time, and room
+     // Returns null when there is no such cell that's empty.
+     function getCellByDateTimeRoom(cellDate, cellTime, cellRoom){
+          var cell = null;
+          $("#program .empty").each(function(){
+               if ($(this).data("date") === cellDate && $(this).data("time") === cellTime  && $(this).data("room") === cellRoom)
+                    cell = $(this);
+          });
+          return cell;
+     }
+
+     // Display textually the slot title. (slot data structure)
+     // When session exists: Name of the session
+     // When session is empty: show date, time, room
+     function displaySlotTitle(slot) {
+          if (slot.session === null) {
+               return slot.day + " " + slot.time + " " + slot.room;
+          } else {
+               return allSessions[slot.session].title;
+          }
+     }
+
+     // Display textually the session title.
+     // When session exists: Name of the session
+     // When session is empty: show date, time, room
+     function displaySessionTitle(session) {
+          if (session.hasClass("empty")) {
+               return session.data("date") + " " + session.data("time") + " " + session.data("room");
+          } else {
+               console.log(session);
+               return allSessions[getID(session)].title;
+          }
+     }
+
+
+     // For proposed swap options, display the right popover
+     function renderProposedSwap(type){
+
+          $(".proposed-swap").popover("destroy");
+          $(".proposed-swap").popover({
+               html:true,
+               placement: "bottom",
+               trigger: "click",
+/*               title:function(){
+                    return allSessions[$(this).data("session-id")].title;
+               },
+*/               content:function(){
+                    var id = $(this).data("session-id");
+                    if (typeof id === "undefined") {
+                         return "<button class='btn btn-primary' id='schedule-button'" 
+                         + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
+                         +"'>Schedule in this slot</button><br>";
+                         
+                    } else { 
+                         if (type === "swap")
+                              return "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
+                              + "'>Swap with this session</button><br>"
+                              + $(this).find(".detail ul")[0].outerHTML;
+                         else // unscheduled session
+                              return "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
+                              + "'>Schedule this session</button><br>"
+                              + $(this).find(".detail ul")[0].outerHTML;
+                    }
+               }
+          });
+     }
 
      // Handle a propose (swap, unschedule, schedule) request
      function proposeHandler(event){
           var $session = $(".selected").first();
-//          console.log($session);
           var id = getID($session);  
           
           var swapValues; 
@@ -230,86 +308,63 @@
                return;
           }
 
+          // Now display each candidate 
           swapValues.sort(function(a, b) {return b.value - a.value;});
-          console.log(JSON.stringify(swapValues));
-
+          //console.log(JSON.stringify(swapValues));
           var count = Math.min(swapValues.length, 5);
-          console.log("count", count);
           var swapContent = "";
           for(var i = 0; i < count; i++){    
-               if (event.data.type == "swap"){
-                    $("#program #session-" + swapValues[i].target.session).addClass("proposed-swap");
-                    swapContent += "<li data-session-id='" + swapValues[i].target.session + "' data-rank-order='" + i + "'>" //+ swapValues[i] 
+               // empty candidate
+               if (swapValues[i].target.session === null){
+                    var $cell = getCellByDateTimeRoom(swapValues[i].target.day, swapValues[i].target.time, swapValues[i].target.room);
+                    $cell.addClass("proposed-swap").data("title", "Empty slot");
+                    swapContent += "<li data-rank-order='" + i + "' data-date='"+swapValues[i].target.day+"' data-time='"+swapValues[i].target.time+"' data-room='"+swapValues[i].target.room+"'>" 
                     + "<a href='#' class='swap-preview-link'>[preview]</a> "
                     + "resolving " + swapValues[i].value  
-                    + ": <a href='#' class='swap-review-link'>" + allSessions[swapValues[i].target.session].title + "</a>" 
-                    + "</li>";
-               } else if (event.data.type == "unscheduled"){
-                    //$("#program #session-" + swapValues[i].target.session).addClass("proposed-swap");
-                    swapContent += "<li data-session-id='" + swapValues[i].target.session + "' data-rank-order='" + i + "'>" //+ swapValues[i] 
-                    + "<a href='#' class='swap-preview-link'>[preview]</a> "
-                    + "resolving " + swapValues[i].value  
-                    + ": <a href='#' class='swap-review-link'>" 
-                    + allSessions[swapValues[i].target.session].date 
-                    + allSessions[swapValues[i].target.session].time 
-                    + allSessions[swapValues[i].target.session].room 
-                    + "</a>" 
+                    + ": <a href='#' class='swap-review-link'>" + displaySlotTitle(swapValues[i].target) + "</a>" 
                     + "</li>";                    
+
+               // non-empty candidate
+               } else {
+                    $("#program #session-" + swapValues[i].target.session)
+                         .addClass("proposed-swap")
+                         .data("title", swapValues[i].target.session.title);
+                    swapContent += "<li data-session-id='" + swapValues[i].target.session + "' data-rank-order='" + i + "'>" //+ swapValues[i] 
+                    + "<a href='#' class='swap-preview-link'>[preview]</a> "
+                    + "resolving " + swapValues[i].value  
+                    + ": <a href='#' class='swap-review-link'>" + displaySlotTitle(swapValues[i].target) + "</a>" 
+                    + "</li>";
                }
-               
           }
 
-          /*
-          var html = '<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">'
-            + '<div class="modal-header">'
-            + '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">Ã—</button>'
-            + '  <h3 id="myModalLabel">' + "Swap suggestions for session " + id + ": " + session.title + '</h3>'
-            + '</div>'
-            + '<div class="modal-body">'
-            + '  <p>' + swapContent + '</p>'
-            + '<p>Review highlighted swap suggestions and select one, or click Cancel to go back.</p>'
-            + '</div>'
-            + '<div class="modal-footer">'
-            + '  <button class="btn btn-primary" id="swap-review-button">Review</button>'
-            + '  <button class="btn" data-dismiss="modal" aria-hidden="true" id="swap-cancel-button">Cancel</button>'          
-            + '</div>'
-          + '</div>';
-          $session.append(html);
-          $("#myModal").modal();
-          */
-
-
+          // For proposed slots, add a new popover
           $session.addClass("swap-selected");
           $session.popover("hide");
-          $("#program .proposed-swap").popover("destroy");
-          $("#program .proposed-swap").popover({
-               html:true,
-               placement: "bottom",
-               trigger: "click",
-               title:function(){
-                    return allSessions[$(this).data("session-id")].title;
-               },
-               content:function(){
-                    var id = $(this).data("session-id");
-                    return "<button class='btn btn-primary' id='swap-button' data-session-id='" + id +"'>Swap with this session</button><br>"
-                    + $(this).find(".detail ul")[0].outerHTML;
-               }
-          });
 
-          //$(this).popover();
-          $("#alert").html("<div class='alert'>"
+          renderProposedSwap(event.data.type);
+
+
+          // Display at the top alert box the full information about this proposal
+          var alert_html = "";
+          alert_html = "<div class='alert'>"
           //+ "<button type='button' class='close' data-dismiss='alert'>×</button>"
           + "<strong>Swap in progress</strong>. Click one of the proposed sessions in <span class='palette'>&nbsp;</span> to switch sessions, " 
           + "or <button class='btn' type='button' id='swap-review-cancel-link'>cancel swap</button>."
-          + "<div class='row'>"
-          + "<div class='span3 src-display' data-session-id='" + id 
-          + "'>selected session:<br> <a href='#' class='swap-review-link'>" + allSessions[id].title + "</a></div>"
-          + "<div class='span6'>" + swapContent + "</div>"
-          + "</div></div>");
+          + "<div class='row'>";
+
+          if (id === -1)
+               alert_html += "<div class='span3 src-display' data-date='"+$session.data("date")+"' data-time='"+$session.data("time")+"' data-room='"+$session.data("room")+"'>" 
+          else
+               alert_html += "<div class='span3 src-display' data-session-id='" + id ;
+
+          alert_html += "'>selected session:<br> <a href='#' class='swap-review-link'>" + displaySessionTitle($session) + "</a></div>"
+                    + "<div class='span6'>" + swapContent + "</div>"
+                    + "</div></div>";
+        
+          $("#alert").html(alert_html);
           $("#alert .palette").css("background-color", "#FF8C00");
 
           // Now attach popovers for preview
-
           $("#alert .swap-preview-link").popover({
                html:true,
                placement: "bottom",
@@ -318,7 +373,6 @@
                     return "Preview swap results";
                },
                content:function(){
-                    var id = $(this).parent().data("session-id");
                     var rank = $(this).parent().data("rank-order");
                     return getPreviewSwap(swapValues[rank]);
                }
@@ -329,6 +383,57 @@
      $("body").on("click", ".popover .button-propose-unscheduled", {type: "unscheduled"}, proposeHandler);
      $("body").on("click", ".popover .button-propose-empty", {type: "empty"}, proposeHandler);
 
+/*
+     $("#alert").on("click", ".swap-preview-link", function(){
+          return false;
+     });
+*/
+     $("#alert").on("click", ".swap-review-link", function(){
+          var id = $(this).parent().data("session-id");
+          $(this).toggleClass("view-option-active");
+          console.log(id, $(this).parent().data("date"));     
+          var cell = null;
+          if (typeof id === "undefined")
+               cell = getCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));
+          else
+               cell = $("#session-" + id)
+
+          $(cell).toggleClass("highlight").popover("toggle");
+          return false;
+     });
+
+     $("#list-history").on("click", ".history-link", function(){
+          var id = $(this).data("session-id");
+          $(this).toggleClass("view-option-active");
+
+          var cell = null;
+          if (typeof id === "undefined")
+               cell = getCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));
+          else
+               cell = $("#session-" + id)
+
+          $(cell).toggleClass("highlight").popover("toggle");
+          return false;
+     });
+
+     // Back to the default interaction.
+     // Used to cancel any effect of the swapping mode
+     function restoreDefaultInteraction(){
+          // TOOD: check all the other things the swapping mode has created and reset/undo them.
+
+          //$(".selected").hide();
+          $(".selected").removeClass("selected");
+          $(".swap-selected").removeClass("swap-selected");
+          $("#alert .swap-preview-link").popover("destroy");
+          // remove any popover and reinitiate default popover
+          $(".proposed-swap").popover("destroy");
+          // TODO: restore default popover
+
+          $(".proposed-swap").removeClass("proposed-swap");   
+          $(".highlight").removeClass("highlight");  
+
+     }
+
      // clicking the 'swap' button from one of the proposed swaps.
      // should perform swap and return to the clean state with no selection and proposals.
      $("body").on("click", ".popover #swap-button", function(){
@@ -336,6 +441,8 @@
      	var $source = $(".swap-selected").first();
           var src_id = getID($source);
      	var dst_id = $(this).data("session-id");
+
+          /*
      	$(".proposed-swap").popover("destroy");
           $(".proposed-swap").popover({
               html:true,
@@ -348,17 +455,14 @@
                     return $(this).find(".detail").html();
                }
           });
+          */
 
-     	//$(".selected").hide();
-     	$(".selected").removeClass("selected");
-          $(".swap-selected").removeClass("swap-selected");
-     	$(".proposed-swap").removeClass("proposed-swap");   
-          $(".highlight").removeClass("highlight");  
+          restoreDefaultInteraction();
           displayAlert("Swap successful");
 
           $("#list-history").prepend("<li>swapped: " 
-               + "<a href='#' class='history-link' data-session-id='" + src_id + "'>" + allSessions[src_id].title + 
-               "</a> and <a href='#' class='history-link' data-session-id='" + dst_id + "'>" + allSessions[dst_id].title + "</a></li>");
+               + "<a href='#' class='history-link' data-session-id='" + src_id + "'>" + allSessions[src_id].title 
+               + "</a> and <a href='#' class='history-link' data-session-id='" + dst_id + "'>" + allSessions[dst_id].title + "</a></li>");
           // the frontend swap
           swapSessionCell(src_id, dst_id);
 
@@ -371,52 +475,60 @@
           updateConflicts();
      });	
 
+
+     // clicking the 'schedule' button from one of the proposed swaps. - for empty or unscheduled sessions
+     // should perform scheduling and return to the clean state with no selection and proposals.
+     $("body").on("click", ".popover #schedule-button", function(){
+          var $session = null;     // session to schedule
+          var $emptySlot = null;   // empty slot into shich the session is going
+          var id = -1;
+          
+          // empty slot is the target
+          // unscheduled session is the source
+          console.log(typeof $(this).data("session-id"), $(this).data("date"), $(this).data("time"), $(this).data("room"));
+          if (typeof $(this).data("session-id") === "undefined") {   
+               $session = $(".swap-selected").first();
+               $emptySlot = getCellByDateTimeRoom($(this).data("date"), $(this).data("time"), $(this).data("room"));
+          // unscheduled session is the target
+          // empty slot is the source
+          } else { 
+               var session_id = $(this).data("session-id");
+               $session = $("#session-" + session_id);
+               $emptySlot = $(".swap-selected").first();
+          }
+
+          restoreDefaultInteraction();
+          displayAlert("Scheduling successful");
+
+          id = getID($session);
+          console.log($session, $emptySlot, id);
+
+          $("#list-history").prepend("<li>scheduled: " 
+               + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title 
+               + "</a></li>");
+          
+          // the backend scheduling
+          console.log("SCHEDULE", id, "into", $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
+          scheduleSession(allSessions[id], $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"), "");
+
+          // the frontend scheduling: backend should be called first to have the updated allSessions[id] information
+          scheduleSessionCell(id, $emptySlot, $session);
+
+          updateUnscheduledCount();
+          // the backend conflicts update
+          getAllConflicts();
+          // the frontend conflicts update: the row view of conflicts.
+          updateConflicts();
+     });  
+
+
      // clicking the 'cancel swap' link while swap in progress.
      // should return to the clean state with no selection and proposals.
+     // return to original popovers
      $("#alert").on("click", "#swap-review-cancel-link", function(){
-          $(".selected").removeClass("selected");
-          $(".swap-selected").removeClass("swap-selected");
-          $(".proposed-swap").removeClass("proposed-swap");  
-          $(".highlight").removeClass("highlight");   
+          restoreDefaultInteraction();  
           $("#alert").html("");      
      });
-/*
-     // clicking the cancel button from the review modal dialog
-     $("#program").on("click", "#swap-cancel-button", function(){
-     	$("#program .proposed-swap").removeClass("proposed-swap");
-     });
-
-     // clicking the review button from the review modal dialog
-     // show highlight proposed swaps, display alert, and add popover.
-     $("#program").on("click", "#swap-review-button", function(){          
-     	$("#myModal").modal("hide");
-     	var $session = $(".selected").first();
-          $session.addClass("swap-selected");
-     	//$session.css("background-color", "yellow");
-     	var id = $session.attr("id").substr(8);
-		var session = allSessions[id];
-     	$session.popover("hide");
-     	$("#program .proposed-swap").popover({
-     		html:true,
-            placement: "bottom",
-            trigger: "click",
-     		title:function(){
-     			return session.title;
-     		},
-     		content:function(){
-     			return "<button class='btn btn-primary' id='swap-button' data-session-id='" + session.id +"'>Swap with this session</button>";
-     		}
-     	});
-     	//$(this).popover();
-          $("#alert").html("<div class='alert'>"
-          //+ "<button type='button' class='close' data-dismiss='alert'>×</button>"
-          + "<strong>Swap in progress</strong>. Click one of the proposed sessions in <span class='palette'>&nbsp;</span> to switch sessions, " 
-          + "or <a href='#' id='swap-review-cancel-link'>cancel swap</a>."
-          + "</div>");
-          $("#alert .palette").css("background-color", "#FF8C00");
-     });
-*/
-
 
      // When the unschedule button is clicked. Move the item to the unscheduled workspace.
      $("body").on("click", ".popover .button-unschedule", function(){
@@ -463,7 +575,7 @@
                     return getSessionDetail("unscheduled", allSessions[id]);
                }
           });
-          //$cloned_session.removeClass("selected");
+
           updateUnscheduledCount();
           // the backend conflicts update
           getAllConflicts();
@@ -489,21 +601,7 @@
      		return;
      	var id = getID($(this));
      	$(this).addClass("selected");
-/*
-     	$(this).popover({
-     		html:true,
-               placement: "bottom",
-               trigger: "click",
-     		title:function(){
-                    return allSessions[$(this).attr("id").substr(8)].title;
-     		},
-     		content:function(){
-     			return $(this).find(".detail").html();
-     		}
-     	});
-
-     	$(this).popover("toggle");
-*/     });
+     });
 
      // Event handler for clicking an individual session
      $("#program").on("click", ".slot", function(){
@@ -518,14 +616,7 @@
           // do nothing for unavailable slots
           if ($(this).hasClass("unavailable"))
                return;
-          // if empty, show available schedule options.
-          if ($(this).hasClass("empty")){
-               //TODO: show available options
-               $(this).addClass("selected");
-               return;
-          }
                
-
      	var id = getID($(this));
 		var session = allSessions[id];
      	$(this).addClass("selected");
@@ -534,10 +625,16 @@
               placement: "bottom",
               trigger: "manual",
      		title:function(){
-     			return session.title;
+                    if ($(this).hasClass("empty"))
+                         return "Empty slot";
+     			else
+                         return session.title;
      		},
      		content:function(){
-     			return $(this).find(".detail").html();
+                    if ($(this).hasClass("empty"))
+                         return getSessionDetail("empty", -1);
+                    else
+     			     return $(this).find(".detail").html();
      		}
      	});
      	$(this).popover("show");
