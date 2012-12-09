@@ -12,7 +12,6 @@ var frontEndOnly = true;
 // Read data from the server
 function loadSchedule(){
     // load scheduled sessions
-
 	$.ajax({
 	   async: false,
 	    type: 'GET',
@@ -27,7 +26,6 @@ function loadSchedule(){
 	   },
 	       dataType: "json"
 	       });
-
 }
 
 // Unschedule a session
@@ -184,28 +182,77 @@ function initialize(){
   
     getAllConflicts();
 
-//     // setup polling server for changes
-//     (function poll(){
-// 	$.ajax({ url: "server", success: function(data){
-// 		    //Update your dashboard gauge
-// 		    	   async: false,
-// 	    type: 'GET',
-// 		url: "./php/loadDBtoJSON.php",
-// 		    salesGauge.setValue(data.value);
-
-// 		}, dataType: "json", complete: poll, timeout: 5000 });
-//     })();
+    //    proposeUnscheduledSessionForSlot("May 7, 2012", "08:30", "Ballroom D");
 
 
-// 		var serverData = loadScheduleChanges();
-// 		if(!scheduleIsConsistent(schedule, unscheduled, serverData)){
-// 		    // write code to update on changes...
-// 		}
-// 		$('#storedValue').text(val); 
-// 		poll();
-// 		//            google.script.run.withSuccessHandler(onSuccess).getValue();     
+
+    // Traditional polling for now...
+ //    (function poll(){
+// 	setTimeout(function(){
+//  		$.ajax({    url: "./php/loadDBtoJSONCompact.php",
+//  			    success: function(m){
+//  			    var serverSchedule = m['schedule'];
+//  			    var serverUnscheduled = m['unscheduled'];
+// 			    if(schedule != null){
+// 				if(isConsistent(serverSchedule, serverUnscheduled)){
+// 				    console.log("still consistent");
+// 				}else{
+// 				    alert("there is an inconsistency in data!");
+// 				}
+// 			    }
+// 			    poll();
+//  			}, 
+// 			    error : function(m){
+// 			    alert(JSON.stringify(m));
+// 			},
+// 			    dataType: "json"});
+		
 // 	    }, 5000);
 //     })();
+
+    // $(Schedule).trigger("inconsistent")...
+}
+
+function isConsistent(serverSchedule, serverUnscheduled){
+    // Compare schedule first
+    // Assume same keys on day/time/room exist always, so any inconsistency is in content
+
+    var scheduleAdded = [];
+    var unscheduledAdded = [];
+    var scheduleRemoved = [];
+    var unscheduledRemoved = [];
+    var consistent = true;
+    
+    for(var day in schedule){
+	for(var time in schedule[day]){
+	    for(var room in schedule[day][time]){
+		if(!arraysEqual(keys(schedule[day][time][room]).sort(), 
+				keys(serverSchedule[day][time][room]).sort())){
+		    // get what's different....
+		    consistent = false;
+		}
+	    }
+	}
+    }
+
+    if(!arraysEqual(keys(unscheduled).sort(),  keys(serverUnscheduled).sort())){
+	// get what's different... 
+	// what's added
+	// what's removed
+	consistent = false;
+	//
+    }
+    return consistent;
+}
+
+function arraysEqual(arr1, arr2) {
+    if(arr1.length != arr2.length)
+	return false;
+    for(var i = 0; i < arr1.length; i++) {
+	if(arr1[i] != arr2[i])
+	    return false;
+    }
+    return true;
 }
 
 function keys(obj){
