@@ -7,25 +7,21 @@ var conflictsBySession = null;
 var unscheduled = null;
 var schedule = null;
 var frontEndOnly = true;
-///////functions for interacting with the DB ///////////
 
-// Read data from the server
-function loadSchedule(){
-    // load scheduled sessions
-	$.ajax({
-	   async: false,
-	    type: 'GET',
-		url: "./php/loadDBtoJSON.php",
-	       success: function(m){
-	       //  alert(JSON.stringify(m));
-	       schedule = m['schedule'];
-	       unscheduled = m['unscheduled'];
-	   },
-	       error : function(m){
-	       alert(JSON.stringify(m));
-	   },
-	       dataType: "json"
-	       });
+////// Functions that change the data schedule 
+
+function removeSessionFromSlot(s, date, time, room){
+    delete schedule[date][time][room][s.id];
+    allSessions[s.id]['date'] = "";
+    allSessions[s.id]['time'] = "";
+    allSessions[s.id]['room'] = "";
+    allSessions[s.id]['endTime'] = "";
+}
+
+function clearSlot(date, time, room){
+    for(s in schedule[date][time][room]){
+	removeSessionFromSlot(s, date, time, room);
+    }
 }
 
 // Unschedule a session
@@ -35,42 +31,27 @@ function unscheduleSession(s){
     var stime = s.time;
     var sroom = s.room;
 
-    // unschedule on frontend
-    delete schedule[sdate][stime][sroom][s.id];
-    allSessions[s.id]['date'] = "";
-    allSessions[s.id]['time'] = "";
-    allSessions[s.id]['room'] = "";
-    allSessions[s.id]['endTime'] = "";
+    // remove session from slot
+    removeSessionFromSlot(s, sdate, stime, sroom);
+
+    // add to unscheduled
     unscheduled[s.id] = s;
 
     // unschedule on server
     if(!frontEndOnly){
-        $.ajax({
- 	    async: false,
-		type: 'POST',
-		data: { type: 'unschedule', 
-			id: s.id,
-			date: sdate,
-			time: stime,
-			room: sroom
-			}, 
-		url: "./php/changeSchedule.php",
-		success: function(m){
-		
- 	    },
-		error : function(m){
-		alert(JSON.stringify(m));
-	    },
-		dataType: "json"
-		 });
+	db.unscheduleSession(s.id, sdate, stime, sroom);
     }
 }
 
+
 // schedule a session
 function scheduleSession(s, sdate, stime, sroom, sendTime){
+    // remove session from unscheduled
+    if(s.id in unscheduled){
+	delete unscheduled[s.id];
+    }
+
     // schedule on frontend
-    //    alert(JSON.stringify(schedule[sdate][stime][sroom]));
-    //    alert(JSON.stringify(s));
     schedule[sdate][stime][sroom][s.id] = s;
     s['date'] = sdate;
     s['time'] = stime;
@@ -80,24 +61,7 @@ function scheduleSession(s, sdate, stime, sroom, sendTime){
 
     // schedule on server
     if(!frontEndOnly){
-        $.ajax({
- 	    async: false,
-		type: 'POST',
-		data: { type: 'schedule', 
-			id: s.id,
-			date: sdate,
-			time: stime,
-			room: sroom,
-			endTime: s.endTime}, 
-		url: "./php/changeSchedule.php",
-		success: function(m){
-		
- 	    },
-		error : function(m){
-		alert(JSON.stringify(m));
-	    },
-		dataType: "json"
-		 });
+	db.scheduleSession(s.id, sdate, stime, sroom, s.endTime);
     }
 }
 
@@ -127,36 +91,33 @@ function swapSessions(s1, s2){
 
     // perform swap on server
     if(!frontEndOnly){
-        $.ajax({
- 	    async: false,
-		type: 'POST',
-		data: { type: 'swap', 
-			s1id: s1.id,
-			s1date: s1date,
-			s1time: s1time,
-			s1room: s1room,
-			s2id: s2.id,
-			s2date: s2date,
-			s2time: s2time,
-			s2room: s2room
-			}, 
-		url: "./php/changeSchedule.php",
-		success: function(m){
-		
- 	    },
-		error : function(m){
-		alert(JSON.stringify(m));
-	    },
-		dataType: "json"
-		 });
-
+	db.swapSession(s1.id, s1date, s1time, s1room,
+		       s2.id, s2date, s2time, s2room);
     }
-    //    alert(JSON.stringify(schedule[s1date][s1time][s1room]));
-    //    alert(JSON.stringify(schedule[s2date][s2time][s2room]));
 }
 
 
 ///////end functions for interacting with DB////////////
+function arraysEqual(arr1, arr2) {
+    if(arr1.length != arr2.length)
+	return false;
+    for(var i = 0; i < arr1.length; i++) {
+	if(arr1[i] != arr2[i])
+	    return false;
+    }
+    return true;
+}
+
+function keys(obj){
+    var keys = [];
+    
+    for(var key in obj){
+	if(obj.hasOwnProperty(key)){
+	    keys.push(key);
+	}
+    }
+    return keys;
+}
 
 if(!Array.prototype.indexOf) {
     Array.prototype.indexOf = function(what, i) {
@@ -172,7 +133,7 @@ if(!Array.prototype.indexOf) {
 
 // Populates all of the above variables and attaches personas
 function initialize(){
-    loadSchedule();
+    db.loadSchedule();
     allRooms = getAllRooms();
     allSessions = getAllSessions();
     attachPersonas();  // loads personas from a file into schedule JSON
@@ -181,10 +142,6 @@ function initialize(){
     initializePersonaConflictsAmongSessions(); // this can be loaded from a file
   
     getAllConflicts();
-
-    //    proposeUnscheduledSessionForSlot("May 7, 2012", "08:30", "Ballroom D");
-
-
 
     // Traditional polling for now...
  //    (function poll(){
@@ -212,6 +169,12 @@ function initialize(){
 
     // $(Schedule).trigger("inconsistent")...
 }
+
+
+// record where inconsistencies occur
+// change the internal data to update and bring everythign consistent
+//      
+//
 
 function isConsistent(serverSchedule, serverUnscheduled){
     // Compare schedule first
@@ -245,26 +208,6 @@ function isConsistent(serverSchedule, serverUnscheduled){
     return consistent;
 }
 
-function arraysEqual(arr1, arr2) {
-    if(arr1.length != arr2.length)
-	return false;
-    for(var i = 0; i < arr1.length; i++) {
-	if(arr1[i] != arr2[i])
-	    return false;
-    }
-    return true;
-}
-
-function keys(obj){
-    var keys = [];
-    
-    for(var key in obj){
-	if(obj.hasOwnProperty(key)){
-	    keys.push(key);
-	}
-    }
-    return keys;
-}
 
 function getAllSessions(){
     var sessions = {};
