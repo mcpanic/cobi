@@ -6,7 +6,7 @@ var conflictsByTime = null;
 var conflictsBySession = null;
 var unscheduled = null;
 var schedule = null;
-var frontEndOnly = true;
+var frontEndOnly = false;
 
 ////// Functions that change the data schedule 
 
@@ -19,9 +19,20 @@ function removeSessionFromSlot(s, date, time, room){
 }
 
 function clearSlot(date, time, room){
+    
     for(s in schedule[date][time][room]){
-	removeSessionFromSlot(s, date, time, room);
+	//	console.log("Clearing: " + s);
+	removeSessionFromSlot(allSessions[s], date, time, room);
     }
+}
+
+function addSessionToSlot(s, date, time, room, endTime){
+    schedule[date][time][room][s.id] = s;
+    s['date'] = date;
+    s['time'] = time;
+    s['room'] = room;
+    // todo doesn't deal with endTime
+    s['endTime'] = endTime;
 }
 
 // Unschedule a session
@@ -52,12 +63,7 @@ function scheduleSession(s, sdate, stime, sroom, sendTime){
     }
 
     // schedule on frontend
-    schedule[sdate][stime][sroom][s.id] = s;
-    s['date'] = sdate;
-    s['time'] = stime;
-    s['room'] = sroom;
-    // todo doesn't deal with endTime
-    s['endTime'] = sendTime;
+    addSessionToSlot(s, sdate, stime, sroom, sendTime);
 
     // schedule on server
     if(!frontEndOnly){
@@ -95,9 +101,8 @@ function swapSessions(s1, s2){
 		       s2.id, s2date, s2time, s2room);
     }
 }
+///////end functions for interacting with schedule////////////
 
-
-///////end functions for interacting with DB////////////
 function arraysEqual(arr1, arr2) {
     if(arr1.length != arr2.length)
 	return false;
@@ -144,46 +149,52 @@ function initialize(){
     getAllConflicts();
 
     // Traditional polling for now...
- //    (function poll(){
-// 	setTimeout(function(){
-//  		$.ajax({    url: "./php/loadDBtoJSONCompact.php",
-//  			    success: function(m){
-//  			    var serverSchedule = m['schedule'];
-//  			    var serverUnscheduled = m['unscheduled'];
-// 			    if(schedule != null){
-// 				if(isConsistent(serverSchedule, serverUnscheduled)){
-// 				    console.log("still consistent");
-// 				}else{
-// 				    alert("there is an inconsistency in data!");
-// 				}
-// 			    }
-// 			    poll();
-//  			}, 
-// 			    error : function(m){
-// 			    alert(JSON.stringify(m));
-// 			},
-// 			    dataType: "json"});
+    (function poll(){
+	setTimeout(function(){
+ 		$.ajax({    url: "./php/loadDBtoJSONCompact.php",
+ 			    success: function(m){
+ 			    var serverSchedule = m['schedule'];
+ 			    var serverUnscheduled = m['unscheduled'];
+			    if(schedule != null){
+				var consistencyReport = checkConsistent(serverSchedule, serverUnscheduled);
+				if(consistencyReport.isConsistent){
+				    console.log("still consistent");
+				}else{
+				    //				    alert("there is an inconsistency in data!");
+				}
+			    }
+			    poll();
+ 			}, 
+			    error : function(m){
+			    alert(JSON.stringify(m));
+			},
+			    dataType: "json"});
 		
-// 	    }, 5000);
-//     })();
-
+	    }, 5000);
+    })();
     // $(Schedule).trigger("inconsistent")...
 }
 
+
+// $(document).bind("slotChange", function(e, day, time, room){
+// 	console.log("Data changed in " + day + " ," + time + ", " + room);
+//     });
+
+// $(document).bind("unscheduledChange", function(e){
+// 	console.log("The unscheduled data has changed.");
+//     });
 
 // record where inconsistencies occur
 // change the internal data to update and bring everythign consistent
 //      
 //
-
-function isConsistent(serverSchedule, serverUnscheduled){
+function checkConsistent(serverSchedule, serverUnscheduled){
     // Compare schedule first
     // Assume same keys on day/time/room exist always, so any inconsistency is in content
 
-    var scheduleAdded = [];
-    var unscheduledAdded = [];
-    var scheduleRemoved = [];
-    var unscheduledRemoved = [];
+    var scheduleChange = [];
+    var unscheduledChange = [];
+
     var consistent = true;
     
     for(var day in schedule){
@@ -191,8 +202,19 @@ function isConsistent(serverSchedule, serverUnscheduled){
 	    for(var room in schedule[day][time]){
 		if(!arraysEqual(keys(schedule[day][time][room]).sort(), 
 				keys(serverSchedule[day][time][room]).sort())){
-		    // get what's different....
 		    consistent = false;
+		    
+		    // update content of slot
+		    clearSlot(day, time, room);
+		    for(var s in serverSchedule[day][time][room]){
+			addSessionToSlot(allSessions[s], day, time, room, "");
+		    }
+		    // trigger the change here
+		    $(document).trigger('slotChange', [day, time, room]);
+
+		}else{
+		    // get rid of key where same
+		    delete serverSchedule[day][time][room];
 		}
 	    }
 	}
@@ -203,9 +225,21 @@ function isConsistent(serverSchedule, serverUnscheduled){
 	// what's added
 	// what's removed
 	consistent = false;
-	//
+	
+	// make change to unscheduled data
+	unscheduled = {};
+	for(var s in serverUnscheduled){
+	    unscheduled[s] = allSessions[s];
+	}
+
+	// trigger a change in unscheduled data
+	$("body").trigger('unscheduledChange');
     }
-    return consistent;
+    
+    return { isConsistent: consistent,
+	    scheduleChange: serverSchedule,
+	    unscheduledChange: serverUnscheduled
+	    };
 }
 
 
