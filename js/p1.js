@@ -75,8 +75,8 @@
      // For each session item, display the session information
      function getSessionCell(type, session, slotDate, slotTime, slotRoom){
 			 var slotDate = typeof slotDate !== "undefined" ? slotDate : null;
-                var slotTime = typeof slotDate !== "undefined" ? slotTime : null;
-                var slotRoom = typeof slotDate !== "undefined" ? slotRoom : null;
+                var slotTime = typeof slotTime !== "undefined" ? slotTime : null;
+                var slotRoom = typeof slotRoom !== "undefined" ? slotRoom : null;
                 var cell = document.createElement('td');
                 $(cell).addClass("cell slot")
                     .append("<div class='title'/><div class='display'/>");
@@ -412,19 +412,6 @@
           return false;
      });
 
-     $("#list-history").on("click", ".history-link", function(){
-          var id = $(this).data("session-id");
-          $(this).toggleClass("view-option-active");
-
-          var cell = null;
-          if (typeof id === "undefined")
-               cell = getCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));
-          else
-               cell = $("#session-" + id)
-
-          $(cell).toggleClass("highlight").popover("toggle");
-          return false;
-     });
 
      // Back to the default interaction.
      // Used to cancel any effect of the swapping mode
@@ -666,6 +653,85 @@
      	$(this).popover("show");
      });
 
+
+     // Display the unscheduled panel
+     function displayUnscheduled(){
+          keys(unscheduled).map(function(id){
+               var cell = getSessionCell("unscheduled", allSessions[id]);
+               $("#unscheduled").append(cell); 
+               /*
+               $(cell).popover({
+                   html:true,
+                   placement: "bottom",
+                   trigger: "click",
+                    title:function(){
+                         return allSessions[$(this).data("session-id")].title;
+                    },
+                    content:function(){
+                         return $(this).find(".detail").html();
+                    }
+               });
+               */        
+          });
+            updateUnscheduledCount();
+     }
+
+     // Display all scheduled sessions in the main grid
+     function displayScheduled(){
+          var orderedDates = keys(schedule).sort(function(a,b) {return new Date(a) > new Date(b);});
+          var orderedRooms = keys(allRooms).sort(function(a,b) { return allRooms[a] - allRooms[b];});
+
+          var i, cell;
+          // Table Header
+          var table = document.createElement('table'); 
+          var header = document.createElement('tr');
+          var firstcell = $(document.createElement('td')).addClass("cell").append("<div>Time</div>");
+          //var secondcell = $(document.createElement('td')).addClass("cell").append("<div>Conflicts</div>");
+          $(header).addClass("header-row").append(firstcell); //.append(secondcell);
+          for(var i = 0; i < orderedRooms.length; i++){
+               var cell = document.createElement('td');
+               $(cell).addClass("cell").append("<div>" + orderedRooms[i] + "</div>");
+               $(header).append(cell);
+          }
+          $("#program").append(header);
+
+          // Main content
+          $.each(orderedDates, function(index, date){
+            var orderedTimes = keys(schedule[date]).sort(function(a,b) {return a > b;});
+            $.each(orderedTimes, function(index2, time){
+
+                var row = document.createElement('tr');
+                var slot = document.createElement('td');
+//              var conflicts = document.createElement('td');
+                $(slot).addClass("cell header-col").append(shortenDate(date) + " " + time);
+                $(row).append(slot);
+                console.log(date, time);
+                $.each(orderedRooms, function(index3, room){
+                    var sessions = schedule[date][time][room];
+                    console.log(schedule[date][time][room]);
+                    // if this room has an associated session, display it.
+                    if (typeof sessions !== "undefined") {
+                        if (keys(sessions).length === 0)
+                            cell = getSessionCell("empty", null, date, time, room)
+                        else {
+                            $.each(sessions, function(id, session){
+                                cell = getSessionCell("scheduled", session, date, time, room);
+                            });
+                        }
+                    } else { // otherwise, mark it unavailable.
+                        cell = getSessionCell("unavailable", null);
+                    }
+                    $(row).append(cell);                    
+                });
+
+                $('#program').append(row);
+
+            });
+          });
+  
+     }
+
+/*
      function displayProgram(schedule){
           var orderedRooms = keys(allRooms).sort(function(a,b) { return allRooms[a] - allRooms[b];});
           // Table Header
@@ -689,15 +755,8 @@
                $(slot).addClass("cell").append(shortenDate(schedule[i][0]) + " " + schedule[i][1]); // schedule[i][0]: full date. schedule[i][1]: time
                $(row).append(slot);
 
-               /* Displaying conflicts 
-               var conflicts = document.createElement('td');
-               $(conflicts).addClass("cell conflicts");
-               displayConflicts(conflictsByTime[schedule[i][0]][schedule[i][1]], $(conflicts));               
-               $(row).append(conflicts);
-               */
-
                for(var j = 2; j < schedule[i].length; j++){
-                    //console.log(i, j, schedule[i][j]);
+                    console.log(schedule[i], schedule[i][0], schedule[i][1], schedule[i][2], schedule[i][j].date, schedule[i][j].time, schedule[i][j].room);
                     var cell = getSessionCell("scheduled", schedule[i][j], schedule[i][j].date, schedule[i][j].time, schedule[i][j].room);
                     $(row).append(cell);
                }
@@ -706,9 +765,9 @@
           updateUnscheduledCount();
      }
 
-     var scheduleMatrix = [];
-
-     $(document).ready(function() {
+    var scheduleMatrix = [];
+*/
+    $(document).ready(function() {
 	    initialize();
 	    // test: swapping leveraging the crowd with madness
 	    // swapSchedule(schedule["May 7, 2012"]["11:30"]["Ballroom F"]["117"],
@@ -751,13 +810,13 @@
 	     	  //    alert(output);
 	     
 	     
-	     scheduleMatrix = makeProgram();
-	     displayProgram(scheduleMatrix);
-
-          displayUnscheduled();
+//        scheduleMatrix = makeProgram();
+//        displayProgram(scheduleMatrix);
+        displayScheduled();
+        displayUnscheduled();
      	displayConstraints();
      	displayViewOptions();
      	displayPersonas();          
-	 });
+	});
 
 

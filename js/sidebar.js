@@ -12,19 +12,6 @@
                });
           }
           return options;
-          /*
-          switch(menu){
-               case "constraints":
-                    $("#list-constraints .view-option-active")
-               break;
-               case "view-options":
-               break;
-               case "personas":
-               break;
-               default:
-               return;
-          }
-          */
      }
 
      // Upon selecting a constraint, highlight the ones that violate the selected constraint.
@@ -151,24 +138,23 @@
 	    return false;
 	});
 
-     function displayUnscheduled(){
-          keys(unscheduled).map(function(id){
-               var cell = getSessionCell("unscheduled", allSessions[id]);
-               $("#unscheduled").append(cell); 
-               $(cell).popover({
-                   html:true,
-                   placement: "bottom",
-                   trigger: "click",
-                    title:function(){
-                         return allSessions[$(this).data("session-id")].title;
-                    },
-                    content:function(){
-                         return $(this).find(".detail").html();
-                    }
-               });        
-          });
-     }
 
+     $("#list-history").on("click", ".history-link", function(){
+          var id = $(this).data("session-id");
+          $(this).toggleClass("view-option-active");
+
+          var cell = null;
+          if (typeof id === "undefined")
+               cell = getCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));
+          else
+               cell = $("#session-" + id)
+
+          $(cell).toggleClass("highlight").popover("toggle");
+          return false;
+     });
+
+
+     // Display the constraints list
 	function displayConstraints(){
      	$.each(constraints_list, function(index, constraint){
      		var item = document.createElement("li");
@@ -178,7 +164,7 @@
       	});
 	}
 
-     // Populate the View options list
+     // Display the View options list
      function displayViewOptions(){
      	$.each(options_list, function(index, option){
      		var item = document.createElement("li");
