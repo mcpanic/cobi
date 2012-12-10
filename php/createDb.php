@@ -1,11 +1,8 @@
 <?php
+include "settings.php";
 
-$username = "cobi";
-$password = "su4Biha";
-$database = "cobi";
-
-mysql_connect('mysql.csail.mit.edu', $username, $password);
-@mysql_select_db($database) or die( "Unable to select database");
+mysql_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD);
+@mysql_select_db(COBI_MYSQL_PASSWORD) or die( "Unable to select database");
 
 
 // Create Schedule Table

@@ -1,12 +1,9 @@
 <?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
+include "settings.php";
 
-$username = "cobi";
-$password = "su4Biha";
-$database = "cobi";
-
-$mysqli = mysqli_connect('mysql.csail.mit.edu', $username, $password, $database);
+$mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
 $date = $_POST['date'];
 $alldates = $_POST['mydata'];

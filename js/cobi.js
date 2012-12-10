@@ -520,9 +520,8 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
 	for(var r2 in schedule[day][time]){
 	    // in case there are multiple sessions in a room, shouldn't be
 	    for(var s2 in schedule[day][time][r2]){
-		var conflicts = authorConflictsAmongSessions[s.id][s2];
-		conflicts.concat(personaConflictsAmongSessions[s.id][s2]);
-		conflictsWithSession[s] = conflictsWithSession[s].concat(conflicts);
+			var conflicts = authorConflictsAmongSessions[s][s2];
+			conflictsWithSession[s] = conflictsWithSession[s].concat(conflicts);
 	    }
 	}
 	

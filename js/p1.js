@@ -23,12 +23,12 @@
                html += "<button class='btn btn-info button-propose-swap'>Propose Swaps</button>"
                     + "  <button class='btn btn-danger button-unschedule'>Unschedule</button> ";
           } else if (type == "unscheduled") {
-               html += "<button class='btn btn-info button-propose-unscheduled'>Propose Slots</button>";
+               html += "<button class='btn btn-info button-propose-unscheduled'>Propose Schedule</button>";
           } else if (type == "empty") {
-               html += "<button class='btn btn-info button-propose-empty'>Propose Slots</button>";
+               html += "<button class='btn btn-info button-propose-empty'>Propose Schedule</button>";
           }
 
-          if (typeof session !== "undefined" && typeof session.submissions !== "undefined") {
+          if (typeof session !== "undefined" && session != null && typeof session.submissions !== "undefined" && session.submissions != null) {
                html += " <ul class='list-submissions'>";
                $.each(session.submissions, function(index, submission){
                     html += "<li class='submission'><strong>" + submission.type + "</strong>: " 
@@ -73,16 +73,18 @@
     }
 
      // For each session item, display the session information
-     function getSessionCell(type, session){
-			 var cell = document.createElement('td');
-			 $(cell).addClass("cell slot")
+     function getSessionCell(type, session, slotDate, slotTime, slotRoom){
+			 var slotDate = typeof slotDate !== "undefined" ? slotDate : null;
+                var slotTime = typeof slotDate !== "undefined" ? slotTime : null;
+                var slotRoom = typeof slotDate !== "undefined" ? slotRoom : null;
+                var cell = document.createElement('td');
+                $(cell).addClass("cell slot")
                     .append("<div class='title'/><div class='display'/>");
-			 
                 // console.log("session", typeof session);
 
                 // Empty Session
 			 if (type == "empty" || session == -1){
-                    console.log("empty");
+                    console.log("empty", slotDate, slotTime, slotRoom);
                     var detail = document.createElement("div");
                     $(detail).hide()
                          .addClass("detail")
@@ -93,6 +95,9 @@
                          //.data("session-id", session.id)
                          .addClass("empty")
                          .append($(detail))
+                         .data("date", slotDate)
+                         .data("time", slotTime)
+                         .data("room", slotRoom)
                          .html("<i class='icon-plus'></i>");
 
                // Unavailable / Locked Session                         
@@ -271,19 +276,23 @@
 */               content:function(){
                     var id = $(this).data("session-id");
                     if (typeof id === "undefined") {
+                         console.log("renderProposedSwap: case1");
                          return "<button class='btn btn-primary' id='schedule-button'" 
                          + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
                          +"'>Schedule in this slot</button><br>";
                          
                     } else { 
-                         if (type === "swap")
+                         if (type === "swap") {
+                              console.log("renderProposedSwap: case2");
                               return "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
                               + "'>Swap with this session</button><br>"
                               + $(this).find(".detail ul")[0].outerHTML;
-                         else // unscheduled session
+                         } else { // unscheduled session
+                              console.log("renderProposedSwap: case3");
                               return "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
                               + "'>Schedule this session</button><br>"
                               + $(this).find(".detail ul")[0].outerHTML;
+                         }
                     }
                }
           });
@@ -295,15 +304,16 @@
           var id = getID($session);  
           
           var swapValues; 
-          if (event.data.type == "swap")
+          if (event.data.type === "swap")
                swapValues = proposeSwap(allSessions[id]);
-          else if (event.data.type == "unscheduled") {
+          else if (event.data.type === "unscheduled") {
+               console.log("unscheduled", id);
                swapValues = proposeSlot(allSessions[id]);
           }
-          else if (event.data.type == "empty") {
+          else if (event.data.type === "empty") {
                console.log($session, $session.data(), $session.data("date"), event.data.type, event.target);
                console.log($session.data("date"), $session.data("time"), $session.data("room"), schedule[$session.data("date")][$session.data("time")][$session.data("room")]);
-               proposeUnscheduledSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
+               swapValues = proposeUnscheduledSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
           } else {
                return;
           }
@@ -326,9 +336,9 @@
 
                // non-empty candidate
                } else {
-                    $("#program #session-" + swapValues[i].target.session)
+                    $("#session-" + swapValues[i].target.session)
                          .addClass("proposed-swap")
-                         .data("title", swapValues[i].target.session.title);
+                         .data("title", allSessions[swapValues[i].target.session].title);
                     swapContent += "<li data-session-id='" + swapValues[i].target.session + "' data-rank-order='" + i + "'>" //+ swapValues[i] 
                     + "<a href='#' class='swap-preview-link'>[preview]</a> "
                     + "resolving " + swapValues[i].value  
@@ -355,9 +365,9 @@
           if (id === -1)
                alert_html += "<div class='span3 src-display' data-date='"+$session.data("date")+"' data-time='"+$session.data("time")+"' data-room='"+$session.data("room")+"'>" 
           else
-               alert_html += "<div class='span3 src-display' data-session-id='" + id ;
+               alert_html += "<div class='span3 src-display' data-session-id='" + id + "'>";
 
-          alert_html += "'>selected session:<br> <a href='#' class='swap-review-link'>" + displaySessionTitle($session) + "</a></div>"
+          alert_html += "selected session:<br> <a href='#' class='swap-review-link'>" + displaySessionTitle($session) + "</a></div>"
                     + "<div class='span6'>" + swapContent + "</div>"
                     + "</div></div>";
         
@@ -538,7 +548,7 @@
           var new_session = getSessionCell("unscheduled", allSessions[id]);
           $("#unscheduled").append(new_session);
      	$session.removeClass("selected").popover("destroy").removeAttr("id").removeData();
-          var after = getSessionCell("empty");
+          var after = getSessionCell("empty", null, allSessions[id].date, allSessions[id].time, allSessions[id].room);
           // Watch out! jQuery replaceWith returns the original element, not the replaced element.
           $session.replaceWith(after); 
           $(after).popover({
@@ -553,9 +563,9 @@
                }
           });
           // For now, simply assign date, time, and room info to an empty session
-          // TODO: maybe hook up to an empty session so that data() isn't necessary?
-          $(after).data("date", allSessions[id].date).data("time", allSessions[id].time).data("room", allSessions[id].room);
-          console.log($(after), $(after).data("date"), $(after).data("time"), $(after).data("room"));
+//          // TODO: maybe hook up to an empty session so that data() isn't necessary?
+//          $(after).data("date", allSessions[id].date).data("time", allSessions[id].time).data("room", allSessions[id].room);
+//          console.log($(after), $(after).data("date"), $(after).data("time"), $(after).data("room"));
           // Unschedule session in the database
           unscheduleSession(allSessions[id]);
 
@@ -563,7 +573,7 @@
           displayAlert("Unschedule successful");
           $("#list-history").prepend("<li>unschedule: " 
                + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
-
+/*
           $(new_session).popover({
               html:true,
               placement: "bottom",
@@ -575,7 +585,7 @@
                     return getSessionDetail("unscheduled", allSessions[id]);
                }
           });
-
+*/
           updateUnscheduledCount();
           // the backend conflicts update
           getAllConflicts();
@@ -601,6 +611,22 @@
      		return;
      	var id = getID($(this));
      	$(this).addClass("selected");
+
+          var id = getID($(this));
+          var session = allSessions[id];
+          $(this).addClass("selected");
+          $(this).popover({
+              html:true,
+              placement: "bottom",
+              trigger: "click",
+               title:function(){
+                    return allSessions[id].title;
+               },
+               content:function(){
+                    return getSessionDetail("unscheduled", allSessions[id]);
+               }
+          });       
+          $(this).popover("show");
      });
 
      // Event handler for clicking an individual session
@@ -671,7 +697,8 @@
                */
 
                for(var j = 2; j < schedule[i].length; j++){
-                    var cell = getSessionCell("scheduled", schedule[i][j]);
+                    //console.log(i, j, schedule[i][j]);
+                    var cell = getSessionCell("scheduled", schedule[i][j], schedule[i][j].date, schedule[i][j].time, schedule[i][j].room);
                     $(row).append(cell);
                }
                $('#program').append(row);
