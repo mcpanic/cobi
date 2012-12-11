@@ -679,7 +679,7 @@
      // Display all scheduled sessions in the main grid
      function displayScheduled(){
           var orderedDates = keys(schedule).sort(function(a,b) {return new Date(a) > new Date(b);});
-          var orderedRooms = keys(allRooms).sort(function(a,b) { return allRooms[a] - allRooms[b];});
+          var orderedRooms = keys(allRooms).sort(function(a,b) {return a > b;});
 
           var i, cell;
           // Table Header
@@ -814,9 +814,7 @@
 //        displayProgram(scheduleMatrix);
         displayScheduled();
         displayUnscheduled();
-     	displayConstraints();
-     	displayViewOptions();
-     	displayPersonas();          
+        Sidebar.initialize();
 	});
 
 

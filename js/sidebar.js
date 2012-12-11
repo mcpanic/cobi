@@ -1,7 +1,23 @@
 
+var Sidebar = function() {
+     // Initialize the sidebar with a default view 
+     function initialize(){
+          displayConstraints();
+          displayViewOptions();
+          displayPersonas();  
+          bindEvents();
+     }
+
+     // Add event handlers to each sidebar item
+     function bindEvents(){
+          $("#list-constraints").on("click", "li a", clickConstraintsHandler);          
+          $("#list-view-options").on("click", "li a", clickViewOptionsHandler);
+          $("#list-personas").on("click", "li a", clickPersonasHandler);
+          $("#list-history").on("click", ".history-link", clickHistoryHandler);
+     }
+
      // Return any active options for a given sidebar menu
      // Menu: constraints / view-options / personas
-
      function getActiveOptions(menu){
           var options = [];
           if ($("#list-" + menu + " .view-option-active").length === 0) 
@@ -14,8 +30,8 @@
           return options;
      }
 
-     // Upon selecting a constraint, highlight the ones that violate the selected constraint.
-     $("#list-constraints").on("click", "li a", function(){
+
+     function clickConstraintsHandler(){
           var $this = $(this);
           var toggle = true;
           if ($(this).parent().hasClass("view-option-active"))
@@ -38,21 +54,20 @@
                     }
                });
           });
-         return false;
-     });
+         return false;          
+     }
 
-     // Upon selecting a view option, change the view
-     $("#list-view-options").on("click", "li a", function(){
-     	$("#list-view-options .view-option-active").removeClass("view-option-active");
-     	$(this).parent().addClass("view-option-active");
-     	switch($(this).parent().data("type")){
-     		case "session-type":
-     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-     				var id = $(item).attr("id").substr(8);
-					var session = allSessions[id];
-					$(item).find(".display").html(session.type);
-     			});
-     		break;
+     function clickViewOptionsHandler(){
+          $("#list-view-options .view-option-active").removeClass("view-option-active");
+          $(this).parent().addClass("view-option-active");
+          switch($(this).parent().data("type")){
+               case "session-type":
+                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+                         var id = $(item).attr("id").substr(8);
+                         var session = allSessions[id];
+                         $(item).find(".display").html(session.type);
+                    });
+               break;
                case "conflicts":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);
@@ -67,79 +82,80 @@
                          $(item).find(".display").html(sessionPopularity[id]);
                     });
                break;               
-     		case "num-papers":
-     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-     				var id = $(item).attr("id").substr(8);
-					var session = allSessions[id];
-     				$(item).find(".display").html(getSessionNumSubmissions(session.submissions));
-     			});
-     		break;
-     		case "duration":
-     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-     				$(item).find(".display").html("80");
-     			});
-     		break;
-     		case "awards":
-     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-     				var id = $(item).attr("id").substr(8);
-					var session = allSessions[id];
-     				if (session.hasAward)
-     					$(item).find(".display").html("<img src='img/best-paper.png' class='icon'/>");
+               case "num-papers":
+                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+                         var id = $(item).attr("id").substr(8);
+                         var session = allSessions[id];
+                         $(item).find(".display").html(getSessionNumSubmissions(session.submissions));
+                    });
+               break;
+               case "duration":
+                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+                         $(item).find(".display").html("80");
+                    });
+               break;
+               case "awards":
+                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+                         var id = $(item).attr("id").substr(8);
+                         var session = allSessions[id];
+                         if (session.hasAward)
+                              $(item).find(".display").html("<img src='img/best-paper.png' class='icon'/>");
                          else
                               $(item).find(".display").html("");
-     			});
-     		break;
-     		case "honorable-mentions":
-     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-     				var id = $(item).attr("id").substr(8);
-					var session = allSessions[id];     				
-     				if (session.hasHonorableMention)
-     				    $(item).find(".display").html("<img src='img/nominee.png' class='icon'/>");
+                    });
+               break;
+               case "honorable-mentions":
+                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+                         var id = $(item).attr("id").substr(8);
+                         var session = allSessions[id];                         
+                         if (session.hasHonorableMention)
+                             $(item).find(".display").html("<img src='img/nominee.png' class='icon'/>");
                          else
                              $(item).find(".display").html(""); 
-     			});     		     		
-     		break;
-     		case "persona":
-     			$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-     				var id = $(item).attr("id").substr(8);
-					var session = allSessions[id];
-     				$(item).find(".display").html(keys(session.personas).map(function(x) {return personaHash[x]}));
-     			});
-     		break;
-     		default:
-     		break;
-     	}
-          return false;
-     });
+                    });                           
+               break;
+               case "persona":
+                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+                         var id = $(item).attr("id").substr(8);
+                         var session = allSessions[id];
+                         $(item).find(".display").html(keys(session.personas).map(function(x) {return personaHash[x]}));
+                    });
+               break;
+               default:
+               break;
+          }
+          return false;     
+     }
 
-	$("#list-personas").on("click", "li a", function(){
-		var $this = $(this);
-     	var toggle = true;
+     
+     function clickPersonasHandler(){
+          var $this = $(this);
+          var toggle = true;
           if ($(this).parent().hasClass("view-option-active"))
                toggle = false;
           $("#list-personas .view-option-active").removeClass("view-option-active");
           if (toggle)
-     	    $(this).parent().addClass("view-option-active");
-     	var selected_persona = $(this).parent().data("type");
-		$(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-			$(item).css("background-color", "white");
-			var id = $(item).attr("id").substr(8);
-			var session = allSessions[id];	
-			var color = "#FFFFFF"; // default white
+              $(this).parent().addClass("view-option-active");
+          var selected_persona = $(this).parent().data("type");
+          $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+               $(item).css("background-color", "white");
+               var id = $(item).attr("id").substr(8);
+               var session = allSessions[id];     
+               var color = "#FFFFFF"; // default white
                if (toggle)
                     color = $this.find(".palette").css("background-color");
-			//session.personas.contains(selected_persona);
-			$.each(keys(session.personas), function(index, key){
-				if (key == selected_persona){
-					$(item).css("background-color", color);
-				}
-			});
-		});
-	    return false;
-	});
+               //session.personas.contains(selected_persona);
+               $.each(keys(session.personas), function(index, key){
+                    if (key == selected_persona){
+                         $(item).css("background-color", color);
+                    }
+               });
+          });
+         return false;
+     }
 
 
-     $("#list-history").on("click", ".history-link", function(){
+     function clickHistoryHandler(){
           var id = $(this).data("session-id");
           $(this).toggleClass("view-option-active");
 
@@ -151,8 +167,7 @@
 
           $(cell).toggleClass("highlight").popover("toggle");
           return false;
-     });
-
+     } 
 
      // Display the constraints list
 	function displayConstraints(){
@@ -193,3 +208,8 @@
      	});
 		*/
      }
+
+     return {
+          initialize: initialize
+     };
+}();
