@@ -7,25 +7,32 @@ var conflictsBySession = null;
 var unscheduled = null;
 var schedule = null;
 var frontEndOnly = true;
-///////functions for interacting with the DB ///////////
 
-// Read data from the server
-function loadSchedule(){
-    // load scheduled sessions
-	$.ajax({
-	   async: false,
-	    type: 'GET',
-		url: "./php/loadDBtoJSON.php",
-	       success: function(m){
-	       //  alert(JSON.stringify(m));
-	       schedule = m['schedule'];
-	       unscheduled = m['unscheduled'];
-	   },
-	       error : function(m){
-	       alert(JSON.stringify(m));
-	   },
-	       dataType: "json"
-	       });
+////// Functions that change the data schedule 
+
+function removeSessionFromSlot(s, date, time, room){
+    delete schedule[date][time][room][s.id];
+    allSessions[s.id]['date'] = "";
+    allSessions[s.id]['time'] = "";
+    allSessions[s.id]['room'] = "";
+    allSessions[s.id]['endTime'] = "";
+}
+
+function clearSlot(date, time, room){
+    
+    for(s in schedule[date][time][room]){
+	//	console.log("Clearing: " + s);
+	removeSessionFromSlot(allSessions[s], date, time, room);
+    }
+}
+
+function addSessionToSlot(s, date, time, room, endTime){
+    schedule[date][time][room][s.id] = s;
+    s['date'] = date;
+    s['time'] = time;
+    s['room'] = room;
+    // todo doesn't deal with endTime
+    s['endTime'] = endTime;
 }
 
 // Unschedule a session
@@ -35,69 +42,32 @@ function unscheduleSession(s){
     var stime = s.time;
     var sroom = s.room;
 
-    // unschedule on frontend
-    delete schedule[sdate][stime][sroom][s.id];
-    allSessions[s.id]['date'] = "";
-    allSessions[s.id]['time'] = "";
-    allSessions[s.id]['room'] = "";
-    allSessions[s.id]['endTime'] = "";
+    // remove session from slot
+    removeSessionFromSlot(s, sdate, stime, sroom);
+
+    // add to unscheduled
     unscheduled[s.id] = s;
 
     // unschedule on server
     if(!frontEndOnly){
-        $.ajax({
- 	    async: false,
-		type: 'POST',
-		data: { type: 'unschedule', 
-			id: s.id,
-			date: sdate,
-			time: stime,
-			room: sroom
-			}, 
-		url: "./php/changeSchedule.php",
-		success: function(m){
-		
- 	    },
-		error : function(m){
-		alert(JSON.stringify(m));
-	    },
-		dataType: "json"
-		 });
+	db.unscheduleSession(s.id, sdate, stime, sroom);
     }
 }
 
+
 // schedule a session
 function scheduleSession(s, sdate, stime, sroom, sendTime){
+    // remove session from unscheduled
+    if(s.id in unscheduled){
+	delete unscheduled[s.id];
+    }
+
     // schedule on frontend
-    //    alert(JSON.stringify(schedule[sdate][stime][sroom]));
-    //    alert(JSON.stringify(s));
-    schedule[sdate][stime][sroom][s.id] = s;
-    s['date'] = sdate;
-    s['time'] = stime;
-    s['room'] = sroom;
-    // todo doesn't deal with endTime
-    s['endTime'] = sendTime;
+    addSessionToSlot(s, sdate, stime, sroom, sendTime);
 
     // schedule on server
     if(!frontEndOnly){
-        $.ajax({
- 	    async: false,
-		type: 'POST',
-		data: { type: 'schedule', 
-			id: s.id,
-			date: sdate,
-			time: stime,
-			room: sroom,
-			endTime: s.endTime}, 
-		url: "./php/changeSchedule.php",
-		success: function(m){
-		
- 	    },
-		error : function(m){
-		alert(JSON.stringify(m));
-	    },
-		dataType: "json"
-		 });
+	db.scheduleSession(s.id, sdate, stime, sroom, s.endTime);
     }
 }
 
@@ -127,123 +97,11 @@ function swapSessions(s1, s2){
 
     // perform swap on server
     if(!frontEndOnly){
-        $.ajax({
- 	    async: false,
-		type: 'POST',
-		data: { type: 'swap', 
-			s1id: s1.id,
-			s1date: s1date,
-			s1time: s1time,
-			s1room: s1room,
-			s2id: s2.id,
-			s2date: s2date,
-			s2time: s2time,
-			s2room: s2room
-			}, 
-		url: "./php/changeSchedule.php",
-		success: function(m){
-		
- 	    },
-		error : function(m){
-		alert(JSON.stringify(m));
-	    },
-		dataType: "json"
-		 });
-
+	db.swapSession(s1.id, s1date, s1time, s1room,
+		       s2.id, s2date, s2time, s2room);
     }
-    //    alert(JSON.stringify(schedule[s1date][s1time][s1room]));
-    //    alert(JSON.stringify(schedule[s2date][s2time][s2room]));
 }
-
-
-///////end functions for interacting with DB////////////
-
-if(!Array.prototype.indexOf) {
-    Array.prototype.indexOf = function(what, i) {
-        i = i || 0;
-        var L = this.length;
-        while (i < L) {
-            if(this[i] === what) return i;
-            ++i;
-        }
-        return -1;
-    };
-}
-
-// Populates all of the above variables and attaches personas
-function initialize(){
-    loadSchedule();
-    allRooms = getAllRooms();
-    allSessions = getAllSessions();
-    attachPersonas();  // loads personas from a file into schedule JSON
-
-    initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
-    initializePersonaConflictsAmongSessions(); // this can be loaded from a file
-  
-    getAllConflicts();
-
-    //    proposeUnscheduledSessionForSlot("May 7, 2012", "08:30", "Ballroom D");
-
-
-
-    // Traditional polling for now...
- //    (function poll(){
-// 	setTimeout(function(){
-//  		$.ajax({    url: "./php/loadDBtoJSONCompact.php",
-//  			    success: function(m){
-//  			    var serverSchedule = m['schedule'];
-//  			    var serverUnscheduled = m['unscheduled'];
-// 			    if(schedule != null){
-// 				if(isConsistent(serverSchedule, serverUnscheduled)){
-// 				    console.log("still consistent");
-// 				}else{
-// 				    alert("there is an inconsistency in data!");
-// 				}
-// 			    }
-// 			    poll();
-//  			}, 
-// 			    error : function(m){
-// 			    alert(JSON.stringify(m));
-// 			},
-// 			    dataType: "json"});
-		
-// 	    }, 5000);
-//     })();
-
-    // $(Schedule).trigger("inconsistent")...
-}
-
-function isConsistent(serverSchedule, serverUnscheduled){
-    // Compare schedule first
-    // Assume same keys on day/time/room exist always, so any inconsistency is in content
-
-    var scheduleAdded = [];
-    var unscheduledAdded = [];
-    var scheduleRemoved = [];
-    var unscheduledRemoved = [];
-    var consistent = true;
-    
-    for(var day in schedule){
-	for(var time in schedule[day]){
-	    for(var room in schedule[day][time]){
-		if(!arraysEqual(keys(schedule[day][time][room]).sort(), 
-				keys(serverSchedule[day][time][room]).sort())){
-		    // get what's different....
-		    consistent = false;
-		}
-	    }
-	}
-    }
-
-    if(!arraysEqual(keys(unscheduled).sort(),  keys(serverUnscheduled).sort())){
-	// get what's different... 
-	// what's added
-	// what's removed
-	consistent = false;
-	//
-    }
-    return consistent;
-}
+///////end functions for interacting with schedule////////////
 
 function arraysEqual(arr1, arr2) {
     if(arr1.length != arr2.length)
@@ -265,6 +123,127 @@ function keys(obj){
     }
     return keys;
 }
+
+if(!Array.prototype.indexOf) {
+    Array.prototype.indexOf = function(what, i) {
+        i = i || 0;
+        var L = this.length;
+        while (i < L) {
+            if(this[i] === what) return i;
+            ++i;
+        }
+        return -1;
+    };
+}
+
+// Populates all of the above variables and attaches personas
+function initialize(){
+    db.loadSchedule();
+    allRooms = getAllRooms();
+    allSessions = getAllSessions();
+    attachPersonas();  // loads personas from a file into schedule JSON
+
+    initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
+    initializePersonaConflictsAmongSessions(); // this can be loaded from a file
+  
+    getAllConflicts();
+
+    // Traditional polling for now...
+    if(!frontEndOnly){
+	(function poll(){
+	    setTimeout(function(){
+		    $.ajax({    url: "./php/loadDBtoJSONCompact.php",
+				success: function(m){
+				var serverSchedule = m['schedule'];
+				var serverUnscheduled = m['unscheduled'];
+				if(schedule != null){
+				    var consistencyReport = checkConsistent(serverSchedule, serverUnscheduled);
+				    if(consistencyReport.isConsistent){
+					console.log("still consistent");
+				    }else{
+					//				    alert("there is an inconsistency in data!");
+				    }
+				}
+				poll();
+			    }, 
+				error : function(m){
+				alert(JSON.stringify(m));
+			    },
+				dataType: "json"});
+		    
+		}, 10000);
+	})();
+    }
+    // $(Schedule).trigger("inconsistent")...
+}
+
+
+// $(document).bind("slotChange", function(e, day, time, room){
+// 	console.log("Data changed in " + day + " ," + time + ", " + room);
+//     });
+
+// $(document).bind("unscheduledChange", function(e){
+// 	console.log("The unscheduled data has changed.");
+//     });
+
+// record where inconsistencies occur
+// change the internal data to update and bring everythign consistent
+//      
+//
+function checkConsistent(serverSchedule, serverUnscheduled){
+    // Compare schedule first
+    // Assume same keys on day/time/room exist always, so any inconsistency is in content
+
+    var scheduleChange = [];
+    var unscheduledChange = [];
+
+    var consistent = true;
+    
+    for(var day in schedule){
+	for(var time in schedule[day]){
+	    for(var room in schedule[day][time]){
+		if(!arraysEqual(keys(schedule[day][time][room]).sort(), 
+				keys(serverSchedule[day][time][room]).sort())){
+		    consistent = false;
+		    
+		    // update content of slot
+		    clearSlot(day, time, room);
+		    for(var s in serverSchedule[day][time][room]){
+			addSessionToSlot(allSessions[s], day, time, room, "");
+		    }
+		    // trigger the change here
+		    $(document).trigger('slotChange', [day, time, room]);
+
+		}else{
+		    // get rid of key where same
+		    delete serverSchedule[day][time][room];
+		}
+	    }
+	}
+    }
+
+    if(!arraysEqual(keys(unscheduled).sort(),  keys(serverUnscheduled).sort())){
+	// get what's different... 
+	// what's added
+	// what's removed
+	consistent = false;
+	
+	// make change to unscheduled data
+	unscheduled = {};
+	for(var s in serverUnscheduled){
+	    unscheduled[s] = allSessions[s];
+	}
+
+	// trigger a change in unscheduled data
+	$("body").trigger('unscheduledChange');
+    }
+    
+    return { isConsistent: consistent,
+	    scheduleChange: serverSchedule,
+	    unscheduledChange: serverUnscheduled
+	    };
+}
+
 
 function getAllSessions(){
     var sessions = {};
@@ -380,7 +359,21 @@ function proposeSwap(s) {
     for(var day in schedule){
 	conflictsWithRow[day] = {}
 	for(var time in schedule[day]){
-	    if(day == s.date && time == s.time) continue;
+	    if(day == s.date && time == s.time) {
+		// todo: assume that nothing changes in terms of constraints
+		for(var room in schedule[day][time]){
+		    for(var s2 in schedule[day][time][room]){
+			swapValue.push(new swapDetails(new slot(day, time, room, s2),
+						       0,
+						       null,
+						       null,
+						       null,
+						       null));
+		    }
+		}
+		continue;
+	    }
+
 	    conflictsWithRow[day][time] = {};
 	    conflictsWithRow[day][time]["sum"] = [];
 	    conflictsWithRow[day][time]["session"] = {};
@@ -477,22 +470,49 @@ function proposeSlot(s) {
 		// only consider rooms that are empty
 		if(keys(schedule[day][time][room]).length != 0) continue;
 
-		
-		// 1. number of conflicts caused by moving offending item to there
 		var conflictsCausedByOffending = conflictsWithRow[day][time]["sum"];
+		var conflictsResolved = -conflictsCausedByOffending.length;		
+		if(s.id in unscheduled){
+		    // 1. number of conflicts caused by moving offending item to there
+		    moveValue.push(new swapDetails(new slot(day, time, room, null),
+						   conflictsResolved,
+						   null,
+						   conflictsCausedByOffending,
+						   null,
+						   null));
+		}else{ // session is already scheduled
+		    // TODO: if same date and time, just different room, so assuming no change
 
-		var conflictsResolved = -conflictsCausedByOffending.length;
-
-		moveValue.push(new swapDetails(new slot(day, time, room, null),
-					       conflictsResolved,
-					       null,
-					       conflictsCausedByOffending,
-					       null,
-					       null));
+		    if(s.date == day && s.time == time){
+			moveValue.push(new swapDetails(new slot(day, time, room, null),
+						       0,
+						       null,
+						       null,
+						       null,
+						       null));
+		    }else{ // different day/time, consider conflicts removed by moving offending  
+			var conflictsCausedByItem = calculateConflictsCausedBy(s);
+			conflictsResolved += conflictsCausedByItem.length;
+			moveValue.push(new swapDetails(new slot(day, time, room, null),
+						       conflictsResolved,
+						       null,
+						       conflictsCausedByOffending,
+						       null,
+						       conflictsCausedByItem));
+		    }
+		}
 	    }
 	}
     }
     return moveValue;
+}
+
+function proposeSlotAndSwap(s){
+    // todo: only works for already scheduled sessions 
+    var slotValue = proposeSlot(s);
+    var swapValue = proposeSwap(s);
+    return {slotValue: slotValue,
+	    swapValue: swapValue};
 }
 
 function slot(day, time, room, session){

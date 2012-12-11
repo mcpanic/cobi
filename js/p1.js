@@ -330,7 +330,7 @@
                     $cell.addClass("proposed-swap").data("title", "Empty slot");
                     swapContent += "<li data-rank-order='" + i + "' data-date='"+swapValues[i].target.day+"' data-time='"+swapValues[i].target.time+"' data-room='"+swapValues[i].target.room+"'>" 
                     + "<a href='#' class='swap-preview-link'>[preview]</a> "
-                    + "resolving " + swapValues[i].value  
+			+ "adding " + (-1*swapValues[i].value)  
                     + ": <a href='#' class='swap-review-link'>" + displaySlotTitle(swapValues[i].target) + "</a>" 
                     + "</li>";                    
 
