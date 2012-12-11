@@ -7,6 +7,20 @@ $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASS
 
 $type = $_POST['type'];
 
+if(strcmp("lock", $type) == 0){
+  $lock = 1;
+  if($_POST['lock'] == "false"){
+    $lock = 0;
+  }
+  $date = mysqli_real_escape_string($mysqli, $_POST['date']);
+  $time = mysqli_real_escape_string($mysqli, $_POST['time']);
+  $room = mysqli_real_escape_string($mysqli, $_POST['room']);
+
+  $query = "UPDATE schedule SET locked=$lock WHERE date='$date' AND time='$time' AND room ='$room'";
+  mysqli_query($mysqli, $query);
+  echo mysqli_error($mysqli);
+}
+
 if(strcmp("unschedule", $type) == 0){
   $id = mysqli_real_escape_string($mysqli, $_POST['id']);
   $date = mysqli_real_escape_string($mysqli, $_POST['date']);

@@ -8,7 +8,7 @@ mysql_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD);
 // Create Schedule Table
 // date, time, room, sessionID
 
-$schedQ = "CREATE TABLE schedule (date varchar(128), time varchar(128), room varchar(128), id varchar(32))";
+$schedQ = "CREATE TABLE schedule (date varchar(128), time varchar(128), room varchar(128), id varchar(32), locked tinyint(1))";
 mysql_query($schedQ);
 echo  mysql_error();
 

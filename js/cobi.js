@@ -6,9 +6,67 @@ var conflictsByTime = null;
 var conflictsBySession = null;
 var unscheduled = null;
 var schedule = null;
-var frontEndOnly = true;
+var frontEndOnly = false;
+var scheduleSlots = null;
 
 ////// Functions that change the data schedule 
+
+/// TODO: don't allow actually changing slots that are locked.
+
+function lockSlotsAtDayTime(day, time){
+    for(var room in scheduleSlots[day][time]){
+	lockSlot(day, time, room);
+    }
+}
+
+function unlockSlotsAtDayTime(day, time){
+    for(var room in scheduleSlots[day][time]){
+	unlockSlot(day, time, room);
+    }
+}
+
+function lockSlotsInRoom(r){
+    for(var day in scheduleSlots){
+	for(var time in scheduleSlots[day]){
+	    for(var room in scheduleSlots[day][time]){
+		if(room == r){
+		    lockSlot(day, time, r);
+		}
+	    }
+	}
+    }
+}
+
+function unlockSlotsInRoom(r){
+    for(var day in scheduleSlots){
+	for(var time in scheduleSlots[day]){
+	    for(var room in scheduleSlots[day][time]){
+		if(room == r){
+		    unlockSlot(day, time, r);
+		}
+	    }
+	}
+    }
+}
+
+function toggleSlotLock(day, time, room){
+    scheduleSlots[day][time][room]['locked'] = !scheduleSlots[day][time][room]['locked'];
+}
+
+function lockSlot(day, time, room){
+    scheduleSlots[day][time][room]['locked'] = true;
+    if(!frontEndOnly){
+	db.toggleSlotLock(day, time, room, true);
+    }
+}
+
+function unlockSlot(day, time, room){
+    scheduleSlots[day][time][room]['locked'] = false;
+    if(!frontEndOnly){
+	db.toggleSlotLock(day, time, room, false);
+    }
+}
+
 
 function removeSessionFromSlot(s, date, time, room){
     delete schedule[date][time][room][s.id];
@@ -19,7 +77,6 @@ function removeSessionFromSlot(s, date, time, room){
 }
 
 function clearSlot(date, time, room){
-    
     for(s in schedule[date][time][room]){
 	//	console.log("Clearing: " + s);
 	removeSessionFromSlot(allSessions[s], date, time, room);
@@ -37,10 +94,16 @@ function addSessionToSlot(s, date, time, room, endTime){
 
 // Unschedule a session
 function unscheduleSession(s){
+    
     // todo: doesn't deal with endTime
     var sdate = s.date;
     var stime = s.time;
     var sroom = s.room;
+
+    if(scheduleSlots[sdate][stime][sroom]['locked']){
+	$(document).trigger('slotLocked', [sdate, stime, sroom]);
+	return;
+    }
 
     // remove session from slot
     removeSessionFromSlot(s, sdate, stime, sroom);
@@ -57,6 +120,12 @@ function unscheduleSession(s){
 
 // schedule a session
 function scheduleSession(s, sdate, stime, sroom, sendTime){
+    if(scheduleSlots[sdate][stime][sroom]['locked']){
+	$(document).trigger('slotLocked', [sdate, stime, sroom]);
+	return;
+    }
+
+
     // remove session from unscheduled
     if(s.id in unscheduled){
 	delete unscheduled[s.id];
@@ -81,6 +150,17 @@ function swapSessions(s1, s2){
     var s2time = s2.time;
     var s2room = s2.room;
     
+    if(scheduleSlots[s1date][s1time][s1room]['locked']){
+	$(document).trigger('slotLocked', [s1date, s1time, s1room]);
+	return;
+    }
+
+    if(scheduleSlots[s2date][s2time][s2room]['locked']){
+	$(document).trigger('slotLocked', [s2date, s2time, s2room]);
+	return;
+    }
+
+
     s1.date = s2date;
     s1.time = s2time;
     s1.room = s2room;
@@ -150,36 +230,22 @@ function initialize(){
 
     // Traditional polling for now...
     if(!frontEndOnly){
-	(function poll(){
-	    setTimeout(function(){
-		    $.ajax({    url: "./php/loadDBtoJSONCompact.php",
-				success: function(m){
-				var serverSchedule = m['schedule'];
-				var serverUnscheduled = m['unscheduled'];
-				if(schedule != null){
-				    var consistencyReport = checkConsistent(serverSchedule, serverUnscheduled);
-				    if(consistencyReport.isConsistent){
-					console.log("still consistent");
-				    }else{
-					//				    alert("there is an inconsistency in data!");
-				    }
-				}
-				poll();
-			    }, 
-				error : function(m){
-				alert(JSON.stringify(m));
-			    },
-				dataType: "json"});
-		    
-		}, 10000);
-	})();
+	db.refresh();
     }
     // $(Schedule).trigger("inconsistent")...
 }
 
 
+// $(document).bind("slotLocked", function(e, day, time, room){
+// 	console.log("This slot is locked: " + day + " ," + time + ", " + room);
+//     });
+
 // $(document).bind("slotChange", function(e, day, time, room){
 // 	console.log("Data changed in " + day + " ," + time + ", " + room);
+//     });
+
+// $(document).bind("lockChange", function(e, day, time, room){
+// 	console.log("Slot lock changed in " + day + " ," + time + ", " + room);
 //     });
 
 // $(document).bind("unscheduledChange", function(e){
@@ -190,7 +256,7 @@ function initialize(){
 // change the internal data to update and bring everythign consistent
 //      
 //
-function checkConsistent(serverSchedule, serverUnscheduled){
+function checkConsistent(serverSchedule, serverUnscheduled, serverSlots){
     // Compare schedule first
     // Assume same keys on day/time/room exist always, so any inconsistency is in content
 
@@ -217,6 +283,20 @@ function checkConsistent(serverSchedule, serverUnscheduled){
 		}else{
 		    // get rid of key where same
 		    delete serverSchedule[day][time][room];
+		}
+	    }
+	}
+    }
+
+    // Check for changes to locks
+    for(var day in scheduleSlots){
+	for(var time in scheduleSlots[day]){
+	    for(var room in scheduleSlots[day][time]){
+		if(scheduleSlots[day][time][room]['locked'] !=
+		   serverSlots[day][time][room]['locked']){
+		    toggleSlotLock(day, time, room);
+		    // trigger the change here
+		    $(document).trigger('lockChange', [day, time, room]);
 		}
 	    }
 	}
