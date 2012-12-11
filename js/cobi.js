@@ -6,7 +6,7 @@ var conflictsByTime = null;
 var conflictsBySession = null;
 var unscheduled = null;
 var schedule = null;
-var frontEndOnly = false;
+var frontEndOnly = true;
 
 ////// Functions that change the data schedule 
 
@@ -149,29 +149,31 @@ function initialize(){
     getAllConflicts();
 
     // Traditional polling for now...
-    (function poll(){
-	setTimeout(function(){
- 		$.ajax({    url: "./php/loadDBtoJSONCompact.php",
- 			    success: function(m){
- 			    var serverSchedule = m['schedule'];
- 			    var serverUnscheduled = m['unscheduled'];
-			    if(schedule != null){
-				var consistencyReport = checkConsistent(serverSchedule, serverUnscheduled);
-				if(consistencyReport.isConsistent){
-				    console.log("still consistent");
-				}else{
-				    //				    alert("there is an inconsistency in data!");
+    if(!frontEndOnly){
+	(function poll(){
+	    setTimeout(function(){
+		    $.ajax({    url: "./php/loadDBtoJSONCompact.php",
+				success: function(m){
+				var serverSchedule = m['schedule'];
+				var serverUnscheduled = m['unscheduled'];
+				if(schedule != null){
+				    var consistencyReport = checkConsistent(serverSchedule, serverUnscheduled);
+				    if(consistencyReport.isConsistent){
+					console.log("still consistent");
+				    }else{
+					//				    alert("there is an inconsistency in data!");
+				    }
 				}
-			    }
-			    poll();
- 			}, 
-			    error : function(m){
-			    alert(JSON.stringify(m));
-			},
-			    dataType: "json"});
-		
-	    }, 5000);
-    })();
+				poll();
+			    }, 
+				error : function(m){
+				alert(JSON.stringify(m));
+			    },
+				dataType: "json"});
+		    
+		}, 10000);
+	})();
+    }
     // $(Schedule).trigger("inconsistent")...
 }
 
@@ -357,7 +359,21 @@ function proposeSwap(s) {
     for(var day in schedule){
 	conflictsWithRow[day] = {}
 	for(var time in schedule[day]){
-	    if(day == s.date && time == s.time) continue;
+	    if(day == s.date && time == s.time) {
+		// todo: assume that nothing changes in terms of constraints
+		for(var room in schedule[day][time]){
+		    for(var s2 in schedule[day][time][room]){
+			swapValue.push(new swapDetails(new slot(day, time, room, s2),
+						       0,
+						       null,
+						       null,
+						       null,
+						       null));
+		    }
+		}
+		continue;
+	    }
+
 	    conflictsWithRow[day][time] = {};
 	    conflictsWithRow[day][time]["sum"] = [];
 	    conflictsWithRow[day][time]["session"] = {};
@@ -454,22 +470,49 @@ function proposeSlot(s) {
 		// only consider rooms that are empty
 		if(keys(schedule[day][time][room]).length != 0) continue;
 
-		
-		// 1. number of conflicts caused by moving offending item to there
 		var conflictsCausedByOffending = conflictsWithRow[day][time]["sum"];
+		var conflictsResolved = -conflictsCausedByOffending.length;		
+		if(s.id in unscheduled){
+		    // 1. number of conflicts caused by moving offending item to there
+		    moveValue.push(new swapDetails(new slot(day, time, room, null),
+						   conflictsResolved,
+						   null,
+						   conflictsCausedByOffending,
+						   null,
+						   null));
+		}else{ // session is already scheduled
+		    // TODO: if same date and time, just different room, so assuming no change
 
-		var conflictsResolved = -conflictsCausedByOffending.length;
-
-		moveValue.push(new swapDetails(new slot(day, time, room, null),
-					       conflictsResolved,
-					       null,
-					       conflictsCausedByOffending,
-					       null,
-					       null));
+		    if(s.date == day && s.time == time){
+			moveValue.push(new swapDetails(new slot(day, time, room, null),
+						       0,
+						       null,
+						       null,
+						       null,
+						       null));
+		    }else{ // different day/time, consider conflicts removed by moving offending  
+			var conflictsCausedByItem = calculateConflictsCausedBy(s);
+			conflictsResolved += conflictsCausedByItem.length;
+			moveValue.push(new swapDetails(new slot(day, time, room, null),
+						       conflictsResolved,
+						       null,
+						       conflictsCausedByOffending,
+						       null,
+						       conflictsCausedByItem));
+		    }
+		}
 	    }
 	}
     }
     return moveValue;
+}
+
+function proposeSlotAndSwap(s){
+    // todo: only works for already scheduled sessions 
+    var slotValue = proposeSlot(s);
+    var swapValue = proposeSwap(s);
+    return {slotValue: slotValue,
+	    swapValue: swapValue};
 }
 
 function slot(day, time, room, session){
