@@ -5,6 +5,13 @@ mysql_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD);
 @mysql_select_db(COBI_MYSQL_PASSWORD) or die( "Unable to select database");
 
 
+// Create user table
+//  uid, name, email, type
+
+$userQ = "CREATE TABLE users (uid varchar(32), name varchar(128), email varchar(128), type varchar(32))";
+ mysql_query($userQ);
+  echo mysql_error();
+				      
 // Create Schedule Table
 // date, time, room, sessionID
 

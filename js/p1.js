@@ -319,7 +319,11 @@
           }
 
           // Now display each candidate 
-          swapValues.sort(function(a, b) {return b.value - a.value;});
+          swapValues.sort(function(a, b) {
+		  if(scheduleSlots[a.target.day][a.target.time][a.target.room]['locked']){
+		      return 1;
+		  } else {return b.value - a.value;}});
+
           //console.log(JSON.stringify(swapValues));
           var count = Math.min(swapValues.length, 5);
           var swapContent = "";
@@ -768,7 +772,20 @@
     var scheduleMatrix = [];
 */
     $(document).ready(function() {
+	    // triggered once initialize is complete
+	    // initialize() is async, thus the bind
+	    $(document).bind("fullyLoaded", function(){
+		    displayScheduled();
+		    displayUnscheduled();
+		    displayConstraints();
+		    displayViewOptions();
+		    displayPersonas();          
+		    //$('#testers').html("complete...");
+		});
+
+	    //$('#testers').html("loading...");
 	    initialize();
+	    
 	    // test: swapping leveraging the crowd with madness
 	    // swapSchedule(schedule["May 7, 2012"]["11:30"]["Ballroom F"]["117"],
 	    //				  schedule["May 10, 2012"]["08:30"]["Ballroom D"]["223"]);
@@ -812,11 +829,7 @@
 	     
 //        scheduleMatrix = makeProgram();
 //        displayProgram(scheduleMatrix);
-        displayScheduled();
-        displayUnscheduled();
-     	displayConstraints();
-     	displayViewOptions();
-     	displayPersonas();          
+
 	});
 
 

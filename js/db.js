@@ -10,6 +10,7 @@ function DB(){
 }
 var db = new DB();
 
+
 DB.prototype.refresh = function(){
     // Traditional polling to check for changes
     (function poll(){
@@ -39,19 +40,34 @@ DB.prototype.refresh = function(){
     })();
 };
 
+DB.prototype.loadUser = function(uid){
+    $.ajax({
+	    async: false,
+	    type: 'POST',
+	    data: {uid: uid},   
+	    url: "./php/loadUser.php",
+	    success: function(m){
+		if(m != null){
+		    userData = new userInfo(m['uid'], m['name'], m['email'], m['type']);
+		}
+	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+};
+
 DB.prototype.loadSchedule = function(){
 	// Read data from the server
     //function loadSchedule(){
     // load scheduled sessions
     $.ajax({
-	    async: false,
+	    async: true,
 	    type: 'GET',
 	    url: "./php/loadDBtoJSON.php",
 	    success: function(m){
-		//  alert(JSON.stringify(m));
-		schedule = m['schedule'];
-		unscheduled = m['unscheduled'];
-		scheduleSlots = m['slots'];
+		initAfterScheduleLoads(m);
 	    },
 	    error : function(m){
 		alert(JSON.stringify(m));

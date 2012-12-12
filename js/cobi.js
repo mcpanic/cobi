@@ -8,6 +8,7 @@ var unscheduled = null;
 var schedule = null;
 var frontEndOnly = false;
 var scheduleSlots = null;
+var userData = null;
 
 ////// Functions that change the data schedule 
 
@@ -216,24 +217,58 @@ if(!Array.prototype.indexOf) {
     };
 }
 
-// Populates all of the above variables and attaches personas
 function initialize(){
+    loadUser();
     db.loadSchedule();
+}
+
+// Populates all of the above variables and attaches personas
+// once the schedule is loaded from server 
+function initAfterScheduleLoads(m){
+    schedule = m['schedule'];
+    unscheduled = m['unscheduled'];
+    scheduleSlots = m['slots'];
+    
     allRooms = getAllRooms();
     allSessions = getAllSessions();
     attachPersonas();  // loads personas from a file into schedule JSON
-
+    
     initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
     initializePersonaConflictsAmongSessions(); // this can be loaded from a file
-  
+    
     getAllConflicts();
-
+    
     // Traditional polling for now...
     if(!frontEndOnly){
 	db.refresh();
     }
-    // $(Schedule).trigger("inconsistent")...
+    
+    $(document).trigger('fullyLoaded');
 }
+
+function loadUser(){
+    var params = getURLParams();
+    if(params.uid){
+	db.loadUser(params.uid);
+    }
+}
+
+function getURLParams() {
+    var params = {}
+    var m = window.location.href.match(/[\\?&]([^=]+)=([^&#]*)/g)
+	if (m) {
+	    for (var i = 0; i < m.length; i++) {
+		var a = m[i].match(/.([^=]+)=(.*)/)
+		params[unescapeURL(a[1])] = unescapeURL(a[2])
+	    }
+	}
+    return params;
+}
+
+function unescapeURL(s) {
+    return decodeURIComponent(s.replace(/\+/g, "%20"));
+}
+
 
 
 // $(document).bind("slotLocked", function(e, day, time, room){
@@ -595,12 +630,6 @@ function proposeSlotAndSwap(s){
 	    swapValue: swapValue};
 }
 
-function slot(day, time, room, session){
-    this.day = day;
-    this.time = time;
-    this.room = room;
-    this.session = session;
-}
 
 // Computes a score for every possible unschedule session that can move into slot
 // TODO: can also think about moving scheduled session here...
@@ -635,14 +664,6 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
     return moveValue;
 }
 
-function swapDetails(target, value, addedSrc, addedDest, removedSrc, removedDest){
-    this.target = target;
-    this.value = value;
-    this.addedSrc = addedSrc;
-    this.addedDest = addedDest;
-    this.removedSrc = removedSrc;
-    this.removedDest = removedDest;
-}
 
 function calculateConflictsCausedBy(s){
 
@@ -850,6 +871,28 @@ function getSessionPersonas(s){
     return s["personas"];
 }
 
+function userInfo(id, name, email, type){
+    this.id = id;
+    this.name = name;
+    this.email = email;
+    this.type = type;
+}
+
+function swapDetails(target, value, addedSrc, addedDest, removedSrc, removedDest){
+    this.target = target;
+    this.value = value;
+    this.addedSrc = addedSrc;
+    this.addedDest = addedDest;
+    this.removedSrc = removedSrc;
+    this.removedDest = removedDest;
+}
+
+function slot(day, time, room, session){
+    this.day = day;
+    this.time = time;
+    this.room = room;
+    this.session = session;
+}
 
 function conflictObject(entities, type, conflict, description){
     this.entities = entities;
