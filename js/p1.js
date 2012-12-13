@@ -20,6 +20,7 @@
      function getSessionDetail(type, session){
 	 var isLocked = false;
 	 if (type != "unscheduled" && typeof session !== "undefined" && session != null){
+	     console.log(session);
 	     isLocked = scheduleSlots[session.date][session.time][session.room]['locked'];
 	 }
 
@@ -598,7 +599,11 @@ $("body").on("click", ".popover .button-unlock", function(){
           var new_session = getSessionCell("unscheduled", allSessions[id]);
           $("#unscheduled").append(new_session);
      	$session.removeClass("selected").popover("destroy").removeAttr("id").removeData();
-          var after = getSessionCell("empty", null, allSessions[id].date, allSessions[id].time, allSessions[id].room);
+	var date = allSessions[id].date;
+	var time = allSessions[id].time;
+	var room = allSessions[id].room;
+
+	var after = getSessionCell("empty", null, allSessions[id].date, allSessions[id].time, allSessions[id].room);
           // Watch out! jQuery replaceWith returns the original element, not the replaced element.
           $session.replaceWith(after); 
           $(after).popover({
@@ -608,9 +613,9 @@ $("body").on("click", ".popover .button-unlock", function(){
                title:function(){
                     return "Empty slot";
                },
-		      content: function() {return getSessionDetail("empty", new slot(allSessions[id].date, allSessions[id].time, allSessions[id].room, null))}
+		      content: function() {return getSessionDetail("empty", new slot(date, time, room, null))}
                
-		      });
+	      });
           // For now, simply assign date, time, and room info to an empty session
 //          // TODO: maybe hook up to an empty session so that data() isn't necessary?
 //          $(after).data("date", allSessions[id].date).data("time", allSessions[id].time).data("room", allSessions[id].room);
