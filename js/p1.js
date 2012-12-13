@@ -658,7 +658,10 @@ $("body").on("click", ".popover .button-unlock", function(){
      	// detect if the currently selected item is selected again.
      	var $selection = $("#unscheduled .selected");
      	var isSelected = $selection[0] == $(this)[0];
-     	$selection.removeClass("selected"); //.popover("hide");
+
+	// HQ: edited so only one popover at a time
+     	$selection.removeClass("selected").popover("hide");
+	$("#program .selected").removeClass("selected").popover("hide");
 
      	// if reselected, do nothing.
      	if (isSelected)
@@ -688,7 +691,10 @@ $("body").on("click", ".popover .button-unlock", function(){
      	// detect if the currently selected item is selected again.
      	var $selection = $("#program .selected");
      	var isSelected = $selection[0] == $(this)[0];
+	
+	// HQ: edited so only one popover at a time
      	$selection.removeClass("selected").popover("hide");
+	$("#unscheduled .selected").removeClass("selected").popover("hide");
 
      	// if reselected, do nothing.
      	if (isSelected)
