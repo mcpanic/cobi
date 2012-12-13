@@ -338,6 +338,7 @@
 
           // Now display each candidate 
           swapValues.sort(function(a, b) {
+		  // HQ: slight edits here to handle locked slots
 		  if(a.target.date != null && scheduleSlots[a.target.date][a.target.time][a.target.room]['locked']){
 		      return 1;
 		  } else {return b.value - a.value;}});
