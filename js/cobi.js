@@ -8,11 +8,17 @@ var unscheduled = null;
 var schedule = null;
 var frontEndOnly = false;
 var scheduleSlots = null;
-var userData = null;
+var userData = new userInfo(null, "Anon", null, "rookie");
 
 ////// Functions that change the data schedule 
 
 /// TODO: don't allow actually changing slots that are locked.
+
+function undo(){
+    // TODO: assume a local transactions array of latest transactions..
+    // undo last move
+    db.undo(userData.id);
+}
 
 function lockSlotsAtDayTime(day, time){
     for(var room in scheduleSlots[day][time]){
@@ -57,14 +63,14 @@ function toggleSlotLock(day, time, room){
 function lockSlot(day, time, room){
     scheduleSlots[day][time][room]['locked'] = true;
     if(!frontEndOnly){
-	db.toggleSlotLock(day, time, room, true);
+	db.toggleSlotLock(day, time, room, true, userData.id);
     }
 }
 
 function unlockSlot(day, time, room){
     scheduleSlots[day][time][room]['locked'] = false;
     if(!frontEndOnly){
-	db.toggleSlotLock(day, time, room, false);
+	db.toggleSlotLock(day, time, room, false, userData.id);
     }
 }
 
@@ -74,7 +80,6 @@ function removeSessionFromSlot(s, date, time, room){
     allSessions[s.id]['date'] = "";
     allSessions[s.id]['time'] = "";
     allSessions[s.id]['room'] = "";
-    allSessions[s.id]['endTime'] = "";
 }
 
 function clearSlot(date, time, room){
@@ -84,18 +89,16 @@ function clearSlot(date, time, room){
     }
 }
 
-function addSessionToSlot(s, date, time, room, endTime){
+function addSessionToSlot(s, date, time, room){
     schedule[date][time][room][s.id] = s;
     s['date'] = date;
     s['time'] = time;
     s['room'] = room;
     // todo doesn't deal with endTime
-    s['endTime'] = endTime;
 }
 
 // Unschedule a session
 function unscheduleSession(s){
-    
     // todo: doesn't deal with endTime
     var sdate = s.date;
     var stime = s.time;
@@ -114,31 +117,40 @@ function unscheduleSession(s){
 
     // unschedule on server
     if(!frontEndOnly){
-	db.unscheduleSession(s.id, sdate, stime, sroom);
+	db.unscheduleSession(s.id, sdate, stime, sroom, userData.id);
     }
 }
 
 
 // schedule a session
-function scheduleSession(s, sdate, stime, sroom, sendTime){
+function scheduleSession(s, sdate, stime, sroom){
     if(scheduleSlots[sdate][stime][sroom]['locked']){
 	$(document).trigger('slotLocked', [sdate, stime, sroom]);
 	return;
     }
 
-
+    var isUnscheduled = false;
     // remove session from unscheduled
     if(s.id in unscheduled){
 	delete unscheduled[s.id];
+	isUnscheduled = true;
     }
-
-    // schedule on frontend
-    addSessionToSlot(s, sdate, stime, sroom, sendTime);
-
+    
     // schedule on server
     if(!frontEndOnly){
-	db.scheduleSession(s.id, sdate, stime, sroom, s.endTime);
+	if(isUnscheduled){
+	    db.scheduleSession(s.id, sdate, stime, sroom, userData.id);
+	}else{
+	    db.moveSession(s.id, s.date, s.time, s.room, 
+		    sdate, stime, sroom, userData.id); 
+	}
     }
+    
+    // schedule on frontend
+    if(!isUnscheduled){
+	removeSessionFromSlot(s, s.date, s.time, s.room)
+    }
+    addSessionToSlot(s, sdate, stime, sroom);
 }
 
 
@@ -179,7 +191,7 @@ function swapSessions(s1, s2){
     // perform swap on server
     if(!frontEndOnly){
 	db.swapSession(s1.id, s1date, s1time, s1room,
-		       s2.id, s2date, s2time, s2room);
+		       s2.id, s2date, s2time, s2room,  userData.id);
     }
 }
 ///////end functions for interacting with schedule////////////
@@ -271,21 +283,21 @@ function unescapeURL(s) {
 
 
 
-// $(document).bind("slotLocked", function(e, day, time, room){
-// 	console.log("This slot is locked: " + day + " ," + time + ", " + room);
-//     });
+$(document).bind("slotLocked", function(e, day, time, room){
+	console.log("This slot is locked: " + day + " ," + time + ", " + room);
+    });
 
-// $(document).bind("slotChange", function(e, day, time, room){
-// 	console.log("Data changed in " + day + " ," + time + ", " + room);
-//     });
+$(document).bind("slotChange", function(e, day, time, room){
+	console.log("Data changed in " + day + " ," + time + ", " + room);
+    });
 
-// $(document).bind("lockChange", function(e, day, time, room){
-// 	console.log("Slot lock changed in " + day + " ," + time + ", " + room);
-//     });
+$(document).bind("lockChange", function(e, day, time, room){
+	console.log("Slot lock changed in " + day + " ," + time + ", " + room);
+    });
 
-// $(document).bind("unscheduledChange", function(e){
-// 	console.log("The unscheduled data has changed.");
-//     });
+$(document).bind("unscheduledChange", function(e){
+	console.log("The unscheduled data has changed.");
+    });
 
 // record where inconsistencies occur
 // change the internal data to update and bring everythign consistent
@@ -654,7 +666,7 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
 	    }
 	}
 	
-	moveValue.push(new swapDetails(new slot(allSessions[s].date, allSessions[s].time, allSessions[s].room, s),
+	moveValue.push(new swapDetails(new slot(null, null, null, s),
 				       -conflictsWithSession[s].length,
 				       null,
 				       conflictsWithSession[s],
@@ -887,8 +899,8 @@ function swapDetails(target, value, addedSrc, addedDest, removedSrc, removedDest
     this.removedDest = removedDest;
 }
 
-function slot(day, time, room, session){
-    this.day = day;
+function slot(date, time, room, session){
+    this.date = date;
     this.time = time;
     this.room = room;
     this.session = session;

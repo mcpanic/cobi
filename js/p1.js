@@ -18,27 +18,40 @@
 
      // Getting html for session details with individual paper info
      function getSessionDetail(type, session){
-     	var html = ""; 
-          if (type == "scheduled") {
-               html += "<button class='btn btn-info button-propose-swap'>Propose Swaps</button>"
-                    + "  <button class='btn btn-danger button-unschedule'>Unschedule</button> ";
-          } else if (type == "unscheduled") {
-               html += "<button class='btn btn-info button-propose-unscheduled'>Propose Schedule</button>";
-          } else if (type == "empty") {
-               html += "<button class='btn btn-info button-propose-empty'>Propose Schedule</button>";
-          }
+	 var isLocked = false;
+	 if (type != "unscheduled" && typeof session !== "undefined" && session != null){
+	     isLocked = scheduleSlots[session.date][session.time][session.room]['locked'];
+	 }
 
-          if (typeof session !== "undefined" && session != null && typeof session.submissions !== "undefined" && session.submissions != null) {
-               html += " <ul class='list-submissions'>";
-               $.each(session.submissions, function(index, submission){
-                    html += "<li class='submission'><strong>" + submission.type + "</strong>: " 
+	 var html = ""; 
+	 if(isLocked){
+	     html += "  <button class='btn btn-inverse button-unlock'>Unlock it</button> ";
+	 }else{
+	     var lockButton = "  <button class='btn btn-inverse button-lock'>Lock it</button> ";
+
+	     if (type == "scheduled") {
+		 html += "<button class='btn btn-info button-propose-swap'>Propose Swaps</button>"
+		     + "  <button class='btn btn-danger button-unschedule'>Unschedule</button> "
+		     + lockButton;
+	     } else if (type == "unscheduled") {
+		 html += "<button class='btn btn-info button-propose-unscheduled'>Propose Schedule</button>";
+	     } else if (type == "empty") {
+		 html += "<button class='btn btn-info button-propose-empty'>Propose Schedule</button>"
+		     + lockButton;
+	     }
+	 }
+
+	 if (typeof session !== "undefined" && session != null && typeof session.submissions !== "undefined" && session.submissions != null) {
+	     html += " <ul class='list-submissions'>";
+	     $.each(session.submissions, function(index, submission){
+		     html += "<li class='submission'><strong>" + submission.type + "</strong>: " 
                          + getAuthorDisplay(submission.authors) + "<br>"
                          + "<strong>" + submission.title + "</strong></li>";
-
-               });
-               html += "</ul>";
-          }
-     	return html;
+		     
+		 });
+	     html += "</ul>";
+	 }
+	 return html;
      }
 
 
@@ -243,7 +256,7 @@
      // When session is empty: show date, time, room
      function displaySlotTitle(slot) {
           if (slot.session === null) {
-               return slot.day + " " + slot.time + " " + slot.room;
+               return slot.date + " " + slot.time + " " + slot.room;
           } else {
                return allSessions[slot.session].title;
           }
@@ -297,6 +310,7 @@
                }
           });
      }
+ 
 
      // Handle a propose (swap, unschedule, schedule) request
      function proposeHandler(event){
@@ -307,20 +321,22 @@
           if (event.data.type === "swap")
                swapValues = proposeSwap(allSessions[id]);
           else if (event.data.type === "unscheduled") {
-               console.log("unscheduled", id);
+
+	       console.log("unscheduled", id);
                swapValues = proposeSlot(allSessions[id]);
           }
           else if (event.data.type === "empty") {
                console.log($session, $session.data(), $session.data("date"), event.data.type, event.target);
                console.log($session.data("date"), $session.data("time"), $session.data("room"), schedule[$session.data("date")][$session.data("time")][$session.data("room")]);
                swapValues = proposeUnscheduledSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
+	
           } else {
                return;
           }
 
           // Now display each candidate 
           swapValues.sort(function(a, b) {
-		  if(scheduleSlots[a.target.day][a.target.time][a.target.room]['locked']){
+		  if(a.target.date != null && scheduleSlots[a.target.date][a.target.time][a.target.room]['locked']){
 		      return 1;
 		  } else {return b.value - a.value;}});
 
@@ -330,9 +346,9 @@
           for(var i = 0; i < count; i++){    
                // empty candidate
                if (swapValues[i].target.session === null){
-                    var $cell = getCellByDateTimeRoom(swapValues[i].target.day, swapValues[i].target.time, swapValues[i].target.room);
+                    var $cell = getCellByDateTimeRoom(swapValues[i].target.date, swapValues[i].target.time, swapValues[i].target.room);
                     $cell.addClass("proposed-swap").data("title", "Empty slot");
-                    swapContent += "<li data-rank-order='" + i + "' data-date='"+swapValues[i].target.day+"' data-time='"+swapValues[i].target.time+"' data-room='"+swapValues[i].target.room+"'>" 
+                    swapContent += "<li data-rank-order='" + i + "' data-date='"+swapValues[i].target.date+"' data-time='"+swapValues[i].target.time+"' data-room='"+swapValues[i].target.room+"'>" 
                     + "<a href='#' class='swap-preview-link'>[preview]</a> "
 			+ "adding " + (-1*swapValues[i].value)  
                     + ": <a href='#' class='swap-review-link'>" + displaySlotTitle(swapValues[i].target) + "</a>" 
@@ -396,6 +412,7 @@
      $("body").on("click", ".popover .button-propose-swap", {type: "swap"}, proposeHandler);
      $("body").on("click", ".popover .button-propose-unscheduled", {type: "unscheduled"}, proposeHandler);
      $("body").on("click", ".popover .button-propose-empty", {type: "empty"}, proposeHandler);
+
 
 /*
      $("#alert").on("click", ".swap-preview-link", function(){
@@ -510,7 +527,7 @@
           
           // the backend scheduling
           console.log("SCHEDULE", id, "into", $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
-          scheduleSession(allSessions[id], $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"), "");
+          scheduleSession(allSessions[id], $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
 
           // the frontend scheduling: backend should be called first to have the updated allSessions[id] information
           scheduleSessionCell(id, $emptySlot, $session);
@@ -531,6 +548,48 @@
           $("#alert").html("");      
      });
 
+    
+// Handles a lock request
+$("body").on("click", ".popover .button-lock", function(){
+	// TODO: display an icon showing a lock
+	// TODO: write to history-links
+    var $session = $(".selected").first();
+    var id = getID($session);  
+    var date, time, room; 
+    if(id in allSessions){
+	lockSlot(allSessions[id].date, allSessions[id].time, allSessions[id].room);
+	$session.data('popover').options.content = function(){
+	    return getSessionDetail("scheduled", allSessions[id]);
+	};
+    }else{
+	lockSlot($session.data("date"), $session.data("time"), $session.data("room"));
+	$session.data('popover').options.content = function(){
+	    return getSessionDetail("empty", new slot($session.data("date"), $session.data("time"), $session.data("room"), null));
+	};
+    }
+    $session.removeClass("selected").popover("hide");
+    });
+
+// handle an unlock request
+$("body").on("click", ".popover .button-unlock", function(){
+	// TODO: display an icon showing a lock
+	// TODO: write to history-links
+    var $session = $(".selected").first();
+    var id = getID($session);  
+    if(id in allSessions){
+	unlockSlot(allSessions[id].date, allSessions[id].time, allSessions[id].room);
+	$session.data('popover').options.content = function(){
+	    return getSessionDetail("scheduled", allSessions[id]);
+	};
+    }else{
+	unlockSlot($session.data("date"), $session.data("time"), $session.data("room"));
+	$session.data('popover').options.content = function(){
+	    return getSessionDetail("empty", new slot($session.data("date"), $session.data("time"), $session.data("room"), null));
+	};
+    }
+        $session.removeClass("selected").popover("hide");
+});
+
      // When the unschedule button is clicked. Move the item to the unscheduled workspace.
      $("body").on("click", ".popover .button-unschedule", function(){
      	var $session = $(".selected").first();
@@ -549,10 +608,9 @@
                title:function(){
                     return "Empty slot";
                },
-               content:function(){
-                    return getSessionDetail("empty", -1);
-               }
-          });
+		      content: function() {return getSessionDetail("empty", new slot(allSessions[id].date, allSessions[id].time, allSessions[id].room, null))}
+               
+		      });
           // For now, simply assign date, time, and room info to an empty session
 //          // TODO: maybe hook up to an empty session so that data() isn't necessary?
 //          $(after).data("date", allSessions[id].date).data("time", allSessions[id].time).data("room", allSessions[id].room);
@@ -633,9 +691,8 @@
           // do nothing for unavailable slots
           if ($(this).hasClass("unavailable"))
                return;
-               
-     	var id = getID($(this));
-		var session = allSessions[id];
+	  var id = getID($(this));
+	  var session = allSessions[id];
      	$(this).addClass("selected");
      	$(this).popover({
      	    html:true,
@@ -648,10 +705,12 @@
                          return session.title;
      		},
      		content:function(){
-                    if ($(this).hasClass("empty"))
-                         return getSessionDetail("empty", -1);
-                    else
+                    if ($(this).hasClass("empty")){
+			return getSessionDetail("empty", new slot($(this).data("date"), $(this).data("time"), $(this).data("room"), null));
+		    }
+                    else{
      			     return $(this).find(".detail").html();
+		    }
      		}
      	});
      	$(this).popover("show");

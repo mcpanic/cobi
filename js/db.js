@@ -49,6 +49,8 @@ DB.prototype.loadUser = function(uid){
 	    success: function(m){
 		if(m != null){
 		    userData = new userInfo(m['uid'], m['name'], m['email'], m['type']);
+		}else{
+		    //		    userData = new userInfo(null, "Anon", null, "rookie");
 		}
 	    },
 	    error : function(m){
@@ -76,11 +78,37 @@ DB.prototype.loadSchedule = function(){
 	});
 };
 
-DB.prototype.toggleSlotLock = function(date, time, room, lock){
+DB.prototype.undo = function(uid){
+    $.ajax({
+ 	    async: true,
+		type: 'POST',
+		data: { type: 'undo', 
+			uid: uid,
+	         }, 
+		url: "./php/changeSchedule.php",
+		success: function(m){
+		if(m == null){
+		    //alert("You do not have undo privileges");
+		}else{
+		    // should return something like 
+		    // checkConsistency...
+		    
+		}
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}    
+
+
+DB.prototype.toggleSlotLock = function(date, time, room, lock, uid){
     $.ajax({
  	    async: true,
 		type: 'POST',
 		data: { type: 'lock', 
+			uid: uid,
 		    lock: lock,
 		    date: date,
 		    time: time,
@@ -88,7 +116,7 @@ DB.prototype.toggleSlotLock = function(date, time, room, lock){
 		    }, 
 		url: "./php/changeSchedule.php",
 		success: function(m){
-		
+		//		alert(JSON.stringify(m));
  	    },
 		error : function(m){
 		alert(JSON.stringify(m));
@@ -97,11 +125,12 @@ DB.prototype.toggleSlotLock = function(date, time, room, lock){
 		});
 }    
 
-DB.prototype.unscheduleSession = function(id, date, time, room){
+    DB.prototype.unscheduleSession = function(id, date, time, room, uid){
     $.ajax({
  	    async: false,
 	    type: 'POST',
 	    data: { type: 'unschedule', 
+		    uid: uid,
 		    id: id,
 		    date: date,
 		    time: time,
@@ -118,7 +147,7 @@ DB.prototype.unscheduleSession = function(id, date, time, room){
 	});
 }; 
 
-DB.prototype.scheduleSession = function(id, date, time, room, endTime){
+DB.prototype.scheduleSession = function(id, date, time, room, uid){
     $.ajax({
  	    async: false,
 	    type: 'POST',
@@ -127,7 +156,7 @@ DB.prototype.scheduleSession = function(id, date, time, room, endTime){
 		    date: date,
 		    time: time,
 		    room: room,
-		    endTime: endTime}, 
+		    uid: uid}, 
 		url: "./php/changeSchedule.php",
 		success: function(m){		
  	    },
@@ -138,8 +167,32 @@ DB.prototype.scheduleSession = function(id, date, time, room, endTime){
 	});
 };
 
+DB.prototype.moveSession = function(id, date, time, room, tdate, ttime, troom, uid){
+    $.ajax({
+ 	    async: false,
+	    type: 'POST',
+	    data: { type: 'move', 
+		    id: id,
+		    sdate: date,
+		    stime: time,
+		    sroom: room,
+		    tdate: tdate,
+		    ttime: ttime,
+		    troom: troom,
+		    uid: uid}, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){		
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+};
+
+
 DB.prototype.swapSession = function(s1id, s1date, s1time, s1room, 
-				    s2id, s2date, s2time, s2room){
+				    s2id, s2date, s2time, s2room, uid){
     
     $.ajax({
  	    async: false,
@@ -152,7 +205,8 @@ DB.prototype.swapSession = function(s1id, s1date, s1time, s1room,
 			s2id: s2id,
 			s2date: s2date,
 			s2time: s2time,
-			s2room: s2room
+			s2room: s2room,
+			uid: uid
 	    }, 
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
