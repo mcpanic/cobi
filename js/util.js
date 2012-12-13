@@ -33,7 +33,15 @@
 		aparent.insertBefore(b, asibling);
 	}
 
-     
+
+     function getLength(item) {
+          if (item === null || typeof item === "undefined")
+               return 0;
+          else 
+               return item.length;
+     }
+
+          
 	// Retrieve ID from a cell
 	// Returns -1 when it doesn't exist.
 	function getID(cell){

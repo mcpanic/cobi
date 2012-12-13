@@ -1,7 +1,7 @@
 
 
 /* ==========================================================================
-   Author's custom styles
+   Generic styles
    ========================================================================== */
             body {
                 font-size: 12px;
@@ -57,6 +57,11 @@
                 cursor: pointer;
             }
 
+
+            #program .slot:hover, div#unscheduled .slot:hover {
+                outline: 1px solid #333333;
+            }
+
             #program .cell .title, div#unscheduled .cell .title {
                 width: 48px;
                 height: 38px;                
@@ -97,16 +102,13 @@
             #program .empty {
                 text-align: center;
                 vertical-align: middle;
+                /*opacity: 0.5;*/
             }
-
-            #program .empty a {
-                opacity: 0.5;
-            }
-
-            #program .empty a:hover {
+/*
+            #program .empty:hover {
                 opacity: 1;
             }
-
+*/
             #program .proposed-swap, div#unscheduled .proposed-swap {
                 background: #FF8C00;
                 cursor: pointer;

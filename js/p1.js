@@ -113,6 +113,7 @@
                          .html(getSessionDetail(type, session));
 			 	
                     $(cell).attr("id", "session-" + session.id)
+                         .addClass(type)
                          .data("session-id", session.id)
                          .append($(detail));
                     
@@ -170,7 +171,7 @@
      // Called after an interaction occurs that affects conflicts. (swap, unschedule, schedule)
      function updateConflicts(){
           // Lazy operation: only run when the view mode is conflicts
-          if (getActiveOptions("view-options").indexOf("conflicts") === -1)
+          if (Sidebar.getActiveOptions("view-options").indexOf("conflicts") === -1)
                return;
           $(".slot").each(function(){
                var id = getID($(this));
@@ -178,13 +179,6 @@
                     displayConflicts(conflictsBySession[id], $(this).find(".display"));
           });
           
-     }
-
-     function getLength(item) {
-          if (item === null || typeof item === "undefined")
-               return 0;
-          else 
-               return item.length;
      }
 
      // for each conflict preview tpe (addedSrc, removedSrc, addedDest, removedDest),
@@ -330,7 +324,7 @@
                     $cell.addClass("proposed-swap").data("title", "Empty slot");
                     swapContent += "<li data-rank-order='" + i + "' data-date='"+swapValues[i].target.day+"' data-time='"+swapValues[i].target.time+"' data-room='"+swapValues[i].target.room+"'>" 
                     + "<a href='#' class='swap-preview-link'>[preview]</a> "
-			+ "adding " + (-1*swapValues[i].value)  
+			        + "adding " + (-1*swapValues[i].value)  
                     + ": <a href='#' class='swap-review-link'>" + displaySlotTitle(swapValues[i].target) + "</a>" 
                     + "</li>";                    
 
@@ -367,9 +361,9 @@
           else
                alert_html += "<div class='span3 src-display' data-session-id='" + id + "'>";
 
-          alert_html += "selected session:<br> <a href='#' class='swap-review-link'>" + displaySessionTitle($session) + "</a></div>"
-                    + "<div class='span6'>" + swapContent + "</div>"
-                    + "</div></div>";
+          //alert_html += "selected session:<br> <a href='#' class='swap-review-link'>" + displaySessionTitle($session) + "</a></div>"
+          //          + "<div class='span6'>" + swapContent + "</div>"
+          //          + "</div></div>";
         
           $("#alert").html(alert_html);
           $("#alert .palette").css("background-color", "#FF8C00");
@@ -596,8 +590,6 @@
      	// if reselected, do nothing.
      	if (isSelected)
      		return;
-     	var id = getID($(this));
-     	$(this).addClass("selected");
 
           var id = getID($(this));
           var session = allSessions[id];
@@ -638,16 +630,16 @@
               placement: "bottom",
               trigger: "manual",
      		title:function(){
-                    if ($(this).hasClass("empty"))
-                         return "Empty slot";
+                if ($(this).hasClass("empty"))
+                    return "Empty slot";
      			else
-                         return session.title;
+                    return session.title;
      		},
      		content:function(){
-                    if ($(this).hasClass("empty"))
-                         return getSessionDetail("empty", -1);
-                    else
-     			     return $(this).find(".detail").html();
+                if ($(this).hasClass("empty"))
+                    return getSessionDetail("empty", -1);
+                else
+ 			        return $(this).find(".detail").html();
      		}
      	});
      	$(this).popover("show");
@@ -679,7 +671,7 @@
      // Display all scheduled sessions in the main grid
      function displayScheduled(){
           var orderedDates = keys(schedule).sort(function(a,b) {return new Date(a) > new Date(b);});
-          var orderedRooms = keys(allRooms).sort(function(a,b) {return a > b;});
+          var orderedRooms = keys(allRooms).sort(function(a,b) {return allRooms[a] - allRooms[b];});
 
           var i, cell;
           // Table Header
@@ -705,10 +697,10 @@
 //              var conflicts = document.createElement('td');
                 $(slot).addClass("cell header-col").append(shortenDate(date) + " " + time);
                 $(row).append(slot);
-                console.log(date, time);
+                //console.log(date, time);
                 $.each(orderedRooms, function(index3, room){
                     var sessions = schedule[date][time][room];
-                    console.log(schedule[date][time][room]);
+                    //console.log(schedule[date][time][room]);
                     // if this room has an associated session, display it.
                     if (typeof sessions !== "undefined") {
                         if (keys(sessions).length === 0)

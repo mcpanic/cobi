@@ -210,6 +210,7 @@ var Sidebar = function() {
      }
 
      return {
-          initialize: initialize
+          initialize: initialize,
+          getActiveOptions: getActiveOptions
      };
 }();
