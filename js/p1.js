@@ -18,6 +18,7 @@
 
      // Getting html for session details with individual paper info
      function getSessionDetail(type, session){
+	 // HQ: locked sessions get only a locked button
 	 var isLocked = false;
 	 if (type != "unscheduled" && typeof session !== "undefined" && session != null){
 	     console.log(session);
@@ -550,7 +551,7 @@
      });
 
     
-// Handles a lock request
+// HQ: Handles a lock request
 $("body").on("click", ".popover .button-lock", function(){
 	// TODO: display an icon showing a lock
 	// TODO: write to history-links
@@ -565,13 +566,14 @@ $("body").on("click", ".popover .button-lock", function(){
     }else{
 	lockSlot($session.data("date"), $session.data("time"), $session.data("room"));
 	$session.data('popover').options.content = function(){
+	    // HQ: passing a slot for session (allows for isLocked check)
 	    return getSessionDetail("empty", new slot($session.data("date"), $session.data("time"), $session.data("room"), null));
 	};
     }
     $session.removeClass("selected").popover("hide");
     });
 
-// handle an unlock request
+// HQ: handle an unlock request
 $("body").on("click", ".popover .button-unlock", function(){
 	// TODO: display an icon showing a lock
 	// TODO: write to history-links
@@ -585,6 +587,7 @@ $("body").on("click", ".popover .button-unlock", function(){
     }else{
 	unlockSlot($session.data("date"), $session.data("time"), $session.data("room"));
 	$session.data('popover').options.content = function(){
+	    // HQ: passing a slot for session (allows for isLocked check)
 	    return getSessionDetail("empty", new slot($session.data("date"), $session.data("time"), $session.data("room"), null));
 	};
     }
