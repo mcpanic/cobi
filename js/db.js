@@ -33,7 +33,7 @@ DB.prototype.refresh = function(){
 			    poll();
 			}, 
 			    error : function(m){
-			    alert(JSON.stringify(m));
+			    //alert(JSON.stringify(m));
 			},
 			    dataType: "json"});
 	    }, 10000);
