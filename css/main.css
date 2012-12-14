@@ -69,6 +69,8 @@ body.loading .modal {
 .sidebar-fixed {
     position:fixed;
     width:150px;
+    height: 100%;
+    overflow-y: scroll;    
 }
 
 /*@media (max-width: 767px) {*/
@@ -268,7 +270,7 @@ div#unscheduled .slot {
     background: url('../img/lock.png') 
                 97% 3%
                 no-repeat;
-    background-size: 10px 14px;
+    background-size: 8px 11px;
 }
 
 .popover {

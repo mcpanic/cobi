@@ -166,7 +166,8 @@ var Sidebar = function() {
                toggle = false;
 
           $("#list-history .view-option-active").removeClass("view-option-active");
-
+          $(".highlight").removeClass("highlight");
+          
           var cell = null;
           if (typeof id === "undefined")
                cell = getCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));

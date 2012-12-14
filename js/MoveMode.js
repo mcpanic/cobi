@@ -55,7 +55,7 @@ var MoveMode = function() {
                //console.log(html);
           return html;
      }
-
+/*
      function slotClickHandler(){
         // detect if the currently selected item is selected again.
         var $selection = $(this).hasClass("unscheduled")? $("#unscheduled .selected"): $("#program .selected");
@@ -73,7 +73,7 @@ var MoveMode = function() {
            return;
         $(this).addClass("selected");
      }
-
+*/
      // For proposed swap options, display the right popover
      function renderProposedSwap(type){
 

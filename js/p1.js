@@ -86,7 +86,7 @@
 
            // Unavailable / Locked Session                         
             } else if (type == "unavailable" || session == "") {
-                console.log("unavailable");
+                //console.log("unavailable");
                 $(cell).addClass("unavailable");
            
            // Scheduled / Unscheduled Session
