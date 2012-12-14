@@ -20,6 +20,8 @@ var ViewMode = function() {
         $("body").on("click", ".popover .button-unlock", unlockHandler);
     }
 
+    // When move is request, forward this request to MoveMode.
+    // This is the only way to switch modes from ViewMode to MoveMode.
     function proposeHandler(event){
         // Don't need the actual target information because .selected detects this.
         MoveMode.initialize(event.data.type);
@@ -117,7 +119,6 @@ var ViewMode = function() {
 
     // HQ: Handles a lock request
     function lockHandler(){
-        // TODO: display an icon showing a lock
         // TODO: write to history-links
         var $session = $(".selected").first();
         var id = getID($session);  
@@ -139,7 +140,6 @@ var ViewMode = function() {
 
     // HQ: handle an unlock request
     function unlockHandler(){
-        // TODO: display an icon showing a lock
         // TODO: write to history-links
         var $session = $(".selected").first();
         var id = getID($session);  
@@ -158,77 +158,6 @@ var ViewMode = function() {
         $session.removeClass("locked selected").popover("hide");
     }
 
-/*     
-     $("#unscheduled").on("click", ".slot", function(){
-          // detect if the currently selected item is selected again.
-          var $selection = $("#unscheduled .selected");
-          var isSelected = $selection[0] == $(this)[0];
-
-          // HQ: edited so only one popover at a time
-          $selection.removeClass("selected").popover("hide");
-          $("#program .selected").removeClass("selected").popover("hide");
-
-          // if reselected, do nothing.
-          if (isSelected)
-               return;
-
-          var id = getID($(this));
-          var session = allSessions[id];
-          $(this).addClass("selected");
-          $(this).popover({
-              html:true,
-              placement: "bottom",
-              trigger: "click",
-               title:function(){
-                    return allSessions[id].title;
-               },
-               content:function(){
-                    return getSessionDetail("unscheduled", allSessions[id]);
-               }
-          });       
-          $(this).popover("show");
-     });
-
-     // Event handler for clicking an individual session
-     $("#program").on("click", ".slot", function(){
-          // detect if the currently selected item is selected again.
-          var $selection = $("#program .selected");
-          var isSelected = $selection[0] == $(this)[0];
-     
-          // HQ: edited so only one popover at a time
-          $selection.removeClass("selected").popover("hide");
-          $("#unscheduled .selected").removeClass("selected").popover("hide");
-
-          // if reselected, do nothing.
-          if (isSelected)
-               return;
-          // do nothing for unavailable slots
-          if ($(this).hasClass("unavailable"))
-               return;
-          var id = getID($(this));
-          var session = allSessions[id];
-          $(this).addClass("selected");
-          $(this).popover({
-              html:true,
-              placement: "bottom",
-              trigger: "manual",
-               title:function(){
-                if ($(this).hasClass("empty"))
-                    return "Empty slot";
-                    else
-                    return session.title;
-               },
-               content:function(){
-                if ($(this).hasClass("empty")){
-                   return getSessionDetail("empty", new slot($(this).data("date"), $(this).data("time"), $(this).data("room"), null));
-                } else{
-                   return $(this).find(".detail").html();
-                }
-               }
-          });
-          $(this).popover("show");
-     });
-*/
     // Reset any change created in this view mode
     function destroy(){
         isOn = false;

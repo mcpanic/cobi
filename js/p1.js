@@ -176,8 +176,6 @@
           
      }
 
-
-
      // Display textually the slot title. (slot data structure)
      // When session exists: Name of the session
      // When session is empty: show date, time, room
@@ -212,20 +210,7 @@
      function displayUnscheduled(){
           keys(unscheduled).map(function(id){
                var cell = getSessionCell("unscheduled", allSessions[id]);
-               $("#unscheduled").append(cell); 
-               /*
-               $(cell).popover({
-                   html:true,
-                   placement: "bottom",
-                   trigger: "click",
-                    title:function(){
-                         return allSessions[$(this).data("session-id")].title;
-                    },
-                    content:function(){
-                         return $(this).find(".detail").html();
-                    }
-               });
-               */        
+               $("#unscheduled").append(cell);         
           });
             updateUnscheduledCount();
      }
