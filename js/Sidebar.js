@@ -161,7 +161,11 @@ var Sidebar = function() {
 
      function clickHistoryHandler(){
           var id = $(this).data("session-id");
-          $(this).toggleClass("view-option-active");
+          var toggle = true;
+          if ($(this).hasClass("view-option-active"))
+               toggle = false;
+
+          $("#list-history .view-option-active").removeClass("view-option-active");
 
           var cell = null;
           if (typeof id === "undefined")
@@ -169,7 +173,14 @@ var Sidebar = function() {
           else
                cell = $("#session-" + id)
 
-          $(cell).toggleClass("highlight").popover("toggle");
+          if (toggle) {
+               $(this).addClass("view-option-active");
+               $(document).scrollTop( $(cell).offset().top - 100); 
+               $(cell).addClass("highlight"); //.popover("toggle");               
+          } else {
+               $(cell).removeClass("highlight");               
+          }
+
           return false;
      } 
 

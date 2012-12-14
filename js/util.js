@@ -41,7 +41,13 @@
                return item.length;
      }
 
-          
+    function addSign(val){
+    	if (val > 0)
+    		return "+" + val;
+    	else
+    		return val;
+    }   
+
 	// Retrieve ID from a cell
 	// Returns -1 when it doesn't exist.
 	function getID(cell){
@@ -63,10 +69,13 @@
 	// Returns null when there is no such cell that's empty.
 	function getCellByDateTimeRoom(cellDate, cellTime, cellRoom){
 		var cell = null;
+		//console.log("CALL", cellDate, cellTime, cellRoom);
 		$("#program .empty").each(function(){
-		    if ($(this).data("date") === cellDate && $(this).data("time") === cellTime  && $(this).data("room") === cellRoom)
+			//console.log($(this).data("date"), $(this).data("time"), typeof $(this).data("room"), typeof cellRoom, $(this).data("room") == cellRoom, $(this).data("room") === cellRoom);
+		    if ($(this).data("date") == cellDate && $(this).data("time") == cellTime  && $(this).data("room") == cellRoom)
 		        cell = $(this);
 		});
+		//console.log(cell);
 		return cell;
 	}
 

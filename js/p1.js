@@ -52,7 +52,7 @@
           var session = getSessionCell("scheduled", allSessions[id]);
           //swapNodes(session, $cell[0]);
           $emptySlot.popover("destroy").replaceWith($(session));
-          $(session).css("background-color", "white").effect("highlight", {color: "yellow"}, 10000)          
+          $(session).effect("highlight", {color: "yellow"}, 10000); // css("background-color", "white")
           $curSession.popover("destroy").remove();
     }
 
@@ -107,9 +107,6 @@
                 if (typeof session.title !== "undefined")
                      $(cell).find(".title").html(session.title);
                 
-                // default view: conflicts
-                displayConflicts(conflictsBySession[session.id], $(cell).find(".display"));
-                //$(cell).find(".display").html(session.type);
 		 } 
 		 return cell;
     }
@@ -159,6 +156,102 @@
                     });
                     //$palette.popover();           
                }
+          });
+     }
+
+     function displayConflictPreviewHTML(netCount) {
+        var html = "";
+        for (var i=0; i<Math.abs(netCount); i++) {
+            if (netCount > 0)
+                html += "<span class='conflict-preview-added'>+</span>";
+            else
+                html += "<span class='conflict-preview-removed'>-</span>";
+        }
+        return html;
+     }
+
+     function displayConflictFullHTML(ment, input_array, conflict, sign) {
+        if (input_array === null)
+            return "";
+        var html = ment;
+        var filtered_array = input_array == null? []: input_array.filter(function(x){return x.type==conflict.type});
+        for (var i=0; i<filtered_array.length; i++) {
+            html += "<span class='conflict-preview-display'>" + sign + "</span>";
+        }
+        return html;
+     }
+
+     function getConflictLength(input_array, conflict) {
+        var filtered_array = input_array == null? []: input_array.filter(function(x){return x.type==conflict.type});
+        return filtered_array.length;
+     }
+
+     // Given a list of added and removed conflicts with a swap candidate,
+     // display the preview to help make the decision to do the swap.
+     function displayFullConflicts(swapValues, element){
+          if (typeof swapValues === "undefined")
+               return;
+
+            var $session = $(".selected").first();
+            var id = getID($session);  
+
+          element.append("<div class='conflicts'/>");
+
+          
+          var filtered_array = [];          
+          
+          // for each constraint, count and add a modal dialog with descriptions
+          $.each(constraints_list, function(index, conflict){  
+            var html = displayConflictFullHTML("Added to source", swapValues.addedSrc, conflict, "+")
+                + displayConflictFullHTML("Added to destination", swapValues.addedDest, conflict, "+")
+                + displayConflictFullHTML("Removed from source", swapValues.removedSrc, conflict, "-")
+                + displayConflictFullHTML("Removed from destination", swapValues.removedDest, conflict, "-");
+
+            var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 
+                        - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
+
+            var $palette = $(html).css("background-color", conflict.color);
+            var netCountClass = "conflict-netcount-added";
+            if (netCount < 0)
+                netCountClass = "conflict-netcount-removed";
+
+            var ment = "";
+            if (swapValues.value > 0)
+                ment += conflict.type + ": " + netCount + " conflicts will be resolved.";
+            else
+                ment += conflict.type + ": " + (-1)*netCount + " conflicts will be added.";
+
+            element.find(".conflicts")
+                .append("<div class='swap-total'>" + ment + "</div>")
+                .append("<div class='conflict-type-preview'/>")
+                .append("<span class='" + netCountClass + "'>" + addSign(netCount) + "</span>")
+                .append($palette);             
+          });
+     }
+
+
+     // Given a list of added and removed conflicts with a swap candidate,
+     // display the preview to help make the decision to do the swap.
+     function displayPreviewConflicts(swapValues, element){
+          if (typeof swapValues === "undefined")
+               return;
+          element.html("");/*.append("<div class='swap-total'>" + addSign(swapValues.value) + "</div>")*/
+          
+          var filtered_array = [];          
+          
+          // for each constraint, count and add a modal dialog with descriptions
+          $.each(constraints_list, function(index, conflict){  
+
+            var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 
+                        - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
+
+            var $palette = $(displayConflictPreviewHTML(netCount)).css("background-color", conflict.color);
+            var netCountClass = "conflict-netcount-added";
+            if (netCount < 0)
+                netCountClass = "conflict-netcount-removed";
+            element.append("<div class='conflict-type-preview'/>")
+                .append("<span class='" + netCountClass + "'>" + addSign(netCount) + "</span>")
+                .append($palette);             
           });
      }
 
@@ -250,9 +343,10 @@
                     //console.log(schedule[date][time][room]);
                     // if this room has an associated session, display it.
                     if (typeof sessions !== "undefined") {
-                        if (keys(sessions).length === 0)
+
+                        if (keys(sessions).length === 0){
                             cell = getSessionCell("empty", null, date, time, room)
-                        else {
+                        } else {
                             $.each(sessions, function(id, session){
                                 cell = getSessionCell("scheduled", session, date, time, room);
                             });

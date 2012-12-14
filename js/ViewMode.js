@@ -6,6 +6,13 @@ var ViewMode = function() {
         isOn = true;
         MoveMode.destroy();
         bindEvents();
+        initDisplay();
+    }
+
+    // Display is the bottom portion of the session display, which summarizes conflicts
+    function initDisplay(){
+        // default is the conflict view
+        $("#list-view-options li a").first().trigger("click");
     }
 
      // Add event handlers to each sidebar item
@@ -32,32 +39,15 @@ var ViewMode = function() {
         var $session = $(".selected").first();
         var id = getID($session);
 
+        // Part 1. Add to the unscheduled pane
         var new_session = getSessionCell("unscheduled", allSessions[id]);
         $("#unscheduled").append(new_session);
-        $session.removeClass("selected").popover("destroy").removeAttr("id").removeData();
-        var date = allSessions[id].date;
-        var time = allSessions[id].time;
-        var room = allSessions[id].room;
 
+        // Part 2. Make the current slot empty.
+        $session.removeClass("selected").popover("destroy").removeAttr("id").removeData();
         var after = getSessionCell("empty", null, allSessions[id].date, allSessions[id].time, allSessions[id].room);
         // Watch out! jQuery replaceWith returns the original element, not the replaced element.
         $session.replaceWith(after); 
-        $(after).popover({
-          html:true,
-          placement: "bottom",
-          trigger: "click",
-           title:function(){
-                return "Empty slot";
-           },
-           content: function() {
-                return getSessionDetail("empty", new slot(date, time, room, null))
-           }
-           
-        });
-        // For now, simply assign date, time, and room info to an empty session
-        //          // TODO: maybe hook up to an empty session so that data() isn't necessary?
-        //          $(after).data("date", allSessions[id].date).data("time", allSessions[id].time).data("room", allSessions[id].room);
-        //          console.log($(after), $(after).data("date"), $(after).data("time"), $(after).data("room"));
         // Unschedule session in the database
         unscheduleSession(allSessions[id]);
 
@@ -101,7 +91,7 @@ var ViewMode = function() {
            title:function(){
             if ($(this).hasClass("empty"))
                 return "Empty slot";
-                else
+            else
                 return session.title;
            },
            content:function(){
