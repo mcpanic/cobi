@@ -12,7 +12,7 @@ var MoveMode = function() {
 
     // Add event handlers to each sidebar item
     function bindEvents(){
-        $("body").on("click", ".slot", slotClickHandler);
+        //$("body").on("click", ".slot", slotClickHandler);
     }
 
 
@@ -120,13 +120,13 @@ var MoveMode = function() {
                               console.log("renderProposedSwap: swap");
                               html +=  "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
                               + "'>Swap with this session</button><br>"
-                              + $(this).find(".detail .conflicts")[0].outerHTML
+                              //+ $(this).find(".detail .conflicts")[0].outerHTML
                               + $(this).find(".detail ul")[0].outerHTML;
                          } else { // unscheduled session
                               console.log("renderProposedSwap: unscheduled");
                               html +=  "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
                               + "'>Schedule this session</button><br>"
-                              + $(this).find(".detail .conflicts")[0].outerHTML
+                              //+ $(this).find(".detail .conflicts")[0].outerHTML
                               + $(this).find(".detail ul")[0].outerHTML;
                          }
                     }
@@ -168,14 +168,14 @@ var MoveMode = function() {
           if (type === "swap") {
             var tempArray = proposeSlotAndSwap(allSessions[id]);
             swapValues = tempArray.slotValue.concat(tempArray.swapValue);
-            console.log(swapValues);
+            //console.log(swapValues);
           } else if (type === "unscheduled") {
-            console.log("unscheduled", id);
+            //console.log("unscheduled", id);
             swapValues = proposeSlot(allSessions[id]);
           }
           else if (type === "empty") {
-            console.log($session, $session.data(), $session.data("date"), type);
-            console.log($session.data("date"), $session.data("time"), $session.data("room"), schedule[$session.data("date")][$session.data("time")][$session.data("room")]);
+            //console.log($session, $session.data(), $session.data("date"), type);
+            //console.log($session.data("date"), $session.data("time"), $session.data("room"), schedule[$session.data("date")][$session.data("time")][$session.data("room")]);
             swapValues = proposeUnscheduledSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
     
           } else {
@@ -226,9 +226,9 @@ var MoveMode = function() {
                     + "</li>";
                }
 
-               console.log(swapValues[i]);
+               //console.log(swapValues[i]);
                displayPreviewConflicts(swapValues[i], $cell.find(".display"));
-               displayFullConflicts(swapValues[i], $cell.find(".detail"));
+               //displayFullConflicts(swapValues[i], $cell.find(".detail"));
           }
 
           // For proposed slots, add a new popover
@@ -303,6 +303,7 @@ var MoveMode = function() {
         // the frontend conflicts update: the row view of conflicts.
         updateConflicts();
 
+        destroy();
         ViewMode.initialize();
     }
 
@@ -405,12 +406,13 @@ var MoveMode = function() {
         // TOOD: check all the other things the swapping mode has created and reset/undo them.
         
         $(".recommended").removeClass("recommended");
+        
         $(".selected").popover("destroy").removeClass("selected");
         $(".swap-selected").popover("destroy").removeClass("swap-selected");
         $(".proposed-swap").popover("destroy").removeClass("proposed-swap");   
         $(".highlight").removeClass("highlight");          
         //$("#statusbar .swap-preview-link").popover("destroy");
-        $("body").off("click", ".slot", slotClickHandler);        
+        //$("body").off("click", ".slot", slotClickHandler);        
     }
 
     return {

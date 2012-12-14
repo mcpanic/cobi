@@ -4,7 +4,7 @@ var ViewMode = function() {
     // Initialize the view mode 
     function initialize(){
         isOn = true;
-        MoveMode.destroy();
+        //MoveMode.destroy();
         bindEvents();
         initDisplay();
     }
