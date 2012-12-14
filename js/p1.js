@@ -216,7 +216,7 @@
                 netCountClass = "conflict-netcount-removed";
 
             var ment = "";
-            if (swapValues.value > 0)
+            if (netCount > 0)
                 ment += conflict.type + ": " + netCount + " conflicts will be resolved.";
             else
                 ment += conflict.type + ": " + (-1)*netCount + " conflicts will be added.";
