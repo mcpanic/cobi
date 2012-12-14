@@ -42,7 +42,7 @@ DB.prototype.refresh = function(){
 
 DB.prototype.loadUser = function(uid){
     $.ajax({
-	    async: false,
+	    async: true,
 	    type: 'POST',
 	    data: {uid: uid},   
 	    url: "./php/loadUser.php",
@@ -127,7 +127,7 @@ DB.prototype.toggleSlotLock = function(date, time, room, lock, uid){
 
     DB.prototype.unscheduleSession = function(id, date, time, room, uid){
     $.ajax({
- 	    async: false,
+ 	    async: true,
 	    type: 'POST',
 	    data: { type: 'unschedule', 
 		    uid: uid,
@@ -149,7 +149,7 @@ DB.prototype.toggleSlotLock = function(date, time, room, lock, uid){
 
 DB.prototype.scheduleSession = function(id, date, time, room, uid){
     $.ajax({
- 	    async: false,
+ 	    async: true,
 	    type: 'POST',
 	    data: { type: 'schedule', 
 		    id: id,
@@ -169,7 +169,7 @@ DB.prototype.scheduleSession = function(id, date, time, room, uid){
 
 DB.prototype.moveSession = function(id, date, time, room, tdate, ttime, troom, uid){
     $.ajax({
- 	    async: false,
+ 	    async: true,
 	    type: 'POST',
 	    data: { type: 'move', 
 		    id: id,
@@ -195,7 +195,7 @@ DB.prototype.swapSession = function(s1id, s1date, s1time, s1room,
 				    s2id, s2date, s2time, s2room, uid){
     
     $.ajax({
- 	    async: false,
+ 	    async: true,
 		type: 'POST',
 		data: { type: 'swap', 
 			s1id: s1id,
