@@ -13,7 +13,7 @@ $userQ = "CREATE TABLE users (uid varchar(32), name varchar(128), email varchar(
   echo mysql_error();
 
 // Create transactions table
-$transQ = "CREATE TABLE transactions (id MEDIUMINT NOT NULL AUTO_INCREMENT, uid varchar(3), type varchar(32), data text, previous text, PRIMARY KEY (id))"; 				      
+$transQ = "CREATE TABLE transactions (id MEDIUMINT NOT NULL AUTO_INCREMENT, uid varchar(32), type varchar(32), data text, previous text, PRIMARY KEY (id))"; 				      
 				      mysql_query($transQ)
 echo mysql_error();
 

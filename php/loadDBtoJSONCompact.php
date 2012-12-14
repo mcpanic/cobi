@@ -5,6 +5,11 @@ include "settings.php";
 
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
+// Get the transactions table
+$transQ = "select id, transactions.uid, transactions.type, data, previous, name from transactions LEFT JOIN (users) ON (users.uid=transactions.uid) order by id DESC limit 5";
+$transTable =  mysqli_query($mysqli, $transQ);
+echo mysqli_error($mysqli);
+
 // Get the schedule table
 $scheduleQ = "select * from schedule"; 
 $scheduleTable = mysqli_query($mysqli, $scheduleQ);
@@ -30,9 +35,17 @@ while ($row = $scheduleTable->fetch_assoc()) {
   }
 }
 
+$transactions = array();
+while ($row = $transTable->fetch_assoc()) {
+  $row["data"] = json_decode($row["data"], true);
+  $row["previous"] = json_decode($row["previous"], true);
+  array_unshift($transactions, $row);
+}
+
 $output = array('schedule' => $schedule, 
 		'unscheduled' => $unscheduled,
-		'slots' => $slots);
+		'slots' => $slots,
+		'transactions' => $transactions);
 
 echo json_encode($output);
 
