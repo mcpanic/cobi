@@ -15,10 +15,15 @@ $sessionQ = "select * from session";
 $sessionTable = mysqli_query($mysqli, $sessionQ);
 echo mysqli_error($mysqli);
 
-
 // Get the entity table
 $entityQ = "select * from entity"; 
 $entityTable = mysqli_query($mysqli, $entityQ);
+echo mysqli_error($mysqli);
+
+// Get the transactions table
+//$transQ = "select * from transactions order by id DESC limit 5";
+$transQ = "select id, transactions.uid, transactions.type, data, previous, name from transactions LEFT JOIN (users) ON (users.uid=transactions.uid) order by id DESC limit 5";
+$transTable =  mysqli_query($mysqli, $transQ);
 echo mysqli_error($mysqli);
 
 // Reconstruct the JSON
@@ -75,9 +80,18 @@ while ($row = $scheduleTable->fetch_assoc()) {
   }
 }
 
+
+$transactions = array();
+while ($row = $transTable->fetch_assoc()) {
+  $row["data"] = json_decode($row["data"], true);
+  $row["previous"] = json_decode($row["previous"], true);
+  array_unshift($transactions, $row);
+}
+
 $output = array('schedule' => $schedule, 
 		'unscheduled' => $unscheduled,
-		'slots' => $slots);
+		'slots' => $slots,
+		'transactions' => $transactions);
 
 echo json_encode($output);
 

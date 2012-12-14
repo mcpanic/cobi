@@ -9,6 +9,7 @@ var schedule = null;
 var frontEndOnly = false;
 var scheduleSlots = null;
 var userData = new userInfo(null, "Anon", null, "rookie");
+var transactions = null;
 
 ////// Functions that change the data schedule 
 
@@ -17,7 +18,89 @@ var userData = new userInfo(null, "Anon", null, "rookie");
 function undo(){
     // TODO: assume a local transactions array of latest transactions..
     // undo last move
-    db.undo(userData.id);
+
+    // undo it in the json data
+    // alert the frontend of changes
+    if(transactions && transactions.length >0){
+	var type = transactions[transactions.length -1].type;
+	var previous = transactions[transactions.length -1].previous;
+
+	if(type == "lock"){
+	    toggleSlotLock(previous['date'], 
+			   previous['time'],
+			   previous['room']);
+	    $(document).trigger('lockChange', [previous['date'], previous['time'], previous['room']]);
+	}else if(type == "unschedule"){
+	    // schedule the session
+	    addSessionToSlot(allSessions[previous['id']],
+			     previous['date'], 
+			     previous['time'],
+			     previous['room']);
+	    delete unscheduled[previous['id']];
+	    $(document).trigger('slotChange', [previous['date'], previous['time'], previous['room']]);
+	    $(document).trigger('unscheduledChange');
+
+	}else if(type == "schedule"){
+	    removeSessionFromSlot(allSessions[previous['id']],
+				  previous['date'], 
+				  previous['time'],
+				  previous['room']);
+	    unscheduled[previous['id']] = allSessions[previous['id']];;
+
+	    $(document).trigger('slotChange', [previous['date'], previous['time'], previous['room']]);
+	    $(document).trigger('unscheduledChange');
+
+	}else if(type == "swap"){
+	    var s1date = previous['s1date'];
+	    var s1time = previous['s1time'];
+	    var s1room = previous['s1room'];
+	    var s2date = previous['s2date'];
+	    var s2time = previous['s2time'];
+	    var s2room = previous['s2room'];
+	    
+	    allSessions[previous['s1id']].date = s2date;
+	    allSessions[previous['s1id']].time = s2time;
+	    allSessions[previous['s1id']].room = s2room;
+	    allSessions[previous['s2id']].date = s1date;
+	    allSessions[previous['s2id']].time = s1time;
+	    allSessions[previous['s2id']].room = s1room;
+ 
+	    // change it's locations in the data structure
+	    schedule[s1date][s1time][s1room][previous['s2id']] = allSessions[previous['s2id']];
+	    delete schedule[s1date][s1time][s1room][previous['s1id']];
+	    
+	    schedule[s2date][s2time][s2room][previous['s1id']] = allSessions[previous['s1id']];
+	    delete schedule[s2date][s2time][s2room][previous['s2id']];
+
+	    var s1date = previous['s1date'];
+	    var s1time = previous['s1time'];
+	    var s1room = previous['s1room'];
+	    var s2date = previous['s2date'];
+	    var s2time = previous['s2time'];
+	    var s2room = previous['s2room'];
+	    
+	    $(document).trigger('slotChange', [s1date, s1time, s1room]);
+	    $(document).trigger('slotChange', [s2date, s2time, s2room]);
+
+
+	}else if(type == "move"){
+	    removeSessionFromSlot(allSessions[previous['id']], previous['sdate'], previous['stime'], previous['sroom']);
+	    addSessionToSlot(allSessions[previous['id']], previous['tdate'], previous['ttime'], previous['troom']);
+
+	    $(document).trigger('slotChange', [previous['sdate'], previous['stime'], previous['sroom']]);
+	    $(document).trigger('slotChange', [previous['tdate'], previous['ttime'], previous['troom']]);
+	}
+	
+		    
+	// get rid of last transaction
+	transactions.pop();
+
+	// TODO: should really check this first before 
+	// allowing undo in frontend 
+
+	// undo it on the backend
+	db.undo(userData.id);
+    }
 }
 
 function lockSlotsAtDayTime(day, time){
@@ -240,7 +323,8 @@ function initAfterScheduleLoads(m){
     schedule = m['schedule'];
     unscheduled = m['unscheduled'];
     scheduleSlots = m['slots'];
-    
+    transactions = m['transactions'];
+
     allRooms = getAllRooms();
     allSessions = getAllSessions();
     attachPersonas();  // loads personas from a file into schedule JSON
@@ -254,7 +338,6 @@ function initAfterScheduleLoads(m){
     if(!frontEndOnly){
 	db.refresh();
     }
-    
     $(document).trigger('fullyLoaded');
 }
 
@@ -362,7 +445,7 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverSlots){
 	}
 
 	// trigger a change in unscheduled data
-	$("body").trigger('unscheduledChange');
+	$(document).trigger('unscheduledChange');
     }
     
     return { isConsistent: consistent,

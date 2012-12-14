@@ -78,6 +78,19 @@ function recordTransaction($uid, $type, $data, $previous, $mysqli){
   $trans = "INSERT into transactions (uid, type, data, previous) VALUES ('$uid', '$type', '$data', '$previous')";
   mysqli_query($mysqli, $trans); 
   echo mysqli_error($mysqli); 
+  
+  $query = "select id, transactions.uid, transactions.type, data, previous, name from transactions LEFT JOIN (users) ON (users.uid=transactions.uid) order by id DESC limit 1";
+  //  $query = "select * from transactions order by id DESC limit 1";
+  $result = mysqli_query($mysqli, $query);  
+  echo mysqli_error($mysqli); 
+  
+  // return the transaction record
+  $row = $result->fetch_assoc();
+  if($row != null){
+    $row["data"] = json_decode($row["data"], true);
+    $row["previous"] = json_decode($row["previous"], true);
+    echo json_encode($row);
+  }
 }
 
 function updateLock($lock, $date, $time, $room, $mysqli){

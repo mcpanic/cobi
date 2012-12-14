@@ -17,6 +17,7 @@ DB.prototype.refresh = function(){
 	setTimeout(function(){
 		$.ajax({    url: "./php/loadDBtoJSONCompact.php",
 			    success: function(m){
+			    
 			    var serverSchedule = m['schedule'];
 			    var serverUnscheduled = m['unscheduled'];
 			    var serverSlots = m['slots'];
@@ -90,9 +91,9 @@ DB.prototype.undo = function(uid){
 		if(m == null){
 		    //alert("You do not have undo privileges");
 		}else{
+		    
 		    // should return something like 
 		    // checkConsistency...
-		    
 		}
  	    },
 	    error : function(m){
@@ -116,10 +117,10 @@ DB.prototype.toggleSlotLock = function(date, time, room, lock, uid){
 		    }, 
 		url: "./php/changeSchedule.php",
 		success: function(m){
-		//		alert(JSON.stringify(m));
+		transactions.push(m);
  	    },
 		error : function(m){
-		alert(JSON.stringify(m));
+		alert("lock error: " + JSON.stringify(m));
 	    },
 		dataType: "json"
 		});
@@ -138,7 +139,7 @@ DB.prototype.toggleSlotLock = function(date, time, room, lock, uid){
 	    }, 
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
-		
+		transactions.push(m);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
@@ -159,6 +160,7 @@ DB.prototype.scheduleSession = function(id, date, time, room, uid){
 		    uid: uid}, 
 		url: "./php/changeSchedule.php",
 		success: function(m){		
+		transactions.push(m);
  	    },
 		error : function(m){
 		alert(JSON.stringify(m));
@@ -182,6 +184,7 @@ DB.prototype.moveSession = function(id, date, time, room, tdate, ttime, troom, u
 		    uid: uid}, 
 	    url: "./php/changeSchedule.php",
 	    success: function(m){		
+		transactions.push(m);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
@@ -210,7 +213,8 @@ DB.prototype.swapSession = function(s1id, s1date, s1time, s1room,
 	    }, 
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
-		
+
+		transactions.push(m);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
