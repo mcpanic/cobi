@@ -21,10 +21,13 @@ DB.prototype.refresh = function(){
 			    var serverSchedule = m['schedule'];
 			    var serverUnscheduled = m['unscheduled'];
 			    var serverSlots = m['slots'];
+			    var serverTransactions = m['transactions'];
+			    
 			    if(schedule != null){
 				var consistencyReport = checkConsistent(serverSchedule, 
 									serverUnscheduled, 
-									serverSlots);
+									serverSlots, 
+									serverTransactions);
 				if(consistencyReport.isConsistent){
 				    console.log("still consistent");
 				}else{
@@ -37,7 +40,7 @@ DB.prototype.refresh = function(){
 			    //alert(JSON.stringify(m));
 			},
 			    dataType: "json"});
-	    }, 10000);
+	    }, 15000);
     })();
 };
 

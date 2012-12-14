@@ -386,7 +386,7 @@ $(document).bind("unscheduledChange", function(e){
 // change the internal data to update and bring everythign consistent
 //      
 //
-function checkConsistent(serverSchedule, serverUnscheduled, serverSlots){
+function checkConsistent(serverSchedule, serverUnscheduled, serverSlots, serverTransactions){
     // Compare schedule first
     // Assume same keys on day/time/room exist always, so any inconsistency is in content
 
@@ -395,6 +395,17 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverSlots){
 
     var consistent = true;
     
+    // check if there are new transactions
+    for(var i = 0; i < serverTransactions.length; i++){
+	if(parseInt(serverTransactions[i]['id']) > 
+	   parseInt(transactions[transactions.length -1]['id'])){
+	    consistent = false;
+	    transactions.push(serverTransactions[i]);
+	}
+    }
+
+    // TODO: inefficient version.. can just use the records
+    // handle differences below
     for(var day in schedule){
 	for(var time in schedule[day]){
 	    for(var room in schedule[day][time]){
