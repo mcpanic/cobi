@@ -37,6 +37,7 @@ while ($row = $entityTable->fetch_assoc()) {
 //echo json_encode($entity);
 
 $unscheduled = array();
+
 while ($row = $sessionTable->fetch_assoc()) {
   $row['chairs'] = json_decode($row['chairs']);
   $row['coreCommunities'] = json_decode($row['coreCommunities']);
@@ -66,6 +67,7 @@ while ($row = $sessionTable->fetch_assoc()) {
 }
 
 while ($row = $scheduleTable->fetch_assoc()) {
+  $slots[$row['date']][$row['time']][$row['room']]['locked'] = (bool) $row['locked'];
   if ($row['id'] == ""){
     $schedule[$row['date']][$row['time']][$row['room']] = (object) null;
   }else{
@@ -74,7 +76,8 @@ while ($row = $scheduleTable->fetch_assoc()) {
 }
 
 $output = array('schedule' => $schedule, 
-		'unscheduled' => $unscheduled);
+		'unscheduled' => $unscheduled,
+		'slots' => $slots);
 
 echo json_encode($output);
 

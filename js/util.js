@@ -51,6 +51,24 @@
 		return cell.attr("id").substr(8);
 	}
 
+	// Check if this cell has any special cell status class applied, which change the background color of the cell. (selected, recommended, ...)
+	function isSpecialCell($item){
+		if ($item.hasClass("selected") || $item.hasClass("swap-selected") || $item.hasClass("recommended"))
+			return true;
+		else
+			return false;
+	}
+
+	// Locate an empty session by its date, time, and room
+	// Returns null when there is no such cell that's empty.
+	function getCellByDateTimeRoom(cellDate, cellTime, cellRoom){
+		var cell = null;
+		$("#program .empty").each(function(){
+		    if ($(this).data("date") === cellDate && $(this).data("time") === cellTime  && $(this).data("room") === cellRoom)
+		        cell = $(this);
+		});
+		return cell;
+	}
 
 	// Add an alert message at the very top of the page
 	function displayAlert(message){

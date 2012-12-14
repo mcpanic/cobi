@@ -6,33 +6,95 @@ var conflictsByTime = null;
 var conflictsBySession = null;
 var unscheduled = null;
 var schedule = null;
-var frontEndOnly = true;
+var frontEndOnly = false;
+var scheduleSlots = null;
+var userData = new userInfo(null, "Anon", null, "rookie");
 
 ////// Functions that change the data schedule 
+
+/// TODO: don't allow actually changing slots that are locked.
+
+function undo(){
+    // TODO: assume a local transactions array of latest transactions..
+    // undo last move
+    db.undo(userData.id);
+}
+
+function lockSlotsAtDayTime(day, time){
+    for(var room in scheduleSlots[day][time]){
+	lockSlot(day, time, room);
+    }
+}
+
+function unlockSlotsAtDayTime(day, time){
+    for(var room in scheduleSlots[day][time]){
+	unlockSlot(day, time, room);
+    }
+}
+
+function lockSlotsInRoom(r){
+    for(var day in scheduleSlots){
+	for(var time in scheduleSlots[day]){
+	    for(var room in scheduleSlots[day][time]){
+		if(room == r){
+		    lockSlot(day, time, r);
+		}
+	    }
+	}
+    }
+}
+
+function unlockSlotsInRoom(r){
+    for(var day in scheduleSlots){
+	for(var time in scheduleSlots[day]){
+	    for(var room in scheduleSlots[day][time]){
+		if(room == r){
+		    unlockSlot(day, time, r);
+		}
+	    }
+	}
+    }
+}
+
+function toggleSlotLock(day, time, room){
+    scheduleSlots[day][time][room]['locked'] = !scheduleSlots[day][time][room]['locked'];
+}
+
+function lockSlot(day, time, room){
+    scheduleSlots[day][time][room]['locked'] = true;
+    if(!frontEndOnly){
+	db.toggleSlotLock(day, time, room, true, userData.id);
+    }
+}
+
+function unlockSlot(day, time, room){
+    scheduleSlots[day][time][room]['locked'] = false;
+    if(!frontEndOnly){
+	db.toggleSlotLock(day, time, room, false, userData.id);
+    }
+}
+
 
 function removeSessionFromSlot(s, date, time, room){
     delete schedule[date][time][room][s.id];
     allSessions[s.id]['date'] = "";
     allSessions[s.id]['time'] = "";
     allSessions[s.id]['room'] = "";
-    allSessions[s.id]['endTime'] = "";
 }
 
 function clearSlot(date, time, room){
-    
     for(s in schedule[date][time][room]){
 	//	console.log("Clearing: " + s);
 	removeSessionFromSlot(allSessions[s], date, time, room);
     }
 }
 
-function addSessionToSlot(s, date, time, room, endTime){
+function addSessionToSlot(s, date, time, room){
     schedule[date][time][room][s.id] = s;
     s['date'] = date;
     s['time'] = time;
     s['room'] = room;
     // todo doesn't deal with endTime
-    s['endTime'] = endTime;
 }
 
 // Unschedule a session
@@ -42,6 +104,11 @@ function unscheduleSession(s){
     var stime = s.time;
     var sroom = s.room;
 
+    if(scheduleSlots[sdate][stime][sroom]['locked']){
+	$(document).trigger('slotLocked', [sdate, stime, sroom]);
+	return;
+    }
+
     // remove session from slot
     removeSessionFromSlot(s, sdate, stime, sroom);
 
@@ -50,25 +117,40 @@ function unscheduleSession(s){
 
     // unschedule on server
     if(!frontEndOnly){
-	db.unscheduleSession(s.id, sdate, stime, sroom);
+	db.unscheduleSession(s.id, sdate, stime, sroom, userData.id);
     }
 }
 
 
 // schedule a session
-function scheduleSession(s, sdate, stime, sroom, sendTime){
+function scheduleSession(s, sdate, stime, sroom){
+    if(scheduleSlots[sdate][stime][sroom]['locked']){
+	$(document).trigger('slotLocked', [sdate, stime, sroom]);
+	return;
+    }
+
+    var isUnscheduled = false;
     // remove session from unscheduled
     if(s.id in unscheduled){
 	delete unscheduled[s.id];
+	isUnscheduled = true;
     }
-
-    // schedule on frontend
-    addSessionToSlot(s, sdate, stime, sroom, sendTime);
-
+    
     // schedule on server
     if(!frontEndOnly){
-	db.scheduleSession(s.id, sdate, stime, sroom, s.endTime);
+	if(isUnscheduled){
+	    db.scheduleSession(s.id, sdate, stime, sroom, userData.id);
+	}else{
+	    db.moveSession(s.id, s.date, s.time, s.room, 
+		    sdate, stime, sroom, userData.id); 
+	}
     }
+    
+    // schedule on frontend
+    if(!isUnscheduled){
+	removeSessionFromSlot(s, s.date, s.time, s.room)
+    }
+    addSessionToSlot(s, sdate, stime, sroom);
 }
 
 
@@ -81,6 +163,17 @@ function swapSessions(s1, s2){
     var s2time = s2.time;
     var s2room = s2.room;
     
+    if(scheduleSlots[s1date][s1time][s1room]['locked']){
+	$(document).trigger('slotLocked', [s1date, s1time, s1room]);
+	return;
+    }
+
+    if(scheduleSlots[s2date][s2time][s2room]['locked']){
+	$(document).trigger('slotLocked', [s2date, s2time, s2room]);
+	return;
+    }
+
+
     s1.date = s2date;
     s1.time = s2time;
     s1.room = s2room;
@@ -98,7 +191,7 @@ function swapSessions(s1, s2){
     // perform swap on server
     if(!frontEndOnly){
 	db.swapSession(s1.id, s1date, s1time, s1room,
-		       s2.id, s2date, s2time, s2room);
+		       s2.id, s2date, s2time, s2room,  userData.id);
     }
 }
 ///////end functions for interacting with schedule////////////
@@ -136,61 +229,81 @@ if(!Array.prototype.indexOf) {
     };
 }
 
-// Populates all of the above variables and attaches personas
 function initialize(){
+    loadUser();
     db.loadSchedule();
+}
+
+// Populates all of the above variables and attaches personas
+// once the schedule is loaded from server 
+function initAfterScheduleLoads(m){
+    schedule = m['schedule'];
+    unscheduled = m['unscheduled'];
+    scheduleSlots = m['slots'];
+    
     allRooms = getAllRooms();
     allSessions = getAllSessions();
     attachPersonas();  // loads personas from a file into schedule JSON
-
+    
     initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
     initializePersonaConflictsAmongSessions(); // this can be loaded from a file
-  
+    
     getAllConflicts();
-
+    
     // Traditional polling for now...
     if(!frontEndOnly){
-	(function poll(){
-	    setTimeout(function(){
-		    $.ajax({    url: "./php/loadDBtoJSONCompact.php",
-				success: function(m){
-				var serverSchedule = m['schedule'];
-				var serverUnscheduled = m['unscheduled'];
-				if(schedule != null){
-				    var consistencyReport = checkConsistent(serverSchedule, serverUnscheduled);
-				    if(consistencyReport.isConsistent){
-					console.log("still consistent");
-				    }else{
-					//				    alert("there is an inconsistency in data!");
-				    }
-				}
-				poll();
-			    }, 
-				error : function(m){
-				alert(JSON.stringify(m));
-			    },
-				dataType: "json"});
-		    
-		}, 10000);
-	})();
+	db.refresh();
     }
-    // $(Schedule).trigger("inconsistent")...
+    
+    $(document).trigger('fullyLoaded');
+}
+
+function loadUser(){
+    var params = getURLParams();
+    if(params.uid){
+	db.loadUser(params.uid);
+    }
+}
+
+function getURLParams() {
+    var params = {}
+    var m = window.location.href.match(/[\\?&]([^=]+)=([^&#]*)/g)
+	if (m) {
+	    for (var i = 0; i < m.length; i++) {
+		var a = m[i].match(/.([^=]+)=(.*)/)
+		params[unescapeURL(a[1])] = unescapeURL(a[2])
+	    }
+	}
+    return params;
+}
+
+function unescapeURL(s) {
+    return decodeURIComponent(s.replace(/\+/g, "%20"));
 }
 
 
-// $(document).bind("slotChange", function(e, day, time, room){
-// 	console.log("Data changed in " + day + " ," + time + ", " + room);
-//     });
 
-// $(document).bind("unscheduledChange", function(e){
-// 	console.log("The unscheduled data has changed.");
-//     });
+$(document).bind("slotLocked", function(e, day, time, room){
+	console.log("This slot is locked: " + day + " ," + time + ", " + room);
+    });
+
+$(document).bind("slotChange", function(e, day, time, room){
+	console.log("Data changed in " + day + " ," + time + ", " + room);
+    });
+
+$(document).bind("lockChange", function(e, day, time, room){
+	console.log("Slot lock changed in " + day + " ," + time + ", " + room);
+    });
+
+$(document).bind("unscheduledChange", function(e){
+	console.log("The unscheduled data has changed.");
+    });
 
 // record where inconsistencies occur
 // change the internal data to update and bring everythign consistent
 //      
 //
-function checkConsistent(serverSchedule, serverUnscheduled){
+function checkConsistent(serverSchedule, serverUnscheduled, serverSlots){
     // Compare schedule first
     // Assume same keys on day/time/room exist always, so any inconsistency is in content
 
@@ -217,6 +330,20 @@ function checkConsistent(serverSchedule, serverUnscheduled){
 		}else{
 		    // get rid of key where same
 		    delete serverSchedule[day][time][room];
+		}
+	    }
+	}
+    }
+
+    // Check for changes to locks
+    for(var day in scheduleSlots){
+	for(var time in scheduleSlots[day]){
+	    for(var room in scheduleSlots[day][time]){
+		if(scheduleSlots[day][time][room]['locked'] !=
+		   serverSlots[day][time][room]['locked']){
+		    toggleSlotLock(day, time, room);
+		    // trigger the change here
+		    $(document).trigger('lockChange', [day, time, room]);
 		}
 	    }
 	}
@@ -515,12 +642,6 @@ function proposeSlotAndSwap(s){
 	    swapValue: swapValue};
 }
 
-function slot(day, time, room, session){
-    this.day = day;
-    this.time = time;
-    this.room = room;
-    this.session = session;
-}
 
 // Computes a score for every possible unschedule session that can move into slot
 // TODO: can also think about moving scheduled session here...
@@ -545,7 +666,7 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
 	    }
 	}
 	
-	moveValue.push(new swapDetails(new slot(allSessions[s].date, allSessions[s].time, allSessions[s].room, s),
+	moveValue.push(new swapDetails(new slot(null, null, null, s),
 				       -conflictsWithSession[s].length,
 				       null,
 				       conflictsWithSession[s],
@@ -555,14 +676,6 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
     return moveValue;
 }
 
-function swapDetails(target, value, addedSrc, addedDest, removedSrc, removedDest){
-    this.target = target;
-    this.value = value;
-    this.addedSrc = addedSrc;
-    this.addedDest = addedDest;
-    this.removedSrc = removedSrc;
-    this.removedDest = removedDest;
-}
 
 function calculateConflictsCausedBy(s){
 
@@ -770,6 +883,28 @@ function getSessionPersonas(s){
     return s["personas"];
 }
 
+function userInfo(id, name, email, type){
+    this.id = id;
+    this.name = name;
+    this.email = email;
+    this.type = type;
+}
+
+function swapDetails(target, value, addedSrc, addedDest, removedSrc, removedDest){
+    this.target = target;
+    this.value = value;
+    this.addedSrc = addedSrc;
+    this.addedDest = addedDest;
+    this.removedSrc = removedSrc;
+    this.removedDest = removedDest;
+}
+
+function slot(date, time, room, session){
+    this.date = date;
+    this.time = time;
+    this.room = room;
+    this.session = session;
+}
 
 function conflictObject(entities, type, conflict, description){
     this.entities = entities;

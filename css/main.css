@@ -3,188 +3,230 @@
 /* ==========================================================================
    Generic styles
    ========================================================================== */
-            body {
-                font-size: 12px;
-            }
+body {
+    font-size: 12px;
+}
 
 
-            .left-sidebar, .main {
-                margin-left: 10px;
-            }
+.left-sidebar, .main {
+    margin-left: 10px;
+}
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   speak for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     3000px; /* 100%; */
+    width:      3000px; /* 100%; */
+    background: rgba( 255, 255, 255, .8 ) 
+                url('../img/spinner.gif') 
+                30% 15%
+                no-repeat;
+                /* 50% 50% */
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
 
 /* ==========================================================================
    Left Sidebar with options
    ========================================================================== */
 
-            .left-sidebar {
-                /*position: fixed;*/
-            }
+.left-sidebar {
+    /*position: fixed;*/
+}
 
-            .left-sidebar h4 {
-                margin: 0px;
-            }
+.left-sidebar h4 {
+    margin: 0px;
+}
 
-            .left-sidebar li {
-                line-height: 18px;               
-            }
+.left-sidebar li {
+    line-height: 18px;               
+}
 
-            .view-option-active {
-                font-weight: bold;
-                background-color: #dddddd;
-            }
+.view-option-active {
+    font-weight: bold;
+    background-color: #dddddd;
+}
 
 /* ==========================================================================
-   Main program
-   ========================================================================== */
+    Main program
+========================================================================== */
 
-            #program {
-                border-color: #bbbbbb;
-            }
+#program {
+    border-color: #bbbbbb;
+}
 
-            #program .cell {
-                font-size: 10px;
-                padding: 3px;
-                line-height: 12px;
-                border-color: #bbbbbb;
-            }
+#program .cell {
+    font-size: 10px;
+    padding: 3px;
+    line-height: 12px;
+    border-color: #bbbbbb;
+}
 
-            #program .slot, div#unscheduled .slot {
-                font-size: 10px;
-                line-height: 12px;
-            }
+#program .slot, div#unscheduled .slot {
+    font-size: 10px;
+    line-height: 12px;
+}
 
-            #program .slot:not(.unavailable), div#unscheduled .slot:not(.unavailable) {
-                cursor: pointer;
-            }
+#program .slot:not(.unavailable), div#unscheduled .slot:not(.unavailable) {
+    cursor: pointer;
+}
 
 
-            #program .slot:hover, div#unscheduled .slot:hover {
-                outline: 1px solid #333333;
-            }
+#program .slot:hover, div#unscheduled .slot:hover {
+    outline: 1px solid #333333;
+}
 
-            #program .cell .title, div#unscheduled .cell .title {
-                width: 48px;
-                height: 38px;                
-                overflow-x: hidden;
-                overflow-y: hidden;
-            }
+#program .cell .title, div#unscheduled .cell .title {
+    width: 48px;
+    height: 38px;                
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 
-            #program .cell .display, div#unscheduled .cell .display {
-                width: 48px;
-                height: 30px;
-                border-top: solid 1px #dddddd;
-                overflow-x: hidden;
-                overflow-y: hidden;
-                color: #aaaaaa;
-            }
+#program .cell .display, div#unscheduled .cell .display {
+    width: 48px;
+    height: 30px;
+    border-top: solid 1px #dddddd;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: #aaaaaa;
+}
 
-            #program .cell .display .icon, div#unscheduled .cell .display .icon {
-                width: 24px;
-            }
+#program .cell .display .icon, div#unscheduled .cell .display .icon {
+    width: 24px;
+}
 
-            #program .header-row, #program .header-col {
-                /*position: fixed;*/
-                font-weight: bold;
-            }
+#program .header-row, #program .header-col {
+    /*position: fixed;*/
+    font-weight: bold;
+}
 
-            #program .selected, div#unscheduled .selected {
-                background: #ffb7b7;
-            }
+#program .selected, div#unscheduled .selected {
+    background: yellow;
+    /*#ffb7b7;*/
+}
 
-            #program .swap-selected, div#unscheduled .swap-selected {
-                background: yellow;
-            }
+#program .swap-selected, div#unscheduled .swap-selected {
+    background: yellow;
+}
 
-            #program .unavailable {
-                background: #eeeeee;
-            }
+#program .unavailable {
+    background: #eeeeee;
+}
 
-            #program .empty {
-                text-align: center;
-                vertical-align: middle;
-                /*opacity: 0.5;*/
-            }
+#program .empty {
+    text-align: center;
+    vertical-align: middle;
+    /*opacity: 0.5;*/
+}
 /*
-            #program .empty:hover {
-                opacity: 1;
-            }
+#program .empty:hover {
+    opacity: 1;
+}
 */
-            #program .proposed-swap, div#unscheduled .proposed-swap {
-                background: #FF8C00;
-                cursor: pointer;
-            }
+#program .recommended, div#unscheduled .recommended {
+    background: #fd8d3c;
+}
 
-            #program .highlight, div#unscheduled .highlight {
-            	outline: 2px solid black;
-            }
+#program .proposed-swap, div#unscheduled .proposed-swap {
+    cursor: pointer;
+}
+
+#program .highlight, div#unscheduled .highlight {
+	/*outline: 2px solid black;*/
+}
 
 
 /* ==========================================================================
    Unscheduled workspace
    ========================================================================== */
 
-            div#unscheduled {
-                border: solid 1px #dddddd;
-                height: 71px;
-                margin-bottom: 15px;
-            }
+div#unscheduled {
+    border: solid 1px #dddddd;
+    height: 71px;
+    margin-bottom: 15px;
+}
 
-            div#unscheduled .slot {
-                border: solid 1px #dddddd;
-            }
+div#unscheduled .slot {
+    border: solid 1px #dddddd;
+}
+
 
 /* ==========================================================================
-   Interface snippets
+    Status Bar
    ========================================================================== */
 
-            /* apply alternating gray in the paper listing inside a popover */
-            .list-submissions li {
-                padding: 5px;
-            }
-
-            .list-submissions li:nth-child(even) {
-                background: #dddddd;
-            }
-
-            /* color-coded rectangle in the legend */
-            .palette {
-                padding-left: 10px;
-                margin-left: 3px;
-                margin-right: 2px;
-                cursor: pointer;
-            }
-
-            /* color-coded rectangle in the legend */
-            .conflict-display {
-                padding-left: 5px;
-                margin-left: 1px;
-                margin-right: 1px;
-                cursor: pointer;
-            }
-
-            .popover {
-                width: 400px;
-            }
-            .popover-inner {
-                width: 400px;
-                font-size: 11px;
-            }
-
-            .popover-inner li {
-                line-height: 12px;
-            }
+#swap-review-cancel-link {
+    margin-top: 0px;
+}
 
 
+/* ==========================================================================
+    Interface misc
+   ========================================================================== */
 
+/* apply alternating gray in the paper listing inside a popover */
+.list-submissions li {
+    padding: 5px;
+}
 
+.list-submissions li:nth-child(even) {
+    background: #dddddd;
+}
 
+/* color-coded rectangle in the legend */
+.palette {
+    padding-left: 10px;
+    margin-left: 3px;
+    margin-right: 2px;
+    cursor: pointer;
+}
 
+/* color-coded rectangle in the legend */
+.conflict-display {
+    padding-left: 4px;
+    margin-left: 1px;
+    margin-right: 1px;
+    cursor: pointer;
+}
 
+.locked {
+    background: url('../img/lock.png') 
+                97% 3%
+                no-repeat;
+    background-size: 10px 14px;
+}
 
+.popover {
+    width: 400px;
+}
 
+.popover-inner {
+    width: 400px;
+    font-size: 11px;
+}
 
-
-
+.popover-inner li {
+    line-height: 12px;
+}
 
 
 

@@ -13,7 +13,7 @@ foreach ($alldates as $time => $alltimes) {
   foreach ($alltimes as $room => $allrooms) {
     foreach ($allrooms as $id => $data) {
       // Form the schedule table
-      $query = "INSERT INTO schedule (date, time, room, id) VALUES ('$date', '$time', '$room', '$id')";
+      $query = "INSERT INTO schedule (date, time, room, id, locked) VALUES ('$date', '$time', '$room', '$id', 0)";
       mysqli_query($mysqli, $query);
       echo  mysqli_error($mysqli);
 

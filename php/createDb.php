@@ -4,11 +4,23 @@ include "settings.php";
 mysql_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD);
 @mysql_select_db(COBI_MYSQL_PASSWORD) or die( "Unable to select database");
 
+				      
+
+// Create user table
+//  uid, name, email, type
+$userQ = "CREATE TABLE users (uid varchar(32), name varchar(128), email varchar(128), type varchar(32))";
+ mysql_query($userQ);
+  echo mysql_error();
+
+// Create transactions table
+$transQ = "CREATE TABLE transactions (id MEDIUMINT NOT NULL AUTO_INCREMENT, uid varchar(3), type varchar(32), data text, previous text, PRIMARY KEY (id))"; 				      
+				      mysql_query($transQ)
+echo mysql_error();
 
 // Create Schedule Table
 // date, time, room, sessionID
 
-$schedQ = "CREATE TABLE schedule (date varchar(128), time varchar(128), room varchar(128), id varchar(32))";
+$schedQ = "CREATE TABLE schedule (date varchar(128), time varchar(128), room varchar(128), id varchar(32), locked tinyint(1))";
 mysql_query($schedQ);
 echo  mysql_error();
 

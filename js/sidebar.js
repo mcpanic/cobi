@@ -41,7 +41,9 @@ var Sidebar = function() {
               $(this).parent().addClass("view-option-active");
           var selected_constraint = $(this).parent().data("type");
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-               $(item).css("background-color", "white");
+               if (isSpecialCell($(item)))
+                    return;
+               $(item).css("background-color", "transparent");
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
                var color = "#FFFFFF"; // default white
@@ -138,7 +140,9 @@ var Sidebar = function() {
               $(this).parent().addClass("view-option-active");
           var selected_persona = $(this).parent().data("type");
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-               $(item).css("background-color", "white");
+               if (isSpecialCell($(item)))
+                    return;
+               $(item).css("background-color", "transparent");
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
                var color = "#FFFFFF"; // default white

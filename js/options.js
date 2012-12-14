@@ -2,7 +2,7 @@ var constraints_list = [
 	{
 		"id": "1",
 		"label": "no simultaneous sessions for an author",
-		"color": "#ff7f0e",
+		"color": "#a55194",
 		"type": "authorInTwoSessions" 
 	},
 	{
