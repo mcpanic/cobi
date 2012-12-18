@@ -5,10 +5,18 @@ include "settings.php";
 
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
+$uid = mysqli_real_escape_string($mysqli, $_POST['uid']);
+$clientId = mysqli_real_escape_string($mysqli, $_POST['transactionId']);
+
 // Get the transactions table
-$transQ = "select id, transactions.uid, transactions.type, data, previous, name from transactions LEFT JOIN (users) ON (users.uid=transactions.uid) order by id DESC limit 5";
+$transQ = "select id, transactions.uid, transactions.type, data, previous, name from transactions LEFT JOIN (users) ON (users.uid=transactions.uid) where id > $clientId order by id DESC";
 $transTable =  mysqli_query($mysqli, $transQ);
 echo mysqli_error($mysqli);
+
+// No updates
+if(mysqli_num_rows($transTable) == 0){
+  exit();
+}
 
 // Get the schedule table
 $scheduleQ = "select * from schedule"; 
