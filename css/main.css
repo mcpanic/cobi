@@ -71,9 +71,9 @@ body.loading .modal {
 }
 
 .sidebar-fixed {
-    position:fixed;
-    width:150px;
-    height: 100%;
+    position: fixed;
+    width: 150px;
+    height: 80%;
     overflow-y: scroll;    
 }
 

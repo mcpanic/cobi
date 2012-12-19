@@ -13,6 +13,7 @@ var Sidebar = function() {
           $("#list-constraints").on("click", "li a", clickConstraintsHandler);          
           $("#list-view-options").on("click", "li a", clickViewOptionsHandler);
           $("#list-personas").on("click", "li a", clickPersonasHandler);
+          $("#list-personas").on("click", ".myCheckbox", clickCheckboxPersonasHandler);
           $("#list-history").on("click", ".history-link", clickHistoryHandler);
      }
 
@@ -130,16 +131,19 @@ var Sidebar = function() {
           return false;     
      }
 
+     function clickCheckboxPersonasHandler(){
+          $(this).parent().find("a").trigger("click");
+     }
      
-     function clickPersonasHandler(){
+     function clickPersonasHandler(event){
           var $this = $(this);
           if ($this.parent().hasClass("view-option-active")) {
                $this.parent().removeClass("view-option-active");
-               $this.find(".myCheckbox").prop("checked", false);
+               $this.parent().find(".myCheckbox").prop("checked", false);
           } else {
-              $this.parent().addClass("view-option-active");
-              $this.find(".myCheckbox").prop("checked", true);
-         }
+               $this.parent().addClass("view-option-active");
+               $this.parent().find(".myCheckbox").prop("checked", true);
+          }
           
           // get current selections. allowing multiple selections. 
           var selected_personas = [];
@@ -225,7 +229,7 @@ var Sidebar = function() {
           //var color_index = 0;
      	$.each(personaHash, function(index, persona){
      		var item = document.createElement("li");
-      		$(item).data("type", index).html("<a href='#'><input type='checkbox' class='myCheckbox'> " + persona + "</a>");
+      		$(item).data("type", index).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" + persona + "</a>");
      		$("#list-personas").append($(item));    		
      		//$(item).find("span.palette").css("background-color", color_palette_1[5]);
                //color_index++;
