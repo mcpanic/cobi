@@ -97,18 +97,23 @@ var ViewMode = function() {
           placement: "bottom",
           trigger: "manual",
            title:function(){
-            if ($(this).hasClass("empty"))
-                return "Empty slot";
-            else
-                return session.title;
+                if ($(this).hasClass("empty"))
+                    return "Empty slot " 
+                        + " <a class='close popover-close' data-dismiss='clickover' " 
+                        + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
+                        + "' href='#''>&times;</a>";
+                else
+                    return session.title                         
+                        + "<a class='close popover-close' data-dismiss='clickover' data-session-id='" + id 
+                        + "' href='#''>&times;</a>";            
            },
            content:function(){
                 if ($(this).hasClass("empty")){
-                     return getSessionDetail("empty", new slot($(this).data("date"), $(this).data("time"), $(this).data("room"), null));
+                    return getSessionDetail("empty", new slot($(this).data("date"), $(this).data("time"), $(this).data("room"), null));
                 } else if ($(this).hasClass("unscheduled")){
-                     return getSessionDetail("unscheduled", session);
+                    return getSessionDetail("unscheduled", session);
                 } else{
-                     return $(this).find(".detail").html();
+                    return $(this).find(".detail").html();
                 }
            }
         });

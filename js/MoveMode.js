@@ -97,9 +97,14 @@ var MoveMode = function() {
             trigger: "manual",
             title:function(){
                 if ($(this).hasClass("empty"))
-                    return "Empty slot";
+                    return "Empty slot " 
+                        + " <a class='close popover-close' data-dismiss='clickover' " 
+                        + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
+                        + "' href='#''>&times;</a>";
                 else
-                    return session.title;
+                    return session.title                         
+                        + "<a class='close popover-close' data-dismiss='clickover' data-session-id='" + id 
+                        + "' href='#''>&times;</a>";
             },
             content:function(){
                 //var id = $(this).data("session-id");
@@ -337,7 +342,7 @@ var MoveMode = function() {
                // empty candidate
                if (swapValues[i].target.session === null){
                     $cell = findCellByDateTimeRoom(swapValues[i].target.date, swapValues[i].target.time, swapValues[i].target.room);
-                    $cell.addClass("proposed-swap").data("title", "Empty slot");
+                    $cell.addClass("proposed-swap"); //.data("title", "Empty slot");
 
                     swapContent += "<li data-rank-order='" + i + "' data-date='"+swapValues[i].target.date+"' data-time='"+swapValues[i].target.time+"' data-room='"+swapValues[i].target.room+"'>" 
                     + "<a href='#' class='swap-preview-link'>[preview]</a> "
@@ -348,7 +353,7 @@ var MoveMode = function() {
                // non-empty candidate
                } else {
                     $cell = findCellByID(swapValues[i].target.session);
-                    $cell.addClass("proposed-swap").data("title", allSessions[swapValues[i].target.session].title);
+                    $cell.addClass("proposed-swap"); //.data("title", allSessions[swapValues[i].target.session].title);
 
                     swapContent += "<li data-session-id='" + swapValues[i].target.session + "' data-rank-order='" + i + "'>" //+ swapValues[i] 
                     + "<a href='#' class='swap-preview-link'>[preview]</a> "

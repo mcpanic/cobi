@@ -1,4 +1,16 @@
 
+    // Popover close button interaction
+    $("body").on("click", ".popover-close", function(){
+        console.log("popover-close", $(this).data("session-id"));
+        var $cell = null;
+        if (typeof $(this).data("session-id") === "undefined"){
+            $cell = findCellByDateTimeRoom($(this).data("date"), $(this).data("time"), $(this).data("room"));
+        } else {
+            $cell = findCellByID($(this).data("session-id"));
+        }
+        $cell.trigger("click");
+//        $cell.popover("hide");
+    });
 
     // Locate an empty session by its date, time, and room
     // Returns null when there is no such cell that's empty.
