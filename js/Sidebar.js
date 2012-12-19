@@ -181,8 +181,10 @@ var Sidebar = function() {
           $(".highlight").removeClass("highlight");
           
           var cell = null;
-          if (typeof id === "undefined")
-               cell = findCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));
+          if (typeof id === "undefined") {
+	      //               cell = findCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));
+	      cell = findCellByDateTimeRoom($(this).data("slot-date"), $(this).data("slot-time"), $(this).data("slot-room"));
+	  }
           else
                cell = findCellByID(id);
 
