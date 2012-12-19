@@ -3,7 +3,6 @@ var MoveMode = function() {
     var type = "";
 
     // Initialize the view mode 
-
     function initialize(moveType){
         isOn = true;
         type = moveType;
@@ -60,13 +59,16 @@ var MoveMode = function() {
 
     function slotClickHandler(){
         // detect if the currently selected item is selected again.
-        var $selection = $(this).hasClass("unscheduled")? $("#unscheduled .move-dst-selected"): $("#program .move-dst-selected");
+        //var $selection = $(this).hasClass("unscheduled")? $("#unscheduled .move-dst-selected"): $("#program .move-dst-selected");
         //var $otherSelection = $(this).hasClass("unscheduled")? $("#program .selected"): $("#unscheduled .selected");
 
 
         // only one popover at a time? this allows multiple selections possible
-        $selection.removeClass("move-dst-selected").popover("hide");
-        $(".move-dst-selected").removeClass("move-dst-selected").popover("hide");          
+        //$selection.removeClass("move-dst-selected").popover("hide");
+        //$(".move-dst-selected").removeClass("move-dst-selected").popover("hide");          
+
+        var $selection = $(".move-dst-selected");
+        $(".move-dst-selected").removeClass("move-dst-selected").popover("hide");   
 
         // if reselected, do nothing.
         if ($selection[0] == $(this)[0])
@@ -366,7 +368,7 @@ var MoveMode = function() {
 
           // For proposed slots, add a new popover
           $session.addClass("move-src-selected");
-          $session.popover("hide");
+          //$session.popover("hide");
 
           //renderProposedSwap(type);
 
@@ -434,7 +436,6 @@ var MoveMode = function() {
         getAllConflicts();
         // the frontend conflicts update: the row view of conflicts.
         updateConflicts();
-
         destroy();
         ViewMode.initialize();
     }
@@ -544,11 +545,10 @@ var MoveMode = function() {
         // TOOD: check all the other things the swapping mode has created and reset/undo them.
         
         $(".recommended").removeClass("recommended");
-        
-        $(".selected").popover("destroy").removeClass("selected");
-        $(".move-src-selected").popover("destroy").removeClass("move-src-selected");
-        $(".move-dst-selected").popover("destroy").removeClass("move-dst-selected");
-        $(".proposed-swap").popover("destroy").removeClass("proposed-swap");   
+        $(".selected").removeClass("selected");
+        $(".move-src-selected").removeClass("move-src-selected");
+        $(".move-dst-selected").removeClass("move-dst-selected");
+        $(".proposed-swap").removeClass("proposed-swap");   
         $(".highlight").removeClass("highlight");          
         //$("#statusbar .swap-preview-link").popover("destroy");
         $("body").off("click", ".slot", slotClickHandler);      

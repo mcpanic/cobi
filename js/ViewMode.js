@@ -71,17 +71,20 @@ var ViewMode = function() {
 
      // Event handler for clicking an individual session
     function slotClickHandler(){
+        console.log("VM.slotclick");
         // detect if the currently selected item is selected again.
-        var $selection = $(this).hasClass("unscheduled")? $("#unscheduled .selected"): $("#program .selected");
+        //var $selection = $(this).hasClass("unscheduled")? $("#unscheduled .selected"): $("#program .selected");
         //var $otherSelection = $(this).hasClass("unscheduled")? $("#program .selected"): $("#unscheduled .selected");
 
         // only one popover at a time? this allows multiple selections possible
-        $selection.removeClass("selected").popover("hide");
+        //$selection.removeClass("selected").popover("hide");
+        var $selection = $(".selected");
         $(".selected").removeClass("selected").popover("hide");          
 
         // if reselected, do nothing.
         if ($selection[0] == $(this)[0])
            return;
+        
         // do nothing for unavailable slots
         if ($(this).hasClass("unavailable"))
            return;
@@ -156,9 +159,9 @@ var ViewMode = function() {
     // Reset any change created in this view mode
     function destroy(){
         isOn = false;
-        $("body").off("click", ".popover .button-propose-swap", {type: "swap"}, proposeHandler);
-        $("body").off("click", ".popover .button-propose-unscheduled", {type: "unscheduled"}, proposeHandler);
-        $("body").off("click", ".popover .button-propose-empty", {type: "empty"}, proposeHandler);
+        $("body").off("click", ".popover .button-propose-swap", proposeHandler);
+        $("body").off("click", ".popover .button-propose-unscheduled", proposeHandler);
+        $("body").off("click", ".popover .button-propose-empty", proposeHandler);
 
         $("body").off("click", ".popover .button-unschedule", unscheduleHandler);
         $("body").off("click", ".slot", slotClickHandler);  

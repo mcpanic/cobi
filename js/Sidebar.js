@@ -43,10 +43,10 @@ var Sidebar = function() {
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                if (isSpecialCell($(item)))
                     return;
-               $(item).css("background-color", "transparent");
+               $(item).css("background-color", "");
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
-               var color = "#FFFFFF"; // default white
+               var color = ""; // default white
                if (toggle)
                     color = $this.find(".palette").css("background-color");
                $.each(conflictsBySession[id], function(index, constraint){
@@ -152,7 +152,8 @@ var Sidebar = function() {
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                if (isSpecialCell($(item)))
                     return;
-               $(item).css("background-color", "transparent");
+               $(item).css("background-color", "");
+               var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
                $.each(keys(session.personas), function(index, key){
                     if (selected_personas.indexOf(key) != -1){
