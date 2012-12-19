@@ -57,6 +57,10 @@ var MoveMode = function() {
         return html;
     }
 
+    function _getCancelButtonHTML(){
+        return "  <button class='btn move-cancel-button'>Cancel Move</button>";
+    }
+
     function slotClickHandler(){
         // detect if the currently selected item is selected again.
         //var $selection = $(this).hasClass("unscheduled")? $("#unscheduled .move-dst-selected"): $("#program .move-dst-selected");
@@ -114,10 +118,12 @@ var MoveMode = function() {
                 if ($(this).hasClass("move-src-selected")) {
                     console.log("renderProposedSwap: move-src-selected");
                     if (id === -1)
-                        html += "<strong>Select other sessions to schedule this session.</strong>";
+                        html += "<strong>Select other sessions to schedule this session.</strong><br>"
+                            + _getCancelButtonHTML();
                     else
-                      html += "<strong>Select other sessions to schedule this session.</strong>"
-                      + $(this).find(".detail ul")[0].outerHTML;
+                      html += "<strong>Select other sessions to schedule this session.</strong><br>"
+                            + _getCancelButtonHTML()
+                            + $(this).find(".detail ul")[0].outerHTML;
                 } else if ($(this).hasClass("locked")) {
                     console.log("renderProposedSwap: locked");
                     if (id === -1)
@@ -129,20 +135,20 @@ var MoveMode = function() {
                     if ($(this).hasClass("scheduled")){
                         console.log("src: swap", "dst: scheduled");
                         html +=  "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
-                          + "'>Swap with this session</button><br>"
+                          + "'>Swap with this session</button>" + _getCancelButtonHTML() + "<br>"
                           //+ $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;
                     } else if ($(this).hasClass("unscheduled")){
                         console.log("src: swap", "dst: unscheduled");
                         html +=  "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
-                          + "'>Swap with this session</button><br>"
+                          + "'>Swap with this session</button>" + _getCancelButtonHTML() + "<br>"
                           //+ $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;
                     } else if ($(this).hasClass("empty")){
                         console.log("src: swap", "dst: empty");
                         html +=  "<button class='btn btn-primary' id='swap-button'" 
                          + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
-                         +"'>Schedule in this slot</button><br>";     
+                         +"'>Schedule in this slot</button>" + _getCancelButtonHTML() + "<br>";     
                     } else {
                         console.log("impossible");
                     }
@@ -150,7 +156,7 @@ var MoveMode = function() {
                     if ($(this).hasClass("scheduled")){
                         console.log("src: unscheduled", "dst: scheduled");
                         html +=  "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
-                          + "'>Schedule this session</button><br>"
+                          + "'>Schedule this session</button>" + _getCancelButtonHTML() + "<br>"
                           //+ $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;                            
                     } else if ($(this).hasClass("unscheduled")){
@@ -159,7 +165,7 @@ var MoveMode = function() {
                         console.log("src: unscheduled", "dst: empty");
                         html +=  "<button class='btn btn-primary' id='schedule-button'" 
                          + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
-                         +"'>Schedule in this slot</button><br>";                        
+                         +"'>Schedule in this slot</button>" + _getCancelButtonHTML() + "<br>";                        
                     } else {
                         console.log("impossible");
                     }
@@ -167,13 +173,13 @@ var MoveMode = function() {
                     if ($(this).hasClass("scheduled")){
                         console.log("src: empty", "dst: scheduled");
                         html +=  "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
-                          + "'>Schedule this session</button><br>"
+                          + "'>Schedule this session</button>" + _getCancelButtonHTML() + "<br>"
                           //+ $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;
                     } else if ($(this).hasClass("unscheduled")){
                         console.log("src: empty", "dst: unscheduled");
                         html +=  "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
-                          + "'>Schedule this session</button><br>"
+                          + "'>Schedule this session</button>" + _getCancelButtonHTML() + "<br>"
                           //+ $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;
                     } else if ($(this).hasClass("empty")){
@@ -380,7 +386,7 @@ var MoveMode = function() {
           // Display at the top alert box the full information about this proposal
           var alert_html = "";
           alert_html = "<strong>Schedule change in progress</strong>. Click any session to schedule. Recommended sessions in <span class='palette'>&nbsp;</span> minimize conflicts. " 
-          + " <button class='btn btn-mini' type='button' id='swap-review-cancel-link'>cancel move</button>.";
+          + " <button class='btn btn-mini move-cancel-button' type='button'>Cancel Move</button>";
 //          + "<div class='row'>";
 /*
           if (id === -1)
@@ -535,10 +541,16 @@ var MoveMode = function() {
     });  
 
 
+/*    
+    $("#statusbar").on("click", "#swap-review-cancel-link", function(){
+        postMove();
+        Statusbar.display("Select a session for scheduling options and more information.");    
+    });
+*/
+
     // clicking the 'cancel swap' link while swap in progress.
     // should return to the clean state with no selection and proposals.
-    // return to original popovers
-    $("#statusbar").on("click", "#swap-review-cancel-link", function(){
+    $("body").on("click", ".move-cancel-button", function(){
         postMove();
         Statusbar.display("Select a session for scheduling options and more information.");    
     });
