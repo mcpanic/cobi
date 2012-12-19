@@ -38,7 +38,9 @@ var ViewMode = function() {
     function unscheduleHandler(){
         var $session = $(".selected").first();
         var id = getID($session);
-
+        if (id === -1)
+            return;
+/*
         // Part 1. Add to the unscheduled pane
         var new_session = getSessionCell("unscheduled", allSessions[id]);
         $("#unscheduled").append(new_session);
@@ -48,7 +50,10 @@ var ViewMode = function() {
         var after = getSessionCell("empty", null, allSessions[id].date, allSessions[id].time, allSessions[id].room);
         // Watch out! jQuery replaceWith returns the original element, not the replaced element.
         $session.replaceWith(after); 
-        // Unschedule session in the database
+*/
+        // the frontend unschedule session
+        VisualOps.unschedule(allSessions[id]);
+        // the backend unschedule session
         unscheduleSession(allSessions[id]);
 
         $(".selected").removeClass("selected");
@@ -158,7 +163,9 @@ var ViewMode = function() {
         $("body").off("click", ".popover .button-unschedule", unscheduleHandler);
         $("body").off("click", ".slot", slotClickHandler);  
         $("body").off("click", ".popover .button-lock", lockHandler);
-        $("body").off("click", ".popover .button-unlock", unlockHandler);              
+        $("body").off("click", ".popover .button-unlock", unlockHandler);      
+
+        $(".slot").popover("destroy");        
     }
 
     return {

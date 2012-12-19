@@ -49,7 +49,6 @@ var Sidebar = function() {
                var color = "#FFFFFF"; // default white
                if (toggle)
                     color = $this.find(".palette").css("background-color");
-               //session.personas.contains(selected_persona);
                $.each(conflictsBySession[id], function(index, constraint){
                     if (constraint.type == selected_constraint){
                          $(item).css("background-color", color);
@@ -132,26 +131,32 @@ var Sidebar = function() {
      
      function clickPersonasHandler(){
           var $this = $(this);
-          var toggle = true;
-          if ($(this).parent().hasClass("view-option-active"))
-               toggle = false;
-          $("#list-personas .view-option-active").removeClass("view-option-active");
-          if (toggle)
-              $(this).parent().addClass("view-option-active");
-          var selected_persona = $(this).parent().data("type");
+          if ($this.parent().hasClass("view-option-active")) {
+               $this.parent().removeClass("view-option-active");
+               $this.find(".myCheckbox").prop("checked", false);
+          } else {
+              $this.parent().addClass("view-option-active");
+              $this.find(".myCheckbox").prop("checked", true);
+         }
+          
+          // get current selections. allowing multiple selections. 
+          var selected_personas = [];
+          $("#list-personas li a").each(function(){
+               if ($(this).parent().hasClass("view-option-active")) {
+                    //console.log($(this).parent().data("type"));
+                    selected_personas.push($(this).parent().data("type"))
+               }
+                    //arr.splice(arr.indexOf('specific'), 1);
+          });
+          
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                if (isSpecialCell($(item)))
                     return;
                $(item).css("background-color", "transparent");
-               var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
-               var color = "#FFFFFF"; // default white
-               if (toggle)
-                    color = $this.find(".palette").css("background-color");
-               //session.personas.contains(selected_persona);
                $.each(keys(session.personas), function(index, key){
-                    if (key == selected_persona){
-                         $(item).css("background-color", color);
+                    if (selected_personas.indexOf(key) != -1){
+                         $(item).css("background-color", color_palette_1[5]);
                     }
                });
           });
@@ -170,13 +175,16 @@ var Sidebar = function() {
           
           var cell = null;
           if (typeof id === "undefined")
-               cell = getCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));
+               cell = findCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));
           else
-               cell = $("#session-" + id)
+               cell = findCellByID(id);
 
           if (toggle) {
                $(this).addClass("view-option-active");
-               $(document).scrollTop( $(cell).offset().top - 100); 
+               $("body").animate({
+                    scrollTop:$(cell).offset().top - 100
+               }, 500);
+               //$(document).scrollTop( $(cell).offset().top - 100); 
                $(cell).addClass("highlight"); //.popover("toggle");               
           } else {
                $(cell).removeClass("highlight");               
@@ -207,22 +215,14 @@ var Sidebar = function() {
 
      // Display the persona list
      function displayPersonas(){
-          var color_index = 0;
+          //var color_index = 0;
      	$.each(personaHash, function(index, persona){
      		var item = document.createElement("li");
-      		$(item).data("type", index).html("<a href='#'><span class='palette'></span>" + persona + "</a>");
+      		$(item).data("type", index).html("<a href='#'><input type='checkbox' class='myCheckbox'> " + persona + "</a>");
      		$("#list-personas").append($(item));    		
-     		$(item).find("span.palette").css("background-color", color_palette_1[color_index]);
-               color_index++;
+     		//$(item).find("span.palette").css("background-color", color_palette_1[5]);
+               //color_index++;
      	});
-     	/*
-     	$.each(personas_list, function(index, persona){
-     		var item = document.createElement("li");
-      		$(item).data("type", persona.id).html("<a href='#'><span class='palette'></span>" + persona.label + "</a>");
-     		$("#list-personas").append($(item));    		
-     		$(item).find("span.palette").css("background-color", persona.color);
-     	});
-		*/
      }
 
      return {

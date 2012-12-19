@@ -26,12 +26,7 @@
 	}	
 
 
-	function swapNodes(a, b) {
-		var aparent= a.parentNode;
-		var asibling= a.nextSibling===b? a : a.nextSibling;
-		b.parentNode.insertBefore(a, b);
-		aparent.insertBefore(b, asibling);
-	}
+
 
 
      function getLength(item) {
@@ -59,24 +54,10 @@
 
 	// Check if this cell has any special cell status class applied, which change the background color of the cell. (selected, recommended, ...)
 	function isSpecialCell($item){
-		if ($item.hasClass("selected") || $item.hasClass("swap-selected") || $item.hasClass("recommended"))
+		if ($item.hasClass("selected") || $item.hasClass("move-src-selected") || $item.hasClass("recommended"))
 			return true;
 		else
 			return false;
-	}
-
-	// Locate an empty session by its date, time, and room
-	// Returns null when there is no such cell that's empty.
-	function getCellByDateTimeRoom(cellDate, cellTime, cellRoom){
-		var cell = null;
-		//console.log("CALL", cellDate, cellTime, cellRoom);
-		$("#program .empty").each(function(){
-			//console.log($(this).data("date"), $(this).data("time"), typeof $(this).data("room"), typeof cellRoom, $(this).data("room") == cellRoom, $(this).data("room") === cellRoom);
-		    if ($(this).data("date") == cellDate && $(this).data("time") == cellTime  && $(this).data("room") == cellRoom)
-		        cell = $(this);
-		});
-		//console.log(cell);
-		return cell;
 	}
 
 	// Add an alert message at the very top of the page

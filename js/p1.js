@@ -1,4 +1,30 @@
 
+
+    // Locate an empty session by its date, time, and room
+    // Returns null when there is no such cell that's empty.
+    function findCellByDateTimeRoom(cellDate, cellTime, cellRoom){
+        var cell = null;
+        $("#program .empty").each(function(){
+            //console.log($(this).data("date"), $(this).data("time"), typeof $(this).data("room"), typeof cellRoom, $(this).data("room") == cellRoom, $(this).data("room") === cellRoom);
+            if ($(this).data("date") == cellDate && $(this).data("time") == cellTime  && $(this).data("room") == cellRoom)
+                cell = $(this);
+        });
+        return cell;
+    }
+
+    // return a frontend cell with given ID
+    function findCellByID(id) {
+        return $("#session-" + id); 
+        /*
+        $cell = null;
+        $(".slot:not('.unavailable')").each(function(){
+            if ($(this).attr("id").substr(8) == id)
+                $cell = $(this);
+        });
+        return $cell;
+        */
+    }
+
      // Getting html for session details with individual paper info
      function getSessionDetail(type, session){
     	 // HQ: locked sessions get only a locked button
@@ -40,21 +66,6 @@
      }
 
 
-     // Visually swap two session cells
-     function swapSessionCell(id1, id2){
-          swapNodes($("#program #session-" + id1)[0], $("#program #session-" + id2)[0]);
-          $("#program #session-" + id1).css("background-color", "white").effect("highlight", {color: "yellow"}, 10000);
-          $("#program #session-" + id2).css("background-color", "white").effect("highlight", {color: "yellow"}, 10000);
-     }
-
-     // move the session of id into cell
-     function scheduleSessionCell(id, $emptySlot, $curSession){
-          var session = getSessionCell("scheduled", allSessions[id]);
-          //swapNodes(session, $cell[0]);
-          $emptySlot.popover("destroy").replaceWith($(session));
-          $(session).effect("highlight", {color: "yellow"}, 10000); // css("background-color", "white")
-          $curSession.popover("destroy").remove();
-    }
 
      // For each session item, display the session information
     function getSessionCell(type, session, slotDate, slotTime, slotRoom){
@@ -305,7 +316,7 @@
                var cell = getSessionCell("unscheduled", allSessions[id]);
                $("#unscheduled").append(cell);         
           });
-            updateUnscheduledCount();
+          updateUnscheduledCount();
      }
 
      // Display all scheduled sessions in the main grid
@@ -366,24 +377,20 @@
 
     $(document).ready(function() {
         $("body").addClass("loading"); 
-        
         Statusbar.initialize(); 
 	    
         // triggered once initialize is complete
-	    // initialize() is async, thus the bind
-	    $(document).bind("fullyLoaded", function(){
-		    displayScheduled();
-		    displayUnscheduled();
+	      // initialize() is async, thus the bind
+	      $(document).bind("fullyLoaded", function(){
+            displayScheduled();
+            displayUnscheduled();
             Sidebar.initialize(); 
             // default is view mode.
             ViewMode.initialize();      
-		    //$('#testers').html("complete...");
             Statusbar.display("Select a session for scheduling options and more information.");
             $("body").removeClass("loading"); 
-		});
-
-	    //$('#testers').html("loading...");
-	    initialize();
+		    });
+	      initialize();
 	    
 	    // test: swapping leveraging the crowd with madness
 	    // swapSchedule(schedule["May 7, 2012"]["11:30"]["Ballroom F"]["117"],

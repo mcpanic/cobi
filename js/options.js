@@ -1,13 +1,13 @@
 var constraints_list = [
 	{
 		"id": "1",
-		"label": "no simultaneous sessions for an author",
+		"label": "simultaneous sessions for an author",
 		"color": "#a55194",
 		"type": "authorInTwoSessions" 
 	},
 	{
 		"id": "2",
-		"label": "no simultaneous sessions for a persona",
+		"label": "simultaneous sessions for a track",
 		"color": "#2ca02c",
 		"type": "personaInTwoSessions"
 	}/*,
@@ -43,8 +43,8 @@ var options_list = [
 {"id": "num-papers", "label": "Number of Papers"}, 
 {"id": "duration", "label": "Duration"}, 
 {"id": "awards", "label": "Awards"}, 
-{"id": "honorable-mentions", "label": "Honorable Mentions"},
-{"id": "persona", "label": "Persona"}
+{"id": "honorable-mentions", "label": "Honorable Mentions"}
+/*{"id": "persona", "label": "Tracks"} */
 ];
 
 var color_palette_1 = ["#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78", "#2ca02c", 

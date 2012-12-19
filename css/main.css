@@ -44,6 +44,10 @@ body.loading .modal {
     display: block;
 }
 
+.main {
+    /* so that the main div doesn't overlap with left sidebar */
+    overflow-x: scroll;
+}
 /* ==========================================================================
    Left Sidebar with options
    ========================================================================== */
@@ -54,7 +58,7 @@ body.loading .modal {
 }
 
 .left-sidebar h4 {
-    margin: 0px;
+    margin-top: 10px;
 }
 
 .left-sidebar li {
@@ -148,7 +152,7 @@ body.loading .modal {
     /*#ffb7b7;*/
 }
 
-#program .swap-selected, div#unscheduled .swap-selected {
+#program .move-src-selected, div#unscheduled .move-src-selected {
     background: yellow;
 }
 
@@ -198,6 +202,10 @@ div#unscheduled .slot {
 /* ==========================================================================
     Status Bar
    ========================================================================== */
+
+#statusbar {
+    font-size: 14px;
+}
 
 #swap-review-cancel-link {
     margin-top: 0px;
