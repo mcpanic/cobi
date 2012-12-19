@@ -325,12 +325,17 @@ var MoveMode = function() {
           else if (type === "empty") {
             //console.log($session, $session.data(), $session.data("date"), type);
             //console.log($session.data("date"), $session.data("time"), $session.data("room"), schedule[$session.data("date")][$session.data("time")][$session.data("room")]);
-            swapValues = proposeUnscheduledSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
+	      
+	      // HQ: trying allowing a schedules session to move there
+	      //            swapValues = proposeUnscheduledSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
+	      var tempArray = proposeSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
+	      swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);
+
     
           } else {
-            return;
+	      return;
           }
-
+	  
           // Now display each candidate 
           swapValues.sort(function(a, b) {
               // HQ: slight edits here to handle locked slots
@@ -458,6 +463,9 @@ var MoveMode = function() {
         var $source = $(".move-src-selected").first();
         var src_id = getID($source);
         var dst_id = $(this).data("session-id");
+
+	//	console.log(src_id);
+	//	console.log(dst_id);
 
         // source is always a scheduled session
         // destination: empty

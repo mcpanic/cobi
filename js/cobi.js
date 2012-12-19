@@ -647,8 +647,9 @@ function proposeSwap(s) {
 						   conflictsResolved,
 						   conflictsCausedByCandidateAtOffending,
 						   conflictsCausedByOffending,
-						   conflictsCausedByCandidate,
-						   conflictsCausedByItem));
+						   conflictsCausedByItem,
+						   conflictsCausedByCandidate
+						   ));
 		}
 	    }
 	}
@@ -718,8 +719,9 @@ function proposeSlot(s) {
 						       conflictsResolved,
 						       null,
 						       conflictsCausedByOffending,
-						       null,
-						       conflictsCausedByItem));
+						       conflictsCausedByItem,
+						       null
+						       ));
 		    }
 		}
 	    }
@@ -736,6 +738,12 @@ function proposeSlotAndSwap(s){
 	    swapValue: swapValue};
 }
 
+function proposeSessionForSlot(day, time, room){
+    var scheduleValue = proposeScheduledSessionForSlot(day,time,room);
+    var unscheduleValue = proposeUnscheduledSessionForSlot(day,time,room);
+    return {scheduleValue: scheduleValue,
+	    unscheduleValue: unscheduleValue};
+}
 
 // Computes a score for every possible unschedule session that can move into slot
 // TODO: can also think about moving scheduled session here...
@@ -768,6 +776,69 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
 				       null));
     }
     return moveValue;
+}
+
+// Computes a score for every possible schedule session that can move into slot
+function proposeScheduledSessionForSlot(sdate, stime, sroom) {
+      var swapValue = [];
+
+      // for each item, compute: 
+      // 2. number of conflicts mitigated by removing offending item from there
+      // 3. number of conflicts caused by moving item there to offending location
+      
+      for(var day in schedule){
+	  for(var time in schedule[day]){
+	      if(day == sdate && time == stime) {
+		  // todo: assume that nothing changes in terms of constraints
+		  for(var room in schedule[day][time]){
+		      for(var s2 in schedule[day][time][room]){
+			  swapValue.push(new swapDetails(new slot(day, time, room, s2),
+							 0,
+							 null,
+							 null,
+							 null,
+							 null));
+		      }
+		  }
+		  continue;
+	      }
+	      
+	      for(var room in schedule[day][time]){
+		  // in case there are multiple sessions in a room, shouldn't be
+		  for(var s2 in schedule[day][time][room]){
+		      
+		      // 2. number of conflicts mitigated by removing offending item from there
+		      var conflictsCausedByCandidate = calculateConflictsCausedBy(allSessions[s2]);
+		            
+		      // 3. number of conflicts caused by moving item there to offending location
+		      var conflictsCausedByCandidateAtOffending = [];
+		      for(var rs in schedule[sdate][stime]){
+			  if(rs == sroom) continue;
+			  
+			  for(var sk in schedule[sdate][stime][rs]){
+			      conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(authorConflictsAmongSessions[sk][s2]);
+			      conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(personaConflictsAmongSessions[sk][s2]);
+			  }
+		      }
+		      
+		      // 4. number of conflicts mitigated by moving offending items away
+		      // numConflictsCausedByItem 
+		      
+		      var conflictsResolved = conflictsCausedByCandidate.length - 
+			  conflictsCausedByCandidateAtOffending.length;
+		    swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
+						   conflictsResolved,
+						   conflictsCausedByCandidateAtOffending,
+						   null,
+						   null,
+						   conflictsCausedByCandidate
+						   ));
+		}
+	    }
+	}
+    }
+    
+    return swapValue;
 }
 
 
