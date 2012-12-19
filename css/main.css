@@ -243,6 +243,10 @@ div#unscheduled .slot {
     font-weight: bold;
 }
 
+.swap-total-full {
+    font-size: 14px;
+}
+
 .stronger-text {
     color: black;
 }
@@ -271,6 +275,7 @@ div#unscheduled .slot {
     padding-right: 5px;
     margin-left: 2px;
     margin-right: 2px;  
+    color: white;
 }
 
 .conflict-netcount-added, .conflict-netcount-removed {

@@ -64,6 +64,8 @@
     	     }
     	 }
 
+         html += " <div class='conflicts'/>";
+
     	 if (typeof session !== "undefined" && session != null && typeof session.submissions !== "undefined" && session.submissions != null) {
     	     html += " <ul class='list-submissions'>";
     	     $.each(session.submissions, function(index, submission){

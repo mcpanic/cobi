@@ -137,13 +137,13 @@ var MoveMode = function() {
                         console.log("src: swap", "dst: scheduled");
                         html +=  "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
                           + "'>Swap with this session</button>" + _getCancelButtonHTML() + "<br>"
-                          //+ $(this).find(".detail .conflicts")[0].outerHTML
+                          + $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;
                     } else if ($(this).hasClass("unscheduled")){
                         console.log("src: swap", "dst: unscheduled");
                         html +=  "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
                           + "'>Swap with this session</button>" + _getCancelButtonHTML() + "<br>"
-                          //+ $(this).find(".detail .conflicts")[0].outerHTML
+                          + $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;
                     } else if ($(this).hasClass("empty")){
                         console.log("src: swap", "dst: empty");
@@ -158,7 +158,7 @@ var MoveMode = function() {
                         console.log("src: unscheduled", "dst: scheduled");
                         html +=  "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
                           + "'>Schedule this session</button>" + _getCancelButtonHTML() + "<br>"
-                          //+ $(this).find(".detail .conflicts")[0].outerHTML
+                          + $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;                            
                     } else if ($(this).hasClass("unscheduled")){
                         console.log("src: unscheduled", "dst: unscheduled");
@@ -166,7 +166,9 @@ var MoveMode = function() {
                         console.log("src: unscheduled", "dst: empty");
                         html +=  "<button class='btn btn-primary' id='schedule-button'" 
                          + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
-                         +"'>Schedule in this slot</button>" + _getCancelButtonHTML() + "<br>";                        
+                         +"'>Schedule in this slot</button>" + _getCancelButtonHTML() + "<br>"
+                         + $(this).find(".detail .conflicts")[0].outerHTML
+                         + $(this).find(".detail ul")[0].outerHTML;                        
                     } else {
                         console.log("impossible");
                     }
@@ -175,13 +177,13 @@ var MoveMode = function() {
                         console.log("src: empty", "dst: scheduled");
                         html +=  "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
                           + "'>Schedule this session</button>" + _getCancelButtonHTML() + "<br>"
-                          //+ $(this).find(".detail .conflicts")[0].outerHTML
+                          + $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;
                     } else if ($(this).hasClass("unscheduled")){
                         console.log("src: empty", "dst: unscheduled");
                         html +=  "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
                           + "'>Schedule this session</button>" + _getCancelButtonHTML() + "<br>"
-                          //+ $(this).find(".detail .conflicts")[0].outerHTML
+                          + $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;
                     } else if ($(this).hasClass("empty")){
                         console.log("src: empty", "dst: empty");
@@ -380,7 +382,7 @@ var MoveMode = function() {
 
                //console.log(swapValues[i]);
                displayPreviewConflicts(swapValues[i], $cell.find(".display"));
-               //displayFullConflicts(swapValues[i], $cell.find(".detail"));
+               displayFullConflicts(swapValues[i], $cell.find(".detail"));
           }
 
           // For proposed slots, add a new popover
