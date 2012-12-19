@@ -13,36 +13,55 @@ var db = new DB();
 
 DB.prototype.refresh = function(){
     // Traditional polling to check for changes
-    (function poll(){
+    (function poll(e){
+	console.log("polling with " + e.transactionId);
 	setTimeout(function(){
 		$.ajax({    url: "./php/loadDBtoJSONCompact.php",
+			    type: 'POST',
+			    data: {uid: e.uid, transactionId: e.transactionId},   
 			    success: function(m){
 			    
-			    var serverSchedule = m['schedule'];
-			    var serverUnscheduled = m['unscheduled'];
-			    var serverSlots = m['slots'];
-			    var serverTransactions = m['transactions'];
-			    
-			    if(schedule != null){
-				var consistencyReport = checkConsistent(serverSchedule, 
-									serverUnscheduled, 
-									serverSlots, 
-									serverTransactions);
-				if(consistencyReport.isConsistent){
-				    console.log("still consistent");
-				}else{
-				    //				    alert("there is an inconsistency in data!");
+			    // something has changed
+			    if(m != null){
+				var serverSchedule = m['schedule'];
+				var serverUnscheduled = m['unscheduled'];
+				var serverSlots = m['slots'];
+				var serverTransactions = m['transactions'];
+				
+				if(schedule != null){
+				    var consistencyReport = checkConsistent(serverSchedule, 
+									    serverUnscheduled, 
+									    serverSlots, 
+									    serverTransactions);
+				    if(consistencyReport.isConsistent){
+					console.log("still consistent");
+				    }else{
+					//				    alert("there is an inconsistency in data!");
+				    }
 				}
+			    }else{// nothing changed, nothing to do
+				console.log("nothing changed");
 			    }
-			    poll();
+			    poll((function(){
+				    if(transactions.length == 0){
+					return {uid: userData.id, transactionId: 0};
+				    }else{
+					return {uid: userData.id, transactionId: transactions[transactions.length -1]['id']};
+				    }})());
 			}, 
 			    error : function(m){
 			    //alert(JSON.stringify(m));
 			},
 			    dataType: "json"});
 	    }, 15000);
-    })();
+    })((function(){
+	    if(transactions.length == 0){
+		return {uid: userData.id, transactionId: 0};
+	    }else{
+		return {uid: userData.id, transactionId: transactions[transactions.length -1]['id']};
+	    }})());
 };
+
 
 DB.prototype.loadUser = function(uid){
     $.ajax({
