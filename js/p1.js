@@ -269,15 +269,36 @@
      // Refresh conflicts information display.
      // Called after an interaction occurs that affects conflicts. (swap, unschedule, schedule)
      function updateConflicts(){
-          // Lazy operation: only run when the view mode is conflicts
-          if (Sidebar.getActiveOptions("view-options").indexOf("conflicts") === -1)
-               return;
-          $(".slot").each(function(){
-               var id = getID($(this));
-               if (id !== -1)
-                    displayConflicts(conflictsBySession[id], $(this).find(".display"));
-          });
-          
+
+        var conflict_count_array = {};
+        $.each(constraints_list, function(index, conflict){
+            conflict_count_array[conflict.type] = 0;
+        });
+
+        $(".slot").each(function(){
+            var id = getID($(this));
+            if (id !== -1) {
+                displayConflicts(conflictsBySession[id], $(this).find(".display"));
+                var conflicts_array = conflictsBySession[id].map(function(co) {return co.type});          
+                    // for each constraint, count and add a modal dialog with descriptions
+                    $.each(constraints_list, function(index, conflict){
+                        var filtered_array = conflicts_array.filter(function(x){return x==conflict.type});
+                        conflict_count_array[conflict.type] += filtered_array.length;             
+                    });
+            }
+        });         
+        
+        var total = 0;
+        $.each(constraints_list, function(index, conflict){
+            $("#list-constraints li").each(function(){
+                if (conflict.type == $(this).data("type")){
+                    $(this).find(".count").html(conflict_count_array[conflict.type]);
+                    total += conflict_count_array[conflict.type];
+                }
+            });
+        });
+
+        $("#constraints-count").html(total);
      }
 
      // Display textually the slot title. (slot data structure)

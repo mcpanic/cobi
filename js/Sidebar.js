@@ -70,12 +70,14 @@ var Sidebar = function() {
                     });
                break;
                case "conflicts":
+               /*
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);
                          $(item).find(".display").html("");
                          displayConflicts(conflictsBySession[id], $(item).find(".display"));
                          //$(item).find(".display").html(conflictsBySession[id]);
-                    });
+                    });*/
+                    updateConflicts();
                break;                 
                case "popularity":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
@@ -198,7 +200,11 @@ var Sidebar = function() {
 	function displayConstraints(){
      	$.each(constraints_list, function(index, constraint){
      		var item = document.createElement("li");
-     		$(item).data("type", constraint.type).html("<a href='#'><span class='palette'></span>" + constraint.label + "</a>");
+     		$(item).data("type", constraint.type).html("<a href='#'><span class='palette'></span>" 
+                    + constraint.label 
+                    + "</a>"
+                    + " (<span class='count'></span>)"
+                    );
      		$("#list-constraints").append($(item));
      		$(item).find("span.palette").css("background-color", constraint.color);
       	});
