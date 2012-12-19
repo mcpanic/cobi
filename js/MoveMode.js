@@ -7,6 +7,7 @@ var MoveMode = function() {
         isOn = true;
         type = moveType;
         ViewMode.destroy();
+        clearConflictDisplay();
         bindEvents();
         runPropose();
     }

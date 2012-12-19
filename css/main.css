@@ -233,6 +233,31 @@ div#unscheduled .slot {
     cursor: pointer;
 }
 
+.swap-total {
+    float: left;
+    width: 17px;
+    height: 23px;
+    padding-left: 3px;
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.stronger-text {
+    color: black;
+}
+
+.weaker-text {
+    color: #888888;
+}
+
+.conflict-type-preview {
+    float: left;
+    width: 25px;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
 /* color-coded rectangle in the legend */
 .conflict-display {
     padding-left: 4px;
@@ -248,29 +273,31 @@ div#unscheduled .slot {
     margin-right: 2px;  
 }
 
-.conflict-netcount-added {
+.conflict-netcount-added, .conflict-netcount-removed {
     color: #888888;
 }
-
+/*
 .conflict-netcount-removed {
     color: black;
     font-weight: bold;
     font-size: 12px;
 }
-
+*/
 .conflict-preview-added {
     color: #888888;
-    font-size: 10px;
+    font-size: 6px;
     margin-left: 1px;
-    margin-right: 1px;
+    margin-right: 3px;
+    padding-left: 6px;
     /*cursor: pointer;*/
 }
 
 .conflict-preview-removed {
-    color: white;
-    font-size: 14px;
+    color: #888888;
+    font-size: 6px;
     margin-left: 1px;
-    margin-right: 1px;
+    margin-right: 3px;
+    padding-left: 6px;
     /*cursor: pointer;*/
 }
 
