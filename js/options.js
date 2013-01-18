@@ -7,7 +7,7 @@ var constraints_list = [
 	},
 	{
 		"id": "2",
-		"label": "simultaneous sessions for a track",
+		"label": "simultaneous sessions for a persona",
 		"color": "#2ca02c",
 		"type": "personaInTwoSessions"
 	}/*,
