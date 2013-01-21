@@ -54,11 +54,17 @@ body.loading .modal {
 
 .left-sidebar {
     /*position: fixed;*/
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .left-sidebar h4 {
-    margin-top: 10px;
+    margin-top: 15px;
+}
+
+.left-sidebar h4 a {
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .left-sidebar li {
@@ -73,7 +79,7 @@ body.loading .modal {
 .sidebar-fixed {
     position: fixed;
     width: 150px;
-    height: 80%;
+    height: 85%;
     overflow-y: scroll;    
 }
 
@@ -87,11 +93,17 @@ body.loading .modal {
 
 .sidebar-fixed ul {
     margin: 0 0 10px 10px;
+    /*display: none;*/
 }
 
 .sidebar-fixed ul li * {
     position: relative;
     /*left: -5px;*/
+}
+
+.sidebar-fixed .toggle {
+    font-size: 0.6em;
+    line-height: 24px;
 }
 /* ==========================================================================
     Main program
@@ -116,7 +128,6 @@ body.loading .modal {
 #program .slot:not(.unavailable), div#unscheduled .slot:not(.unavailable) {
     cursor: pointer;
 }
-
 
 #program .slot:hover, div#unscheduled .slot:hover {
     outline: 1px solid #333333;
@@ -198,6 +209,18 @@ div#unscheduled .slot {
     border: solid 1px #dddddd;
 }
 
+
+/* ==========================================================================
+    Search Box
+   ========================================================================== */
+/*
+.dropdown-item ul {
+    list-style-type: circle;
+}
+*/
+.dropdown-item li {
+    line-height: 14px;    
+}
 
 /* ==========================================================================
     Status Bar

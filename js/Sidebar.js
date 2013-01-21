@@ -5,6 +5,7 @@ var Sidebar = function() {
           displayConstraints();
           displayViewOptions();
           displayPersonas();  
+          displayCommunities();
           bindEvents();
      }
 
@@ -13,8 +14,26 @@ var Sidebar = function() {
           $("#list-constraints").on("click", "li a", clickConstraintsHandler);          
           $("#list-view-options").on("click", "li a", clickViewOptionsHandler);
           $("#list-personas").on("click", "li a", clickPersonasHandler);
-          $("#list-personas").on("click", ".myCheckbox", clickCheckboxPersonasHandler);
+          $("#list-personas").on("click", ".myCheckbox", clickCheckboxPersonasHandler); 
+          $("#list-communities").on("click", "li a", clickCommunitiesHandler);
+          $("#list-communities").on("click", ".myCheckbox", clickCheckboxCommunitiesHandler);          
           $("#list-history").on("click", ".history-link", clickHistoryHandler);
+          $(".sidebar-fixed").on("click", ".toggle", clickToggle);
+          $(".sidebar-fixed").on("click", ".toggle-options", clickHeaderHandler);
+     }
+
+     function clickHeaderHandler(){
+          console.log("here", $(this).find("span.toggle-icon"));
+          if ($(this).find("span.toggle-icon").hasClass("icon-chevron-right"))
+               $(this).find("span.toggle-icon").removeClass("icon-chevron-right").addClass("icon-chevron-down");
+          else
+               $(this).find("span.toggle-icon").removeClass("icon-chevron-down").addClass("icon-chevron-right");
+     }
+
+     function clickToggle(){
+          $("#list-" + $(this).attr("id").substring(7)).toggle();
+          var text = $(this).text() == "show" ? "hide" : "show";
+          $(this).text(text);
      }
 
      // Return any active options for a given sidebar menu
@@ -170,6 +189,44 @@ var Sidebar = function() {
          return false;
      }
 
+     function clickCheckboxCommunitiesHandler(){
+          $(this).parent().find("a").trigger("click");
+     }
+     
+     function clickCommunitiesHandler(event){
+          var $this = $(this);
+          if ($this.parent().hasClass("view-option-active")) {
+               $this.parent().removeClass("view-option-active");
+               $this.parent().find(".myCheckbox").prop("checked", false);
+          } else {
+               $this.parent().addClass("view-option-active");
+               $this.parent().find(".myCheckbox").prop("checked", true);
+          }
+          
+          // get current selections. allowing multiple selections. 
+          var selected_communities = [];
+          $("#list-communities li a").each(function(){
+               if ($(this).parent().hasClass("view-option-active")) {
+                    //console.log($(this).parent().data("type"));
+                    selected_communities.push($(this).parent().data("type"))
+               }
+                    //arr.splice(arr.indexOf('specific'), 1);
+          });
+          
+          $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+               if (isSpecialCell($(item)))
+                    return;
+               $(item).css("background-color", "");
+               var id = $(item).attr("id").substr(8);
+               var session = allSessions[id];     
+               $.each(session.coreCommunities, function(index, key){
+                    if (selected_communities.indexOf(key) != -1){
+                         $(item).css("background-color", color_palette_1[4]);
+                    }
+               });
+          });
+         return false;
+     }
 
      function clickHistoryHandler(){
           var id = $(this).data("session-id");
@@ -182,9 +239,9 @@ var Sidebar = function() {
           
           var cell = null;
           if (typeof id === "undefined") {
-	      //               cell = findCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));
-	      cell = findCellByDateTimeRoom($(this).data("slot-date"), $(this).data("slot-time"), $(this).data("slot-room"));
-	  }
+	          //               cell = findCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));
+	          cell = findCellByDateTimeRoom($(this).data("slot-date"), $(this).data("slot-time"), $(this).data("slot-room"));
+	     }
           else
                cell = findCellByID(id);
 
@@ -236,6 +293,27 @@ var Sidebar = function() {
      		//$(item).find("span.palette").css("background-color", color_palette_1[5]);
                //color_index++;
      	});
+     }
+
+     // Display the communities list
+     function displayCommunities(){
+          //var color_index = 0;
+          var commList = [];
+          for (id in allSessions){
+               if (allSessions[id].coreCommunities.length > 0)
+                    $.each(allSessions[id].coreCommunities, function(i,v){
+                         commList.push(v);
+                    });
+          }
+//          console.log($.unique(dl));
+          commList = $.unique(commList);
+          $.each(commList, function(index, community){
+               var item = document.createElement("li");
+               $(item).data("type", community).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" + community + "</a>");
+               $("#list-communities").append($(item));              
+               //$(item).find("span.palette").css("background-color", color_palette_1[5]);
+               //color_index++;
+          });
      }
 
      return {

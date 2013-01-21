@@ -2,13 +2,13 @@ var constraints_list = [
 	{
 		"id": "1",
 		"label": "simultaneous sessions for an author",
-		"color": "#a55194",
+		"color": "#8C489F", //#a55194",
 		"type": "authorInTwoSessions" 
 	},
 	{
 		"id": "2",
 		"label": "simultaneous sessions for a persona",
-		"color": "#2ca02c",
+		"color": "#ff9896",
 		"type": "personaInTwoSessions"
 	}/*,
 	{
@@ -27,6 +27,21 @@ var constraints_list = [
 		"color": "#008888"
 	}	*/			
 ];
+
+var communities_list = [
+{"label": "design", "color": "#9edae5"},
+{"label": "engineering", "color": "#9edae5"},
+{"label": "management", "color": "#9edae5"},
+{"label": "user experience", "color": "#9edae5"},
+{"label": "child-computer interaction", "color": "#9edae5"},
+{"label": "digital arts", "color": "#9edae5"},
+{"label": "games & entertainment", "color": "#9edae5"},
+{"label": "health", "color": "#9edae5"},
+{"label": "sustainability", "color": "#9edae5"},
+{"label": "HCI4D", "color": "#9edae5"}
+];
+
+
 /*
 var personas_list = [
 {"id": "uist", "label": "UIST", "color": "#443266"},

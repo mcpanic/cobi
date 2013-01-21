@@ -1,4 +1,48 @@
 
+
+
+$(document).on("slotLocked", function(e, day, time, room){
+    console.log("This slot is locked: " + day + " ," + time + ", " + room);
+    // No need to anything in the frontend
+    //var cell = findCellByDateTimeRoom(day, time, room);
+});
+
+$(document).on("slotChange", function(e, day, time, room){
+    console.log("Data changed in " + day + " ," + time + ", " + room);
+    var cell = findCellByDateTimeRoom(day, time, room);
+});
+
+    $(document).on("lockChange", function(e, day, time, room){
+        console.log("Slot lock changed in " + day + " ," + time + ", " + room);
+
+        var id = null;
+        for (s in schedule[day][time][room]){
+            id = s;
+        }
+        var $cell = findCellByID(id);
+        if ($cell == null || typeof $cell === "undefined")
+            return;
+
+        if ($cell.hasClass("locked")){
+            $("#list-history").prepend("<li>USER unlocked: " 
+                + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
+            $cell.removeClass("locked");
+        } else {
+            $("#list-history").prepend("<li>USER locked: " 
+                + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");        
+            $cell.addClass("locked");
+        }
+        $cell.effect("highlight", {color: "yellow"}, 10000);
+    });
+
+$(document).on("unscheduledChange", function(e){
+    console.log("The unscheduled data has changed.", unscheduled);
+    for (s in unscheduled) {
+        console.log(s);
+    }
+});
+
+
     // Popover close button interaction
     $("body").on("click", ".popover-close", function(){
         console.log("popover-close", $(this).data("session-id"));
@@ -251,11 +295,12 @@
             displayScheduled();
             displayUnscheduled();
             Sidebar.initialize(); 
+            Searchbox.initialize();
             // default is view mode.
             ViewMode.initialize();      
             Statusbar.display("Select a session for scheduling options and more information.");
             $("body").removeClass("loading"); 
-		    });
+		  });
 	      initialize();
 	    
 	    // test: swapping leveraging the crowd with madness

@@ -216,5 +216,5 @@ var Conflicts = function() {
             });
         });
 
-        $("#constraints-count").html(total);
+        $("#constraints-count").html("(" + total + ")");
      }

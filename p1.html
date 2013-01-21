@@ -20,6 +20,7 @@
 
         </style>
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="js/vendor/select2/select2.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
@@ -42,12 +43,17 @@
                     </a>
                     <a class="brand" href="#">Cobi</a>
                     <div class="nav-collapse collapse">
+                        <!--
                         <form class="navbar-form pull-right form-search">
                             <div class="input-append">
                             <input type="text" class="span3 search-query" placeholder="session title or author name" id="search-box">
                             <button type="submit" class="btn">Search</button>
                             </div>
-                        </form>
+                            
+                        </form>-->
+                        <div class="pull-right">
+                        <input type="hidden" id="searchbox" class="span6"/>
+                        </div>
                         <br><br>
                         <div id="statusbar" class="alert"></div>
                     </div><!--/.nav-collapse -->
@@ -60,21 +66,50 @@
             <div class="row">
                 <div class="span2 left-sidebar">
                     <div class="sidebar-fixed">
-                        <h4>Conflicts (<span id="constraints-count"></span>)</h4>
-                        <ul id="list-constraints">
-                        </ul>    
+                        <h4>
+                            <a class="toggle-options" data-toggle="collapse" data-target="#list-constraints">
+                                <span class="toggle-icon icon-chevron-right"></span>
+                                Conflicts <small id="constraints-count"></small>
+                            </a>
+                            <!-- <small id="toggle-constraints" class="toggle pull-right">show</small> -->
+                        </h4>
+                        <ul id="list-constraints" class="collapse"></ul>
 
-                        <h4>View Options</h4>
-                        <ul id="list-view-options">
-                        </ul>                    
+                        <h4>
+                            <a class="toggle-options" data-toggle="collapse" data-target="#list-view-options">
+                                <span class="toggle-icon icon-chevron-right"></span>
+                                View Options
+                            </a>
+                            <!-- <small id="toggle-view-options" class="toggle pull-right">show</small> -->
+                        </h4>
+                        <ul id="list-view-options" class="collapse"></ul>                    
 
-                        <h4>Personas</h4>
-                        <ul id="list-personas">
-                        </ul>
+                        <h4>
+                            <a class="toggle-options" data-toggle="collapse" data-target="#list-personas">
+                                <span class="toggle-icon icon-chevron-right"></span>
+                                Personas
+                            </a>
+                            <!-- <small id="toggle-personas" class="toggle pull-right">show</small> -->
+                        </h4>
+                        <ul id="list-personas" class="collapse"></ul>
 
-                        <h4>History</h4>
-                        <ul id="list-history">
-                        </ul>
+                        <h4>
+                            <a class="toggle-options" data-toggle="collapse" data-target="#list-communities">
+                                <span class="toggle-icon icon-chevron-right"></span>
+                                Communities
+                            </a>
+                            <!-- <small id="toggle-communities" class="toggle pull-right">show</small> -->
+                        </h4>
+                        <ul id="list-communities" class="collapse"></ul>
+
+                        <h4>
+                            <a class="toggle-options" data-toggle="collapse" data-target="#list-history">
+                                <span class="toggle-icon icon-chevron-right"></span>
+                                History
+                            </a>
+                            <!--<small id="toggle-history" class="toggle pull-right">show</small>-->
+                        </h4>
+                        <ul id="list-history" class="collapse"></ul>
                     </div>
                 </div>
                 <div class="span10 main">
@@ -103,6 +138,7 @@
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/underscore-min.js"></script>
         <script src="js/vendor/bootstrapx-clickover.js"></script>
+        <script src="js/vendor/select2/select2.min.js"></script>
         <!--<script src="js/scheduleDataJsonCompact.js"></script>-->
         <script src="js/roomSessionPopularity.js"></script>
         <script src="js/options.js"></script>
@@ -117,6 +153,7 @@
         <script src="js/Conflicts.js"></script> 
         <script src="js/Statusbar.js"></script>
         <script src="js/Sidebar.js"></script>
+        <script src="js/Searchbox.js"></script> 
         
 
 <!--

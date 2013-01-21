@@ -365,23 +365,6 @@ function unescapeURL(s) {
 }
 
 
-
-$(document).bind("slotLocked", function(e, day, time, room){
-	console.log("This slot is locked: " + day + " ," + time + ", " + room);
-    });
-
-$(document).bind("slotChange", function(e, day, time, room){
-	console.log("Data changed in " + day + " ," + time + ", " + room);
-    });
-
-$(document).bind("lockChange", function(e, day, time, room){
-	console.log("Slot lock changed in " + day + " ," + time + ", " + room);
-    });
-
-$(document).bind("unscheduledChange", function(e){
-	console.log("The unscheduled data has changed.");
-    });
-
 // record where inconsistencies occur
 // change the internal data to update and bring everythign consistent
 //      
