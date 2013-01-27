@@ -1,3 +1,4 @@
+// OLD --- no longer in use... see initDB directory instead
 <?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
@@ -34,7 +35,6 @@ foreach ($alldates as $time => $alltimes) {
       $submissionKeys = mysqli_real_escape_string($mysqli, implode(",", array_keys($data['submissions'])));
       $title = mysqli_real_escape_string($mysqli, $data['title']);
       $type = mysqli_real_escape_string($mysqli, $data['type']);
-
      
       $squery = "INSERT INTO session (id, date, time, endTime, chairAffiliations, chairs, coreCommunities, featuredCommunities, hasAward, hasHonorableMention, notes, room, submissions, title, type, scheduled) VALUES ('$sid', '$sdate', '$stime', '$endTime', '$chairAffiliations', '$chairs', '$coreCommunities', '$featuredCommunities', '$hasAward', '$hasHonorableMention', '$notes', '$sroom', '$submissionKeys', '$title', '$type', 1)";
       mysqli_query($mysqli, $squery);

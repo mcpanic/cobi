@@ -86,7 +86,7 @@ var Sidebar = function() {
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);
                          var session = allSessions[id];
-                         $(item).find(".display").html(session.type);
+                         $(item).find(".display").html(session.venue);
                     });
                break;
                case "conflicts":
@@ -168,7 +168,7 @@ var Sidebar = function() {
           var selected_personas = [];
           $("#list-personas li a").each(function(){
                if ($(this).parent().hasClass("view-option-active")) {
-                    //console.log($(this).parent().data("type"));
+		   // console.log($(this).parent().data("type"));
                     selected_personas.push($(this).parent().data("type"))
                }
                     //arr.splice(arr.indexOf('specific'), 1);
@@ -180,11 +180,15 @@ var Sidebar = function() {
                $(item).css("background-color", "");
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
-               $.each(keys(session.personas), function(index, key){
-                    if (selected_personas.indexOf(key) != -1){
-                         $(item).css("background-color", color_palette_1[5]);
-                    }
-               });
+	       // HQ: slight changes here
+	       if (selected_personas.indexOf(session.personas) != -1){
+		   $(item).css("background-color", color_palette_1[5]);
+	       }
+//                $.each(keys(session.personas), function(index, key){
+//                     if (selected_personas.indexOf(key) != -1){
+//                          $(item).css("background-color", color_palette_1[5]);
+//                     }
+//                });
           });
          return false;
      }
@@ -286,9 +290,10 @@ var Sidebar = function() {
      // Display the persona list
      function displayPersonas(){
           //var color_index = 0;
-     	$.each(personaHash, function(index, persona){
+	 // HQ: minor changes here
+     	$.each(personaList, function(index, persona){
      		var item = document.createElement("li");
-      		$(item).data("type", index).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" + persona + "</a>");
+      		$(item).data("type", persona).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" + persona + "</a>");
      		$("#list-personas").append($(item));    		
      		//$(item).find("span.palette").css("background-color", color_palette_1[5]);
                //color_index++;
@@ -298,15 +303,17 @@ var Sidebar = function() {
      // Display the communities list
      function displayCommunities(){
           //var color_index = 0;
-          var commList = [];
-          for (id in allSessions){
-               if (allSessions[id].coreCommunities.length > 0)
-                    $.each(allSessions[id].coreCommunities, function(i,v){
-                         commList.push(v);
-                    });
-          }
-//          console.log($.unique(dl));
-          commList = $.unique(commList);
+	 // HQ: minor changes here;
+//           var commList = [];
+//           for (id in allSessions){
+//                if (allSessions[id].coreCommunities.length > 0)
+//                     $.each(allSessions[id].coreCommunities, function(i,v){
+//                          commList.push(v);
+//                     });
+//           }
+// //          console.log($.unique(dl));
+//           commList = $.unique(commList);
+	 var commList = communityList;
           $.each(commList, function(index, community){
                var item = document.createElement("li");
                $(item).data("type", community).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" + community + "</a>");

@@ -10,7 +10,30 @@ var frontEndOnly = false;
 var scheduleSlots = null;
 var userData = new userInfo(null, "Anon", null, "rookie");
 var transactions = null;
-
+var personaList = ["Online social communities & crowdsourcing",
+		   "Design",
+		   "UIST",
+		   "Visualization",
+		   "My Body",
+		   "Engagement",
+		   "IO",
+		   "for a cause",
+		   "Misc",
+		   "Security and privacy",
+		   "Ethics",
+		   "Kids and learning",
+		   "Health"];
+var communityList = ["ux",
+		     "design",
+		     "engineering",
+		     "hci4d",
+		     "games",
+		     "management",
+		     "cci",
+		     "arts",
+		     "health",
+		     "sustainability"]
+		     
 ////// Functions that change the data schedule 
 
 /// TODO: don't allow actually changing slots that are locked.
@@ -22,8 +45,10 @@ function undo(){
     // undo it in the json data
     // alert the frontend of changes
     if(transactions && transactions.length >0){
+	// undo allowed
 	var type = transactions[transactions.length -1].type;
 	var previous = transactions[transactions.length -1].previous;
+	$(document).trigger('undoLastStep', [transactions[transactions.length -1]]);
 
 	if(type == "lock"){
 	    toggleSlotLock(previous['date'], 
@@ -327,7 +352,8 @@ function initAfterScheduleLoads(m){
 
     allRooms = getAllRooms();
     allSessions = getAllSessions();
-    attachPersonas();  // loads personas from a file into schedule JSON
+    // TODO: deal with personas
+    //attachPersonas();  // loads personas from a file into schedule JSON
     
     initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
     initializePersonaConflictsAmongSessions(); // this can be loaded from a file
@@ -379,14 +405,31 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverSlots, serverT
     var consistent = true;
     
     // check if there are new transactions
-    for(var i = 0; i < serverTransactions.length; i++){
-	if(parseInt(serverTransactions[i]['id']) > 
-	   parseInt(transactions[transactions.length -1]['id'])){
-	    consistent = false;
-	    transactions.push(serverTransactions[i]);
+    var newTransactionIndices = [];
+    
+    // for catching initial corner case
+    if(transactions.length == 0 && serverTransactions.length > 0){
+	consistent = false;
+	newTransactionIndices.push(transactions.length);
+	transactions = serverTransactions;
+    }
+    else{
+	for(var i = 0; i < serverTransactions.length; i++){
+	    if(parseInt(serverTransactions[i]['id']) > 
+	       parseInt(transactions[transactions.length -1]['id'])){
+		consistent = false;
+		newTransactionIndices.push(transactions.length);
+		transactions.push(serverTransactions[i]);
+	    }
 	}
     }
-
+    if(consistent == false){
+    // all changes are in the transactions data itself,
+    // at the new transactions indices. So trigger 
+	console.log("throwing serverScheduleChange with indices: ");
+	console.log(newTransactionIndices);
+	$(document).trigger('serverScheduleChange', newTransactionIndices);    
+    }
     // TODO: inefficient version.. can just use the records
     // handle differences below
     for(var day in schedule){
@@ -1017,10 +1060,15 @@ function getSessionAuthors(s){
     var authors = {};
     for(var submission in s["submissions"]){
 	for(var author in s["submissions"][submission]["authors"]){
+	    // Let's return the name of the author
 	    if(!(author in authors)){
-		authors[author] = 1;
+		authors[author] = s["submissions"][submission]["authors"][author]['firstName'] + " " + 
+		    s["submissions"][submission]["authors"][author]['lastName'];
+		    //1;
 	    }else{
-		authors[author] += 1;
+		authors[author] = s["submissions"][submission]["authors"][author]['firstName'] + " " + 
+		    s["submissions"][submission]["authors"][author]['lastName'];
+		//+= 1;
 	    }
 	}
     }
@@ -1028,6 +1076,10 @@ function getSessionAuthors(s){
 }
 
 function getSessionPersonas(s){
+    //    console.log(s["personas"]);
+    if(s["personas"] == ""){
+	return null;
+    }
     return s["personas"];
 }
 
@@ -1072,7 +1124,7 @@ function computeAuthorConflicts(s1, s2){
 		conflicts.push(new conflictObject([s1.id, s2.id], 
 						  "authorInTwoSessions", 
 						  s1author, 
-						  s1author + " is in both '" + s1.title + 
+						  s1authors[s1author] + " is in both '" + s1.title + 
 						  "' and '" + s2.title + "'\n"));
 	    }
 	}
@@ -1085,17 +1137,24 @@ function computePersonaConflicts(s1, s2){
     var s1personas = getSessionPersonas(s1);
     var s2personas = getSessionPersonas(s2);
   
-    for(var s1persona in s1personas){
-	for(var s2persona in s2personas){
-	    if(s1persona == s2persona){
-		conflicts.push(new conflictObject([s1.id, s2.id], 
-						  "personaInTwoSessions", 
-						  personaHash[s1persona],
-						  "Someone interested in " + personaHash[s1persona] + " may want to see both '" + s1.title + 
-						  "' and '" + s2.title + "'"));
-	    }
-	}
+    if(s1personas == s2personas && s1personas != null){
+	conflicts.push(new conflictObject([s1.id, s2.id], 
+					  "personaInTwoSessions", 
+					  s1personas,
+					  "Someone interested in " + s1personas + " may want to see both '" + s1.title + 
+					  "' and '" + s2.title + "'"));
     }
+    //    for(var s1persona in s1personas){
+    //	for(var s2persona in s2personas){
+    //	    if(s1persona == s2persona){
+    //	conflicts.push(new conflictObject([s1.id, s2.id], 
+	// 					  "personaInTwoSessions", 
+// 						  personaHash[s1persona],
+// 						  "Someone interested in " + personaHash[s1persona] + " may want to see both '" + s1.title + 
+// 						  "' and '" + s2.title + "'"));
+// 	    }
+// 	}
+//     }
     return conflicts;
 }
 
@@ -1128,7 +1187,7 @@ function attachPersonas(){
     for(var s in allSessions){
 	allSessions[s]["personas"] = {};
 	for(var submission in allSessions[s]["submissions"]){
-	    allSessions[s]["submissions"][submission]["personas"] = {};
+	    allSessions[s]["submissions"][submission]["peorsonas"] = {};
 	    for(var persona in personas){
 		if(personas[persona].indexOf(submission) != -1){
 		    allSessions[s]["personas"][persona] = true;

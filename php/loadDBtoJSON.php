@@ -30,22 +30,61 @@ echo mysqli_error($mysqli);
 while ($row = $entityTable->fetch_assoc()) {
   $row['coreCommunities'] = json_decode($row['coreCommunities']);
   $row['featuredCommunities'] = json_decode($row['featuredCommunities']);
-  $row['authors'] = json_decode($row['authors']);
+  
+  // Process authors into our format
+  $authorDB = json_decode($row['authors'], true);
+  $authors = array();
+  if($authorDB != NULL){
+    foreach ($authorDB as $author) {
+      $authorKey = $author['givenName'] . ' ' . $author['familyName'];
+      if (array_key_exists('id', $author)){
+	$authorKey = $author['id'];
+      }
+      $inst = "";
+      if(array_key_exists('primary', $author)){
+	if(array_key_exists('institution', $author['primary'])){
+	  $inst = $author['primary']['institution'];
+	}
+      }
+      
+      $authorData = array(
+			  "affiliations" => array(array("country"=> "", "name" => $inst)),
+			  "email" => $author['email'],
+			  "firstName" => $author['givenName'],
+			  "lastName" => $author['familyName'],
+			  "middleName" => ""
+			  );
+      if(array_key_exists('role', $author)){
+	$authorData['role'] = $author['role'];
+      }
+      if(array_key_exists('middleInitial', $author)){
+	$authorData['middleName'] = $author['middleInitial'];
+      }
+      $authors[$authorKey] = $authorData;
+    }
+  }
+  /*     {"nameKey":  */
+  /*      {"affiliations": [ {"country":"", "name": ""}], "email":"", "firstName":"", "lastName":"", "middleName":"", "submissions":[""]}, */
+  /*     } */
+  // TODO: ERROR HERE?
+  $row['authors'] = $authors;
+  //  var_dump($authors);
   $row['keywords'] = json_decode($row['keywords']);
   $row['session'] = json_decode($row['session']);
-
+  
   $row['bestPaperAward'] = (bool)$row['bestPaperAward'];
   $row['bestPaperNominee'] = (bool)$row['bestPaperNominee'];
-
+  
   $entity[$row['id']] = $row; 
 }
-//echo json_encode($entity);
-
+  
 $unscheduled = array();
 
 while ($row = $sessionTable->fetch_assoc()) {
   $row['chairs'] = json_decode($row['chairs']);
   $row['coreCommunities'] = json_decode($row['coreCommunities']);
+  $row['personas'] = $row['personas'];
+  
   $row['featuredCommunities'] = json_decode($row['featuredCommunities']);
   $row['hasAward'] = (bool)$row['hasAward'];
   $row['hasHonorableMention'] = (bool)$row['hasHonorableMention'];
