@@ -1,0 +1,3231 @@
+{
+    "total_rows": 215,
+    "offset": 0,
+    "rows": [
+        {
+            "id": "sch1001",
+            "key": null,
+            "value": {
+                "_id": "sch1001",
+                "_rev": "4-0e8d6b35a3baf722502ad5f7891f427d",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "Blue",
+                "session": "s152",
+                "venue": "panel",
+                "title": "Will Massive Online Open Courses (MOOCs) Change Education?"
+            }
+        },
+        {
+            "id": "sch1002",
+            "key": null,
+            "value": {
+                "_id": "sch1002",
+                "_rev": "4-0acad3b1396dfdb8a9aea1fee455fbe9",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "Bordeaux",
+                "session": "s191",
+                "venue": "casestudy",
+                "title": "Case Studies in Novel Settings"
+            }
+        },
+        {
+            "id": "sch1003",
+            "key": null,
+            "value": {
+                "_id": "sch1003",
+                "_rev": "4-33cf330328d2dda1b22e971d1280e933",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "252B",
+                "session": "s262",
+                "venue": "paper",
+                "title": "Crime, Conflicts, and Resolution"
+            }
+        },
+        {
+            "id": "sch1004",
+            "key": null,
+            "value": {
+                "_id": "sch1004",
+                "_rev": "4-83b0306454e02568d7a21bfdde3ea76c",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "352AB",
+                "session": "s223",
+                "venue": "paper",
+                "title": "Table and Floors"
+            }
+        },
+        {
+            "id": "sch1005",
+            "key": null,
+            "value": {
+                "_id": "sch1005",
+                "_rev": "4-73e838605c5c0342ae8d8dc648295818",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "Havane",
+                "session": "s206",
+                "venue": "paper",
+                "title": "Colaborative Technology: I share, you share, we share"
+            }
+        },
+        {
+            "id": "sch1006",
+            "key": null,
+            "value": {
+                "_id": "sch1006",
+                "_rev": "4-03b94f05a1307b11933b8d0cb2d4915d",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "241",
+                "session": "s252",
+                "venue": "paper",
+                "title": "Pointing and Fitts Law"
+            }
+        },
+        {
+            "id": "sch1007",
+            "key": null,
+            "value": {
+                "_id": "sch1007",
+                "_rev": "4-9a0e5fbfcf3b02090448c199d654a585",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "342A",
+                "session": "s241",
+                "venue": "paper",
+                "title": "Mobile 1: Mobile Phones: pricing, Emotions, looks, and positioning"
+            }
+        },
+        {
+            "id": "sch1008",
+            "key": null,
+            "value": {
+                "_id": "sch1008",
+                "_rev": "4-f1040241d400d85186425b9dce13bbd4",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "251",
+                "session": "s277",
+                "venue": "paper",
+                "title": "Sharing Secrets"
+            }
+        },
+        {
+            "id": "sch1009",
+            "key": null,
+            "value": {
+                "_id": "sch1009",
+                "_rev": "4-70f3dadca9504bd4575a7668fc9cf4b3",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "351",
+                "session": "s280",
+                "venue": "paper",
+                "title": "Evaluation Methods 2"
+            }
+        },
+        {
+            "id": "sch1010",
+            "key": null,
+            "value": {
+                "_id": "sch1010",
+                "_rev": "4-677a77eaf9839a3152eb2212485ba63e",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "242AB",
+                "session": "s297",
+                "venue": "paper",
+                "title": "Desing in a Psychiatric Setting"
+            }
+        },
+        {
+            "id": "sch1011",
+            "key": null,
+            "value": {
+                "_id": "sch1011",
+                "_rev": "4-a8867ca0a6774ee0a93647b0b7582043",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "243",
+                "session": "s121",
+                "venue": "course",
+                "title": "Designing with and for Children in the 21st Century: Techniques and Practices"
+            }
+        },
+        {
+            "id": "sch1012",
+            "key": null,
+            "value": {
+                "_id": "sch1012",
+                "_rev": "4-bc3511319f40032d6eb1342f0bf2b0dd",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "253",
+                "session": "s116",
+                "venue": "course",
+                "title": "Expert Reviews – For Experts"
+            }
+        },
+        {
+            "id": "sch1013",
+            "key": null,
+            "value": {
+                "_id": "sch1013",
+                "_rev": "4-0cf2f8182ea77fa6cd7cf44279acf163",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "343",
+                "session": "s109",
+                "venue": "course",
+                "title": "Card Sorting for Navigation Design"
+            }
+        },
+        {
+            "id": "sch1014",
+            "key": null,
+            "value": {
+                "_id": "sch1014",
+                "_rev": "4-59b35d7470ab48a7cfa55e5a01124979",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "252A",
+                "session": "s103",
+                "venue": "course",
+                "title": "Designing a Task-Focused Conceptual Model"
+            }
+        },
+        {
+            "id": "sch1015",
+            "key": null,
+            "value": {
+                "_id": "sch1015",
+                "_rev": "5-ccc4df88ccc03f3a7d1a3f53a2c8370d",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "361",
+                "session": "s148",
+                "venue": "course",
+                "title": "Choice and Decision Making for HCI"
+            }
+        },
+        {
+            "id": "sch1016",
+            "key": null,
+            "value": {
+                "_id": "sch1016",
+                "_rev": "4-266f8b03d971c2905f336a7e2bb62b03",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "362/363",
+                "session": "s177",
+                "venue": "SIG",
+                "title": "Enhancing the Research Infrastructure for Child-Computer Interaction"
+            }
+        },
+        {
+            "id": "sch1017",
+            "key": null,
+            "value": {
+                "_id": "sch1017",
+                "_rev": "5-b40e4e74dd6736b6311f93e1eabd6e76",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "11:00-12:20",
+                "room": "221/221M",
+                "session": "s318",
+                "venue": "bof",
+                "title": "Birds of a feather - session 9"
+            }
+        },
+        {
+            "id": "sch1101",
+            "key": null,
+            "value": {
+                "_id": "sch1101",
+                "_rev": "4-ffc9bc6dc21993a74aef6b8a55970948",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "Blue",
+                "session": "s205",
+                "venue": "paper",
+                "title": "Look how popular I am: managing social media platforms"
+            }
+        },
+        {
+            "id": "sch1102",
+            "key": null,
+            "value": {
+                "_id": "sch1102",
+                "_rev": "4-6bc63f07fcd921dafe48a5dec2c44ff3",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "Bordeaux",
+                "session": "s150",
+                "venue": "panel",
+                "title": "Digital Arts: Did You Feel That?"
+            }
+        },
+        {
+            "id": "sch1103",
+            "key": null,
+            "value": {
+                "_id": "sch1103",
+                "_rev": "4-39d7f40e7d20330de25224cd85f4ab26",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "252B",
+                "session": "s261",
+                "venue": "paper",
+                "title": "Sustainability / MISC"
+            }
+        },
+        {
+            "id": "sch1104",
+            "key": null,
+            "value": {
+                "_id": "sch1104",
+                "_rev": "4-784d90503e7f657847543d683acbaa67",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "352AB",
+                "session": "s227",
+                "venue": "paper",
+                "title": "Fabrication"
+            }
+        },
+        {
+            "id": "sch1105",
+            "key": null,
+            "value": {
+                "_id": "sch1105",
+                "_rev": "4-1eed8df77775cb2a5828d570d2a86d87",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "Havane",
+                "session": "s207",
+                "venue": "paper",
+                "title": "Social Face: creativity unleashed online"
+            }
+        },
+        {
+            "id": "sch1106",
+            "key": null,
+            "value": {
+                "_id": "sch1106",
+                "_rev": "4-f63308d89f67530adcd0f621b0b6000b",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "241",
+                "session": "s249",
+                "venue": "paper",
+                "title": "Large and public Displays"
+            }
+        },
+        {
+            "id": "sch1107",
+            "key": null,
+            "value": {
+                "_id": "sch1107",
+                "_rev": "4-d937008284df3cee18a90c3ed11dc258",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "342A",
+                "session": "s244",
+                "venue": "paper",
+                "title": "Studies of the Use of Digital Artifacts"
+            }
+        },
+        {
+            "id": "sch1108",
+            "key": null,
+            "value": {
+                "_id": "sch1108",
+                "_rev": "4-d56bc2cb859968c1dafa5cc2b9acb325",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "251",
+                "session": "s275",
+                "venue": "paper",
+                "title": "Consent and Integrity"
+            }
+        },
+        {
+            "id": "sch1109",
+            "key": null,
+            "value": {
+                "_id": "sch1109",
+                "_rev": "4-6434c81bcfd612dde2407b37b864f273",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "351",
+                "session": "s279",
+                "venue": "paper",
+                "title": "Evaluation Methods 1"
+            }
+        },
+        {
+            "id": "sch1110",
+            "key": null,
+            "value": {
+                "_id": "sch1110",
+                "_rev": "4-895c7d0513da32447a76ddc39038f6c0",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "242AB",
+                "session": "s292",
+                "venue": "paper",
+                "title": "Blindness and Design"
+            }
+        },
+        {
+            "id": "sch1111",
+            "key": null,
+            "value": {
+                "_id": "sch1111",
+                "_rev": "4-52fa1b5245c964cd4d1bd9a35afbc201",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "243",
+                "session": "s122",
+                "venue": "course",
+                "title": "Designing with and for Children in the 21st Century: Techniques and Practices"
+            }
+        },
+        {
+            "id": "sch1112",
+            "key": null,
+            "value": {
+                "_id": "sch1112",
+                "_rev": "4-dfda400db7c53503769d5887badd7de7",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "253",
+                "session": "s126",
+                "venue": "course",
+                "title": "Storyboarding for Designers and Design Researchers"
+            }
+        },
+        {
+            "id": "sch1113",
+            "key": null,
+            "value": {
+                "_id": "sch1113",
+                "_rev": "4-30ddcb0a79d3b8de80c8fd023f0fe57c",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "343",
+                "session": "s106",
+                "venue": "course",
+                "title": "Interaction Design for Social Development"
+            }
+        },
+        {
+            "id": "sch1114",
+            "key": null,
+            "value": {
+                "_id": "sch1114",
+                "_rev": "4-6a48c1a97206b4d2407b8880e5072e12",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "252A",
+                "session": "s145",
+                "venue": "course",
+                "title": "Designing Augmented Reality Experiences"
+            }
+        },
+        {
+            "id": "sch1115",
+            "key": null,
+            "value": {
+                "_id": "sch1115",
+                "_rev": "5-6e9a6ea940317bc28bd3f0180e1f75ae",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "361",
+                "session": "s104",
+                "venue": "course",
+                "title": "Empirical Research Methods for Human-Computer Interaction"
+            }
+        },
+        {
+            "id": "sch1116",
+            "key": null,
+            "value": {
+                "_id": "sch1116",
+                "_rev": "4-c020266455b019a908ffb7f725e1ac9c",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "362/363",
+                "session": "s167",
+                "venue": "SIG",
+                "title": "Automotive User Interface Research Moves into Fast Lane"
+            }
+        },
+        {
+            "id": "sch1117",
+            "key": null,
+            "value": {
+                "_id": "sch1117",
+                "_rev": "5-bccc9668b022d48c6bc71f85fd2675ee",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "14:00-15:20",
+                "room": "221/221M",
+                "session": "s319",
+                "venue": "bof",
+                "title": "Birds of a feather - session 10"
+            }
+        },
+        {
+            "id": "sch1201",
+            "key": null,
+            "value": {
+                "_id": "sch1201",
+                "_rev": "4-31d0aacff6fa86fbdf1e7fc46d45af05",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "Blue",
+                "session": "s273",
+                "venue": "paper",
+                "title": "How We Feel About Websites"
+            }
+        },
+        {
+            "id": "sch1202",
+            "key": null,
+            "value": {
+                "_id": "sch1202",
+                "_rev": "4-b3ff01bc5df075170f7f2e063c658f8c",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "Bordeaux",
+                "session": "s159",
+                "venue": "panel",
+                "title": "Health Community Panel: Theory vs. Design-Driven Approaches for Behavior Change Research"
+            }
+        },
+        {
+            "id": "sch1203",
+            "key": null,
+            "value": {
+                "_id": "sch1203",
+                "_rev": "4-c079888a59f03bacbeeafcd6b4c4bf81",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "252B",
+                "session": "s260",
+                "venue": "paper",
+                "title": "Crowdsource Activism Volunteering Citizen Science"
+            }
+        },
+        {
+            "id": "sch1204",
+            "key": null,
+            "value": {
+                "_id": "sch1204",
+                "_rev": "4-6a8f900823c514a2a107d60dd045ae76",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "352AB",
+                "session": "s218",
+                "venue": "paper",
+                "title": "Multi-device Interaction"
+            }
+        },
+        {
+            "id": "sch1205",
+            "key": null,
+            "value": {
+                "_id": "sch1205",
+                "_rev": "4-4d5dd1681d18dfe6a42e3829fd208abf",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "Havane",
+                "session": "s204",
+                "venue": "paper",
+                "title": "Smart Tools for Smart Work Environments: working with the crowds"
+            }
+        },
+        {
+            "id": "sch1206",
+            "key": null,
+            "value": {
+                "_id": "sch1206",
+                "_rev": "4-dc8fc8d282c80628f458bba342ebd1f5",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "241",
+                "session": "s247",
+                "venue": "paper",
+                "title": "Displays in public space"
+            }
+        },
+        {
+            "id": "sch1207",
+            "key": null,
+            "value": {
+                "_id": "sch1207",
+                "_rev": "4-58fc170ad0ea50827b9c5ebfb0fe9586",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "342A",
+                "session": "s240",
+                "venue": "paper",
+                "title": "Hedonism, narrative, materiality & Media (This that and the other)"
+            }
+        },
+        {
+            "id": "sch1208",
+            "key": null,
+            "value": {
+                "_id": "sch1208",
+                "_rev": "4-a753537cb79a2443280e04e0e8d9a589",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "251",
+                "session": "s274",
+                "venue": "paper",
+                "title": "Privacy"
+            }
+        },
+        {
+            "id": "sch1209",
+            "key": null,
+            "value": {
+                "_id": "sch1209",
+                "_rev": "4-379102433e9f5a1ef04a8f68b69f1d56",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "351",
+                "session": "s278",
+                "venue": "paper",
+                "title": "HCI Ethics"
+            }
+        },
+        {
+            "id": "sch1210",
+            "key": null,
+            "value": {
+                "_id": "sch1210",
+                "_rev": "5-a32a698d1322053a8f7230cac0cfbb07",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "242AB",
+                "session": "s185",
+                "venue": "altchi",
+                "title": "alt.chi session 4"
+            }
+        },
+        {
+            "id": "sch1211",
+            "key": null,
+            "value": {
+                "_id": "sch1211",
+                "_rev": "4-9ca270c4e3975baec52d4f56a86bbf4f",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "243",
+                "session": "s123",
+                "venue": "course",
+                "title": "Designing with and for Children in the 21st Century: Techniques and Practices"
+            }
+        },
+        {
+            "id": "sch1212",
+            "key": null,
+            "value": {
+                "_id": "sch1212",
+                "_rev": "4-da0d85d03fa70b98f86f16a67bf5620e",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "253",
+                "session": "s127",
+                "venue": "course",
+                "title": "Storyboarding for Designers and Design Researchers"
+            }
+        },
+        {
+            "id": "sch1213",
+            "key": null,
+            "value": {
+                "_id": "sch1213",
+                "_rev": "4-5b853200f4295387fb919c5109a1d4fa",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "343",
+                "session": "s107",
+                "venue": "course",
+                "title": "Interaction Design for Social Development"
+            }
+        },
+        {
+            "id": "sch1214",
+            "key": null,
+            "value": {
+                "_id": "sch1214",
+                "_rev": "4-e8e0c08a79143d3852c1a94b73e8a661",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "252A",
+                "session": "s146",
+                "venue": "course",
+                "title": "Designing Augmented Reality Experiences"
+            }
+        },
+        {
+            "id": "sch1215",
+            "key": null,
+            "value": {
+                "_id": "sch1215",
+                "_rev": "5-351f6d298e0f4ecdaf27e1f0fd982d67",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "361",
+                "session": "s105",
+                "venue": "course",
+                "title": "Empirical Research Methods for Human-Computer Interaction"
+            }
+        },
+        {
+            "id": "sch1216",
+            "key": null,
+            "value": {
+                "_id": "sch1216",
+                "_rev": "5-1b50583d9c9cd14f5d57c2b713b204fb",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "362/363",
+                "session": "s171",
+                "venue": "SIG",
+                "title": "HCI for Peace Ideathon"
+            }
+        },
+        {
+            "id": "sch1217",
+            "key": null,
+            "value": {
+                "_id": "sch1217",
+                "_rev": "5-8c24b11afb570ec219b36d91eee465d2",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "16:00-17:20",
+                "room": "221/221M",
+                "session": "s320",
+                "venue": "bof",
+                "title": "Birds of a feather - session 11"
+            }
+        },
+        {
+            "id": "sch1301",
+            "key": null,
+            "value": {
+                "_id": "sch1301",
+                "_rev": "4-b34edf72063f2ecc1852d1500269ccdb",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "Blue",
+                "session": "s228",
+                "venue": "paper",
+                "title": "Tactile Presentation Theory"
+            }
+        },
+        {
+            "id": "sch1302",
+            "key": null,
+            "value": {
+                "_id": "sch1302",
+                "_rev": "4-74e9add95bf2744ac0077fb9ba22912c",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "Bordeaux",
+                "session": "s211",
+                "venue": "paper",
+                "title": "Designs on Design 1: Exploring Design Approaches and Constructs"
+            }
+        },
+        {
+            "id": "sch1303",
+            "key": null,
+            "value": {
+                "_id": "sch1303",
+                "_rev": "4-98cfc2614d0f17f03350a4d7f4a46b66",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "252B",
+                "session": "s250",
+                "venue": "paper",
+                "title": "Beyond Desktop Interaction"
+            }
+        },
+        {
+            "id": "sch1304",
+            "key": null,
+            "value": {
+                "_id": "sch1304",
+                "_rev": "5-3bf3b827a17cc4ef228c1bd61fd9ae1b",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "242B",
+                "session": "s238",
+                "venue": "paper",
+                "title": "Playing with Body"
+            }
+        },
+        {
+            "id": "sch1305",
+            "key": null,
+            "value": {
+                "_id": "sch1305",
+                "_rev": "4-f2e507fd7282281eb02ca73cae4b3213",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "Havane",
+                "session": "s200",
+                "venue": "paper",
+                "title": "Online Sorrows Shared: Online dealing with problems"
+            }
+        },
+        {
+            "id": "sch1306",
+            "key": null,
+            "value": {
+                "_id": "sch1306",
+                "_rev": "4-a398f824f617891c97440dac88af6b05",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "241",
+                "session": "s267",
+                "venue": "paper",
+                "title": "Shopping and Tagging"
+            }
+        },
+        {
+            "id": "sch1307",
+            "key": null,
+            "value": {
+                "_id": "sch1307",
+                "_rev": "5-876a9552a22deb7add9f5a036660dcfc",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "221/221M",
+                "session": "s321",
+                "venue": "bof",
+                "title": "Birds of a feather - session 12"
+            }
+        },
+        {
+            "id": "sch1308",
+            "key": null,
+            "value": {
+                "_id": "sch1308",
+                "_rev": "5-1573f2a777465e5ceea65d9a7cde5989",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "251",
+                "session": "s186",
+                "venue": "altchi",
+                "title": "alt.chi session 5"
+            }
+        },
+        {
+            "id": "sch1309",
+            "key": null,
+            "value": {
+                "_id": "sch1309",
+                "_rev": "4-dfaf70be746556801df56dd3156282b3",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "362/363",
+                "session": "s173",
+                "venue": "SIG",
+                "title": "Science vs. Science: the Complexities of Interdisciplinary Research"
+            }
+        },
+        {
+            "id": "sch1310",
+            "key": null,
+            "value": {
+                "_id": "sch1310",
+                "_rev": "4-ab1f6f151147abef47cfe2bfa29208db",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "242A",
+                "session": "s190",
+                "venue": "casestudy",
+                "title": "Communitites of practice"
+            }
+        },
+        {
+            "id": "sch1311",
+            "key": null,
+            "value": {
+                "_id": "sch1311",
+                "_rev": "6-3ebbb4d732820d5f9b8148c41cc4fff1",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "243",
+                "session": "s325",
+                "venue": "special",
+                "title": "unused session 1"
+            }
+        },
+        {
+            "id": "sch1312",
+            "key": null,
+            "value": {
+                "_id": "sch1312",
+                "_rev": "5-a9d0c37bc985d8a6da529979afce224b",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "253",
+                "session": "s326",
+                "venue": "special",
+                "title": "unused session 2"
+            }
+        },
+        {
+            "id": "sch1313",
+            "key": null,
+            "value": {
+                "_id": "sch1313",
+                "_rev": "4-997a0464989ba3619137ad14e2364e33",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "252A",
+                "session": "s157",
+                "venue": "panel",
+                "title": "New Women Leaders in User Experience: A Year of Lessons Learned"
+            }
+        },
+        {
+            "id": "sch1314",
+            "key": null,
+            "value": {
+                "_id": "sch1314",
+                "_rev": "4-bd4a8d78862b55358023cd3a810950a9",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "11:00-12:20",
+                "room": "361",
+                "session": "s163",
+                "venue": "SIG",
+                "title": "A new Perspectives for the Games and Entertainment Community"
+            }
+        },
+        {
+            "id": "sch1401",
+            "key": null,
+            "value": {
+                "_id": "sch1401",
+                "_rev": "4-e525d25237af51037a6b5977b3153a8b",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "Blue",
+                "session": "s230",
+                "venue": "paper",
+                "title": "Uis for Software Development"
+            }
+        },
+        {
+            "id": "sch1402",
+            "key": null,
+            "value": {
+                "_id": "sch1402",
+                "_rev": "4-79bf918c2ef85adfa04679a021f91961",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "Bordeaux",
+                "session": "s212",
+                "venue": "paper",
+                "title": "Designs on Design 2: Exploring Design Approaches and Constructs"
+            }
+        },
+        {
+            "id": "sch1403",
+            "key": null,
+            "value": {
+                "_id": "sch1403",
+                "_rev": "4-bbb763ba9f08862bf3b13d1ec70987f9",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "252B",
+                "session": "s256",
+                "venue": "paper",
+                "title": "Interaction beyond Mouse and Keyboard"
+            }
+        },
+        {
+            "id": "sch1404",
+            "key": null,
+            "value": {
+                "_id": "sch1404",
+                "_rev": "5-bc8089ff98ed8dee62bba386ad4ffcaf",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "242B",
+                "session": "s239",
+                "venue": "paper",
+                "title": "Phyisical Excersion"
+            }
+        },
+        {
+            "id": "sch1405",
+            "key": null,
+            "value": {
+                "_id": "sch1405",
+                "_rev": "4-1546536975432bf893da4f5433c282fd",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "Havane",
+                "session": "s265",
+                "venue": "paper",
+                "title": "Search and Find"
+            }
+        },
+        {
+            "id": "sch1406",
+            "key": null,
+            "value": {
+                "_id": "sch1406",
+                "_rev": "4-602d0cd791327d0beb5a28c93a6a0b4d",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "241",
+                "session": "s272",
+                "venue": "paper",
+                "title": "Different Perspectives"
+            }
+        },
+        {
+            "id": "sch1407",
+            "key": null,
+            "value": {
+                "_id": "sch1407",
+                "_rev": "5-f126f37993f93e20019518c5be31c797",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "221/221M",
+                "session": "s322",
+                "venue": "bof",
+                "title": "Birds of a feather - session 13"
+            }
+        },
+        {
+            "id": "sch1408",
+            "key": null,
+            "value": {
+                "_id": "sch1408",
+                "_rev": "5-a87365d7a78068c8d7a42c0646c43c2e",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "251",
+                "session": "s187",
+                "venue": "altchi",
+                "title": "alt.chi session 6"
+            }
+        },
+        {
+            "id": "sch1409",
+            "key": null,
+            "value": {
+                "_id": "sch1409",
+                "_rev": "5-7e63f435e10bb689e6a61bdc4b86e20f",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "362/363",
+                "session": "s166",
+                "venue": "SIG",
+                "title": "Visions and Visioning in CHI"
+            }
+        },
+        {
+            "id": "sch1410",
+            "key": null,
+            "value": {
+                "_id": "sch1410",
+                "_rev": "4-f5c52705334f6215b0948f8e0f2beb48",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "242A",
+                "session": "s192",
+                "venue": "casestudy",
+                "title": "Case Studies in the wild"
+            }
+        },
+        {
+            "id": "sch1411",
+            "key": null,
+            "value": {
+                "_id": "sch1411",
+                "_rev": "5-f0d124c141f5e5e194d6a819d7251893",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "243",
+                "session": "s327",
+                "venue": "special",
+                "title": "unused session 3"
+            }
+        },
+        {
+            "id": "sch1412",
+            "key": null,
+            "value": {
+                "_id": "sch1412",
+                "_rev": "5-b888e8833fe056e17bd4d70a4f6d5237",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "253",
+                "session": "s328",
+                "venue": "special",
+                "title": "unused session 4"
+            }
+        },
+        {
+            "id": "sch1413",
+            "key": null,
+            "value": {
+                "_id": "sch1413",
+                "_rev": "4-2caba3c80291fa05ef85680be43971ef",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "252A",
+                "session": "s155",
+                "venue": "panel",
+                "title": "We Need to Talk: HCI and the Delicate Topic of Spoken Language Interaction"
+            }
+        },
+        {
+            "id": "sch1414",
+            "key": null,
+            "value": {
+                "_id": "sch1414",
+                "_rev": "4-0fc47770db62d916e712387e3869df38",
+                "type": "schedule",
+                "day": "Thursday",
+                "time": "14:00-15:20",
+                "room": "361",
+                "session": "s172",
+                "venue": "SIG",
+                "title": "UrbanIXD :: Designing Human Interactions In The Networked City"
+            }
+        },
+        {
+            "id": "sch201",
+            "key": null,
+            "value": {
+                "_id": "sch201",
+                "_rev": "4-975af337365686be63a0c97a072f2ffc",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "Blue",
+                "session": "s266",
+                "venue": "paper",
+                "title": "Language"
+            }
+        },
+        {
+            "id": "sch202",
+            "key": null,
+            "value": {
+                "_id": "sch202",
+                "_rev": "4-17dcf512897bd8ed8079fd55e35840a4",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "Bordeaux",
+                "session": "s233",
+                "venue": "paper",
+                "title": "Text Visualization"
+            }
+        },
+        {
+            "id": "sch203",
+            "key": null,
+            "value": {
+                "_id": "sch203",
+                "_rev": "4-b88bf6f34264eb4d8d0dd43ac6d6e170",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "252B",
+                "session": "s160",
+                "venue": "panel",
+                "title": "Leveraging the Progress of Women in the HCI Field to Address the Diversity Chasm: Industry and Academia"
+            }
+        },
+        {
+            "id": "sch204",
+            "key": null,
+            "value": {
+                "_id": "sch204",
+                "_rev": "4-88ec6fc7ad1159872a335a9421ca21c1",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "352AB",
+                "session": "s221",
+                "venue": "paper",
+                "title": "Multitouch and Gestures"
+            }
+        },
+        {
+            "id": "sch205",
+            "key": null,
+            "value": {
+                "_id": "sch205",
+                "_rev": "5-efa2b70298e6caded3513295d7d20657",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "Havane",
+                "session": "s300",
+                "venue": "special",
+                "title": "Lifetime Research Award"
+            }
+        },
+        {
+            "id": "sch206",
+            "key": null,
+            "value": {
+                "_id": "sch206",
+                "_rev": "4-81d0857a92bd808336d71520b771c16a",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "241",
+                "session": "s254",
+                "venue": "paper",
+                "title": "Mobile keyboard / text entry"
+            }
+        },
+        {
+            "id": "sch207",
+            "key": null,
+            "value": {
+                "_id": "sch207",
+                "_rev": "5-4cfbcc08b440985de54d1b4bf6ff9ff4",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "342A",
+                "session": "s182",
+                "venue": "altchi",
+                "title": "alt.chi session 1"
+            }
+        },
+        {
+            "id": "sch208",
+            "key": null,
+            "value": {
+                "_id": "sch208",
+                "_rev": "4-231369098cd871e6e4cd7078c5d35e76",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "251",
+                "session": "s288",
+                "venue": "paper",
+                "title": "Learning"
+            }
+        },
+        {
+            "id": "sch209",
+            "key": null,
+            "value": {
+                "_id": "sch209",
+                "_rev": "4-87ab05621e4cc10250016730a0f308bc",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "351",
+                "session": "s246",
+                "venue": "paper",
+                "title": "Touching Experiences: tangible computing & trajectories"
+            }
+        },
+        {
+            "id": "sch210",
+            "key": null,
+            "value": {
+                "_id": "sch210",
+                "_rev": "4-257970961dc38285c70dc6eef8604f37",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "242AB",
+                "session": "s296",
+                "venue": "paper",
+                "title": "Content, Creation, and Health"
+            }
+        },
+        {
+            "id": "sch211",
+            "key": null,
+            "value": {
+                "_id": "sch211",
+                "_rev": "4-5b77b69421df894f2242bfe8b9edf5ee",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "243",
+                "session": "s124",
+                "venue": "course",
+                "title": "Practical Statistics for User Experience Part I"
+            }
+        },
+        {
+            "id": "sch212",
+            "key": null,
+            "value": {
+                "_id": "sch212",
+                "_rev": "4-662a14bc3393e549f845a46dc068e609",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "253",
+                "session": "s133",
+                "venue": "course",
+                "title": "Practical Statistics for User Experience Part II"
+            }
+        },
+        {
+            "id": "sch213",
+            "key": null,
+            "value": {
+                "_id": "sch213",
+                "_rev": "4-10e6bd78739bf3eab65fc08bda1498cc",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "343",
+                "session": "s128",
+                "venue": "course",
+                "title": "Sci-Fi and CHI in the Movies and Television"
+            }
+        },
+        {
+            "id": "sch214",
+            "key": null,
+            "value": {
+                "_id": "sch214",
+                "_rev": "4-519cf63ea288e1206bfa4603f0544696",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "252A",
+                "session": "s165",
+                "venue": "SIG",
+                "title": "Designing Interactive Secure System: CHI 2013 Special Interest Group"
+            }
+        },
+        {
+            "id": "sch215",
+            "key": null,
+            "value": {
+                "_id": "sch215",
+                "_rev": "4-b664dee2ed31008338d555b795a66436",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "361",
+                "session": "s139",
+                "venue": "course",
+                "title": "Rapid Design Labs—A Tool to Turbocharge Design-Led Innovation"
+            }
+        },
+        {
+            "id": "sch216",
+            "key": null,
+            "value": {
+                "_id": "sch216",
+                "_rev": "4-bfa674f8240d82b863e612c5d7fcdd95",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "362/363",
+                "session": "s176",
+                "venue": "SIG",
+                "title": "Human Computer Interaction for Development (HCI4D)"
+            }
+        },
+        {
+            "id": "sch217",
+            "key": null,
+            "value": {
+                "_id": "sch217",
+                "_rev": "5-d8ede52c90f24ac67956723012dc8bf3",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "11:00-12:20",
+                "room": "221/221M",
+                "session": "s310",
+                "venue": "bof",
+                "title": "Birds of a feather - session 1"
+            }
+        },
+        {
+            "id": "sch301",
+            "key": null,
+            "value": {
+                "_id": "sch301",
+                "_rev": "4-41ce3260cec32bf38ec4f694a8ef56da",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "Blue",
+                "session": "s293",
+                "venue": "paper",
+                "title": "Autism"
+            }
+        },
+        {
+            "id": "sch302",
+            "key": null,
+            "value": {
+                "_id": "sch302",
+                "_rev": "4-9de89dc1b01812c5ebf3b4b5cf0e011a",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "Bordeaux",
+                "session": "s231",
+                "venue": "paper",
+                "title": "Visualization 1"
+            }
+        },
+        {
+            "id": "sch303",
+            "key": null,
+            "value": {
+                "_id": "sch303",
+                "_rev": "4-e81e0a75f6bc78e2d6b626c6f6108307",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "252B",
+                "session": "s153",
+                "venue": "panel",
+                "title": "CALLING ALL GAME CHANGERS: BYOD (Bring Your Own Disruption)"
+            }
+        },
+        {
+            "id": "sch304",
+            "key": null,
+            "value": {
+                "_id": "sch304",
+                "_rev": "4-aa1a0fb38552c5a6cb521ccc3c5756cb",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "352AB",
+                "session": "s219",
+                "venue": "paper",
+                "title": "Mobile Gestures and Grasp"
+            }
+        },
+        {
+            "id": "sch305",
+            "key": null,
+            "value": {
+                "_id": "sch305",
+                "_rev": "4-82c69274734407c28cb122b44d4fcb70",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "Havane",
+                "session": "s201",
+                "venue": "paper",
+                "title": "Enterprise and online communities: the best of both worlds"
+            }
+        },
+        {
+            "id": "sch306",
+            "key": null,
+            "value": {
+                "_id": "sch306",
+                "_rev": "4-b54d745acbcc0031c5db7c428314345f",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "241",
+                "session": "s255",
+                "venue": "paper",
+                "title": "Hotkeys / Touch keyboards"
+            }
+        },
+        {
+            "id": "sch307",
+            "key": null,
+            "value": {
+                "_id": "sch307",
+                "_rev": "4-9c753f9de84d90e9dc865a2cca26aa5f",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "342A",
+                "session": "s271",
+                "venue": "paper",
+                "title": "Brain Interfaces"
+            }
+        },
+        {
+            "id": "sch308",
+            "key": null,
+            "value": {
+                "_id": "sch308",
+                "_rev": "4-9b74c1a48b2054c9e238ae24f088dc5d",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "251",
+                "session": "s286",
+                "venue": "paper",
+                "title": "Design for the Classroom"
+            }
+        },
+        {
+            "id": "sch309",
+            "key": null,
+            "value": {
+                "_id": "sch309",
+                "_rev": "4-57a3993501cfff1b81508038d7417faa",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "351",
+                "session": "s245",
+                "venue": "paper",
+                "title": "Co-Design: involving propspective users in design"
+            }
+        },
+        {
+            "id": "sch310",
+            "key": null,
+            "value": {
+                "_id": "sch310",
+                "_rev": "4-04166fc838c68afe47d10d7278a859ad",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "242AB",
+                "session": "s289",
+                "venue": "paper",
+                "title": "Technologies for Life"
+            }
+        },
+        {
+            "id": "sch311",
+            "key": null,
+            "value": {
+                "_id": "sch311",
+                "_rev": "4-106fe6a6ef9da4381dea0ff2543a5046",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "243",
+                "session": "s125",
+                "venue": "course",
+                "title": "Practical Statistics for User Experience Part I"
+            }
+        },
+        {
+            "id": "sch312",
+            "key": null,
+            "value": {
+                "_id": "sch312",
+                "_rev": "4-bebe5e21ef78c05a9ef91c11310cea02",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "253",
+                "session": "s134",
+                "venue": "course",
+                "title": "Practical Statistics for User Experience Part II"
+            }
+        },
+        {
+            "id": "sch313",
+            "key": null,
+            "value": {
+                "_id": "sch313",
+                "_rev": "4-06eb0d3768d45766cf529b232dddae1d",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "343",
+                "session": "s129",
+                "venue": "course",
+                "title": "Sci-Fi and CHI in the Movies and Television"
+            }
+        },
+        {
+            "id": "sch314",
+            "key": null,
+            "value": {
+                "_id": "sch314",
+                "_rev": "4-269956e1da7a92e73ac782d99922b261",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "252A",
+                "session": "s135",
+                "venue": "course",
+                "title": "Analyzing Social Media Systems"
+            }
+        },
+        {
+            "id": "sch315",
+            "key": null,
+            "value": {
+                "_id": "sch315",
+                "_rev": "4-765df9168cde2e2a6f7b213a65383f75",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "361",
+                "session": "s140",
+                "venue": "course",
+                "title": "Rapid Design Labs—A Tool to Turbocharge Design-Led Innovation"
+            }
+        },
+        {
+            "id": "sch316",
+            "key": null,
+            "value": {
+                "_id": "sch316",
+                "_rev": "4-479a3bc3b3145356acd8a49975001b14",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "362/363",
+                "session": "s174",
+                "venue": "SIG",
+                "title": "The Role of Engineering Work in CHI"
+            }
+        },
+        {
+            "id": "sch317",
+            "key": null,
+            "value": {
+                "_id": "sch317",
+                "_rev": "5-d51cb0e55636024fd2330e2b813f3ed3",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "14:00-15:20",
+                "room": "221/221M",
+                "session": "s311",
+                "venue": "bof",
+                "title": "Birds of a feather - session 2"
+            }
+        },
+        {
+            "id": "sch401",
+            "key": null,
+            "value": {
+                "_id": "sch401",
+                "_rev": "4-9c2a0a4353bf44c47c3fc8a16b7f10ad",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "Blue",
+                "session": "s208",
+                "venue": "paper",
+                "title": "Managment of Knowledge and Collaoration: brining the best out of teams"
+            }
+        },
+        {
+            "id": "sch402",
+            "key": null,
+            "value": {
+                "_id": "sch402",
+                "_rev": "4-a8c48f3ba6521b67d22f1d1d8130b391",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "Bordeaux",
+                "session": "s232",
+                "venue": "paper",
+                "title": "Visual perception"
+            }
+        },
+        {
+            "id": "sch403",
+            "key": null,
+            "value": {
+                "_id": "sch403",
+                "_rev": "4-45a1dec1cbcc4abae9a620b8b50cf377",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "252B",
+                "session": "s156",
+                "venue": "panel",
+                "title": "CHI – AN ACTIVIST AGENDA?"
+            }
+        },
+        {
+            "id": "sch404",
+            "key": null,
+            "value": {
+                "_id": "sch404",
+                "_rev": "4-ba01b7cf78e3aee561c79adf47921715",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "352AB",
+                "session": "s226",
+                "venue": "paper",
+                "title": "Haptics"
+            }
+        },
+        {
+            "id": "sch405",
+            "key": null,
+            "value": {
+                "_id": "sch405",
+                "_rev": "4-16d05b09dd3d12f37fd154e1d5732929",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "Havane",
+                "session": "s248",
+                "venue": "paper",
+                "title": "Mobiles and more"
+            }
+        },
+        {
+            "id": "sch406",
+            "key": null,
+            "value": {
+                "_id": "sch406",
+                "_rev": "4-a1d39f2df239bc7ee66190bb30870b18",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "241",
+                "session": "s253",
+                "venue": "paper",
+                "title": "Gestures studies / empirical"
+            }
+        },
+        {
+            "id": "sch407",
+            "key": null,
+            "value": {
+                "_id": "sch407",
+                "_rev": "4-3cf835b7436a4bab8fd558d1c52da7b2",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "342A",
+                "session": "s215",
+                "venue": "paper",
+                "title": "Design for the Home"
+            }
+        },
+        {
+            "id": "sch408",
+            "key": null,
+            "value": {
+                "_id": "sch408",
+                "_rev": "4-f13297a786c14b30d31c11a7cb98c71c",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "251",
+                "session": "s287",
+                "venue": "paper",
+                "title": "Online Classrooms"
+            }
+        },
+        {
+            "id": "sch409",
+            "key": null,
+            "value": {
+                "_id": "sch409",
+                "_rev": "4-a5c500c579afa00e11e5fe0cbac1b3db",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "351",
+                "session": "s242",
+                "venue": "paper",
+                "title": "Mobile 2: Very Moving: reflection in mobile technologies"
+            }
+        },
+        {
+            "id": "sch410",
+            "key": null,
+            "value": {
+                "_id": "sch410",
+                "_rev": "4-f0405c9c10bbbfa24a839c55c46a884d",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "242AB",
+                "session": "s193",
+                "venue": "casestudy",
+                "title": "Case Studies in innovating UCD Process"
+            }
+        },
+        {
+            "id": "sch411",
+            "key": null,
+            "value": {
+                "_id": "sch411",
+                "_rev": "4-3f4bc5f8fd77cfa66b66d1093b62d6bb",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "243",
+                "session": "s114",
+                "venue": "course",
+                "title": "Six Steps to Successful UX in an Agile World"
+            }
+        },
+        {
+            "id": "sch412",
+            "key": null,
+            "value": {
+                "_id": "sch412",
+                "_rev": "4-1fb2286c455eeab86301054a98a463af",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "253",
+                "session": "s130",
+                "venue": "course",
+                "title": "User Interface Design and Adaptation for Multi-Device Environments"
+            }
+        },
+        {
+            "id": "sch413",
+            "key": null,
+            "value": {
+                "_id": "sch413",
+                "_rev": "4-8f540fef2036b0ab52027d2de48068d9",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "343",
+                "session": "s142",
+                "venue": "course",
+                "title": "Body, Whys & Videotape: Applying Somatic Techniques to User Experience in HCI"
+            }
+        },
+        {
+            "id": "sch414",
+            "key": null,
+            "value": {
+                "_id": "sch414",
+                "_rev": "4-a7fe115ed9fe12852bea5b28e443973a",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "252A",
+                "session": "s136",
+                "venue": "course",
+                "title": "Analyzing Social Media Systems"
+            }
+        },
+        {
+            "id": "sch415",
+            "key": null,
+            "value": {
+                "_id": "sch415",
+                "_rev": "4-b0ed2bdf05ce6428fcf4645f0a41aeb8",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "361",
+                "session": "s141",
+                "venue": "course",
+                "title": "Rapid Design Labs—A Tool to Turbocharge Design-Led Innovation"
+            }
+        },
+        {
+            "id": "sch416",
+            "key": null,
+            "value": {
+                "_id": "sch416",
+                "_rev": "4-6ee8260b6d24e8f4bf96be8bc1f61204",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "362/363",
+                "session": "s175",
+                "venue": "SIG",
+                "title": "On Top of the User Experience Wave – How is Our Work Changing?"
+            }
+        },
+        {
+            "id": "sch417",
+            "key": null,
+            "value": {
+                "_id": "sch417",
+                "_rev": "5-7d6ca55bbf02eef28ab31ad6987ccc5d",
+                "type": "schedule",
+                "day": "Monday",
+                "time": "16:00-17:20",
+                "room": "221/221M",
+                "session": "s312",
+                "venue": "bof",
+                "title": "Birds of a feather - session 3"
+            }
+        },
+        {
+            "id": "sch501",
+            "key": null,
+            "value": {
+                "_id": "sch501",
+                "_rev": "4-9dc456715f3934b62d20945a127d242e",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "Blue",
+                "session": "s285",
+                "venue": "paper",
+                "title": "Classrooms"
+            }
+        },
+        {
+            "id": "sch502",
+            "key": null,
+            "value": {
+                "_id": "sch502",
+                "_rev": "4-65da29f3c1719e7b6dceaf381507c6a2",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "Bordeaux",
+                "session": "s234",
+                "venue": "paper",
+                "title": "Video"
+            }
+        },
+        {
+            "id": "sch503",
+            "key": null,
+            "value": {
+                "_id": "sch503",
+                "_rev": "4-4da26edd8afc33e6cf069dad4d7ce70d",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "252B",
+                "session": "s263",
+                "venue": "paper",
+                "title": "Food"
+            }
+        },
+        {
+            "id": "sch504",
+            "key": null,
+            "value": {
+                "_id": "sch504",
+                "_rev": "4-93af5393bdaccb58a55686b160a4e89a",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "352AB",
+                "session": "s220",
+                "venue": "paper",
+                "title": "Interaction around Devices"
+            }
+        },
+        {
+            "id": "sch505",
+            "key": null,
+            "value": {
+                "_id": "sch505",
+                "_rev": "5-5d82d217eebe835499dda3e94f970ed6",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "Havane",
+                "session": "s301",
+                "venue": "special",
+                "title": "Lifetime Practice Award"
+            }
+        },
+        {
+            "id": "sch506",
+            "key": null,
+            "value": {
+                "_id": "sch506",
+                "_rev": "4-498fa2369ffc15743c1dc3799445e532",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "241",
+                "session": "s209",
+                "venue": "paper",
+                "title": "Power to the People: utalizing crowdsourcing"
+            }
+        },
+        {
+            "id": "sch507",
+            "key": null,
+            "value": {
+                "_id": "sch507",
+                "_rev": "4-de305e7d4494dcdb30ba6452c5002b34",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "342A",
+                "session": "s213",
+                "venue": "paper",
+                "title": "Embodied Interaction (and Thinking) Design"
+            }
+        },
+        {
+            "id": "sch508",
+            "key": null,
+            "value": {
+                "_id": "sch508",
+                "_rev": "4-d67bffca1741b008db2f75bc46961b34",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "251",
+                "session": "s284",
+                "venue": "paper",
+                "title": "Nonkid Games"
+            }
+        },
+        {
+            "id": "sch509",
+            "key": null,
+            "value": {
+                "_id": "sch509",
+                "_rev": "4-057eb9686cfd439c9e2ab807c7894579",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "351",
+                "session": "s161",
+                "venue": "panel",
+                "title": "Exploring the Representation of Women Perspectives in Technologies"
+            }
+        },
+        {
+            "id": "sch510",
+            "key": null,
+            "value": {
+                "_id": "sch510",
+                "_rev": "4-6f31219558033d49bc1a61fbe4e639c9",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "242AB",
+                "session": "s290",
+                "venue": "paper",
+                "title": "Technologies for Life 2"
+            }
+        },
+        {
+            "id": "sch511",
+            "key": null,
+            "value": {
+                "_id": "sch511",
+                "_rev": "4-f39e2a4386adda0be22ddd45725ba874",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "243",
+                "session": "s100",
+                "venue": "course",
+                "title": "User Experience Evaluation Methods – Which Method to Choose?"
+            }
+        },
+        {
+            "id": "sch512",
+            "key": null,
+            "value": {
+                "_id": "sch512",
+                "_rev": "4-b6d50cc434b778a84f72d795790f2800",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "253",
+                "session": "s119",
+                "venue": "course",
+                "title": "Designing Search Usability"
+            }
+        },
+        {
+            "id": "sch513",
+            "key": null,
+            "value": {
+                "_id": "sch513",
+                "_rev": "4-b2a0949ad396d4de76152d305a09d7c1",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "343",
+                "session": "s112",
+                "venue": "course",
+                "title": "Interactive Walking in Virtual Environments"
+            }
+        },
+        {
+            "id": "sch514",
+            "key": null,
+            "value": {
+                "_id": "sch514",
+                "_rev": "5-522686690cb57b2a5a2b4d887e979941",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "252A",
+                "session": "s137",
+                "venue": "course",
+                "title": "Speech-based Interaction: Myths, Challenges, and Opportunities"
+            }
+        },
+        {
+            "id": "sch515",
+            "key": null,
+            "value": {
+                "_id": "sch515",
+                "_rev": "5-a692f6c00d49b9bfcb3b341905fdee5f",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "361",
+                "session": "s170",
+                "venue": "SIG",
+                "title": "SIG: NVI (Non-Visual Interaction)"
+            }
+        },
+        {
+            "id": "sch516",
+            "key": null,
+            "value": {
+                "_id": "sch516",
+                "_rev": "4-4888e09716640c0efef518d8d1b26fb7",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "362/363",
+                "session": "s178",
+                "venue": "SIG",
+                "title": "Managing UX Teams"
+            }
+        },
+        {
+            "id": "sch517",
+            "key": null,
+            "value": {
+                "_id": "sch517",
+                "_rev": "5-5d1d5631311f6762c0da7350db1f6311",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "9:00-10:20",
+                "room": "221/221M",
+                "session": "s313",
+                "venue": "bof",
+                "title": "Birds of a feather - session 4"
+            }
+        },
+        {
+            "id": "sch601",
+            "key": null,
+            "value": {
+                "_id": "sch601",
+                "_rev": "4-878d4bac8b5967db0d7513b975cf19d6",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "Blue",
+                "session": "s257",
+                "venue": "paper",
+                "title": "Crowds and activism"
+            }
+        },
+        {
+            "id": "sch602",
+            "key": null,
+            "value": {
+                "_id": "sch602",
+                "_rev": "4-b9c6616be066287edebbe4c056a9889e",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "Bordeaux",
+                "session": "s235",
+                "venue": "paper",
+                "title": "Gaze"
+            }
+        },
+        {
+            "id": "sch603",
+            "key": null,
+            "value": {
+                "_id": "sch603",
+                "_rev": "5-054ddcfdfb58921c752090a1d255ad22",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "252B",
+                "session": "s183",
+                "venue": "altchi",
+                "title": "alt.chi session 2"
+            }
+        },
+        {
+            "id": "sch604",
+            "key": null,
+            "value": {
+                "_id": "sch604",
+                "_rev": "4-80fecddeba786233739b8d894b0fce63",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "352AB",
+                "session": "s224",
+                "venue": "paper",
+                "title": "Displays and Wearable"
+            }
+        },
+        {
+            "id": "sch605",
+            "key": null,
+            "value": {
+                "_id": "sch605",
+                "_rev": "5-9427eee5ddfb51b91746dda623404591",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "Havane",
+                "session": "s303",
+                "venue": "special",
+                "title": "Invited talk - DonNorman"
+            }
+        },
+        {
+            "id": "sch606",
+            "key": null,
+            "value": {
+                "_id": "sch606",
+                "_rev": "4-42152c62c16f0fa48c1d075a60cd45a6",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "241",
+                "session": "s269",
+                "venue": "paper",
+                "title": "Creating and Authoring"
+            }
+        },
+        {
+            "id": "sch607",
+            "key": null,
+            "value": {
+                "_id": "sch607",
+                "_rev": "4-b9a12d27fe7e40717b32fa4be03e0c73",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "342A",
+                "session": "s217",
+                "venue": "paper",
+                "title": "Design Ideation Methods"
+            }
+        },
+        {
+            "id": "sch608",
+            "key": null,
+            "value": {
+                "_id": "sch608",
+                "_rev": "5-13af6e20ae23f2da4d5f7c762a4dcd26",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "251",
+                "session": "s307",
+                "venue": "special",
+                "title": "Student Games Competition"
+            }
+        },
+        {
+            "id": "sch609",
+            "key": null,
+            "value": {
+                "_id": "sch609",
+                "_rev": "4-e479400d4e2577666fb7274e770f906a",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "351",
+                "session": "s149",
+                "venue": "panel",
+                "title": "Gamification @ Work"
+            }
+        },
+        {
+            "id": "sch610",
+            "key": null,
+            "value": {
+                "_id": "sch610",
+                "_rev": "4-b58a87733fb2498bed16148a7f266bc9",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "242AB",
+                "session": "s291",
+                "venue": "paper",
+                "title": "Impairment and Rehabilitation"
+            }
+        },
+        {
+            "id": "sch611",
+            "key": null,
+            "value": {
+                "_id": "sch611",
+                "_rev": "4-d72291000f6ab42a2328eacf2dfe1f09",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "243",
+                "session": "s101",
+                "venue": "course",
+                "title": "User Experience Evaluation Methods – Which Method to Choose?"
+            }
+        },
+        {
+            "id": "sch612",
+            "key": null,
+            "value": {
+                "_id": "sch612",
+                "_rev": "4-fd322a83811438876fa2cf7725fd1e72",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "253",
+                "session": "s120",
+                "venue": "course",
+                "title": "Designing Search Usability"
+            }
+        },
+        {
+            "id": "sch613",
+            "key": null,
+            "value": {
+                "_id": "sch613",
+                "_rev": "4-b034f62b8cc36c4429d1c710b4539401",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "343",
+                "session": "s113",
+                "venue": "course",
+                "title": "Interactive Walking in Virtual Environments"
+            }
+        },
+        {
+            "id": "sch614",
+            "key": null,
+            "value": {
+                "_id": "sch614",
+                "_rev": "5-d7f4d9087f2633dd9e74fd3cbfa17317",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "252A",
+                "session": "s138",
+                "venue": "course",
+                "title": "Speech-based Interaction: Myths, Challenges, and Opportunities"
+            }
+        },
+        {
+            "id": "sch615",
+            "key": null,
+            "value": {
+                "_id": "sch615",
+                "_rev": "4-438c8041b5ffb7b3bf645b16d82b543c",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "361",
+                "session": "s164",
+                "venue": "SIG",
+                "title": "Research-Practice Interaction: Building Bridges, Closing the Gap"
+            }
+        },
+        {
+            "id": "sch616",
+            "key": null,
+            "value": {
+                "_id": "sch616",
+                "_rev": "4-19045f08f79665f62694640a48a9c4b0",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "362/363",
+                "session": "s179",
+                "venue": "SIG",
+                "title": "Digital Art: Challenging Perspectives"
+            }
+        },
+        {
+            "id": "sch617",
+            "key": null,
+            "value": {
+                "_id": "sch617",
+                "_rev": "5-11bc00a178a839c1e4789820a3d0f251",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "11:00-12:20",
+                "room": "221/221M",
+                "session": "s314",
+                "venue": "bof",
+                "title": "Birds of a feather - session 5"
+            }
+        },
+        {
+            "id": "sch701",
+            "key": null,
+            "value": {
+                "_id": "sch701",
+                "_rev": "4-e6692fe5f4407754ad87eeaca74e7632",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "Blue",
+                "session": "s202",
+                "venue": "paper",
+                "title": "cross-over work"
+            }
+        },
+        {
+            "id": "sch702",
+            "key": null,
+            "value": {
+                "_id": "sch702",
+                "_rev": "4-f42deaaa5600dc1f2ed1acd379746ba8",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "Bordeaux",
+                "session": "s236",
+                "venue": "paper",
+                "title": "Performing on Stage"
+            }
+        },
+        {
+            "id": "sch703",
+            "key": null,
+            "value": {
+                "_id": "sch703",
+                "_rev": "5-e13589ca29f93bc4d0653b5347ef5a71",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "252B",
+                "session": "s184",
+                "venue": "altchi",
+                "title": "alt.chi session 3"
+            }
+        },
+        {
+            "id": "sch704",
+            "key": null,
+            "value": {
+                "_id": "sch704",
+                "_rev": "4-16802c3095a2e10a148f9b90b5f8a3ce",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "352AB",
+                "session": "s225",
+                "venue": "paper",
+                "title": "Touch, Tangibles, Touch Sensor"
+            }
+        },
+        {
+            "id": "sch705",
+            "key": null,
+            "value": {
+                "_id": "sch705",
+                "_rev": "4-b0e7cd398eb8409a1c5faa0ef108eb80",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "Havane",
+                "session": "s210",
+                "venue": "paper",
+                "title": "Creative Source Unitied: Crowdsourcing used in colaborative creation"
+            }
+        },
+        {
+            "id": "sch706",
+            "key": null,
+            "value": {
+                "_id": "sch706",
+                "_rev": "4-ec6342f0404c6b9a267748d4acda1d30",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "241",
+                "session": "s251",
+                "venue": "paper",
+                "title": "3D Uis"
+            }
+        },
+        {
+            "id": "sch707",
+            "key": null,
+            "value": {
+                "_id": "sch707",
+                "_rev": "4-842833d713a1fef69ae1df3cca1f9142",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "342A",
+                "session": "s216",
+                "venue": "paper",
+                "title": "Design and Time: Long-term User Involvment and temporal themes"
+            }
+        },
+        {
+            "id": "sch708",
+            "key": null,
+            "value": {
+                "_id": "sch708",
+                "_rev": "4-ba94aa0c7b42055e2bc57823ab4fae3c",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "251",
+                "session": "s282",
+                "venue": "paper",
+                "title": "Game Design"
+            }
+        },
+        {
+            "id": "sch709",
+            "key": null,
+            "value": {
+                "_id": "sch709",
+                "_rev": "4-3ba2b9cbabe44f7790e2a251e246b1ed",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "351",
+                "session": "s158",
+                "venue": "panel",
+                "title": "The Impact of Health IT Systems on Patient-Provider Interaction"
+            }
+        },
+        {
+            "id": "sch710",
+            "key": null,
+            "value": {
+                "_id": "sch710",
+                "_rev": "4-bb6a326b39c9f95526590c5ae651de9b",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "242AB",
+                "session": "s295",
+                "venue": "paper",
+                "title": "Health, Information, and Communication"
+            }
+        },
+        {
+            "id": "sch711",
+            "key": null,
+            "value": {
+                "_id": "sch711",
+                "_rev": "4-d9500aa8a5defa9decc44265b74ae518",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "243",
+                "session": "s117",
+                "venue": "course",
+                "title": "HTML5 Game Development"
+            }
+        },
+        {
+            "id": "sch712",
+            "key": null,
+            "value": {
+                "_id": "sch712",
+                "_rev": "4-5da128fbf66fb3efc4ddcd0f7996b35f",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "253",
+                "session": "s131",
+                "venue": "course",
+                "title": "Cognitive Crash Dummies: Predicting Performance from Early Prototypes"
+            }
+        },
+        {
+            "id": "sch713",
+            "key": null,
+            "value": {
+                "_id": "sch713",
+                "_rev": "4-9676392028ad3ff90b7a096f2232a36e",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "343",
+                "session": "s110",
+                "venue": "course",
+                "title": "Agile User Experience and UCD"
+            }
+        },
+        {
+            "id": "sch714",
+            "key": null,
+            "value": {
+                "_id": "sch714",
+                "_rev": "4-557947d859ce15b5d29fa9ab0ef09b7a",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "252A",
+                "session": "s143",
+                "venue": "course",
+                "title": "Make This! Introduction to Electronics Prototyping Using Arduino"
+            }
+        },
+        {
+            "id": "sch715",
+            "key": null,
+            "value": {
+                "_id": "sch715",
+                "_rev": "4-d8dfb2999b5503ff32df325318a94e75",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "361",
+                "session": "s181",
+                "venue": "SIG",
+                "title": "Consumer Engagement in Health Technologies Special Interest Group"
+            }
+        },
+        {
+            "id": "sch716",
+            "key": null,
+            "value": {
+                "_id": "sch716",
+                "_rev": "4-9a2c7ab24792989398f4fccbc04b1387",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "362/363",
+                "session": "s180",
+                "venue": "SIG",
+                "title": "Changing Perspectives on Sustainability: Healthy Debate or Divisive Factions?"
+            }
+        },
+        {
+            "id": "sch717",
+            "key": null,
+            "value": {
+                "_id": "sch717",
+                "_rev": "5-3d1e3ce2fbbc64f9e47829c98955f79d",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "14:00-15:20",
+                "room": "221/221M",
+                "session": "s315",
+                "venue": "bof",
+                "title": "Birds of a feather - session 6"
+            }
+        },
+        {
+            "id": "sch801",
+            "key": null,
+            "value": {
+                "_id": "sch801",
+                "_rev": "4-8dd1b9a248cfd013f8e47848aafb6bad",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "Blue",
+                "session": "s259",
+                "venue": "paper",
+                "title": "Energy / Sustainability"
+            }
+        },
+        {
+            "id": "sch802",
+            "key": null,
+            "value": {
+                "_id": "sch802",
+                "_rev": "4-460f26f73679aaacbaedfbdc550c2c96",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "Bordeaux",
+                "session": "s237",
+                "venue": "paper",
+                "title": "Bodies Matter"
+            }
+        },
+        {
+            "id": "sch803",
+            "key": null,
+            "value": {
+                "_id": "sch803",
+                "_rev": "4-0c8f660cd6e46ac7fe5f115862e19841",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "252B",
+                "session": "s258",
+                "venue": "paper",
+                "title": "ICT4D"
+            }
+        },
+        {
+            "id": "sch804",
+            "key": null,
+            "value": {
+                "_id": "sch804",
+                "_rev": "4-e125dcbf3fe75b88184631b59cd7d8d8",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "352AB",
+                "session": "s229",
+                "venue": "paper",
+                "title": "Bendable, Flexible"
+            }
+        },
+        {
+            "id": "sch805",
+            "key": null,
+            "value": {
+                "_id": "sch805",
+                "_rev": "4-fa1507c6a44557934b79834263993be6",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "Havane",
+                "session": "s203",
+                "venue": "paper",
+                "title": "Smart City: use social media for and in the public domain"
+            }
+        },
+        {
+            "id": "sch806",
+            "key": null,
+            "value": {
+                "_id": "sch806",
+                "_rev": "5-b75257bd853a8999116afea1713c8fcf",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "241",
+                "session": "s306",
+                "venue": "special",
+                "title": "Student Design Competition"
+            }
+        },
+        {
+            "id": "sch807",
+            "key": null,
+            "value": {
+                "_id": "sch807",
+                "_rev": "4-01fc5ac659a45aec5456916e2ae0bcad",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "342A",
+                "session": "s214",
+                "venue": "paper",
+                "title": "Design Research, Paradigm and Theory"
+            }
+        },
+        {
+            "id": "sch808",
+            "key": null,
+            "value": {
+                "_id": "sch808",
+                "_rev": "4-02f9e09b648af684b35ec8693215be9a",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "251",
+                "session": "s283",
+                "venue": "paper",
+                "title": "Exergames, Inclusion"
+            }
+        },
+        {
+            "id": "sch809",
+            "key": null,
+            "value": {
+                "_id": "sch809",
+                "_rev": "4-3b8d9aba75aa5ae158dcc479717ca7fd",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "351",
+                "session": "s154",
+                "venue": "panel",
+                "title": "UX Management:  Current and Future Trends"
+            }
+        },
+        {
+            "id": "sch810",
+            "key": null,
+            "value": {
+                "_id": "sch810",
+                "_rev": "4-eac447c6693eb7076c152583b4ff7742",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "242AB",
+                "session": "s294",
+                "venue": "paper",
+                "title": "The Clinical Setting"
+            }
+        },
+        {
+            "id": "sch811",
+            "key": null,
+            "value": {
+                "_id": "sch811",
+                "_rev": "4-785bff342a5f38b2f4630d2fb1027ef6",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "243",
+                "session": "s118",
+                "venue": "course",
+                "title": "HTML5 Game Development"
+            }
+        },
+        {
+            "id": "sch812",
+            "key": null,
+            "value": {
+                "_id": "sch812",
+                "_rev": "4-f457cbca3173191c1019a3e46ff31d80",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "253",
+                "session": "s132",
+                "venue": "course",
+                "title": "Cognitive Crash Dummies: Predicting Performance from Early Prototypes"
+            }
+        },
+        {
+            "id": "sch813",
+            "key": null,
+            "value": {
+                "_id": "sch813",
+                "_rev": "4-2c21fe5f5db447495d32e43db829330f",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "343",
+                "session": "s111",
+                "venue": "course",
+                "title": "Agile User Experience and UCD"
+            }
+        },
+        {
+            "id": "sch814",
+            "key": null,
+            "value": {
+                "_id": "sch814",
+                "_rev": "4-b6c7829f93bfe96f2fdac188701f1cef",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "252A",
+                "session": "s144",
+                "venue": "course",
+                "title": "Make This! Introduction to Electronics Prototyping Using Arduino"
+            }
+        },
+        {
+            "id": "sch815",
+            "key": null,
+            "value": {
+                "_id": "sch815",
+                "_rev": "4-a345544d0a044c75c8de61a51e42207a",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "361",
+                "session": "s169",
+                "venue": "SIG",
+                "title": "HCI with Sports"
+            }
+        },
+        {
+            "id": "sch816",
+            "key": null,
+            "value": {
+                "_id": "sch816",
+                "_rev": "4-d78c4446b746dfad47ee3a7c8dc4517a",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "362/363",
+                "session": "s162",
+                "venue": "SIG",
+                "title": "SIG NIME: Music, Technology, and Human-Computer Interaction"
+            }
+        },
+        {
+            "id": "sch817",
+            "key": null,
+            "value": {
+                "_id": "sch817",
+                "_rev": "5-a778d86b52986802042986ec28a96cde",
+                "type": "schedule",
+                "day": "Tuesday",
+                "time": "16:00-17:20",
+                "room": "221/221M",
+                "session": "s316",
+                "venue": "bof",
+                "title": "Birds of a feather - session 7"
+            }
+        },
+        {
+            "id": "sch901",
+            "key": null,
+            "value": {
+                "_id": "sch901",
+                "_rev": "4-fa88261c7ce7d91100f2fa5498e60667",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "Blue",
+                "session": "s268",
+                "venue": "paper",
+                "title": "Navigating Data"
+            }
+        },
+        {
+            "id": "sch902",
+            "key": null,
+            "value": {
+                "_id": "sch902",
+                "_rev": "4-678d4c866f6d7db53fbaf4de3f81bc69",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "Bordeaux",
+                "session": "s194",
+                "venue": "casestudy",
+                "title": "Case Study of Changing the Way We Work"
+            }
+        },
+        {
+            "id": "sch903",
+            "key": null,
+            "value": {
+                "_id": "sch903",
+                "_rev": "4-f62bfc0af156b0f87346ef158b5b30ca",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "252B",
+                "session": "s264",
+                "venue": "paper",
+                "title": "Novel Programming"
+            }
+        },
+        {
+            "id": "sch904",
+            "key": null,
+            "value": {
+                "_id": "sch904",
+                "_rev": "4-36be153e4977cd03762fc7419b469d66",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "352AB",
+                "session": "s222",
+                "venue": "paper",
+                "title": "Touch"
+            }
+        },
+        {
+            "id": "sch905",
+            "key": null,
+            "value": {
+                "_id": "sch905",
+                "_rev": "5-dff3e1a80b4f88c5928d6a53ab35bdd8",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "Havane",
+                "session": "s302",
+                "venue": "special",
+                "title": "Social Impact Award"
+            }
+        },
+        {
+            "id": "sch906",
+            "key": null,
+            "value": {
+                "_id": "sch906",
+                "_rev": "4-7a25d88ad3962c865289c5c87969539f",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "241",
+                "session": "s270",
+                "venue": "paper",
+                "title": "Untitled (Automotive and Awareness)"
+            }
+        },
+        {
+            "id": "sch907",
+            "key": null,
+            "value": {
+                "_id": "sch907",
+                "_rev": "4-6db3d99536d68e669e71704c47dc68b0",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "342A",
+                "session": "s243",
+                "venue": "paper",
+                "title": "Place meets Engagement"
+            }
+        },
+        {
+            "id": "sch908",
+            "key": null,
+            "value": {
+                "_id": "sch908",
+                "_rev": "4-475815767de33ecf9bf4e2d1051feb43",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "251",
+                "session": "s276",
+                "venue": "paper",
+                "title": "Authentication"
+            }
+        },
+        {
+            "id": "sch909",
+            "key": null,
+            "value": {
+                "_id": "sch909",
+                "_rev": "4-599e7fa97bc7686a0535c30f73d8620c",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "351",
+                "session": "s281",
+                "venue": "paper",
+                "title": "Automated Usability / Evaluation Methods"
+            }
+        },
+        {
+            "id": "sch910",
+            "key": null,
+            "value": {
+                "_id": "sch910",
+                "_rev": "4-6c671c666232f7875ae51cf0cd407b59",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "242AB",
+                "session": "s151",
+                "venue": "panel",
+                "title": "Theory and Practice in UX Research: Uneasy Bedfellows?"
+            }
+        },
+        {
+            "id": "sch911",
+            "key": null,
+            "value": {
+                "_id": "sch911",
+                "_rev": "5-18988c926670d04cae6a2c662b692902",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "243",
+                "session": "s305",
+                "venue": "special",
+                "title": "Student Research Competition"
+            }
+        },
+        {
+            "id": "sch912",
+            "key": null,
+            "value": {
+                "_id": "sch912",
+                "_rev": "4-229ed0f2a1734c4d753cc2b584fa1fc7",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "253",
+                "session": "s115",
+                "venue": "course",
+                "title": "Expert Reviews – For Experts"
+            }
+        },
+        {
+            "id": "sch913",
+            "key": null,
+            "value": {
+                "_id": "sch913",
+                "_rev": "4-14f16e3e7e5f2c16a7f91ed63a592c95",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "343",
+                "session": "s108",
+                "venue": "course",
+                "title": "Card Sorting for Navigation Design"
+            }
+        },
+        {
+            "id": "sch914",
+            "key": null,
+            "value": {
+                "_id": "sch914",
+                "_rev": "4-7b26d2d94450be4303dbaf240962a764",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "252A",
+                "session": "s102",
+                "venue": "course",
+                "title": "Designing a Task-Focused Conceptual Model"
+            }
+        },
+        {
+            "id": "sch915",
+            "key": null,
+            "value": {
+                "_id": "sch915",
+                "_rev": "5-a73c622dc919de0674a0ce34c5904113",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "361",
+                "session": "s147",
+                "venue": "course",
+                "title": "Choice and Decision Making for HCI"
+            }
+        },
+        {
+            "id": "sch916",
+            "key": null,
+            "value": {
+                "_id": "sch916",
+                "_rev": "4-89f720fc173404324b4d8eeb9152386b",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "362/363",
+                "session": "s168",
+                "venue": "SIG",
+                "title": "CHI 2013 Human Work Interaction Design (HWID) SIG: Past History and Future Challenges"
+            }
+        },
+        {
+            "id": "sch917",
+            "key": null,
+            "value": {
+                "_id": "sch917",
+                "_rev": "5-136d4cb2a69c2409780312f70a6bd724",
+                "type": "schedule",
+                "day": "Wednesday",
+                "time": "9:00-10:20",
+                "room": "221/221M",
+                "session": "s317",
+                "venue": "bof",
+                "title": "Birds of a feather - session 8"
+            }
+        }
+    ]
+}
