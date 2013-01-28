@@ -23,6 +23,7 @@ var VisualOps = function() {
 	function _removeSessionFromSlot(s){
 		var $session = findCellByID(s.id);
         $session.removeClass("selected").popover("destroy").removeAttr("id").removeData();
+        console.log("hello", s.time);
         var after = getSessionCell("empty", null, s.date, s.time, s.room);
         // Watch out! jQuery replaceWith returns the original element, not the replaced element.
         $session.replaceWith(after); 

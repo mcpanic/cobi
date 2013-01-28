@@ -428,7 +428,7 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverSlots, serverT
     // at the new transactions indices. So trigger 
 	console.log("throwing serverScheduleChange with indices: ");
 	console.log(newTransactionIndices);
-	$(document).trigger('serverScheduleChange', newTransactionIndices);    
+	$(document).trigger('serverScheduleChange', [newTransactionIndices]);    
     }
     // TODO: inefficient version.. can just use the records
     // handle differences below

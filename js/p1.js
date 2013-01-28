@@ -1,6 +1,210 @@
 
+$(document).on("serverScheduleChange", function(e, newTransactionIndices){
+    $.each(newTransactionIndices, function(index, i){
+        var t = transactions[i];
+        //type: event type, uid: user who made the change, data: object
+        console.log("Server Changed", i, t, t.type);
+        if (t.type == "lock"){
+            handlePollingLock(t);
+        } else if (t.type == "unschedule"){
+            handlePollingUnschedule(t);
+        } else if (t.type == "schedule"){
+            handlePollingSchedule(t);
+        } else if (t.type == "swap"){
+            handlePollingSwap(t);
+        } else if (t.type == "move"){
+            handlePollingMove(t);
+        }
+
+    });
+
+});
+
+function handlePollingLock(t){
+    // TODO: lock needs to get id in t.data.ida
+    console.log(schedule[t.data.date][t.data.time][t.data.room]);
+    var id = null;
+    for (s in schedule[t.data.date][t.data.time][t.data.room]){
+        id = s;
+    }    
+    var $cell = findCellByID(id);
+    if ($cell == null || typeof $cell === "undefined")
+        return;
+
+    var isLocked = $cell.hasClass("locked")? true: false;
+    var action = "locked";
+    if (isLocked){
+        $cell.removeClass("locked");
+        action = "unlocked";
+    } else {
+        $cell.addClass("locked");
+    }
+
+    $cell.effect("highlight", {color: "yellow"}, 10000);
+
+    if(id in allSessions){
+        //lockSlot(allSessions[id].date, allSessions[id].time, allSessions[id].room);
+        // $cell.data('popover').options.content = function(){
+        //     return getSessionDetail("scheduled", allSessions[id]);
+        // };
+
+        $("#list-history").prepend("<li>USER " + action + ": " 
+            + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
+
+    } else {
+        //lockSlot($session.data("date"), $session.data("time"), $session.data("room"));
+        // $cell.data('popover').options.content = function(){
+        //     return getSessionDetail("empty", new slot($cell.data("date"), $cell.data("time"), $cell.data("room"), null));
+        // };
+
+        $("#list-history").prepend("<li>USER " + action + ": "
+           + "<a href='#' class='history-link' data-slot-date='" +
+           $session.data("date") + 
+           "' data-slot-time='" + $session.data("time") + 
+           "' data-slot-room='" + $session.data("room") + 
+           "'>" 
+           + $cell.data("date") + ", " + $cell.data("time") + ", " + $cell.data("room") + "</a></li>");
+    }
+            
+}
+
+function handlePollingUnschedule(t){
+    var id = t.data.id;
+    var $cell = findCellByID(id);
+    if ($cell == null || typeof $cell === "undefined")
+        return;
+
+    $("#list-history").prepend("<li>USER unscheduled: " 
+        + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
+
+    $cell.effect("highlight", {color: "yellow"}, 10000);
+
+    // the frontend unschedule session
+    VisualOps.unschedule(allSessions[id]);
+    // the backend unschedule session
+    //unscheduleSession(allSessions[id]);
+
+    //$(".selected").removeClass("selected");
+    Statusbar.display("Polling: Unschedule successful");
+    postPollingMove();
+}
+
+function postPollingMove(){
+    updateUnscheduledCount();
+    // the backend conflicts update
+    getAllConflicts();
+    clearConflictDisplay();
+    // the frontend conflicts update: the row view of conflicts.
+    updateConflicts();
+
+}
+
+function handlePollingSchedule(t){
+    var id = t.data.id;
+    var $cell = findCellByID(id);
+    if ($cell == null || typeof $cell === "undefined")
+        return;
+
+    $("#list-history").prepend("<li>USER scheduled: " 
+        + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
+
+    $cell.effect("highlight", {color: "yellow"}, 10000);
 
 
+        $emptySlot = findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room);
+
+//        id = getID($session);
+        //console.log($session, $emptySlot, id);
+
+        // the backend scheduling
+//        console.log("SCHEDULE", id, "into", $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
+//        scheduleSession(allSessions[id], $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
+
+        // the frontend scheduling: backend should be called first to have the updated allSessions[id] information
+        //VisualOps.scheduleSessionCell(id, $emptySlot, $session);
+        VisualOps.scheduleUnscheduled(allSessions[id], $emptySlot);
+
+//        postMove();
+        Statusbar.display("Polling: Scheduling successful");    
+        postPollingMove();
+}
+
+function handlePollingSwap(t){
+    var src_id = t.data.s1id;
+    var dst_id = t.data.s2id;
+    var $src_cell = findCellByID(src_id);
+    if ($src_cell == null || typeof $src_cell === "undefined")
+        return;
+    var $dst_cell = findCellByID(dst_id);
+    if ($dst_cell == null || typeof $dst_cell === "undefined")
+        return;
+
+    $("#list-history").prepend("<li>USER swapped: " 
+       + "<a href='#' class='history-link' data-session-id='" + src_id + "'>" + allSessions[src_id].title 
+       + "</a> and <a href='#' class='history-link' data-session-id='" + dst_id + "'>" + allSessions[dst_id].title + "</a></li>");
+
+    $src_cell.effect("highlight", {color: "yellow"}, 10000);
+    $dst_cell.effect("highlight", {color: "yellow"}, 10000);
+
+/*
+        var $source = $(".move-src-selected").first();
+        var src_id = getID($source);
+        var dst_id = $(this).data("session-id");
+
+
+            $("#list-history").prepend("<li>swapped: " 
+                   + "<a href='#' class='history-link' data-session-id='" + src_id + "'>" + allSessions[src_id].title 
+                   + "</a> and <a href='#' class='history-link' data-session-id='" + dst_id + "'>" + allSessions[dst_id].title + "</a></li>");
+            // the frontend swap
+            VisualOps.swap(allSessions[src_id], allSessions[dst_id]);
+            // the backend swap
+            swapSessions(allSessions[src_id], allSessions[dst_id]);            
+        
+*/
+        VisualOps.swap(allSessions[src_id], allSessions[dst_id]);
+        Statusbar.display("Polling: Swap successful");
+        postPollingMove();
+        
+}
+
+function handlePollingMove(t){
+    var id = t.data.id;
+    var $cell = findCellByID(id);
+    if ($cell == null || typeof $cell === "undefined")
+        return;
+
+    $("#list-history").prepend("<li>USER moved: " 
+        + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
+
+    $cell.effect("highlight", {color: "yellow"}, 10000);
+
+    $emptySlot = findCellByDateTimeRoom(t.data.tdate, t.data.ttime, t.data.troom);
+
+            /*
+            // Part 1. Unschedule the source
+            $source.removeClass("selected").popover("destroy").removeAttr("id").removeData();
+            var after = getSessionCell("empty", null, allSessions[src_id].date, allSessions[src_id].time, allSessions[src_id].room);
+            // Watch out! jQuery replaceWith returns the original element, not the replaced element.
+            $source.replaceWith(after); 
+            // Unschedule session in the database
+            unscheduleSession(allSessions[src_id]);
+            */
+            // Part 2. Schedule the destination
+            //var $emptySlot = findCellByDateTimeRoom($(this).data("date"), $(this).data("time"), $(this).data("room"));           
+            
+            // the backend scheduling
+            //scheduleSession(allSessions[src_id], $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
+
+            // the frontend scheduling
+            // shouldn't matter any more: backend should be called first to have the updated allSessions[id] information
+            //VisualOps.scheduleSessionCell(src_id, $emptySlot, $source);
+            VisualOps.swapWithEmpty(allSessions[id], $emptySlot);
+
+        Statusbar.display("Polling: Moving successful");    
+        postPollingMove();
+}
+
+/*
 $(document).on("slotLocked", function(e, day, time, room){
     console.log("This slot is locked: " + day + " ," + time + ", " + room);
     // No need to anything in the frontend
@@ -41,7 +245,7 @@ $(document).on("unscheduledChange", function(e){
         console.log(s);
     }
 });
-
+*/
 
     // Popover close button interaction
     $("body").on("click", ".popover-close", function(){
@@ -147,11 +351,11 @@ $(document).on("unscheduledChange", function(e){
                      //.attr("id", "session-" + session.id)
                      //.data("session-id", session.id)
                      .addClass("empty")
-                     .append($(detail))
                      .data("date", slotDate)
                      .data("time", slotTime)
-                     .data("room", slotRoom)
-                     .html("<i class='icon-plus'></i>");
+                     .data("room", slotRoom)                     
+                     .append($(detail));
+                $(cell).find(".title").append("<i class='icon-plus'></i>")     
 
            // Unavailable / Locked Session                         
             } else if (type == "unavailable" || session == "") {
@@ -231,14 +435,25 @@ $(document).on("unscheduledChange", function(e){
 
      // Display all scheduled sessions in the main grid
      function displayScheduled(){
-          var orderedDates = keys(schedule).sort(function(a,b) {return new Date(a) - new Date(b);});
-          var orderedRooms = keys(allRooms).sort(function(a,b) {return allRooms[a] - allRooms[b];});
+          var days = {
+            "Sunday": 0,
+            "Monday": 1,
+            "Tuesday": 2,
+            "Wednesday": 3,
+            "Thursday": 4,
+            "Friday": 5,
+            "Saturday": 6
+          }
+          //var orderedDates = keys(schedule).sort(function(a,b) {return new Date(a) - new Date(b);});
+          //var orderedRooms = keys(allRooms).sort(function(a,b) {return allRooms[a] - allRooms[b];});
+          var orderedDates = keys(schedule).sort(function(a,b) {return days[a] - days[b];});
+          var orderedRooms = keys(allRooms).sort();
 
           var i, cell;
           // Table Header
           var table = document.createElement('table'); 
           var header = document.createElement('tr');
-          var firstcell = $(document.createElement('td')).addClass("cell").append("<div>Time</div>");
+          var firstcell = $(document.createElement('td')).addClass("cell header-col").append("<div>Time</div>");
           //var secondcell = $(document.createElement('td')).addClass("cell").append("<div>Conflicts</div>");
           $(header).addClass("header-row").append(firstcell); //.append(secondcell);
           for(var i = 0; i < orderedRooms.length; i++){
@@ -250,13 +465,18 @@ $(document).on("unscheduledChange", function(e){
 
           // Main content
           $.each(orderedDates, function(index, date){
-            var orderedTimes = keys(schedule[date]).sort(function(a,b) {return a > b;});
+            
+            var orderedTimes = keys(schedule[date]).sort(function(a,b) {return a - b;});
+
             $.each(orderedTimes, function(index2, time){
 
                 var row = document.createElement('tr');
                 var slot = document.createElement('td');
 //              var conflicts = document.createElement('td');
                 $(slot).addClass("cell header-col").append(shortenDate(date) + " " + time);
+                if (index2 == 0)
+                    $(slot).addClass("header-day-border");
+
                 $(row).append(slot);
                 //console.log(date, time);
                 $.each(orderedRooms, function(index3, room){
@@ -275,6 +495,8 @@ $(document).on("unscheduledChange", function(e){
                     } else { // otherwise, mark it unavailable.
                         cell = getSessionCell("unavailable", null);
                     }
+                    if (index2 == 0)
+                        $(cell).addClass("header-day-border");
                     $(row).append(cell);                    
                 });
 

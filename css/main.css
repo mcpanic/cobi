@@ -113,6 +113,13 @@ body.loading .modal {
     border-color: #bbbbbb;
 }
 
+/* days separated with different cell color */
+#program tr .header-day-border{
+    /*background-color: #bbbbbb;*/
+    border-top: solid 3px #bbbbbb;
+
+}
+
 #program .cell {
     font-size: 10px;
     padding: 3px;
@@ -134,14 +141,18 @@ body.loading .modal {
 }
 
 #program .cell .title, div#unscheduled .cell .title {
-    width: 48px;
+    width: 44px;
     height: 38px;                
     overflow-x: hidden;
     overflow-y: hidden;
 }
 
+#program .cell .title .icon-plus{
+    margin-top: 10px;
+}
+
 #program .cell .display, div#unscheduled .cell .display {
-    width: 48px;
+    width: 44px;
     height: 30px;
     border-top: solid 1px #dddddd;
     overflow-x: hidden;
@@ -156,6 +167,14 @@ body.loading .modal {
 #program .header-row, #program .header-col {
     /*position: fixed;*/
     font-weight: bold;
+}
+
+#program .header-row {
+    height: 24px;
+}
+
+#program .header-col {
+    border-right: solid 2px #bbbbbb;
 }
 
 #program .selected, div#unscheduled .selected {

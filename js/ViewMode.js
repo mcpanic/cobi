@@ -113,7 +113,8 @@ var ViewMode = function() {
                 } else if ($(this).hasClass("unscheduled")){
                     return getSessionDetail("unscheduled", session);
                 } else{
-                    return $(this).find(".detail").html();
+                    return getSessionDetail("scheduled", session);
+                    //return $(this).find(".detail").html();
                 }
            }
         });

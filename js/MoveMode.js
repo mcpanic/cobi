@@ -149,7 +149,10 @@ var MoveMode = function() {
                         console.log("src: swap", "dst: empty");
                         html +=  "<button class='btn btn-primary' id='swap-button'" 
                          + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
-                         +"'>Schedule in this slot</button>" + _getCancelButtonHTML() + "<br>";     
+                         +"'>Schedule in this slot</button>" + _getCancelButtonHTML() + "<br>"
+                         + $(this).find(".detail .conflicts")[0].outerHTML;
+                         // empty sessions don't have a submissions list
+                         //+ $(this).find(".detail ul")[0].outerHTML;   
                     } else {
                         console.log("impossible");
                     }
@@ -167,8 +170,9 @@ var MoveMode = function() {
                         html +=  "<button class='btn btn-primary' id='schedule-button'" 
                          + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
                          +"'>Schedule in this slot</button>" + _getCancelButtonHTML() + "<br>"
-                         + $(this).find(".detail .conflicts")[0].outerHTML
-                         + $(this).find(".detail ul")[0].outerHTML;                        
+                         + $(this).find(".detail .conflicts")[0].outerHTML;
+                         // empty sessions don't have a submissions list
+                         //+ $(this).find(".detail ul")[0].outerHTML;                        
                     } else {
                         console.log("impossible");
                     }
@@ -323,19 +327,17 @@ var MoveMode = function() {
           } else if (type === "unscheduled") {
             //console.log("unscheduled", id);
             swapValues = proposeSlot(allSessions[id]);
-          }
-          else if (type === "empty") {
+          } else if (type === "empty") {
             //console.log($session, $session.data(), $session.data("date"), type);
             //console.log($session.data("date"), $session.data("time"), $session.data("room"), schedule[$session.data("date")][$session.data("time")][$session.data("room")]);
 	      
-	      // HQ: trying allowing a schedules session to move there
-	      //            swapValues = proposeUnscheduledSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
-	      var tempArray = proposeSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
-	      swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);
-
-    
+            // HQ: trying allowing a schedules session to move there
+            //            swapValues = proposeUnscheduledSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
+            var tempArray = proposeSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
+            swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);
           } else {
-	      return;
+            console.log("ERROR: type unknown");
+            return;
           }
 	  
           // Now display each candidate 
@@ -353,6 +355,7 @@ var MoveMode = function() {
           var swapContent = "";
           var $cell = null;
           for(var i = 0; i < swapValues.length; i++){    
+                console.log("runPropose", i, swapValues[i]);
                // empty candidate
                if (swapValues[i].target.session === null){
                     $cell = findCellByDateTimeRoom(swapValues[i].target.date, swapValues[i].target.time, swapValues[i].target.room);
@@ -449,16 +452,6 @@ var MoveMode = function() {
      });
 */
 
-    function postMove(){
-        updateUnscheduledCount();
-        // the backend conflicts update
-        getAllConflicts();
-        // the frontend conflicts update: the row view of conflicts.
-        updateConflicts();
-        destroy();
-        ViewMode.initialize();
-    }
-
      // clicking the 'swap' button from one of the proposed swaps.
      // should perform swap and return to the clean state with no selection and proposals.
      $("body").on("click", ".popover #swap-button", function(){               
@@ -485,14 +478,16 @@ var MoveMode = function() {
             */
             // Part 2. Schedule the destination
             var $emptySlot = findCellByDateTimeRoom($(this).data("date"), $(this).data("time"), $(this).data("room"));           
-            
-            // the backend scheduling
-            scheduleSession(allSessions[src_id], $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
+            var tempdate = $emptySlot.data("date");
+            var temptime = $emptySlot.data("time");
+            var temproom = $emptySlot.data("room");
 
             // the frontend scheduling
-            // shouldn't matter any more: backend should be called first to have the updated allSessions[id] information
             //VisualOps.scheduleSessionCell(src_id, $emptySlot, $source);
             VisualOps.swapWithEmpty(allSessions[src_id], $emptySlot);
+
+            // the backend scheduling
+            scheduleSession(allSessions[src_id], tempdate, temptime, temproom);
 
             $("#list-history").prepend("<li>scheduled: " 
                + "<a href='#' class='history-link' data-session-id='" + src_id + "'>" + allSessions[src_id].title 
@@ -565,6 +560,19 @@ var MoveMode = function() {
         postMove();
         Statusbar.display("Select a session for scheduling options and more information.");    
     });
+
+
+    function postMove(){
+        updateUnscheduledCount();
+        // the backend conflicts update
+        getAllConflicts();
+        // this erases the preview conflicts display, so necessary
+        clearConflictDisplay();
+        // the frontend conflicts update: the row view of conflicts.
+        updateConflicts();
+        destroy();
+        ViewMode.initialize();
+    }
 
     // Reset any change created in this view mode
     function destroy(){

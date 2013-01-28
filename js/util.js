@@ -13,21 +13,20 @@
 
 
 	function shortenDate(date){
-	  var str = "";
-	  if (date == "May 7, 2012")
-	       str = "MON 5/7";
-	  else if (date == "May 8, 2012")
-	       str = "TUE 5/8";
-	  else if (date == "May 9, 2012")
-	       str = "WED 5/9";
-	  else if (date == "May 10, 2012")
-	       str = "THU 5/10";
-	  return str; 
+		/*
+		var str = "";
+		
+		if (date == "May 7, 2012")
+		   str = "MON 5/7";
+		else if (date == "May 8, 2012")
+		   str = "TUE 5/8";
+		else if (date == "May 9, 2012")
+		   str = "WED 5/9";
+		else if (date == "May 10, 2012")
+		   str = "THU 5/10";
+		*/
+		return date.substring(0,3); 
 	}	
-
-
-
-
 
      function getLength(item) {
           if (item === null || typeof item === "undefined")

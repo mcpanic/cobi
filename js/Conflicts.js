@@ -21,6 +21,8 @@ var Conflicts = function() {
 		$(".slot .display").each(function(){
 			$(this).html("");
 		});
+
+    
 	}
 
      // Given an array of "conflicts", display the palette and count for each constraint in the "element"
@@ -203,6 +205,8 @@ var Conflicts = function() {
                         var filtered_array = conflicts_array.filter(function(x){return x==conflict.type});
                         conflict_count_array[conflict.type] += filtered_array.length;             
                     });
+            } else { // empty cells should clear the display
+              $(this).find(".display").html("");
             }
         });         
         
