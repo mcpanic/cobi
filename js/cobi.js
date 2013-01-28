@@ -423,13 +423,7 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverSlots, serverT
 	    }
 	}
     }
-    if(consistent == false){
-    // all changes are in the transactions data itself,
-    // at the new transactions indices. So trigger 
-	console.log("throwing serverScheduleChange with indices: ");
-	console.log(newTransactionIndices);
-	$(document).trigger('serverScheduleChange', [newTransactionIndices]);    
-    }
+
     // TODO: inefficient version.. can just use the records
     // handle differences below
     for(var day in schedule){
@@ -483,6 +477,14 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverSlots, serverT
 
 	// trigger a change in unscheduled data
 	$(document).trigger('unscheduledChange');
+    }
+
+    if(consistent == false){
+	// all changes are in the transactions data itself,
+	// at the new transactions indices. So trigger 
+	console.log("throwing serverScheduleChange with indices: ");
+	console.log(newTransactionIndices);
+	$(document).trigger('serverScheduleChange', [newTransactionIndices]);    
     }
     
     return { isConsistent: consistent,
