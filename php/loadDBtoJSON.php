@@ -90,14 +90,18 @@ while ($row = $sessionTable->fetch_assoc()) {
   $row['hasHonorableMention'] = (bool)$row['hasHonorableMention'];
   $row['scheduled'] = (bool)$row['scheduled'];
   $subKeys = explode(",", trim($row['submissions']));
+
   $subs = array();
+
   foreach ($subKeys as $sub){
     if ($sub == ""){
     }else{
       if (!array_key_exists($sub, $entity)){ 
 	// SHOULDN"T BE HERE
       }else{
-	$subs[$sub] = $entity[$sub];
+	  // HQ: changing this to output an array
+	array_push($subs, $entity[$sub]);
+	//	$subs[$sub] = $entity[$sub];
       }
     }
   }
