@@ -118,6 +118,15 @@ foreach ($sessions as $session) {
   }
 
   $submissionKeys = mysqli_real_escape_string($mysqli, implode(",", $session['value']['content']));
+
+  // add session id to the submissions
+  foreach ($session['value']['content'] as $paperContent){
+    $equery = "UPDATE entity SET session='$sid' where id='$paperContent'";
+    mysqli_query($mysqli, $equery);
+    echo  mysqli_error($mysqli);
+  }
+  
+  
   $squery = "INSERT INTO session (id, date, time, chairAffiliations, chairs, coreCommunities, featuredCommunities, personas, hasAward, hasHonorableMention, notes, room, submissions, title, venue, scheduled) VALUES ('$sid', '$sdate', '$stime', '$chairAffiliations', '$chairs', '$coreCommunities', '$featuredCommunities', '$personas', '$hasAward', '$hasHonorableMention', '$notes', '$sroom', '$submissionKeys', '$title', '$venue', 1)";
   mysqli_query($mysqli, $squery);
   echo  mysqli_error($mysqli);
