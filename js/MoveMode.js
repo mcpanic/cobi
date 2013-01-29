@@ -125,7 +125,7 @@ var MoveMode = function() {
                       html += "<strong>Select other sessions to schedule this session.</strong><br>"
                             + _getCancelButtonHTML()
                             + $(this).find(".detail ul")[0].outerHTML;
-                } else if ($(this).hasClass("locked")) {
+                } else if ($(this).find(".title").hasClass("locked")) {
                     console.log("renderProposedSwap: locked");
                     if (id === -1)
                         html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong>";
@@ -221,7 +221,7 @@ var MoveMode = function() {
                         else
                           html += "<strong>Select other sessions to schedule this session.</strong>"
                           + $(this).find(".detail ul")[0].outerHTML;
-                    } else if ($(this).hasClass("locked")) {
+                    } else if ($(this).find(".title").hasClass("locked")) {
                         if (typeof id === "undefined")
                             html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong>";
                         else
@@ -355,10 +355,11 @@ var MoveMode = function() {
           var swapContent = "";
           var $cell = null;
           for(var i = 0; i < swapValues.length; i++){    
-                console.log("runPropose", i, swapValues[i]);
+               
                // empty candidate
                if (swapValues[i].target.session === null){
                     $cell = findCellByDateTimeRoom(swapValues[i].target.date, swapValues[i].target.time, swapValues[i].target.room);
+                    console.log("runPropose", i, swapValues[i]);
                     $cell.addClass("proposed-swap"); //.data("title", "Empty slot");
 
                     swapContent += "<li data-rank-order='" + i + "' data-date='"+swapValues[i].target.date+"' data-time='"+swapValues[i].target.time+"' data-room='"+swapValues[i].target.room+"'>" 
@@ -478,29 +479,35 @@ var MoveMode = function() {
             */
             // Part 2. Schedule the destination
             var $emptySlot = findCellByDateTimeRoom($(this).data("date"), $(this).data("time"), $(this).data("room"));           
-            var tempdate = $emptySlot.data("date");
-            var temptime = $emptySlot.data("time");
-            var temproom = $emptySlot.data("room");
-
-            // the frontend scheduling
-            //VisualOps.scheduleSessionCell(src_id, $emptySlot, $source);
-            VisualOps.swapWithEmpty(allSessions[src_id], $emptySlot);
+            var oldDate = allSessions[src_id].date;
+            var oldTime = allSessions[src_id].time;
+            var oldRoom = allSessions[src_id].room;
 
             // the backend scheduling
-            scheduleSession(allSessions[src_id], tempdate, temptime, temproom);
+            scheduleSession(allSessions[src_id], $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
+            // the frontend scheduling
+            //VisualOps.scheduleSessionCell(src_id, $emptySlot, $source);
+            VisualOps.swapWithEmpty(allSessions[src_id], $emptySlot, oldDate, oldTime, oldRoom);
 
-            $("#list-history").prepend("<li>scheduled: " 
+
+/*            $("#list-history").prepend("<li>scheduled: " 
                + "<a href='#' class='history-link' data-session-id='" + src_id + "'>" + allSessions[src_id].title 
-               + "</a></li>");
+               + "</a></li>");*/
+            $(document).trigger("addHistory", [{user: "", type: "move", id: src_id}]);
+
         // destination: scheduled session (currently no unscheduled session can be swapped)
         } else {
+            /*
             $("#list-history").prepend("<li>swapped: " 
                    + "<a href='#' class='history-link' data-session-id='" + src_id + "'>" + allSessions[src_id].title 
                    + "</a> and <a href='#' class='history-link' data-session-id='" + dst_id + "'>" + allSessions[dst_id].title + "</a></li>");
-            // the frontend swap
-            VisualOps.swap(allSessions[src_id], allSessions[dst_id]);
+            */
+            $(document).trigger("addHistory", [{user: "", type: "swap", sid: src_id, did: dst_id}]);
+
             // the backend swap
             swapSessions(allSessions[src_id], allSessions[dst_id]);            
+            // the frontend swap
+            VisualOps.swap(allSessions[src_id], allSessions[dst_id]);            
         }
 
         postMove();
@@ -512,7 +519,7 @@ var MoveMode = function() {
     // should perform scheduling and return to the clean state with no selection and proposals.
     $("body").on("click", ".popover #schedule-button", function(){
         var $session = null;     // session to schedule
-        var $emptySlot = null;   // empty slot into shich the session is going
+        var $emptySlot = null;   // empty slot into which the session is going
         var id = -1;
 
         // empty slot is the target, unscheduled session is the source
@@ -529,15 +536,16 @@ var MoveMode = function() {
 
         id = getID($session);
         //console.log($session, $emptySlot, id);
-
+/*
         $("#list-history").prepend("<li>scheduled: " 
            + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title 
-           + "</a></li>");
+           + "</a></li>");*/
+        $(document).trigger("addHistory", [{user: "", type: "schedule", id: id}]);
 
         // the backend scheduling
         console.log("SCHEDULE", id, "into", $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
         scheduleSession(allSessions[id], $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
-
+        //console.log(allSessions[id]);
         // the frontend scheduling: backend should be called first to have the updated allSessions[id] information
         //VisualOps.scheduleSessionCell(id, $emptySlot, $session);
         VisualOps.scheduleUnscheduled(allSessions[id], $emptySlot);

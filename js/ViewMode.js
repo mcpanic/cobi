@@ -51,15 +51,21 @@ var ViewMode = function() {
         // Watch out! jQuery replaceWith returns the original element, not the replaced element.
         $session.replaceWith(after); 
 */
-        // the frontend unschedule session
-        VisualOps.unschedule(allSessions[id]);
+        var oldDate = allSessions[id].date;
+        var oldTime = allSessions[id].time;
+        var oldRoom = allSessions[id].room;
+
         // the backend unschedule session
         unscheduleSession(allSessions[id]);
+        // the frontend unschedule session
+        VisualOps.unschedule(allSessions[id], oldDate, oldTime, oldRoom);
 
         $(".selected").removeClass("selected");
         Statusbar.display("Unschedule successful");
-        $("#list-history").prepend("<li>unscheduled: " 
-           + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
+        $(document).trigger("addHistory", [{user: "", type: "unschedule", id: id}]);
+
+        //$("#list-history").prepend("<li>unscheduled: " 
+        //   + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
 
         updateUnscheduledCount();
         // the backend conflicts update
@@ -133,8 +139,9 @@ var ViewMode = function() {
                 return getSessionDetail("scheduled", allSessions[id]);
             };
 
-	        $("#list-history").prepend("<li>locked: " 
-	            + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
+	        // $("#list-history").prepend("<li>locked: " 
+	        //     + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
+            $(document).trigger("addHistory", [{user: "", type: "lock", id: id}]);
 
         } else {
             lockSlot($session.data("date"), $session.data("time"), $session.data("room"));
@@ -144,15 +151,17 @@ var ViewMode = function() {
             };
 
 	        // HQ: inserting additional data so history can display right
-	        $("#list-history").prepend("<li>locked: " 
-			   + "<a href='#' class='history-link' data-slot-date='" +
-			   $session.data("date") + 
-			   "' data-slot-time='" + $session.data("time") + 
-			   "' data-slot-room='" + $session.data("room") + 
-			   "'>" 
-			   + $session.data("date") + ", " + $session.data("time") + ", " + $session.data("room") + "</a></li>");
+	     //    $("#list-history").prepend("<li>locked: " 
+			   // + "<a href='#' class='history-link' data-slot-date='" +
+			   // $session.data("date") + 
+			   // "' data-slot-time='" + $session.data("time") + 
+			   // "' data-slot-room='" + $session.data("room") + 
+			   // "'>" 
+			   // + $session.data("date") + ", " + $session.data("time") + ", " + $session.data("room") + "</a></li>");
+            $(document).trigger("addHistory", [{user: "", type: "lock", date: $session.data("date"), time: $session.data("time"), room: $session.data("room")}]);
         }
-        $session.addClass("locked").removeClass("selected").popover("hide");
+        $session.removeClass("selected").popover("hide");
+        $session.find(".title").addClass("locked");
     }
 
     // HQ: handle an unlock request
@@ -165,8 +174,9 @@ var ViewMode = function() {
             $session.data('popover').options.content = function(){
                 return getSessionDetail("scheduled", allSessions[id]);
             };
-    	    $("#list-history").prepend("<li>unlocked: " 
-			   + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
+    	 //    $("#list-history").prepend("<li>unlocked: " 
+			   // + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
+            $(document).trigger("addHistory", [{user: "", type: "unlock", id: id}]);
 
         }else{
             unlockSlot($session.data("date"), $session.data("time"), $session.data("room"));
@@ -175,16 +185,18 @@ var ViewMode = function() {
                 return getSessionDetail("empty", new slot($session.data("date"), $session.data("time"), $session.data("room"), null));
             };
     	    // HQ: inserting additional data so history can display right
-    	    $("#list-history").prepend("<li>unlocked: " 
-				   + "<a href='#' class='history-link' data-slot-date='" +
-				   $session.data("date") + 
-				   "' data-slot-time='" + $session.data("time") + 
-				   "' data-slot-room='" + $session.data("room") + 
-				   "'>"  
-				   + $session.data("date") + ", " + $session.data("time") + ", " + $session.data("room") + "</a></li>");
+    	  //   $("#list-history").prepend("<li>unlocked: " 
+				   // + "<a href='#' class='history-link' data-slot-date='" +
+				   // $session.data("date") + 
+				   // "' data-slot-time='" + $session.data("time") + 
+				   // "' data-slot-room='" + $session.data("room") + 
+				   // "'>"  
+				   // + $session.data("date") + ", " + $session.data("time") + ", " + $session.data("room") + "</a></li>");
+            $(document).trigger("addHistory", [{user: "", type: "unlock", date: $session.data("date"), time: $session.data("time"), room: $session.data("room")}]);
         }
 
-        $session.removeClass("locked selected").popover("hide");
+        $session.removeClass("selected").popover("hide");
+        $session.find(".title").removeClass("locked");
     }
 
     // Reset any change created in this view mode

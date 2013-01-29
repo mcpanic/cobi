@@ -6,6 +6,7 @@ var Sidebar = function() {
           displayViewOptions();
           displayPersonas();  
           displayCommunities();
+          displayHistory();
           bindEvents();
      }
 
@@ -18,12 +19,36 @@ var Sidebar = function() {
           $("#list-communities").on("click", "li a", clickCommunitiesHandler);
           $("#list-communities").on("click", ".myCheckbox", clickCheckboxCommunitiesHandler);          
           $("#list-history").on("click", ".history-link", clickHistoryHandler);
+          $(document).on("addHistory", addHistoryHandler);
           $(".sidebar-fixed").on("click", ".toggle", clickToggle);
           $(".sidebar-fixed").on("click", ".toggle-options", clickHeaderHandler);
      }
 
+     function addHistoryHandler(event, history){
+          console.log("HISTORY", history);
+          if (typeof history.id !== "undefined" && (history.type == "lock" || history.type == "unlock" || history.type == "schedule" || history.type == "move" || history.type == "unschedule")){
+               $("#list-history").prepend("<li>" + history.user + " " + history.type + ": " 
+               + "<a href='#' class='history-link' data-session-id='" + history.id + "'>" + allSessions[history.id].title 
+               + "</a></li>");             
+          } else if (typeof history.id === "undefined" && (history.type == "lock" || history.type == "unlock")){
+               $("#list-history").prepend("<li>" + history.user + " " + history.type + ": " 
+                  + "<a href='#' class='history-link' data-slot-date='" + history.date + 
+                  "' data-slot-time='" + history.time + 
+                  "' data-slot-room='" + history.room + 
+                  "'>" + history.date + ", " + history.time + ", " + history.room + "</a></li>");
+          } else if (typeof history.sid !== "undefined" && typeof history.did !== "undefined" && history.type == "swap"){
+               $("#list-history").prepend("<li>" + history.user + " " + history.type + ": "  
+               + "<a href='#' class='history-link' data-session-id='" + history.sid + "'>" + allSessions[history.sid].title 
+               + "</a> and <a href='#' class='history-link' data-session-id='" + history.did + "'>" + allSessions[history.did].title + "</a></li>");
+          } else {
+               console.log("impossible");
+          }
+          var count = $("#history-count").html();
+          $("#history-count").html(parseInt(count)+1);
+     }
+
      function clickHeaderHandler(){
-          console.log("here", $(this).find("span.toggle-icon"));
+          //console.log("here", $(this).find("span.toggle-icon"));
           if ($(this).find("span.toggle-icon").hasClass("icon-chevron-right"))
                $(this).find("span.toggle-icon").removeClass("icon-chevron-right").addClass("icon-chevron-down");
           else
@@ -114,11 +139,10 @@ var Sidebar = function() {
                break;
                case "duration":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-			    
                          var id = $(item).attr("id").substr(8);
                          var session = allSessions[id];
-			 //$(item).find(".display").html("80");
-			 $(item).find(".display").html(getSessionDuration(session.submissions));
+			          //$(item).find(".display").html("80");
+			          $(item).find(".display").html(getSessionDuration(session.submissions));
 			});
                break;
                case "awards":
@@ -325,6 +349,10 @@ var Sidebar = function() {
                //$(item).find("span.palette").css("background-color", color_palette_1[5]);
                //color_index++;
           });
+     }
+
+     function displayHistory(){
+          $("#history-count").html(0);
      }
 
      return {

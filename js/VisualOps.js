@@ -4,7 +4,7 @@
 var VisualOps = function() {
 	// Initialize the sidebar with a default view 
 	function initialize(){
-	  	bindEvents();
+	  	//bindEvents();
 	}
 
 	function bindEvents(){
@@ -13,6 +13,7 @@ var VisualOps = function() {
 
 	function _addSessionToSlot(s, $emptySlot){
 		//var $session = findCellByID(s.id);
+        console.log(s, $emptySlot);
 		var session = getSessionCell("scheduled", s);
 		if ($emptySlot != null){
 			$emptySlot.popover("destroy").replaceWith($(session));
@@ -20,11 +21,11 @@ var VisualOps = function() {
 		}
 	}
 
-	function _removeSessionFromSlot(s){
+	function _removeSessionFromSlot(s, oldDate, oldTime, oldRoom){
 		var $session = findCellByID(s.id);
+        console.log("hello", s, oldDate, oldTime, oldRoom);        
         $session.removeClass("selected").popover("destroy").removeAttr("id").removeData();
-        console.log("hello", s.time);
-        var after = getSessionCell("empty", null, s.date, s.time, s.room);
+        var after = getSessionCell("empty", null, oldDate, oldTime, oldRoom);
         // Watch out! jQuery replaceWith returns the original element, not the replaced element.
         $session.replaceWith(after); 
 	}
@@ -72,8 +73,9 @@ var VisualOps = function() {
     }
 
     // CASE 3. src: scheduled, dst: empty
-    function swapWithEmpty(scheduled, $emptySlot){
-		_removeSessionFromSlot(scheduled);
+    function swapWithEmpty(scheduled, $emptySlot, oldDate, oldTime, oldRoom){
+        console.log(scheduled, $emptySlot.data("room"), oldDate, oldTime, oldRoom);
+		_removeSessionFromSlot(scheduled, oldDate, oldTime, oldRoom);
 		_addSessionToSlot(scheduled, $emptySlot);
     }
 
@@ -84,8 +86,8 @@ var VisualOps = function() {
     }
 
     // CASE 5. session: scheduled
-    function unschedule(scheduled){
-    	_removeSessionFromSlot(scheduled);
+    function unschedule(scheduled, oldDate, oldTime, oldRoom){
+    	_removeSessionFromSlot(scheduled, oldDate, oldTime, oldRoom);
     	_addSessionToUnscheduled(scheduled);
     }
 

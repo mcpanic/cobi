@@ -22,7 +22,7 @@ var Conflicts = function() {
 			$(this).html("");
 		});
 
-    
+
 	}
 
      // Given an array of "conflicts", display the palette and count for each constraint in the "element"
@@ -220,5 +220,5 @@ var Conflicts = function() {
             });
         });
 
-        $("#constraints-count").html("(" + total + ")");
+        $("#constraints-count").html(total);
      }

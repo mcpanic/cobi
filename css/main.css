@@ -352,6 +352,7 @@ div#unscheduled .slot {
     background: url('../img/lock.png') 
                 97% 3%
                 no-repeat;
+    z-index: 100;
     background-size: 8px 11px;
 }
 
