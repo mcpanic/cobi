@@ -39,6 +39,32 @@ require(["underscore", "jquery"], function(_, $) {
      	return count;
      }
 
+// HQ: added new durartion function
+     function getSessionDuration(submissions){
+	 var key, count = 0;
+	 for (key in submissions){
+	     if(submissions[key].type == "TOCHI"){
+		 count += 20;
+	     }else if(submissions[key].type == "paper"){
+		 if(submissions[key].subtype = "Note"){
+		     count += 10;
+		 }else{ // paper
+		     count += 20;
+		 }
+	     }else if(submissions[key].type == "panel"){
+		 count += 80;
+	     }else if(submissions[key].type == "SIG"){
+		 count += 80;
+	     }else if(submissions[key].type == "course"){
+		 count += 80;
+	     }else if(submissions[key].type == "casestudy"){
+		 count += 20;
+	     }
+	 }
+	 return count;
+     }
+
+
      function swapSessionCell(id1, id2){
      	var $org1 = $("#program #session-" + id1);
      	var $org2 = $("#program #session-" + id2);
@@ -65,7 +91,7 @@ require(["underscore", "jquery"], function(_, $) {
 			 	$(cell).data("num-papers", getSessionNumSubmissions(session.submissions));
 			 	$(cell).data("awards", session.hasAward);
 			 	$(cell).data("honorable-mentions", session.hasHonorableMention);
-			 	$(cell).data("duration", 80);
+			 	$(cell).data("duration", getSessionDuration(session.submissions));
 			 	$(cell).data("persona", keys(session.personas).map(function(x) {return personaHash[x]}));
 			 	// getting a random persona for now
 			 	//var persona = personas_list[Math.floor(Math.random()*personas_list.length)];
@@ -363,7 +389,7 @@ require(["underscore", "jquery"], function(_, $) {
      		break;
      		case "duration":
      			$(".slot:not('.empty')").each(function(index, item){
-     				$(item).find(".display").html("80");
+     				$(item).find(".display").html(getSessionDuration(session.submissions);
      			});
      		break;
      		case "awards":

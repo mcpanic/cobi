@@ -11,6 +11,32 @@
 		return count;
 	}
 
+// HQ: added new durartion function
+function getSessionDuration(submissions){
+    var key, count = 0;
+    for (key in submissions){
+	if(submissions[key].type == "TOCHI"){
+	    count += 20;
+	}else if(submissions[key].type == "paper"){
+	    if(submissions[key].subtype = "Note"){
+		count += 10;
+	    }else{ // paper
+		count += 20;
+	    }
+	}else if(submissions[key].type == "panel"){
+	    count += 80;
+	     }else if(submissions[key].type == "SIG"){
+	    count += 80;
+	}else if(submissions[key].type == "course"){
+	    count += 80;
+	}else if(submissions[key].type == "casestudy"){
+	    count += 20;
+	}
+    }
+    return count;
+}
+
+
 
 	function shortenDate(date){
 		/*

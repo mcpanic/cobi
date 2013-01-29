@@ -114,8 +114,12 @@ var Sidebar = function() {
                break;
                case "duration":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-                         $(item).find(".display").html("80");
-                    });
+			    
+                         var id = $(item).attr("id").substr(8);
+                         var session = allSessions[id];
+			 //$(item).find(".display").html("80");
+			 $(item).find(".display").html(getSessionDuration(session.submissions));
+			});
                break;
                case "awards":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
