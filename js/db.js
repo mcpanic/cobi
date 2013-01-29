@@ -244,3 +244,28 @@ DB.prototype.swapSession = function(s1id, s1date, s1time, s1room,
 	    dataType: "json"
 	});
 }
+
+DB.prototype.swapWithEmptySession = function(s1id, 
+					     s2id, s2date, s2time, s2room, uid){
+    
+    $.ajax({
+ 	    async: true,
+		type: 'POST',
+		data: { type: 'swapWithEmpty', 
+			s1id: s1id,
+			s2id: s2id,
+			s2date: s2date,
+			s2time: s2time,
+			s2room: s2room,
+			uid: uid
+	    }, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){
+		transactions.push(m);
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}

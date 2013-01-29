@@ -27,7 +27,7 @@ foreach ($schedule as $slot) {
 
 
 // Form the entity table
-$entityFile = file_get_contents('submissions-2013-0-19-3-15-24.json');
+$entityFile = file_get_contents('submissions-2013-0-29-3-26-59-unicode.json');
 $entities = json_decode($entityFile, true);
 $entities = $entities["rows"];
 $awardHash = array();
