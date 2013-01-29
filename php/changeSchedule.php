@@ -56,6 +56,13 @@ function performUndo($mysqli){
 		 $previous["s2room"], 
 		 $previous["s2id"], 
 		 $mysqli);
+  }else if($row["type"] == "swapWithEmpty"){ // TODO: check this case
+    swapWithEmptySession($previous["s1id"], 
+		 $previous["s2date"], 
+		 $previous["s2time"], 
+		 $previous["s2room"], 
+		 $previous["s2id"], 
+		 $mysqli);
   }else if($row["type"] == "move"){
     moveSession($previous["sdate"],
 		$previous["stime"],
@@ -159,6 +166,25 @@ function swapSessions($s1date, $s1time, $s1room, $s1id,
   echo mysqli_error($mysqli);
   
   $ss2query = "UPDATE session SET date='$s1date', time='$s1time', room='$s1room' WHERE id='$s2id'";
+  mysqli_query($mysqli, $ss2query);
+  echo mysqli_error($mysqli);
+}
+
+function swapWithEmptySession($s1id, 
+			      $s2date, $s2time, $s2room, $s2id, 
+			      $mysqli){
+  
+  // perform swap in the schedule
+  $s1query = "UPDATE schedule SET id='$s1id' WHERE date='$s2date' AND time='$s2time' AND room ='$s2room'";
+  mysqli_query($mysqli, $s1query);
+  echo mysqli_error($mysqli);
+    
+  // change the session data so it is scheduled with room, time, date
+  $ss1query = "UPDATE session SET date='$s2date', time='$s2time', room='$s2room' WHERE id='$s1id'";
+  mysqli_query($mysqli, $ss1query);
+  echo mysqli_error($mysqli);
+  
+  $ss2query = "UPDATE session SET date='', time='', room='', scheduled=0 WHERE id='$s2id'";
   mysqli_query($mysqli, $ss2query);
   echo mysqli_error($mysqli);
 }
@@ -320,6 +346,37 @@ if(strcmp("swap", $type) == 0){
 			    "s1date" => $s1date,
 			    "s1time" => $s1time,
 			    "s1room" => $s1room,
+			    "s2id" => $s1id,
+			    "s2date" => $s2date,
+			    "s2time" => $s2time,
+			    "s2room" => $s2room
+				));
+
+  recordTransaction($uid, $type, $data, $previous, $mysqli);
+}
+
+if(strcmp("swapWithEmpty", $type) == 0){
+  $s1id = mysqli_real_escape_string($mysqli, $_POST['s1id']);
+  $s2id = mysqli_real_escape_string($mysqli, $_POST['s2id']);
+  $s2date = mysqli_real_escape_string($mysqli, $_POST['s2date']);
+  $s2time = mysqli_real_escape_string($mysqli, $_POST['s2time']);
+  $s2room = mysqli_real_escape_string($mysqli, $_POST['s2room']);
+
+  swapWithEmptySession($s1id, 
+		       $s2date, $s2time, $s2room, $s2id, 
+		       $mysqli);
+  
+
+  $data = json_encode(array(
+			    "s1id" => $s1id,
+			    "s2id" => $s2id,
+			    "s2date" => $s2date,
+			    "s2time" => $s2time,
+			    "s2room" => $s2room
+			    ));
+  
+  $previous = json_encode(array(
+			    "s1id" => $s2id,
 			    "s2id" => $s1id,
 			    "s2date" => $s2date,
 			    "s2time" => $s2time,
