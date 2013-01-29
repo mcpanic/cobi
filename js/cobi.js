@@ -108,7 +108,7 @@ function undo(){
 	    $(document).trigger('slotChange', [s2date, s2time, s2room]);
 
 
-	}else if(type == "swapWithEmpty"){
+	}else if(type == "swapWithUnscheduled"){
 	    var s2date = previous['s2date'];
 	    var s2time = previous['s2time'];
 	    var s2room = previous['s2room'];
@@ -332,7 +332,7 @@ function swapSessions(s1, s2){
 }
 
 // Swaps two sessions where first is currently unscheduled
-function swapWithEmptySession(s1, s2){
+function swapWithUnscheduledSession(s1, s2){
     // assume s1 is unscheduled
     var s2date = s2.date;
     var s2time = s2.time;
@@ -350,7 +350,7 @@ function swapWithEmptySession(s1, s2){
 
     // perform swap on server
     if(!frontEndOnly){
-	db.swapWithEmptySession(s1.id, 
+	db.swapWithUnscheduledSession(s1.id, 
 				s2.id, s2date, s2time, s2room,  userData.id);
     }
 }

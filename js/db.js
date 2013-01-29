@@ -245,13 +245,13 @@ DB.prototype.swapSession = function(s1id, s1date, s1time, s1room,
 	});
 }
 
-DB.prototype.swapWithEmptySession = function(s1id, 
+DB.prototype.swapWithUnscheduledSession = function(s1id, 
 					     s2id, s2date, s2time, s2room, uid){
     
     $.ajax({
  	    async: true,
 		type: 'POST',
-		data: { type: 'swapWithEmpty', 
+		data: { type: 'swapWithUnscheduled', 
 			s1id: s1id,
 			s2id: s2id,
 			s2date: s2date,

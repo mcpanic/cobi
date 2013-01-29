@@ -56,8 +56,8 @@ function performUndo($mysqli){
 		 $previous["s2room"], 
 		 $previous["s2id"], 
 		 $mysqli);
-  }else if($row["type"] == "swapWithEmpty"){ // TODO: check this case
-    swapWithEmptySession($previous["s1id"], 
+  }else if($row["type"] == "swapWithUnscheduled"){ // TODO: check this case
+    swapWithUnscheduledSession($previous["s1id"], 
 		 $previous["s2date"], 
 		 $previous["s2time"], 
 		 $previous["s2room"], 
@@ -170,7 +170,7 @@ function swapSessions($s1date, $s1time, $s1room, $s1id,
   echo mysqli_error($mysqli);
 }
 
-function swapWithEmptySession($s1id, 
+function swapWithUnscheduledSession($s1id, 
 			      $s2date, $s2time, $s2room, $s2id, 
 			      $mysqli){
   
@@ -355,14 +355,14 @@ if(strcmp("swap", $type) == 0){
   recordTransaction($uid, $type, $data, $previous, $mysqli);
 }
 
-if(strcmp("swapWithEmpty", $type) == 0){
+if(strcmp("swapWithUnscheduled", $type) == 0){
   $s1id = mysqli_real_escape_string($mysqli, $_POST['s1id']);
   $s2id = mysqli_real_escape_string($mysqli, $_POST['s2id']);
   $s2date = mysqli_real_escape_string($mysqli, $_POST['s2date']);
   $s2time = mysqli_real_escape_string($mysqli, $_POST['s2time']);
   $s2room = mysqli_real_escape_string($mysqli, $_POST['s2room']);
 
-  swapWithEmptySession($s1id, 
+  swapWithUnscheduledSession($s1id, 
 		       $s2date, $s2time, $s2room, $s2id, 
 		       $mysqli);
   
