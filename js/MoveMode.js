@@ -488,26 +488,15 @@ var MoveMode = function() {
             // the frontend scheduling
             //VisualOps.scheduleSessionCell(src_id, $emptySlot, $source);
             VisualOps.swapWithEmpty(allSessions[src_id], $emptySlot, oldDate, oldTime, oldRoom);
-
-
-/*            $("#list-history").prepend("<li>scheduled: " 
-               + "<a href='#' class='history-link' data-session-id='" + src_id + "'>" + allSessions[src_id].title 
-               + "</a></li>");*/
             $(document).trigger("addHistory", [{user: "", type: "move", id: src_id}]);
 
         // destination: scheduled session (currently no unscheduled session can be swapped)
         } else {
-            /*
-            $("#list-history").prepend("<li>swapped: " 
-                   + "<a href='#' class='history-link' data-session-id='" + src_id + "'>" + allSessions[src_id].title 
-                   + "</a> and <a href='#' class='history-link' data-session-id='" + dst_id + "'>" + allSessions[dst_id].title + "</a></li>");
-            */
-            $(document).trigger("addHistory", [{user: "", type: "swap", sid: src_id, did: dst_id}]);
-
             // the backend swap
             swapSessions(allSessions[src_id], allSessions[dst_id]);            
             // the frontend swap
-            VisualOps.swap(allSessions[src_id], allSessions[dst_id]);            
+            VisualOps.swap(allSessions[src_id], allSessions[dst_id]);  
+            $(document).trigger("addHistory", [{user: "", type: "swap", sid: src_id, did: dst_id}]);
         }
 
         postMove();
@@ -535,13 +524,6 @@ var MoveMode = function() {
         }
 
         id = getID($session);
-        //console.log($session, $emptySlot, id);
-/*
-        $("#list-history").prepend("<li>scheduled: " 
-           + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title 
-           + "</a></li>");*/
-        $(document).trigger("addHistory", [{user: "", type: "schedule", id: id}]);
-
         // the backend scheduling
         console.log("SCHEDULE", id, "into", $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
         scheduleSession(allSessions[id], $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
@@ -549,18 +531,10 @@ var MoveMode = function() {
         // the frontend scheduling: backend should be called first to have the updated allSessions[id] information
         //VisualOps.scheduleSessionCell(id, $emptySlot, $session);
         VisualOps.scheduleUnscheduled(allSessions[id], $emptySlot);
-
+        $(document).trigger("addHistory", [{user: "", type: "schedule", id: id}]);
         postMove();
         Statusbar.display("Scheduling successful");
     });  
-
-
-/*    
-    $("#statusbar").on("click", "#swap-review-cancel-link", function(){
-        postMove();
-        Statusbar.display("Select a session for scheduling options and more information.");    
-    });
-*/
 
     // clicking the 'cancel swap' link while swap in progress.
     // should return to the clean state with no selection and proposals.

@@ -138,9 +138,6 @@ var ViewMode = function() {
             $session.data('popover').options.content = function(){
                 return getSessionDetail("scheduled", allSessions[id]);
             };
-
-	        // $("#list-history").prepend("<li>locked: " 
-	        //     + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
             $(document).trigger("addHistory", [{user: "", type: "lock", id: id}]);
 
         } else {
@@ -149,15 +146,6 @@ var ViewMode = function() {
                 // HQ: passing a slot for session (allows for isLocked check)
                 return getSessionDetail("empty", new slot($session.data("date"), $session.data("time"), $session.data("room"), null));
             };
-
-	        // HQ: inserting additional data so history can display right
-	     //    $("#list-history").prepend("<li>locked: " 
-			   // + "<a href='#' class='history-link' data-slot-date='" +
-			   // $session.data("date") + 
-			   // "' data-slot-time='" + $session.data("time") + 
-			   // "' data-slot-room='" + $session.data("room") + 
-			   // "'>" 
-			   // + $session.data("date") + ", " + $session.data("time") + ", " + $session.data("room") + "</a></li>");
             $(document).trigger("addHistory", [{user: "", type: "lock", date: $session.data("date"), time: $session.data("time"), room: $session.data("room")}]);
         }
         $session.removeClass("selected").popover("hide");
@@ -174,8 +162,6 @@ var ViewMode = function() {
             $session.data('popover').options.content = function(){
                 return getSessionDetail("scheduled", allSessions[id]);
             };
-    	 //    $("#list-history").prepend("<li>unlocked: " 
-			   // + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
             $(document).trigger("addHistory", [{user: "", type: "unlock", id: id}]);
 
         }else{
@@ -184,14 +170,6 @@ var ViewMode = function() {
                 // HQ: passing a slot for session (allows for isLocked check)
                 return getSessionDetail("empty", new slot($session.data("date"), $session.data("time"), $session.data("room"), null));
             };
-    	    // HQ: inserting additional data so history can display right
-    	  //   $("#list-history").prepend("<li>unlocked: " 
-				   // + "<a href='#' class='history-link' data-slot-date='" +
-				   // $session.data("date") + 
-				   // "' data-slot-time='" + $session.data("time") + 
-				   // "' data-slot-room='" + $session.data("room") + 
-				   // "'>"  
-				   // + $session.data("date") + ", " + $session.data("time") + ", " + $session.data("room") + "</a></li>");
             $(document).trigger("addHistory", [{user: "", type: "unlock", date: $session.data("date"), time: $session.data("time"), room: $session.data("room")}]);
         }
 

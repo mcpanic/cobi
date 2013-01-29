@@ -69,24 +69,12 @@ var Polling = function() {
             // $cell.data('popover').options.content = function(){
             //     return getSessionDetail("scheduled", allSessions[id]);
             // };
-
-            // $("#list-history").prepend("<li>USER " + action + ": " 
-            //  + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
             $(document).trigger("addHistory", [{user: "USER", type: action, id: id}]);
         } else {
             //lockSlot($session.data("date"), $session.data("time"), $session.data("room"));
             // $cell.data('popover').options.content = function(){
             //     return getSessionDetail("empty", new slot($cell.data("date"), $cell.data("time"), $cell.data("room"), null));
-            // };
-
-            // $("#list-history").prepend("<li>USER " + action + ": "
-            //     + "<a href='#' class='history-link' data-slot-date='" +
-            //     $cell.data("date") + 
-            //     "' data-slot-time='" + $cell.data("time") + 
-            //     "' data-slot-room='" + $cell.data("room") + 
-            //     "'>" 
-            //     + $cell.data("date") + ", " + $cell.data("time") + ", " + $cell.data("room") + "</a></li>");
-            
+            // };          
             $(document).trigger("addHistory", [{user: "USER", type: action, date: $cell.data("date"), time: $cell.data("time"), room: $cell.data("room")}]);
         }
 
@@ -100,8 +88,6 @@ var Polling = function() {
         if ($cell == null || typeof $cell === "undefined")
             return;
 
-        // $("#list-history").prepend("<li>USER unscheduled: " 
-        //  + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
         $(document).trigger("addHistory", [{user: "USER", type: "unschedule", id: id}]);
         $cell.effect("highlight", {color: "yellow"}, 10000);
 
@@ -116,8 +102,6 @@ var Polling = function() {
         if ($cell == null || typeof $cell === "undefined")
          return;
 
-        // $("#list-history").prepend("<li>USER scheduled: " 
-        //  + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
         $(document).trigger("addHistory", [{user: "USER", type: "schedule", id: id}]);
         $cell.effect("highlight", {color: "yellow"}, 10000);
 
@@ -137,9 +121,6 @@ var Polling = function() {
         if ($dst_cell == null || typeof $dst_cell === "undefined")
          return;
 
-        // $("#list-history").prepend("<li>USER swapped: " 
-        // + "<a href='#' class='history-link' data-session-id='" + src_id + "'>" + allSessions[src_id].title 
-        // + "</a> and <a href='#' class='history-link' data-session-id='" + dst_id + "'>" + allSessions[dst_id].title + "</a></li>");
         $(document).trigger("addHistory", [{user: "USER", type: "swap", sid: src_id, did: dst_id}]);
 
         $src_cell.effect("highlight", {color: "yellow"}, 10000);
@@ -155,8 +136,6 @@ var Polling = function() {
         if ($cell == null || typeof $cell === "undefined")
          return;
 
-        // $("#list-history").prepend("<li>USER moved: " 
-        //  + "<a href='#' class='history-link' data-session-id='" + id + "'>" + allSessions[id].title + "</a></li>");
         $(document).trigger("addHistory", [{user: "USER", type: "move", id: id}]);
         $cell.effect("highlight", {color: "yellow"}, 10000);
 
