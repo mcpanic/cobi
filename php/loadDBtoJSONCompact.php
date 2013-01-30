@@ -23,15 +23,33 @@ $scheduleQ = "select * from schedule";
 $scheduleTable = mysqli_query($mysqli, $scheduleQ);
 echo mysqli_error($mysqli);
 
-// Get the session table
-$sessionQ = "select * from session where scheduled=0"; 
-$sessionTable = mysqli_query($mysqli, $sessionQ);
+// Get unscheduled sessions
+$sessionUQ = "select * from session where scheduled=0"; 
+$sessionUnscheduledTable = mysqli_query($mysqli, $sessionUQ);
 echo mysqli_error($mysqli);
 
+// Forming unscheduled data
 $unscheduled = array();
-while ($row = $sessionTable->fetch_assoc()) {
+while ($row = $sessionUnscheduledTable->fetch_assoc()) {
     $unscheduled[$row['id']] = $row; 
 }
+
+// Get unscheduled sessions
+$entityQ = "select * from entity where session='null'"; 
+$entityUnscheduledTable = mysqli_query($mysqli, $entityQ);
+echo mysqli_error($mysqli);
+
+// Forming unscheduled data
+$unscheduledSubmissions = array();
+while ($row = $entityUnscheduledTable->fetch_assoc()) {
+  $unscheduledSubmissions[$row['id']] = $row; 
+}
+
+
+/* // Get the session table */
+/* $sessionQ = "select * from session where scheduled=1";  */
+/* $sessionTable = mysqli_query($mysqli, $sessionQ); */
+/* echo mysqli_error($mysqli); */
 
 while ($row = $scheduleTable->fetch_assoc()) {
   $slots[$row['date']][$row['time']][$row['room']]['locked'] = (bool) $row['locked'];
@@ -52,6 +70,7 @@ while ($row = $transTable->fetch_assoc()) {
 
 $output = array('schedule' => $schedule, 
 		'unscheduled' => $unscheduled,
+		'unscheduledSubmissions' => $unscheduledSubmissions,
 		'slots' => $slots,
 		'transactions' => $transactions);
 

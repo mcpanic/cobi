@@ -26,6 +26,8 @@ $transQ = "select id, transactions.uid, transactions.type, data, previous, name 
 $transTable =  mysqli_query($mysqli, $transQ);
 echo mysqli_error($mysqli);
 
+$unscheduledSubmissions = array();
+
 // Reconstruct the JSON
 while ($row = $entityTable->fetch_assoc()) {
   $row['coreCommunities'] = json_decode($row['coreCommunities']);
@@ -70,12 +72,15 @@ while ($row = $entityTable->fetch_assoc()) {
   $row['authors'] = $authors;
   //  var_dump($authors);
   $row['keywords'] = json_decode($row['keywords']);
-  $row['session'] = json_decode($row['session']);
   
   $row['bestPaperAward'] = (bool)$row['bestPaperAward'];
   $row['bestPaperNominee'] = (bool)$row['bestPaperNominee'];
   
   $entity[$row['id']] = $row; 
+  
+    if ($row['session'] == "null"){
+      $unscheduledSubmissions[$row['id']] = $row;
+    }
 }
   
 $unscheduled = array();
@@ -133,6 +138,7 @@ while ($row = $transTable->fetch_assoc()) {
 
 $output = array('schedule' => $schedule, 
 		'unscheduled' => $unscheduled,
+		'unscheduledSubmissions' => $unscheduledSubmissions,
 		'slots' => $slots,
 		'transactions' => $transactions);
 

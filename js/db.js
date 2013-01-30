@@ -27,10 +27,12 @@ DB.prototype.refresh = function(){
 				var serverUnscheduled = m['unscheduled'];
 				var serverSlots = m['slots'];
 				var serverTransactions = m['transactions'];
+				var serverUnscheduledSubmissions = m['unscheduledSubmissions'];
 				
 				if(schedule != null){
 				    var consistencyReport = checkConsistent(serverSchedule, 
-									    serverUnscheduled, 
+									    serverUnscheduled,
+									    serverUnscheduledSubmissions,
 									    serverSlots, 
 									    serverTransactions);
 				    if(consistencyReport.isConsistent){
@@ -246,18 +248,18 @@ DB.prototype.swapSession = function(s1id, s1date, s1time, s1room,
 }
 
 DB.prototype.swapWithUnscheduledSession = function(s1id, 
-					     s2id, s2date, s2time, s2room, uid){
+						   s2id, s2date, s2time, s2room, uid){
     
     $.ajax({
  	    async: true,
-		type: 'POST',
-		data: { type: 'swapWithUnscheduled', 
-			s1id: s1id,
-			s2id: s2id,
-			s2date: s2date,
-			s2time: s2time,
-			s2room: s2room,
-			uid: uid
+	    type: 'POST',
+	    data: { type: 'swapWithUnscheduled', 
+		    s1id: s1id,
+		    s2id: s2id,
+		    s2date: s2date,
+		    s2time: s2time,
+		    s2room: s2room,
+		    uid: uid
 	    }, 
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
@@ -269,3 +271,132 @@ DB.prototype.swapWithUnscheduledSession = function(s1id,
 	    dataType: "json"
 	});
 }
+    
+////// paper level operations
+    DB.prototype.reorderPapers = function(id, newPaperOrder, previousPaperOrder, uid){
+    $.ajax({
+	    async: true,
+	    type: 'POST',
+	    data: { type: 'reorderPapers',
+		    id: id,
+		    newPaperOrder: newPaperOrder.join(),
+		    previousPaperOrder: previousPaperOrder.join(),
+		    uid: uid
+	    }, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){
+		transactions.push(m);
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}
+    
+DB.prototype.swapPapers = function(s1id, p1id, s2id, p2id, uid){
+    $.ajax({
+	    async: true,
+	    type: 'POST',
+	    data: { type: 'swapPapers',
+		    s1id: s1id,
+		    p1id: p1id,
+		    s2id: s2id,
+		    p2id: p2id,
+		    uid: uid
+	    }, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){
+		transactions.push(m);
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}
+
+DB.prototype.swapWithUnscheduledPaper = function(p1id, s2id, p2id, uid){
+    $.ajax({
+	    async: true,
+	    type: 'POST',
+	    data: { type: 'swapWithUnscheduledPaper',
+		    p1id: p1id,
+		    s2id: s2id,
+		    p2id: p2id,
+		    uid: uid
+	    }, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){
+		transactions.push(m);
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}
+
+DB.prototype.movePaper = function(s1id, p1id, s2id, uid){
+    $.ajax({
+	    async: true,
+	    type: 'POST',
+	    data: { type: 'movePaper',
+		    s1id: s1id,
+		    p1id: p1id,
+		    s2id: s2id,
+		    uid: uid
+	    }, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){
+		transactions.push(m);
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}
+
+DB.prototype.unschedulePaper = function(sid, pid, uid){
+    $.ajax({
+	    async: true,
+	    type: 'POST',
+	    data: { type: 'unschedulePaper',
+		    sid: sid,
+		    pid: pid,
+		    uid: uid
+	    }, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){
+		transactions.push(m);
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}
+    
+DB.prototype.schedulePaper = function(sid, pid, uid){
+    $.ajax({
+	    async: true,
+	    type: 'POST',
+	    data: { type: 'schedulePaper',
+		    sid: sid,
+		    pid: pid,
+		    uid: uid
+	    }, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){
+		transactions.push(m);
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}
+    
+
+    
