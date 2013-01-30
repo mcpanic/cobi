@@ -370,25 +370,28 @@ function swapWithUnscheduledSession(s1, s2){
 
 /////// start of functions for interacting with papers in session//////
 //  Operations / DB / transactions
-//    reorderPapers(s.id, [paper.id]) ---> done
-//    swapPapers(s1.id, p1.id, s2.id, p2.id) ---> done
-//    unschedulePaper(s.id, paper.id) --> done
-//    schedulePaper(paper.id, s.id, opt_where) --> done, no opt_where
-//    movePaper(s1.id, p1.id, s2.id, opt_where) --> done, no opt_where
-//    swapWithUnscheduledPaper(p1.id, s2.id, p2.id) --> done
-//  checkConsistency / undo
-//    reorder papers(s.id, [paper.id])   
-//    swap papers(s1.id, p1.id, s2.id, p2.id)
-//    unschedule papers(s.id, paper.id)
-//    schedule papers(paper.id, s.id, opt_where)
-//    move papers (s1.id, p1.id, s2.id, opt_where)
-//  Proposal (look for start paper propose functions)
+//    reorderPapers(s, [paper.id]) ---> done
+//    swapPapers(s1, p1, s2, p2) ---> done
+//    unschedulePaper(s, p) --> done
+//    schedulePaper(p, s) --> done, insert at front
+//    movePaper(s1, p1, s2) --> done, insert at front
+//    swapWithUnscheduledPaper(p1, s2, p2) --> done
+//
+//  checkConsistency / undo (NOT DONE YET)
+//    reorder papers
+//    swap papers
+//    unschedule papers
+//    schedule papers
+//    move papers
+//    swap with unscheduled papers
+//
+//  Proposal (DONE with no intelligence)
 //    ProposePaperSessionAndSwap(p) --> done
 //        handles scheduled and unscheduled papers
 //    ProposePaperForSession(s) -> done
 //        looks in scheduled and unscheduled papers
 //  Types
-///   only allow venue-type based matches, leading to pn==tochi==short, case study to itself, altchi to itself
+///   only allow venue<->type based matches (special handle for TOCHI), leading to pn==tochi==short, case study to itself, altchi to itself
 
 
 
