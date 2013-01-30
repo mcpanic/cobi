@@ -16,9 +16,9 @@
      function getSessionDetail(type, session){
       var html = ""; 
 
-      console.log(typeof session, session == null);
+      //      console.log(typeof session, session == null);
       if (typeof session !== "undefined" && session != null && typeof session.id !== "undefined" && session.id != null) {
-          console.log( typeof session.id, session.id);
+	  //  console.log( typeof session.id, session.id);
           html += "<span id='popover-session-" + session.id + "' class='hidden'/>";
       }
 
@@ -217,7 +217,7 @@
 
      function displayAuthors(authors){
           var html = ""; 
-          console.log(authors);       
+	  //          console.log(authors);       
           $.each(authors, function(i, author){
                html += author.firstName + " " + author.lastName + ", ";
           }); 

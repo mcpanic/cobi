@@ -480,9 +480,10 @@ function swapPapers(s1, p1, s2, p2){
 
 function clearSession(s){
     console.log("Test: removing papers from " + s.id);
-    for(var p in s.submissions){
-	removePaperFromSession(s, s.submissions[p]);
-    }
+    s.submissions = []; 
+//    for(var p in s.submissions){
+// 	removePaperFromSession(s, s.submissions[p]);
+//     }
 }
 
 function removePaperFromSession(s, p){
@@ -752,14 +753,16 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
 				// get rid of key where same
 				delete serverSchedule[day][time][room];			    
 			    }else{
+				console.log(serverSchedule[day][time][room][s]['submissions']);
+				console.log(subKeys);
 				// remove all papers from session
 				// again, not changing the paper's base data, we will do that when we add
 				clearSession(allSessions[s]);
 				
 				// re-insert papers based on new order
-				for(var i = serverSchedule[day][time][room][s]['submissions'].length - 1; i > 0; i--){
-				    console.log('--' + serverSchedule[day][time][room][s]['submissions'][i] + '--');
-				    console.log(allSubmissions[serverSchedule[day][time][room][s]['submissions'][i]]);
+				for(var i = serverSchedule[day][time][room][s]['submissions'].length - 1; i >= 0; i--){
+				    //				    console.log('--' + serverSchedule[day][time][room][s]['submissions'][i] + '--');
+				    //				    console.log(allSubmissions[serverSchedule[day][time][room][s]['submissions'][i]]);
 				    
 				    // TODO: change once this paper is handled by Michel
 				    if(serverSchedule[day][time][room][s]['submissions'][i] != 'pn710' && 
