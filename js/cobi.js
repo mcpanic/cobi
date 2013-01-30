@@ -1554,7 +1554,7 @@ function proposeSwapForPaper(p){
 			 (p.type == "TOCHI" && schedule[day][time][room][session]["venue"] == "paper")) 
 			&& (p.session != session)){
 			for(var submission in schedule[day][time][room][session]['submissions']){
-			    console.log(session,    schedule[day][time][room][session]['submissions'][submission]['id']);
+			    //    console.log(session,    schedule[day][time][room][session]['submissions'][submission]['id']);
 			    swapValue.push(new swapDetails(new sessionPaper(session,     schedule[day][time][room][session]['submissions'][submission]['id']),
 							   0,
 							   null,
