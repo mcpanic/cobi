@@ -189,6 +189,18 @@ function swapWithUnscheduledSession($s1id,
   echo mysqli_error($mysqli);
 }
 
+/// start paper level functions
+
+
+function reorderPapers($id, $paperOrder, $mysqli){
+  // change the session data so it is scheduled with room, time, date
+  $query = "UPDATE session SET submissions='$paperOrder' WHERE id='$id'";
+  mysqli_query($mysqli, $query);
+  echo mysqli_error($mysqli);
+}
+
+/// end paper level
+
 $type = $_POST['type'];
 $uid = mysqli_real_escape_string($mysqli, $_POST['uid']);
 
@@ -381,6 +393,26 @@ if(strcmp("swapWithUnscheduled", $type) == 0){
 			    "s2date" => $s2date,
 			    "s2time" => $s2time,
 			    "s2room" => $s2room
+				));
+
+  recordTransaction($uid, $type, $data, $previous, $mysqli);
+}
+
+if(strcmp("reorderPapers", $type) == 0){
+  $id = mysqli_real_escape_string($mysqli, $_POST['id']);
+  $newPaperOrder = mysqli_real_escape_string($mysqli, $_POST['newPaperOrder']);
+  $previousPaperOrder = mysqli_real_escape_string($mysqli, $_POST['previousPaperOrder']);
+
+  reorderPapers($id, $newPaperOrder, $mysqli);
+
+  $data = json_encode(array(
+			    "id" => $id,
+			    "paperOrder" => $newPaperOrder
+			    ));
+  
+  $previous = json_encode(array(
+				"id" => $id,
+				"paperOrder" => $previousPaperOrder
 				));
 
   recordTransaction($uid, $type, $data, $previous, $mysqli);

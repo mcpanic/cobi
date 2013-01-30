@@ -1,10 +1,12 @@
 var allRooms = null;
 var allSessions = null;
+var allSubmissions = null;
 var authorConflictsAmongSessions = {};
 var personaConflictsAmongSessions = {};
 var conflictsByTime = null;
 var conflictsBySession = null;
 var unscheduled = null;
+var unscheduledSubmissions = null;
 var schedule = null;
 var frontEndOnly = false;
 var scheduleSlots = null;
@@ -61,7 +63,7 @@ function undo(){
 			     previous['date'], 
 			     previous['time'],
 			     previous['room']);
-	    delete unscheduled[previous['id']];
+	    removeFromUnscheduled(allSessions[previous['id']]);
 	    $(document).trigger('slotChange', [previous['date'], previous['time'], previous['room']]);
 	    $(document).trigger('unscheduledChange');
 
@@ -137,6 +139,7 @@ function undo(){
 	db.undo(userData.id);
     }
 }
+
 
 function lockSlotsAtDayTime(day, time){
     for(var room in scheduleSlots[day][time]){
@@ -226,6 +229,12 @@ function addToUnscheduled(s){
     unscheduled[s.id] = s;
 }
 
+function removeFromUnscheduled(s){
+    // remove session from unscheduled
+    console.log("Test: removing session " + s.id + " from unscheduled list.");
+    delete unscheduled[s.id];
+}
+
 // Unschedule a session
 function unscheduleSession(s){
 
@@ -266,7 +275,7 @@ function scheduleSession(s, sdate, stime, sroom){
     var isUnscheduled = false;
     // remove session from unscheduled
     if(s.id in unscheduled){
-	delete unscheduled[s.id];
+	removeFromUnscheduled(s);
 	isUnscheduled = true;
     }
     
@@ -354,7 +363,66 @@ function swapWithUnscheduledSession(s1, s2){
 				s2.id, s2date, s2time, s2room,  userData.id);
     }
 }
-///////end functions for interacting with schedule////////////
+///////end of functions for interacting with schedule////////////
+
+function reorderPapers(s, newPaperOrder, previousPaperOrder){
+    // assume paperOrder is an array of paper IDs
+    
+    console.log("Test: reordering papers in session " + s.id + " to " + JSON.stringify(newPaperOrder));
+    var submissions = [];
+    
+    for(var i = 0; i < newPaperOrder.length; i++){
+	for(var j = 0; j < s.submissions.length; j++){
+	    if(s.submissions[j].id == newPaperOrder[i]){
+		submissions.push(s.submissions[j]);
+		break;
+	    } 
+	}
+    }
+    
+    s.submissions = submissions;
+    
+    if(!frontEndOnly){
+	db.reorderPapers(s.id, newPaperOrder, previousPaperOrder, userData.id);
+    }
+}
+
+//TODO:
+//  Operations
+//    reorder papers(s.id, [paper.id])   
+//    swap papers(s1.id, p1.id, s2.id, p2.id)
+//    unschedule papers(s.id, paper.id)
+//    schedule papers(paper.id, s.id, opt_where)
+//    move papers (s1.id, p1.id, s2.id, opt_where)
+//  DB / transactions / undo
+//    reorder papers(s.id, [paper.id])   
+//    swap papers(s1.id, p1.id, s2.id, p2.id)
+//    unschedule papers(s.id, paper.id)
+//    schedule papers(paper.id, s.id, opt_where)
+//    move papers (s1.id, p1.id, s2.id, opt_where)
+//  Proposal
+//    ProposeSwapPaper(p)
+//    ProposeMovePaper(p)
+//    ProposeUnscheduledInsertPaperIntoSession(p)
+//  Types
+///   only allow pn==tochi==short, case study to itself, altchi to itself
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////// end of functions for interacting with papers in sessions/////////////
 
 function arraysEqual(arr1, arr2) {
     if(arr1.length != arr2.length)
@@ -399,11 +467,14 @@ function initialize(){
 function initAfterScheduleLoads(m){
     schedule = m['schedule'];
     unscheduled = m['unscheduled'];
+    unscheduledSubmissions = m['unscheduledSubmissions'];
     scheduleSlots = m['slots'];
     transactions = m['transactions'];
 
     allRooms = getAllRooms();
     allSessions = getAllSessions();
+    allSubmissions = getAllSubmissions();
+   
     // TODO: deal with personas
     //attachPersonas();  // loads personas from a file into schedule JSON
     
@@ -447,7 +518,7 @@ function unescapeURL(s) {
 // change the internal data to update and bring everythign consistent
 //      
 //
-function checkConsistent(serverSchedule, serverUnscheduled, serverSlots, serverTransactions){
+function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSubmissions, serverSlots, serverTransactions){
     // Compare schedule first
     // Assume same keys on day/time/room exist always, so any inconsistency is in content
 
@@ -522,14 +593,41 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverSlots, serverT
 	consistent = false;
 	
 	// make change to unscheduled data
-	unscheduled = {};
+	for(var s in unscheduled){
+	    removeFromUnscheduled(allSessions[s]);
+	}
+	//	unscheduled = {};
 	for(var s in serverUnscheduled){
-	    unscheduled[s] = allSessions[s];
+	    addToUnscheduled(allSessions[s]);
+	    //unscheduled[s] = allSessions[s];
 	}
 
 	// trigger a change in unscheduled data
 	$(document).trigger('unscheduledChange');
     }
+
+    /////////////// TODO: INSERT PAPER LEVEL CHECKS /////////////
+    ///// check if papers all still where they should be in schedule
+    ///// check if unscheduled papers also where they should be...
+    ////// update as necessary
+
+
+//     if(!arraysEqual(keys(unscheduledSubmissions).sort(),  keys(serverUnscheduledSubmissions).sort())){
+// 	// get what's different... 
+// 	// what's added
+// 	// what's removed
+// 	consistent = false;
+	
+// 	// make change to unscheduled data
+// 	unscheduled = {};
+// 	for(var e in serverUnscheduled){
+	    
+// 	    unscheduledSubmissions[e] = allSubmissions[e];
+// 	}
+
+// 	// trigger a change in unscheduled entity data
+// 	$(document).trigger('unscheduledSubmissionsChange');
+//     }
 
     if(consistent == false){
 	// all changes are in the transactions data itself,
@@ -562,6 +660,28 @@ function getAllSessions(){
 	sessions[session] = unscheduled[session];
     }
     return sessions;
+}
+
+function getAllSubmissions(){
+    var submissions = {};
+    for(var day in schedule){
+	for(var time in schedule[day]){
+	    for(var room in schedule[day][time]){
+		for(var session in schedule[day][time][room]){
+		    for(var submission in schedule[day][time][room][session]["submissions"]){
+			var id = schedule[day][time][room][session]["submissions"][submission]['id'];
+			submissions[id] = schedule[day][time][room][session]["submissions"][submission];
+		    }
+		}
+	    }
+	}
+    }
+    
+    // get unscheduled submissions too
+    for(var e in unscheduledSubmissions){
+	submissions[e] = unscheduledSubmissions[e];
+    }
+    return submissions;
 }
 
 function randomizeSchedule(){
