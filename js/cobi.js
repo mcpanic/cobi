@@ -354,8 +354,10 @@ function swapWithUnscheduledSession(s1, s2){
 	return;
     }
 
-    scheduleSession(s1, s2date, s2time, s2room);
-    unscheduleSession(s2, s2date, s2time, s2room);
+    removeFromUnscheduled(s1);
+    removeSessionFromSlot(s2, s2date, s2time, s2room);
+    addToUnscheduled(s2);
+    addSessionToSlot(s1, s2date, s2time, s2room);
 
     // perform swap on server
     if(!frontEndOnly){
@@ -363,7 +365,32 @@ function swapWithUnscheduledSession(s1, s2){
 				s2.id, s2date, s2time, s2room,  userData.id);
     }
 }
+
 ///////end of functions for interacting with schedule////////////
+
+/////// start of functions for interacting with papers in session//////
+//  Operations / DB / transactions
+//    reorder papers(s.id, [paper.id]) ---> done
+//    swap papers(s1.id, p1.id, s2.id, p2.id) ---> done
+//    unschedule papers(s.id, paper.id) --> done
+//    schedule papers(paper.id, s.id, opt_where) --> done, no opt_where
+//    move papers (s1.id, p1.id, s2.id, opt_where) --> done, no opt_where
+//    swapWithUnscheduledPaper(p1.id, s2.id, p2.id) --> done
+//  checkConsistency / undo
+//    reorder papers(s.id, [paper.id])   
+//    swap papers(s1.id, p1.id, s2.id, p2.id)
+//    unschedule papers(s.id, paper.id)
+//    schedule papers(paper.id, s.id, opt_where)
+//    move papers (s1.id, p1.id, s2.id, opt_where)
+//  Proposal
+//    ProposeSwapPaper(p)
+//    ProposeMovePaper(p)
+//    ProposeUnscheduledInsertPaperIntoSession(p)
+//    ProposeAddPaperToSession
+//  Types
+///   only allow pn==tochi==short, case study to itself, altchi to itself
+
+
 
 // Example: 
 // flipping first two papers in Mobile keyboard / text entry
@@ -538,26 +565,32 @@ function movePaper(s1, p1, s2){
     }
 }
 
-
-//TODO:
-//  Operations / DB / transactions
-//    reorder papers(s.id, [paper.id]) ---> done
-//    swap papers(s1.id, p1.id, s2.id, p2.id) ---> done
-//    unschedule papers(s.id, paper.id) --> done
-//    schedule papers(paper.id, s.id, opt_where) --> done, no opt_where
-//    move papers (s1.id, p1.id, s2.id, opt_where)
-//  checkConsistency / undo
-//    reorder papers(s.id, [paper.id])   
-//    swap papers(s1.id, p1.id, s2.id, p2.id)
-//    unschedule papers(s.id, paper.id)
-//    schedule papers(paper.id, s.id, opt_where)
-//    move papers (s1.id, p1.id, s2.id, opt_where)
-//  Proposal
-//    ProposeSwapPaper(p)
-//    ProposeMovePaper(p)
-//    ProposeUnscheduledInsertPaperIntoSession(p)
-//  Types
-///   only allow pn==tochi==short, case study to itself, altchi to itself
+// Example:
+// assuming pn1376 is unscheduled, swap it with paper in Mobile keyword / text that is scheduled
+// swapWithUnscheduledPaper(unscheduledSubmissions['pn1376'], allSessions['s254'], allSubmissions['pn1566']);
+// swapWithUnscheduledPaper(unscheduledSubmissions['pn1566'], allSessions['s254'], allSubmissions['pn1376']);
+function swapWithUnscheduledPaper(p1, s2, p2){
+    // assume p1 is unscheduled
+    if(isLocked(s2)) return;
+    if(p1.type != s2.venue) return;
+    if(!(paperIsInSession(s2,p2))) return;
+    
+    console.log("Test: swapping unscheduled paper " + p1.id + " with scheduled paper " + p2.id + " in " + s2.id);
+    
+    removeFromUnscheduledPaper(p1);
+    for(var i = 0; i < s2.submissions.length; i++){
+	if(s2.submissions[i] == p2){
+	    s2.submissions[i] = p1;
+	    p2.session = "null";
+	    p1.session = s2.id;
+	}
+    }
+    addToUnscheduledPaper(p2);
+    
+    if(!frontEndOnly){
+	db.swapWithUnscheduledPaper(p1.id, s2.id, p2.id, userData.id);
+    }
+}
 
 
 //////// end of functions for interacting with papers in sessions/////////////
@@ -1436,6 +1469,146 @@ function getAllConflicts(){
     conflictsBySession = conflicts["sessions"];
     //    return conflicts;
 }
+/////////// start paper propose functions
+function proposePaperSessionAndSwap(p){
+    if(p.id in unscheduledSubmissions){
+	var sessionValue = proposeSessionForPaper(p);
+	var swapValue = proposeSwapForUnscheduledPaper(p);
+	return {sessionValue: sessionValue,
+		swapValue: swapValue};
+    }else {
+	// todo: only works for already scheduled sessions 
+	var sessionValue = proposeSessionForPaper(p);
+	var swapValue = proposeSwapForPaper(p);
+	return {sessionValue: sessionValue,
+		swapValue: swapValue};
+    }
+}
+
+function proposePaperForSession(s){
+    var scheduleValue = proposeScheduledPaperForSession(s);
+    var unscheduleValue = proposeUnscheduledPaperForSession(s);
+    return {scheduleValue: scheduleValue,
+	    unscheduleValue: unscheduleValue};
+}
+
+// TODO: not providing any intelligence, just listing legal slots
+function proposeSessionForPaper(p){
+    var swapValue = [];
+    for(var day in schedule){
+	for(var time in schedule[day]){
+	    for(var room in schedule[day][time]){
+		for(var session in schedule[day][time][room]){
+		    if (schedule[day][time][room][session]["venue"] == p.type && 
+			(p.id in unscheduledSubmissions || p.session != session)){
+			swapValue.push(new swapDetails(new sessionPaper(session, null),
+						       0,
+						       null,
+						       null,
+						       null,
+						       null));
+		    }
+		}
+	    }
+	}
+    }
+    return swapValue;
+}
+
+function proposeSwapForUnscheduledPaper(p){
+    var swapValue = [];
+    for(var day in schedule){
+	for(var time in schedule[day]){
+	    for(var room in schedule[day][time]){
+		for(var session in schedule[day][time][room]){
+		    if (schedule[day][time][room][session]["venue"] == p.type){
+			for(var submission in schedule[day][time][room][session]['submissions']){
+			    swapValue.push(new swapDetails(new sessionPaper(session, submission),
+							   0,
+							   null,
+							   null,
+							   null,
+							   null));
+			}
+		    }
+		}
+	    }
+	}
+    }
+    return swapValue;
+}
+
+function proposeSwapForPaper(p){
+    var swapValue = [];
+    for(var day in schedule){
+	for(var time in schedule[day]){
+	    for(var room in schedule[day][time]){
+		for(var session in schedule[day][time][room]){
+		    if (schedule[day][time][room][session]["venue"] == p.type &&
+			p.session != session){
+			for(var submission in schedule[day][time][room][session]['submissions']){
+			    swapValue.push(new swapDetails(new sessionPaper(session, submission),
+							   0,
+							   null,
+							   null,
+							   null,
+							   null));
+			}
+		    }
+		}
+	    }
+	}
+    }
+    return swapValue;
+}
+
+function proposeScheduledPaperForSession(s){
+    var swapValue = [];
+    for(var day in schedule){
+	for(var time in schedule[day]){
+	    for(var room in schedule[day][time]){
+		for(var session in schedule[day][time][room]){
+		    if (schedule[day][time][room][session]["venue"] == s["venue"] &&
+			s.id != session){
+			for(var submission in schedule[day][time][room][session]['submissions']){
+			    swapValue.push(new swapDetails(new sessionPaper(session, submission),
+							   0,
+							   null,
+							   null,
+							   null,
+							   null));
+			}
+		    }
+		}
+	    }
+	}
+    }
+    return swapValue;
+}
+
+function proposeUnscheduledPaperForSession(s){
+    var swapValue = [];
+    for (var p in unscheduledSubmissions){
+	if (unscheduledSubmissions[p].type == s.venue){
+	    swapValue.push(new swapDetails(new sessionPaper(null, p),
+					   0,
+					   null,
+					   null,
+					   null,
+					   null));
+	}
+    }
+    return swapValue;
+}
+
+
+
+
+
+
+//////// end paper propose functions
+
+
 
 function isEmpty(map) {
     for(var key in map) {
@@ -1494,6 +1667,11 @@ function slot(date, time, room, session){
     this.time = time;
     this.room = room;
     this.session = session;
+}
+
+function sessionPaper(session, paper){
+    this.session = session;
+    this.paper = paper;
 }
 
 function conflictObject(entities, type, conflict, description){

@@ -316,6 +316,27 @@ DB.prototype.swapPapers = function(s1id, p1id, s2id, p2id, uid){
 	});
 }
 
+DB.prototype.swapWithUnscheduledPaper = function(p1id, s2id, p2id, uid){
+    $.ajax({
+	    async: true,
+	    type: 'POST',
+	    data: { type: 'swapWithUnscheduledPaper',
+		    p1id: p1id,
+		    s2id: s2id,
+		    p2id: p2id,
+		    uid: uid
+	    }, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){
+		transactions.push(m);
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}
+
 DB.prototype.movePaper = function(s1id, p1id, s2id, uid){
     $.ajax({
 	    async: true,

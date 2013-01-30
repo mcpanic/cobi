@@ -180,7 +180,7 @@ function swapWithUnscheduledSession($s1id,
   echo mysqli_error($mysqli);
     
   // change the session data so it is scheduled with room, time, date
-  $ss1query = "UPDATE session SET date='$s2date', time='$s2time', room='$s2room' WHERE id='$s1id'";
+  $ss1query = "UPDATE session SET date='$s2date', time='$s2time', room='$s2room', scheduled=1 WHERE id='$s1id'";
   mysqli_query($mysqli, $ss1query);
   echo mysqli_error($mysqli);
   
@@ -244,6 +244,39 @@ function swapPapers($s1id, $p1id, $s2id, $p2id, $mysqli){
   // change the entity data so that each submission is associated with the right 
   // session
   $e1query = "UPDATE entity SET session='$s1id' WHERE id='$p2id'";  
+  mysqli_query($mysqli, $e1query);
+  echo mysqli_error($mysqli);
+
+  $e2query = "UPDATE entity SET session='$s2id' WHERE id='$p1id'";  
+  mysqli_query($mysqli, $e2query);
+  echo mysqli_error($mysqli);
+}
+
+function swapWithUnscheduledPaper($p1id, $s2id, $p2id, $mysqli){
+
+  $s2query = "SELECT submissions from session where id='$s2id'";
+  $result2 = mysqli_query($mysqli, $s2query);
+  echo mysqli_error($mysqli);
+  
+  // return the transaction record
+  $row = $result2->fetch_assoc();
+  if($row != null){
+    $s2subs = explode(",", $row["submissions"]);
+    foreach ($s2subs as &$s2sub) {
+      if($s2sub == $p2id){
+	$s2sub = $p1id;
+      }
+    }
+    $s2newsubs = implode(",", $s2subs);
+    
+    $s2upquery = "UPDATE session SET submissions='$s2newsubs' WHERE id='$s2id'";    
+    mysqli_query($mysqli, $s2upquery);
+    echo mysqli_error($mysqli);
+  }
+  
+  // change the entity data so that each submission is associated with the right 
+  // session
+  $e1query = "UPDATE entity SET session='null' WHERE id='$p2id'";  
   mysqli_query($mysqli, $e1query);
   echo mysqli_error($mysqli);
 
@@ -580,6 +613,27 @@ if(strcmp("swapPapers", $type) == 0){
   
   $previous = json_encode(array(
 			    "s1id" => $s1id,
+			    "p1id" => $p2id,
+			    "s2id" => $s2id,
+			    "p2id" => $p1id,
+				));
+  recordTransaction($uid, $type, $data, $previous, $mysqli);
+}
+
+if(strcmp("swapWithUnscheduledPaper", $type) == 0){
+  $p1id = mysqli_real_escape_string($mysqli, $_POST['p1id']);
+  $s2id = mysqli_real_escape_string($mysqli, $_POST['s2id']);
+  $p2id = mysqli_real_escape_string($mysqli, $_POST['p2id']);
+
+  swapWithUnscheduledPaper($p1id, $s2id, $p2id, $mysqli);
+
+  $data = json_encode(array(
+			    "p1id" => $p1id,
+			    "s2id" => $s2id,
+			    "p2id" => $p2id,
+			    ));
+  
+  $previous = json_encode(array(
 			    "p1id" => $p2id,
 			    "s2id" => $s2id,
 			    "p2id" => $p1id,
