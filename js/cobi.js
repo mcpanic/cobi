@@ -370,11 +370,11 @@ function swapWithUnscheduledSession(s1, s2){
 
 /////// start of functions for interacting with papers in session//////
 //  Operations / DB / transactions
-//    reorder papers(s.id, [paper.id]) ---> done
-//    swap papers(s1.id, p1.id, s2.id, p2.id) ---> done
-//    unschedule papers(s.id, paper.id) --> done
-//    schedule papers(paper.id, s.id, opt_where) --> done, no opt_where
-//    move papers (s1.id, p1.id, s2.id, opt_where) --> done, no opt_where
+//    reorderPapers(s.id, [paper.id]) ---> done
+//    swapPapers(s1.id, p1.id, s2.id, p2.id) ---> done
+//    unschedulePaper(s.id, paper.id) --> done
+//    schedulePaper(paper.id, s.id, opt_where) --> done, no opt_where
+//    movePaper(s1.id, p1.id, s2.id, opt_where) --> done, no opt_where
 //    swapWithUnscheduledPaper(p1.id, s2.id, p2.id) --> done
 //  checkConsistency / undo
 //    reorder papers(s.id, [paper.id])   
@@ -382,13 +382,13 @@ function swapWithUnscheduledSession(s1, s2){
 //    unschedule papers(s.id, paper.id)
 //    schedule papers(paper.id, s.id, opt_where)
 //    move papers (s1.id, p1.id, s2.id, opt_where)
-//  Proposal
-//    ProposeSwapPaper(p)
-//    ProposeMovePaper(p)
-//    ProposeUnscheduledInsertPaperIntoSession(p)
-//    ProposeAddPaperToSession
+//  Proposal (look for start paper propose functions)
+//    ProposePaperSessionAndSwap(p) --> done
+//        handles scheduled and unscheduled papers
+//    ProposePaperForSession(s) -> done
+//        looks in scheduled and unscheduled papers
 //  Types
-///   only allow pn==tochi==short, case study to itself, altchi to itself
+///   only allow venue-type based matches, leading to pn==tochi==short, case study to itself, altchi to itself
 
 
 
@@ -1469,6 +1469,7 @@ function getAllConflicts(){
     conflictsBySession = conflicts["sessions"];
     //    return conflicts;
 }
+
 /////////// start paper propose functions
 function proposePaperSessionAndSwap(p){
     if(p.id in unscheduledSubmissions){
@@ -1499,7 +1500,8 @@ function proposeSessionForPaper(p){
 	for(var time in schedule[day]){
 	    for(var room in schedule[day][time]){
 		for(var session in schedule[day][time][room]){
-		    if (schedule[day][time][room][session]["venue"] == p.type && 
+		    if ((schedule[day][time][room][session]["venue"] == p.type ||
+			 (p.type == "TOCHI" && schedule[day][time][room][session]["venue"] == "paper")) && 
 			(p.id in unscheduledSubmissions || p.session != session)){
 			swapValue.push(new swapDetails(new sessionPaper(session, null),
 						       0,
@@ -1521,9 +1523,12 @@ function proposeSwapForUnscheduledPaper(p){
 	for(var time in schedule[day]){
 	    for(var room in schedule[day][time]){
 		for(var session in schedule[day][time][room]){
-		    if (schedule[day][time][room][session]["venue"] == p.type){
+
+		    if ((schedule[day][time][room][session]["venue"] == p.type ||
+			 (p.type == "TOCHI" && schedule[day][time][room][session]["venue"] == "paper"))){
 			for(var submission in schedule[day][time][room][session]['submissions']){
-			    swapValue.push(new swapDetails(new sessionPaper(session, submission),
+			    swapValue.push(new swapDetails(new sessionPaper(session, 
+									    schedule[day][time][room][session]['submissions'][submission]['id']),
 							   0,
 							   null,
 							   null,
@@ -1544,16 +1549,23 @@ function proposeSwapForPaper(p){
 	for(var time in schedule[day]){
 	    for(var room in schedule[day][time]){
 		for(var session in schedule[day][time][room]){
-		    if (schedule[day][time][room][session]["venue"] == p.type &&
-			p.session != session){
+
+		    if ((schedule[day][time][room][session]["venue"] == p.type ||
+			 (p.type == "TOCHI" && schedule[day][time][room][session]["venue"] == "paper")) 
+			&& (p.session != session)){
 			for(var submission in schedule[day][time][room][session]['submissions']){
-			    swapValue.push(new swapDetails(new sessionPaper(session, submission),
+			    console.log(session,    schedule[day][time][room][session]['submissions'][submission]['id']);
+			    swapValue.push(new swapDetails(new sessionPaper(session,     schedule[day][time][room][session]['submissions'][submission]['id']),
 							   0,
 							   null,
 							   null,
 							   null,
 							   null));
 			}
+		    }else{
+			//if(schedule[day][time][room][session]["venue"] == "paper"){
+			    //   console.log(session + " didn't pass the check");
+			//}
 		    }
 		}
 	    }
@@ -1571,7 +1583,8 @@ function proposeScheduledPaperForSession(s){
 		    if (schedule[day][time][room][session]["venue"] == s["venue"] &&
 			s.id != session){
 			for(var submission in schedule[day][time][room][session]['submissions']){
-			    swapValue.push(new swapDetails(new sessionPaper(session, submission),
+			    swapValue.push(new swapDetails(new sessionPaper(session,
+									    schedule[day][time][room][session]['submissions'][submission]['id']),
 							   0,
 							   null,
 							   null,
@@ -1589,8 +1602,10 @@ function proposeScheduledPaperForSession(s){
 function proposeUnscheduledPaperForSession(s){
     var swapValue = [];
     for (var p in unscheduledSubmissions){
-	if (unscheduledSubmissions[p].type == s.venue){
-	    swapValue.push(new swapDetails(new sessionPaper(null, p),
+	if (unscheduledSubmissions[p].type == s.venue || 
+	    (p.type == "TOCHI" && s.venue == "paper")){ 
+
+	    swapValue.push(new swapDetails(new sessionPaper(null, p.id),
 					   0,
 					   null,
 					   null,
