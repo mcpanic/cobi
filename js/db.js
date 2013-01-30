@@ -20,7 +20,6 @@ DB.prototype.refresh = function(){
 			    type: 'POST',
 			    data: {uid: e.uid, transactionId: e.transactionId},   
 			    success: function(m){
-			    
 			    // something has changed
 			    if(m != null){
 				var serverSchedule = m['schedule'];
@@ -28,7 +27,6 @@ DB.prototype.refresh = function(){
 				var serverSlots = m['slots'];
 				var serverTransactions = m['transactions'];
 				var serverUnscheduledSubmissions = m['unscheduledSubmissions'];
-				
 				if(schedule != null){
 				    var consistencyReport = checkConsistent(serverSchedule, 
 									    serverUnscheduled,
