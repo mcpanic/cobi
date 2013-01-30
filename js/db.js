@@ -294,4 +294,88 @@ DB.prototype.swapWithUnscheduledSession = function(s1id,
 	});
 }
     
+DB.prototype.swapPapers = function(s1id, p1id, s2id, p2id, uid){
+    $.ajax({
+	    async: true,
+	    type: 'POST',
+	    data: { type: 'swapPapers',
+		    s1id: s1id,
+		    p1id: p1id,
+		    s2id: s2id,
+		    p2id: p2id,
+		    uid: uid
+	    }, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){
+		transactions.push(m);
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}
+
+DB.prototype.movePaper = function(s1id, p1id, s2id, uid){
+    $.ajax({
+	    async: true,
+	    type: 'POST',
+	    data: { type: 'movePaper',
+		    s1id: s1id,
+		    p1id: p1id,
+		    s2id: s2id,
+		    uid: uid
+	    }, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){
+		transactions.push(m);
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}
+
+DB.prototype.unschedulePaper = function(sid, pid, uid){
+    $.ajax({
+	    async: true,
+	    type: 'POST',
+	    data: { type: 'unschedulePaper',
+		    sid: sid,
+		    pid: pid,
+		    uid: uid
+	    }, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){
+		transactions.push(m);
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}
+    
+DB.prototype.schedulePaper = function(sid, pid, uid){
+    $.ajax({
+	    async: true,
+	    type: 'POST',
+	    data: { type: 'schedulePaper',
+		    sid: sid,
+		    pid: pid,
+		    uid: uid
+	    }, 
+	    url: "./php/changeSchedule.php",
+	    success: function(m){
+		transactions.push(m);
+ 	    },
+	    error : function(m){
+		alert(JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+}
+    
+
     

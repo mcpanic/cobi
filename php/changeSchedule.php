@@ -199,6 +199,151 @@ function reorderPapers($id, $paperOrder, $mysqli){
   echo mysqli_error($mysqli);
 }
 
+function swapPapers($s1id, $p1id, $s2id, $p2id, $mysqli){
+  // change the session data so each session has the right paper
+  $s1query = "SELECT submissions from session where id='$s1id'";
+  $result1 = mysqli_query($mysqli, $s1query);
+  echo mysqli_error($mysqli);
+  
+  // return the transaction record
+  $row = $result1->fetch_assoc();
+  if($row != null){
+    $s1subs = explode(",", $row["submissions"]);
+    foreach ($s1subs as &$s1sub) {
+      if($s1sub == $p1id){
+	$s1sub = $p2id;
+      }
+    }
+    $s1newsubs = implode(",", $s1subs);
+    
+    $s1upquery = "UPDATE session SET submissions='$s1newsubs' WHERE id='$s1id'";    
+    mysqli_query($mysqli, $s1upquery);
+    echo mysqli_error($mysqli);
+  }
+
+  $s2query = "SELECT submissions from session where id='$s2id'";
+  $result2 = mysqli_query($mysqli, $s2query);
+  echo mysqli_error($mysqli);
+  
+  // return the transaction record
+  $row = $result2->fetch_assoc();
+  if($row != null){
+    $s2subs = explode(",", $row["submissions"]);
+    foreach ($s2subs as &$s2sub) {
+      if($s2sub == $p2id){
+	$s2sub = $p1id;
+      }
+    }
+    $s2newsubs = implode(",", $s2subs);
+    
+    $s2upquery = "UPDATE session SET submissions='$s2newsubs' WHERE id='$s2id'";    
+    mysqli_query($mysqli, $s2upquery);
+    echo mysqli_error($mysqli);
+  }
+  
+  // change the entity data so that each submission is associated with the right 
+  // session
+  $e1query = "UPDATE entity SET session='$s1id' WHERE id='$p2id'";  
+  mysqli_query($mysqli, $e1query);
+  echo mysqli_error($mysqli);
+
+  $e2query = "UPDATE entity SET session='$s2id' WHERE id='$p1id'";  
+  mysqli_query($mysqli, $e2query);
+  echo mysqli_error($mysqli);
+}
+
+function movePaper($s1id, $p1id, $s2id, $mysqli){
+  // change the session data so each session has the right paper
+  $s1query = "SELECT submissions from session where id='$s1id'";
+  $result1 = mysqli_query($mysqli, $s1query);
+  echo mysqli_error($mysqli);
+  
+  // return the transaction record
+  $row = $result1->fetch_assoc();
+  if($row != null){
+    $s1subs = explode(",", $row["submissions"]);
+    $s1subs = array_diff($s1subs, array($p1id));
+    $s1newsubs = implode(",", $s1subs);
+    
+    $s1upquery = "UPDATE session SET submissions='$s1newsubs' WHERE id='$s1id'";    
+    mysqli_query($mysqli, $s1upquery);
+    echo mysqli_error($mysqli);
+  }
+
+  $s2query = "SELECT submissions from session where id='$s2id'";
+  $result2 = mysqli_query($mysqli, $s2query);
+  echo mysqli_error($mysqli);
+  
+  // return the transaction record
+  $row = $result2->fetch_assoc();
+  if($row != null){
+    $s2subs = explode(",", $row["submissions"]);
+    array_unshift($s2subs, $p1id);
+    $s2newsubs = implode(",", $s2subs);
+
+    $s2upquery = "UPDATE session SET submissions='$s2newsubs' WHERE id='$s2id'";    
+    mysqli_query($mysqli, $s2upquery);
+    echo mysqli_error($mysqli);
+  }
+  
+  // change the entity data so that each submission is associated with the right 
+  // session
+  $e1query = "UPDATE entity SET session='$s2id' WHERE id='$p1id'";  
+  mysqli_query($mysqli, $e1query);
+  echo mysqli_error($mysqli);
+}
+
+function unschedulePaper($sid, $pid, $mysqli){
+  // change the session data so each session has the right paper
+  $s1query = "SELECT submissions from session where id='$sid'";
+  $result1 = mysqli_query($mysqli, $s1query);
+  echo mysqli_error($mysqli);
+  
+  // return the transaction record
+  $row = $result1->fetch_assoc();
+  if($row != null){
+    $s1subs = explode(",", $row["submissions"]);
+    $s1subs = array_diff($s1subs, array($pid));
+    $s1newsubs = implode(",", $s1subs);
+    
+    $s1upquery = "UPDATE session SET submissions='$s1newsubs' WHERE id='$sid'";    
+    mysqli_query($mysqli, $s1upquery);
+    echo mysqli_error($mysqli);
+  }
+  
+  // change the entity data so that submission is associated with the right 
+  // session
+  $e1query = "UPDATE entity SET session='null' WHERE id='$pid'";  
+  mysqli_query($mysqli, $e1query);
+  echo mysqli_error($mysqli);
+}
+
+function schedulePaper($sid, $pid, $mysqli){
+  // change the session data so each session has the right paper
+  $s1query = "SELECT submissions from session where id='$sid'";
+  $result1 = mysqli_query($mysqli, $s1query);
+  echo mysqli_error($mysqli);
+  
+  // return the transaction record
+  $row = $result1->fetch_assoc();
+  if($row != null){
+    $s1subs = explode(",", $row["submissions"]);
+    array_unshift($s1subs, $pid);
+    $s1newsubs = implode(",", $s1subs);
+    
+    $s1upquery = "UPDATE session SET submissions='$s1newsubs' WHERE id='$sid'";    
+    mysqli_query($mysqli, $s1upquery);
+    echo mysqli_error($mysqli);
+  }
+  
+  // change the entity data so that submission is associated with the right 
+  // session
+  $e1query = "UPDATE entity SET session='$sid' WHERE id='$pid'";  
+  mysqli_query($mysqli, $e1query);
+  echo mysqli_error($mysqli);
+}
+
+
 /// end paper level
 
 $type = $_POST['type'];
@@ -415,6 +560,89 @@ if(strcmp("reorderPapers", $type) == 0){
 				"paperOrder" => $previousPaperOrder
 				));
 
+  recordTransaction($uid, $type, $data, $previous, $mysqli);
+}
+
+if(strcmp("swapPapers", $type) == 0){
+  $s1id = mysqli_real_escape_string($mysqli, $_POST['s1id']);
+  $p1id = mysqli_real_escape_string($mysqli, $_POST['p1id']);
+  $s2id = mysqli_real_escape_string($mysqli, $_POST['s2id']);
+  $p2id = mysqli_real_escape_string($mysqli, $_POST['p2id']);
+
+  swapPapers($s1id, $p1id, $s2id, $p2id, $mysqli);
+
+  $data = json_encode(array(
+			    "s1id" => $s1id,
+			    "p1id" => $p1id,
+			    "s2id" => $s2id,
+			    "p2id" => $p2id,
+			    ));
+  
+  $previous = json_encode(array(
+			    "s1id" => $s1id,
+			    "p1id" => $p2id,
+			    "s2id" => $s2id,
+			    "p2id" => $p1id,
+				));
+  recordTransaction($uid, $type, $data, $previous, $mysqli);
+}
+
+if(strcmp("movePaper", $type) == 0){
+  $s1id = mysqli_real_escape_string($mysqli, $_POST['s1id']);
+  $p1id = mysqli_real_escape_string($mysqli, $_POST['p1id']);
+  $s2id = mysqli_real_escape_string($mysqli, $_POST['s2id']);
+
+  movePaper($s1id, $p1id, $s2id, $mysqli);
+
+  $data = json_encode(array(
+			    "s1id" => $s1id,
+			    "p1id" => $p1id,
+			    "s2id" => $s2id,
+			    ));
+  
+  $previous = json_encode(array(
+			    "s1id" => $s2id,
+			    "p1id" => $p1id,
+			    "s2id" => $s1id,
+				));
+  recordTransaction($uid, $type, $data, $previous, $mysqli);
+}
+
+if(strcmp("unschedulePaper", $type) == 0){
+  $sid = mysqli_real_escape_string($mysqli, $_POST['sid']);
+  $pid = mysqli_real_escape_string($mysqli, $_POST['pid']);
+
+  unschedulePaper($sid, $pid, $mysqli);
+
+  $data = json_encode(array(
+			    "sid" => $sid,
+			    "pid" => $pid,
+			    ));
+  
+  // Note: does not undo to its index.
+  $previous = json_encode(array(
+			    "sid" => $sid,
+			    "pid" => $pid,
+				));
+  recordTransaction($uid, $type, $data, $previous, $mysqli);
+}
+
+if(strcmp("schedulePaper", $type) == 0){
+  $sid = mysqli_real_escape_string($mysqli, $_POST['sid']);
+  $pid = mysqli_real_escape_string($mysqli, $_POST['pid']);
+
+  schedulePaper($sid, $pid, $mysqli);
+
+  $data = json_encode(array(
+			    "sid" => $sid,
+			    "pid" => $pid,
+			    ));
+  
+  // Note: does not undo to its index.
+  $previous = json_encode(array(
+			    "sid" => $sid,
+			    "pid" => $pid,
+				));
   recordTransaction($uid, $type, $data, $previous, $mysqli);
 }
 

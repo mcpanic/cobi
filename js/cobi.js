@@ -365,6 +365,10 @@ function swapWithUnscheduledSession(s1, s2){
 }
 ///////end of functions for interacting with schedule////////////
 
+// Example: 
+// flipping first two papers in Mobile keyboard / text entry
+// reorderPapers(allSessions["s254"], ["pn1566","pn1376","pn1360","pn492","pn1936"], ["pn1376","pn1566","pn1360","pn492","pn1936"]);
+// reorderPapers(allSessions["s254"], ["pn1376","pn1566","pn1360","pn492","pn1936"], ["pn1566","pn1376","pn1360","pn492","pn1936"]);
 function reorderPapers(s, newPaperOrder, previousPaperOrder){
     // assume paperOrder is an array of paper IDs
     
@@ -387,14 +391,162 @@ function reorderPapers(s, newPaperOrder, previousPaperOrder){
     }
 }
 
+function isLocked(s1){
+    var s1date = s1.date;
+    var s1time = s1.time;
+    var s1room = s1.room;
+    if(scheduleSlots[s1date][s1time][s1room]['locked']){
+	$(document).trigger('slotLocked', [s1date, s1time, s1room]);
+	return true;
+    }
+    return false;
+}
+
+function paperIsInSession(s1, p1){
+    // make sure keys come from right place
+    var p1ins1 = false;
+    for (var p in s1.submissions){
+	if(s1.submissions[p] == p1){
+	    p1ins1 = true;
+	}
+    }
+    return p1ins1;
+}
+
+// Example: 
+// Swapping mobile keyboard  paper with Learning first paper (top row)
+// swapPapers(allSessions['s254'], allSubmissions['pn1566'], allSessions['s288'], allSubmissions['pn2178'])
+// swapPapers(allSessions['s254'], allSubmissions['pn2178'], allSessions['s288'], allSubmissions['pn1566'])
+function swapPapers(s1, p1, s2, p2){
+
+    if(isLocked(s1) || isLocked(s2)) return;
+
+    // make sure types match and papers from their session
+    if(s1.venue != s2.venue) return;
+    if(!(paperIsInSession(s1, p1) && paperIsInSession(s2, p2))) return;
+
+
+    console.log("Test: swapping papers " + p1.id + " and " + p2.id);
+    
+    for(var i = 0; i < s1.submissions.length; i++){
+	if(s1.submissions[i] == p1){
+	    s1.submissions[i] = p2;
+	    p2.session = s1.id;
+	}
+    }
+    for(var i = 0; i < s2.submissions.length; i++){
+	if(s2.submissions[i] == p2){
+	    s2.submissions[i] = p1;
+	    p1.session = s2.id;
+	}
+    }
+    
+    // associate papers with different sessions
+    if(!frontEndOnly){
+	db.swapPapers(s1.id, p1.id, s2.id, p2.id, userData.id);
+    }
+}
+
+function removePaperFromSession(s, p){
+    console.log("Test: removing paper " + p.id + " from " + s.id);
+    // change it from the session
+    
+    // erase paper from list of submissions in session
+    var idx = s.submissions.indexOf(p); // Find the index
+    if(idx !=-1) s.submissions.splice(idx, 1); // Remove it if really found!
+    
+    // reset paper's session
+    p.session = "null";
+    
+    return;
+}
+
+function addToUnscheduledPaper(p){
+    console.log("Test: adding paper " + p.id + " to unscheduledSubmissions list.");
+    unscheduledSubmissions[p.id] = p;
+}
+
+// Example:
+// unscheduling improving two-thumb text entry from Mobile keyword / text
+// unschedulePaper(allSessions['s254'], allSubmissions['pn1376']);
+function unschedulePaper(s, p){
+    if(isLocked(s) || !paperIsInSession(s,p)) return;
+
+    console.log("Test: unscheduling paper " + p.id + " from " + s.id);
+    
+    removePaperFromSession(s, p);
+    addToUnscheduledPaper(p);
+
+    if(!frontEndOnly){
+	db.unschedulePaper(s.id, p.id, userData.id);
+    }
+}
+
+// note: always add at start of session
+function insertPaperIntoSession(s, p){
+    console.log("Test: adding paper " + p.id + " to " + s.id);
+    s.submissions.unshift(p);
+
+    // set paper's session
+    p.session = s.id;
+    
+    return;
+}
+
+function removeFromUnscheduledPaper(p){
+    console.log("Test: removing paper " + p.id + " from unscheduledSubmissions list.");
+    delete unscheduledSubmissions[p.id];
+}
+
+// Example:
+// scheduling improving two-thumb text entry to Mobile keyword / text
+// schedulePaper(allSessions['s254'], allSubmissions['pn1376']);
+function schedulePaper(s, p){
+    if(isLocked(s) || !(p.id in unscheduledSubmissions)) return;
+
+    console.log("Test: scheduling paper " + p.id + " into " + s.id);
+    
+    insertPaperIntoSession(s, p);
+    removeFromUnscheduledPaper(p);
+
+    if(!frontEndOnly){
+	db.schedulePaper(s.id, p.id, userData.id);
+    }
+}
+
+
+
+// Example: 
+// Moving mobile keyboard  paper into Learning (top row)
+// movePaper(allSessions['s254'], allSubmissions['pn1376'], allSessions['s288']);
+// movePaper(allSessions['s288'], allSubmissions['pn1376'], allSessions['s254']);
+// Note: always inserts at front
+function movePaper(s1, p1, s2){
+    if(isLocked(s1) || isLocked(s2)) return;
+    
+    // make sure types match and papers from their session
+    if(s1.venue != s2.venue) return;
+    if(!(paperIsInSession(s1, p1)))return;
+
+    console.log("Test: moving paper " + p1.id + " from " + s1.id + " to " + s2.id);
+    
+    removePaperFromSession(s1, p1);
+    insertPaperIntoSession(s2, p1);
+    
+    if(!frontEndOnly){
+	db.movePaper(s1.id, p1.id, s2.id, userData.id);
+    }
+}
+
+
 //TODO:
-//  Operations
-//    reorder papers(s.id, [paper.id])   
-//    swap papers(s1.id, p1.id, s2.id, p2.id)
-//    unschedule papers(s.id, paper.id)
-//    schedule papers(paper.id, s.id, opt_where)
+//  Operations / DB / transactions
+//    reorder papers(s.id, [paper.id]) ---> done
+//    swap papers(s1.id, p1.id, s2.id, p2.id) ---> done
+//    unschedule papers(s.id, paper.id) --> done
+//    schedule papers(paper.id, s.id, opt_where) --> done, no opt_where
 //    move papers (s1.id, p1.id, s2.id, opt_where)
-//  DB / transactions / undo
+//  checkConsistency / undo
 //    reorder papers(s.id, [paper.id])   
 //    swap papers(s1.id, p1.id, s2.id, p2.id)
 //    unschedule papers(s.id, paper.id)
@@ -406,20 +558,6 @@ function reorderPapers(s, newPaperOrder, previousPaperOrder){
 //    ProposeUnscheduledInsertPaperIntoSession(p)
 //  Types
 ///   only allow pn==tochi==short, case study to itself, altchi to itself
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //////// end of functions for interacting with papers in sessions/////////////
