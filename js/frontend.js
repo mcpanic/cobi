@@ -46,7 +46,7 @@ require(["underscore", "jquery"], function(_, $) {
 	     if(submissions[key].type == "TOCHI"){
 		 count += 20;
 	     }else if(submissions[key].type == "paper"){
-		 if(submissions[key].subtype = "Note"){
+		 if(submissions[key].subtype == "Note"){
 		     count += 10;
 		 }else{ // paper
 		     count += 20;
