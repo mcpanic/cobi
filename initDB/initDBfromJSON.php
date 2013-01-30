@@ -6,7 +6,9 @@ include "settings.php";
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
 // Form the schedule table
-$scheduleFile = file_get_contents('schedule-2012-11-16-14-55-35.json');
+//schedule-2013-0-30-13-51-39.json
+$scheduleFile = file_get_contents('schedule-2013-0-30-13-51-39.json');
+//$scheduleFile = file_get_contents('schedule-2012-11-16-14-55-35.json');
 $schedule = json_decode($scheduleFile, true);
 $schedule = $schedule["rows"];
 
@@ -73,7 +75,8 @@ foreach ($entities as $entity) {
 }
 
 // Form the session table
-$sessionsFile = file_get_contents('sessions-2012-11-16-14-55-33.json');
+$sessionsFile = file_get_contents('sessions-2013-0-30-13-51-36.json');
+//sessions-2012-11-16-14-55-33.json');
 $sessions = json_decode($sessionsFile, true);
 $sessions = $sessions["rows"];
 
