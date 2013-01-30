@@ -8,9 +8,10 @@ body {
 }
 
 
-.left-sidebar, .main {
+.left-sidebar {
     margin-left: 10px;
 }
+
 
 /* Start by setting display:none to make this hidden.
    Then we position it in relation to the viewport window
@@ -111,12 +112,15 @@ body.loading .modal {
 
 #program {
     border-color: #bbbbbb;
+    margin-top: 10px;
 }
 
 /* days separated with different cell color */
 #program tr .header-day-border{
-    /*background-color: #bbbbbb;*/
-    border-top: solid 3px #bbbbbb;
+    background-color: #bbbbbb;
+    border: 0;
+    padding: 2px;
+    /*border-top: solid 3px #bbbbbb;*/
 
 }
 
@@ -127,20 +131,20 @@ body.loading .modal {
     border-color: #bbbbbb;
 }
 
-#program .slot, div#unscheduled .slot {
+#program .slot, #unscheduled .slot, #unscheduled-papers .slot-paper {
     font-size: 10px;
     line-height: 12px;
 }
 
-#program .slot:not(.unavailable), div#unscheduled .slot:not(.unavailable) {
+#program .slot:not(.unavailable), #unscheduled .slot:not(.unavailable), #unscheduled-papers .slot-paper:not(.unavailable) {
     cursor: pointer;
 }
 
-#program .slot:hover, div#unscheduled .slot:hover {
+#program .slot:hover, #unscheduled .slot:hover, #unscheduled-papers .slot-paper:hover {
     outline: 1px solid #333333;
 }
 
-#program .cell .title, div#unscheduled .cell .title {
+#program .cell .title, #unscheduled .cell .title, #unscheduled-papers .cell .title {
     width: 44px;
     height: 38px;                
     overflow-x: hidden;
@@ -151,7 +155,7 @@ body.loading .modal {
     margin-top: 10px;
 }
 
-#program .cell .display, div#unscheduled .cell .display {
+#program .cell .display, #unscheduled .cell .display, #unscheduled-papers .cell .display {
     width: 44px;
     height: 30px;
     border-top: solid 1px #dddddd;
@@ -160,7 +164,7 @@ body.loading .modal {
     /*color: #aaaaaa;*/
 }
 
-#program .cell .display .icon, div#unscheduled .cell .display .icon {
+#program .cell .display .icon, #unscheduled .cell .display .icon, #unscheduled-papers .cell .display .icon {
     width: 24px;
 }
 
@@ -174,15 +178,15 @@ body.loading .modal {
 }
 
 #program .header-col {
-    border-right: solid 2px #bbbbbb;
+    border-right: solid 3px #bbbbbb;
 }
 
-#program .selected, div#unscheduled .selected {
+#program .selected, #unscheduled .selected, #unscheduled-papers .selected {
     background: yellow;
     /*#ffb7b7;*/
 }
 
-#program .move-src-selected, div#unscheduled .move-src-selected {
+#program .move-src-selected, #unscheduled .move-src-selected, #unscheduled-papers .move-src-selected {
     background: yellow;
 }
 
@@ -200,15 +204,15 @@ body.loading .modal {
     opacity: 1;
 }
 */
-#program .recommended, div#unscheduled .recommended {
+#program .recommended, #unscheduled .recommended, #unscheduled-papers .recommended {
     background: #fd8d3c;
 }
 
-#program .proposed-swap, div#unscheduled .proposed-swap {
+#program .proposed-swap, #unscheduled .proposed-swap, #unscheduled-papers .proposed-swap {
     cursor: pointer;
 }
 
-#program .highlight, div#unscheduled .highlight {
+#program .highlight, #unscheduled .highlight, #unscheduled-papers .highlight {
 	/*outline: 2px solid black;*/
     background: #aec7e8 !important;
 }
@@ -218,13 +222,13 @@ body.loading .modal {
    Unscheduled workspace
    ========================================================================== */
 
-div#unscheduled {
+#unscheduled, #unscheduled-papers {
     border: solid 1px #dddddd;
     height: 71px;
     margin-bottom: 15px;
 }
 
-div#unscheduled .slot {
+#unscheduled .slot, #unscheduled-papers .slot-paper {
     border: solid 1px #dddddd;
 }
 
@@ -258,23 +262,38 @@ div#unscheduled .slot {
     Interface misc
    ========================================================================== */
 
-/* apply alternating gray in the paper listing inside a popover */
-.list-submissions li {
-    padding: 5px;
+.list-submissions {
+    list-style-type: none;
+    margin: 0;
+}
+
+.list-submissions li { 
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.list-submissions .submission-type { 
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom:3px;
+}
+
+.list-submissions li button{
+    float:right;
+    margin-top: -10px;
 }
 
 .list-submissions li:nth-child(even) {
-    background: #dddddd;
+    background: #e0e0e0;
 }
 
-/* color-coded rectangle in the legend */
-.palette {
-    padding-left: 10px;
-    margin-left: 3px;
-    margin-right: 2px;
-    cursor: pointer;
+.list-submissions li:nth-child(odd) {
+    background: #f2f2f2;
 }
 
+/* ==========================================================================
+    Conflicts Display
+   ========================================================================== */
 .swap-total {
     float: left;
     width: 17px;
@@ -348,6 +367,10 @@ div#unscheduled .slot {
     /*cursor: pointer;*/
 }
 
+
+/* ==========================================================================
+    Interface misc
+   ========================================================================== */
 .locked {
     background: url('../img/lock.png') 
                 97% 3%
@@ -356,18 +379,23 @@ div#unscheduled .slot {
     background-size: 8px 11px;
 }
 
+/* color-coded rectangle in the legend */
+.palette {
+    padding-left: 10px;
+    margin-left: 3px;
+    margin-right: 2px;
+    cursor: pointer;
+}
 .popover {
-    width: 400px;
+    width: 450px;
 }
 
 .popover-inner {
-    width: 400px;
+    width: 450px;
     font-size: 11px;
+    line-height: 14px;
 }
 
-.popover-inner li {
-    line-height: 12px;
-}
 
 
 

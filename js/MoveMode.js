@@ -88,8 +88,6 @@ var MoveMode = function() {
         var id = getID($(this));
         var session = allSessions[id];
         $(this).addClass("move-dst-selected");
-
-        //$(".slot").popover("destroy");
           
         var id = getID($(this));
         var session = allSessions[id];
@@ -117,7 +115,7 @@ var MoveMode = function() {
                 
                 var html = "";
                 if ($(this).hasClass("move-src-selected")) {
-                    console.log("renderProposedSwap: move-src-selected");
+                    console.log("slotClickHandler: move-src-selected");
                     if (id === -1)
                         html += "<strong>Select other sessions to schedule this session.</strong><br>"
                             + _getCancelButtonHTML();
@@ -125,13 +123,15 @@ var MoveMode = function() {
                       html += "<strong>Select other sessions to schedule this session.</strong><br>"
                             + _getCancelButtonHTML()
                             + $(this).find(".detail ul")[0].outerHTML;
+
                 } else if ($(this).find(".title").hasClass("locked")) {
-                    console.log("renderProposedSwap: locked");
+                    console.log("slotClickHandler: locked");
                     if (id === -1)
                         html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong>";
                     else
                       html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong>"
                       + $(this).find(".detail ul")[0].outerHTML;
+
                 } else if (type == "swap"){
                     if ($(this).hasClass("scheduled")){
                         console.log("src: swap", "dst: scheduled");
@@ -140,31 +140,34 @@ var MoveMode = function() {
                           + $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;
                     } else if ($(this).hasClass("unscheduled")){
-                        console.log("src: swap", "dst: unscheduled");
+                        console.log("N/A. src: swap", "dst: unscheduled");
+                        /*
                         html +=  "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
                           + "'>Swap with this session</button>" + _getCancelButtonHTML() + "<br>"
                           + $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;
+                        */
                     } else if ($(this).hasClass("empty")){
                         console.log("src: swap", "dst: empty");
-                        html +=  "<button class='btn btn-primary' id='swap-button'" 
+                        html +=  "<button class='btn btn-primary' id='move-button'" 
                          + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
-                         +"'>Schedule in this slot</button>" + _getCancelButtonHTML() + "<br>"
+                         +"'>Move to this slot</button>" + _getCancelButtonHTML() + "<br>"
                          + $(this).find(".detail .conflicts")[0].outerHTML;
                          // empty sessions don't have a submissions list
                          //+ $(this).find(".detail ul")[0].outerHTML;   
                     } else {
                         console.log("impossible");
                     }
+
                 } else if (type == "unscheduled"){
                     if ($(this).hasClass("scheduled")){
                         console.log("src: unscheduled", "dst: scheduled");
-                        html +=  "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
-                          + "'>Schedule this session</button>" + _getCancelButtonHTML() + "<br>"
+                        html +=  "<button class='btn btn-primary' id='swap-with-unscheduled-button' data-session-id='" + id 
+                          + "'>Swap with this session</button>" + _getCancelButtonHTML() + "<br>"
                           + $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;                            
                     } else if ($(this).hasClass("unscheduled")){
-                        console.log("src: unscheduled", "dst: unscheduled");
+                        console.log("N/A. src: unscheduled", "dst: unscheduled");
                     } else if ($(this).hasClass("empty")){
                         console.log("src: unscheduled", "dst: empty");
                         html +=  "<button class='btn btn-primary' id='schedule-button'" 
@@ -176,11 +179,12 @@ var MoveMode = function() {
                     } else {
                         console.log("impossible");
                     }
+
                 } else if (type == "empty") {
                     if ($(this).hasClass("scheduled")){
                         console.log("src: empty", "dst: scheduled");
-                        html +=  "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
-                          + "'>Schedule this session</button>" + _getCancelButtonHTML() + "<br>"
+                        html +=  "<button class='btn btn-primary' id='move-button' data-session-id='" + id 
+                          + "'>Move this session</button>" + _getCancelButtonHTML() + "<br>"
                           + $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;
                     } else if ($(this).hasClass("unscheduled")){
@@ -190,7 +194,7 @@ var MoveMode = function() {
                           + $(this).find(".detail .conflicts")[0].outerHTML
                           + $(this).find(".detail ul")[0].outerHTML;
                     } else if ($(this).hasClass("empty")){
-                        console.log("src: empty", "dst: empty");
+                        console.log("N/A. src: empty", "dst: empty");
                     } else {
                         console.log("impossible");
                     }
@@ -203,116 +207,7 @@ var MoveMode = function() {
 
           $(this).popover("show");
     }
-/*
-     // For proposed swap options, display the right popover
-     function renderProposedSwap(){
 
-          $(".proposed-swap").popover("hide");
-          $(".proposed-swap").popover({
-               html:true,
-               placement: "bottom",
-               trigger: "click",
-              content:function(){
-                    var id = $(this).data("session-id");
-                    var html = "";
-                    if ($(this).hasClass("move-src-selected")) {
-                        if (typeof id === "undefined")
-                            html += "<strong>Select other sessions to schedule this session.</strong>";
-                        else
-                          html += "<strong>Select other sessions to schedule this session.</strong>"
-                          + $(this).find(".detail ul")[0].outerHTML;
-                    } else if ($(this).find(".title").hasClass("locked")) {
-                        if (typeof id === "undefined")
-                            html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong>";
-                        else
-                          html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong>"
-                          + $(this).find(".detail ul")[0].outerHTML;
-                    } else if (typeof id === "undefined") {
-                         console.log("renderProposedSwap: empty");
-                         if (type === "swap") {
-                             html +=  "<button class='btn btn-primary' id='swap-button'" 
-                             + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
-                             +"'>Schedule in this slot</button><br>";                        
-
-                         } else if (type === "unscheduled") {
-                             html +=  "<button class='btn btn-primary' id='schedule-button'" 
-                             + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
-                             +"'>Schedule in this slot</button><br>";                        
-
-                         } else if (type === "empty") {
-                            console.log("impossible. empty to empty interaction not supported.")
-                         }
-                    } else { 
-                         if (type === "swap") {
-                              console.log("renderProposedSwap: swap");
-                              html +=  "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
-                              + "'>Swap with this session</button><br>"
-                              //+ $(this).find(".detail .conflicts")[0].outerHTML
-                              + $(this).find(".detail ul")[0].outerHTML;
-                         } else { // unscheduled session
-                              console.log("renderProposedSwap: unscheduled");
-                              html +=  "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
-                              + "'>Schedule this session</button><br>"
-                              //+ $(this).find(".detail .conflicts")[0].outerHTML
-                              + $(this).find(".detail ul")[0].outerHTML;
-                         }
-                    }
-                    return html;
-               }
-          });
-     }
-*/
-/* 
-    function runPropose(type) {
-        if (type === "swap") {
-            scheduledHandler();
-        } else if (type === "unscheduled") {
-            unscheduledHandler();
-        } else if (type === "empty") {
-            emptyHandler();
-        }
-    } 
-
-    function scheduledHandler() {
-        var $session = $(".selected").first();
-        var id = getID($session); 
-    }
-
-    function unscheduledHandler() {
-        
-    }
-
-    function emptyHandler() {
-        
-    }
-
-   
-
-    // CASE 1. src: scheduled, dst: scheduled
-    function swapHandler(){
-        VisualOps.swap(scheduled1, scheduled2)
-    }
-
-    // CASE 2. src: scheduled, dst: unscheduled
-    function swapWithUnscheduledHandler(){
-        VisualOps.swapWithUnscheduled(scheduled, unscheduled);
-    }
-
-    // CASE 3. src: scheduled, dst: empty
-    function swapWithEmptyHandler(){
-        VisualOps.swapWithEmpty(scheduled, emptySlot);
-    }
-
-    // CASE 4. src: unscheduled, dst: empty
-    function scheduleUnscheduledHandler(){
-        VisualOps.scheduleUnscheduled(unscheduled, emptySlot);
-    }
-
-    // CASE 5. session: scheduled
-    function unscheduleHandler(){
-        VisualOps.unschedule(scheduled);
-    }
-*/
 
     // Handle a propose (swap, unschedule, schedule) request
     function runPropose(){
@@ -326,7 +221,9 @@ var MoveMode = function() {
             //console.log(swapValues);
           } else if (type === "unscheduled") {
             //console.log("unscheduled", id);
-            swapValues = proposeSlot(allSessions[id]);
+            var tempArray = proposeSlotAndSwap(allSessions[id]);
+            swapValues = tempArray.slotValue.concat(tempArray.swapValue);
+            //swapValues = proposeSlot(allSessions[id]);
           } else if (type === "empty") {
             //console.log($session, $session.data(), $session.data("date"), type);
             //console.log($session.data("date"), $session.data("time"), $session.data("room"), schedule[$session.data("date")][$session.data("time")][$session.data("room")]);
@@ -391,9 +288,6 @@ var MoveMode = function() {
 
           // For proposed slots, add a new popover
           $session.addClass("move-src-selected");
-          //$session.popover("hide");
-
-          //renderProposedSwap(type);
 
           // Display at the top alert box the full information about this proposal
           var alert_html = "";
@@ -453,6 +347,105 @@ var MoveMode = function() {
      });
 */
 
+$("body").on("click", ".popover #swap-button", function(){  
+    var $source = $(".move-src-selected").first();
+    var src_id = getID($source);
+    var dst_id = $(this).data("session-id");
+
+    // the backend swap
+    swapSessions(allSessions[src_id], allSessions[dst_id]);            
+    // the frontend swap
+    VisualOps.swap(allSessions[src_id], allSessions[dst_id]);  
+    $(document).trigger("addHistory", [{user: "", type: "swap", sid: src_id, did: dst_id}]);
+    postMove();
+    Statusbar.display("Swap successful");
+});
+
+$("body").on("click", ".popover #swap-with-unscheduled-button", function(){  
+    var scheduledId = -1;
+    var unscheduledId = -1;
+
+    // src: unscheduled, dst: scheduled
+    if ($(".move-src-selected").first().hasClass("unscheduled")) {
+        unscheduledId = getID($(".move-src-selected").first());
+        scheduledId = $(this).data("session-id");
+    // src: scheduled, dst: unscheduled [NOT SUPPORTED]
+    } else {
+        return;
+    }
+
+    // the backend swap with unscheduled
+    swapWithUnscheduledSession(allSessions[unscheduledId], allSessions[scheduledId]);
+    // the frontend swap with unscheduled
+    VisualOps.swapWithUnscheduled(allSessions[unscheduledId], allSessions[scheduledId]);
+    $(document).trigger("addHistory", [{user: "", type: "swap with unscheduled", sid: unscheduledId, did: scheduledId}]);
+    postMove();
+    Statusbar.display("Swapping with a unscheduled session successful");
+});
+
+$("body").on("click", ".popover #move-button", function(){  
+    var $session = null;     // session to schedule
+    var $emptySlot = null;   // empty slot into which the session is going
+    var id = -1;
+
+    // src: scheduled, dst: empty
+    if (typeof $(this).data("session-id") === "undefined") {   
+       $session = $(".move-src-selected").first();
+       $emptySlot = findCellByDateTimeRoom($(this).data("date"), $(this).data("time"), $(this).data("room"));
+
+    // src: empty, dst: scheduled
+    } else { 
+       var session_id = $(this).data("session-id");
+       $session = findCellByID(session_id);
+       $emptySlot = $(".move-src-selected").first();
+    }
+
+    id = getID($session);          
+    var oldDate = allSessions[id].date;
+    var oldTime = allSessions[id].time;
+    var oldRoom = allSessions[id].room;
+
+    // the backend move
+    scheduleSession(allSessions[id], $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
+    // the frontend move
+    VisualOps.swapWithEmpty(allSessions[id], $emptySlot, oldDate, oldTime, oldRoom);
+
+    $(document).trigger("addHistory", [{user: "", type: "move", id: id}]);
+    postMove();
+    Statusbar.display("Move successful");
+});
+
+$("body").on("click", ".popover #schedule-button", function(){  
+    var $session = null;     // session to schedule
+    var $emptySlot = null;   // empty slot into which the session is going
+    var id = -1;
+
+    // src: unscheduled, dst: empty
+    if (typeof $(this).data("session-id") === "undefined") {   
+       $session = $(".move-src-selected").first();
+       $emptySlot = findCellByDateTimeRoom($(this).data("date"), $(this).data("time"), $(this).data("room"));
+
+    // src: empty, dst: unscheduled
+    } else { 
+       var session_id = $(this).data("session-id");
+       $session = findCellByID(session_id);
+       $emptySlot = $(".move-src-selected").first();
+    }
+
+    id = getID($session);
+    // the backend scheduling
+    console.log("SCHEDULE", id, "into", $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
+    scheduleSession(allSessions[id], $emptySlot.data("date"), $emptySlot.data("time"), $emptySlot.data("room"));
+    // the frontend scheduling: backend should be called first to have the updated allSessions[id] information
+    VisualOps.scheduleUnscheduled(allSessions[id], $emptySlot);
+
+    $(document).trigger("addHistory", [{user: "", type: "schedule", id: id}]);
+    postMove();
+    Statusbar.display("Scheduling successful");
+});
+
+
+/*
      // clicking the 'swap' button from one of the proposed swaps.
      // should perform swap and return to the clean state with no selection and proposals.
      $("body").on("click", ".popover #swap-button", function(){               
@@ -467,16 +460,6 @@ var MoveMode = function() {
         // destination: empty
         // unschedule the source and schedule the destination
         if (typeof dst_id === "undefined") {
-
-            /*
-            // Part 1. Unschedule the source
-            $source.removeClass("selected").popover("destroy").removeAttr("id").removeData();
-            var after = getSessionCell("empty", null, allSessions[src_id].date, allSessions[src_id].time, allSessions[src_id].room);
-            // Watch out! jQuery replaceWith returns the original element, not the replaced element.
-            $source.replaceWith(after); 
-            // Unschedule session in the database
-            unscheduleSession(allSessions[src_id]);
-            */
             // Part 2. Schedule the destination
             var $emptySlot = findCellByDateTimeRoom($(this).data("date"), $(this).data("time"), $(this).data("room"));           
             var oldDate = allSessions[src_id].date;
@@ -535,7 +518,7 @@ var MoveMode = function() {
         postMove();
         Statusbar.display("Scheduling successful");
     });  
-
+*/
     // clicking the 'cancel swap' link while swap in progress.
     // should return to the clean state with no selection and proposals.
     $("body").on("click", ".move-cancel-button", function(){

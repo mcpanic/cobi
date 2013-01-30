@@ -48,16 +48,6 @@ var VisualOps = function() {
 		aparent.insertBefore(b, asibling);
 	}
 
-/* REMOVE
-     // move the session of id into cell
-    function scheduleSessionCell(id, $emptySlot, $curSession){
-		var session = getSessionCell("scheduled", allSessions[id]);
-		//swapNodes(session, $cell[0]);
-		$emptySlot.popover("destroy").replaceWith($(session));
-		$(session).effect("highlight", {color: "yellow"}, 10000); // css("background-color", "white")
-		$curSession.popover("destroy").remove();
-    }
-*/
     // CASE 1. src: scheduled, dst: scheduled
     function swap(scheduled1, scheduled2){
         _swapNodes($("#program #session-" + scheduled1.id)[0], $("#program #session-" + scheduled2.id)[0]);
@@ -65,21 +55,22 @@ var VisualOps = function() {
 		$("#program #session-" + scheduled2.id).effect("highlight", {color: "yellow"}, 10000);
     }
 
-    // CASE 2. src: scheduled, dst: unscheduled
-    function swapWithUnscheduled(scheduled, unscheduled){
-    	var $emptySlot = findCellByDateTimeRoom(scheduled.date, scheduled.time, scheduled.room);
-    	unschedule(scheduled);
+    // CASE 2. src: scheduled, dst: unscheduled && src: unscheduled, dst: scheduled
+    function swapWithUnscheduled(unscheduled, scheduled){
+        unschedule(scheduled, unscheduled.date, unscheduled.time, unscheduled.room);
+        // by the backend code, unscheduled alreay contains updated the destination's date, time, and room
+    	var $emptySlot = findCellByDateTimeRoom(unscheduled.date, unscheduled.time, unscheduled.room);
     	scheduleUnscheduled(unscheduled, $emptySlot);
     }
 
-    // CASE 3. src: scheduled, dst: empty
+    // CASE 3. src: scheduled, dst: empty && src: empty, dst: scheduled
     function swapWithEmpty(scheduled, $emptySlot, oldDate, oldTime, oldRoom){
         console.log(scheduled, $emptySlot.data("room"), oldDate, oldTime, oldRoom);
 		_removeSessionFromSlot(scheduled, oldDate, oldTime, oldRoom);
 		_addSessionToSlot(scheduled, $emptySlot);
     }
 
-    // CASE 4. src: unscheduled, dst: empty
+    // CASE 4. src: unscheduled, dst: empty && src: empty, dst: unscheduled
     function scheduleUnscheduled(unscheduled, $emptySlot){
     	_removeSessionFromUnscheduled(unscheduled);	
 		_addSessionToSlot(unscheduled, $emptySlot);

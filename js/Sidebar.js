@@ -26,18 +26,24 @@ var Sidebar = function() {
 
      function addHistoryHandler(event, history){
           console.log("HISTORY", history);
-          if (typeof history.id !== "undefined" && (history.type == "lock" || history.type == "unlock" || history.type == "schedule" || history.type == "move" || history.type == "unschedule")){
-               $("#list-history").prepend("<li>" + history.user + " " + history.type + ": " 
+          if (typeof history.id !== "undefined" && 
+               (history.type == "lock" || history.type == "unlock" || history.type == "schedule" || history.type == "move" || history.type == "unschedule")){
+
+               $("#list-history").prepend("<li>" + history.user + " <strong>" + history.type + "</strong>: " 
                + "<a href='#' class='history-link' data-session-id='" + history.id + "'>" + allSessions[history.id].title 
                + "</a></li>");             
-          } else if (typeof history.id === "undefined" && (history.type == "lock" || history.type == "unlock")){
-               $("#list-history").prepend("<li>" + history.user + " " + history.type + ": " 
+          } else if (typeof history.id === "undefined" && 
+               (history.type == "lock" || history.type == "unlock")){
+
+               $("#list-history").prepend("<li>" + history.user + " <strong>" + history.type + "</strong>: " 
                   + "<a href='#' class='history-link' data-slot-date='" + history.date + 
                   "' data-slot-time='" + history.time + 
                   "' data-slot-room='" + history.room + 
                   "'>" + history.date + ", " + history.time + ", " + history.room + "</a></li>");
-          } else if (typeof history.sid !== "undefined" && typeof history.did !== "undefined" && history.type == "swap"){
-               $("#list-history").prepend("<li>" + history.user + " " + history.type + ": "  
+          } else if (typeof history.sid !== "undefined" && typeof history.did !== "undefined" && 
+               (history.type == "swap" || history.type == "swap with unscheduled")){
+
+               $("#list-history").prepend("<li>" + history.user + " <strong>" + history.type + "</strong>: "  
                + "<a href='#' class='history-link' data-session-id='" + history.sid + "'>" + allSessions[history.sid].title 
                + "</a> and <a href='#' class='history-link' data-session-id='" + history.did + "'>" + allSessions[history.did].title + "</a></li>");
           } else {

@@ -14,6 +14,14 @@
 
      // Getting html for session details with individual paper info
      function getSessionDetail(type, session){
+      var html = ""; 
+
+      console.log(typeof session, session == null);
+      if (typeof session !== "undefined" && session != null && typeof session.id !== "undefined" && session.id != null) {
+          console.log( typeof session.id, session.id);
+          html += "<span id='popover-session-" + session.id + "' class='hidden'/>";
+      }
+
     	 // HQ: locked sessions get only a locked button
     	 var isLocked = false;
     	 if (type != "unscheduled" && typeof session !== "undefined" && session != null){
@@ -21,22 +29,25 @@
     	     isLocked = scheduleSlots[session.date][session.time][session.room]['locked'];
     	 }
 
-    	 var html = ""; 
     	 if(isLocked){
-    	     html += "  <button class='btn btn-inverse button-unlock'>Unlock it</button> ";
-    	 }else{
-    	     var lockButton = "  <button class='btn btn-inverse button-lock'>Lock it</button> ";
+    	     html += "  <button class='btn btn-inverse button-unlock'>Unlock</button> ";
+    	 } else {
+    	     var lockButton = "  <button class='btn btn-inverse button-lock'>Lock</button> ";
 
     	     if (type == "scheduled") {
-    		 html += "<button class='btn btn-info button-propose-swap'>Propose Swaps</button>"
+    		 html += "<button class='btn btn-info button-propose-swap'>Propose Move</button>"
     		     + "  <button class='btn btn-danger button-unschedule'>Unschedule</button> "
     		     + lockButton;
     	     } else if (type == "unscheduled") {
-    		 html += "<button class='btn btn-info button-propose-unscheduled'>Propose Schedule</button>";
+    		      html += "<button class='btn btn-info button-propose-unscheduled'>Propose Schedule</button>";
     	     } else if (type == "empty") {
-    		 html += "<button class='btn btn-info button-propose-empty'>Propose Schedule</button>"
+    		      html += "<button class='btn btn-info button-propose-empty'>Propose Schedule</button>"
     		     + lockButton;
     	     }
+
+          if (typeof session !== "undefined" && session != null && typeof session.submissions !== "undefined" && session.submissions != null && session.submissions.length > 1) {
+               html += " <button class='btn btn-inverse button-paper-reorder'>Reorder</button>";
+          }
     	 }
 
          html += " <div class='conflicts'/>";
@@ -49,9 +60,10 @@
                     type = submission.subtype;
                 else
                     type = submission.type;
-    		     html += "<li class='submission'><strong>" + type + "</strong>: " 
-                             + displayAuthors(submission.authors) + "<br>"
-                             + "<strong>" + submission.title + "</strong></li>";
+    		     html += "<li class='submission' id='" + submission.id
+                         +"'><span class='submission-type'>" + type + "</span> <button class='btn btn-mini button-paper-unschedule'>Unschedule</button> <button class='btn btn-mini button-paper'>Propose Move</button><br>" 
+                         + "<strong>" + submission.title + "</strong><br>"
+                         + displayAuthors(submission.authors) + "</li>";
     		     
     		 });
     	     html += "</ul>";
@@ -59,11 +71,35 @@
     	 return html;
      }
 
+     // Getting html for submission details with individual paper info
+     function getSubmissionDetail(type, submission){
+      var html = ""; 
 
+      console.log(typeof submission, submission == null);
+      if (typeof submission !== "undefined" && submission != null && typeof submission.id !== "undefined" && submission.id != null) {
+          console.log( typeof submission.id, submission.id);
+          html += "<span id='popover-session-" + submission.id + "' class='hidden'/>";
+      }
+
+          if (type == "scheduled") {
+           html += "<button class='btn btn-info button-propose-swap'>Propose Move</button>"
+               + "  <button class='btn btn-danger button-paper-unschedule'>Unschedule</button> ";
+          } else if (type == "unscheduled") {
+                html += "<button class='btn btn-info button-paper-propose-unscheduled'>Propose Schedule</button>";
+          } else if (type == "empty") {
+                html += "<button class='btn btn-info button-paper-propose-empty'>Propose Schedule</button>";
+          }
+
+         html += " <div class='conflicts'/>";
+
+         html += "<br><strong>Authors</strong>: " + displayAuthors(submission.authors);
+      
+      return html;
+     }
 
      // For each session item, render session display
     function getSessionCell(type, session, slotDate, slotTime, slotRoom){
-		var slotDate = typeof slotDate !== "undefined" ? slotDate : null;
+	   var slotDate = typeof slotDate !== "undefined" ? slotDate : null;
         var slotTime = typeof slotTime !== "undefined" ? slotTime : null;
         var slotRoom = typeof slotRoom !== "undefined" ? slotRoom : null;
         var cell = document.createElement('td');
@@ -119,12 +155,74 @@
 		 return cell;
     }
 
+     // For each submission item, render submission display, only to be used for the unscheduled papers panel at the top
+    function getSubmissionCell(type, submission){
+        //var slotDate = typeof slotDate !== "undefined" ? slotDate : null;
+        //var slotTime = typeof slotTime !== "undefined" ? slotTime : null;
+        //var slotRoom = typeof slotRoom !== "undefined" ? slotRoom : null;
+        var cell = document.createElement('td');
+        $(cell).addClass("cell slot-paper")
+            .append("<div class='title'/><div class='display'/>");
+        // console.log("session", typeof session);
+
+        // Empty Session
+           if (type == "empty" || submission == -1){
+                // //console.log("empty", slotDate, slotTime, slotRoom);
+                // if(scheduleSlots[slotDate][slotTime][slotRoom]['locked'])
+                //     $(cell).find(".title").addClass("locked");
+
+                // var detail = document.createElement("div");
+                // $(detail).hide()
+                //      .addClass("detail")
+                //      .html(getSessionDetail(type, session));
+                // // TODO: how to easily get day, time, room info
+                // $(cell)
+                //      //.attr("id", "session-" + session.id)
+                //      //.data("session-id", session.id)
+                //      .addClass("empty")
+                //      .data("date", slotDate)
+                //      .data("time", slotTime)
+                //      .data("room", slotRoom)                     
+                //      .append($(detail));
+                // $(cell).find(".title").append("<i class='icon-plus'></i>")     
+                console.log("empty submission display: not used");
+           // Unavailable / Locked Session                         
+            } else if (type == "unavailable" || submission == "") {
+                //console.log("unavailable");
+                //$(cell).addClass("unavailable");
+                console.log("unavailable submission display: not used");
+           // Scheduled / Unscheduled Session
+            } else if (type == "scheduled") {
+                console.log("scheduled submission display: not used");
+            } else {
+                // if(type !== "unscheduled" && scheduleSlots[session.date][session.time][session.room]['locked'])
+                //     $(cell).find(".title").addClass("locked");
+
+                // var detail = document.createElement("div");
+                // $(detail).hide()
+                //      .addClass("detail")
+                //      .html(getSessionDetail(type, session));
+               
+                $(cell).attr("id", "" + submission.id)
+                     .addClass(type);
+                     //.data("submission-id", submission.id)
+                     // .append($(detail));
+                
+                if (typeof submission.title !== "undefined")
+                     $(cell).find(".title").html(submission.title);
+                
+           } 
+           return cell;
+    }
+
      function displayAuthors(authors){
-          var html = "";         
+          var html = ""; 
+          console.log(authors);       
           $.each(authors, function(i, author){
                html += author.firstName + " " + author.lastName + ", ";
           }); 
-          return html;
+          // remove the trailing comma at the end
+          return html.slice(0, -2);
      }
 
 
@@ -154,17 +252,28 @@
 
     // Update the unscheduled session count just by looking at the DOM nodes, not the database
      function updateUnscheduledCount(){
-          var count = $("#unscheduled .slot").length;
+          count = $("#unscheduled .slot").length;
           $("#unscheduled-count").html(count);
+
+          console.log(unscheduled, unscheduledSubmissions);
+          count = $("#unscheduled-papers .slot-paper").length;
+          $("#unscheduled-papers-count").html(count);
      }
 
 
      // Display the unscheduled panel
      function displayUnscheduled(){
+          var cell = null;
           keys(unscheduled).map(function(id){
-               var cell = getSessionCell("unscheduled", allSessions[id]);
+               cell = getSessionCell("unscheduled", allSessions[id]);
                $("#unscheduled").append(cell);         
           });
+
+          keys(unscheduledSubmissions).map(function(id){
+               cell = getSubmissionCell("unscheduled", allSubmissions[id]);
+               $("#unscheduled-papers").append(cell);         
+          });
+
           updateUnscheduledCount();
      }
 
@@ -204,13 +313,19 @@
             var orderedTimes = keys(schedule[date]).sort(function(a,b) {return a - b;});
 
             $.each(orderedTimes, function(index2, time){
-
+                // add an extra row for daily borders
+                if (index2 == 0) {
+                    var borderRow = document.createElement('tr');
+                    var borderSlot = document.createElement('td');
+                    $(borderSlot).attr("colspan", orderedRooms.length+1).addClass("header-day-border");
+                    $(borderRow).append(borderSlot);
+                    $('#program').append(borderRow);
+                    //$(slot).addClass("header-day-border");
+                }
                 var row = document.createElement('tr');
                 var slot = document.createElement('td');
 //              var conflicts = document.createElement('td');
                 $(slot).addClass("cell header-col").append(shortenDate(date) + " " + time);
-                if (index2 == 0)
-                    $(slot).addClass("header-day-border");
 
                 $(row).append(slot);
                 //console.log(date, time);
@@ -230,8 +345,8 @@
                     } else { // otherwise, mark it unavailable.
                         cell = getSessionCell("unavailable", null);
                     }
-                    if (index2 == 0)
-                        $(cell).addClass("header-day-border");
+                    //if (index2 == 0)
+                    //    $(cell).addClass("header-day-border");
                     $(row).append(cell);                    
                 });
 
