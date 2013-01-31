@@ -765,14 +765,14 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
 				    //				    console.log(allSubmissions[serverSchedule[day][time][room][s]['submissions'][i]]);
 				    
 				    // TODO: change once this paper is handled by Michel
-				    if(serverSchedule[day][time][room][s]['submissions'][i] != 'pn710' && 
-				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn135' && 
-				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn321' &&
-				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn507' && 
-				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn104'  ){
-					insertPaperIntoSession(allSessions[s], 
-							       allSubmissions[serverSchedule[day][time][room][s]['submissions'][i]]);
-				    }
+				    //				    if(serverSchedule[day][time][room][s]['submissions'][i] != 'pn710' && 
+				    //				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn135' && 
+				    //				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn321' &&
+				    //				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn507' && 
+				    //				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn104'  ){
+				    insertPaperIntoSession(allSessions[s], 
+							   allSubmissions[serverSchedule[day][time][room][s]['submissions'][i]]);
+				    //  }
 				}
 				$(document).trigger('sessionChange', [s, day, time, room]);
 			    }

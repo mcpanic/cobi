@@ -75,7 +75,8 @@ foreach ($entities as $entity) {
 }
 
 // Form the session table
-$sessionsFile = file_get_contents('sessions-2013-0-30-13-51-36.json');
+$sessionsFile = file_get_contents('sessions-2013-0-30-23-58-36.json');
+//
 //sessions-2012-11-16-14-55-33.json');
 $sessions = json_decode($sessionsFile, true);
 $sessions = $sessions["rows"];
