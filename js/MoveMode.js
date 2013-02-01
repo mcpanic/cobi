@@ -273,7 +273,7 @@ var MoveMode = function() {
         // var swapContent = "";
         var $cell = null;
         for(var i = 0; i < swapValues.length; i++){    
-            console.log("SWAP", swapValues[i]);   
+            //console.log("SWAP", swapValues[i]);   
 
             // empty candidate
             if (swapValues[i].target.session === null){

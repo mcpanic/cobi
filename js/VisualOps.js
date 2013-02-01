@@ -13,7 +13,7 @@ var VisualOps = function() {
 
 	function _addSessionToSlot(s, $emptySlot){
 		//var $session = findCellByID(s.id);
-        console.log(s, $emptySlot);
+        //console.log(s, $emptySlot);
 		var session = getSessionCell("scheduled", s);
 		if ($emptySlot != null){
 			$emptySlot.popover("destroy").replaceWith($(session));
@@ -23,7 +23,7 @@ var VisualOps = function() {
 
 	function _removeSessionFromSlot(s, oldDate, oldTime, oldRoom){
 		var $session = findCellByID(s.id);
-        console.log("hello", s, oldDate, oldTime, oldRoom);        
+        //console.log("hello", s, oldDate, oldTime, oldRoom);        
         $session.removeClass("selected").popover("destroy").removeAttr("id");
         removeDataAttributes($session);
         var after = getSessionCell("empty", null, oldDate, oldTime, oldRoom);
