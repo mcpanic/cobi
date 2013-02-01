@@ -17,13 +17,21 @@ var Searchbox = function() {
             query: function (query) {
                 var q = query.term.toLowerCase();
                 var data = {results: []};
-                var sessionData = {text: "Sessions", children:[]};
-                var submissionData = {text: "Submissions", children:[]};
+                var sessionData = {text: "<strong>Sessions</strong>", children:[]};
+                var submissionData = {text: "<strong>Submissions</strong>", children:[]};
+
+                // fuzzy query match
+                var options = {
+                  keys: ["title"],   // keys to search in
+                  id: "id"                     // return a list of identifiers only
+                }
+                var f = new Fuse(allSessions, options);
+                var result = f.search(q); // Fuzzy-search for pattern 'brwn'
+                console.log("FUSE", result);
 
                 // look at all sessions
                 for (id in allSessions){
                     var title = allSessions[id].title;
-                    console.log(title);
                     if (title.toLowerCase().indexOf(q) !== -1)
                         sessionData.children.push({id: id, text: "<strong>" + title + "</strong>"});  
 
@@ -44,7 +52,7 @@ var Searchbox = function() {
                         });
                         
                         if (isMatch) {
-                            submissionDisplay = authorsDisplay + "<br><strong>" + submission.title + "</strong>";
+                            submissionDisplay = "<strong>" + submission.title + "</strong><br>" + authorsDisplay;
                             submissionData.children.push({id: id, text: submissionDisplay}); 
                         }
 

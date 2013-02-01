@@ -78,10 +78,10 @@ body.loading .modal {
 }
 
 .sidebar-fixed {
-    position: fixed;
+    /*position: fixed;
     width: 150px;
     height: 85%;
-    overflow-y: scroll;    
+    overflow-y: scroll;    */
 }
 
 /*@media (max-width: 767px) {*/
@@ -224,12 +224,21 @@ body.loading .modal {
 
 #unscheduled, #unscheduled-papers {
     border: solid 1px #dddddd;
-    height: 71px;
+    height: 75px;
+    /*padding: 10px;*/
+    /*background-color: #f8f8f8;*/
     margin-bottom: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-collapse: separate;
+    border-spacing: 10px 5px;
+    padding-bottom:20px;
 }
 
-#unscheduled .slot, #unscheduled-papers .slot-paper {
+#unscheduled .slot, #unscheduled-papers .slot-paper {    
     border: solid 1px #dddddd;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 
