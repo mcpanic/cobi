@@ -213,7 +213,7 @@ var Conflicts = function() {
         var total = 0;
         $.each(constraints_list, function(index, conflict){
             $("#list-constraints li").each(function(){
-                if (conflict.type == $(this).data("type")){
+                if (conflict.type == $(this).attr("data-type")){
                     $(this).find(".count").html(conflict_count_array[conflict.type]);
                     total += conflict_count_array[conflict.type];
                 }

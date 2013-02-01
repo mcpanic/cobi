@@ -75,7 +75,7 @@ var Polling = function() {
             // $cell.data('popover').options.content = function(){
             //     return getSessionDetail("empty", new slot($cell.data("date"), $cell.data("time"), $cell.data("room"), null));
             // };          
-            $(document).trigger("addHistory", [{user: "USER", type: action, date: $cell.data("date"), time: $cell.data("time"), room: $cell.data("room")}]);
+            $(document).trigger("addHistory", [{user: "USER", type: action, date: $cell.attr("data-date"), time: $cell.attr("data-time"), room: $cell.attr("data-room")}]);
         }
 
         $cell.effect("highlight", {color: "yellow"}, 10000);    
