@@ -45,11 +45,26 @@ while ($row = $entityUnscheduledTable->fetch_assoc()) {
   $unscheduledSubmissions[$row['id']] = $row; 
 }
 
+// Get the session table with submissions only
+$sessionQ = "select id,submissions from session"; 
+$sessionTable = mysqli_query($mysqli, $sessionQ);
+echo mysqli_error($mysqli);
 
-/* // Get the session table */
-/* $sessionQ = "select * from session where scheduled=1";  */
-/* $sessionTable = mysqli_query($mysqli, $sessionQ); */
-/* echo mysqli_error($mysqli); */
+while ($row = $sessionTable->fetch_assoc()) {
+  $subKeys = explode(",", trim($row['submissions']));
+  $subs = array();
+  
+  foreach ($subKeys as $sub){
+    if ($sub == ""){
+    }else{
+      array_push($subs, $sub);
+    }
+  }
+
+  //  if (empty($subs)) $subs = (object) null;
+  $row['submissions'] = $subs;
+  $ses[$row['id']] = $row; 
+}
 
 while ($row = $scheduleTable->fetch_assoc()) {
   $slots[$row['date']][$row['time']][$row['room']]['locked'] = (bool) $row['locked'];
@@ -57,7 +72,7 @@ while ($row = $scheduleTable->fetch_assoc()) {
   if ($row['id'] == ""){
     $schedule[$row['date']][$row['time']][$row['room']] = (object) null;
   }else{
-    $schedule[$row['date']][$row['time']][$row['room']][$row['id']] = (object) null;
+    $schedule[$row['date']][$row['time']][$row['room']][$row['id']] = $ses[$row['id']];
   }
 }
 

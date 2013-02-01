@@ -203,9 +203,6 @@ function unlockSlot(day, time, room){
 function removeSessionFromSlot(s, date, time, room){
     console.log("Test: removing session " + s.id + " from " + date + ", " + time + ", " + room);
     delete schedule[date][time][room][s.id];
-    allSessions[s.id]['date'] = "";
-    allSessions[s.id]['time'] = "";
-    allSessions[s.id]['room'] = "";
 }
 
 function clearSlot(date, time, room){
@@ -214,6 +211,7 @@ function clearSlot(date, time, room){
 	removeSessionFromSlot(allSessions[s], date, time, room);
     }
 }
+
 
 function addSessionToSlot(s, date, time, room){
     console.log("Test: adding session " + s.id + " to " + date + ", " + time + ", " + room);
@@ -227,6 +225,9 @@ function addSessionToSlot(s, date, time, room){
 function addToUnscheduled(s){
     console.log("Test: adding session " + s.id + " to unscheduled list.");
     unscheduled[s.id] = s;
+    s['date'] = "";
+    s['time'] = "";
+    s['room'] = "";
 }
 
 function removeFromUnscheduled(s){
@@ -477,6 +478,14 @@ function swapPapers(s1, p1, s2, p2){
     }
 }
 
+function clearSession(s){
+    console.log("Test: removing papers from " + s.id);
+    s.submissions = []; 
+//    for(var p in s.submissions){
+// 	removePaperFromSession(s, s.submissions[p]);
+//     }
+}
+
 function removePaperFromSession(s, p){
     console.log("Test: removing paper " + p.id + " from " + s.id);
     // change it from the session
@@ -485,15 +494,13 @@ function removePaperFromSession(s, p){
     var idx = s.submissions.indexOf(p); // Find the index
     if(idx !=-1) s.submissions.splice(idx, 1); // Remove it if really found!
     
-    // reset paper's session
-    p.session = "null";
-    
     return;
 }
 
 function addToUnscheduledPaper(p){
     console.log("Test: adding paper " + p.id + " to unscheduledSubmissions list.");
     unscheduledSubmissions[p.id] = p;
+    p.session = "null";
 }
 
 // Example:
@@ -693,12 +700,11 @@ function unescapeURL(s) {
 //      
 //
 function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSubmissions, serverSlots, serverTransactions){
+    //    console.log(JSON.stringify(serverSchedule));
     // Compare schedule first
     // Assume same keys on day/time/room exist always, so any inconsistency is in content
-
     var scheduleChange = [];
     var unscheduledChange = [];
-
     var consistent = true;
     
     // check if there are new transactions
@@ -709,8 +715,7 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
 	consistent = false;
 	newTransactionIndices.push(transactions.length);
 	transactions = serverTransactions;
-    }
-    else{
+    }else{
 	for(var i = 0; i < serverTransactions.length; i++){
 	    if(parseInt(serverTransactions[i]['id']) > 
 	       parseInt(transactions[transactions.length -1]['id'])){
@@ -720,100 +725,115 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
 	    }
 	}
     }
-
-    // TODO: inefficient version.. can just use the records
-    // handle differences below
-    for(var day in schedule){
-	for(var time in schedule[day]){
-	    for(var room in schedule[day][time]){
-		if(!arraysEqual(keys(schedule[day][time][room]).sort(), 
-				keys(serverSchedule[day][time][room]).sort())){
-		    consistent = false;
-		    
-		    // update content of slot
-		    clearSlot(day, time, room);
-		    for(var s in serverSchedule[day][time][room]){
-			addSessionToSlot(allSessions[s], day, time, room, "");
+    
+    if(!consistent){
+	// changing the data to reflect what's different
+	for(var day in schedule){
+	    for(var time in schedule[day]){
+		for(var room in schedule[day][time]){
+		    if(!arraysEqual(keys(schedule[day][time][room]).sort(), 
+				    keys(serverSchedule[day][time][room]).sort())){
+			// update content of slot
+			// NOTE: only changing inner data on add to handle swaps correctly
+			clearSlot(day, time, room);
+			
+			for(var s in serverSchedule[day][time][room]){
+			    addSessionToSlot(allSessions[s], day, time, room);
+			}
+			// trigger the change here
+			$(document).trigger('slotChange', [day, time, room]);
+		    }else{
+			// check that papers are the same too
+			for(var s in schedule[day][time][room]){
+			    var subKeys = [];
+			    for(var sub in schedule[day][time][room][s]['submissions']){
+				subKeys.push(schedule[day][time][room][s]['submissions'][sub].id);
+			    }
+			    if(arraysEqual(subKeys, serverSchedule[day][time][room][s]['submissions'])){
+				// get rid of key where same
+				delete serverSchedule[day][time][room];			    
+			    }else{
+				console.log(serverSchedule[day][time][room][s]['submissions']);
+				console.log(subKeys);
+				// remove all papers from session
+				// again, not changing the paper's base data, we will do that when we add
+				clearSession(allSessions[s]);
+				
+				// re-insert papers based on new order
+				for(var i = serverSchedule[day][time][room][s]['submissions'].length - 1; i >= 0; i--){
+				    //				    console.log('--' + serverSchedule[day][time][room][s]['submissions'][i] + '--');
+				    //				    console.log(allSubmissions[serverSchedule[day][time][room][s]['submissions'][i]]);
+				    
+				    // TODO: change once this paper is handled by Michel
+				    if(serverSchedule[day][time][room][s]['submissions'][i] != 'pn710' && 
+				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn135' && 
+				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn321' &&
+				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn507' && 
+				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn104'  ){
+					insertPaperIntoSession(allSessions[s], 
+							       allSubmissions[serverSchedule[day][time][room][s]['submissions'][i]]);
+				    }
+				}
+				$(document).trigger('sessionChange', [s, day, time, room]);
+			    }
+			}
 		    }
-		    // trigger the change here
-		    $(document).trigger('slotChange', [day, time, room]);
-
-		}else{
-		    // get rid of key where same
-		    delete serverSchedule[day][time][room];
 		}
 	    }
 	}
-    }
-
-    // Check for changes to locks
-    for(var day in scheduleSlots){
-	for(var time in scheduleSlots[day]){
-	    for(var room in scheduleSlots[day][time]){
-		if(scheduleSlots[day][time][room]['locked'] !=
-		   serverSlots[day][time][room]['locked']){
-		    toggleSlotLock(day, time, room);
-		    // trigger the change here
-		    $(document).trigger('lockChange', [day, time, room]);
+	
+	// Check for changes to locks
+	for(var day in scheduleSlots){
+	    for(var time in scheduleSlots[day]){
+		for(var room in scheduleSlots[day][time]){
+		    if(scheduleSlots[day][time][room]['locked'] !=
+		       serverSlots[day][time][room]['locked']){
+			toggleSlotLock(day, time, room);
+			$(document).trigger('lockChange', [day, time, room]);
+		}
 		}
 	    }
 	}
-    }
-
-    if(!arraysEqual(keys(unscheduled).sort(),  keys(serverUnscheduled).sort())){
-	// get what's different... 
-	// what's added
-	// what's removed
-	consistent = false;
 	
-	// make change to unscheduled data
-	for(var s in unscheduled){
-	    removeFromUnscheduled(allSessions[s]);
-	}
-	//	unscheduled = {};
-	for(var s in serverUnscheduled){
-	    addToUnscheduled(allSessions[s]);
-	    //unscheduled[s] = allSessions[s];
-	}
-
-	// trigger a change in unscheduled data
-	$(document).trigger('unscheduledChange');
-    }
-
-    /////////////// TODO: INSERT PAPER LEVEL CHECKS /////////////
-    ///// check if papers all still where they should be in schedule
-    ///// check if unscheduled papers also where they should be...
-    ////// update as necessary
-
-
-//     if(!arraysEqual(keys(unscheduledSubmissions).sort(),  keys(serverUnscheduledSubmissions).sort())){
-// 	// get what's different... 
-// 	// what's added
-// 	// what's removed
-// 	consistent = false;
-	
-// 	// make change to unscheduled data
-// 	unscheduled = {};
-// 	for(var e in serverUnscheduled){
+	if(!arraysEqual(keys(unscheduled).sort(),  keys(serverUnscheduled).sort())){
+	    // make change to unscheduled data
+	    for(var s in unscheduled){
+		removeFromUnscheduled(allSessions[s]);
+	    }
+	    for(var s in serverUnscheduled){
+		addToUnscheduled(allSessions[s]);
+	    }
 	    
-// 	    unscheduledSubmissions[e] = allSubmissions[e];
-// 	}
-
-// 	// trigger a change in unscheduled entity data
-// 	$(document).trigger('unscheduledSubmissionsChange');
-//     }
-
-    if(consistent == false){
+	    // trigger a change in unscheduled data
+	    $(document).trigger('unscheduledChange');
+	}
+	
+	///// check if unscheduled papers match
+	if(!arraysEqual(keys(unscheduledSubmissions).sort(),  keys(serverUnscheduledSubmissions).sort())){
+	    // make change to unscheduledSubmissions data
+	    for(var p in unscheduledSubmissions){
+		removeFromUnscheduledPaper(allSubmissions[p]);
+	    }
+	    for(var p in serverUnscheduledSubmissions){
+		addToUnscheduledPaper(allSubmissions[p]);
+	    }
+	    // trigger a change in unscheduled submissions data
+	    $(document).trigger('unscheduledSubmissionsChange');
+	}
+    }
+    
+    if(!consistent){
 	// all changes are in the transactions data itself,
 	// at the new transactions indices. So trigger 
-	console.log("throwing serverScheduleChange with indices: ");
+	console.log("triggering serverScheduleChange with indices: ");
 	console.log(newTransactionIndices);
 	$(document).trigger('serverScheduleChange', [newTransactionIndices]);    
     }
     
     return { isConsistent: consistent,
 	    scheduleChange: serverSchedule,
-	    unscheduledChange: serverUnscheduled
+	    unscheduledChange: serverUnscheduled,
+	    unscheduledSubmissionsChange: serverUnscheduledSubmissions
 	    };
 }
 
@@ -843,7 +863,10 @@ function getAllSubmissions(){
 	    for(var room in schedule[day][time]){
 		for(var session in schedule[day][time][room]){
 		    for(var submission in schedule[day][time][room][session]["submissions"]){
+			
+			
 			var id = schedule[day][time][room][session]["submissions"][submission]['id'];
+			if(id == 'pn710') console.log(schedule[day][time][room][session]["submissions"][submission]);
 			submissions[id] = schedule[day][time][room][session]["submissions"][submission];
 		    }
 		}
