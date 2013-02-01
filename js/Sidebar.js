@@ -75,7 +75,7 @@ var Sidebar = function() {
                return;
           else {
                $("#list-" + menu + " .view-option-active").each(function(){
-                    options.push($(this).data("type"));
+                    options.push($(this).attr("data-type"));
                });
           }
           return options;
@@ -90,7 +90,7 @@ var Sidebar = function() {
           $("#list-constraints .view-option-active").removeClass("view-option-active");
           if (toggle)
               $(this).parent().addClass("view-option-active");
-          var selected_constraint = $(this).parent().data("type");
+          var selected_constraint = $(this).parent().attr("data-type");
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                if (isSpecialCell($(item)))
                     return;
@@ -112,7 +112,7 @@ var Sidebar = function() {
      function clickViewOptionsHandler(){
           $("#list-view-options .view-option-active").removeClass("view-option-active");
           $(this).parent().addClass("view-option-active");
-          switch($(this).parent().data("type")){
+          switch($(this).parent().attr("data-type")){
                case "session-type":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);
@@ -202,8 +202,7 @@ var Sidebar = function() {
           var selected_personas = [];
           $("#list-personas li a").each(function(){
                if ($(this).parent().hasClass("view-option-active")) {
-		   // console.log($(this).parent().data("type"));
-                    selected_personas.push($(this).parent().data("type"))
+                    selected_personas.push($(this).parent().attr("data-type"))
                }
                     //arr.splice(arr.indexOf('specific'), 1);
           });
@@ -245,8 +244,7 @@ var Sidebar = function() {
           var selected_communities = [];
           $("#list-communities li a").each(function(){
                if ($(this).parent().hasClass("view-option-active")) {
-                    //console.log($(this).parent().data("type"));
-                    selected_communities.push($(this).parent().data("type"))
+                    selected_communities.push($(this).parent().attr("data-type"))
                }
                     //arr.splice(arr.indexOf('specific'), 1);
           });
@@ -267,7 +265,7 @@ var Sidebar = function() {
      }
 
      function clickHistoryHandler(){
-          var id = $(this).data("session-id");
+          var id = $(this).attr("data-session-id");
           var toggle = true;
           if ($(this).hasClass("view-option-active"))
                toggle = false;
@@ -277,8 +275,7 @@ var Sidebar = function() {
           
           var cell = null;
           if (typeof id === "undefined") {
-	          //               cell = findCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));
-	          cell = findCellByDateTimeRoom($(this).data("slot-date"), $(this).data("slot-time"), $(this).data("slot-room"));
+	          cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
 	     }
           else
                cell = findCellByID(id);
@@ -301,7 +298,7 @@ var Sidebar = function() {
 	function displayConstraints(){
      	$.each(constraints_list, function(index, constraint){
      		var item = document.createElement("li");
-     		$(item).data("type", constraint.type).html("<a href='#'><span class='palette'></span>" 
+     		$(item).attr("data-type", constraint.type).html("<a href='#'><span class='palette'></span>" 
                     + constraint.label 
                     + "</a>"
                     + " (<span class='count'></span>)"
@@ -315,7 +312,7 @@ var Sidebar = function() {
      function displayViewOptions(){
      	$.each(options_list, function(index, option){
      		var item = document.createElement("li");
-     		$(item).data("type", option.id).html("<a href='#'>" + option.label + "</a>");
+     		$(item).attr("data-type", option.id).html("<a href='#'>" + option.label + "</a>");
      		$("#list-view-options").append($(item));
       	});
       	$("#list-view-options li:first-child").addClass("view-option-active");
@@ -327,7 +324,7 @@ var Sidebar = function() {
 	 // HQ: minor changes here
      	$.each(personaList, function(index, persona){
      		var item = document.createElement("li");
-      		$(item).data("type", persona).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" + persona + "</a>");
+      		$(item).attr("data-type", persona).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" + persona + "</a>");
      		$("#list-personas").append($(item));    		
      		//$(item).find("span.palette").css("background-color", color_palette_1[5]);
                //color_index++;
@@ -350,7 +347,7 @@ var Sidebar = function() {
 	 var commList = communityList;
           $.each(commList, function(index, community){
                var item = document.createElement("li");
-               $(item).data("type", community).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" + community + "</a>");
+               $(item).attr("data-type", community).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" + community + "</a>");
                $("#list-communities").append($(item));              
                //$(item).find("span.palette").css("background-color", color_palette_1[5]);
                //color_index++;

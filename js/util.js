@@ -50,6 +50,7 @@ function shortenDate(date){
 	else if (date == "May 10, 2012")
 	   str = "THU 5/10";
 	*/
+	// Monday -> Mon
 	return date.substring(0,3); 
 }	
 
@@ -67,14 +68,38 @@ function addSign(val){
 		return val;
 }   
 
+// Get outerHTML even when outerHTML is not available
+function outerHTML(node){
+	// if IE, Chrome take the internal method otherwise build one
+	return node.outerHTML || (
+	  	function(n){
+		  var div = document.createElement('div'), h;
+		  div.appendChild( n.cloneNode(true) );
+		  h = div.innerHTML;
+		  div = null;
+		  return h;
+	  	})(node);
+}
+
+
+// remove all data attributes from a DOM element
+function removeDataAttributes($el){
+    var attributes = $.map($el[0].attributes, function(item) {
+        return item.name;
+    });
+
+    $.each(attributes, function(i, item) {
+        if (item.indexOf("data") == 0)
+            $el.removeAttr(item);
+    });
+}
 
 // Locate an empty session by its date, time, and room
 // Returns null when there is no such cell that's empty.
 function findCellByDateTimeRoom(cellDate, cellTime, cellRoom){
     var cell = null;
     $("#program .empty").each(function(){
-        //console.log($(this).data("date"), $(this).data("time"), typeof $(this).data("room"), typeof cellRoom, $(this).data("room") == cellRoom, $(this).data("room") === cellRoom);
-        if ($(this).data("date") == cellDate && $(this).data("time") == cellTime  && $(this).data("room") == cellRoom)
+        if ($(this).attr("data-date") == cellDate && $(this).attr("data-time") == cellTime  && $(this).attr("data-room") == cellRoom)
             cell = $(this);
     });
     return cell;

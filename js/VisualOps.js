@@ -24,15 +24,17 @@ var VisualOps = function() {
 	function _removeSessionFromSlot(s, oldDate, oldTime, oldRoom){
 		var $session = findCellByID(s.id);
         console.log("hello", s, oldDate, oldTime, oldRoom);        
-        $session.removeClass("selected").popover("destroy").removeAttr("id").removeData();
+        $session.removeClass("selected").popover("destroy").removeAttr("id");
+        removeDataAttributes($session);
         var after = getSessionCell("empty", null, oldDate, oldTime, oldRoom);
         // Watch out! jQuery replaceWith returns the original element, not the replaced element.
         $session.replaceWith(after); 
 	}
 
 	function _addSessionToUnscheduled(s){
-        var new_session = getSessionCell("unscheduled", s);
-        $("#unscheduled").append(new_session);
+        var cell = getSessionCell("unscheduled", s);
+        $("#unscheduled").append(cell);
+        $(cell).effect("highlight", {color: "yellow"}, 10000);
 	}
 
 	function _removeSessionFromUnscheduled(s){
@@ -65,7 +67,6 @@ var VisualOps = function() {
 
     // CASE 3. src: scheduled, dst: empty && src: empty, dst: scheduled
     function swapWithEmpty(scheduled, $emptySlot, oldDate, oldTime, oldRoom){
-        console.log(scheduled, $emptySlot.data("room"), oldDate, oldTime, oldRoom);
 		_removeSessionFromSlot(scheduled, oldDate, oldTime, oldRoom);
 		_addSessionToSlot(scheduled, $emptySlot);
     }

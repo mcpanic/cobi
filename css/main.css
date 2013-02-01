@@ -272,10 +272,9 @@ body.loading .modal {
     padding: 10px;
 }
 
-.list-submissions .submission-type { 
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom:3px;
+
+.list-submissions li:hover { 
+    outline: 1px solid #333333;
 }
 
 .list-submissions li button{
@@ -289,6 +288,20 @@ body.loading .modal {
 
 .list-submissions li:nth-child(odd) {
     background: #f2f2f2;
+}
+
+.list-submissions .submission-type { 
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom:3px;
+}
+
+.list-submissions .submission-empty {
+    padding: 20px 10px 30px 0px;
+}
+
+.list-submissions .submission-title {
+    font-weight: bold;
 }
 
 /* ==========================================================================
@@ -396,6 +409,12 @@ body.loading .modal {
     line-height: 14px;
 }
 
+.popover-inner li {
+    line-height: 14px;  
+}
 
+.popover-inner button {
+    margin-right: 7px;
+}
 
 
