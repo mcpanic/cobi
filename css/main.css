@@ -222,17 +222,20 @@ body.loading .modal {
    Unscheduled workspace
    ========================================================================== */
 
-#unscheduled, #unscheduled-papers {
+.unscheduled-wrapper {
+    width: 95%;
+    height: 95px;
     border: solid 1px #dddddd;
-    height: 75px;
-    /*padding: 10px;*/
-    /*background-color: #f8f8f8;*/
-    margin-bottom: 15px;
     overflow-x: scroll;
     overflow-y: hidden;
+    margin-bottom: 15px;
+}
+
+#unscheduled, #unscheduled-papers {
+
     border-collapse: separate;
     border-spacing: 10px 5px;
-    padding-bottom:20px;
+    /*padding-bottom:20px;*/
 }
 
 #unscheduled .slot, #unscheduled-papers .slot-paper {    
