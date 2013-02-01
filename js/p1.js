@@ -322,13 +322,14 @@
         // empty: session id, submission null
         } else if (type == "empty" && submission == null){
             var $session = findCellByID(session.id);
-            proposedList = $session.attr("data-proposed-swap-paper");
-            isProposed = $.inArray(submission, proposedList) !== -1;
-            console.log(session.id, null, isProposed);
+            proposedList = $session.attr("data-proposed-swap-paper").split(",");
+            // because attr returns all strings, "null" not null is returned.
+            isProposed = $.inArray("null", proposedList) !== -1;
+            console.log(session.id, null, isProposed, proposedList);
         // scheduled: session id, submission id
         } else if (type == "scheduled" && session != null && submission != null){
             var $session = findCellByID(session.id);
-            proposedList = $session.attr("data-proposed-swap-paper");
+            proposedList = $session.attr("data-proposed-swap-paper").split(",");
             isProposed = $.inArray(submission.id, proposedList) !== -1;
             console.log(session.id, submission.id, isProposed);
         } else {
