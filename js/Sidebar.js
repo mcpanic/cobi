@@ -26,6 +26,12 @@ var Sidebar = function() {
 
      function addHistoryHandler(event, history){
           console.log("HISTORY", history);
+
+          // hack that fixes the bug where when history is open with 0 items, prepend doesn't work because height is automatically set to 0px.
+          // so force height to be auto when collapsed
+          if ($("#list-history").hasClass("in"))
+               $("#list-history").css("height", "auto");
+          
           if (typeof history.id !== "undefined" && 
                (history.type == "lock" || history.type == "unlock" || history.type == "schedule" || history.type == "move" || history.type == "unschedule")){
 
