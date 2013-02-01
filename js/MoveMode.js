@@ -273,7 +273,7 @@ var MoveMode = function() {
         // var swapContent = "";
         var $cell = null;
         for(var i = 0; i < swapValues.length; i++){    
-            console.log("SWAP", swapValues[i].target);   
+            //console.log("SWAP", swapValues[i].target);   
 
             // empty candidate
             if (swapValues[i].target.session === null){
@@ -305,8 +305,9 @@ var MoveMode = function() {
                     // empty: session id, submission null && scheduled: session id, submission id
                     } else {
                         // store currently inserted paper-level proposals
-                        var curList = typeof $cell.attr("data-proposed-swap-paper") === "undefined" ? [] : $cell.attr("data-proposed-swap-paper");
-                        curList.push(submission);
+                        var curList = typeof $cell.attr("data-proposed-swap-paper") === "undefined" ? "" : $cell.attr("data-proposed-swap-paper");
+                        curList += "," + submission;
+
                         if (submission == null)
                             console.log("runPropose: empty");
                         else 
