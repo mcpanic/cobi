@@ -54,7 +54,7 @@ var personas_list = [
 var options_list = [
 {"id": "conflicts", "label": "Conflicts"}, 
 {"id": "session-type", "label": "Session Type"}, 
-{"id": "popularity", "label": "Popularity"}, 
+//{"id": "popularity", "label": "Popularity"}, 
 {"id": "num-papers", "label": "Number of Papers"}, 
 {"id": "duration", "label": "Duration"}, 
 {"id": "awards", "label": "Awards"}, 
