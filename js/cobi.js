@@ -1,3 +1,7 @@
+// $(document).on("transactionUpdate", function(event, transaction){
+// 	console.log(transaction);
+//     });
+
 var allRooms = null;
 var allSessions = null;
 var allSubmissions = null;
@@ -828,6 +832,9 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
 	console.log("triggering serverScheduleChange with indices: ");
 	console.log(newTransactionIndices);
 	$(document).trigger('serverScheduleChange', [newTransactionIndices]);    
+	for(var i = 0; i < newTransactionIndices.length; i++){
+	    $(document).trigger('transactionUpdate', transactions[newTransactionIndices[i]]);
+	}
     }
     
     return { isConsistent: consistent,

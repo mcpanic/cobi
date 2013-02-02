@@ -140,6 +140,7 @@ DB.prototype.toggleSlotLock = function(date, time, room, lock, uid){
 		url: "./php/changeSchedule.php",
 		success: function(m){
 		transactions.push(m);
+		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },
 		error : function(m){
 		alert("lock error: " + JSON.stringify(m));
@@ -162,6 +163,7 @@ DB.prototype.toggleSlotLock = function(date, time, room, lock, uid){
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
 		transactions.push(m);
+		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
@@ -183,6 +185,7 @@ DB.prototype.scheduleSession = function(id, date, time, room, uid){
 		url: "./php/changeSchedule.php",
 		success: function(m){		
 		transactions.push(m);
+		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },
 		error : function(m){
 		alert(JSON.stringify(m));
@@ -207,6 +210,7 @@ DB.prototype.moveSession = function(id, date, time, room, tdate, ttime, troom, u
 	    url: "./php/changeSchedule.php",
 	    success: function(m){		
 		transactions.push(m);
+		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
@@ -237,6 +241,7 @@ DB.prototype.swapSession = function(s1id, s1date, s1time, s1room,
 	    success: function(m){
 
 		transactions.push(m);
+		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
@@ -262,6 +267,7 @@ DB.prototype.swapWithUnscheduledSession = function(s1id,
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
 		transactions.push(m);
+		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
@@ -284,6 +290,7 @@ DB.prototype.swapWithUnscheduledSession = function(s1id,
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
 		transactions.push(m);
+		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
@@ -306,6 +313,7 @@ DB.prototype.swapPapers = function(s1id, p1id, s2id, p2id, uid){
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
 		transactions.push(m);
+		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
@@ -327,6 +335,7 @@ DB.prototype.swapWithUnscheduledPaper = function(p1id, s2id, p2id, uid){
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
 		transactions.push(m);
+		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
@@ -348,6 +357,7 @@ DB.prototype.movePaper = function(s1id, p1id, s2id, uid){
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
 		transactions.push(m);
+		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
@@ -368,6 +378,7 @@ DB.prototype.unschedulePaper = function(sid, pid, uid){
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
 		transactions.push(m);
+		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
@@ -388,6 +399,7 @@ DB.prototype.schedulePaper = function(sid, pid, uid){
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
 		transactions.push(m);
+		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
