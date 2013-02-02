@@ -1,7 +1,3 @@
-// $(document).on("transactionUpdate", function(event, transaction){
-// 	console.log(transaction);
-//     });
-
 var allRooms = null;
 var allSessions = null;
 var allSubmissions = null;
@@ -15,7 +11,9 @@ var schedule = null;
 var frontEndOnly = false;
 var scheduleSlots = null;
 var userData = new userInfo(null, "Anon", null, "rookie");
-var transactions = null;
+var transactions = [];
+var localTransactions = [];
+
 var personaList = ["Online social communities & crowdsourcing",
 		   "Design",
 		   "UIST",
@@ -38,7 +36,445 @@ var communityList = ["ux",
 		     "cci",
 		     "arts",
 		     "health",
-		     "sustainability"]
+		     "sustainability"];
+
+var DataOps = function() {
+    function handleTransaction(t){
+	switch (t.type) {
+   	case 'lock': 
+	    lockSlot(t.data.date, t.data.time, t.data.room);
+	    break;
+	case 'unlock':
+	    unlockSlot(t.data.date, t.data.time, t.data.room);
+	    break;
+	case 'unschedule':
+	    // first check if session is actually there?
+	    unscheduleSession(allSessions[t.data.id]);
+	    break;
+	case 'schedule':
+	    scheduleSession(allSessions[t.data.id], 
+			    t.data.date, 
+			    t.data.time, 
+			    t.data.room);
+	    break;
+	case 'swap':
+	    swapSessions(allSessions[t.data.s1id],
+			 allSessions[t.data.s2id]);
+	    break;
+	case 'swapWithUnscheduled':
+	    swapWithUnscheduledSession(allSessions[t.data.s1id],
+				       allSessions[t.data.s2.id]);
+	    break;
+	    // now for the paper related cases
+	case 'reorderPapers':
+	    reorderPapers(allSessions[t.data.id],
+			  t.data.paperOrder.split(","));
+	    break;
+	case 'swapPapers':
+	    swapPapers(allSessions[t.data.s1id],
+		       allSubmissions[t.data.p1id],
+		       allSessions[t.data.s2id],
+		       allSubmissions[t.data.p2id]);
+	    break;
+	case 'unschedulePaper':
+	    unschedulePaper(allSessions[t.data.sid],
+			    allSubmissions[t.data.pid]);
+	    break;
+	case 'schedulePaper':
+	    schedulePaper(allSessions[t.data.sid],
+			  allSubmissions[t.data.pid]);
+	    break;
+	case 'movePaper':
+	    movePaper(allSessions[t.data.s1id],
+		      allSubmissions[t.data.p1id],
+		      allSessions[t.data.s2id]);
+	    break;
+	case 'swapWithUnscheduledPaper':
+	    swapWithUnscheduledPaper(allSubmissions[t.data.p1id],
+				     allSessions[t.data.s2id],
+				     allSubmissions[t.data.p2id]);
+	    break;
+	default: 
+	    console.log("Weird, nonexistent operation?");
+	}
+    }
+
+    function lockSlotsAtDayTime(day, time){
+	for(var room in scheduleSlots[day][time]){
+	    lockSlot(day, time, room);
+	}
+    }
+    
+    function unlockSlotsAtDayTime(day, time){
+	for(var room in scheduleSlots[day][time]){
+	    unlockSlot(day, time, room);
+	}
+    }
+    
+    function lockSlotsInRoom(r){
+	for(var day in scheduleSlots){
+	    for(var time in scheduleSlots[day]){
+		for(var room in scheduleSlots[day][time]){
+		    if(room == r){
+			lockSlot(day, time, r);
+		    }
+		}
+	    }
+	}
+    }
+    
+    function unlockSlotsInRoom(r){
+	for(var day in scheduleSlots){
+	    for(var time in scheduleSlots[day]){
+		for(var room in scheduleSlots[day][time]){
+		    if(room == r){
+			unlockSlot(day, time, r);
+		    }
+		}
+	    }
+	}
+    }
+    
+    function toggleSlotLock(day, time, room){
+	console.log("Test: toggling slot: " + day + ", " + time + ", " + room);    
+	scheduleSlots[day][time][room]['locked'] = !scheduleSlots[day][time][room]['locked'];
+    }
+    
+    function lockSlot(day, time, room){
+	console.log("Test: locking slot: " + day + ", " + time + ", " + room);    
+	scheduleSlots[day][time][room]['locked'] = true;
+    }
+    
+    function unlockSlot(day, time, room){
+	console.log("Test: unlocking slot: " + day + ", " + time + ", " + room);
+	scheduleSlots[day][time][room]['locked'] = false;
+    }
+    
+    function removeSessionFromSlot(s, date, time, room){
+	console.log("Test: removing session " + s.id + " from " + date + ", " + time + ", " + room);
+	delete schedule[date][time][room][s.id];
+    }
+    
+    function clearSlot(date, time, room){
+	console.log("Test: removing sessions from " + date + ", " + time + ", " + room);
+	for(s in schedule[date][time][room]){
+	    removeSessionFromSlot(allSessions[s], date, time, room);
+	}
+    }
+    
+    
+    function addSessionToSlot(s, date, time, room){
+	console.log("Test: adding session " + s.id + " to " + date + ", " + time + ", " + room);
+	schedule[date][time][room][s.id] = s;
+	s['date'] = date;
+	s['time'] = time;
+	s['room'] = room;
+	// todo doesn't deal with endTime
+    }
+    
+    function addToUnscheduled(s){
+	console.log("Test: adding session " + s.id + " to unscheduled list.");
+	unscheduled[s.id] = s;
+	s['date'] = "";
+	s['time'] = "";
+	s['room'] = "";
+    }
+    
+    function removeFromUnscheduled(s){
+	// remove session from unscheduled
+	console.log("Test: removing session " + s.id + " from unscheduled list.");
+	delete unscheduled[s.id];
+    }
+    
+    // Unschedule a session
+    function unscheduleSession(s){	
+	// todo: doesn't deal with endTime
+	var sdate = s.date;
+	var stime = s.time;
+	var sroom = s.room;
+	
+	console.log("Test: unscheduling session " + s.id + " from " + sdate + ", " + stime + ", " + sroom);
+	
+	if(scheduleSlots[sdate][stime][sroom]['locked']){
+	    $(document).trigger('slotLocked', [sdate, stime, sroom]);
+	    return;
+	}
+	
+	// remove session from slot
+	removeSessionFromSlot(s, sdate, stime, sroom);
+	
+	// add to unscheduled
+	addToUnscheduled(s);
+    }
+
+    // schedule a session
+    function scheduleSession(s, sdate, stime, sroom){
+	if(scheduleSlots[sdate][stime][sroom]['locked']){
+	    $(document).trigger('slotLocked', [sdate, stime, sroom]);
+	    return;
+	}
+	
+	console.log("Test: scheduling session " + s.id + " to " + sdate + ", " + stime + ", " + sroom);
+	
+	var isUnscheduled = false;
+	// remove session from unscheduled
+	if(s.id in unscheduled){
+	    removeFromUnscheduled(s);
+	    isUnscheduled = true;
+	}
+	
+	// schedule on frontend
+	if(!isUnscheduled){
+	    removeSessionFromSlot(s, s.date, s.time, s.room)
+	}
+	addSessionToSlot(s, sdate, stime, sroom);
+    }
+    
+    
+    // Swaps two sessions into the original schedule data structure
+    function swapSessions(s1, s2){
+	var s1date = s1.date;
+	var s1time = s1.time;
+	var s1room = s1.room;
+	var s2date = s2.date;
+	var s2time = s2.time;
+	var s2room = s2.room;
+	
+	console.log("Test: swapping sessions " + s1.id + " and " + s2.id);
+	
+	if(scheduleSlots[s1date][s1time][s1room]['locked']){
+	    $(document).trigger('slotLocked', [s1date, s1time, s1room]);
+	    return;
+	}
+	
+	if(scheduleSlots[s2date][s2time][s2room]['locked']){
+	    $(document).trigger('slotLocked', [s2date, s2time, s2room]);
+	    return;
+	}
+	
+	
+	s1.date = s2date;
+	s1.time = s2time;
+	s1.room = s2room;
+	s2.date = s1date;
+	s2.time = s1time;
+	s2.room = s1room;
+	
+	// change it's locations in the data structure
+	schedule[s1date][s1time][s1room][s2.id] = s2;
+	delete schedule[s1date][s1time][s1room][s1.id];
+	
+	schedule[s2date][s2time][s2room][s1.id] = s1;
+	delete schedule[s2date][s2time][s2room][s2.id];
+    }
+    
+    // Swaps two sessions where first is currently unscheduled
+    function swapWithUnscheduledSession(s1, s2){
+	// assume s1 is unscheduled
+	var s2date = s2.date;
+	var s2time = s2.time;
+	var s2room = s2.room;
+	
+	console.log("Test: swapping unscheduled session " + s1.id + " with scheduled session " + s2.id);
+	
+	if(scheduleSlots[s2date][s2time][s2room]['locked']){
+	    $(document).trigger('slotLocked', [s2date, s2time, s2room]);
+	    return;
+	}
+	
+	removeFromUnscheduled(s1);
+	removeSessionFromSlot(s2, s2date, s2time, s2room);
+	addToUnscheduled(s2);
+	addSessionToSlot(s1, s2date, s2time, s2room);
+    }
+    
+    // Example: 
+    // flipping first two papers in Mobile keyboard / text entry
+    // reorderPapers(allSessions["s254"], ["pn1566","pn1376","pn1360","pn492","pn1936"], ["pn1376","pn1566","pn1360","pn492","pn1936"]);
+    // reorderPapers(allSessions["s254"], ["pn1376","pn1566","pn1360","pn492","pn1936"], ["pn1566","pn1376","pn1360","pn492","pn1936"]);
+    function reorderPapers(s, newPaperOrder){
+	// assume paperOrder is an array of paper IDs
+	
+	console.log("Test: reordering papers in session " + s.id + " to " + JSON.stringify(newPaperOrder));
+	var submissions = [];
+	
+	for(var i = 0; i < newPaperOrder.length; i++){
+	    for(var j = 0; j < s.submissions.length; j++){
+		if(s.submissions[j].id == newPaperOrder[i]){
+		    submissions.push(s.submissions[j]);
+		    break;
+		} 
+	    }
+	}
+	
+	s.submissions = submissions;	
+    }
+
+    function isLocked(s1){
+	var s1date = s1.date;
+	var s1time = s1.time;
+	var s1room = s1.room;
+	if(scheduleSlots[s1date][s1time][s1room]['locked']){
+	    $(document).trigger('slotLocked', [s1date, s1time, s1room]);
+	    return true;
+	}
+	return false;
+    }
+
+    function paperIsInSession(s1, p1){
+	// make sure keys come from right place
+	var p1ins1 = false;
+	for (var p in s1.submissions){
+	    if(s1.submissions[p] == p1){
+		p1ins1 = true;
+	    }
+	}
+	return p1ins1;
+    }
+    
+    // Example: 
+    // Swapping mobile keyboard  paper with Learning first paper (top row)
+    // swapPapers(allSessions['s254'], allSubmissions['pn1566'], allSessions['s288'], allSubmissions['pn2178'])
+    // swapPapers(allSessions['s254'], allSubmissions['pn2178'], allSessions['s288'], allSubmissions['pn1566'])
+    function swapPapers(s1, p1, s2, p2){
+	
+	if(isLocked(s1) || isLocked(s2)) return;
+	
+	// make sure types match and papers from their session
+	if(s1.venue != s2.venue) return;
+	if(!(paperIsInSession(s1, p1) && paperIsInSession(s2, p2))) return;
+	
+	
+	console.log("Test: swapping papers " + p1.id + " and " + p2.id);
+	
+	for(var i = 0; i < s1.submissions.length; i++){
+	    if(s1.submissions[i] == p1){
+		s1.submissions[i] = p2;
+		p2.session = s1.id;
+	    }
+	}
+	for(var i = 0; i < s2.submissions.length; i++){
+	    if(s2.submissions[i] == p2){
+		s2.submissions[i] = p1;
+		p1.session = s2.id;
+	    }
+	}
+	
+	// associate papers with different sessions
+    }
+
+    function clearSession(s){
+	console.log("Test: removing papers from " + s.id);
+	s.submissions = []; 
+    }
+    
+    function removePaperFromSession(s, p){
+	console.log("Test: removing paper " + p.id + " from " + s.id);
+	// change it from the session
+	
+	// erase paper from list of submissions in session
+	var idx = s.submissions.indexOf(p); // Find the index
+	if(idx !=-1) s.submissions.splice(idx, 1); // Remove it if really found!
+	
+	return;
+    }
+    
+    function addToUnscheduledPaper(p){
+	console.log("Test: adding paper " + p.id + " to unscheduledSubmissions list.");
+	unscheduledSubmissions[p.id] = p;
+	p.session = "null";
+    }
+    
+    // Example:
+    // unscheduling improving two-thumb text entry from Mobile keyword / text
+    // unschedulePaper(allSessions['s254'], allSubmissions['pn1376']);
+    function unschedulePaper(s, p){
+	if(isLocked(s) || !paperIsInSession(s,p)) return;
+	
+	console.log("Test: unscheduling paper " + p.id + " from " + s.id);
+	
+	removePaperFromSession(s, p);
+	addToUnscheduledPaper(p);
+    }
+    
+    // note: always add at start of session
+    function insertPaperIntoSession(s, p){
+	console.log("Test: adding paper " + p.id + " to " + s.id);
+	s.submissions.unshift(p);
+	
+	// set paper's session
+	p.session = s.id;
+	
+	return;
+    }
+
+    function removeFromUnscheduledPaper(p){
+	console.log("Test: removing paper " + p.id + " from unscheduledSubmissions list.");
+	delete unscheduledSubmissions[p.id];
+    }
+    
+    // Example:
+    // scheduling improving two-thumb text entry to Mobile keyword / text
+    // schedulePaper(allSessions['s254'], allSubmissions['pn1376']);
+    function schedulePaper(s, p){
+	if(isLocked(s) || !(p.id in unscheduledSubmissions)) return;
+	
+	console.log("Test: scheduling paper " + p.id + " into " + s.id);
+	
+	insertPaperIntoSession(s, p);
+	removeFromUnscheduledPaper(p);
+    }
+    
+    // Example: 
+    // Moving mobile keyboard  paper into Learning (top row)
+    // movePaper(allSessions['s254'], allSubmissions['pn1376'], allSessions['s288']);
+    // movePaper(allSessions['s288'], allSubmissions['pn1376'], allSessions['s254']);
+    // Note: always inserts at front
+    function movePaper(s1, p1, s2){
+	if(isLocked(s1) || isLocked(s2)) return;
+	
+	// make sure types match and papers from their session
+	if(s1.venue != s2.venue) return;
+	if(!(paperIsInSession(s1, p1)))return;
+	
+	console.log("Test: moving paper " + p1.id + " from " + s1.id + " to " + s2.id);
+	
+	removePaperFromSession(s1, p1);
+	insertPaperIntoSession(s2, p1);
+    }
+
+    // Example:
+    // assuming pn1376 is unscheduled, swap it with paper in Mobile keyword / text that is scheduled
+    // swapWithUnscheduledPaper(unscheduledSubmissions['pn1376'], allSessions['s254'], allSubmissions['pn1566']);
+    // swapWithUnscheduledPaper(unscheduledSubmissions['pn1566'], allSessions['s254'], allSubmissions['pn1376']);
+    function swapWithUnscheduledPaper(p1, s2, p2){
+	// assume p1 is unscheduled
+	if(isLocked(s2)) return;
+	if(p1.type != s2.venue) return;
+	if(!(paperIsInSession(s2,p2))) return;
+	
+	console.log("Test: swapping unscheduled paper " + p1.id + " with scheduled paper " + p2.id + " in " + s2.id);
+	
+	removeFromUnscheduledPaper(p1);
+	for(var i = 0; i < s2.submissions.length; i++){
+	    if(s2.submissions[i] == p2){
+		s2.submissions[i] = p1;
+		p2.session = "null";
+		p1.session = s2.id;
+	    }
+	}
+	addToUnscheduledPaper(p2);
+    }
+    
+    return {
+	handleTransaction: handleTransaction
+    };
+}();
+
+// $(document).on("transactionUpdate", function(event, transaction){
+// 	console.log(transaction);
+//     });
+
 		     
 ////// Functions that change the data schedule 
 
@@ -144,231 +580,147 @@ function undo(){
     }
 }
 
-
-function lockSlotsAtDayTime(day, time){
-    for(var room in scheduleSlots[day][time]){
-	lockSlot(day, time, room);
-    }
+// Operations
+function lockSlot(date, time, room){
+    var td = { 'date': date,
+	       'time': time,
+	       'room': room };
+    
+    var tp = { 'date': date,
+	       'time': time,
+	       'room': room };
+    
+    var t = new TransactionData(userData.id,
+				'lock',
+				td,
+				tp);
+    Transact.addTransaction(t);		
 }
 
-function unlockSlotsAtDayTime(day, time){
-    for(var room in scheduleSlots[day][time]){
-	unlockSlot(day, time, room);
-    }
-}
-
-function lockSlotsInRoom(r){
-    for(var day in scheduleSlots){
-	for(var time in scheduleSlots[day]){
-	    for(var room in scheduleSlots[day][time]){
-		if(room == r){
-		    lockSlot(day, time, r);
-		}
-	    }
-	}
-    }
-}
-
-function unlockSlotsInRoom(r){
-    for(var day in scheduleSlots){
-	for(var time in scheduleSlots[day]){
-	    for(var room in scheduleSlots[day][time]){
-		if(room == r){
-		    unlockSlot(day, time, r);
-		}
-	    }
-	}
-    }
-}
-
-function toggleSlotLock(day, time, room){
-    console.log("Test: toggling slot: " + day + ", " + time + ", " + room);    
-    scheduleSlots[day][time][room]['locked'] = !scheduleSlots[day][time][room]['locked'];
-}
-
-function lockSlot(day, time, room){
-    console.log("Test: locking slot: " + day + ", " + time + ", " + room);    
-
-    scheduleSlots[day][time][room]['locked'] = true;
-    if(!frontEndOnly){
-	db.toggleSlotLock(day, time, room, true, userData.id);
-    }
-}
-
-function unlockSlot(day, time, room){
-    console.log("Test: unlocking slot: " + day + ", " + time + ", " + room);
-    scheduleSlots[day][time][room]['locked'] = false;
-    if(!frontEndOnly){
-	db.toggleSlotLock(day, time, room, false, userData.id);
-    }
-}
-
-
-function removeSessionFromSlot(s, date, time, room){
-    console.log("Test: removing session " + s.id + " from " + date + ", " + time + ", " + room);
-    delete schedule[date][time][room][s.id];
-}
-
-function clearSlot(date, time, room){
-    console.log("Test: removing sessions from " + date + ", " + time + ", " + room);
-    for(s in schedule[date][time][room]){
-	removeSessionFromSlot(allSessions[s], date, time, room);
-    }
-}
-
-
-function addSessionToSlot(s, date, time, room){
-    console.log("Test: adding session " + s.id + " to " + date + ", " + time + ", " + room);
-    schedule[date][time][room][s.id] = s;
-    s['date'] = date;
-    s['time'] = time;
-    s['room'] = room;
-    // todo doesn't deal with endTime
-}
-
-function addToUnscheduled(s){
-    console.log("Test: adding session " + s.id + " to unscheduled list.");
-    unscheduled[s.id] = s;
-    s['date'] = "";
-    s['time'] = "";
-    s['room'] = "";
-}
-
-function removeFromUnscheduled(s){
-    // remove session from unscheduled
-    console.log("Test: removing session " + s.id + " from unscheduled list.");
-    delete unscheduled[s.id];
+function unlockSlot(date, time, room){
+    var td = { 'date': date,
+	       'time': time,
+	       'room': room };
+    
+    var tp = { 'date': date,
+	       'time': time,
+	       'room': room };
+    
+    var t = new TransactionData(userData.id,
+				'unlock',
+				td,
+				tp);
+    Transact.addTransaction(t);		
 }
 
 // Unschedule a session
 function unscheduleSession(s){
-
-    // todo: doesn't deal with endTime
-    var sdate = s.date;
-    var stime = s.time;
-    var sroom = s.room;
-
-    console.log("Test: unscheduling session " + s.id + " from " + sdate + ", " + stime + ", " + sroom);
-
-    if(scheduleSlots[sdate][stime][sroom]['locked']){
-	$(document).trigger('slotLocked', [sdate, stime, sroom]);
-	return;
-    }
-
-    // remove session from slot
-    removeSessionFromSlot(s, sdate, stime, sroom);
-
-    // add to unscheduled
-    addToUnscheduled(s);
-
-    // unschedule on server
-    if(!frontEndOnly){
-	db.unscheduleSession(s.id, sdate, stime, sroom, userData.id);
-    }
+    var td = { 'id': s.id,
+	       'date': s.date,
+	       'time': s.time,
+	       'room': s.room };
+    var tp = { 'id': s.id,
+	       'date': s.date,
+	       'time': s.time,
+	       'room': s.room };
+    var t = new TransactionData(userData.id,
+				'unschedule',
+				td,
+				tp);
+    Transact.addTransaction(t);		
 }
-
 
 // schedule a session
-function scheduleSession(s, sdate, stime, sroom){
-    if(scheduleSlots[sdate][stime][sroom]['locked']){
-	$(document).trigger('slotLocked', [sdate, stime, sroom]);
-	return;
-    }
-
-    console.log("Test: scheduling session " + s.id + " to " + sdate + ", " + stime + ", " + sroom);
-
-    var isUnscheduled = false;
-    // remove session from unscheduled
+function scheduleSession(s, tdate, ttime, troom){
     if(s.id in unscheduled){
-	removeFromUnscheduled(s);
-	isUnscheduled = true;
+	// schedule session
+	var td = { 'id': s.id,
+		   'date': tdate,
+		   'time': ttime,
+		   'room': troom };
+	var tp = { 'id': s.id,
+		   'date': tdate,
+		   'time': ttime,
+		   'room': troom };
+	var t = new TransactionData(userData.id,
+				    'schedule',
+				    td,
+				    tp);
+	Transact.addTransaction(t);		
+    }else{
+	// move session
+	var td = { 'id': s.id,
+		   'sdate': s.date,
+		   'stime': s.time,
+		   'sroom': s.room,
+		   'tdate': tdate,
+		   'ttime': ttime,
+		   'troom': troom
+		 };
+	var tp = { 'id': s.id,
+		   'sdate': tdate,
+		   'stime': ttime,
+		   'sroom': troom,
+		   'tdate': s.date,
+		   'ttime': s.time,
+		   'troom': s.room
+		 };
+	var t = new TransactionData(userData.id,
+				    'move',
+				    td,
+				    tp);
+	Transact.addTransaction(t);		
     }
-    
-    // schedule on server
-    if(!frontEndOnly){
-	if(isUnscheduled){
-	    db.scheduleSession(s.id, sdate, stime, sroom, userData.id);
-	}else{
-	    db.moveSession(s.id, s.date, s.time, s.room, 
-		    sdate, stime, sroom, userData.id); 
-	}
-    }
-    
-    // schedule on frontend
-    if(!isUnscheduled){
-	removeSessionFromSlot(s, s.date, s.time, s.room)
-    }
-    addSessionToSlot(s, sdate, stime, sroom);
 }
-
 
 // Swaps two sessions into the original schedule data structure
 function swapSessions(s1, s2){
-    var s1date = s1.date;
-    var s1time = s1.time;
-    var s1room = s1.room;
-    var s2date = s2.date;
-    var s2time = s2.time;
-    var s2room = s2.room;
+    var td = { 's1id': s1.id,
+	       's1date': s1.date,
+	       's1time': s1.time,
+	       's1room': s1.room,
+	       's2id': s2.id,
+	       's2date': s2.date,
+	       's2time': s2.time,
+	       's2room': s2.room
+	     };
+    var tp = { 's1id': s2.id,
+	       's1date': s1.date,
+	       's1time': s1.time,
+	       's1room': s1.room,
+	       's2id': s1.id,
+	       's2date': s2.date,
+	       's2time': s2.time,
+	       's2room': s2.room
+	     };
 
-    console.log("Test: swapping sessions " + s1.id + " and " + s2.id);
-    
-    if(scheduleSlots[s1date][s1time][s1room]['locked']){
-	$(document).trigger('slotLocked', [s1date, s1time, s1room]);
-	return;
-    }
-
-    if(scheduleSlots[s2date][s2time][s2room]['locked']){
-	$(document).trigger('slotLocked', [s2date, s2time, s2room]);
-	return;
-    }
-
-
-    s1.date = s2date;
-    s1.time = s2time;
-    s1.room = s2room;
-    s2.date = s1date;
-    s2.time = s1time;
-    s2.room = s1room;
-
-    // change it's locations in the data structure
-    schedule[s1date][s1time][s1room][s2.id] = s2;
-    delete schedule[s1date][s1time][s1room][s1.id];
-
-    schedule[s2date][s2time][s2room][s1.id] = s1;
-    delete schedule[s2date][s2time][s2room][s2.id];
-
-    // perform swap on server
-    if(!frontEndOnly){
-	db.swapSession(s1.id, s1date, s1time, s1room,
-		       s2.id, s2date, s2time, s2room,  userData.id);
-    }
+    var t = new TransactionData(userData.id,
+				'swap',
+				td,
+				tp);
+    Transact.addTransaction(t);		
 }
 
 // Swaps two sessions where first is currently unscheduled
 function swapWithUnscheduledSession(s1, s2){
-    // assume s1 is unscheduled
-    var s2date = s2.date;
-    var s2time = s2.time;
-    var s2room = s2.room;
-
-    console.log("Test: swapping unscheduled session " + s1.id + " with scheduled session " + s2.id);
+    var td = { 's1id': s1.id,
+	       's2id': s2.id,
+	       's2date': s2.date,
+	       's2time': s2.time,
+	       's2room': s2.room
+	     };
+    var tp = { 's1id': s2.id,
+	       's2id': s1.id,
+	       's2date': s2.date,
+	       's2time': s2.time,
+	       's2room': s2.room
+	     };
     
-    if(scheduleSlots[s2date][s2time][s2room]['locked']){
-	$(document).trigger('slotLocked', [s2date, s2time, s2room]);
-	return;
-    }
-
-    removeFromUnscheduled(s1);
-    removeSessionFromSlot(s2, s2date, s2time, s2room);
-    addToUnscheduled(s2);
-    addSessionToSlot(s1, s2date, s2time, s2room);
-
-    // perform swap on server
-    if(!frontEndOnly){
-	db.swapWithUnscheduledSession(s1.id, 
-				s2.id, s2date, s2time, s2room,  userData.id);
-    }
+    var t = new TransactionData(userData.id,
+				'swapWithUnscheduled',
+				td,
+				tp);
+    Transact.addTransaction(t);		
 }
 
 ///////end of functions for interacting with schedule////////////
@@ -405,47 +757,17 @@ function swapWithUnscheduledSession(s1, s2){
 // reorderPapers(allSessions["s254"], ["pn1566","pn1376","pn1360","pn492","pn1936"], ["pn1376","pn1566","pn1360","pn492","pn1936"]);
 // reorderPapers(allSessions["s254"], ["pn1376","pn1566","pn1360","pn492","pn1936"], ["pn1566","pn1376","pn1360","pn492","pn1936"]);
 function reorderPapers(s, newPaperOrder, previousPaperOrder){
-    // assume paperOrder is an array of paper IDs
-    
-    console.log("Test: reordering papers in session " + s.id + " to " + JSON.stringify(newPaperOrder));
-    var submissions = [];
-    
-    for(var i = 0; i < newPaperOrder.length; i++){
-	for(var j = 0; j < s.submissions.length; j++){
-	    if(s.submissions[j].id == newPaperOrder[i]){
-		submissions.push(s.submissions[j]);
-		break;
-	    } 
-	}
-    }
-    
-    s.submissions = submissions;
-    
-    if(!frontEndOnly){
-	db.reorderPapers(s.id, newPaperOrder, previousPaperOrder, userData.id);
-    }
-}
-
-function isLocked(s1){
-    var s1date = s1.date;
-    var s1time = s1.time;
-    var s1room = s1.room;
-    if(scheduleSlots[s1date][s1time][s1room]['locked']){
-	$(document).trigger('slotLocked', [s1date, s1time, s1room]);
-	return true;
-    }
-    return false;
-}
-
-function paperIsInSession(s1, p1){
-    // make sure keys come from right place
-    var p1ins1 = false;
-    for (var p in s1.submissions){
-	if(s1.submissions[p] == p1){
-	    p1ins1 = true;
-	}
-    }
-    return p1ins1;
+    var td = { 'id': s.id,
+	       'paperOrder': newPaperOrder.join()
+	     };
+    var tp = { 'id': s.id,
+	       'paperOrder': previousPaperOrder.join()
+	     };
+    var t = new TransactionData(userData.id,
+				'reorderPapers',
+				td,
+				tp);
+    Transact.addTransaction(t);		
 }
 
 // Example: 
@@ -453,109 +775,56 @@ function paperIsInSession(s1, p1){
 // swapPapers(allSessions['s254'], allSubmissions['pn1566'], allSessions['s288'], allSubmissions['pn2178'])
 // swapPapers(allSessions['s254'], allSubmissions['pn2178'], allSessions['s288'], allSubmissions['pn1566'])
 function swapPapers(s1, p1, s2, p2){
-
-    if(isLocked(s1) || isLocked(s2)) return;
-
-    // make sure types match and papers from their session
-    if(s1.venue != s2.venue) return;
-    if(!(paperIsInSession(s1, p1) && paperIsInSession(s2, p2))) return;
-
-
-    console.log("Test: swapping papers " + p1.id + " and " + p2.id);
-    
-    for(var i = 0; i < s1.submissions.length; i++){
-	if(s1.submissions[i] == p1){
-	    s1.submissions[i] = p2;
-	    p2.session = s1.id;
-	}
-    }
-    for(var i = 0; i < s2.submissions.length; i++){
-	if(s2.submissions[i] == p2){
-	    s2.submissions[i] = p1;
-	    p1.session = s2.id;
-	}
-    }
-    
-    // associate papers with different sessions
-    if(!frontEndOnly){
-	db.swapPapers(s1.id, p1.id, s2.id, p2.id, userData.id);
-    }
-}
-
-function clearSession(s){
-    console.log("Test: removing papers from " + s.id);
-    s.submissions = []; 
-//    for(var p in s.submissions){
-// 	removePaperFromSession(s, s.submissions[p]);
-//     }
-}
-
-function removePaperFromSession(s, p){
-    console.log("Test: removing paper " + p.id + " from " + s.id);
-    // change it from the session
-    
-    // erase paper from list of submissions in session
-    var idx = s.submissions.indexOf(p); // Find the index
-    if(idx !=-1) s.submissions.splice(idx, 1); // Remove it if really found!
-    
-    return;
-}
-
-function addToUnscheduledPaper(p){
-    console.log("Test: adding paper " + p.id + " to unscheduledSubmissions list.");
-    unscheduledSubmissions[p.id] = p;
-    p.session = "null";
+    var td = { 's1id': s1.id,
+	       'p1id': p1.id,
+	       's2id': s2.id,
+	       'p2id': p2.id
+	     };
+    var tp = { 's1id': s1.id,
+	       'p1id': p2.id,
+	       's2id': s2.id,
+	       'p2id': p1.id
+	     };
+    var t = new TransactionData(userData.id,
+				'swapPapers',
+				td,
+				tp);
+    Transact.addTransaction(t);		
 }
 
 // Example:
 // unscheduling improving two-thumb text entry from Mobile keyword / text
 // unschedulePaper(allSessions['s254'], allSubmissions['pn1376']);
 function unschedulePaper(s, p){
-    if(isLocked(s) || !paperIsInSession(s,p)) return;
-
-    console.log("Test: unscheduling paper " + p.id + " from " + s.id);
-    
-    removePaperFromSession(s, p);
-    addToUnscheduledPaper(p);
-
-    if(!frontEndOnly){
-	db.unschedulePaper(s.id, p.id, userData.id);
-    }
-}
-
-// note: always add at start of session
-function insertPaperIntoSession(s, p){
-    console.log("Test: adding paper " + p.id + " to " + s.id);
-    s.submissions.unshift(p);
-
-    // set paper's session
-    p.session = s.id;
-    
-    return;
-}
-
-function removeFromUnscheduledPaper(p){
-    console.log("Test: removing paper " + p.id + " from unscheduledSubmissions list.");
-    delete unscheduledSubmissions[p.id];
+    var td = { 'sid': s.id,
+	       'pid': p.id
+	     };
+    var tp = { 'sid': s.id,
+	       'pid': p.id
+	     };
+    var t = new TransactionData(userData.id,
+				'unschedulePaper',
+				td,
+				tp);
+    Transact.addTransaction(t);		
 }
 
 // Example:
 // scheduling improving two-thumb text entry to Mobile keyword / text
 // schedulePaper(allSessions['s254'], allSubmissions['pn1376']);
 function schedulePaper(s, p){
-    if(isLocked(s) || !(p.id in unscheduledSubmissions)) return;
-
-    console.log("Test: scheduling paper " + p.id + " into " + s.id);
-    
-    insertPaperIntoSession(s, p);
-    removeFromUnscheduledPaper(p);
-
-    if(!frontEndOnly){
-	db.schedulePaper(s.id, p.id, userData.id);
-    }
+    var td = { 'sid': s.id,
+	       'pid': p.id
+	     };
+    var tp = { 'sid': s.id,
+	       'pid': p.id
+	     };
+    var t = new TransactionData(userData.id,
+				'schedulePaper',
+				td,
+				tp);
+    Transact.addTransaction(t);		
 }
-
-
 
 // Example: 
 // Moving mobile keyboard  paper into Learning (top row)
@@ -563,20 +832,19 @@ function schedulePaper(s, p){
 // movePaper(allSessions['s288'], allSubmissions['pn1376'], allSessions['s254']);
 // Note: always inserts at front
 function movePaper(s1, p1, s2){
-    if(isLocked(s1) || isLocked(s2)) return;
-    
-    // make sure types match and papers from their session
-    if(s1.venue != s2.venue) return;
-    if(!(paperIsInSession(s1, p1)))return;
-
-    console.log("Test: moving paper " + p1.id + " from " + s1.id + " to " + s2.id);
-    
-    removePaperFromSession(s1, p1);
-    insertPaperIntoSession(s2, p1);
-    
-    if(!frontEndOnly){
-	db.movePaper(s1.id, p1.id, s2.id, userData.id);
-    }
+    var td = { 's1id': s1.id,
+	       'p1id': p1.id,
+	       's2id': s2.id,
+	     };
+    var tp = { 's1id': s2.id,
+	       'p1id': p1.id,
+	       's2id': s1.id,
+	     };
+    var t = new TransactionData(userData.id,
+				'movePaper',
+				td,
+				tp);
+    Transact.addTransaction(t);		
 }
 
 // Example:
@@ -584,26 +852,19 @@ function movePaper(s1, p1, s2){
 // swapWithUnscheduledPaper(unscheduledSubmissions['pn1376'], allSessions['s254'], allSubmissions['pn1566']);
 // swapWithUnscheduledPaper(unscheduledSubmissions['pn1566'], allSessions['s254'], allSubmissions['pn1376']);
 function swapWithUnscheduledPaper(p1, s2, p2){
-    // assume p1 is unscheduled
-    if(isLocked(s2)) return;
-    if(p1.type != s2.venue) return;
-    if(!(paperIsInSession(s2,p2))) return;
-    
-    console.log("Test: swapping unscheduled paper " + p1.id + " with scheduled paper " + p2.id + " in " + s2.id);
-    
-    removeFromUnscheduledPaper(p1);
-    for(var i = 0; i < s2.submissions.length; i++){
-	if(s2.submissions[i] == p2){
-	    s2.submissions[i] = p1;
-	    p2.session = "null";
-	    p1.session = s2.id;
-	}
-    }
-    addToUnscheduledPaper(p2);
-    
-    if(!frontEndOnly){
-	db.swapWithUnscheduledPaper(p1.id, s2.id, p2.id, userData.id);
-    }
+    var td = { 'p1id': p1.id,
+	       's2id': s2.id,
+	       'p2id': p2.id
+	     };
+    var tp = { 'p1id': p2.id,
+	       's2id': s2.id,
+	       'p2id': p1.id
+	     };
+    var t = new TransactionData(userData.id,
+				'swapWithUnscheduledPaper',
+				td,
+				tp);
+    Transact.addTransaction(t);		
 }
 
 
@@ -717,114 +978,74 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
     // for catching initial corner case
     if(transactions.length == 0 && serverTransactions.length > 0){
 	consistent = false;
-	newTransactionIndices.push(transactions.length);
-	transactions = serverTransactions;
+	for(var i = 0; i < serverTransactions.length; i++){
+	    newTransactionIndices.push(transactions.length);
+	    //transactions.push(serverTransactions[i]);
+	    addServerTransaction(serverTransactions[i]);
+	}
     }else{
 	for(var i = 0; i < serverTransactions.length; i++){
 	    if(parseInt(serverTransactions[i]['id']) > 
 	       parseInt(transactions[transactions.length -1]['id'])){
 		consistent = false;
 		newTransactionIndices.push(transactions.length);
-		transactions.push(serverTransactions[i]);
+		addServerTransaction(serverTransactions[i]);
+//		transactions.push(serverTransactions[i]);
 	    }
 	}
     }
     
-    if(!consistent){
-	// changing the data to reflect what's different
-	for(var day in schedule){
-	    for(var time in schedule[day]){
-		for(var room in schedule[day][time]){
-		    if(!arraysEqual(keys(schedule[day][time][room]).sort(), 
-				    keys(serverSchedule[day][time][room]).sort())){
-			// update content of slot
-			// NOTE: only changing inner data on add to handle swaps correctly
-			clearSlot(day, time, room);
-			
-			for(var s in serverSchedule[day][time][room]){
-			    addSessionToSlot(allSessions[s], day, time, room);
-			}
-			// trigger the change here
-			$(document).trigger('slotChange', [day, time, room]);
-		    }else{
-			// check that papers are the same too
-			for(var s in schedule[day][time][room]){
-			    var subKeys = [];
-			    for(var sub in schedule[day][time][room][s]['submissions']){
-				subKeys.push(schedule[day][time][room][s]['submissions'][sub].id);
-			    }
-			    if(arraysEqual(subKeys, serverSchedule[day][time][room][s]['submissions'])){
-				// get rid of key where same
-				delete serverSchedule[day][time][room];			    
-			    }else{
-				console.log(serverSchedule[day][time][room][s]['submissions']);
-				console.log(subKeys);
-				// remove all papers from session
-				// again, not changing the paper's base data, we will do that when we add
-				clearSession(allSessions[s]);
-				
-				// re-insert papers based on new order
-				for(var i = serverSchedule[day][time][room][s]['submissions'].length - 1; i >= 0; i--){
-				    //				    console.log('--' + serverSchedule[day][time][room][s]['submissions'][i] + '--');
-				    //				    console.log(allSubmissions[serverSchedule[day][time][room][s]['submissions'][i]]);
-				    
-				    // TODO: change once this paper is handled by Michel
-				    //				    if(serverSchedule[day][time][room][s]['submissions'][i] != 'pn710' && 
-				    //				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn135' && 
-				    //				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn321' &&
-				    //				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn507' && 
-				    //				       serverSchedule[day][time][room][s]['submissions'][i] != 'pn104'  ){
-				    insertPaperIntoSession(allSessions[s], 
-							   allSubmissions[serverSchedule[day][time][room][s]['submissions'][i]]);
-				    //  }
-				}
-				$(document).trigger('sessionChange', [s, day, time, room]);
-			    }
-			}
-		    }
-		}
-	    }
-	}
+//     if(!consistent){
+// 	// changing the data to reflect what's different
+// 	for(var day in schedule){
+// 	    for(var time in schedule[day]){
+// 		for(var room in schedule[day][time]){
+// 		    if(!arraysEqual(keys(schedule[day][time][room]).sort(), 
+// 				    keys(serverSchedule[day][time][room]).sort())){
+// 			// trigger the change here
+// 			$(document).trigger('slotChange', [day, time, room]);
+// 		    }else{
+// 			// check that papers are the same too
+// 			for(var s in schedule[day][time][room]){
+// 			    var subKeys = [];
+// 			    for(var sub in schedule[day][time][room][s]['submissions']){
+// 				subKeys.push(schedule[day][time][room][s]['submissions'][sub].id);
+// 			    }
+// 			    if(arraysEqual(subKeys, serverSchedule[day][time][room][s]['submissions'])){
+// 				// get rid of key where same
+// 				delete serverSchedule[day][time][room];			    
+// 			    }else{
+// 				$(document).trigger('sessionChange', [s, day, time, room]);
+// 			    }
+// 			}
+// 		    }
+// 		}
+// 	    }
+// 	}
 	
-	// Check for changes to locks
-	for(var day in scheduleSlots){
-	    for(var time in scheduleSlots[day]){
-		for(var room in scheduleSlots[day][time]){
-		    if(scheduleSlots[day][time][room]['locked'] !=
-		       serverSlots[day][time][room]['locked']){
-			toggleSlotLock(day, time, room);
-			$(document).trigger('lockChange', [day, time, room]);
-		}
-		}
-	    }
-	}
+// 	// Check for changes to locks
+// 	for(var day in scheduleSlots){
+// 	    for(var time in scheduleSlots[day]){
+// 		for(var room in scheduleSlots[day][time]){
+// 		    if(scheduleSlots[day][time][room]['locked'] !=
+// 		       serverSlots[day][time][room]['locked']){
+// 			$(document).trigger('lockChange', [day, time, room]);
+// 		    }
+// 		}
+// 	    }
+// 	}
 	
-	if(!arraysEqual(keys(unscheduled).sort(),  keys(serverUnscheduled).sort())){
-	    // make change to unscheduled data
-	    for(var s in unscheduled){
-		removeFromUnscheduled(allSessions[s]);
-	    }
-	    for(var s in serverUnscheduled){
-		addToUnscheduled(allSessions[s]);
-	    }
-	    
-	    // trigger a change in unscheduled data
-	    $(document).trigger('unscheduledChange');
-	}
+// 	if(!arraysEqual(keys(unscheduled).sort(),  keys(serverUnscheduled).sort())){
+// 	    // trigger a change in unscheduled data
+// 	    $(document).trigger('unscheduledChange');
+// 	}
 	
-	///// check if unscheduled papers match
-	if(!arraysEqual(keys(unscheduledSubmissions).sort(),  keys(serverUnscheduledSubmissions).sort())){
-	    // make change to unscheduledSubmissions data
-	    for(var p in unscheduledSubmissions){
-		removeFromUnscheduledPaper(allSubmissions[p]);
-	    }
-	    for(var p in serverUnscheduledSubmissions){
-		addToUnscheduledPaper(allSubmissions[p]);
-	    }
-	    // trigger a change in unscheduled submissions data
-	    $(document).trigger('unscheduledSubmissionsChange');
-	}
-    }
+// 	///// check if unscheduled papers match
+// 	if(!arraysEqual(keys(unscheduledSubmissions).sort(),  keys(serverUnscheduledSubmissions).sort())){
+// 	    // trigger a change in unscheduled submissions data
+// 	    $(document).trigger('unscheduledSubmissionsChange');
+// 	}
+//     }
     
     if(!consistent){
 	// all changes are in the transactions data itself,
