@@ -93,12 +93,14 @@ var DataOps = function() {
 	    break;
 	case 'schedulePaper':
 	    schedulePaper(allSessions[t.data.sid],
-			  allSubmissions[t.data.pid]);
+			  allSubmissions[t.data.pid],
+			  t.data.pos);
 	    break;
 	case 'movePaper':
 	    movePaper(allSessions[t.data.s1id],
 		      allSubmissions[t.data.p1id],
-		      allSessions[t.data.s2id]);
+		      allSessions[t.data.s2id],
+		      t.data.pos);
 	    break;
 	case 'swapWithUnscheduledPaper':
 	    swapWithUnscheduledPaper(allSubmissions[t.data.p1id],
@@ -409,10 +411,15 @@ var DataOps = function() {
     }
     
     // note: always add at start of session
-    function insertPaperIntoSession(s, p){
-	console.log("Test: adding paper " + p.id + " to " + s.id);
-	s.submissions.unshift(p);
-	
+    function insertPaperIntoSession(s, p, pos){
+	console.log("Test: adding paper " + p.id + " to " + s.id + " at position " + pos);
+	if(pos <= 0){
+	    s.submissions.unshift(p);
+	}else if(pos >= s.submissions.length){
+	    s.submissions.push(p);
+	}else { // insert in middle
+	    s.submissions.splice(pos, 0, p);
+	}
 	// set paper's session
 	p.session = s.id;
 	
@@ -427,12 +434,12 @@ var DataOps = function() {
     // Example:
     // scheduling improving two-thumb text entry to Mobile keyword / text
     // schedulePaper(allSessions['s254'], allSubmissions['pn1376']);
-    function schedulePaper(s, p){
+    function schedulePaper(s, p, pos){
 	if(isLocked(s) || !(p.id in unscheduledSubmissions)) return;
 	
 	console.log("Test: scheduling paper " + p.id + " into " + s.id);
 	
-	insertPaperIntoSession(s, p);
+	insertPaperIntoSession(s, p, pos);
 	removeFromUnscheduledPaper(p);
     }
     
@@ -441,7 +448,7 @@ var DataOps = function() {
     // movePaper(allSessions['s254'], allSubmissions['pn1376'], allSessions['s288']);
     // movePaper(allSessions['s288'], allSubmissions['pn1376'], allSessions['s254']);
     // Note: always inserts at front
-    function movePaper(s1, p1, s2){
+    function movePaper(s1, p1, s2, pos){
 	if(isLocked(s1) || isLocked(s2)) return;
 	
 	// make sure types match and papers from their session
@@ -451,7 +458,7 @@ var DataOps = function() {
 	console.log("Test: moving paper " + p1.id + " from " + s1.id + " to " + s2.id);
 	
 	removePaperFromSession(s1, p1);
-	insertPaperIntoSession(s2, p1);
+	insertPaperIntoSession(s2, p1, pos);
     }
 
     // Example:
@@ -813,15 +820,20 @@ function swapPapers(s1, p1, s2, p2){
     Transact.addTransaction(t);		
 }
 
+function getPaperPosition(s, p){
+    return s.submissions.indexOf(p);
+}
+
 // Example:
 // unscheduling improving two-thumb text entry from Mobile keyword / text
 // unschedulePaper(allSessions['s254'], allSubmissions['pn1376']);
 function unschedulePaper(s, p){
     var td = { 'sid': s.id,
-	       'pid': p.id
+	       'pid': p.id,
 	     };
     var tp = { 'sid': s.id,
-	       'pid': p.id
+	       'pid': p.id,
+	       'pos': getPaperPosition(s, p)
 	     };
     var t = new TransactionData(userData.id,
 				'unschedulePaper',
@@ -836,7 +848,8 @@ function unschedulePaper(s, p){
 // schedulePaper(allSessions['s254'], allSubmissions['pn1376']);
 function schedulePaper(s, p){
     var td = { 'sid': s.id,
-	       'pid': p.id
+	       'pid': p.id,
+	       'pos': s.submissions.length
 	     };
     var tp = { 'sid': s.id,
 	       'pid': p.id
@@ -858,10 +871,12 @@ function movePaper(s1, p1, s2){
     var td = { 's1id': s1.id,
 	       'p1id': p1.id,
 	       's2id': s2.id,
+	       'pos' : s2.submissions.length
 	     };
     var tp = { 's1id': s2.id,
 	       'p1id': p1.id,
 	       's2id': s1.id,
+	       'pos' : getPaperPosition(s1, p1)
 	     };
     var t = new TransactionData(userData.id,
 				'movePaper',
@@ -878,7 +893,7 @@ function movePaper(s1, p1, s2){
 function swapWithUnscheduledPaper(p1, s2, p2){
     var td = { 'p1id': p1.id,
 	       's2id': s2.id,
-	       'p2id': p2.id
+	       'p2id': p2.id,
 	     };
     var tp = { 'p1id': p2.id,
 	       's2id': s2.id,
