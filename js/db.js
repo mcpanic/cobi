@@ -1,8 +1,9 @@
-function TransactionData(uid, type, data, previous){
+function TransactionData(uid, type, data, previousType, previous){
     this.id = null;
     this.uid = uid;
     this.localHash = $.md5($.now());
     this.type = type;
+    this.previousType = previousType;
     this.data = data;
     this.previous = previous;
 }

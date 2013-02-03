@@ -599,6 +599,7 @@ function lockSlot(date, time, room){
     var t = new TransactionData(userData.id,
 				'lock',
 				td,
+				'unlock',
 				tp);
     Transact.addTransaction(t);		
 }
@@ -615,6 +616,7 @@ function unlockSlot(date, time, room){
     var t = new TransactionData(userData.id,
 				'unlock',
 				td,
+				'lock',
 				tp);
     Transact.addTransaction(t);		
 }
@@ -632,6 +634,7 @@ function unscheduleSession(s){
     var t = new TransactionData(userData.id,
 				'unschedule',
 				td,
+				'schedule',
 				tp);
     Transact.addTransaction(t);		
 }
@@ -651,6 +654,7 @@ function scheduleSession(s, tdate, ttime, troom){
 	var t = new TransactionData(userData.id,
 				    'schedule',
 				    td,
+				    'unschedule', 
 				    tp);
 	Transact.addTransaction(t);		
     }else{
@@ -674,6 +678,7 @@ function scheduleSession(s, tdate, ttime, troom){
 	var t = new TransactionData(userData.id,
 				    'move',
 				    td,
+				    'move', 
 				    tp);
 	Transact.addTransaction(t);		
     }
@@ -703,6 +708,7 @@ function swapSessions(s1, s2){
     var t = new TransactionData(userData.id,
 				'swap',
 				td,
+				'swap',
 				tp);
     Transact.addTransaction(t);		
 }
@@ -725,6 +731,7 @@ function swapWithUnscheduledSession(s1, s2){
     var t = new TransactionData(userData.id,
 				'swapWithUnscheduled',
 				td,
+				'swapWithUnscheduled',
 				tp);
     Transact.addTransaction(t);		
 }
@@ -772,6 +779,7 @@ function reorderPapers(s, newPaperOrder, previousPaperOrder){
     var t = new TransactionData(userData.id,
 				'reorderPapers',
 				td,
+				'reorderPapers',
 				tp);
     Transact.addTransaction(t);		
 }
@@ -794,6 +802,7 @@ function swapPapers(s1, p1, s2, p2){
     var t = new TransactionData(userData.id,
 				'swapPapers',
 				td,
+				'swapPapers',
 				tp);
     Transact.addTransaction(t);		
 }
@@ -811,6 +820,7 @@ function unschedulePaper(s, p){
     var t = new TransactionData(userData.id,
 				'unschedulePaper',
 				td,
+				'schedulePaper',
 				tp);
     Transact.addTransaction(t);		
 }
@@ -828,6 +838,7 @@ function schedulePaper(s, p){
     var t = new TransactionData(userData.id,
 				'schedulePaper',
 				td,
+				'unschedulePaper',
 				tp);
     Transact.addTransaction(t);		
 }
@@ -849,6 +860,7 @@ function movePaper(s1, p1, s2){
     var t = new TransactionData(userData.id,
 				'movePaper',
 				td,
+				'movePaper',
 				tp);
     Transact.addTransaction(t);		
 }
@@ -869,6 +881,7 @@ function swapWithUnscheduledPaper(p1, s2, p2){
     var t = new TransactionData(userData.id,
 				'swapWithUnscheduledPaper',
 				td,
+				'swapWithUnscheduledPaper',
 				tp);
     Transact.addTransaction(t);		
 }
