@@ -24,14 +24,48 @@ var Sidebar = function() {
           $(".sidebar-fixed").on("click", ".toggle-options", clickHeaderHandler);
      }
 
-     function addHistoryHandler(event, history){
+     function addHistoryHandler(event, t){
           console.log("HISTORY", history);
-
           // hack that fixes the bug where when history is open with 0 items, prepend doesn't work because height is automatically set to 0px.
           // so force height to be auto when collapsed
           if ($("#list-history").hasClass("in"))
                $("#list-history").css("height", "auto");
           
+          if (isTransactionSessionLevel(t))
+               displaySessionHistory(t);
+          else 
+               displayPaperHistory(t);
+
+          var count = $("#history-count").html();
+          $("#history-count").html(parseInt(count)+1);
+     }
+
+     function _getHistoryLinkByID(id){
+          return $("<a/>").attr("href", "#").attr("data-session-id", id).addClass("history-link").html(allSessions[id].title);
+     }
+
+     function _getHistoryLinkByDateTimeRoom(ldate, ltime, lroom){
+          return $("<a/>").attr("href", "#").attr("data-slot-date", ldate).attr("data-slot-time", ltime).attr("data-slot-room", lroom)
+               .addClass("history-link").html(ldate + ", " + ltime + ", " + ldate);
+     }
+
+
+     function displaySessionHistory(t){
+
+          var $link = _getHistoryLinkByID(t.data.id);
+          var $li = $("<li/>").append(user + " ").append($("<strong/>").wrapInner(typeDisplayList())).append($link);
+          console.log($link, $li);
+
+          $("#list-history").prepend($li);
+
+          if (t.type.indexOf("swap") !== -1){
+               var $link = _getHistoryLinkByID(t.data.s1id);
+               var $li = $("<li/>").append(user + " ").append($("<strong/>").wrapInner(typeDisplayList())).append($link);    
+
+               var $link = _getHistoryLinkByID(t.data.s2id);
+               var $li = $("<li/>").append(user + " ").append($("<strong/>").wrapInner(typeDisplayList())).append($link);    
+
+          }
           if (typeof history.id !== "undefined" && 
                (history.type == "lock" || history.type == "unlock" || history.type == "schedule" || history.type == "move" || history.type == "unschedule")){
 
@@ -50,13 +84,15 @@ var Sidebar = function() {
                (history.type == "swap" || history.type == "swap with unscheduled")){
 
                $("#list-history").prepend("<li>" + history.user + " <strong>" + history.type + "</strong>: "  
-               + "<a href='#' class='history-link' data-session-id='" + history.sid + "'>" + allSessions[history.sid].title 
-               + "</a> and <a href='#' class='history-link' data-session-id='" + history.did + "'>" + allSessions[history.did].title + "</a></li>");
+               + "<a href='#' class='history-link' data-session-id='" + history.s1id + "'>" + allSessions[history.s1id].title 
+               + "</a> and <a href='#' class='history-link' data-session-id='" + history.s2id + "'>" + allSessions[history.s2id].title + "</a></li>");
           } else {
                console.log("impossible");
           }
-          var count = $("#history-count").html();
-          $("#history-count").html(parseInt(count)+1);
+     }
+
+     function displayPaperHistory(t){
+
      }
 
      function clickHeaderHandler(){

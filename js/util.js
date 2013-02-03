@@ -1,3 +1,16 @@
+
+// detect if the current transaction is mine or not
+function isTransactionMyChange(t) {
+    return t.id == null;
+}
+
+
+// transaction type: session or paper level?
+function isTransactionSessionLevel(t){
+  return t.type.indexOf("Paper") === -1;
+}
+
+
 function getRandomColor(){
 	return '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
 }

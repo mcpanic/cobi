@@ -10,22 +10,7 @@ var constraints_list = [
 		"label": "simultaneous sessions for a persona",
 		"color": "#ff9896",
 		"type": "personaInTwoSessions"
-	}/*,
-	{
-		"id": "3",
-		"label": "constraint 3",
-		"color": "#F1F0FF"
-	},
-	{
-		"id": "4",
-		"label": "constraint 4",
-		"color": "#8C489F"  
-	},
-	{
-		"id": "5",
-		"label": "constraint 5",
-		"color": "#008888"
-	}	*/			
+	}	
 ];
 
 var communities_list = [
@@ -40,6 +25,22 @@ var communities_list = [
 {"label": "sustainability", "color": "#9edae5"},
 {"label": "HCI4D", "color": "#9edae5"}
 ];
+
+var typeDisplayList = {
+	lock: "lock",
+	unlock: "unlock",
+	unschedule: "unschedule",
+	schedule: "schedule",
+	swap: "swap",
+	move: "move",
+	swapWithUnscheduled, "swap with unscheduled",
+	reorderPapers: "reorder papers",
+	unschedulePaper: "unschedule paper",
+	schedulePaper: "schedule paper",
+	swapPapers: "swap papers",
+	movePaper: "move paper",
+	swapWithUnscheduledPaper: "swap with unscheduled paper"
+}
 
 
 /*

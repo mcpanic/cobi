@@ -153,12 +153,12 @@ var ViewMode = function() {
         unschedulePaper(allSessions[id], allSubmissions[pid]);
 
         // the frontend unschedule paper
-        PaperVisualOps.unschedule(allSubmissions[pid]);
+        // PaperVisualOps.unschedule(allSubmissions[pid]);
 
-        Statusbar.display("Paper unschedule successful");
-        $(document).trigger("addHistory", [{user: "", type: "paper-unschedule", id: id, pid: pid}]);
+        // Statusbar.display("Paper unschedule successful");
+        // $(document).trigger("addHistory", [{user: "", type: "paper-unschedule", id: id, pid: pid}]);
 
-        postMove(); 
+        // postMove(); 
     }
 
     // When move is request, forward this request to MoveMode.
