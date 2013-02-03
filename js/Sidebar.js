@@ -19,9 +19,31 @@ var Sidebar = function() {
           $("#list-communities").on("click", "li a", clickCommunitiesHandler);
           $("#list-communities").on("click", ".myCheckbox", clickCheckboxCommunitiesHandler);          
           $("#list-history").on("click", ".history-link", clickHistoryHandler);
-          $(document).on("addHistory", addHistoryHandler);
           $(".sidebar-fixed").on("click", ".toggle", clickToggle);
           $(".sidebar-fixed").on("click", ".toggle-options", clickHeaderHandler);
+
+          $(document).on("addHistory", addHistoryHandler);
+          $(document).on("updateHistoryAccepted", updateHistoryHandler);
+          $(document).on("updateHistoryFailed", updateHistoryHandler);
+     }
+
+     function updateHistoryHandler(event, t){
+          // find the matching localHash
+          var $item;
+          $("#list-history li").each(function(index, item){
+               console.log($(item).attr("data-local-hash"), t.localHash);
+               if (typeof $(item).attr("data-local-hash") !== "undefined" && $(item).attr("data-local-hash") == t.localHash){
+                    $item = $(item);
+               }
+          });
+          
+          if (typeof $item !== "undefined"){
+               console.log($item, t, $item.find(".status"));          
+               if (event.type == "updateHistoryAccepted")
+                    $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-ok");
+               else if (event.type == "updateHistoryFailed")
+                    $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-remove");
+          }
      }
 
      function addHistoryHandler(event, t){
@@ -42,10 +64,10 @@ var Sidebar = function() {
 
      function displaySessionHistory(t){
           var $link, $li;
-
+          var $statusLabel = $("<span/>").addClass("status icon-exclamation-sign");
           // TODO: change with actual user management logic to display username
           var user = isTransactionMyChange(t) ? "" : "Anon";
-          $li = $("<li/>").append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
+          $li = $("<li/>").attr("data-local-hash", t.localHash).append($statusLabel).append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
           
           if (t.type.indexOf("swap") !== -1){
                $link = getCellLinkByID(t.data.s1id);

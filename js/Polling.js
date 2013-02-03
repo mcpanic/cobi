@@ -8,12 +8,26 @@ var Polling = function() {
 
     // Add event handlers to each sidebar item
     function bindEvents(){
-        //$(document).on("serverScheduleChange", scheduleChangeHandler);
         $(document).on("transactionUpdate", transactionUpdateHandler);
+        $(document).on("transactionAccepted", transactionAcceptedHandler);
+        $(document).on("transactionFailed", transactionFailedHandler);
     }
 
+    function transactionAcceptedHandler(event, t){
+        console.log(event.type, t);
+        $(document).trigger("updateStatusAccepted", [t]); 
+        $(document).trigger("updateHistoryAccepted", [t]); 
+    }
+
+    function transactionFailedHandler(event, t){
+        console.log(event.type, t);
+        $(document).trigger("updateStatusFailed", [t]); 
+        $(document).trigger("updateHistoryFialed", [t]); 
+    }
+    
+
     function transactionUpdateHandler(event, t){
-        console.log("transaction received", t, t.data);
+        console.log(event.type, t);
         //type: event type, uid: user who made the change, data: object
         var isMyChange = isTransactionMyChange(t);
 
@@ -76,21 +90,10 @@ var Polling = function() {
             return;
 
         VisualOps.lock($cell);
-        if (isMyChange){
-            $(".selected").removeClass("selected").popover("hide");
-            postPollingMove();
-            // Statusbar.display("Lock successful");
-        } else {
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-                // Statusbar.display("Polling: Lock successful");
-        }
 
-        // if(id in allSessions){
-        //     $(document).trigger("addHistory", [{user: user, level: "session", type: "lock", id: id}]);
-        // } else {       
-        //     $(document).trigger("addHistory", [{user: user, level: "session", type: "lock", date: $cell.attr("data-date"), time: $cell.attr("data-time"), room: $cell.attr("data-room")}]);
-        // }
+        postPollingMove();  
+        if (isMyChange)
+            $(".selected").removeClass("selected").popover("hide");
     }
 
     function handlePollingUnlock(t, isMyChange){
@@ -105,21 +108,10 @@ var Polling = function() {
             return;
 
         VisualOps.unlock($cell);
-        if (isMyChange){
-            $(".selected").removeClass("selected").popover("hide");
-            postPollingMove();
-            // Statusbar.display("Unlock successful");
-        } else {
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-                // Statusbar.display("Polling: Unlock successful");
-        }
 
-        // if(id in allSessions){
-        //     $(document).trigger("addHistory", [{user: user, level: "session", type: "unlock", id: id}]);
-        // } else {       
-        //     $(document).trigger("addHistory", [{user: user, level: "session", type: "unlock", date: $cell.attr("data-date"), time: $cell.attr("data-time"), room: $cell.attr("data-room")}]);
-        // }
+        postPollingMove();  
+        if (isMyChange)
+            $(".selected").removeClass("selected").popover("hide");
     }
 
     function handlePollingUnschedule(t, isMyChange){
@@ -129,18 +121,10 @@ var Polling = function() {
             return;
 
         VisualOps.unschedule(allSessions[id], t.data.date, t.data.time, t.data.room);
-        if (isMyChange){
-            $(".selected").removeClass("selected");
-            postPollingMove();
-            // Statusbar.display("Unschedule successful");
-        } else {
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-            //     Statusbar.display("Polling: Unschedule successful");
-        }
 
-        // $(document).trigger("addHistory", [{user: user, level: "session", type: "unschedule", id: id}]);
-        // $cell.effect("highlight", {color: "yellow"}, 10000);
+        postPollingMove();  
+        if (isMyChange)
+            $(".selected").removeClass("selected");
     }
 
     function handlePollingSchedule(t, isMyChange){
@@ -151,17 +135,10 @@ var Polling = function() {
 
         $emptySlot = findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room);
         VisualOps.scheduleUnscheduled(allSessions[id], $emptySlot);
-        if (isMyChange){
-            MoveMode.postMove();
-            // Statusbar.display("Schedule successful");
-        } else{
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-            //     Statusbar.display("Polling: Scheduling successful");    
-        }            
 
-        // $(document).trigger("addHistory", [{user: user, level: "session", type: "schedule", id: id}]);
-        // $cell.effect("highlight", {color: "yellow"}, 10000);
+        postPollingMove();  
+        if (isMyChange)
+            MoveMode.destroy();           
     }
 
     function handlePollingSwap(t, isMyChange){
@@ -175,19 +152,10 @@ var Polling = function() {
          return;
 
         VisualOps.swap(allSessions[s1id], allSessions[s2id]);
-        if (isMyChange){
-            MoveMode.postMove();
-            // Statusbar.display("Swap successful");
-        } else {
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-            //     Statusbar.display("Polling: Swap successful"); 
-        }
 
-        // $(document).trigger("addHistory", [{user: user, level: "session", type: "swap", s1id: s1id, s2id: s2id}]);
-
-        // $src_cell.effect("highlight", {color: "yellow"}, 10000);
-        // $dst_cell.effect("highlight", {color: "yellow"}, 10000);
+        postPollingMove();  
+        if (isMyChange)
+            MoveMode.destroy();
     }
 
     function handlePollingMove(t, isMyChange){
@@ -198,17 +166,10 @@ var Polling = function() {
 
         $emptySlot = findCellByDateTimeRoom(t.data.tdate, t.data.ttime, t.data.troom);
         VisualOps.swapWithEmpty(allSessions[id], $emptySlot, t.data.sdate, t.data.stime, t.data.sroom);
-        if (isMyChange){
-            MoveMode.postMove();
-            // Statusbar.display("Move successful");
-        } else {
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-            //     Statusbar.display("Polling: Move successful"); 
-        }
 
-        // $(document).trigger("addHistory", [{user: user, level: "session", type: "move", id: id}]);
-        // $cell.effect("highlight", {color: "yellow"}, 10000);
+        postPollingMove();  
+        if (isMyChange)
+            MoveMode.destroy();
     }
 
     function handlePollingSwapWithUnscheduled(t, isMyChange){
@@ -216,16 +177,10 @@ var Polling = function() {
         var unscheduledId = t.data.s1id;
 
         VisualOps.swapWithUnscheduled(allSessions[unscheduledId], allSessions[scheduledId]);
-        if (isMyChange){
-            MoveMode.postMove();
-            // Statusbar.display("Swap with Unscheduled successful");
-        } else {
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-            //     Statusbar.display("Polling: Swap with Unscheduled successful"); 
-        }
 
-        // $(document).trigger("addHistory", [{user: user, level: "session", type: "swap with unscheduled", s1id: unscheduledId, s2id: scheduledId}]);
+        postPollingMove();  
+        if (isMyChange)
+            MoveMode.destroy();
     }
 
 /******************************
@@ -234,88 +189,49 @@ var Polling = function() {
 
     function handlePollingReorderPapers(t, isMyChange){
         // no frontend work is necessary because it's already updated.
-
-        if (isMyChange){
-            postPollingMove();
-            // Statusbar.display("Paper reorder successful");
-        } else {
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-            //     Statusbar.display("Polling: Paper reorder successful"); 
-        }
-         
+        postPollingMove();            
     }
 
     function handlePollingUnschedulePaper(t, isMyChange){
         PaperVisualOps.unschedule(allSubmissions[t.data.pid]);
-
-        if (isMyChange){
-            postPollingMove();
-            // Statusbar.display("Paper unschedule successful");
-        } else {
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-            //     Statusbar.display("Polling: Paper unschedule successful"); 
-        }
-        // $(document).trigger("addHistory", [{user: user, level: "paper", type: "paper unschedule", sid: t.data.sid, pid: t.data.pid}]);                
+        postPollingMove();            
     }
 
     function handlePollingSchedulePaper(t, isMyChange){
         PaperVisualOps.scheduleUnscheduled(allSubmissions[t.data.pid]);
-
-        if (isMyChange){
-            MoveMode.postMove();
-            // Statusbar.display("Paper schedule successful");
-        } else {
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-            //     Statusbar.display("Polling: Paper schedule successful"); 
-        }
-        // $(document).trigger("addHistory", [{user: user, level: "paper", type: "paper schedule", sid: t.data.sid, pid: t.data.pid}]);                
+        setTimeout(function (){
+            postPollingMove();  
+            if (isMyChange)
+                MoveMode.destroy();  
+        }, 3000);                   
     }
 
     function handlePollingSwapPaper(t, isMyChange){
         PaperVisualOps.swap(allSubmissions[t.data.p1id], allSubmissions[t.data.p2id]);  
- 
-        if (isMyChange){
-            MoveMode.postMove();
-            // Statusbar.display("Paper swap successful");
-        } else {
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-            //     Statusbar.display("Polling: Paper swap successful"); 
-        }
-        // $(document).trigger("addHistory", [{user: user, level: "paper", type: "paper swap", s1id: t.data.s1id, p1id: t.data.p1id, s2id: t.data.s2id, p2id: t.data.p2id}]);    
+        setTimeout(function (){
+            postPollingMove();  
+            if (isMyChange)
+                MoveMode.destroy();
+        }, 3000);                
     }
 
     function handlePollingMovePaper(t, isMyChange){
-        PaperVisualOps.swapWithEmpty(allSubmissions[t.data.p1id]);
-
-        if (isMyChange){
-            MoveMode.postMove();
-            // Statusbar.display("Paper move successful");
-        } else {
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-            //     Statusbar.display("Polling: Paper move successful"); 
-        }
-        // $(document).trigger("addHistory", [{user: user, level: "paper", type: "paper move", s1id: t.data.s1id, p1id: t.data.p1id, s2id: t.data.s2id}]);       
+        PaperVisualOps.swapWithEmpty(allSubmissions[t.data.p1id]); 
+        setTimeout(function (){
+            postPollingMove();  
+            if (isMyChange)
+                MoveMode.destroy();
+        }, 3000);
     }
 
     function handlePollingSwapWithUnscheduledPaper(t, isMyChange){
-        PaperVisualOps.swapWithUnscheduled(allSubmissions[t.data.p1id], allSubmissions[t.data.p2id]);
-
-        if (isMyChange){
-            MoveMode.postMove();
-            // Statusbar.display("Paper swap with unscheduled successful");
-        } else {
-            postPollingMove();   
-            // if (!MoveMode.isOn)
-            //     Statusbar.display("Polling: Paper swap with unscheduled successful"); 
-        }
-        // $(document).trigger("addHistory", [{user: user, level: "paper", type: "paper swap with unscheduled", p1id: t.data.p1id, s2id: t.data.s2id, p2id: t.data.p2id}]);    
+        PaperVisualOps.swapWithUnscheduled(allSubmissions[t.data.p1id], allSubmissions[t.data.p2id]); 
+        setTimeout(function (){
+            postPollingMove();  
+            if (isMyChange)
+                MoveMode.destroy();
+        }, 3000);
     }
-
 
     return {
         initialize: initialize

@@ -10,6 +10,7 @@ var MoveMode = function() {
         type = moveType;
         paperId = pid;
         ViewMode.destroy();
+        $(".main").addClass("move-mode");
         clearConflictDisplay();
         bindEvents();
         runPropose();
@@ -235,18 +236,13 @@ var MoveMode = function() {
             swapValues = tempArray.slotValue.concat(tempArray.swapValue);
             //console.log(swapValues);
         } else if (type === "unscheduled") {
-            //console.log("unscheduled", id);
             var tempArray = proposeSlotAndSwap(allSessions[id]);
             swapValues = tempArray.slotValue.concat(tempArray.swapValue);
-            //swapValues = proposeSlot(allSessions[id]);
         } else if (type === "empty") {
-            // HQ: trying allowing a schedules session to move there
-            //            swapValues = proposeUnscheduledSessionForSlot($session.data("date"), $session.data("time"), $session.data("room"));
             var tempArray = proposeSessionForSlot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"));
             swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);
         } else if (type === "paper-scheduled") {
             var tempArray = proposePaperSessionAndSwap(allSubmissions[paperId]);
-            console.log(allSubmissions[paperId], tempArray);
             swapValues = tempArray.sessionValue.concat(tempArray.swapValue);
         } else if (type === "paper-unscheduled") {
             var tempArray = proposePaperSessionAndSwap(allSubmissions[paperId]);
@@ -254,7 +250,6 @@ var MoveMode = function() {
         } else if (type === "paper-empty") {
             var tempArray = proposePaperForSession(allSessions[id]);
             swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);
-            console.log(allSubmissions[paperId], tempArray);
         } else {
             console.log("ERROR: type unknown");
             return;
@@ -270,9 +265,6 @@ var MoveMode = function() {
             }
         });
 
-        //console.log(JSON.stringify(swapValues));
-        //var count = Math.min(swapValues.length, 5);
-        // var swapContent = "";
         var $cell = null;
         for(var i = 0; i < swapValues.length; i++){    
             //console.log("SWAP", swapValues[i]);   
@@ -291,12 +283,7 @@ var MoveMode = function() {
                 if (typeof submission !== "undefined") {                    
                         $("#"+submission).attr("data-proposed-swap-paper", "true");
                         console.log("runPropose: unscheduled");   
-                }
-                // swapContent += "<li data-rank-order='" + i + "' data-date='"+swapValues[i].target.date+"' data-time='"+swapValues[i].target.time+"' data-room='"+swapValues[i].target.room+"'>" 
-                // + "<a href='#' class='swap-preview-link'>[preview]</a> "
-                // + "adding " + (-1*swapValues[i].value)  
-                // + ": <a href='#' class='swap-review-link'>" + displaySlotTitle(swapValues[i].target) + "</a>" 
-                // + "</li>";    
+                }   
             
             // non-empty session candidate
             } else {
@@ -315,16 +302,9 @@ var MoveMode = function() {
                     //     console.log("runPropose: empty");
                     // else 
                     //     console.log("runPropose: scheduled");
-                    $cell.attr("data-proposed-swap-paper", curList);                         
-                             
+                    $cell.attr("data-proposed-swap-paper", curList);                                       
                 }
-                // swapContent += "<li data-session-id='" + swapValues[i].target.session + "' data-rank-order='" + i + "'>" //+ swapValues[i] 
-                // + "<a href='#' class='swap-preview-link'>[preview]</a> "
-                // + "resolving " + swapValues[i].value  
-                // + ": <a href='#' class='swap-review-link'>" + displaySlotTitle(swapValues[i].target) + "</a>" 
-                // + "</li>";
             }
-
 
             if (i<5)    // display recommended
                 $cell.addClass("recommended");
@@ -340,60 +320,10 @@ var MoveMode = function() {
         var alert_html = "";
         alert_html = "<strong>Schedule change in progress</strong>. Click any session to schedule. Recommended sessions in <span class='palette'>&nbsp;</span> minimize conflicts. " 
          + " <button class='btn btn-mini move-cancel-button' type='button'>Cancel Move</button>";
-//          + "<div class='row'>";
-/*
-          if (id === -1)
-               alert_html += "<div class='span3 src-display' data-date='"+$session.data("date")+"' data-time='"+$session.data("time")+"' data-room='"+$session.data("room")+"'>" 
-          else
-               alert_html += "<div class='span3 src-display' data-session-id='" + id + "'>";
-*/
-          //alert_html += "selected session:<br> <a href='#' class='swap-review-link'>" + displaySessionTitle($session) + "</a></div>"
-          //          + "<div class='span6'>" + swapContent + "</div>"
-          //          + "</div></div>";
         
         Statusbar.display(alert_html);
         $("#statusbar .palette").css("background-color", "#fd8d3c");
-/*
-        // Now attach popovers for preview
-          $("#statusbar .swap-preview-link").popover({
-               html:true,
-               placement: "bottom",
-               trigger: "click",
-               title:function(){
-                    return "Preview swap results";
-               },
-               content:function(){
-                    var rank = $(this).parent().data("rank-order");
-                    return getPreviewSwap(swapValues[rank]);
-               }
-          });
-*/
     }
-
-
-
-/*
-     $("#alert").on("click", ".swap-preview-link", function(){
-          return false;
-     });
-*/
-
-/*
-     $("#alert").on("click", ".swap-review-link", function(){
-          var id = $(this).parent().data("session-id");
-          $(this).toggleClass("view-option-active");
-          console.log(id, $(this).parent().data("date"));     
-          var cell = null;
-          if (typeof id === "undefined")
-               cell = findCellByDateTimeRoom($(this).parent().data("date"), $(this).parent().data("time"), $(this).parent().data("room"));
-          else
-               cell = findCellByID(id);
-
-          $(cell).toggleClass("highlight").popover("toggle");
-          return false;
-     });
-*/
-
 
 /******************************
  * Session level operations
@@ -406,11 +336,6 @@ var MoveMode = function() {
 
         // the backend swap
         swapSessions(allSessions[src_id], allSessions[dst_id]);            
-        // the frontend swap
-        // VisualOps.swap(allSessions[src_id], allSessions[dst_id]);  
-        // $(document).trigger("addHistory", [{user: "", type: "swap", sid: src_id, did: dst_id}]);
-        // postMove();
-        // Statusbar.display("Swap successful");
     });
 
     $("body").on("click", ".popover #swap-with-unscheduled-button", function(){  
@@ -428,11 +353,6 @@ var MoveMode = function() {
 
         // the backend swap with unscheduled
         swapWithUnscheduledSession(allSessions[unscheduledId], allSessions[scheduledId]);
-        // the frontend swap with unscheduled
-        // VisualOps.swapWithUnscheduled(allSessions[unscheduledId], allSessions[scheduledId]);
-        // $(document).trigger("addHistory", [{user: "", type: "swap with unscheduled", sid: unscheduledId, did: scheduledId}]);
-        // postMove();
-        // Statusbar.display("Swapping with a unscheduled session successful");
     });
 
     $("body").on("click", ".popover #move-button", function(){  
@@ -459,12 +379,6 @@ var MoveMode = function() {
 
         // the backend move
         scheduleSession(allSessions[id], $emptySlot.attr("data-date"), $emptySlot.attr("data-time"), $emptySlot.attr("data-room"));
-        // the frontend move
-        // VisualOps.swapWithEmpty(allSessions[id], $emptySlot, oldDate, oldTime, oldRoom);
-
-        // $(document).trigger("addHistory", [{user: "", type: "move", id: id}]);
-        // postMove();
-        // Statusbar.display("Move successful");
     });
 
     $("body").on("click", ".popover #schedule-button", function(){  
@@ -489,12 +403,6 @@ var MoveMode = function() {
         // the backend scheduling
         console.log("SCHEDULE", id, "into", $emptySlot.attr("data-date"), $emptySlot.attr("data-time"), $emptySlot.attr("data-room"));
         scheduleSession(allSessions[id], $emptySlot.attr("data-date"), $emptySlot.attr("data-time"), $emptySlot.attr("data-room"));
-        // the frontend scheduling: backend should be called first to have the updated allSessions[id] information
-        //VisualOps.scheduleUnscheduled(allSessions[id], $emptySlot);
-
-        // $(document).trigger("addHistory", [{user: "", type: "schedule", id: id}]);
-        // postMove();
-        // Statusbar.display("Scheduling successful");
     });
 
 
@@ -508,11 +416,6 @@ var MoveMode = function() {
 
         // the backend swap
         swapPapers(allSessions[allSubmissions[src_id].session], allSubmissions[src_id], allSessions[allSubmissions[dst_id].session], allSubmissions[dst_id]);            
-        // the frontend swap
-        // PaperVisualOps.swap(allSubmissions[src_id], allSubmissions[dst_id]);  
-        // $(document).trigger("addHistory", [{user: "", type: "paper swap", sid: src_id, did: dst_id}]);
-        // postMove();
-        // Statusbar.display("Swapping submission successful");
     }); 
 
     $("body").on("click", ".popover .button-paper-swap-with-unscheduled", function(){  
@@ -530,11 +433,6 @@ var MoveMode = function() {
 
         // the backend swap with unscheduled
         swapWithUnscheduledPaper(allSubmissions[unscheduledId], allSessions[allSubmissions[scheduledId].session], allSubmissions[scheduledId]);
-        // the frontend swap with unscheduled
-        // PaperVisualOps.swapWithUnscheduled(allSubmissions[unscheduledId], allSubmissions[scheduledId]);
-        // $(document).trigger("addHistory", [{user: "", type: "paper swap with unscheduled", sid: unscheduledId, did: scheduledId}]);
-        // postMove();
-        // Statusbar.display("Swapping with a unscheduled submission successful");
     });
 
     $("body").on("click", ".popover .button-paper-move", function(){  
@@ -552,12 +450,6 @@ var MoveMode = function() {
 
         // the backend move
         movePaper(allSessions[allSubmissions[scheduledId].session], allSubmissions[scheduledId], allSessions[emptySessionId]);
-        // the frontend move
-        //PaperVisualOps.swapWithEmpty(allSubmissions[scheduledId]);
-
-        // $(document).trigger("addHistory", [{user: "", type: "paper move", id: scheduledId}]);
-        // postMove();
-        // Statusbar.display("Moving submission successful");
     });
 
     $("body").on("click", ".popover .button-paper-schedule", function(){  
@@ -574,36 +466,17 @@ var MoveMode = function() {
             unscheduledPaperId = $(".move-dst-selected").first().attr("id");
             emptySessionId = getID($(".move-src-selected").first());
         }
-        console.log(allSessions[emptySessionId], allSubmissions[unscheduledPaperId]);
         // the backend scheduling
         schedulePaper(allSessions[emptySessionId], allSubmissions[unscheduledPaperId]);
-        // the frontend scheduling: backend should be called first to have the updated allSessions[id] information
-        //PaperVisualOps.scheduleUnscheduled(allSubmissions[unscheduledPaperId]);
 
-        // $(document).trigger("addHistory", [{user: "", type: "paper schedule", id: unscheduledPaperId}]);
-        // postMove();
-        // Statusbar.display("Scheduling submission successful");
     });
 
     // clicking the 'cancel swap' link while swap in progress.
     // should return to the clean state with no selection and proposals.
     $("body").on("click", ".move-cancel-button", function(){
-        postMove();
+        destroy();
         Statusbar.display("Select a session for scheduling options and more information.");    
     });
-
-
-    function postMove(){
-        updateUnscheduledCount();
-        // the backend conflicts update
-        getAllConflicts();
-        // this erases the preview conflicts display, so necessary
-        clearConflictDisplay();
-        // the frontend conflicts update: the row view of conflicts.
-        updateConflicts();
-        destroy();
-        ViewMode.initialize();
-    }
 
     // Reset any change created in this view mode
     function destroy(){
@@ -626,12 +499,15 @@ var MoveMode = function() {
         $("body").off("click", ".slot-paper", paperSlotClickHandler);     
         $(".slot").popover("destroy");  
         $(".slot-paper").popover("destroy");  
+
+        // Everything is done, so now go back to ViewMode.
+        $(".main").removeClass("move-mode");
+        ViewMode.initialize();
     }
 
     return {
         isOn: isOn,
         initialize: initialize,
-        postMove: postMove,
         destroy: destroy
     };
 }();     

@@ -5,6 +5,7 @@ var ViewMode = function() {
     function initialize(){
         isOn = true;
         //MoveMode.destroy();
+        $(".main").addClass("view-mode");
         bindEvents();
         initDisplay();
     }
@@ -320,7 +321,9 @@ var ViewMode = function() {
         $("body").off("click", ".popover .button-paper-propose-empty", proposeHandler);
 
         $(".slot").popover("destroy");   
-        $(".slot-paper").popover("destroy");        
+        $(".slot-paper").popover("destroy");    
+
+        $(".main").removeClass("view-mode");    
     }
 
     return {
