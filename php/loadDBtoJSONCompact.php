@@ -9,7 +9,7 @@ $uid = mysqli_real_escape_string($mysqli, $_POST['uid']);
 $clientId = mysqli_real_escape_string($mysqli, $_POST['transactionId']);
 
 // Get the transactions table
-$transQ = "select id, transactions.uid, transactions.type, data, previous, name from transactions LEFT JOIN (users) ON (users.uid=transactions.uid) where id > $clientId order by id DESC";
+$transQ = "select id, transactions.uid, transactions.type, transactions.previousType, localHash, data, previous, name from transactions LEFT JOIN (users) ON (users.uid=transactions.uid) where id > $clientId order by id DESC";
 $transTable =  mysqli_query($mysqli, $transQ);
 echo mysqli_error($mysqli);
 
