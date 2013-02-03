@@ -27,7 +27,7 @@ var Transact = function(){
     function completedLocalTransaction(t){
 	transactions.push(t);
 	// mark local one as done (give it the ID?)
-	console.log(t);
+	console.log('this was accepted:' + JSON.stringify(t));
 	for (var i = 0; i < localTransactions.length; i++){
 	    if (localTransactions[i].localHash == t.localHash) {
 		localTransactions[i].id = t.id;
@@ -54,12 +54,14 @@ function DB(){
 var db = new DB();
 
 DB.prototype.addTransaction = function(t){
+    console.log("adding transaction... " + JSON.stringify(t));
     $.ajax({
  	async: true,
 	type: 'POST',
 	data: { transaction: JSON.stringify(t)},
 	url: "./php/changeSchedule.php",
 	success: function(m){		
+	    console.log("returned transaction... " + JSON.stringify(m));
 	    if(m.id != null){
 		Transact.completedLocalTransaction(m);
 	    }else{
@@ -67,6 +69,7 @@ DB.prototype.addTransaction = function(t){
 	    }
  	},
 	error : function(m){
+	    console.log("error: " + JSON.stringify(m));
 	},
 	dataType: "json"
     });

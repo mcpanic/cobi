@@ -83,7 +83,7 @@ function slotIsEmpty($date, $time, $room, $mysqli){
 }
 
 function isScheduled($id, $mysqli){
-  $query = "SELECT id from schedule where id='$id' AND scheduled=1";
+  $query = "SELECT id from session where id='$id' AND scheduled=1";
   $result = mysqli_query($mysqli, $query);
   if(mysqli_num_rows($result) > 0){
     return true;
@@ -107,16 +107,19 @@ function unscheduleSession($date, $time, $room, $id, $mysqli){
 }
 
 function scheduleSession($date, $time, $room, $id, $mysqli){
-  if(slotIsEmpty($date, $time, $room) and !isScheduled($id)){
-    // add session to the schedule
-    $query = "UPDATE schedule SET id='$id' WHERE date='$date' AND time='$time' AND room ='$room'";
-    mysqli_query($mysqli, $query);
-    echo mysqli_error($mysqli);
-    
-    // change the session data so it is scheduled with room, time, date
-    $squery = "UPDATE session SET date='$date', time='$time', room='$room', scheduled=1 WHERE id='$id'";
-    mysqli_query($mysqli, $squery);
-    echo mysqli_error($mysqli);
+  //  if(slotIsEmpty($date, $time, $room)){// and 
+  if(!isScheduled($id, $mysqli)){
+    if(slotIsEmpty($date, $time, $room, $mysqli)){
+      // add session to the schedule
+      $query = "UPDATE schedule SET id='$id' WHERE date='$date' AND time='$time' AND room ='$room'";
+      mysqli_query($mysqli, $query);
+      echo mysqli_error($mysqli);
+      
+      // change the session data so it is scheduled with room, time, date
+      $squery = "UPDATE session SET date='$date', time='$time', room='$room', scheduled=1 WHERE id='$id'";
+      mysqli_query($mysqli, $squery);
+      echo mysqli_error($mysqli);
+    }
   }
 }
 
@@ -168,19 +171,22 @@ function swapSessions($s1date, $s1time, $s1room, $s1id,
 function swapWithUnscheduledSession($s1id, 
 				    $s2date, $s2time, $s2room, $s2id, 
 				    $mysqli){
-  // perform swap in the schedule
-  $s1query = "UPDATE schedule SET id='$s1id' WHERE date='$s2date' AND time='$s2time' AND room ='$s2room'";
-  mysqli_query($mysqli, $s1query);
-  echo mysqli_error($mysqli);
-  
-  // change the session data so it is scheduled with room, time, date
-  $ss1query = "UPDATE session SET date='$s2date', time='$s2time', room='$s2room', scheduled=1 WHERE id='$s1id'";
-  mysqli_query($mysqli, $ss1query);
-  echo mysqli_error($mysqli);
-  
-  $ss2query = "UPDATE session SET date='', time='', room='', scheduled=0 WHERE id='$s2id'";
-  mysqli_query($mysqli, $ss2query);
-  echo mysqli_error($mysqli);
+  if(!isScheduled($s1id, $mysqli) and sessionIsInSlot($s2date, $s2time, $s2room, $s2id, $mysqli)){
+
+    // perform swap in the schedule
+    $s1query = "UPDATE schedule SET id='$s1id' WHERE date='$s2date' AND time='$s2time' AND room ='$s2room'";
+    mysqli_query($mysqli, $s1query);
+    echo mysqli_error($mysqli);
+    
+    // change the session data so it is scheduled with room, time, date
+    $ss1query = "UPDATE session SET date='$s2date', time='$s2time', room='$s2room', scheduled=1 WHERE id='$s1id'";
+    mysqli_query($mysqli, $ss1query);
+    echo mysqli_error($mysqli);
+    
+    $ss2query = "UPDATE session SET date='', time='', room='', scheduled=0 WHERE id='$s2id'";
+    mysqli_query($mysqli, $ss2query);
+    echo mysqli_error($mysqli);
+  }
 }
 
 /// start paper level functions
@@ -440,8 +446,7 @@ case "swapWithUnscheduled":
   break;
 case "reorderPapers":
   $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
-  $newPaperOrder = mysqli_real_escape_string($mysqli, $transaction['data']['newPaperOrder']);
-  $previousPaperOrder = mysqli_real_escape_string($mysqli, $transaction['data']['previousPaperOrder']);
+  $newPaperOrder = mysqli_real_escape_string($mysqli, $transaction['data']['paperOrder']);
   reorderPapers($id, $newPaperOrder, $mysqli);
   break;
 case "swapPapers":
