@@ -102,36 +102,37 @@ var ViewMode = function() {
     }
 
     function paperReorderHandler(event){
-        //console.log($(".list-submissions"));
         var $session = $(".selected").first();
         var id = getID($session);  
         var $list = $(this).find("~ .list-submissions");
-        // TODO: when popover is gone, move it back to initial stage
-
+        $list.sortable();
         if ($(this).html() == "Reorder"){
             $(this).html("Save Order");
-            // TODO: Visual display indicating sortable
-            $list.sortable().disableSelection();
-            allSessions[id].paperOrder = _readPaperOrder($list);
+            $list.sortable("enable").disableSelection();
+            $list.attr("data-paper-order", _readPaperOrder($list).join());
+            //console.log($list.attr("data-paper-order"));
             $list.find("li .reorder-icon").addClass("icon-align-justify");
         } else {
             $(this).html("Reorder");
-            // TODO: save order
             $list.sortable("disable").enableSelection();
             $list.find("li .reorder-icon").removeClass("icon-align-justify");
+
+            var oldOrder = $list.attr("data-paper-order").split(",");
+            var newOrder = _readPaperOrder($list);
+            //console.log("Reordering: NEW", newOrder, "OLD", $list.attr("data-paper-order").split(","));
             // save only when the order changed
-            console.log("Reordering: NEW", _readPaperOrder($list), "OLD", allSessions[id].paperOrder);
-            if (!arraysEqual(allSessions[id].paperOrder, _readPaperOrder($list))){
+            if (!arraysEqual(oldOrder, newOrder)){
                 // backend reorder (current session, new order, old order)
-                reorderPapers(allSessions[id], _readPaperOrder($list), allSessions[id].paperOrder);
-                allSessions[id].paperOrder = _readPaperOrder($list);
+                reorderPapers(allSessions[id], newOrder, oldOrder);
+                $list.attr("data-paper-order", newOrder.join());
+                // console.log("order update", $list.attr("data-paper-order"));
                 // frontend reorder: nothing
 
                 //$(".selected").removeClass("selected");
-                Statusbar.display("Paper reordering successful");
-                $(document).trigger("addHistory", [{user: "", type: "paper-reorder", id: id}]);
+                // Statusbar.display("Paper reordering successful");
+                // $(document).trigger("addHistory", [{user: "", type: "paper-reorder", id: id}]);
 
-                postMove();        
+                // postMove();        
             }
         }
     }

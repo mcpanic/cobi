@@ -16,9 +16,6 @@ var Polling = function() {
         console.log("transaction received", t, t.data);
         //type: event type, uid: user who made the change, data: object
         var isMyChange = isTransactionMyChange(t);
-        
-        // TODO: change with actual user management logic to display username
-        var user = isMyChange ? "" : "Anon";
 
         if (t.type == "lock"){
             handlePollingLock(t, isMyChange);
@@ -40,7 +37,7 @@ var Polling = function() {
             handlePollingUnschedulePaper(t, isMyChange);
         } else if (t.type == "schedulePaper"){
             handlePollingSchedulePaper(t, isMyChange);
-        } else if (t.type == "swapPaper"){ 
+        } else if (t.type == "swapPapers"){ 
             handlePollingSwapPaper(t, isMyChange);
         } else if (t.type == "movePaper"){
             handlePollingMovePaper(t, isMyChange);

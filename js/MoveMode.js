@@ -160,7 +160,7 @@ var MoveMode = function() {
 
         var $selection = $(".move-dst-selected");
         $(".move-dst-selected").removeClass("move-dst-selected").popover("hide");   
-        console.log("slotClick", $selection[0] == $(this)[0], $(this).hasClass("unavailable"), !$(this).hasClass("proposed-swap"));
+        console.log("slotClick", $selection[0] == $(this)[0], $(this).hasClass("unavailable"), typeof $(this).attr("data-proposed-swap-paper") === "undefined");
         // if reselected, do nothing.
         if ($selection[0] == $(this)[0])
            return;
@@ -168,7 +168,8 @@ var MoveMode = function() {
         if ($(this).hasClass("unavailable"))
            return;
         // if not proposed, do nothing. But only when myself is not selected again.
-        if (!$(this).hasClass("move-src-selected") && !$(this).hasClass("proposed-swap"))
+        //if (!$(this).hasClass("move-src-selected") && !$(this).hasClass("proposed-swap"))
+        if (!$(this).hasClass("move-src-selected") && typeof $(this).attr("data-proposed-swap-paper") === "undefined")
             return;
 
         var id = $(this).attr("id");
@@ -253,6 +254,7 @@ var MoveMode = function() {
         } else if (type === "paper-empty") {
             var tempArray = proposePaperForSession(allSessions[id]);
             swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);
+            console.log(allSubmissions[paperId], tempArray);
         } else {
             console.log("ERROR: type unknown");
             return;
@@ -275,7 +277,7 @@ var MoveMode = function() {
         for(var i = 0; i < swapValues.length; i++){    
             //console.log("SWAP", swapValues[i]);   
 
-            // empty candidate
+            // empty session candidate
             if (swapValues[i].target.session === null){
                 if (typeof swapValues[i].target.date !== "undefined" && typeof swapValues[i].target.time !== "undefined" && typeof swapValues[i].target.room !== "undefined"){
                     $cell = findCellByDateTimeRoom(swapValues[i].target.date, swapValues[i].target.time, swapValues[i].target.room);
@@ -283,37 +285,38 @@ var MoveMode = function() {
                     $cell.addClass("proposed-swap"); //.data("title", "Empty slot");
                 }
 
+                var submission = swapValues[i].target.paper;  
+                console.log("session null", submission);        
+                // Paper-level unscheduled candidate exists: session null, submission id
+                if (typeof submission !== "undefined") {                    
+                        $("#"+submission).attr("data-proposed-swap-paper", "true");
+                        console.log("runPropose: unscheduled");   
+                }
                 // swapContent += "<li data-rank-order='" + i + "' data-date='"+swapValues[i].target.date+"' data-time='"+swapValues[i].target.time+"' data-room='"+swapValues[i].target.room+"'>" 
                 // + "<a href='#' class='swap-preview-link'>[preview]</a> "
                 // + "adding " + (-1*swapValues[i].value)  
                 // + ": <a href='#' class='swap-review-link'>" + displaySlotTitle(swapValues[i].target) + "</a>" 
-                // + "</li>";                    
-
-            // non-empty candidate
+                // + "</li>";    
+            
+            // non-empty session candidate
             } else {
                 var session = swapValues[i].target.session;
                 var submission = swapValues[i].target.paper;
                 $cell = findCellByID(swapValues[i].target.session);
                 $cell.addClass("proposed-swap"); //.data("title", allSessions[swapValues[i].target.session].title);
-
-                // Paper-level candidate exists
+                //console.log($cell, session, submission);
+                // Paper-level empty or scheduled candidate exists
                 if (typeof submission !== "undefined") {                    
-                    // unscheduled: session null, submission id
-                    if (session == null){
-                        $("#"+submission.id).attr("data-proposed-swap-paper", "true");
-                        // console.log("runPropose: unscheduled");
-                    // empty: session id, submission null && scheduled: session id, submission id
-                    } else {
-                        // store currently inserted paper-level proposals
-                        var curList = typeof $cell.attr("data-proposed-swap-paper") === "undefined" ? "" : $cell.attr("data-proposed-swap-paper");
-                        curList += "," + submission;
+                    // store currently inserted paper-level proposals
+                    var curList = typeof $cell.attr("data-proposed-swap-paper") === "undefined" ? "" : $cell.attr("data-proposed-swap-paper");
+                    curList += "," + submission;
 
-                        // if (submission == null)
-                        //     console.log("runPropose: empty");
-                        // else 
-                        //     console.log("runPropose: scheduled");
-                        $cell.attr("data-proposed-swap-paper", curList);                         
-                    }         
+                    // if (submission == null)
+                    //     console.log("runPropose: empty");
+                    // else 
+                    //     console.log("runPropose: scheduled");
+                    $cell.attr("data-proposed-swap-paper", curList);                         
+                             
                 }
                 // swapContent += "<li data-session-id='" + swapValues[i].target.session + "' data-rank-order='" + i + "'>" //+ swapValues[i] 
                 // + "<a href='#' class='swap-preview-link'>[preview]</a> "
@@ -568,10 +571,10 @@ var MoveMode = function() {
 
         // src: empty, dst: unscheduled
         } else { 
-            unscheduledPaperId = $(this).parent().attr("id");;
+            unscheduledPaperId = $(".move-dst-selected").first().attr("id");
             emptySessionId = getID($(".move-src-selected").first());
         }
-
+        console.log(allSessions[emptySessionId], allSubmissions[unscheduledPaperId]);
         // the backend scheduling
         schedulePaper(allSessions[emptySessionId], allSubmissions[unscheduledPaperId]);
         // the frontend scheduling: backend should be called first to have the updated allSessions[id] information

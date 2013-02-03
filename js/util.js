@@ -4,10 +4,18 @@ function isTransactionMyChange(t) {
     return t.id == null;
 }
 
-
 // transaction type: session or paper level?
 function isTransactionSessionLevel(t){
   return t.type.indexOf("Paper") === -1;
+}
+
+function getCellLinkByID(id){
+  return $("<a/>").attr("href", "#").attr("data-session-id", id).addClass("history-link").html(allSessions[id].title);
+}
+
+function getCellLinkByDateTimeRoom(ldate, ltime, lroom){
+  return $("<a/>").attr("href", "#").attr("data-slot-date", ldate).attr("data-slot-time", ltime).attr("data-slot-room", lroom)
+       .addClass("history-link").html(ldate + ", " + ltime + ", " + ldate);
 }
 
 

@@ -33,7 +33,7 @@ var typeDisplayList = {
 	schedule: "schedule",
 	swap: "swap",
 	move: "move",
-	swapWithUnscheduled, "swap with unscheduled",
+	swapWithUnscheduled: "swap with unscheduled",
 	reorderPapers: "reorder papers",
 	unschedulePaper: "unschedule paper",
 	schedulePaper: "schedule paper",

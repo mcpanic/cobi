@@ -25,7 +25,7 @@ var Sidebar = function() {
      }
 
      function addHistoryHandler(event, t){
-          console.log("HISTORY", history);
+          console.log("HISTORY", t);
           // hack that fixes the bug where when history is open with 0 items, prepend doesn't work because height is automatically set to 0px.
           // so force height to be auto when collapsed
           if ($("#list-history").hasClass("in"))
@@ -40,55 +40,24 @@ var Sidebar = function() {
           $("#history-count").html(parseInt(count)+1);
      }
 
-     function _getHistoryLinkByID(id){
-          return $("<a/>").attr("href", "#").attr("data-session-id", id).addClass("history-link").html(allSessions[id].title);
-     }
-
-     function _getHistoryLinkByDateTimeRoom(ldate, ltime, lroom){
-          return $("<a/>").attr("href", "#").attr("data-slot-date", ldate).attr("data-slot-time", ltime).attr("data-slot-room", lroom)
-               .addClass("history-link").html(ldate + ", " + ltime + ", " + ldate);
-     }
-
-
      function displaySessionHistory(t){
+          var $link, $li;
 
-          var $link = _getHistoryLinkByID(t.data.id);
-          var $li = $("<li/>").append(user + " ").append($("<strong/>").wrapInner(typeDisplayList())).append($link);
-          console.log($link, $li);
+          // TODO: change with actual user management logic to display username
+          var user = isTransactionMyChange(t) ? "" : "Anon";
+          $li = $("<li/>").append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
+          
+          if (t.type.indexOf("swap") !== -1){
+               $link = getCellLinkByID(t.data.s1id);
+               var $link2 = getCellLinkByID(t.data.s2id);
+               $li = $li.append($link).append(" and ").append($link2);    
+
+          } else {
+               $link = (typeof t.data.id === "undefined") ? getCellLinkByDateTimeRoom(t.data.date, t.data.time, t.data.room) : getCellLinkByID(t.data.id);
+               $li = $li.append($link);
+          }
 
           $("#list-history").prepend($li);
-
-          if (t.type.indexOf("swap") !== -1){
-               var $link = _getHistoryLinkByID(t.data.s1id);
-               var $li = $("<li/>").append(user + " ").append($("<strong/>").wrapInner(typeDisplayList())).append($link);    
-
-               var $link = _getHistoryLinkByID(t.data.s2id);
-               var $li = $("<li/>").append(user + " ").append($("<strong/>").wrapInner(typeDisplayList())).append($link);    
-
-          }
-          if (typeof history.id !== "undefined" && 
-               (history.type == "lock" || history.type == "unlock" || history.type == "schedule" || history.type == "move" || history.type == "unschedule")){
-
-               $("#list-history").prepend("<li>" + history.user + " <strong>" + history.type + "</strong>: " 
-               + "<a href='#' class='history-link' data-session-id='" + history.id + "'>" + allSessions[history.id].title 
-               + "</a></li>");             
-          } else if (typeof history.id === "undefined" && 
-               (history.type == "lock" || history.type == "unlock")){
-
-               $("#list-history").prepend("<li>" + history.user + " <strong>" + history.type + "</strong>: " 
-                  + "<a href='#' class='history-link' data-slot-date='" + history.date + 
-                  "' data-slot-time='" + history.time + 
-                  "' data-slot-room='" + history.room + 
-                  "'>" + history.date + ", " + history.time + ", " + history.room + "</a></li>");
-          } else if (typeof history.sid !== "undefined" && typeof history.did !== "undefined" && 
-               (history.type == "swap" || history.type == "swap with unscheduled")){
-
-               $("#list-history").prepend("<li>" + history.user + " <strong>" + history.type + "</strong>: "  
-               + "<a href='#' class='history-link' data-session-id='" + history.s1id + "'>" + allSessions[history.s1id].title 
-               + "</a> and <a href='#' class='history-link' data-session-id='" + history.s2id + "'>" + allSessions[history.s2id].title + "</a></li>");
-          } else {
-               console.log("impossible");
-          }
      }
 
      function displayPaperHistory(t){

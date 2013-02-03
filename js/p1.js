@@ -16,7 +16,9 @@
     function _readPaperOrder($list){
         var order = [];
         $.each($list.find("li"), function(index, item){
-            order.push(item.id);
+            // not including the last empty element
+            if (item.id != "")
+                order.push(item.id);
         });
         return order;
     }

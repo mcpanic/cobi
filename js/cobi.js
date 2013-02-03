@@ -1863,9 +1863,9 @@ function proposeUnscheduledPaperForSession(s){
     var swapValue = [];
     for (var p in unscheduledSubmissions){
 	if (unscheduledSubmissions[p].type == s.venue || 
-	    (p.type == "TOCHI" && s.venue == "paper")){ 
+	    (unscheduledSubmissions[p].type == "TOCHI" && s.venue == "paper")){ 
 
-	    swapValue.push(new swapDetails(new sessionPaper(null, p.id),
+	    swapValue.push(new swapDetails(new sessionPaper(null, p),
 					   0,
 					   null,
 					   null,
