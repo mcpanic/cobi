@@ -83,12 +83,26 @@ var VisualOps = function() {
     	_addSessionToUnscheduled(scheduled);
     }
 
+    // CASE 6. lock a session
+    function lock($cell){
+        $cell.find(".title").addClass("locked");
+        $cell.effect("highlight", {color: "yellow"}, 10000);               
+    }
+
+    // CASE 7. lock a session
+    function unlock($cell){
+        $cell.find(".title").removeClass("locked");
+        $cell.effect("highlight", {color: "yellow"}, 10000);       
+    }
+
     return {
         initialize: initialize,
         swap: swap,
         swapWithUnscheduled: swapWithUnscheduled,
         swapWithEmpty: swapWithEmpty,
         scheduleUnscheduled: scheduleUnscheduled,
-        unschedule: unschedule
+        unschedule: unschedule,
+        lock: lock,
+        unlock: unlock
     };
 }();       

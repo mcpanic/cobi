@@ -63,7 +63,7 @@ var DataOps = function() {
 	    break;
 	case 'swapWithUnscheduled':
 	    swapWithUnscheduledSession(allSessions[t.data.s1id],
-				       allSessions[t.data.s2.id]);
+				       allSessions[t.data.s2id]);
 	    break;
 	    // now for the paper related cases
 	case 'reorderPapers':

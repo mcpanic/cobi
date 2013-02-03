@@ -279,7 +279,7 @@ var MoveMode = function() {
             if (swapValues[i].target.session === null){
                 if (typeof swapValues[i].target.date !== "undefined" && typeof swapValues[i].target.time !== "undefined" && typeof swapValues[i].target.room !== "undefined"){
                     $cell = findCellByDateTimeRoom(swapValues[i].target.date, swapValues[i].target.time, swapValues[i].target.room);
-                    //console.log("runPropose", i, swapValues[i]);
+                    console.log("runPropose", i, swapValues[i]);
                     $cell.addClass("proposed-swap"); //.data("title", "Empty slot");
                 }
 
@@ -404,10 +404,10 @@ var MoveMode = function() {
         // the backend swap
         swapSessions(allSessions[src_id], allSessions[dst_id]);            
         // the frontend swap
-        VisualOps.swap(allSessions[src_id], allSessions[dst_id]);  
-        $(document).trigger("addHistory", [{user: "", type: "swap", sid: src_id, did: dst_id}]);
-        postMove();
-        Statusbar.display("Swap successful");
+        // VisualOps.swap(allSessions[src_id], allSessions[dst_id]);  
+        // $(document).trigger("addHistory", [{user: "", type: "swap", sid: src_id, did: dst_id}]);
+        // postMove();
+        // Statusbar.display("Swap successful");
     });
 
     $("body").on("click", ".popover #swap-with-unscheduled-button", function(){  
@@ -426,10 +426,10 @@ var MoveMode = function() {
         // the backend swap with unscheduled
         swapWithUnscheduledSession(allSessions[unscheduledId], allSessions[scheduledId]);
         // the frontend swap with unscheduled
-        VisualOps.swapWithUnscheduled(allSessions[unscheduledId], allSessions[scheduledId]);
-        $(document).trigger("addHistory", [{user: "", type: "swap with unscheduled", sid: unscheduledId, did: scheduledId}]);
-        postMove();
-        Statusbar.display("Swapping with a unscheduled session successful");
+        // VisualOps.swapWithUnscheduled(allSessions[unscheduledId], allSessions[scheduledId]);
+        // $(document).trigger("addHistory", [{user: "", type: "swap with unscheduled", sid: unscheduledId, did: scheduledId}]);
+        // postMove();
+        // Statusbar.display("Swapping with a unscheduled session successful");
     });
 
     $("body").on("click", ".popover #move-button", function(){  
@@ -457,11 +457,11 @@ var MoveMode = function() {
         // the backend move
         scheduleSession(allSessions[id], $emptySlot.attr("data-date"), $emptySlot.attr("data-time"), $emptySlot.attr("data-room"));
         // the frontend move
-        VisualOps.swapWithEmpty(allSessions[id], $emptySlot, oldDate, oldTime, oldRoom);
+        // VisualOps.swapWithEmpty(allSessions[id], $emptySlot, oldDate, oldTime, oldRoom);
 
-        $(document).trigger("addHistory", [{user: "", type: "move", id: id}]);
-        postMove();
-        Statusbar.display("Move successful");
+        // $(document).trigger("addHistory", [{user: "", type: "move", id: id}]);
+        // postMove();
+        // Statusbar.display("Move successful");
     });
 
     $("body").on("click", ".popover #schedule-button", function(){  
@@ -482,18 +482,16 @@ var MoveMode = function() {
            //console.log("case2", $session, $emptySlot);
         }
 
-        
-
         id = getID($session);
         // the backend scheduling
         console.log("SCHEDULE", id, "into", $emptySlot.attr("data-date"), $emptySlot.attr("data-time"), $emptySlot.attr("data-room"));
         scheduleSession(allSessions[id], $emptySlot.attr("data-date"), $emptySlot.attr("data-time"), $emptySlot.attr("data-room"));
         // the frontend scheduling: backend should be called first to have the updated allSessions[id] information
-        VisualOps.scheduleUnscheduled(allSessions[id], $emptySlot);
+        //VisualOps.scheduleUnscheduled(allSessions[id], $emptySlot);
 
-        $(document).trigger("addHistory", [{user: "", type: "schedule", id: id}]);
-        postMove();
-        Statusbar.display("Scheduling successful");
+        // $(document).trigger("addHistory", [{user: "", type: "schedule", id: id}]);
+        // postMove();
+        // Statusbar.display("Scheduling successful");
     });
 
 
@@ -508,10 +506,10 @@ var MoveMode = function() {
         // the backend swap
         swapPapers(allSessions[allSubmissions[src_id].session], allSubmissions[src_id], allSessions[allSubmissions[dst_id].session], allSubmissions[dst_id]);            
         // the frontend swap
-        PaperVisualOps.swap(allSubmissions[src_id], allSubmissions[dst_id]);  
-        $(document).trigger("addHistory", [{user: "", type: "paper swap", sid: src_id, did: dst_id}]);
-        postMove();
-        Statusbar.display("Swapping submission successful");
+        // PaperVisualOps.swap(allSubmissions[src_id], allSubmissions[dst_id]);  
+        // $(document).trigger("addHistory", [{user: "", type: "paper swap", sid: src_id, did: dst_id}]);
+        // postMove();
+        // Statusbar.display("Swapping submission successful");
     }); 
 
     $("body").on("click", ".popover .button-paper-swap-with-unscheduled", function(){  
@@ -530,10 +528,10 @@ var MoveMode = function() {
         // the backend swap with unscheduled
         swapWithUnscheduledPaper(allSubmissions[unscheduledId], allSessions[allSubmissions[scheduledId].session], allSubmissions[scheduledId]);
         // the frontend swap with unscheduled
-        PaperVisualOps.swapWithUnscheduled(allSubmissions[unscheduledId], allSubmissions[scheduledId]);
-        $(document).trigger("addHistory", [{user: "", type: "paper swap with unscheduled", sid: unscheduledId, did: scheduledId}]);
-        postMove();
-        Statusbar.display("Swapping with a unscheduled submission successful");
+        // PaperVisualOps.swapWithUnscheduled(allSubmissions[unscheduledId], allSubmissions[scheduledId]);
+        // $(document).trigger("addHistory", [{user: "", type: "paper swap with unscheduled", sid: unscheduledId, did: scheduledId}]);
+        // postMove();
+        // Statusbar.display("Swapping with a unscheduled submission successful");
     });
 
     $("body").on("click", ".popover .button-paper-move", function(){  
@@ -552,11 +550,11 @@ var MoveMode = function() {
         // the backend move
         movePaper(allSessions[allSubmissions[scheduledId].session], allSubmissions[scheduledId], allSessions[emptySessionId]);
         // the frontend move
-        PaperVisualOps.swapWithEmpty(allSubmissions[scheduledId]);
+        //PaperVisualOps.swapWithEmpty(allSubmissions[scheduledId]);
 
-        $(document).trigger("addHistory", [{user: "", type: "paper move", id: scheduledId}]);
-        postMove();
-        Statusbar.display("Moving submission successful");
+        // $(document).trigger("addHistory", [{user: "", type: "paper move", id: scheduledId}]);
+        // postMove();
+        // Statusbar.display("Moving submission successful");
     });
 
     $("body").on("click", ".popover .button-paper-schedule", function(){  
@@ -577,11 +575,11 @@ var MoveMode = function() {
         // the backend scheduling
         schedulePaper(allSessions[emptySessionId], allSubmissions[unscheduledPaperId]);
         // the frontend scheduling: backend should be called first to have the updated allSessions[id] information
-        PaperVisualOps.scheduleUnscheduled(allSubmissions[unscheduledPaperId]);
+        //PaperVisualOps.scheduleUnscheduled(allSubmissions[unscheduledPaperId]);
 
-        $(document).trigger("addHistory", [{user: "", type: "paper schedule", id: unscheduledPaperId}]);
-        postMove();
-        Statusbar.display("Scheduling submission successful");
+        // $(document).trigger("addHistory", [{user: "", type: "paper schedule", id: unscheduledPaperId}]);
+        // postMove();
+        // Statusbar.display("Scheduling submission successful");
     });
 
     // clicking the 'cancel swap' link while swap in progress.
@@ -630,6 +628,7 @@ var MoveMode = function() {
     return {
         isOn: isOn,
         initialize: initialize,
+        postMove: postMove,
         destroy: destroy
     };
 }();     

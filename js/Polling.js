@@ -7,42 +7,41 @@ var Polling = function() {
 
     // Add event handlers to each sidebar item
     function bindEvents(){
-        $(document).on("serverScheduleChange", scheduleChangeHandler);
+        //$(document).on("serverScheduleChange", scheduleChangeHandler);
         $(document).on("transactionUpdate", transactionUpdateHandler);
     }
 
     function transactionUpdateHandler(event, t){
         console.log("transaction received", t, t.data);
-        // if uid == my id, changes are local.
-
-        // if uid != my id, changes are remotely made.
         //type: event type, uid: user who made the change, data: object
+        var isMyChange = t.id == null;
 
         // TODO: swapWithUnscheduled handler should be added.
-        if (t.type == "lock"){
-            handlePollingLock(t);
-        } else if (t.type == "unschedule"){
-            handlePollingUnschedule(t);
-        } else if (t.type == "schedule"){
-            handlePollingSchedule(t);
-        } else if (t.type == "swap"){
-            handlePollingSwap(t);
-        } else if (t.type == "move"){
-            handlePollingMove(t);
-        } else if (t.type == "swapWithUnscheduled"){
-            handlePollingSwapWithUnscheduled(t);
-        } else if (t.type == "reorderPapers"){
-            handlePollingReorderPapers(t);
-        } else if (t.type == "unschedulePaper"){
-            handlePollingUnschedulePaper(t);
-        } else if (t.type == "swapPaper"){
-            handlePollingSwapPaper(t);
-        } else if (t.type == "movePaper"){
-            handlePollingMovePaper(t);
-        } else if (t.type == "swapWithUnscheduledPaper"){
-            handlePollingSwapWithUnscheduledPaper(t);
-        }
-        postPollingMove();        
+            if (t.type == "lock"){
+                handlePollingLock(t, isMyChange);
+            } else if (t.type == "unlock"){
+                handlePollingUnlock(t, isMyChange);
+            } else if (t.type == "unschedule"){
+                handlePollingUnschedule(t, isMyChange);
+            } else if (t.type == "schedule"){
+                handlePollingSchedule(t, isMyChange);
+            } else if (t.type == "swap"){
+                handlePollingSwap(t, isMyChange);
+            } else if (t.type == "move"){
+                handlePollingMove(t, isMyChange);
+            } else if (t.type == "swapWithUnscheduled"){
+                handlePollingSwapWithUnscheduled(t, isMyChange);
+            } else if (t.type == "reorderPapers"){
+                handlePollingReorderPapers(t, isMyChange);
+            } else if (t.type == "unschedulePaper"){
+                handlePollingUnschedulePaper(t, isMyChange);
+            } else if (t.type == "swapPaper"){ 
+                handlePollingSwapPaper(t, isMyChange);
+            } else if (t.type == "movePaper"){
+                handlePollingMovePaper(t, isMyChange);
+            } else if (t.type == "swapWithUnscheduledPaper"){
+                handlePollingSwapWithUnscheduledPaper(t, isMyChange);
+            }     
     }
 /*
     function scheduleChangeHandler(event, newTransactionIndices){
@@ -77,9 +76,9 @@ var Polling = function() {
 
     }
 
-    function handlePollingLock(t){
+    function handlePollingLock(t, isMyChange){
+        var user = isMyChange ? "" : "Anon";
         // TODO: lock needs to get id in t.data.id
-        console.log(schedule[t.data.date][t.data.time][t.data.room]);
         var id = null;
         for (s in schedule[t.data.date][t.data.time][t.data.room]){
             id = s;
@@ -89,63 +88,104 @@ var Polling = function() {
         if ($cell == null || typeof $cell === "undefined")
             return;
 
-        var isLocked = $cell.find(".title").hasClass("locked")? true: false;
-        var action = "lock";
-        if (isLocked){
-            $cell.find(".title").removeClass("locked");
-            action = "unlock";
+        VisualOps.lock($cell);
+
+        if (isMyChange){
+            $(".selected").removeClass("selected").popover("hide");
+            postPollingMove();
+            Statusbar.display("Lock successful");
         } else {
-            $cell.find(".title").addClass("locked");
+            postPollingMove();   
+            if (!MoveMode.isOn)
+                Statusbar.display("Polling: Unlock successful");
         }
 
         if(id in allSessions){
-            //lockSlot(allSessions[id].date, allSessions[id].time, allSessions[id].room);
-            // $cell.data('popover').options.content = function(){
-            //     return getSessionDetail("scheduled", allSessions[id]);
-            // };
-            $(document).trigger("addHistory", [{user: "USER", type: action, id: id}]);
-        } else {
-            //lockSlot($session.data("date"), $session.data("time"), $session.data("room"));
-            // $cell.data('popover').options.content = function(){
-            //     return getSessionDetail("empty", new slot($cell.data("date"), $cell.data("time"), $cell.data("room"), null));
-            // };          
-            $(document).trigger("addHistory", [{user: "USER", type: action, date: $cell.attr("data-date"), time: $cell.attr("data-time"), room: $cell.attr("data-room")}]);
+            $(document).trigger("addHistory", [{user: user, type: "lock", id: id}]);
+        } else {       
+            $(document).trigger("addHistory", [{user: user, type: "lock", date: $cell.attr("data-date"), time: $cell.attr("data-time"), room: $cell.attr("data-room")}]);
         }
-
-        $cell.effect("highlight", {color: "yellow"}, 10000);    
-        // Statusbar display omitted        
     }
 
-    function handlePollingUnschedule(t){
+    function handlePollingUnlock(t, isMyChange){
+        var user = isMyChange ? "" : "Anon";
+        // TODO: lock needs to get id in t.data.id
+        var id = null;
+        for (s in schedule[t.data.date][t.data.time][t.data.room]){
+            id = s;
+        }    
+        // empty cells can also be locked or unlocked
+        var $cell = (id == null)? findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room): findCellByID(id);
+        if ($cell == null || typeof $cell === "undefined")
+            return;
+
+        VisualOps.unlock($cell);
+
+        if (isMyChange){
+            $(".selected").removeClass("selected").popover("hide");
+            postPollingMove();
+            Statusbar.display("Unlock successful");
+        } else {
+            postPollingMove();   
+            if (!MoveMode.isOn)
+                Statusbar.display("Polling: Unlock successful");
+        }
+
+        if(id in allSessions){
+            $(document).trigger("addHistory", [{user: user, type: "unlock", id: id}]);
+        } else {       
+            $(document).trigger("addHistory", [{user: user, type: "unlock", date: $cell.attr("data-date"), time: $cell.attr("data-time"), room: $cell.attr("data-room")}]);
+        }
+    }
+
+    function handlePollingUnschedule(t, isMyChange){
+        var user = isMyChange ? "" : "Anon";
         var id = t.data.id;
         var $cell = findCellByID(id);
         if ($cell == null || typeof $cell === "undefined")
             return;
 
-        $(document).trigger("addHistory", [{user: "USER", type: "unschedule", id: id}]);
-        $cell.effect("highlight", {color: "yellow"}, 10000);
-
         VisualOps.unschedule(allSessions[id], t.data.date, t.data.time, t.data.room);
 
-        Statusbar.display("Polling: Unschedule successful");
+        if (isMyChange){
+            $(".selected").removeClass("selected");
+            postPollingMove();
+            Statusbar.display("Unschedule successful");
+        } else {
+            postPollingMove();   
+            if (!MoveMode.isOn)
+                Statusbar.display("Polling: Unschedule successful");
+        }
+
+        $(document).trigger("addHistory", [{user: user, type: "unschedule", id: id}]);
+        // $cell.effect("highlight", {color: "yellow"}, 10000);
     }
 
-    function handlePollingSchedule(t){
+    function handlePollingSchedule(t, isMyChange){
+        var user = isMyChange ? "" : "Anon";
         var id = t.data.id;
         var $cell = findCellByID(id);
         if ($cell == null || typeof $cell === "undefined")
          return;
 
-        $(document).trigger("addHistory", [{user: "USER", type: "schedule", id: id}]);
-        $cell.effect("highlight", {color: "yellow"}, 10000);
-
         $emptySlot = findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room);
         VisualOps.scheduleUnscheduled(allSessions[id], $emptySlot);
 
-        Statusbar.display("Polling: Scheduling successful");    
+        if (isMyChange){
+            MoveMode.postMove();
+            Statusbar.display("Schedule successful");
+        } else{
+            postPollingMove();   
+            if (!MoveMode.isOn)
+                Statusbar.display("Polling: Scheduling successful");    
+        }            
+
+        $(document).trigger("addHistory", [{user: user, type: "schedule", id: id}]);
+        // $cell.effect("highlight", {color: "yellow"}, 10000);
     }
 
-    function handlePollingSwap(t){
+    function handlePollingSwap(t, isMyChange){
+        var user = isMyChange ? "" : "Anon";
         var src_id = t.data.s1id;
         var dst_id = t.data.s2id;
         var $src_cell = findCellByID(src_id);
@@ -155,50 +195,85 @@ var Polling = function() {
         if ($dst_cell == null || typeof $dst_cell === "undefined")
          return;
 
-        $(document).trigger("addHistory", [{user: "USER", type: "swap", sid: src_id, did: dst_id}]);
-
-        $src_cell.effect("highlight", {color: "yellow"}, 10000);
-        $dst_cell.effect("highlight", {color: "yellow"}, 10000);
-
         VisualOps.swap(allSessions[src_id], allSessions[dst_id]);
-        Statusbar.display("Polling: Swap successful");
+
+        if (isMyChange){
+            MoveMode.postMove();
+            Statusbar.display("Swap successful");
+        } else {
+            postPollingMove();   
+            if (!MoveMode.isOn)
+                Statusbar.display("Polling: Swap successful"); 
+        }
+
+        $(document).trigger("addHistory", [{user: user, type: "swap", sid: src_id, did: dst_id}]);
+
+        // $src_cell.effect("highlight", {color: "yellow"}, 10000);
+        // $dst_cell.effect("highlight", {color: "yellow"}, 10000);
     }
 
-    function handlePollingMove(t){
+    function handlePollingMove(t, isMyChange){
+        var user = isMyChange ? "" : "Anon";
         var id = t.data.id;
         var $cell = findCellByID(id);
         if ($cell == null || typeof $cell === "undefined")
          return;
 
-        $(document).trigger("addHistory", [{user: "USER", type: "move", id: id}]);
-        $cell.effect("highlight", {color: "yellow"}, 10000);
-
         $emptySlot = findCellByDateTimeRoom(t.data.tdate, t.data.ttime, t.data.troom);
         VisualOps.swapWithEmpty(allSessions[id], $emptySlot, t.data.sdate, t.data.stime, t.data.sroom);
-        Statusbar.display("Polling: Moving successful");    
+        if (isMyChange){
+            MoveMode.postMove();
+            Statusbar.display("Move successful");
+        } else {
+            postPollingMove();   
+            if (!MoveMode.isOn)
+                Statusbar.display("Polling: Move successful"); 
+        }
+
+        $(document).trigger("addHistory", [{user: user, type: "move", id: id}]);
+        // $cell.effect("highlight", {color: "yellow"}, 10000);
     }
 
-    function handlePollingSwapWithUnscheduled(t){
+    function handlePollingSwapWithUnscheduled(t, isMyChange){
+        var user = isMyChange ? "" : "Anon";
 
+        var scheduledId = t.data.s2id;
+        var unscheduledId = t.data.s1id;
+
+        VisualOps.swapWithUnscheduled(allSessions[unscheduledId], allSessions[scheduledId]);
+
+        if (isMyChange){
+            MoveMode.postMove();
+            Statusbar.display("Swap with Unscheduled successful");
+        } else {
+            postPollingMove();   
+            if (!MoveMode.isOn)
+                Statusbar.display("Polling: Swap with Unscheduled successful"); 
+        }
     }
 
-    function handlePollingReorderPapers(t){
+    function handlePollingReorderPapers(t, isMyChange){
+        var user = isMyChange ? "" : "Anon";
         
     }
 
-    function handlePollingUnschedulePaper(t){
+    function handlePollingUnschedulePaper(t, isMyChange){
+        var user = isMyChange ? "" : "Anon";
         
     }
 
-    function handlePollingSwapPaper(t){
+    function handlePollingSwapPaper(t, isMyChange){
+        var user = isMyChange ? "" : "Anon";
         
     }
 
-    function handlePollingMovePaper(t){
+    function handlePollingMovePaper(t, isMyChange){
+        var user = isMyChange ? "" : "Anon";
         
     }
 
-    function handlePollingSwapWithUnscheduledPaper(t){
+    function handlePollingSwapWithUnscheduledPaper(t, isMyChange){
+        var user = isMyChange ? "" : "Anon";
         
     }
 

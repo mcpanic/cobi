@@ -180,20 +180,71 @@ var ViewMode = function() {
         if (id === -1)
             return;
 
-        var oldDate = allSessions[id].date;
-        var oldTime = allSessions[id].time;
-        var oldRoom = allSessions[id].room;
+        // var oldDate = allSessions[id].date;
+        // var oldTime = allSessions[id].time;
+        // var oldRoom = allSessions[id].room;
 
         // the backend unschedule session
         unscheduleSession(allSessions[id]);
         // the frontend unschedule session
-        VisualOps.unschedule(allSessions[id], oldDate, oldTime, oldRoom);
+        //VisualOps.unschedule(allSessions[id], oldDate, oldTime, oldRoom);
 
-        $(".selected").removeClass("selected");
-        Statusbar.display("Unschedule successful");
-        $(document).trigger("addHistory", [{user: "", type: "unschedule", id: id}]);
+        // $(".selected").removeClass("selected");
+        //Statusbar.display("Unschedule successful");
+        //$(document).trigger("addHistory", [{user: "", type: "unschedule", id: id}]);
 
-        postMove();    
+        //postMove();    
+    }
+
+
+    // HQ: Handles a lock request
+    function lockHandler(){
+        // TODO: write to history-links
+        var $session = $(".selected").first();
+        var id = getID($session);  
+        var date, time, room; 
+        if(id in allSessions){
+            lockSlot(allSessions[id].date, allSessions[id].time, allSessions[id].room);
+            //$session.data("popover").options.content = function(){
+            //    return getSessionDetail("scheduled", allSessions[id]);
+            //};
+            // $(document).trigger("addHistory", [{user: "", type: "lock", id: id}]);
+
+        } else {
+            lockSlot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"));
+            // $session.data("popover").options.content = function(){
+            //     // HQ: passing a slot for session (allows for isLocked check)
+            //     return getSessionDetail("empty", new slot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"), null));
+            // };
+            // $(document).trigger("addHistory", [{user: "", type: "lock", date: $session.attr("data-date"), time: $session.attr("data-time"), room: $session.attr("data-room")}]);
+        }
+        // $session.removeClass("selected").popover("hide");
+        //$session.find(".title").addClass("locked");
+    }
+
+    // HQ: handle an unlock request
+    function unlockHandler(){
+        // TODO: write to history-links
+        var $session = $(".selected").first();
+        var id = getID($session);  
+        if(id in allSessions){
+            unlockSlot(allSessions[id].date, allSessions[id].time, allSessions[id].room);
+            // $session.data("popover").options.content = function(){
+            //     return getSessionDetail("scheduled", allSessions[id]);
+            // };
+            //$(document).trigger("addHistory", [{user: "", type: "unlock", id: id}]);
+
+        }else{
+            unlockSlot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"));
+            // $session.data("popover").options.content = function(){
+            //     // HQ: passing a slot for session (allows for isLocked check)
+            //     return getSessionDetail("empty", new slot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"), null));
+            // };
+            //$(document).trigger("addHistory", [{user: "", type: "unlock", date: $session.attr("data-date"), time: $session.attr("data-time"), room: $session.attr("data-room")}]);
+        }
+
+        $session.removeClass("selected").popover("hide");
+        //$session.find(".title").removeClass("locked");
     }
 
      // Event handler for clicking an individual session
@@ -247,55 +298,6 @@ var ViewMode = function() {
         $(this).popover("show");          
     }
 
-    // HQ: Handles a lock request
-    function lockHandler(){
-        // TODO: write to history-links
-        var $session = $(".selected").first();
-        var id = getID($session);  
-        var date, time, room; 
-        if(id in allSessions){
-            lockSlot(allSessions[id].date, allSessions[id].time, allSessions[id].room);
-            //$session.data("popover").options.content = function(){
-            //    return getSessionDetail("scheduled", allSessions[id]);
-            //};
-            $(document).trigger("addHistory", [{user: "", type: "lock", id: id}]);
-
-        } else {
-            lockSlot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"));
-            // $session.data("popover").options.content = function(){
-            //     // HQ: passing a slot for session (allows for isLocked check)
-            //     return getSessionDetail("empty", new slot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"), null));
-            // };
-            $(document).trigger("addHistory", [{user: "", type: "lock", date: $session.attr("data-date"), time: $session.attr("data-time"), room: $session.attr("data-room")}]);
-        }
-        $session.removeClass("selected").popover("hide");
-        $session.find(".title").addClass("locked");
-    }
-
-    // HQ: handle an unlock request
-    function unlockHandler(){
-        // TODO: write to history-links
-        var $session = $(".selected").first();
-        var id = getID($session);  
-        if(id in allSessions){
-            unlockSlot(allSessions[id].date, allSessions[id].time, allSessions[id].room);
-            // $session.data("popover").options.content = function(){
-            //     return getSessionDetail("scheduled", allSessions[id]);
-            // };
-            $(document).trigger("addHistory", [{user: "", type: "unlock", id: id}]);
-
-        }else{
-            unlockSlot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"));
-            // $session.data("popover").options.content = function(){
-            //     // HQ: passing a slot for session (allows for isLocked check)
-            //     return getSessionDetail("empty", new slot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"), null));
-            // };
-            $(document).trigger("addHistory", [{user: "", type: "unlock", date: $session.attr("data-date"), time: $session.attr("data-time"), room: $session.attr("data-room")}]);
-        }
-
-        $session.removeClass("selected").popover("hide");
-        $session.find(".title").removeClass("locked");
-    }
 
     // Reset any change created in this view mode
     function destroy(){
