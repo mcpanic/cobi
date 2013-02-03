@@ -83,7 +83,7 @@ function slotIsEmpty($date, $time, $room, $mysqli){
 }
 
 function isScheduled($id, $mysqli){
-  $query = "SELECT id from schedule where id='$id' AND scheduled=1";
+  $query = "SELECT id from session where id='$id' AND scheduled=1";
   $result = mysqli_query($mysqli, $query);
   if(mysqli_num_rows($result) > 0){
     return true;
@@ -107,16 +107,19 @@ function unscheduleSession($date, $time, $room, $id, $mysqli){
 }
 
 function scheduleSession($date, $time, $room, $id, $mysqli){
-  if(slotIsEmpty($date, $time, $room) and !isScheduled($id)){
-    // add session to the schedule
-    $query = "UPDATE schedule SET id='$id' WHERE date='$date' AND time='$time' AND room ='$room'";
-    mysqli_query($mysqli, $query);
-    echo mysqli_error($mysqli);
-    
-    // change the session data so it is scheduled with room, time, date
-    $squery = "UPDATE session SET date='$date', time='$time', room='$room', scheduled=1 WHERE id='$id'";
-    mysqli_query($mysqli, $squery);
-    echo mysqli_error($mysqli);
+  //  if(slotIsEmpty($date, $time, $room)){// and 
+  if(!isScheduled($id, $mysqli)){
+    if(slotIsEmpty($date, $time, $room, $mysqli)){
+      // add session to the schedule
+      $query = "UPDATE schedule SET id='$id' WHERE date='$date' AND time='$time' AND room ='$room'";
+      mysqli_query($mysqli, $query);
+      echo mysqli_error($mysqli);
+      
+      // change the session data so it is scheduled with room, time, date
+      $squery = "UPDATE session SET date='$date', time='$time', room='$room', scheduled=1 WHERE id='$id'";
+      mysqli_query($mysqli, $squery);
+      echo mysqli_error($mysqli);
+    }
   }
 }
 
