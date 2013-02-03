@@ -981,7 +981,7 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
 	for(var i = 0; i < serverTransactions.length; i++){
 	    newTransactionIndices.push(transactions.length);
 	    //transactions.push(serverTransactions[i]);
-	    addServerTransaction(serverTransactions[i]);
+	    Transact.addServerTransaction(serverTransactions[i]);
 	}
     }else{
 	for(var i = 0; i < serverTransactions.length; i++){
@@ -989,7 +989,7 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
 	       parseInt(transactions[transactions.length -1]['id'])){
 		consistent = false;
 		newTransactionIndices.push(transactions.length);
-		addServerTransaction(serverTransactions[i]);
+		Transact.addServerTransaction(serverTransactions[i]);
 //		transactions.push(serverTransactions[i]);
 	    }
 	}

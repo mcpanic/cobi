@@ -36,17 +36,31 @@ function recordTransaction($uid, $type, $localHash, $data, $previous, $mysqli){
   }
 }
 
-function lockSlot($date, $time, $room, $mysqli){
-  $query = "UPDATE schedule SET locked=1 WHERE date='$date' AND time='$time' AND room ='$room'";
+function isLocked($date, $time, $room, $mysqli){
+  $query = "SELECT locked from schedule where date='$date' AND time='$time' AND room ='$room' AND locked=1";
   $result = mysqli_query($mysqli, $query);
-  echo mysqli_error($mysqli);
-}  
+  if(mysqli_num_rows($result) > 0){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function lockSlot($date, $time, $room, $mysqli){
+  if(!isLocked($date, $time, $room, $mysqli)){
+    $query = "UPDATE schedule SET locked=1 WHERE date='$date' AND time='$time' AND room ='$room'";
+    $result = mysqli_query($mysqli, $query);
+    echo mysqli_error($mysqli);
+  }  
+}
 
 function unlockSlot($date, $time, $room, $mysqli){
-  $query = "UPDATE schedule SET locked=0 WHERE date='$date' AND time='$time' AND room ='$room'";
-  $result = mysqli_query($mysqli, $query);
-  echo mysqli_error($mysqli);
-} 
+  if(isLocked($date, $time, $room, $mysqli)){
+    $query = "UPDATE schedule SET locked=0 WHERE date='$date' AND time='$time' AND room ='$room'";
+    $result = mysqli_query($mysqli, $query);
+    echo mysqli_error($mysqli);
+  } 
+}
 
 function unscheduleSession($date, $time, $room, $id, $mysqli){
   // remove the session from the schedule
@@ -423,6 +437,8 @@ case "schedulePaper":
  
 if(mysqli_affected_rows($mysqli) > 0){
   recordTransaction($uid, $type, $localHash, $data, $previous, $mysqli);
+}else{
+  echo json_encode($transaction);
 }
 
 $mysqli->close();
