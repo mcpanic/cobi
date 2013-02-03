@@ -57,6 +57,12 @@ var DataOps = function() {
 			    t.data.time, 
 			    t.data.room);
 	    break;
+	case 'move':
+	    scheduleSession(allSessions[t.data.id], 
+			    t.data.tdate, 
+			    t.data.ttime, 
+			    t.data.troom);
+	    break;
 	case 'swap':
 	    swapSessions(allSessions[t.data.s1id],
 			 allSessions[t.data.s2id]);
@@ -95,7 +101,7 @@ var DataOps = function() {
 				     allSubmissions[t.data.p2id]);
 	    break;
 	default: 
-	    console.log("Weird, nonexistent operation?");
+	    console.log("Weird, nonexistent operation? " + t.type);
 	}
     }
 
@@ -166,9 +172,9 @@ var DataOps = function() {
     function addSessionToSlot(s, date, time, room){
 	console.log("Test: adding session " + s.id + " to " + date + ", " + time + ", " + room);
 	schedule[date][time][room][s.id] = s;
-	s['date'] = date;
-	s['time'] = time;
-	s['room'] = room;
+	schedule[date][time][room][s.id]['date'] = date;
+	schedule[date][time][room][s.id]['time'] = time;
+	schedule[date][time][room][s.id]['room'] = room;
 	// todo doesn't deal with endTime
     }
     

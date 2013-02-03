@@ -62,69 +62,109 @@ function unlockSlot($date, $time, $room, $mysqli){
   } 
 }
 
+function sessionIsInSlot($date, $time, $room, $id, $mysqli){
+  $query = "SELECT id from schedule where date='$date' AND time='$time' AND room ='$room' AND id='$id'";
+  $result = mysqli_query($mysqli, $query);
+  if(mysqli_num_rows($result) > 0){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function slotIsEmpty($date, $time, $room, $mysqli){
+  $query = "SELECT id from schedule where date='$date' AND time='$time' AND room ='$room' AND id=''";
+  $result = mysqli_query($mysqli, $query);
+  if(mysqli_num_rows($result) > 0){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function isScheduled($id, $mysqli){
+  $query = "SELECT id from schedule where id='$id' AND scheduled=1";
+  $result = mysqli_query($mysqli, $query);
+  if(mysqli_num_rows($result) > 0){
+    return true;
+  }else{
+    return false;
+  }
+}
+
 function unscheduleSession($date, $time, $room, $id, $mysqli){
-  // remove the session from the schedule
-  $query = "UPDATE schedule SET id='' WHERE date='$date' AND time='$time' AND room ='$room' AND id='$id'";
-  mysqli_query($mysqli, $query);
-  echo mysqli_error($mysqli);
-  
-  // change the session data so it is unscheduled and does not have room, time, date
-  $squery = "UPDATE session SET date='', time='', room='', scheduled=0 WHERE id='$id'";
-  mysqli_query($mysqli, $squery);
-  echo mysqli_error($mysqli);
+  if(sessionIsInSlot($date, $time, $room, $id, $mysqli)){
+    // remove the session from the schedule
+    $query = "UPDATE schedule SET id='' WHERE date='$date' AND time='$time' AND room ='$room' AND id='$id'";
+    mysqli_query($mysqli, $query);
+    echo mysqli_error($mysqli);
+    
+    // change the session data so it is unscheduled and does not have room, time, date
+    $squery = "UPDATE session SET date='', time='', room='', scheduled=0 WHERE id='$id'";
+    mysqli_query($mysqli, $squery);
+    echo mysqli_error($mysqli);
+  }
 }
 
 function scheduleSession($date, $time, $room, $id, $mysqli){
-  // add session to the schedule
-  $query = "UPDATE schedule SET id='$id' WHERE date='$date' AND time='$time' AND room ='$room'";
-  mysqli_query($mysqli, $query);
-  echo mysqli_error($mysqli);
-  
-  // change the session data so it is scheduled with room, time, date
-  $squery = "UPDATE session SET date='$date', time='$time', room='$room', scheduled=1 WHERE id='$id'";
-  mysqli_query($mysqli, $squery);
-  echo mysqli_error($mysqli);
+  if(slotIsEmpty($date, $time, $room) and !isScheduled($id)){
+    // add session to the schedule
+    $query = "UPDATE schedule SET id='$id' WHERE date='$date' AND time='$time' AND room ='$room'";
+    mysqli_query($mysqli, $query);
+    echo mysqli_error($mysqli);
+    
+    // change the session data so it is scheduled with room, time, date
+    $squery = "UPDATE session SET date='$date', time='$time', room='$room', scheduled=1 WHERE id='$id'";
+    mysqli_query($mysqli, $squery);
+    echo mysqli_error($mysqli);
+  }
 }
 
 function moveSession($sdate, $stime, $sroom, $id, 
 		     $tdate, $ttime, $troom, $mysqli){
-  // move session from source to target in the schedule
-  $query = "UPDATE schedule SET id='$id' WHERE date='$tdate' AND time='$ttime' AND room ='$troom'";
-  mysqli_query($mysqli, $query);
-  echo mysqli_error($mysqli);
-
-  $query = "UPDATE schedule SET id='' WHERE date='$sdate' AND time='$stime' AND room ='$sroom'";
-  mysqli_query($mysqli, $query);
-  echo mysqli_error($mysqli);
-  
-  // change the session data so it is scheduled with target room, time, date
-  $squery = "UPDATE session SET date='$tdate', time='$ttime', room='$troom' WHERE id='$id'";
-  mysqli_query($mysqli, $squery);
-  echo mysqli_error($mysqli);
+  if(sessionIsInSlot($sdate, $stime, $sroom, $id, $mysqli) and slotIsEmpty($tdate, $ttime, $troom, $mysqli)){
+    // move session from source to target in the schedule
+    $query = "UPDATE schedule SET id='$id' WHERE date='$tdate' AND time='$ttime' AND room ='$troom'";
+    mysqli_query($mysqli, $query);
+    echo mysqli_error($mysqli);
+    
+    $query = "UPDATE schedule SET id='' WHERE date='$sdate' AND time='$stime' AND room ='$sroom'";
+    mysqli_query($mysqli, $query);
+    echo mysqli_error($mysqli);
+    
+    // change the session data so it is scheduled with target room, time, date
+    $squery = "UPDATE session SET date='$tdate', time='$ttime', room='$troom' WHERE id='$id'";
+    mysqli_query($mysqli, $squery);
+    echo mysqli_error($mysqli);
+  }
 }
 
 function swapSessions($s1date, $s1time, $s1room, $s1id, 
 		      $s2date, $s2time, $s2room, $s2id, 
 		      $mysqli){
-  // perform swap in the schedule
-  $s1query = "UPDATE schedule SET id='$s1id' WHERE date='$s2date' AND time='$s2time' AND room ='$s2room'";
-  mysqli_query($mysqli, $s1query);
-  echo mysqli_error($mysqli);
-  
-  $s2query = "UPDATE schedule SET id='$s2id' WHERE date='$s1date' AND time='$s1time' AND room ='$s1room'";
-  mysqli_query($mysqli, $s2query);
-  echo mysqli_error($mysqli);
-  
-  // change the session data so it is scheduled with room, time, date
-  $ss1query = "UPDATE session SET date='$s2date', time='$s2time', room='$s2room' WHERE id='$s1id'";
-  mysqli_query($mysqli, $ss1query);
-  echo mysqli_error($mysqli);
-  
-  $ss2query = "UPDATE session SET date='$s1date', time='$s1time', room='$s1room' WHERE id='$s2id'";
-  mysqli_query($mysqli, $ss2query);
-  echo mysqli_error($mysqli);
+  if(sessionIsInSlot($s1date, $s1time, $s1room, $s1id, $mysqli) and 
+     sessionIsInSlot($s2date, $s2time, $s2room, $s2id, $mysqli)){
+    
+    // perform swap in the schedule
+    $s1query = "UPDATE schedule SET id='$s1id' WHERE date='$s2date' AND time='$s2time' AND room ='$s2room'";
+    mysqli_query($mysqli, $s1query);
+    echo mysqli_error($mysqli);
+    
+    $s2query = "UPDATE schedule SET id='$s2id' WHERE date='$s1date' AND time='$s1time' AND room ='$s1room'";
+    mysqli_query($mysqli, $s2query);
+    echo mysqli_error($mysqli);
+    
+    // change the session data so it is scheduled with room, time, date
+    $ss1query = "UPDATE session SET date='$s2date', time='$s2time', room='$s2room' WHERE id='$s1id'";
+    mysqli_query($mysqli, $ss1query);
+    echo mysqli_error($mysqli);
+    
+    $ss2query = "UPDATE session SET date='$s1date', time='$s1time', room='$s1room' WHERE id='$s2id'";
+    mysqli_query($mysqli, $ss2query);
+    echo mysqli_error($mysqli);
+  }
 }
-
+  
 function swapWithUnscheduledSession($s1id, 
 				    $s2date, $s2time, $s2room, $s2id, 
 				    $mysqli){
