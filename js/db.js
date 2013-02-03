@@ -27,6 +27,7 @@ var Transact = function(){
     function completedLocalTransaction(t){
 	transactions.push(t);
 	// mark local one as done (give it the ID?)
+	console.log(t);
 	for (var i = 0; i < localTransactions.length; i++){
 	    if (localTransactions[i].localHash == t.localHash) {
 		localTransactions[i].id = t.id;
@@ -36,7 +37,7 @@ var Transact = function(){
     }
     
     function failedLocalTransaction(t){
-	alert(JSON.stringify(t));
+	console.log("FAILED TRANSACTION: " + JSON.stringify(t));
     }
     
     return {
@@ -59,10 +60,13 @@ DB.prototype.addTransaction = function(t){
 	data: { transaction: JSON.stringify(t)},
 	url: "./php/changeSchedule.php",
 	success: function(m){		
-	    Transact.completedLocalTransaction(m);
+	    if(m.id != null){
+		Transact.completedLocalTransaction(m);
+	    }else{
+		Transact.failedLocalTransaction(m);
+	    }
  	},
 	error : function(m){
-	    Transact.failedLocalTransaction(m);
 	},
 	dataType: "json"
     });
