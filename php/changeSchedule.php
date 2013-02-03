@@ -361,7 +361,7 @@ function swapWithUnscheduledPaper($p1id, $s2id, $p2id, $mysqli){
   }
 }
 
-function movePaper($s1id, $p1id, $s2id, $mysqli){
+function movePaper($s1id, $p1id, $s2id, $pos, $mysqli){
   if(papersAreInSession($s1id, array($p1id), $mysqli)){
     // change the session data so each session has the right paper
     $s1query = "SELECT submissions from session where id='$s1id'";
@@ -388,7 +388,13 @@ function movePaper($s1id, $p1id, $s2id, $mysqli){
     $row = $result2->fetch_assoc();
     if($row != null){
       $s2subs = explode(",", $row["submissions"]);
-      array_unshift($s2subs, $p1id);
+      if($pos <= 0){
+	array_unshift($s2subs, $p1id);
+      }else if($pos >= count($s2subs)){
+	array_push($s2subs, $p1id);
+      }else{//insert in the middle
+	array_splice($s2subs, $pos, 0, $p1id);
+      }
       $s2newsubs = implode(",", $s2subs);
       
       $s2upquery = "UPDATE session SET submissions='$s2newsubs' WHERE id='$s2id'";    
@@ -435,7 +441,7 @@ function unschedulePaper($sid, $pid, $mysqli){
   }
 }
 
-function schedulePaper($sid, $pid, $mysqli){
+function schedulePaper($sid, $pid, $pos, $mysqli){
   if(!isScheduledPaper($pid, $mysqli)){
     // change the session data so each session has the right paper
     $s1query = "SELECT submissions from session where id='$sid'";
@@ -446,7 +452,14 @@ function schedulePaper($sid, $pid, $mysqli){
     $row = $result1->fetch_assoc();
     if($row != null){
       $s1subs = explode(",", $row["submissions"]);
-      array_unshift($s1subs, $pid);
+      if($pos <= 0){
+	array_unshift($s1subs, $pid);
+      }else if($pos >= count($s1subs)){
+	array_push($s1subs, $pid);
+      }else{//insert in the middle
+	array_splice($s1subs, $pos, 0, $pid);
+      }
+
       $s1newsubs = implode(",", $s1subs);
       
       $s1upquery = "UPDATE session SET submissions='$s1newsubs' WHERE id='$sid'";    
@@ -558,7 +571,8 @@ case "movePaper":
   $s1id = mysqli_real_escape_string($mysqli, $transaction['data']['s1id']);
   $p1id = mysqli_real_escape_string($mysqli, $transaction['data']['p1id']);
   $s2id = mysqli_real_escape_string($mysqli, $transaction['data']['s2id']);
-  movePaper($s1id, $p1id, $s2id, $mysqli);
+  $pos = $transaction['data']['pos'];
+  movePaper($s1id, $p1id, $s2id, $pos, $mysqli);
   break;
 case "unschedulePaper":
   $sid = mysqli_real_escape_string($mysqli, $transaction['data']['sid']);
@@ -568,7 +582,8 @@ case "unschedulePaper":
 case "schedulePaper":
   $sid = mysqli_real_escape_string($mysqli, $transaction['data']['sid']);
   $pid = mysqli_real_escape_string($mysqli, $transaction['data']['pid']);
-  schedulePaper($sid, $pid, $mysqli);
+  $pos = $transaction['data']['pos'];
+  schedulePaper($sid, $pid, $pos, $mysqli);
   break;
 } 
  
