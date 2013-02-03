@@ -20,12 +20,13 @@ var Transact = function(){
 	if(transactions.length == 0 || t.id > transactions[transactions.length - 1].id){
 	    transactions.push(t);
 	    DataOps.handleTransaction(t); // TODO: check for case where this couldn't be applied
-	    $(document).trigger('transactionUpdate', [localTransactions[localTransactions.length -1]]);	
+	    $(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);	
 	}else{ // must be some action I did that is already incorporated?
 	}
 	return;
     }
     function completedLocalTransaction(t){
+	// add server's changes, and 
 	transactions.push(t);
 	// mark local one as done (give it the ID?)
 	console.log('this was accepted:' + JSON.stringify(t));
@@ -54,11 +55,19 @@ var Transact = function(){
 	}
     }
     
+    function lastRecordedTransaction(){
+	var transactionId = 0;
+	if(transactions.length > 0) 
+	    transactionId = transactions[transactions.length -1]['id'];
+	return transactionId;
+    }
+
     return {
 	addTransaction: addTransaction,
 	addServerTransaction: addServerTransaction,
 	completedLocalTransaction: completedLocalTransaction,
-	failedLocalTransaction: failedLocalTransaction
+	failedLocalTransaction: failedLocalTransaction,
+	lastRecordedTransaction: lastRecordedTransaction
     };
 }();
 
@@ -72,14 +81,23 @@ DB.prototype.addTransaction = function(t){
     $.ajax({
  	async: true,
 	type: 'POST',
-	data: { transaction: JSON.stringify(t)},
+	data: { transaction: JSON.stringify(t),
+		lastKnownTransaction: Transact.lastRecordedTransaction()},
 	url: "./php/changeSchedule.php",
 	success: function(m){		
 	    console.log("returned transaction... " + JSON.stringify(m));
-	    if(m.id != null){
-		Transact.completedLocalTransaction(m);
+	    if(m['transaction'].id != null){
+		// add server transactions 
+		// (TODO: assuming no rollback needed)
+		for(var i = 0; i < m['newTransactions'].length; i++){
+		    Transact.addServerTransaction(m['newTransactions'][i]);
+		}
+		Transact.completedLocalTransaction(m['transaction']);
 	    }else{
-		Transact.failedLocalTransaction(m);
+		Transact.failedLocalTransaction(m['transaction']);
+		for(var i = 0; i < m['newTransactions'].length; i++){
+		    Transact.addServerTransaction(m['newTransactions'][i]);
+		}
 	    }
  	},
 	error : function(m){

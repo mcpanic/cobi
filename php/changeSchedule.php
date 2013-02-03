@@ -34,7 +34,7 @@ function recordTransaction($uid, $type, $previousType, $localHash, $data, $previ
   if($row != null){
     $row["data"] = json_decode($row["data"], true);
     $row["previous"] = json_decode($row["previous"], true);
-    echo json_encode($row);
+    return $row;
   }
 }
 
@@ -466,6 +466,8 @@ function schedulePaper($sid, $pid, $mysqli){
 
 /// end paper level
 $transaction = json_decode($_POST['transaction'], true);
+$lastKnownTransaction = $_POST['lastKnownTransaction'];
+
 $type = $transaction['type'];
 $previousType = $transaction['previousType'];
 $uid = mysqli_real_escape_string($mysqli, $transaction['uid']);
@@ -570,10 +572,24 @@ case "schedulePaper":
   break;
 } 
  
+// Get new transactions from server
+$transQ = "select id, transactions.uid, transactions.type, transactions.previousType, localHash, data, previous, name from transactions LEFT JOIN (users) ON (users.uid=transactions.uid) where id > $lastKnownTransaction order by id DESC";
+$transTable =  mysqli_query($mysqli, $transQ);
+echo mysqli_error($mysqli);
+$newTransactions = array();
+
+while ($row = $transTable->fetch_assoc()) {
+  $row["data"] = json_decode($row["data"], true);
+  $row["previous"] = json_decode($row["previous"], true);
+  array_unshift($newTransactions, $row);
+}
+
 if(!$GLOBALS['failedTransaction']){ //;mysqli_affected_rows($mysqli) > 0){
-  recordTransaction($uid, $type, $previousType, $localHash, $data, $previous, $mysqli);
+  echo json_encode(array('transaction' => recordTransaction($uid, $type, $previousType, $localHash, $data, $previous, $mysqli),
+			 'newTransactions' => $newTransactions));
 }else{
-  echo json_encode($transaction);
+  echo json_encode(array('transaction' => $transaction,
+			 'newTransactions' => $newTransactions));
 }
 
 $mysqli->close();
