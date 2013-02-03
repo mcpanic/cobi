@@ -162,6 +162,7 @@ DB.prototype.toggleSlotLock = function(date, time, room, lock, uid){
 	    }, 
 	    url: "./php/changeSchedule.php",
 	    success: function(m){
+	    	console.log("unscheduleSession success", m);
 		transactions.push(m);
 		$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);
  	    },

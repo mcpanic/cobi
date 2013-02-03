@@ -5,7 +5,7 @@ var MoveMode = function() {
 
     // Initialize the view mode 
     function initialize(moveType, pid){
-        console.log("PaperID", pid, pid == "");
+        //console.log("PaperID", pid, pid == "");
         isOn = true;
         type = moveType;
         paperId = pid;
@@ -78,7 +78,7 @@ var MoveMode = function() {
 
         var $selection = $(".move-dst-selected");
         $(".move-dst-selected").removeClass("move-dst-selected").popover("hide");   
-        console.log("slotClick", $selection[0] == $(this)[0], $(this).hasClass("unavailable"), !$(this).hasClass("proposed-swap"));
+        //console.log("slotClick", $selection[0] == $(this)[0], $(this).hasClass("unavailable"), !$(this).hasClass("proposed-swap"));
         // if reselected, do nothing.
         if ($selection[0] == $(this)[0])
            return;
@@ -279,7 +279,7 @@ var MoveMode = function() {
             if (swapValues[i].target.session === null){
                 if (typeof swapValues[i].target.date !== "undefined" && typeof swapValues[i].target.time !== "undefined" && typeof swapValues[i].target.room !== "undefined"){
                     $cell = findCellByDateTimeRoom(swapValues[i].target.date, swapValues[i].target.time, swapValues[i].target.room);
-                    console.log("runPropose", i, swapValues[i]);
+                    //console.log("runPropose", i, swapValues[i]);
                     $cell.addClass("proposed-swap"); //.data("title", "Empty slot");
                 }
 
@@ -473,13 +473,13 @@ var MoveMode = function() {
         if (typeof $(this).attr("data-session-id") === "undefined") {   
            $session = $(".move-src-selected").first();
            $emptySlot = findCellByDateTimeRoom($(this).attr("data-date"), $(this).attr("data-time"), $(this).attr("data-room"));
-           console.log("case1", $session, $emptySlot, $(this), $(this).attr("data-date"), $(this).attr("data-time"), $(this).attr("data-room"));
+           //console.log("case1", $session, $emptySlot, $(this), $(this).attr("data-date"), $(this).attr("data-time"), $(this).attr("data-room"));
         // src: empty, dst: unscheduled
         } else { 
            var session_id = $(this).attr("data-session-id");
            $session = findCellByID(session_id);
            $emptySlot = $(".move-src-selected").first();
-           console.log("case2", $session, $emptySlot);
+           //console.log("case2", $session, $emptySlot);
         }
 
         

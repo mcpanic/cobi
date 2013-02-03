@@ -8,9 +8,43 @@ var Polling = function() {
     // Add event handlers to each sidebar item
     function bindEvents(){
         $(document).on("serverScheduleChange", scheduleChangeHandler);
+        $(document).on("transactionUpdate", transactionUpdateHandler);
     }
 
+    function transactionUpdateHandler(event, t){
+        console.log("transaction received", t, t.data);
+        // if uid == my id, changes are local.
 
+        // if uid != my id, changes are remotely made.
+        //type: event type, uid: user who made the change, data: object
+
+        // TODO: swapWithUnscheduled handler should be added.
+        if (t.type == "lock"){
+            handlePollingLock(t);
+        } else if (t.type == "unschedule"){
+            handlePollingUnschedule(t);
+        } else if (t.type == "schedule"){
+            handlePollingSchedule(t);
+        } else if (t.type == "swap"){
+            handlePollingSwap(t);
+        } else if (t.type == "move"){
+            handlePollingMove(t);
+        } else if (t.type == "swapWithUnscheduled"){
+            handlePollingSwapWithUnscheduled(t);
+        } else if (t.type == "reorderPapers"){
+            handlePollingReorderPapers(t);
+        } else if (t.type == "unschedulePaper"){
+            handlePollingUnschedulePaper(t);
+        } else if (t.type == "swapPaper"){
+            handlePollingSwapPaper(t);
+        } else if (t.type == "movePaper"){
+            handlePollingMovePaper(t);
+        } else if (t.type == "swapWithUnscheduledPaper"){
+            handlePollingSwapWithUnscheduledPaper(t);
+        }
+        postPollingMove();        
+    }
+/*
     function scheduleChangeHandler(event, newTransactionIndices){
         console.log("data", newTransactionIndices);
         $.each(newTransactionIndices, function(index, i){
@@ -31,7 +65,7 @@ var Polling = function() {
             postPollingMove();
         });
     }
-
+*/
 
     function postPollingMove(){
         updateUnscheduledCount();
@@ -143,6 +177,31 @@ var Polling = function() {
         VisualOps.swapWithEmpty(allSessions[id], $emptySlot, t.data.sdate, t.data.stime, t.data.sroom);
         Statusbar.display("Polling: Moving successful");    
     }
+
+    function handlePollingSwapWithUnscheduled(t){
+
+    }
+
+    function handlePollingReorderPapers(t){
+        
+    }
+
+    function handlePollingUnschedulePaper(t){
+        
+    }
+
+    function handlePollingSwapPaper(t){
+        
+    }
+
+    function handlePollingMovePaper(t){
+        
+    }
+
+    function handlePollingSwapWithUnscheduledPaper(t){
+        
+    }
+
 
     return {
         initialize: initialize

@@ -168,7 +168,7 @@ var ViewMode = function() {
         if (event.data.type == "paper-scheduled" || event.data.type == "paper-unscheduled")
             pid = $(this).parent().attr("id");
 
-        console.log("pid", pid);
+        //console.log("pid", pid);
         // Don't need the actual target information because .selected detects this.
         MoveMode.initialize(event.data.type, pid);
     }
