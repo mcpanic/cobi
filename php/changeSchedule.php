@@ -17,76 +17,12 @@ function isAdmin($uid, $mysqli){
   return False;
 }
 
-function performUndo($mysqli){
-  $query = "select * from transactions order by id DESC limit 1";
-  $result = mysqli_query($mysqli, $query);  
-
-  
-  $row = $result->fetch_assoc();
-  if($row == null){
-    return;
-  }
-  $previous = json_decode($row["previous"], true);    
-  
-  if($row["type"] == "lock"){
-    updateLock($previous["lock"], 
-	       $previous["date"],
-	       $previous["time"],
-	       $previous["room"],
-	       $mysqli);
-  }else if($row["type"] == "unschedule"){
-    scheduleSession($previous["date"], 
-		    $previous["time"], 
-		    $previous["room"], 
-		    $previous["id"], 
-		    $mysqli);
-  }else if($row["type"] == "schedule"){
-    unscheduleSession($previous["date"], 
-		      $previous["time"], 
-		      $previous["room"], 
-		      $previous["id"], 
-		      $mysqli);
-  }else if($row["type"] == "swap"){
-    swapSessions($previous["s1date"], 
-		 $previous["s1time"], 
-		 $previous["s1room"], 
-		 $previous["s1id"], 
-		 $previous["s2date"], 
-		 $previous["s2time"], 
-		 $previous["s2room"], 
-		 $previous["s2id"], 
-		 $mysqli);
-  }else if($row["type"] == "swapWithUnscheduled"){ // TODO: check this case
-    swapWithUnscheduledSession($previous["s1id"], 
-		 $previous["s2date"], 
-		 $previous["s2time"], 
-		 $previous["s2room"], 
-		 $previous["s2id"], 
-		 $mysqli);
-  }else if($row["type"] == "move"){
-    moveSession($previous["sdate"],
-		$previous["stime"],
-		$previous["sroom"],
-		$previous["id"],
-		$previous["tdate"],
-		$previous["ttime"],
-		$previous["troom"],
-		$mysqli);
-  }
-
-  // remove the last transaction
-  $query = "DELETE FROM transactions order by id DESC limit 1";
-  $result = mysqli_query($mysqli, $query);
-  
-  // return data about what was done
-}
-
-function recordTransaction($uid, $type, $data, $previous, $mysqli){
-  $trans = "INSERT into transactions (uid, type, data, previous) VALUES ('$uid', '$type', '$data', '$previous')";
+function recordTransaction($uid, $type, $localHash, $data, $previous, $mysqli){
+  $trans = "INSERT into transactions (uid, type, localHash, data, previous) VALUES ('$uid', '$type', '$localHash', '$data', '$previous')";
   mysqli_query($mysqli, $trans); 
   echo mysqli_error($mysqli); 
   
-  $query = "select id, transactions.uid, transactions.type, data, previous, name from transactions LEFT JOIN (users) ON (users.uid=transactions.uid) order by id DESC limit 1";
+  $query = "select id, transactions.uid, transactions.type, localHash, data, previous, name from transactions LEFT JOIN (users) ON (users.uid=transactions.uid) order by id DESC limit 1";
   //  $query = "select * from transactions order by id DESC limit 1";
   $result = mysqli_query($mysqli, $query);  
   echo mysqli_error($mysqli); 
@@ -100,11 +36,17 @@ function recordTransaction($uid, $type, $data, $previous, $mysqli){
   }
 }
 
-function updateLock($lock, $date, $time, $room, $mysqli){
-  $query = "UPDATE schedule SET locked=$lock WHERE date='$date' AND time='$time' AND room ='$room'";
+function lockSlot($date, $time, $room, $mysqli){
+  $query = "UPDATE schedule SET locked=1 WHERE date='$date' AND time='$time' AND room ='$room'";
   $result = mysqli_query($mysqli, $query);
   echo mysqli_error($mysqli);
 }  
+
+function unlockSlot($date, $time, $room, $mysqli){
+  $query = "UPDATE schedule SET locked=0 WHERE date='$date' AND time='$time' AND room ='$room'";
+  $result = mysqli_query($mysqli, $query);
+  echo mysqli_error($mysqli);
+} 
 
 function unscheduleSession($date, $time, $room, $id, $mysqli){
   // remove the session from the schedule
@@ -150,7 +92,6 @@ function moveSession($sdate, $stime, $sroom, $id,
 function swapSessions($s1date, $s1time, $s1room, $s1id, 
 		      $s2date, $s2time, $s2room, $s2id, 
 		      $mysqli){
-  
   // perform swap in the schedule
   $s1query = "UPDATE schedule SET id='$s1id' WHERE date='$s2date' AND time='$s2time' AND room ='$s2room'";
   mysqli_query($mysqli, $s1query);
@@ -171,14 +112,13 @@ function swapSessions($s1date, $s1time, $s1room, $s1id,
 }
 
 function swapWithUnscheduledSession($s1id, 
-			      $s2date, $s2time, $s2room, $s2id, 
-			      $mysqli){
-  
+				    $s2date, $s2time, $s2room, $s2id, 
+				    $mysqli){
   // perform swap in the schedule
   $s1query = "UPDATE schedule SET id='$s1id' WHERE date='$s2date' AND time='$s2time' AND room ='$s2room'";
   mysqli_query($mysqli, $s1query);
   echo mysqli_error($mysqli);
-    
+  
   // change the session data so it is scheduled with room, time, date
   $ss1query = "UPDATE session SET date='$s2date', time='$s2time', room='$s2room', scheduled=1 WHERE id='$s1id'";
   mysqli_query($mysqli, $ss1query);
@@ -190,8 +130,6 @@ function swapWithUnscheduledSession($s1id,
 }
 
 /// start paper level functions
-
-
 function reorderPapers($id, $paperOrder, $mysqli){
   // change the session data so it is scheduled with room, time, date
   $query = "UPDATE session SET submissions='$paperOrder' WHERE id='$id'";
@@ -220,7 +158,7 @@ function swapPapers($s1id, $p1id, $s2id, $p2id, $mysqli){
     mysqli_query($mysqli, $s1upquery);
     echo mysqli_error($mysqli);
   }
-
+  
   $s2query = "SELECT submissions from session where id='$s2id'";
   $result2 = mysqli_query($mysqli, $s2query);
   echo mysqli_error($mysqli);
@@ -246,14 +184,14 @@ function swapPapers($s1id, $p1id, $s2id, $p2id, $mysqli){
   $e1query = "UPDATE entity SET session='$s1id' WHERE id='$p2id'";  
   mysqli_query($mysqli, $e1query);
   echo mysqli_error($mysqli);
-
+  
   $e2query = "UPDATE entity SET session='$s2id' WHERE id='$p1id'";  
   mysqli_query($mysqli, $e2query);
   echo mysqli_error($mysqli);
 }
 
 function swapWithUnscheduledPaper($p1id, $s2id, $p2id, $mysqli){
-
+  
   $s2query = "SELECT submissions from session where id='$s2id'";
   $result2 = mysqli_query($mysqli, $s2query);
   echo mysqli_error($mysqli);
@@ -279,7 +217,7 @@ function swapWithUnscheduledPaper($p1id, $s2id, $p2id, $mysqli){
   $e1query = "UPDATE entity SET session='null' WHERE id='$p2id'";  
   mysqli_query($mysqli, $e1query);
   echo mysqli_error($mysqli);
-
+  
   $e2query = "UPDATE entity SET session='$s2id' WHERE id='$p1id'";  
   mysqli_query($mysqli, $e2query);
   echo mysqli_error($mysqli);
@@ -302,7 +240,7 @@ function movePaper($s1id, $p1id, $s2id, $mysqli){
     mysqli_query($mysqli, $s1upquery);
     echo mysqli_error($mysqli);
   }
-
+  
   $s2query = "SELECT submissions from session where id='$s2id'";
   $result2 = mysqli_query($mysqli, $s2query);
   echo mysqli_error($mysqli);
@@ -378,328 +316,114 @@ function schedulePaper($sid, $pid, $mysqli){
 
 
 /// end paper level
+$transaction = json_decode($_POST['transaction'], true);
+$type = $transaction['type'];
+$uid = mysqli_real_escape_string($mysqli, $transaction['uid']);
+$localHash = mysqli_real_escape_string($mysqli, $transaction['localHash']);
+$data = mysqli_real_escape_string($mysqli, json_encode($transaction['data']));
+$previous = mysqli_real_escape_string($mysqli, json_encode($transaction['previous']));
 
-$type = $_POST['type'];
-$uid = mysqli_real_escape_string($mysqli, $_POST['uid']);
-
-if(strcmp("undo", $type) == 0){
-  // check whether user has undo privileges
-  if(isAdmin($uid, $mysqli)){
-    performUndo($mysqli);
-  }  
-}
-
-if(strcmp("lock", $type) == 0){
-  $lock = 1;
-  if($_POST['lock'] == "false"){
-    $lock = 0;
-  }
-  $date = mysqli_real_escape_string($mysqli, $_POST['date']);
-  $time = mysqli_real_escape_string($mysqli, $_POST['time']);
-  $room = mysqli_real_escape_string($mysqli, $_POST['room']);
-  
-  updateLock($lock, $date, $time, $room, $mysqli);
-  
-  if(mysqli_affected_rows($mysqli) > 0){
-    $data = json_encode(array(
-			      "lock" => $lock,
-			      "date" => $date,
-			      "time" => $time,
-			      "room" => $room
-			      ));
-    
-    $previous = json_encode(array(
-				  "lock" => 1-$lock,
-				  "date" => $date,
-				  "time" => $time,
-				  "room" => $room
-				  ));
-    
-    recordTransaction($uid, $type, $data, $previous, $mysqli);
-  }
-}
-
-if(strcmp("unschedule", $type) == 0){
-  $id = mysqli_real_escape_string($mysqli, $_POST['id']);
-  $date = mysqli_real_escape_string($mysqli, $_POST['date']);
-  $time = mysqli_real_escape_string($mysqli, $_POST['time']);
-  $room = mysqli_real_escape_string($mysqli, $_POST['room']);
-
+switch ($type){
+case "unlock":
+  $date = mysqli_real_escape_string($mysqli, $transaction['data']['date']);
+  $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
+  $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
+  unlockSlot($date, $time, $room, $mysqli);
+  break;
+case "lock":
+  $date = mysqli_real_escape_string($mysqli, $transaction['data']['date']);
+  $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
+  $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
+  lockSlot($date, $time, $room, $mysqli);
+  break;
+case "unschedule":
+  $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
+  $date = mysqli_real_escape_string($mysqli, $transaction['data']['date']);
+  $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
+  $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
   unscheduleSession($date, $time, $room, $id, $mysqli);
-  
-  $data = json_encode(array(
-			    "id" => $id,
-			    "date" => $date,
-			    "time" => $time,
-			    "room" => $room
-			    ));
-  
-  $previous = json_encode(array(
-				"id" => $id,
-				"date" => $date,
-				"time" => $time,
-				"room" => $room
-				));
-  
-  recordTransaction($uid, $type, $data, $previous, $mysqli);
-}
-
-
-if(strcmp("schedule", $type) == 0){
-  $id = mysqli_real_escape_string($mysqli, $_POST['id']);
-  $date = mysqli_real_escape_string($mysqli, $_POST['date']);
-  $time = mysqli_real_escape_string($mysqli, $_POST['time']);
-  $room = mysqli_real_escape_string($mysqli, $_POST['room']);
-  
+  break;
+case "schedule":
+  $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
+  $date = mysqli_real_escape_string($mysqli, $transaction['data']['date']);
+  $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
+  $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
   scheduleSession($date, $time, $room, $id, $mysqli);
-  
-  $data = json_encode(array(
-			    "id" => $id,
-			    "date" => $date,
-			    "time" => $time,
-			    "room" => $room
-			    ));
-  
-  $previous = json_encode(array(
-				"id" => $id,
-				"date" => $date,
-				"time" => $time,
-				"room" => $room
-				));
-  recordTransaction($uid, $type, $data, $previous, $mysqli);
-}
-
-if(strcmp("move", $type) == 0){
-  $id = mysqli_real_escape_string($mysqli, $_POST['id']);
-  $sdate = mysqli_real_escape_string($mysqli, $_POST['sdate']);
-  $stime = mysqli_real_escape_string($mysqli, $_POST['stime']);
-  $sroom = mysqli_real_escape_string($mysqli, $_POST['sroom']);
-  $tdate = mysqli_real_escape_string($mysqli, $_POST['tdate']);
-  $ttime = mysqli_real_escape_string($mysqli, $_POST['ttime']);
-  $troom = mysqli_real_escape_string($mysqli, $_POST['troom']);
-
+  break;
+case "move":
+  $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
+  $sdate = mysqli_real_escape_string($mysqli, $transaction['data']['sdate']);
+  $stime = mysqli_real_escape_string($mysqli, $transaction['data']['stime']);
+  $sroom = mysqli_real_escape_string($mysqli, $transaction['data']['sroom']);
+  $tdate = mysqli_real_escape_string($mysqli, $transaction['data']['tdate']);
+  $ttime = mysqli_real_escape_string($mysqli, $transaction['data']['ttime']);
+  $troom = mysqli_real_escape_string($mysqli, $transaction['data']['troom']);
   moveSession($sdate, $stime, $sroom, $id, 
 	      $tdate, $ttime, $troom, $mysqli);
-  
-  $data = json_encode(array(
-			    "sdate" => $sdate,
-			    "stime" => $stime,
-			    "sroom" => $sroom,
-			    "id" => $id,
-			    "tdate" => $tdate,
-			    "ttime" => $ttime,
-			    "troom" => $troom
-			    ));
-  
-  $previous = json_encode(array(
-			    "sdate" => $tdate,
-			    "stime" => $ttime,
-			    "sroom" => $troom,
-			    "id" => $id,
-			    "tdate" => $sdate,
-			    "ttime" => $stime,
-			    "troom" => $sroom
-				));
-
-  recordTransaction($uid, $type, $data, $previous, $mysqli);
-}
-
-if(strcmp("swap", $type) == 0){
-  $s1id = mysqli_real_escape_string($mysqli, $_POST['s1id']);
-  $s1date = mysqli_real_escape_string($mysqli, $_POST['s1date']);
-  $s1time = mysqli_real_escape_string($mysqli, $_POST['s1time']);
-  $s1room = mysqli_real_escape_string($mysqli, $_POST['s1room']);
-
-  $s2id = mysqli_real_escape_string($mysqli, $_POST['s2id']);
-  $s2date = mysqli_real_escape_string($mysqli, $_POST['s2date']);
-  $s2time = mysqli_real_escape_string($mysqli, $_POST['s2time']);
-  $s2room = mysqli_real_escape_string($mysqli, $_POST['s2room']);
-
+  break;
+case "swap":
+  $s1id = mysqli_real_escape_string($mysqli, $transaction['data']['s1id']);
+  $s1date = mysqli_real_escape_string($mysqli, $transaction['data']['s1date']);
+  $s1time = mysqli_real_escape_string($mysqli, $transaction['data']['s1time']);
+  $s1room = mysqli_real_escape_string($mysqli, $transaction['data']['s1room']);
+  $s2id = mysqli_real_escape_string($mysqli, $transaction['data']['s2id']);
+  $s2date = mysqli_real_escape_string($mysqli, $transaction['data']['s2date']);
+  $s2time = mysqli_real_escape_string($mysqli, $transaction['data']['s2time']);
+  $s2room = mysqli_real_escape_string($mysqli, $transaction['data']['s2room']);
   swapSessions($s1date, $s1time, $s1room, $s1id, 
 	       $s2date, $s2time, $s2room, $s2id, 
 	       $mysqli);
-  
-
-  $data = json_encode(array(
-			    "s1id" => $s1id,
-			    "s1date" => $s1date,
-			    "s1time" => $s1time,
-			    "s1room" => $s1room,
-			    "s2id" => $s2id,
-			    "s2date" => $s2date,
-			    "s2time" => $s2time,
-			    "s2room" => $s2room
-			    ));
-  
-  $previous = json_encode(array(
-			    "s1id" => $s2id,
-			    "s1date" => $s1date,
-			    "s1time" => $s1time,
-			    "s1room" => $s1room,
-			    "s2id" => $s1id,
-			    "s2date" => $s2date,
-			    "s2time" => $s2time,
-			    "s2room" => $s2room
-				));
-
-  recordTransaction($uid, $type, $data, $previous, $mysqli);
-}
-
-if(strcmp("swapWithUnscheduled", $type) == 0){
-  $s1id = mysqli_real_escape_string($mysqli, $_POST['s1id']);
-  $s2id = mysqli_real_escape_string($mysqli, $_POST['s2id']);
-  $s2date = mysqli_real_escape_string($mysqli, $_POST['s2date']);
-  $s2time = mysqli_real_escape_string($mysqli, $_POST['s2time']);
-  $s2room = mysqli_real_escape_string($mysqli, $_POST['s2room']);
-
+  break;
+case "swapWithUnscheduled":
+  $s1id = mysqli_real_escape_string($mysqli, $transaction['data']['s1id']);
+  $s2id = mysqli_real_escape_string($mysqli, $transaction['data']['s2id']);
+  $s2date = mysqli_real_escape_string($mysqli, $transaction['data']['s2date']);
+  $s2time = mysqli_real_escape_string($mysqli, $transaction['data']['s2time']);
+  $s2room = mysqli_real_escape_string($mysqli, $transaction['data']['s2room']);
   swapWithUnscheduledSession($s1id, 
 		       $s2date, $s2time, $s2room, $s2id, 
 		       $mysqli);
-  
-
-  $data = json_encode(array(
-			    "s1id" => $s1id,
-			    "s2id" => $s2id,
-			    "s2date" => $s2date,
-			    "s2time" => $s2time,
-			    "s2room" => $s2room
-			    ));
-  
-  $previous = json_encode(array(
-			    "s1id" => $s2id,
-			    "s2id" => $s1id,
-			    "s2date" => $s2date,
-			    "s2time" => $s2time,
-			    "s2room" => $s2room
-				));
-
-  recordTransaction($uid, $type, $data, $previous, $mysqli);
-}
-
-if(strcmp("reorderPapers", $type) == 0){
-  $id = mysqli_real_escape_string($mysqli, $_POST['id']);
-  $newPaperOrder = mysqli_real_escape_string($mysqli, $_POST['newPaperOrder']);
-  $previousPaperOrder = mysqli_real_escape_string($mysqli, $_POST['previousPaperOrder']);
-
+  break;
+case "reorderPapers":
+  $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
+  $newPaperOrder = mysqli_real_escape_string($mysqli, $transaction['data']['newPaperOrder']);
+  $previousPaperOrder = mysqli_real_escape_string($mysqli, $transaction['data']['previousPaperOrder']);
   reorderPapers($id, $newPaperOrder, $mysqli);
-
-  $data = json_encode(array(
-			    "id" => $id,
-			    "paperOrder" => $newPaperOrder
-			    ));
-  
-  $previous = json_encode(array(
-				"id" => $id,
-				"paperOrder" => $previousPaperOrder
-				));
-
-  recordTransaction($uid, $type, $data, $previous, $mysqli);
-}
-
-if(strcmp("swapPapers", $type) == 0){
-  $s1id = mysqli_real_escape_string($mysqli, $_POST['s1id']);
-  $p1id = mysqli_real_escape_string($mysqli, $_POST['p1id']);
-  $s2id = mysqli_real_escape_string($mysqli, $_POST['s2id']);
-  $p2id = mysqli_real_escape_string($mysqli, $_POST['p2id']);
-
+  break;
+case "swapPapers":
+  $s1id = mysqli_real_escape_string($mysqli, $transaction['data']['s1id']);
+  $p1id = mysqli_real_escape_string($mysqli, $transaction['data']['p1id']);
+  $s2id = mysqli_real_escape_string($mysqli, $transaction['data']['s2id']);
+  $p2id = mysqli_real_escape_string($mysqli, $transaction['data']['p2id']);
   swapPapers($s1id, $p1id, $s2id, $p2id, $mysqli);
-
-  $data = json_encode(array(
-			    "s1id" => $s1id,
-			    "p1id" => $p1id,
-			    "s2id" => $s2id,
-			    "p2id" => $p2id,
-			    ));
-  
-  $previous = json_encode(array(
-			    "s1id" => $s1id,
-			    "p1id" => $p2id,
-			    "s2id" => $s2id,
-			    "p2id" => $p1id,
-				));
-  recordTransaction($uid, $type, $data, $previous, $mysqli);
-}
-
-if(strcmp("swapWithUnscheduledPaper", $type) == 0){
-  $p1id = mysqli_real_escape_string($mysqli, $_POST['p1id']);
-  $s2id = mysqli_real_escape_string($mysqli, $_POST['s2id']);
-  $p2id = mysqli_real_escape_string($mysqli, $_POST['p2id']);
-
+  break;
+case "swapWithUnscheduledPaper":
+  $p1id = mysqli_real_escape_string($mysqli, $transaction['data']['p1id']);
+  $s2id = mysqli_real_escape_string($mysqli, $transaction['data']['s2id']);
+  $p2id = mysqli_real_escape_string($mysqli, $transaction['data']['p2id']);
   swapWithUnscheduledPaper($p1id, $s2id, $p2id, $mysqli);
-
-  $data = json_encode(array(
-			    "p1id" => $p1id,
-			    "s2id" => $s2id,
-			    "p2id" => $p2id,
-			    ));
-  
-  $previous = json_encode(array(
-			    "p1id" => $p2id,
-			    "s2id" => $s2id,
-			    "p2id" => $p1id,
-				));
-  recordTransaction($uid, $type, $data, $previous, $mysqli);
-}
-
-if(strcmp("movePaper", $type) == 0){
-  $s1id = mysqli_real_escape_string($mysqli, $_POST['s1id']);
-  $p1id = mysqli_real_escape_string($mysqli, $_POST['p1id']);
-  $s2id = mysqli_real_escape_string($mysqli, $_POST['s2id']);
-
+  break;
+case "movePaper":
+  $s1id = mysqli_real_escape_string($mysqli, $transaction['data']['s1id']);
+  $p1id = mysqli_real_escape_string($mysqli, $transaction['data']['p1id']);
+  $s2id = mysqli_real_escape_string($mysqli, $transaction['data']['s2id']);
   movePaper($s1id, $p1id, $s2id, $mysqli);
-
-  $data = json_encode(array(
-			    "s1id" => $s1id,
-			    "p1id" => $p1id,
-			    "s2id" => $s2id,
-			    ));
-  
-  $previous = json_encode(array(
-			    "s1id" => $s2id,
-			    "p1id" => $p1id,
-			    "s2id" => $s1id,
-				));
-  recordTransaction($uid, $type, $data, $previous, $mysqli);
-}
-
-if(strcmp("unschedulePaper", $type) == 0){
-  $sid = mysqli_real_escape_string($mysqli, $_POST['sid']);
-  $pid = mysqli_real_escape_string($mysqli, $_POST['pid']);
-
+  break;
+case "unschedulePaper":
+  $sid = mysqli_real_escape_string($mysqli, $transaction['data']['sid']);
+  $pid = mysqli_real_escape_string($mysqli, $transaction['data']['pid']);
   unschedulePaper($sid, $pid, $mysqli);
-
-  $data = json_encode(array(
-			    "sid" => $sid,
-			    "pid" => $pid,
-			    ));
-  
-  // Note: does not undo to its index.
-  $previous = json_encode(array(
-			    "sid" => $sid,
-			    "pid" => $pid,
-				));
-  recordTransaction($uid, $type, $data, $previous, $mysqli);
-}
-
-if(strcmp("schedulePaper", $type) == 0){
-  $sid = mysqli_real_escape_string($mysqli, $_POST['sid']);
-  $pid = mysqli_real_escape_string($mysqli, $_POST['pid']);
-
+  break;
+case "schedulePaper":
+  $sid = mysqli_real_escape_string($mysqli, $transaction['data']['sid']);
+  $pid = mysqli_real_escape_string($mysqli, $transaction['data']['pid']);
   schedulePaper($sid, $pid, $mysqli);
-
-  $data = json_encode(array(
-			    "sid" => $sid,
-			    "pid" => $pid,
-			    ));
-  
-  // Note: does not undo to its index.
-  $previous = json_encode(array(
-			    "sid" => $sid,
-			    "pid" => $pid,
-				));
-  recordTransaction($uid, $type, $data, $previous, $mysqli);
+  break;
+} 
+ 
+if(mysqli_affected_rows($mysqli) > 0){
+  recordTransaction($uid, $type, $localHash, $data, $previous, $mysqli);
 }
 
 $mysqli->close();
-
 ?>

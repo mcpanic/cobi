@@ -1,15 +1,127 @@
+function TransactionData(uid, type, data, previous){
+    this.id = null;
+    this.uid = uid;
+    this.localHash = $.md5($.now());
+    this.type = type;
+    this.data = data;
+    this.previous = previous;
+}
+
+var Transact = function(){
+    function addTransaction(t){
+	localTransactions.push(t);
+	DataOps.handleTransaction(t);
+	$(document).trigger('transactionUpdate', [localTransactions[localTransactions.length -1]]);	
+	db.addTransaction(t);
+	return;
+    }
+    function addServerTransaction(t){
+	if(transactions.length == 0 || t.id > transactions[transactions.length - 1].id){
+	    transactions.push(t);
+	    DataOps.handleTransaction(t); // TODO: check for case where this couldn't be applied
+	    $(document).trigger('transactionUpdate', [localTransactions[localTransactions.length -1]]);	
+	}else{ // must be some action I did that is already incorporated?
+	}
+	return;
+    }
+    function completedLocalTransaction(t){
+	transactions.push(t);
+	// mark local one as done (give it the ID?)
+	for (var i = 0; i < localTransactions.length; i++){
+	    if (localTransactions[i].localHash == t.localHash) {
+		localTransactions[i].id = t.id;
+	    }
+	}
+	return;
+    }
+    
+    function failedLocalTransaction(t){
+	alert(JSON.stringify(t));
+    }
+    
+    return {
+	addTransaction: addTransaction,
+	addServerTransaction: addServerTransaction,
+	completedLocalTransaction: completedLocalTransaction,
+	failedLocalTransaction: failedLocalTransaction
+    };
+}();
+
 // Include code that interacts with the backend DB
-
-// TODO/Questions
-// - should more calls be asynchronous?
-// - need to store transactions/undo
-// - need to have log in support
-
-
 function DB(){
 }
 var db = new DB();
 
+DB.prototype.addTransaction = function(t){
+    $.ajax({
+ 	async: true,
+	type: 'POST',
+	data: { transaction: JSON.stringify(t)},
+	url: "./php/changeSchedule.php",
+	success: function(m){		
+	    Transact.completedLocalTransaction(m);
+ 	},
+	error : function(m){
+	    Transact.failedLocalTransaction(m);
+	},
+	dataType: "json"
+    });
+};
+
+
+// DB.prototype.refresh = function(){
+// 	//var transactionId = 0;
+// //	if(transactions.length > 0) transactionId = transactions[transactions.length -1]['id'];
+
+
+//     // Long polling to check for changes
+//     (function poll(e){
+// 	console.log("Polling with id: " + e.transactionId);
+// 	$.ajax({ url: "./php/longPoll.php", 
+// 		 type: 'POST', 
+// 		 data: {uid: e.uid, transactionId: e.transactionId},   
+// 		 error: function(m){
+// 		     console.log(m);
+// 		 },
+// 		 success: function(m){
+// 		     // something has changed
+// 		     if(m != null){
+// 			 var serverSchedule = m['schedule'];
+// 			 var serverUnscheduled = m['unscheduled'];
+// 			 var serverSlots = m['slots'];
+// 			 var serverTransactions = m['transactions'];
+// 			 var serverUnscheduledSubmissions = m['unscheduledSubmissions'];
+// 			 console.log("Poll has returned");
+// 			 console.log(serverTransactions);
+			 
+// 			 if(schedule != null){
+// 			     var consistencyReport = checkConsistent(serverSchedule, 
+// 								     serverUnscheduled,
+// 								     serverUnscheduledSubmissions,
+// 								     serverSlots, 
+// 								     serverTransactions);
+// 			     if(consistencyReport.isConsistent){
+// 				 console.log("still consistent");
+// 			     }else{
+// 				 //console.log("there is an inconsistency in data!");
+// 			     }
+// 			 }
+// 		     }else{// nothing changed, nothing to do
+// 			 console.log("nothing changed");
+// 		     }
+// 		 }, dataType: "json", complete: function() { poll((function(){
+// 		     if(transactions.length == 0){
+// 		      	 return {uid: userData.id, transactionId: 0};
+// 		     }else{
+// 			 return {uid: userData.id, transactionId: transactions[transactions.length -1]['id']};
+// 		     }})())}, timeout: 30000 });
+//     })((function(){
+//  	if(transactions.length == 0){
+//  	    return {uid: userData.id, transactionId: 0};
+//  	}else{
+//  	    return {uid: userData.id, transactionId: transactions[transactions.length -1]['id']};
+//  	}})());
+// };
 
 DB.prototype.refresh = function(){
     // Traditional polling to check for changes
