@@ -34,11 +34,24 @@ var Transact = function(){
 		localTransactions[i].id = t.id;
 	    }
 	}
+	// tell view
+	$(document).trigger('transactionAccepted', [transactions[transactions.length -1]]);	
 	return;
     }
     
     function failedLocalTransaction(t){
 	console.log("FAILED TRANSACTION: " + JSON.stringify(t));
+	// TODO: handle case where it was somewhere in the middle and view depends on it to be in order (e.g., undoing this move doesn't work because of some other move?)
+	
+	DataOps.handleFailedTransaction(t);
+	$(document).trigger('transactionFailed', t);	
+	
+	for(var i = 0; i < localTransactions.length; i++){
+	    if(localTransactions[i].localHash == t.localHash){
+		localTransactions.splice(i, 1);
+		break;
+	    }
+	}
     }
     
     return {

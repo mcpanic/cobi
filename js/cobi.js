@@ -39,6 +39,11 @@ var communityList = ["ux",
 		     "sustainability"];
 
 var DataOps = function() {
+    function handleFailedTransaction(t){
+	var rollbackTransaction = new TransactionData(t.uid, t.previousType, t.previous, t.type, t.data);
+	handleTransaction(rollbackTransaction);
+    }
+
     function handleTransaction(t){
 	switch (t.type) {
    	case 'lock': 
@@ -473,7 +478,8 @@ var DataOps = function() {
     }
     
     return {
-	handleTransaction: handleTransaction
+	handleTransaction: handleTransaction,
+	handleFailedTransaction: handleFailedTransaction
     };
 }();
 
