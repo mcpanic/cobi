@@ -49,7 +49,7 @@ var Statusbar = function() {
         var $session = $(".selected").first();
         var $link = (typeof $session.attr("data-session-id") === "undefined") ? getCellLinkByDateTimeRoom($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room")) : getCellLinkByID($session.attr("data-session-id"));
         $status.append(" ").append($link)
-            .append("&nbsp;&nbsp;&nbsp;Number: reduced conflicts. <span class='palette recommended'>&nbsp;</span>: recommended." + MoveMode.getCancelButtonHTML());
+            .append("&nbsp;&nbsp;&nbsp;Number: change in # of conflicts. <span class='palette recommended'>&nbsp;</span>: recommended." + MoveMode.getCancelButtonHTML());
         $bar.html($status);
     }
 
@@ -59,7 +59,7 @@ var Statusbar = function() {
         var $session = $(".selected").first();
         var $link = getPaperCellLinkByID($session.attr("data-session-id"), paperId);
         $status.append(" ").append($link)
-            .append("&nbsp;&nbsp;&nbsp;Number: reduced conflicts. <span class='palette recommended'>&nbsp;</span>: recommended." + MoveMode.getCancelButtonHTML());
+            .append("&nbsp;&nbsp;&nbsp;Number: change in # of conflicts. <span class='palette recommended'>&nbsp;</span>: recommended." + MoveMode.getCancelButtonHTML());
         $bar.html($status);
     }
 
