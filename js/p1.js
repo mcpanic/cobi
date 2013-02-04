@@ -1,6 +1,4 @@
 
-
-
     // Popover close button interaction
     $("body").on("click", ".popover-close", function(){
         console.log("popover-close", $(this).attr("data-session-id"));
