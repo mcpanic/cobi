@@ -27,14 +27,22 @@ var Polling = function() {
 
     function transactionFailedHandler(event, t){
         console.log(event.type, t);
+        var rollbackTransaction = new TransactionData(t.uid, t.previousType, t.previous, t.type, t.data);
+        handleTransaction(rollbackTransaction);
         $(document).trigger("updateStatusFailed", [t]); 
-        $(document).trigger("updateHistoryFialed", [t]); 
+        $(document).trigger("updateHistoryFailed", [t]); 
     }
-    
 
     function transactionUpdateHandler(event, t){
         console.log(event.type, t);
         //type: event type, uid: user who made the change, data: object
+        handleTransaction(t);
+
+        $(document).trigger("addStatus", [t]); 
+        $(document).trigger("addHistory", [t]); 
+    }  
+
+    function handleTransaction(t){
         var isMyChange = isTransactionMyChange(t);
 
         if (t.type == "lock"){
@@ -65,9 +73,6 @@ var Polling = function() {
             handlePollingSwapWithUnscheduledPaper(t, isMyChange);
         } else 
             console.log("unsupported transaction detected");
-
-        $(document).trigger("addStatus", [t]); 
-        $(document).trigger("addHistory", [t]); 
     }
 
     function postPollingMove(){
