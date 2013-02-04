@@ -1,7 +1,11 @@
 <?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
-include "settings.php";
+
+define("COBI_MYSQL_SERVER", "mysql.csail.mit.edu");
+define("COBI_MYSQL_USERNAME", "cobi");
+define("COBI_MYSQL_PASSWORD", "su4Biha");
+define("COBI_MYSQL_DATABASE", "cobi");
 
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 

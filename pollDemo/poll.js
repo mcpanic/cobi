@@ -13,7 +13,7 @@ function loadSchedule(){
     $.ajax({
 	async: true,
 	type: 'POST',
-	url: "loadSchedule.php",
+	url: "http://people.csail.mit.edu/hqz/cobi/pollDemo/loadSchedule.php",
 	data: {lastId: 0},
 	success: function(m){
 	    schedule = m['schedule'];
@@ -87,7 +87,7 @@ var keepRefreshing = function(){
     (function poll(e){
 	console.log("polling with " + e.transactionId);
 	setTimeout(function(){
-	    $.ajax({    url: "loadSchedule.php",
+	    $.ajax({    url: "http://people.csail.mit.edu/hqz/cobi/pollDemo/loadSchedule.php",
 			type: 'POST',
 			data: {lastId: e.transactionId},   
 			success: function(m){
