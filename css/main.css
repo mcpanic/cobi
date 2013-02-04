@@ -106,8 +106,25 @@ body.loading .modal {
     font-size: 0.6em;
     line-height: 24px;
 }
+
 /* ==========================================================================
-    Main program
+   Top Statusbar 
+   ========================================================================== */
+#statusbar .move-cancel-button {
+    margin-top: -5px;
+}
+
+/* ==========================================================================
+    View Mode Handling
+========================================================================== */
+.move-mode .slot:not(.proposed-swap), .move-mode .slot-paper:not(.proposed-swap) {
+    background-color: #d8d8d8;
+    cursor: default !important;
+}
+
+
+/* ==========================================================================
+    Main Program Table
 ========================================================================== */
 
 #program {
@@ -140,6 +157,7 @@ body.loading .modal {
     cursor: pointer;
 }
 
+
 #program .slot:hover, #unscheduled .slot:hover, #unscheduled-papers .slot-paper:hover {
     outline: 1px solid #333333;
 }
@@ -158,7 +176,7 @@ body.loading .modal {
 #program .cell .display, #unscheduled .cell .display, #unscheduled-papers .cell .display {
     width: 44px;
     height: 30px;
-    border-top: solid 1px #dddddd;
+    border-top: solid 1px #cccccc;
     overflow-x: hidden;
     overflow-y: hidden;
     /*color: #aaaaaa;*/
@@ -191,7 +209,7 @@ body.loading .modal {
 }
 
 #program .unavailable {
-    background: #eeeeee;
+    background: #d8d8d8;
 }
 
 #program .empty {
@@ -204,7 +222,7 @@ body.loading .modal {
     opacity: 1;
 }
 */
-#program .recommended, #unscheduled .recommended, #unscheduled-papers .recommended {
+#program .recommended, #unscheduled .recommended, #unscheduled-papers .recommended, #statusbar .recommended {
     background: #fd8d3c;
 }
 
@@ -354,6 +372,7 @@ body.loading .modal {
     margin-left: 1px;
     margin-right: 1px;
     cursor: pointer;
+    outline: 1px solid #bbbbbb;
 }
 
 .conflict-preview-display {

@@ -85,7 +85,7 @@ var Polling = function() {
             id = s;
         }    
         // empty cells can also be locked or unlocked
-        var $cell = (id == null)? findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room): findCellByID(id);
+        var $cell = (id == null) ? findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room): findCellByID(id);
         if ($cell == null || typeof $cell === "undefined")
             return;
 
@@ -103,7 +103,7 @@ var Polling = function() {
             id = s;
         }    
         // empty cells can also be locked or unlocked
-        var $cell = (id == null)? findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room): findCellByID(id);
+        var $cell = (id == null) ? findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room): findCellByID(id);
         if ($cell == null || typeof $cell === "undefined")
             return;
 
@@ -198,12 +198,12 @@ var Polling = function() {
     }
 
     function handlePollingSchedulePaper(t, isMyChange){
-        PaperVisualOps.scheduleUnscheduled(allSubmissions[t.data.pid]);
+        PaperVisualOps.scheduleUnscheduled(allSubmissions[t.data.pid], t.data.pos);
         setTimeout(function (){
             postPollingMove();  
             if (isMyChange)
                 MoveMode.destroy();  
-        }, 3000);                   
+        }, 2500);                   
     }
 
     function handlePollingSwapPaper(t, isMyChange){
@@ -212,16 +212,16 @@ var Polling = function() {
             postPollingMove();  
             if (isMyChange)
                 MoveMode.destroy();
-        }, 3000);                
+        }, 2500);                
     }
 
     function handlePollingMovePaper(t, isMyChange){
-        PaperVisualOps.swapWithEmpty(allSubmissions[t.data.p1id]); 
+        PaperVisualOps.swapWithEmpty(allSubmissions[t.data.p1id], t.data.pos); 
         setTimeout(function (){
             postPollingMove();  
             if (isMyChange)
                 MoveMode.destroy();
-        }, 3000);
+        }, 2500);
     }
 
     function handlePollingSwapWithUnscheduledPaper(t, isMyChange){
@@ -230,7 +230,7 @@ var Polling = function() {
             postPollingMove();  
             if (isMyChange)
                 MoveMode.destroy();
-        }, 3000);
+        }, 2500);
     }
 
     return {

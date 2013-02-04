@@ -88,11 +88,16 @@
     function _getMoveSessionDetail(type, session, srcType){
         var element = document.createElement("div");
         var $cell = null;
-        if (type == "empty"){
+        if (typeof session.id === "undefined")
             $cell = findCellByDateTimeRoom(session.date, session.time, session.room);
-        } else if (type == "scheduled" || type == "unscheduled"){
+        else
             $cell = findCellByID(session.id);
-        }
+
+        // if (type == "empty"){
+        //     $cell = findCellByDateTimeRoom(session.date, session.time, session.room);
+        // } else if (type == "scheduled" || type == "unscheduled"){
+        //     $cell = findCellByID(session.id);
+        // }
 
         console.log("src:", srcType, "dst:", type);
         if (srcType == "scheduled"){
@@ -418,8 +423,8 @@
                 // TODO: maybe also save date, time, room, and order info
                 if (isProposed) {
                     element = document.createElement("li");
-                    $(element).addClass("submission-empty");
-                    $("<button/>").addClass("btn btn-small button-paper-schedule").html("<span class='icon-plus'/> Schedule in this slot").appendTo($(element));
+                    $(element).addClass("submission-empty").css("list-style-type", "none");;
+                    $("<button/>").addClass("btn btn-small button-paper-schedule").html("<span class='icon-plus'/> Schedule this paper").appendTo($(element));
                 } else {
                     element = document.createElement("div");
                 }
@@ -472,10 +477,9 @@
                  //.attr("id", "session-" + session.id)
                  //.data("session-id", session.id)
                  .addClass("empty")
-                 .attr("data-date", slotDate)
-                 .attr("data-time", slotTime)
-                 .attr("data-room", slotRoom)                     
+                 .attr("data-date", slotDate).attr("data-time", slotTime).attr("data-room", slotRoom)                     
                  .append($(detail));
+
             $(cell).find(".title").append("<i class='icon-plus'></i>")     
 
             // Unavailable / Locked Session                         
@@ -494,7 +498,8 @@
 	 	
             $(cell).attr("id", "session-" + session.id)
                 .addClass(type)
-                .attr("data-session-id", session.id)
+                .attr("data-session-id", session.id)                 
+                .attr("data-date", slotDate).attr("data-time", slotTime).attr("data-room", slotRoom)
                 .append($(detail));
             
             if (typeof session.title !== "undefined")

@@ -4,15 +4,19 @@ var Statusbar = function() {
 
     // Initialize the view mode 
     function initialize(){
-        bindEvents();
 		$bar = $("#statusbar");
 		display("Loading conference data... This might take up to 15-20 seconds.");
+        bindEvents();
     }
 
     function bindEvents(){
         $(document).on("addStatus", addStatusHandler);  
         $(document).on("updateStatusAccepted", updateStatusHandler);      
-        $(document).on("updateStatusFailed", updateStatusHandler);      
+        $(document).on("updateStatusFailed", updateStatusHandler);  
+        $(document).on("addMoveStatus", addMoveStatusHandler);
+        $(document).on("addPaperMoveStatus", addPaperMoveStatusHandler);
+        $bar.on("click", ".history-link", clickLinkHandler);    
+        $bar.on("click", ".history-paper-link", clickPaperLinkHandler);
     }
 
     function updateStatusHandler(event, t){
@@ -27,10 +31,10 @@ var Statusbar = function() {
     }
 
     function addStatusHandler(event, t){
-        console.log("STATUS", t);
+        console.log("STATUS", t, MoveMode.isOn, !isTransactionMyChange(t));
         // TODO: do something also for move mode without touching the cancel button
         if (MoveMode.isOn && !isTransactionMyChange(t))
-        return;
+            return;
 
         if (isTransactionSessionLevel(t))
             displaySessionStatus(t);
@@ -38,9 +42,18 @@ var Statusbar = function() {
             displayPaperStatus(t);
     }
 
+    // function addMoveStatusHandler(event, id, paperId){
+    //     console.log(id, paperId);
+    //     if (paperId == ""){
+    //         displayMoveStatus(id);
+    //     } else {
+    //         displayPaperMoveStatus(id, paperId);
+    //     }
+    // }
+
     function displaySessionStatus(t){
         var $link, $li;
-        var $statusLabel = $("<span/>").addClass("label label-info").html("In progress");
+        var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("label label-info").html("In progress") : $("<span/>").addClass("label label-info").html("Updated");
 
         // TODO: change with actual user management logic to display username
         var user = isTransactionMyChange(t) ? "" : "Anon";
@@ -59,6 +72,58 @@ var Statusbar = function() {
     }
 
     function displayPaperStatus(t){
+        var $link, $li;
+        var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("label label-info").html("In progress") : $("<span/>").addClass("label label-info").html("Updated");
+
+        // TODO: change with actual user management logic to display username
+        var user = isTransactionMyChange(t) ? "" : "Anon";
+        $li = $("<div/>").addClass("status").attr("data-local-hash", t.localHash).append($statusLabel).append(" " + user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
+
+          if (t.type.indexOf("swap") !== -1){
+               if (t.type == "swapPapers"){
+                    $link = getPaperCellLinkByID(t.data.s1id, t.data.p2id);
+                    var $link2 = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
+                    $li = $li.append($link).append(" and ").append($link2); 
+               } else if (t.type == "swapWithUnscheduledPaper"){
+                    $link = getPaperCellLinkByID(undefined, t.data.p2id);
+                    var $link2 = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
+                    $li = $li.append($link).append(" and ").append($link2); 
+               }                  
+
+          } else {
+               console.log(t.type, t.data);
+               if (t.type == "unschedulePaper")
+                    $link = getPaperCellLinkByID(undefined, t.data.pid);
+               else if (t.type == "schedulePaper")
+                    $link = getPaperCellLinkByID(t.data.sid, t.data.pid);
+               else if (t.type == "movePaper")
+                    $link = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
+               else if (t.type == "reorderPapers")
+                    $link = getPaperCellLinkByID(t.data.id, "");
+               $li = $li.append($link);
+          }
+
+        $bar.html($li);        
+    }
+
+    function addMoveStatusHandler(event, id){
+        var $statusLabel = $("<span/>").addClass("label label-info").html("Scheduling session");
+        var $status = $("<div/>").addClass("status").append($statusLabel).append();
+        var $session = $(".selected").first();
+        var $link = (typeof $session.attr("data-session-id") === "undefined") ? getCellLinkByDateTimeRoom($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room")) : getCellLinkByID($session.attr("data-session-id"));
+        $status.append(" ").append($link)
+            .append("&nbsp;&nbsp;&nbsp;Number: reduced conflicts. <span class='palette recommended'>&nbsp;</span>: recommended." + MoveMode.getCancelButtonHTML());
+        $bar.html($status);
+    }
+
+    function addPaperMoveStatusHandler(event, id, paperId){
+        var $statusLabel = $("<span/>").addClass("label label-info").html("Scheduling submission");
+        var $status = $("<div/>").addClass("status").append($statusLabel).append();
+        var $session = $(".selected").first();
+        var $link = getPaperCellLinkByID($session.attr("data-session-id"), paperId);
+        $status.append(" ").append($link)
+            .append("&nbsp;&nbsp;&nbsp;Number: reduced conflicts. <span class='palette recommended'>&nbsp;</span>: recommended." + MoveMode.getCancelButtonHTML());
+        $bar.html($status);
     }
 
     // Display the given html with given type
@@ -66,6 +131,67 @@ var Statusbar = function() {
     	$bar.html(html);
     }
 
+    function clickLinkHandler(){
+      var id = $(this).attr("data-session-id");
+      var toggle = true;
+      if ($(this).hasClass("view-option-active"))
+           toggle = false;
+
+      $bar.find(".view-option-active").removeClass("view-option-active");
+      $(".highlight").removeClass("highlight");
+      
+      var $cell;
+      if (typeof id === "undefined") {
+          $cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
+     }
+      else
+           $cell = findCellByID(id);
+
+      if (toggle) {
+           $(this).addClass("view-option-active");
+           $("body").animate({
+                scrollTop:$cell.offset().top - 100
+           }, 500);
+           //$(document).scrollTop( $(cell).offset().top - 100); 
+           $cell.addClass("highlight"); //.popover("toggle");               
+      } else {
+           $cell.removeClass("highlight");               
+      }
+
+      return false;
+    } 
+
+    function clickPaperLinkHandler(){
+      var id = $(this).attr("data-session-id");
+      var paperId = $(this).attr("data-submission-id");
+      var toggle = true;
+      if ($(this).hasClass("view-option-active"))
+           toggle = false;
+
+      $bar.find(".view-option-active").removeClass("view-option-active");
+      $(".highlight").removeClass("highlight");
+      
+      var $cell;
+      if (typeof id === "undefined") {
+          // $cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
+          $cell = $("#unscheduled-papers #" + paperId);
+     }
+      else
+           $cell = findCellByID(id);
+
+      if (toggle) {
+           $(this).addClass("view-option-active");
+           $("body").animate({
+                scrollTop:$cell.offset().top - 100
+           }, 500);
+           //$(document).scrollTop( $(cell).offset().top - 100); 
+           $cell.addClass("highlight"); //.popover("toggle");               
+      } else {
+           $cell.removeClass("highlight");               
+      }
+
+      return false;
+    } 
 
     function destroy(){
 

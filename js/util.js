@@ -10,12 +10,29 @@ function isTransactionSessionLevel(t){
 }
 
 function getCellLinkByID(id){
-  return $("<a/>").attr("href", "#").attr("data-session-id", id).addClass("history-link").html(allSessions[id].title);
+	var title = allSessions[id].title;
+	title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 
+ 	return $("<a/>").attr("href", "#").attr("data-session-id", id).addClass("history-link").html(title);
+}
+
+function getPaperCellLinkByID(id, paperId){
+	var title;
+	if (paperId != ""){
+		title = allSubmissions[paperId].title;
+		title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 
+	} else {
+		title = allSessions[id].title;
+		title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 		
+	}
+	var $cell = $("<a/>").attr("href", "#").attr("data-submission-id", paperId).addClass("history-paper-link").html(title);
+	if (typeof id !== "undefined")
+		$cell.attr("data-session-id", id);
+	return $cell;
 }
 
 function getCellLinkByDateTimeRoom(ldate, ltime, lroom){
-  return $("<a/>").attr("href", "#").attr("data-slot-date", ldate).attr("data-slot-time", ltime).attr("data-slot-room", lroom)
-       .addClass("history-link").html(ldate + ", " + ltime + ", " + ldate);
+  	return $("<a/>").attr("href", "#").attr("data-slot-date", ldate).attr("data-slot-time", ltime).attr("data-slot-room", lroom)
+       .addClass("history-link").html(ldate + ", " + ltime + ", " + lroom); 
 }
 
 
@@ -119,7 +136,7 @@ function removeDataAttributes($el){
 // Returns null when there is no such cell that's empty.
 function findCellByDateTimeRoom(cellDate, cellTime, cellRoom){
     var cell = null;
-    $("#program .empty").each(function(){
+    $("#program .slot").each(function(){
         if ($(this).attr("data-date") == cellDate && $(this).attr("data-time") == cellTime  && $(this).attr("data-room") == cellRoom)
             cell = $(this);
     });

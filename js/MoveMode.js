@@ -63,7 +63,7 @@ var MoveMode = function() {
         return html;
     }
 
-    function _getCancelButtonHTML(){
+    function getCancelButtonHTML(){
         return "  <button class='btn move-cancel-button'>Cancel Move</button>";
     }
 
@@ -115,13 +115,13 @@ var MoveMode = function() {
                 var html = "";
                 if ($(this).hasClass("move-src-selected")) {
                     console.log("slotClickHandler: move-src-selected");                   
-                    html += "<strong>Select another session to schedule this session.</strong><br>" + _getCancelButtonHTML();
+                    html += "<strong>Select another session to schedule this session.</strong><br>" + getCancelButtonHTML();
                     if (id !== -1)
                         html += getSubmissionList("move", session, type);
 
                 } else if ($(this).find(".title").hasClass("locked")) {
                     console.log("slotClickHandler: locked");                  
-                    html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong><br>" + _getCancelButtonHTML();
+                    html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong><br>" + getCancelButtonHTML();
                     if (id !== -1)
                         html += getSubmissionList("move", session, type);
 
@@ -198,13 +198,13 @@ var MoveMode = function() {
                 console.log($(this));
                 if ($(this).hasClass("move-src-selected")) {
                     console.log("paperSlotClickHandler: move-src-selected");                   
-                    html += "<strong>Select another session to schedule this session.</strong><br>" + _getCancelButtonHTML();
+                    html += "<strong>Select another session to schedule this session.</strong><br>" + getCancelButtonHTML();
                     if (id !== -1)
                         html += getSubmissionDetail("move", "unscheduled", submission, type);
 
                 } else if ($(this).find(".title").hasClass("locked")) {
                     console.log("paperSlotClickHandler: locked");                  
-                    html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong><br>" + _getCancelButtonHTML();
+                    html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong><br>" + getCancelButtonHTML();
                     if (id !== -1)
                         html += getSubmissionDetail("move", "unscheduled", submission, type);
 
@@ -281,7 +281,7 @@ var MoveMode = function() {
                 console.log("session null", submission);        
                 // Paper-level unscheduled candidate exists: session null, submission id
                 if (typeof submission !== "undefined") {                    
-                        $("#"+submission).attr("data-proposed-swap-paper", "true");
+                        $("#"+submission).attr("data-proposed-swap-paper", "true").addClass("proposed-swap");
                         console.log("runPropose: unscheduled");   
                 }   
             
@@ -316,13 +316,11 @@ var MoveMode = function() {
         // Mark the current selection, which is the source session
         $session.addClass("move-src-selected");
 
-        // Display at the top alert box the full information about this proposal
-        var alert_html = "";
-        alert_html = "<strong>Schedule change in progress</strong>. Click any session to schedule. Recommended sessions in <span class='palette'>&nbsp;</span> minimize conflicts. " 
-         + " <button class='btn btn-mini move-cancel-button' type='button'>Cancel Move</button>";
-        
-        Statusbar.display(alert_html);
-        $("#statusbar .palette").css("background-color", "#fd8d3c");
+        if (type.indexOf("paper") === -1)
+            $(document).trigger("addMoveStatus", [id]);
+        else
+            $(document).trigger("addPaperMoveStatus", [id, paperId]);
+
     }
 
 /******************************
@@ -508,6 +506,7 @@ var MoveMode = function() {
     return {
         isOn: isOn,
         initialize: initialize,
+        getCancelButtonHTML: getCancelButtonHTML,
         destroy: destroy
     };
 }();     
