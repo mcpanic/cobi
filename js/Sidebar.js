@@ -19,9 +19,31 @@ var Sidebar = function() {
           $("#list-communities").on("click", "li a", clickCommunitiesHandler);
           $("#list-communities").on("click", ".myCheckbox", clickCheckboxCommunitiesHandler);          
           $("#list-history").on("click", ".history-link", clickHistoryHandler);
-          $(document).on("addHistory", addHistoryHandler);
+          $("#list-history").on("click", ".history-paper-link", clickHistoryPaperHandler);
           $(".sidebar-fixed").on("click", ".toggle", clickToggle);
           $(".sidebar-fixed").on("click", ".toggle-options", clickHeaderHandler);
+
+          $(document).on("addHistory", addHistoryHandler);
+          $(document).on("updateHistoryAccepted", updateHistoryHandler);
+          $(document).on("updateHistoryFailed", updateHistoryHandler);
+     }
+
+     function updateHistoryHandler(event, t){
+          // find the matching localHash
+          var $item;
+          $("#list-history li").each(function(index, item){
+               // console.log($(item).attr("data-local-hash"), t.localHash);
+               if (typeof $(item).attr("data-local-hash") !== "undefined" && $(item).attr("data-local-hash") == t.localHash){
+                    $item = $(item);
+               }
+          });
+          
+          if (typeof $item !== "undefined"){
+               if (event.type == "updateHistoryAccepted")
+                    $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-ok");
+               else if (event.type == "updateHistoryFailed")
+                    $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-remove");
+          }
      }
 
      function addHistoryHandler(event, t){
@@ -42,10 +64,10 @@ var Sidebar = function() {
 
      function displaySessionHistory(t){
           var $link, $li;
-
+          var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("status icon-exclamation-sign") : $("<span/>").addClass("status icon-ok");
           // TODO: change with actual user management logic to display username
           var user = isTransactionMyChange(t) ? "" : "Anon";
-          $li = $("<li/>").append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
+          $li = $("<li/>").attr("data-local-hash", t.localHash).append($statusLabel).append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
           
           if (t.type.indexOf("swap") !== -1){
                $link = getCellLinkByID(t.data.s1id);
@@ -61,7 +83,37 @@ var Sidebar = function() {
      }
 
      function displayPaperHistory(t){
+          var $link, $li;
+          var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("status icon-exclamation-sign") : $("<span/>").addClass("status icon-ok");
+          // TODO: change with actual user management logic to display username
+          var user = isTransactionMyChange(t) ? "" : "Anon";
+          $li = $("<li/>").attr("data-local-hash", t.localHash).append($statusLabel).append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
+          
+          if (t.type.indexOf("swap") !== -1){
+               if (t.type == "swapPapers"){
+                    $link = getPaperCellLinkByID(t.data.s1id, t.data.p2id);
+                    var $link2 = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
+                    $li = $li.append($link).append(" and ").append($link2); 
+               } else if (t.type == "swapWithUnscheduledPaper"){
+                    $link = getPaperCellLinkByID(undefined, t.data.p2id);
+                    var $link2 = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
+                    $li = $li.append($link).append(" and ").append($link2); 
+               }                  
 
+          } else {
+               console.log(t.type, t.data);
+               if (t.type == "unschedulePaper")
+                    $link = getPaperCellLinkByID(undefined, t.data.pid);
+               else if (t.type == "schedulePaper")
+                    $link = getPaperCellLinkByID(t.data.sid, t.data.pid);
+               else if (t.type == "movePaper")
+                    $link = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
+               else if (t.type == "reorderPapers")
+                    $link = getPaperCellLinkByID(t.data.id, "");
+               $li = $li.append($link);
+          }
+
+          $("#list-history").prepend($li);
      }
 
      function clickHeaderHandler(){
@@ -284,22 +336,54 @@ var Sidebar = function() {
           $("#list-history .view-option-active").removeClass("view-option-active");
           $(".highlight").removeClass("highlight");
           
-          var cell = null;
+          var $cell;
           if (typeof id === "undefined") {
-	          cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
+	          $cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
 	     }
           else
-               cell = findCellByID(id);
+               $cell = findCellByID(id);
 
           if (toggle) {
                $(this).addClass("view-option-active");
                $("body").animate({
-                    scrollTop:$(cell).offset().top - 100
+                    scrollTop:$cell.offset().top - 100
                }, 500);
                //$(document).scrollTop( $(cell).offset().top - 100); 
-               $(cell).addClass("highlight"); //.popover("toggle");               
+               $cell.addClass("highlight"); //.popover("toggle");               
           } else {
-               $(cell).removeClass("highlight");               
+               $cell.removeClass("highlight");               
+          }
+
+          return false;
+     } 
+
+     function clickHistoryPaperHandler(){
+          var id = $(this).attr("data-session-id");
+          var paperId = $(this).attr("data-submission-id");
+          var toggle = true;
+          if ($(this).hasClass("view-option-active"))
+               toggle = false;
+
+          $("#list-history .view-option-active").removeClass("view-option-active");
+          $(".highlight").removeClass("highlight");
+          
+          var $cell;
+          if (typeof id === "undefined") {
+               //cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
+               $cell = $("#unscheduled-papers #" + paperId);
+          }
+          else
+               $cell = findCellByID(id);
+
+          if (toggle) {
+               $(this).addClass("view-option-active");
+               $("body").animate({
+                    scrollTop:$cell.offset().top - 100
+               }, 500);
+               //$(document).scrollTop( $(cell).offset().top - 100); 
+               $cell.addClass("highlight"); //.popover("toggle");               
+          } else {
+               $cell.removeClass("highlight");               
           }
 
           return false;

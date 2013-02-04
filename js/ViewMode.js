@@ -5,6 +5,7 @@ var ViewMode = function() {
     function initialize(){
         isOn = true;
         //MoveMode.destroy();
+        $(".main").addClass("view-mode");
         bindEvents();
         initDisplay();
     }
@@ -200,7 +201,6 @@ var ViewMode = function() {
 
     // HQ: Handles a lock request
     function lockHandler(){
-        // TODO: write to history-links
         var $session = $(".selected").first();
         var id = getID($session);  
         var date, time, room; 
@@ -225,7 +225,6 @@ var ViewMode = function() {
 
     // HQ: handle an unlock request
     function unlockHandler(){
-        // TODO: write to history-links
         var $session = $(".selected").first();
         var id = getID($session);  
         if(id in allSessions){
@@ -320,7 +319,9 @@ var ViewMode = function() {
         $("body").off("click", ".popover .button-paper-propose-empty", proposeHandler);
 
         $(".slot").popover("destroy");   
-        $(".slot-paper").popover("destroy");        
+        $(".slot-paper").popover("destroy");    
+
+        $(".main").removeClass("view-mode");    
     }
 
     return {

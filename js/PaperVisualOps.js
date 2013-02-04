@@ -11,17 +11,20 @@ var PaperVisualOps = function() {
 
 	}
 
-	function _addSubmissionToSlot(s){
-		var cell = getSubmissionCell("scheduled", s);
-        if ($(".popover-inner #" + s.session + ".list-submissions .submission-empty").length > 0)
-    		$(cell).insertBefore($(".popover-inner #" + s.session + ".list-submissions"));
-        else
-            $(".popover-inner #" + s.session + ".list-submissions").append($(cell));
-		$(cell).effect("highlight", {color: "yellow"}, 10000);
+	function _addSubmissionToSlot(s, pos, srcType){
+        var cell = getSubmissionDetail("paperMove", "scheduled", s, srcType, allSessions[s.session]);
+        $(cell).insertBefore($(".popover-inner .list-submissions li").eq(pos));
+        $(".popover-inner button").addClass("disabled");
+		$(".popover-inner .list-submissions li").eq(pos).effect("highlight", {color: "yellow"}, 10000);
 	}
 
-	function _removeSubmissionFromSlot(s){		
+    // returns the position that was removed
+	function _removeSubmissionFromSlot(s, isDone){		
+        var pos = $(".popover-inner #" + s.id).index();
         $(".popover-inner #" + s.id).remove();
+        if (isDone)
+            $(".popover-inner button").addClass("disabled");
+        return pos;
 	}
 
 	function _addSubmissionToUnscheduled(s){
@@ -46,47 +49,50 @@ var PaperVisualOps = function() {
     function swap(scheduled1, scheduled2){
         var $s1 = $(".popover-inner #" + scheduled1.id);
         var $s2 = $(".popover-inner #" + scheduled2.id);
-        if (typeof $s1[0] !== "undefined" && typeof $s1[0] !== "undefined")
+        if ($s1.length > 0 && $s2.length > 0) {
             _swapNodes($s1[0], $s2[0]);
-        else if (typeof $s1[0] !== "undefined") {
-            _removeSubmissionFromSlot(scheduled1);
-            _addSubmissionToSlot(scheduled2);
-        } else if (typeof $s2[0] !== "undefined") {
-            _removeSubmissionFromSlot(scheduled2);
-            _addSubmissionToSlot(scheduled1);
+            $s1.effect("highlight", {color: "yellow"}, 10000);
+            $s2.effect("highlight", {color: "yellow"}, 10000);
+        } else if ($s1.length > 0) {
+            var pos = _removeSubmissionFromSlot(scheduled1, true);
+            _addSubmissionToSlot(scheduled2, pos, "paper-scheduled");
+        } else if ($s2.length > 0) {
+            var pos = _removeSubmissionFromSlot(scheduled2, true);
+            _addSubmissionToSlot(scheduled1, pos, "paper-scheduled");
         }
 
 		$("#program #session-" + scheduled1.session).effect("highlight", {color: "yellow"}, 10000);
 		$("#program #session-" + scheduled2.session).effect("highlight", {color: "yellow"}, 10000);
-        $(".popover-inner #" + scheduled1.id).effect("highlight", {color: "yellow"}, 10000);
-        $(".popover-inner #" + scheduled2.id).effect("highlight", {color: "yellow"}, 10000);
+ 
     }
 
     // CASE 2. src: scheduled, dst: unscheduled && src: unscheduled, dst: scheduled
     function swapWithUnscheduled(unscheduled, scheduled){
-        unschedule(scheduled);
-        // by the backend code, unscheduled alreay contains updated the destination's date, time, and room
-    	//var $emptySlot = findCellByDateTimeRoom(unscheduled.date, unscheduled.time, unscheduled.room);
-    	scheduleUnscheduled(unscheduled);
+        var pos = unschedule(scheduled);
+    	scheduleUnscheduled(unscheduled, pos);
     }
 
     // CASE 3. src: scheduled, dst: empty && src: empty, dst: scheduled
-    function swapWithEmpty(scheduled){
-		_removeSubmissionFromSlot(scheduled);
-		_addSubmissionToSlot(scheduled);
+    function swapWithEmpty(scheduled, pos){
+        var isAdditionNeeded = $(".popover-inner #" + scheduled.id).length == 0;
+        _removeSubmissionFromSlot(scheduled, true);
+        if (isAdditionNeeded)
+		    _addSubmissionToSlot(scheduled, pos, "paper-empty");
     }
 
     // CASE 4. src: unscheduled, dst: empty && src: empty, dst: unscheduled
-    function scheduleUnscheduled(unscheduled){
+    function scheduleUnscheduled(unscheduled, pos){
+        var isAdditionNeeded = $(".move-src-selected").hasClass("unscheduled");
     	_removeSubmissionFromUnscheduled(unscheduled);	
-		_addSubmissionToSlot(unscheduled);
+        if (isAdditionNeeded)
+            _addSubmissionToSlot(unscheduled, pos, "paper-unscheduled");
     }
 
     // CASE 5. session: scheduled
     function unschedule(scheduled){
-        console.log("UNSCHEDULE", scheduled);
-        _removeSubmissionFromSlot(scheduled);
+        var pos = _removeSubmissionFromSlot(scheduled, false);
         _addSubmissionToUnscheduled(scheduled);
+        return pos;
     }
 
     return {
