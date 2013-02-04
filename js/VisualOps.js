@@ -33,7 +33,7 @@ var VisualOps = function() {
 
 	function _addSessionToUnscheduled(s){
         var cell = getSessionCell("unscheduled", s);
-        $("#unscheduled").append(cell);
+        $("#unscheduled tr").append(cell);
         $(cell).effect("highlight", {color: "yellow"}, 10000);
 	}
 

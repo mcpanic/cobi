@@ -617,12 +617,12 @@
           var cell = null;
           keys(unscheduled).map(function(id){
                cell = getSessionCell("unscheduled", allSessions[id]);
-               $("#unscheduled").append(cell);         
+               $("#unscheduled tr").append(cell);         
           });
 
           keys(unscheduledSubmissions).map(function(id){
                cell = getSubmissionCell("unscheduled", allSubmissions[id]);
-               $("#unscheduled-papers").append(cell);         
+               $("#unscheduled-papers tr").append(cell);         
           });
 
           updateUnscheduledCount();

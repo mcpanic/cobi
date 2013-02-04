@@ -7,6 +7,12 @@ body {
     font-size: 12px;
 }
 
+* {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
 
 .left-sidebar {
     margin-left: 10px;
@@ -46,17 +52,17 @@ body.loading .modal {
 }
 
 .main {
-    /* so that the main div doesn't overlap with left sidebar */
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 /* ==========================================================================
    Left Sidebar with options
    ========================================================================== */
 
 .left-sidebar {
-    /*position: fixed;*/
-    overflow-x: hidden;
-    overflow-y: scroll;
+    /*overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 85%;*/
 }
 
 .left-sidebar h4 {
@@ -78,17 +84,18 @@ body.loading .modal {
 }
 
 .sidebar-fixed {
-    /*position: fixed;
-    width: 150px;
-    height: 85%;
-    overflow-y: scroll;    */
+    position: fixed;
+    max-width: 15%;
+    max-height: 80%;
+    overflow-y: auto;
 }
 
-/*@media (max-width: 767px) {*/
-@media (max-width: 950px) {    
+/*@media (max-width: 950px) {*/
+@media (max-width: 767px) {    
     .sidebar-fixed {
         position:static;
         width:auto;
+        max-width: 100%;
     }
 }
 
@@ -141,9 +148,14 @@ body.loading .modal {
     Main Program Table
 ========================================================================== */
 
+.program-wrapper {
+    width: 100%;
+}
+
 #program {
     border-color: #bbbbbb;
     margin-top: 10px;
+    table-layout: fixed;
 }
 
 /* days separated with different cell color */
@@ -155,17 +167,21 @@ body.loading .modal {
 
 }
 
-#program .cell {
+#program .cell, #unscheduled .cell, #unscheduled-papers .cell {
     font-size: 10px;
     padding: 3px;
     line-height: 12px;
     border-color: #bbbbbb;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #program .slot, #unscheduled .slot, #unscheduled-papers .slot-paper {
+    min-width: 44px;
     font-size: 10px;
     line-height: 12px;
 }
+
 
 #program .slot:not(.unavailable), #unscheduled .slot:not(.unavailable), #unscheduled-papers .slot-paper:not(.unavailable) {
     cursor: pointer;
@@ -177,10 +193,14 @@ body.loading .modal {
 }
 
 #program .cell .title, #unscheduled .cell .title, #unscheduled-papers .cell .title {
-    width: 44px;
+    /*width: 44px;*/
     height: 38px;                
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+#unscheduled .cell .title, #unscheduled-papers .cell .title {
+    width: 44px;
 }
 
 #program .cell .title .icon-plus{
@@ -188,12 +208,16 @@ body.loading .modal {
 }
 
 #program .cell .display, #unscheduled .cell .display, #unscheduled-papers .cell .display {
-    width: 44px;
+    /*width: 44px;*/
     height: 30px;
     border-top: solid 1px #cccccc;
     overflow-x: hidden;
     overflow-y: hidden;
     /*color: #aaaaaa;*/
+}
+
+#unscheduled .cell .display, #unscheduled-papers .cell .display {
+    width: 44px;
 }
 
 #program .cell .display .icon, #unscheduled .cell .display .icon, #unscheduled-papers .cell .display .icon {
@@ -257,7 +281,8 @@ body.loading .modal {
 .unscheduled-panel .left, .unscheduled-panel .right, .unscheduled-papers-panel .left, .unscheduled-papers-panel .right {
     height: 95px;
     cursor: default;
-    opacity: 0.5;
+    opacity: 0.3;
+    float: left;
 }
 
 .unscheduled-panel .left, .unscheduled-papers-panel .left { 
@@ -277,16 +302,18 @@ body.loading .modal {
 }
 
 .unscheduled-wrapper, .unscheduled-papers-wrapper {
-    width: 95%;
+    float: left;
+    /*width: 95%;*/
+    width: 80%;
     height: 95px;
     border: solid 1px #dddddd;
     overflow-x: auto;
     overflow-y: hidden;
-    margin-bottom: 15px;
+    margin: 0 10px 15px 10px;
 }
 
 #unscheduled, #unscheduled-papers {
-
+    /* table-layout: fixed; */
     border-collapse: separate;
     border-spacing: 10px 5px;
     /*padding-bottom:20px;*/

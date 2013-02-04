@@ -29,7 +29,7 @@ var PaperVisualOps = function() {
 
 	function _addSubmissionToUnscheduled(s){
         var cell = getSubmissionCell("unscheduled", s);
-        $("#unscheduled-papers").append($(cell));
+        $("#unscheduled-papers tr").append($(cell));
         $(cell).effect("highlight", {color: "yellow"}, 10000);
 	}
 

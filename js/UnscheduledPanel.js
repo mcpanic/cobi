@@ -20,17 +20,17 @@ var UnscheduledPanel = function() {
         var $rightButton = isPaper ? $(".unscheduled-papers-panel .right") : $(".unscheduled-panel .right");
         var hasHorizontalScrollbar = $panel[0].scrollWidth > $panel[0].clientWidth;
         if (!hasHorizontalScrollbar){
-            $leftButton.css({"opacity": 0.5, "cursor": "default"});  
-            $rightButton.css({"opacity": 0.5, "cursor": "default"});  
+            $leftButton.css({"opacity": 0.3, "cursor": "default"});  
+            $rightButton.css({"opacity": 0.3, "cursor": "default"});  
         } else {
             if (isLeftEnd(isPaper)){
-                $leftButton.css({"opacity": 0.5, "cursor": "default"});
+                $leftButton.css({"opacity": 0.3, "cursor": "default"});
             } else {
                 $leftButton.css({"opacity": 1, "cursor": "pointer"});
             }
 
             if (isRightEnd(isPaper)){
-                $rightButton.css({"opacity": 0.5, "cursor": "default"});
+                $rightButton.css({"opacity": 0.3, "cursor": "default"});
             } else {
                 $rightButton.css({"opacity": 1, "cursor": "pointer"});
             }
