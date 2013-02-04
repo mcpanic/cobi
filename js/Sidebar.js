@@ -209,7 +209,7 @@ var Sidebar = function() {
                          var id = $(item).attr("id").substr(8);
                          var session = allSessions[id];
 			          //$(item).find(".display").html("80");
-			          $(item).find(".display").html(getSessionDuration(session.submissions));
+			          $(item).find(".display").html(getSessionDuration(session));
 			});
                break;
                case "awards":

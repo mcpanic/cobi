@@ -57,7 +57,18 @@ function getSessionNumSubmissions(submissions){
 }
 
 // HQ: added new durartion function
-function getSessionDuration(submissions){
+function getSessionDuration(session){
+    switch(session.venue){
+    case 'panel':
+    case 'SIG':
+    case 'course':
+    case 'special':
+    case 'bof':
+	return 80;
+    default:
+	break;
+    }
+    var submissions = session.submissions;
     var key, count = 0;
     for (key in submissions){
 	if(submissions[key].type == "TOCHI"){
@@ -68,12 +79,8 @@ function getSessionDuration(submissions){
 	    }else{ // paper
 		count += 20;
 	    }
-	}else if(submissions[key].type == "panel"){
-	    count += 80;
-	     }else if(submissions[key].type == "SIG"){
-	    count += 80;
-	}else if(submissions[key].type == "course"){
-	    count += 80;
+	}else if(submissions[key].type == "altchi"){
+	    count += 20;
 	}else if(submissions[key].type == "casestudy"){
 	    count += 20;
 	}
