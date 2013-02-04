@@ -720,7 +720,8 @@
             Polling.initialize();
             // default is view mode.
             ViewMode.initialize();   
-            UnscheduledPanel.initialize();   
+            UnscheduledPanel.initialize(); 
+            $(".user-display").append("<span class='icon-user icon-white'/>").append(getUsernameByUID(userData.id));
             Statusbar.display("Select a session for scheduling options and more information.");
             $("body").removeClass("loading"); 
         });

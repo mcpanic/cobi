@@ -9,6 +9,13 @@ function isTransactionSessionLevel(t){
   return t.type.indexOf("Paper") === -1;
 }
 
+function getUsernameByUID(uid){
+	if (typeof uid == "undefined" || uid == null || uid == "" || typeof allUsers[uid] == "undefined")
+		return "Anonymous User";
+	else
+		return allUsers[uid].name;
+}
+
 function getCellLinkByID(id){
 	var title = allSessions[id].title;
 	title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 

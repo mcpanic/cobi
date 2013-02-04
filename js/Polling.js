@@ -11,6 +11,12 @@ var Polling = function() {
         $(document).on("transactionUpdate", transactionUpdateHandler);
         $(document).on("transactionAccepted", transactionAcceptedHandler);
         $(document).on("transactionFailed", transactionFailedHandler);
+
+        $(document).on("userLoaded", userLoadedHandler);
+    }
+
+    function userLoadedHandler(event){
+        console.log("userLoadedHandler", allUsers, userData);
     }
 
     function transactionAcceptedHandler(event, t){
@@ -203,7 +209,7 @@ var Polling = function() {
             postPollingMove();  
             if (isMyChange)
                 MoveMode.destroy();  
-        }, 2500);                   
+        }, 2300);                   
     }
 
     function handlePollingSwapPaper(t, isMyChange){
@@ -212,7 +218,7 @@ var Polling = function() {
             postPollingMove();  
             if (isMyChange)
                 MoveMode.destroy();
-        }, 2500);                
+        }, 2300);                
     }
 
     function handlePollingMovePaper(t, isMyChange){
@@ -221,7 +227,7 @@ var Polling = function() {
             postPollingMove();  
             if (isMyChange)
                 MoveMode.destroy();
-        }, 2500);
+        }, 2300);
     }
 
     function handlePollingSwapWithUnscheduledPaper(t, isMyChange){
@@ -230,7 +236,7 @@ var Polling = function() {
             postPollingMove();  
             if (isMyChange)
                 MoveMode.destroy();
-        }, 2500);
+        }, 2300);
     }
 
     return {

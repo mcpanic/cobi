@@ -65,8 +65,7 @@ var Sidebar = function() {
      function displaySessionHistory(t){
           var $link, $li;
           var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("status icon-exclamation-sign") : $("<span/>").addClass("status icon-ok");
-          // TODO: change with actual user management logic to display username
-          var user = isTransactionMyChange(t) ? "" : "Anon";
+          var user = isTransactionMyChange(t) ? "" : getUsernameByUID(t.uid);
           $li = $("<li/>").attr("data-local-hash", t.localHash).append($statusLabel).append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
           
           if (t.type.indexOf("swap") !== -1){
@@ -85,8 +84,7 @@ var Sidebar = function() {
      function displayPaperHistory(t){
           var $link, $li;
           var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("status icon-exclamation-sign") : $("<span/>").addClass("status icon-ok");
-          // TODO: change with actual user management logic to display username
-          var user = isTransactionMyChange(t) ? "" : "Anon";
+          var user = isTransactionMyChange(t) ? "" : getUsernameByUID(t.uid);
           $li = $("<li/>").attr("data-local-hash", t.localHash).append($statusLabel).append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
           
           if (t.type.indexOf("swap") !== -1){

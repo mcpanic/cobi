@@ -27,19 +27,19 @@ var communities_list = [
 ];
 
 var typeDisplayList = {
-	lock: "lock",
-	unlock: "unlock",
-	unschedule: "unschedule",
-	schedule: "schedule",
-	swap: "swap",
-	move: "move",
-	swapWithUnscheduled: "swap with unscheduled",
-	reorderPapers: "reorder papers",
-	unschedulePaper: "unschedule paper",
-	schedulePaper: "schedule paper",
-	swapPapers: "swap papers",
-	movePaper: "move paper",
-	swapWithUnscheduledPaper: "swap with unscheduled paper"
+	lock: "locked slot",
+	unlock: "unlocked slot",
+	unschedule: "unscheduled session",
+	schedule: "scheduled session",
+	swap: "swapped session",
+	move: "moved session",
+	swapWithUnscheduled: "swapped with unscheduled",
+	reorderPapers: "reordered papers",
+	unschedulePaper: "unscheduled paper",
+	schedulePaper: "scheduled paper",
+	swapPapers: "swapped papers",
+	movePaper: "moved paper",
+	swapWithUnscheduledPaper: "swapped with unscheduled paper"
 }
 
 

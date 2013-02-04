@@ -42,21 +42,32 @@ var Statusbar = function() {
             displayPaperStatus(t);
     }
 
-    // function addMoveStatusHandler(event, id, paperId){
-    //     console.log(id, paperId);
-    //     if (paperId == ""){
-    //         displayMoveStatus(id);
-    //     } else {
-    //         displayPaperMoveStatus(id, paperId);
-    //     }
-    // }
+
+    function addMoveStatusHandler(event, id){
+        var $statusLabel = $("<span/>").addClass("label label-info").html("Scheduling session");
+        var $status = $("<div/>").addClass("status").append($statusLabel).append();
+        var $session = $(".selected").first();
+        var $link = (typeof $session.attr("data-session-id") === "undefined") ? getCellLinkByDateTimeRoom($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room")) : getCellLinkByID($session.attr("data-session-id"));
+        $status.append(" ").append($link)
+            .append("&nbsp;&nbsp;&nbsp;Number: reduced conflicts. <span class='palette recommended'>&nbsp;</span>: recommended." + MoveMode.getCancelButtonHTML());
+        $bar.html($status);
+    }
+
+    function addPaperMoveStatusHandler(event, id, paperId){
+        var $statusLabel = $("<span/>").addClass("label label-info").html("Scheduling submission");
+        var $status = $("<div/>").addClass("status").append($statusLabel).append();
+        var $session = $(".selected").first();
+        var $link = getPaperCellLinkByID($session.attr("data-session-id"), paperId);
+        $status.append(" ").append($link)
+            .append("&nbsp;&nbsp;&nbsp;Number: reduced conflicts. <span class='palette recommended'>&nbsp;</span>: recommended." + MoveMode.getCancelButtonHTML());
+        $bar.html($status);
+    }
 
     function displaySessionStatus(t){
         var $link, $li;
         var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("label label-info").html("In progress") : $("<span/>").addClass("label label-info").html("Updated");
 
-        // TODO: change with actual user management logic to display username
-        var user = isTransactionMyChange(t) ? "" : "Anon";
+        var user = isTransactionMyChange(t) ? "" : getUsernameByUID(t.uid);
         $li = $("<div/>").addClass("status").attr("data-local-hash", t.localHash).append($statusLabel).append(" " + user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
 
         if (t.type.indexOf("swap") !== -1){
@@ -75,8 +86,7 @@ var Statusbar = function() {
         var $link, $li;
         var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("label label-info").html("In progress") : $("<span/>").addClass("label label-info").html("Updated");
 
-        // TODO: change with actual user management logic to display username
-        var user = isTransactionMyChange(t) ? "" : "Anon";
+        var user = isTransactionMyChange(t) ? "" : getUsernameByUID(t.uid);
         $li = $("<div/>").addClass("status").attr("data-local-hash", t.localHash).append($statusLabel).append(" " + user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
 
           if (t.type.indexOf("swap") !== -1){
@@ -104,26 +114,6 @@ var Statusbar = function() {
           }
 
         $bar.html($li);        
-    }
-
-    function addMoveStatusHandler(event, id){
-        var $statusLabel = $("<span/>").addClass("label label-info").html("Scheduling session");
-        var $status = $("<div/>").addClass("status").append($statusLabel).append();
-        var $session = $(".selected").first();
-        var $link = (typeof $session.attr("data-session-id") === "undefined") ? getCellLinkByDateTimeRoom($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room")) : getCellLinkByID($session.attr("data-session-id"));
-        $status.append(" ").append($link)
-            .append("&nbsp;&nbsp;&nbsp;Number: reduced conflicts. <span class='palette recommended'>&nbsp;</span>: recommended." + MoveMode.getCancelButtonHTML());
-        $bar.html($status);
-    }
-
-    function addPaperMoveStatusHandler(event, id, paperId){
-        var $statusLabel = $("<span/>").addClass("label label-info").html("Scheduling submission");
-        var $status = $("<div/>").addClass("status").append($statusLabel).append();
-        var $session = $(".selected").first();
-        var $link = getPaperCellLinkByID($session.attr("data-session-id"), paperId);
-        $status.append(" ").append($link)
-            .append("&nbsp;&nbsp;&nbsp;Number: reduced conflicts. <span class='palette recommended'>&nbsp;</span>: recommended." + MoveMode.getCancelButtonHTML());
-        $bar.html($status);
     }
 
     // Display the given html with given type
