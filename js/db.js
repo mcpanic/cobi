@@ -243,6 +243,7 @@ DB.prototype.loadUser = function(uid){
 		}else{
 		    //		    userData = new userInfo(null, "Anon", null, "rookie");
 		}
+		$(document).trigger('userLoaded');
 	    },
 	    error : function(m){
 		alert(JSON.stringify(m));
