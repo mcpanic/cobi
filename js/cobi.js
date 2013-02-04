@@ -956,7 +956,6 @@ function initAfterScheduleLoads(m){
     unscheduledSubmissions = m['unscheduledSubmissions'];
     scheduleSlots = m['slots'];
     transactions = m['transactions'];
-
     allRooms = getAllRooms();
     allSessions = getAllSessions();
     allSubmissions = getAllSubmissions();
@@ -1010,6 +1009,7 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
     // Assume same keys on day/time/room exist always, so any inconsistency is in content
     var scheduleChange = [];
     var unscheduledChange = [];
+    var unscheduledSubmissionsChange = [];
     var consistent = true;
     
     // check if there are new transactions
