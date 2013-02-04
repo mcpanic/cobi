@@ -719,7 +719,8 @@
             Searchbox.initialize();
             Polling.initialize();
             // default is view mode.
-            ViewMode.initialize();      
+            ViewMode.initialize();   
+            UnscheduledPanel.initialize();   
             Statusbar.display("Select a session for scheduling options and more information.");
             $("body").removeClass("loading"); 
         });

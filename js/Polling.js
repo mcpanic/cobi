@@ -71,7 +71,7 @@ var Polling = function() {
         clearConflictDisplay();
         // the frontend conflicts update: the row view of conflicts.
         updateConflicts();
-
+        UnscheduledPanel.refreshButtons();
     }
 
 /******************************
