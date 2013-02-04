@@ -176,6 +176,11 @@ body.loading .modal {
     overflow-y: hidden;
 }
 
+#program .header-cell {
+    vertical-align: middle;
+    text-align: center;
+}
+
 #program .slot, #unscheduled .slot, #unscheduled-papers .slot-paper {
     min-width: 44px;
     font-size: 10px;

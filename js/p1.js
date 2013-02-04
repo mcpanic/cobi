@@ -647,16 +647,19 @@
           var i, cell;
           // Table Header
           var table = document.createElement('table'); 
+          /*
           var header = document.createElement('tr');
           var firstcell = $(document.createElement('td')).addClass("cell header-col").append("<div>Room/<br>Time</div>");
           //var secondcell = $(document.createElement('td')).addClass("cell").append("<div>Conflicts</div>");
           $(header).addClass("header-row").append(firstcell); //.append(secondcell);
           for(var i = 0; i < orderedRooms.length; i++){
                var cell = document.createElement('td');
-               $(cell).addClass("cell").append("<div>" + orderedRooms[i] + "</div>");
+               $(cell).addClass("cell header-cell").append("<div>" + orderedRooms[i] + "</div>");
                $(header).append(cell);
           }
           $("#program").append(header);
+          */
+          addHeaderRow(orderedRooms);
 
           // Main content
           $.each(orderedDates, function(index, date){
@@ -666,11 +669,12 @@
             $.each(orderedTimes, function(index2, time){
                 // add an extra row for daily borders
                 if (index2 == 0) {
-                    var borderRow = document.createElement('tr');
-                    var borderSlot = document.createElement('td');
-                    $(borderSlot).attr("colspan", orderedRooms.length+1).addClass("header-day-border");
-                    $(borderRow).append(borderSlot);
-                    $('#program').append(borderRow);
+                    addBorderRow(orderedRooms);
+                    // var borderRow = document.createElement('tr');
+                    // var borderSlot = document.createElement('td');
+                    // $(borderSlot).attr("colspan", orderedRooms.length+1).addClass("header-day-border");
+                    // $(borderRow).append(borderSlot);
+                    // $('#program').append(borderRow);
                     //$(slot).addClass("header-day-border");
                 }
                 var row = document.createElement('tr');
@@ -703,7 +707,38 @@
 
             });
           });
+
+                    // var borderRow = document.createElement('tr');
+                    // var borderSlot = document.createElement('td');
+                    // $(borderSlot).attr("colspan", orderedRooms.length+1).addClass("header-day-border");
+                    // $(borderRow).append(borderSlot);
+                    // $('#program').append(borderRow);
+
+            addBorderRow(orderedRooms);
+            addHeaderRow(orderedRooms);
+
   
+     }
+
+     function addHeaderRow(orderedRooms){
+          var header = document.createElement('tr');
+          var firstcell = $(document.createElement('td')).addClass("cell header-col").append("<div>Room/<br>Time</div>");
+          //var secondcell = $(document.createElement('td')).addClass("cell").append("<div>Conflicts</div>");
+          $(header).addClass("header-row").append(firstcell); //.append(secondcell);
+          for(var i = 0; i < orderedRooms.length; i++){
+               var cell = document.createElement('td');
+               $(cell).addClass("cell header-cell").append("<div>" + orderedRooms[i] + "</div>");
+               $(header).append(cell);
+          }
+          $("#program").append(header);       
+     }
+
+     function addBorderRow(orderedRooms){
+            var borderRow = document.createElement('tr');
+            var borderSlot = document.createElement('td');
+            $(borderSlot).attr("colspan", orderedRooms.length+1).addClass("header-day-border");
+            $(borderRow).append(borderSlot);
+            $('#program').append(borderRow);
      }
 
     $(document).ready(function() {
