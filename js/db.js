@@ -213,6 +213,23 @@ DB.prototype.refresh = function(){
 	    }})());
 };
 
+DB.prototype.loadUsers = function(uid){
+    $.ajax({
+	async: true,
+	type: 'POST',
+	url: "./php/loadUsers.php",
+	success: function(m){
+	    if(m != null){
+		allUsers = m;
+	    }else{
+	    }
+	},
+	error : function(m){
+	    alert(JSON.stringify(m));
+	},
+	dataType: "json"
+    });
+};
 
 DB.prototype.loadUser = function(uid){
     $.ajax({

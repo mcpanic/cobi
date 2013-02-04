@@ -11,6 +11,7 @@ var schedule = null;
 var frontEndOnly = false;
 var scheduleSlots = null;
 var userData = new userInfo(null, "Anon", null, "rookie");
+var allUsers = {};
 var transactions = [];
 var localTransactions = [];
 
@@ -946,6 +947,7 @@ if(!Array.prototype.indexOf) {
 function initialize(){
     loadUser();
     db.loadSchedule();
+    db.loadUsers();
 }
 
 // Populates all of the above variables and attaches personas
