@@ -240,11 +240,33 @@ body.loading .modal {
    Unscheduled workspace
    ========================================================================== */
 
-.unscheduled-wrapper {
+.unscheduled-panel .left, .unscheduled-panel .right, .unscheduled-papers-panel .left, .unscheduled-papers-panel .right {
+    height: 95px;
+    cursor: default;
+    opacity: 0.5;
+}
+
+.unscheduled-panel .left, .unscheduled-papers-panel .left { 
+    width: 0; 
+    height: 0; 
+    border-top: 47px solid transparent;
+    border-bottom: 47px solid transparent;
+    border-right: 20px solid #bbbbbb;    
+}
+
+.unscheduled-panel .right, .unscheduled-papers-panel .right {
+    width: 0; 
+    height: 0; 
+    border-top: 47px solid transparent;
+    border-bottom: 47px solid transparent;
+    border-left: 20px solid #bbbbbb;
+}
+
+.unscheduled-wrapper, .unscheduled-papers-wrapper {
     width: 95%;
     height: 95px;
     border: solid 1px #dddddd;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     margin-bottom: 15px;
 }

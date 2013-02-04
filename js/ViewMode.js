@@ -36,17 +36,6 @@ var ViewMode = function() {
         $("body").on("click", ".popover .button-paper-propose-empty", {type: "paper-empty"}, proposeHandler);
     }
 
-    function postMove(){
-        updateUnscheduledCount();
-        // the backend conflicts update
-        getAllConflicts();
-        // this erases the preview conflicts display, so necessary
-        clearConflictDisplay();
-        // the frontend conflicts update: the row view of conflicts.
-        updateConflicts();
-    }
-
-
      // Event handler for clicking an individual paper (only in the unscheduled panel)
     function paperSlotClickHandler(){
         console.log("VM.slotpaperclick");
@@ -125,15 +114,7 @@ var ViewMode = function() {
             if (!arraysEqual(oldOrder, newOrder)){
                 // backend reorder (current session, new order, old order)
                 reorderPapers(allSessions[id], newOrder, oldOrder);
-                $list.attr("data-paper-order", newOrder.join());
-                // console.log("order update", $list.attr("data-paper-order"));
-                // frontend reorder: nothing
-
-                //$(".selected").removeClass("selected");
-                // Statusbar.display("Paper reordering successful");
-                // $(document).trigger("addHistory", [{user: "", type: "paper-reorder", id: id}]);
-
-                // postMove();        
+                $list.attr("data-paper-order", newOrder.join());   
             }
         }
     }
@@ -146,21 +127,8 @@ var ViewMode = function() {
 
         var $paper = $(this).parent();
         var pid = $paper.attr("id");
-
-        var oldDate = allSessions[id].date;
-        var oldTime = allSessions[id].time;
-        var oldRoom = allSessions[id].room;
-
         // the backend unschedule paper
         unschedulePaper(allSessions[id], allSubmissions[pid]);
-
-        // the frontend unschedule paper
-        // PaperVisualOps.unschedule(allSubmissions[pid]);
-
-        // Statusbar.display("Paper unschedule successful");
-        // $(document).trigger("addHistory", [{user: "", type: "paper-unschedule", id: id, pid: pid}]);
-
-        // postMove(); 
     }
 
     // When move is request, forward this request to MoveMode.
@@ -181,21 +149,8 @@ var ViewMode = function() {
         var id = getID($session);
         if (id === -1)
             return;
-
-        // var oldDate = allSessions[id].date;
-        // var oldTime = allSessions[id].time;
-        // var oldRoom = allSessions[id].room;
-
         // the backend unschedule session
-        unscheduleSession(allSessions[id]);
-        // the frontend unschedule session
-        //VisualOps.unschedule(allSessions[id], oldDate, oldTime, oldRoom);
-
-        // $(".selected").removeClass("selected");
-        //Statusbar.display("Unschedule successful");
-        //$(document).trigger("addHistory", [{user: "", type: "unschedule", id: id}]);
-
-        //postMove();    
+        unscheduleSession(allSessions[id]);  
     }
 
 
@@ -206,21 +161,9 @@ var ViewMode = function() {
         var date, time, room; 
         if(id in allSessions){
             lockSlot(allSessions[id].date, allSessions[id].time, allSessions[id].room);
-            //$session.data("popover").options.content = function(){
-            //    return getSessionDetail("scheduled", allSessions[id]);
-            //};
-            // $(document).trigger("addHistory", [{user: "", type: "lock", id: id}]);
-
         } else {
             lockSlot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"));
-            // $session.data("popover").options.content = function(){
-            //     // HQ: passing a slot for session (allows for isLocked check)
-            //     return getSessionDetail("empty", new slot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"), null));
-            // };
-            // $(document).trigger("addHistory", [{user: "", type: "lock", date: $session.attr("data-date"), time: $session.attr("data-time"), room: $session.attr("data-room")}]);
         }
-        // $session.removeClass("selected").popover("hide");
-        //$session.find(".title").addClass("locked");
     }
 
     // HQ: handle an unlock request
@@ -229,22 +172,9 @@ var ViewMode = function() {
         var id = getID($session);  
         if(id in allSessions){
             unlockSlot(allSessions[id].date, allSessions[id].time, allSessions[id].room);
-            // $session.data("popover").options.content = function(){
-            //     return getSessionDetail("scheduled", allSessions[id]);
-            // };
-            //$(document).trigger("addHistory", [{user: "", type: "unlock", id: id}]);
-
         }else{
             unlockSlot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"));
-            // $session.data("popover").options.content = function(){
-            //     // HQ: passing a slot for session (allows for isLocked check)
-            //     return getSessionDetail("empty", new slot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"), null));
-            // };
-            //$(document).trigger("addHistory", [{user: "", type: "unlock", date: $session.attr("data-date"), time: $session.attr("data-time"), room: $session.attr("data-room")}]);
         }
-
-        $session.removeClass("selected").popover("hide");
-        //$session.find(".title").removeClass("locked");
     }
 
      // Event handler for clicking an individual session

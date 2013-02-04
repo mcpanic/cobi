@@ -1,4 +1,6 @@
 
+
+
     // Popover close button interaction
     $("body").on("click", ".popover-close", function(){
         console.log("popover-close", $(this).attr("data-session-id"));
@@ -719,7 +721,8 @@
             Searchbox.initialize();
             Polling.initialize();
             // default is view mode.
-            ViewMode.initialize();      
+            ViewMode.initialize();   
+            UnscheduledPanel.initialize();   
             Statusbar.display("Select a session for scheduling options and more information.");
             $("body").removeClass("loading"); 
         });
