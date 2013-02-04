@@ -40,12 +40,14 @@ function displaySchedule(){
     for(var day in schedule){
 	for(var time in schedule[day]){
 	    for(var room in schedule[day][time]){
+		if(keys(schedule[day][time][room]).length == 0){
+		    $('#debug').append(day + ", " + time + ", " + room + ": empty.<br/>");
+ 		}
 		for(var s in schedule[day][time][room]){
-		    var subKeys = [];
-		    for(var sub in schedule[day][time][room][s]['submissions']){
-			$('#debug').append(day + ", " + time + ", " + room + ", " + s + ": " + 
-					   schedule[day][time][room][s]['submissions'][sub] + '<br/>');
-		    }}}}}
+		    $('#debug').append(day + ", " + time + ", " + room + ", " + s + ": ");
+		    $('#debug').append(schedule[day][time][room][s]['submissions'] + '<br/>');
+
+		}}}}
     
     // demonstrating how to traverse the unscheduled data
     $('#debug').append('<br/>Unscheduled sessions:<br/>');
