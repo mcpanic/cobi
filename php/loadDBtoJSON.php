@@ -95,7 +95,6 @@ while ($row = $sessionTable->fetch_assoc()) {
   $row['hasHonorableMention'] = (bool)$row['hasHonorableMention'];
   $row['scheduled'] = (bool)$row['scheduled'];
   $subKeys = explode(",", trim($row['submissions']));
-
   $subs = array();
 
   foreach ($subKeys as $sub){

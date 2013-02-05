@@ -273,7 +273,7 @@ function swapPapers($s1id, $p1id, $s2id, $p2id, $mysqli){
 	  $s1sub = $p2id;
 	}
       }
-      $s1newsubs = implode(",", $s1subs);
+      $s1newsubs = trim(implode(",", $s1subs), ",");
       
       $s1upquery = "UPDATE session SET submissions='$s1newsubs' WHERE id='$s1id'";    
       mysqli_query($mysqli, $s1upquery);
@@ -293,7 +293,7 @@ function swapPapers($s1id, $p1id, $s2id, $p2id, $mysqli){
 	  $s2sub = $p1id;
 	}
       }
-      $s2newsubs = implode(",", $s2subs);
+      $s2newsubs = trim(implode(",", $s2subs), ",");
       
       $s2upquery = "UPDATE session SET submissions='$s2newsubs' WHERE id='$s2id'";    
       mysqli_query($mysqli, $s2upquery);
@@ -340,7 +340,7 @@ function swapWithUnscheduledPaper($p1id, $s2id, $p2id, $mysqli){
 	  $s2sub = $p1id;
 	}
       }
-      $s2newsubs = implode(",", $s2subs);
+      $s2newsubs = trim(implode(",", $s2subs), ",");
       
       $s2upquery = "UPDATE session SET submissions='$s2newsubs' WHERE id='$s2id'";    
       mysqli_query($mysqli, $s2upquery);
@@ -373,7 +373,7 @@ function movePaper($s1id, $p1id, $s2id, $pos, $mysqli){
     if($row != null){
       $s1subs = explode(",", $row["submissions"]);
       $s1subs = array_diff($s1subs, array($p1id));
-      $s1newsubs = implode(",", $s1subs);
+      $s1newsubs = trim(implode(",", $s1subs), ",");
       
       $s1upquery = "UPDATE session SET submissions='$s1newsubs' WHERE id='$s1id'";    
       mysqli_query($mysqli, $s1upquery);
@@ -395,7 +395,7 @@ function movePaper($s1id, $p1id, $s2id, $pos, $mysqli){
       }else{//insert in the middle
 	array_splice($s2subs, $pos, 0, $p1id);
       }
-      $s2newsubs = implode(",", $s2subs);
+      $s2newsubs = trim(implode(",", $s2subs), ",");
       
       $s2upquery = "UPDATE session SET submissions='$s2newsubs' WHERE id='$s2id'";    
       mysqli_query($mysqli, $s2upquery);
@@ -424,7 +424,7 @@ function unschedulePaper($sid, $pid, $mysqli){
     if($row != null){
       $s1subs = explode(",", $row["submissions"]);
       $s1subs = array_diff($s1subs, array($pid));
-      $s1newsubs = implode(",", $s1subs);
+      $s1newsubs = trim(implode(",", $s1subs), ",");
       
       $s1upquery = "UPDATE session SET submissions='$s1newsubs' WHERE id='$sid'";    
       mysqli_query($mysqli, $s1upquery);
@@ -460,7 +460,7 @@ function schedulePaper($sid, $pid, $pos, $mysqli){
 	array_splice($s1subs, $pos, 0, $pid);
       }
 
-      $s1newsubs = implode(",", $s1subs);
+      $s1newsubs = trim(implode(",", $s1subs), ",");
       
       $s1upquery = "UPDATE session SET submissions='$s1newsubs' WHERE id='$sid'";    
       mysqli_query($mysqli, $s1upquery);

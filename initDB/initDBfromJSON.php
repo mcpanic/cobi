@@ -121,7 +121,7 @@ foreach ($sessions as $session) {
     }
   }
 
-  $submissionKeys = mysqli_real_escape_string($mysqli, implode(",", $session['value']['content']));
+  $submissionKeys = mysqli_real_escape_string($mysqli, trim(implode(",", $session['value']['content'])));
 
   // add session id to the submissions
   foreach ($session['value']['content'] as $paperContent){

@@ -420,6 +420,7 @@ var DataOps = function() {
     
     // note: always add at start of session
     function insertPaperIntoSession(s, p, pos){
+	console.log(s);
 	console.log("Test: adding paper " + p.id + " to " + s.id + " at position " + pos);
 	if(pos <= 0){
 	    s.submissions.unshift(p);
