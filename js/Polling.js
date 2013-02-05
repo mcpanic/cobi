@@ -8,9 +8,9 @@ var Polling = function() {
 
     // Add event handlers to each sidebar item
     function bindEvents(){
-        $(document).on("transactionUpdate", transactionUpdateHandler);
-        $(document).on("transactionAccepted", transactionAcceptedHandler);
-        $(document).on("transactionFailed", transactionFailedHandler);
+        // $(document).on("transactionUpdate", transactionUpdateHandler);
+        // $(document).on("transactionAccepted", transactionAcceptedHandler);
+        // $(document).on("transactionFailed", transactionFailedHandler);
 
         $(document).on("userLoaded", userLoadedHandler);
     }
@@ -19,28 +19,51 @@ var Polling = function() {
         console.log("userLoadedHandler", allUsers, userData);
     }
 
-    function transactionAcceptedHandler(event, t){
-        console.log(event.type, t);
+    function transactionAccepted(t){
+        console.log("transactionAccepted", t);
         $(document).trigger("updateStatusAccepted", [t]); 
         $(document).trigger("updateHistoryAccepted", [t]); 
     }
 
-    function transactionFailedHandler(event, t){
-        console.log(event.type, t);
+    // function transactionAcceptedHandler(event, t){
+    //     console.log(event.type, t);
+    //     $(document).trigger("updateStatusAccepted", [t]); 
+    //     $(document).trigger("updateHistoryAccepted", [t]); 
+    // }
+
+    function transactionFailed(t){
+        console.log("transactionFailed", t);
         var rollbackTransaction = new TransactionData(t.uid, t.previousType, t.previous, t.type, t.data);
         handleTransaction(rollbackTransaction);
         $(document).trigger("updateStatusFailed", [t]); 
         $(document).trigger("updateHistoryFailed", [t]); 
     }
 
-    function transactionUpdateHandler(event, t){
-        console.log(event.type, t);
+    // function transactionFailedHandler(event, t){
+    //     console.log(event.type, t);
+    //     var rollbackTransaction = new TransactionData(t.uid, t.previousType, t.previous, t.type, t.data);
+    //     handleTransaction(rollbackTransaction);
+    //     $(document).trigger("updateStatusFailed", [t]); 
+    //     $(document).trigger("updateHistoryFailed", [t]); 
+    // }
+
+    function transactionUpdate(t){
+        console.log("transactionUpdate", t);
         //type: event type, uid: user who made the change, data: object
         handleTransaction(t);
 
         $(document).trigger("addStatus", [t]); 
         $(document).trigger("addHistory", [t]); 
     }  
+
+    // function transactionUpdateHandler(event, t){
+    //     console.log(event.type, t);
+    //     //type: event type, uid: user who made the change, data: object
+    //     handleTransaction(t);
+
+    //     $(document).trigger("addStatus", [t]); 
+    //     $(document).trigger("addHistory", [t]); 
+    // }  
 
     function handleTransaction(t){
         var isMyChange = isTransactionMyChange(t);
@@ -245,6 +268,9 @@ var Polling = function() {
     }
 
     return {
-        initialize: initialize
+        initialize: initialize,
+        transactionUpdate: transactionUpdate,
+        transactionAccepted: transactionAccepted,
+        transactionFailed: transactionFailed
     };
 }();

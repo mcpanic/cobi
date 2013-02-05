@@ -3,11 +3,14 @@ var ViewMode = function() {
 
     // Initialize the view mode 
     function initialize(){
-        isOn = true;
-        //MoveMode.destroy();
-        $(".main").addClass("view-mode");
-        bindEvents();
-        initDisplay();
+        // If already on, do not register multiple events
+        if (!isOn){
+            isOn = true;
+            //MoveMode.destroy();
+            $(".main").addClass("view-mode");
+            bindEvents();
+            initDisplay();
+        }
     }
 
     // Display is the bottom portion of the session display, which summarizes conflicts

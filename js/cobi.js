@@ -220,10 +220,10 @@ var DataOps = function() {
 	// remove session from slot
 	removeSessionFromSlot(s, sdate, stime, sroom);
 	
-	console.log("before unscheduling.." + JSON.stringify(unscheduled));
+	//console.log("before unscheduling.." + JSON.stringify(unscheduled));
 	// add to unscheduled
 	addToUnscheduled(s);
-	console.log("after unscheduling.." + JSON.stringify(unscheduled));
+	//console.log("after unscheduling.." + JSON.stringify(unscheduled));
     }
 
     // schedule a session

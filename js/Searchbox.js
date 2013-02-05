@@ -19,7 +19,6 @@ var Searchbox = function() {
         });
 
         $("#searchbox").on("change", function(e){
-            $(".highlight").removeClass("highlight");
             var id = e.val;
             //console.log(JSON.stringify({val:e.val, added:e.added, removed:e.removed}));
             if (id == "")
@@ -42,9 +41,8 @@ var Searchbox = function() {
             }
             $("body").animate({
                 scrollTop:$cell.offset().top - 100
-            }, 500);
-            //$(document).scrollTop( $(cell).offset().top - 100); 
-            $cell.addClass("highlight"); //.popover("toggle");               
+            }, 500);   
+            $cell.effect("highlight", {color: "#aec7e8"}, 3000);          
         });
     }
 
@@ -58,7 +56,7 @@ var Searchbox = function() {
         var options = {
           keys: ["title"],   
           id: "id",          
-          threshold: "0.3"
+          threshold: "0.2"
         }
         var f = new Fuse(allSessions, options);
         var result = f.search(q); 
@@ -67,21 +65,24 @@ var Searchbox = function() {
             sessionData.children.push({id: result[id], text: allSessions[result[id]].title});  
         }
 
+
         // construct objects to be inserted for submissions. flattening author information out to the front so that it's searchable
         var submissions = {};
         $.each(allSubmissions, function(index, submission){
+            // strip commas
+            var authors = displayAuthors(submission.authors).replace(/,/g,'');
             var s = {
                 id: submission.id, 
                 title: submission.title, 
-                authors: displayAuthors(submission.authors)
+                authors: authors
             };
             submissions[submission.id] = s;
         });
-
+        console.log(submissions);
         options = {
-            keys: ["title", "authors"],
+            keys: ["authors"],
             id: "id",
-            threshold: "0.3"
+            threshold: "0.2"
         }        
         f = new Fuse(submissions, options);
         result = f.search(q);
@@ -100,7 +101,7 @@ var Searchbox = function() {
         if (typeof allSubmissions[item.id] === "undefined")
             return "<strong>" + item.text + "</strong>"; 
         else
-            return "<strong>" + item.text + "</strong><br>" + item.authors;
+            return "<strong>" + item.text + "</strong><br>" + displayAuthors(allSubmissions[item.id].authors);
     }
 
     function destroy(){

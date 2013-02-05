@@ -327,30 +327,16 @@ var Sidebar = function() {
 
      function clickHistoryHandler(){
           var id = $(this).attr("data-session-id");
-          var toggle = true;
-          if ($(this).hasClass("view-option-active"))
-               toggle = false;
-
-          $("#list-history .view-option-active").removeClass("view-option-active");
-          $(".highlight").removeClass("highlight");
-          
           var $cell;
           if (typeof id === "undefined") {
 	          $cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
-	     }
-          else
+	     } else
                $cell = findCellByID(id);
 
-          if (toggle) {
-               $(this).addClass("view-option-active");
-               $("body").animate({
-                    scrollTop:$cell.offset().top - 100
-               }, 500);
-               //$(document).scrollTop( $(cell).offset().top - 100); 
-               $cell.addClass("highlight"); //.popover("toggle");               
-          } else {
-               $cell.removeClass("highlight");               
-          }
+          $("body").animate({
+            scrollTop:$cell.offset().top - 100
+          }, 500); 
+          $cell.effect("highlight", {color: "#aec7e8"}, 3000);
 
           return false;
      } 
@@ -358,32 +344,16 @@ var Sidebar = function() {
      function clickHistoryPaperHandler(){
           var id = $(this).attr("data-session-id");
           var paperId = $(this).attr("data-submission-id");
-          var toggle = true;
-          if ($(this).hasClass("view-option-active"))
-               toggle = false;
-
-          $("#list-history .view-option-active").removeClass("view-option-active");
-          $(".highlight").removeClass("highlight");
-          
           var $cell;
           if (typeof id === "undefined") {
                //cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
                $cell = $("#unscheduled-papers #" + paperId);
-          }
-          else
+          } else
                $cell = findCellByID(id);
-
-          if (toggle) {
-               $(this).addClass("view-option-active");
-               $("body").animate({
-                    scrollTop:$cell.offset().top - 100
-               }, 500);
-               //$(document).scrollTop( $(cell).offset().top - 100); 
-               $cell.addClass("highlight"); //.popover("toggle");               
-          } else {
-               $cell.removeClass("highlight");               
-          }
-
+          $("body").animate({
+            scrollTop:$cell.offset().top - 100
+          }, 500); 
+          $cell.effect("highlight", {color: "#aec7e8"}, 3000);
           return false;
      } 
 

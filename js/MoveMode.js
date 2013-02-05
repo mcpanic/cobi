@@ -6,14 +6,17 @@ var MoveMode = function() {
     // Initialize the view mode 
     function initialize(moveType, pid){
         //console.log("PaperID", pid, pid == "");
-        isOn = true;
-        type = moveType;
-        paperId = pid;
-        ViewMode.destroy();
-        $(".main").addClass("move-mode");
-        clearConflictDisplay();
-        bindEvents();
-        runPropose();
+        // If already on, do not register multiple events
+        if (!isOn){
+            isOn = true;
+            type = moveType;
+            paperId = pid;
+            ViewMode.destroy();
+            $(".main").addClass("move-mode");
+            clearConflictDisplay();
+            bindEvents();
+            runPropose();
+        }
     }
 
     // Add event handlers to each sidebar item

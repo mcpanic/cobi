@@ -70,7 +70,7 @@ body.loading .modal {
     /*margin-left: 17% !important;*/
     /*max-width: 83%;*/
     max-height: 85%;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
     padding-right: 30px;
     /*width: 80%;*/
 }
