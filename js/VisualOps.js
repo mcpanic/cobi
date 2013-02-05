@@ -12,9 +12,7 @@ var VisualOps = function() {
 	}
 
 	function _addSessionToSlot(s, $emptySlot){
-		//var $session = findCellByID(s.id);
-        //console.log(s, $emptySlot);
-		var session = getSessionCell("scheduled", s);
+		var session = getSessionCell("scheduled", s, s.date, s.time, s.room);
 		if ($emptySlot != null){
 			$emptySlot.popover("destroy").replaceWith($(session));
 			$(session).effect("highlight", {color: "yellow"}, 10000); // css("background-color", "white")
@@ -50,9 +48,26 @@ var VisualOps = function() {
 		aparent.insertBefore(b, asibling);
 	}
 
+    function _swapDateTimeRoom($a, $b){
+        var aDate = $a.attr("data-date");
+        var aTime = $a.attr("data-time");
+        var aRoom = $a.attr("data-room");
+        var bDate = $b.attr("data-date");
+        var bTime = $b.attr("data-time");
+        var bRoom = $b.attr("data-room");
+        $a.attr("data-date", bDate);
+        $a.attr("data-time", bTime);
+        $a.attr("data-room", bRoom);
+        $b.attr("data-date", aDate);
+        $b.attr("data-time", aTime);
+        $b.attr("data-room", aRoom);
+    }
+
     // CASE 1. src: scheduled, dst: scheduled
     function swap(scheduled1, scheduled2){
         _swapNodes($("#program #session-" + scheduled1.id)[0], $("#program #session-" + scheduled2.id)[0]);
+        // switching date, time, and room information
+        _swapDateTimeRoom($("#program #session-" + scheduled1.id), $("#program #session-" + scheduled2.id));
 		$("#program #session-" + scheduled1.id).effect("highlight", {color: "yellow"}, 10000);
 		$("#program #session-" + scheduled2.id).effect("highlight", {color: "yellow"}, 10000);
     }

@@ -8,10 +8,22 @@ body {
 }
 
 .main {
+    position: fixed;
+    margin-left: 15% !important;
+    max-width: 85%;
+    max-height: 85%;
+    overflow-y: auto;
+    padding-right: 30px;
     -webkit-user-select: none;  
     -moz-user-select: none;    
     -ms-user-select: none;      
     user-select: none;
+}
+
+.navbar .brand {
+    font-size: 32px;
+    color: white;
+    position: fixed;
 }
 
 .left-sidebar {
@@ -51,9 +63,6 @@ body.loading .modal {
     display: block;
 }
 
-.main {
-    overflow-x: hidden;
-}
 /* ==========================================================================
    Left Sidebar with options
    ========================================================================== */
@@ -116,8 +125,25 @@ body.loading .modal {
 
 
 /* ==========================================================================
-   Top Menubar 
+   Searchbox
    ========================================================================== */
+
+/* class assigned by select2 plugin from Searchbox.js */
+.navbar .searchbox {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* class assigned by select2 plugin from Searchbox.js */
+.dropdown-item li {
+    line-height: 14px;    
+}
+
+
+/* ==========================================================================
+   User Display
+   ========================================================================== */
+
 .navbar .user-display {
     margin-left: 20px;
     margin-top: 10px;
@@ -133,6 +159,11 @@ body.loading .modal {
    ========================================================================== */
 #statusbar .move-cancel-button {
     margin-top: -5px;
+}
+
+#statusbar {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* ==========================================================================
@@ -331,17 +362,6 @@ body.loading .modal {
 }
 
 
-/* ==========================================================================
-    Search Box
-   ========================================================================== */
-/*
-.dropdown-item ul {
-    list-style-type: circle;
-}
-*/
-.dropdown-item li {
-    line-height: 14px;    
-}
 
 /* ==========================================================================
     Status Bar

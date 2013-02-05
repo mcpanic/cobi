@@ -3,7 +3,9 @@ var Searchbox = function() {
     // Initialize the search box functionality
     function initialize(){
         $("#searchbox").select2({
-            placeholder: "session / paper / author name",
+            width: "copy",
+            containerCssClass: "searchbox",
+            placeholder: "search by session / paper / author name",
             minimumInputLength: 2,
             allowClear: true,
             dropdownCssClass: "dropdown-item",
