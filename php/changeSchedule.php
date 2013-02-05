@@ -475,71 +475,94 @@ function schedulePaper($sid, $pid, $pos, $mysqli){
   }else{
     $GLOBALS['failedTransaction'] = true;
   }
+}
+
+function getLock($mysqli){
+  $query = "SELECT GET_LOCK('changeScheduleLock', 1)";  
+  $result = mysqli_query($mysqli, $query);
+  echo mysqli_error($mysqli);
+  if($row = $result->fetch_row()){    
+    return $row[0];
+  }else{
+    return NULL;
+  }
+}
+
+
+function releaseLock($mysqli){
+  $query = "SELECT RELEASE_LOCK('changeScheduleLock')";  
+  mysqli_query($mysqli, $query);
+  echo mysqli_error($mysqli);
 }  
 
-/// end paper level
 $transaction = json_decode($_POST['transaction'], true);
 $lastKnownTransaction = $_POST['lastKnownTransaction'];
 
-$type = $transaction['type'];
-$previousType = $transaction['previousType'];
-$uid = mysqli_real_escape_string($mysqli, $transaction['uid']);
-$localHash = mysqli_real_escape_string($mysqli, $transaction['localHash']);
-$data = mysqli_real_escape_string($mysqli, json_encode($transaction['data']));
-$previous = mysqli_real_escape_string($mysqli, json_encode($transaction['previous']));
-
-switch ($type){
-case "unlock":
-  $date = mysqli_real_escape_string($mysqli, $transaction['data']['date']);
-  $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
-  $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
-  unlockSlot($date, $time, $room, $mysqli);
+if(getLock($mysqli) != 1){
+  echo json_encode(array('transaction' => $transaction,
+			 'newTransactions' => array()));
+}else{
+  /// end paper level
+  
+  $type = $transaction['type'];
+  $previousType = $transaction['previousType'];
+  $uid = mysqli_real_escape_string($mysqli, $transaction['uid']);
+  $localHash = mysqli_real_escape_string($mysqli, $transaction['localHash']);
+  $data = mysqli_real_escape_string($mysqli, json_encode($transaction['data']));
+  $previous = mysqli_real_escape_string($mysqli, json_encode($transaction['previous']));
+  
+  switch ($type){
+  case "unlock":
+    $date = mysqli_real_escape_string($mysqli, $transaction['data']['date']);
+    $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
+    $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
+    unlockSlot($date, $time, $room, $mysqli);
   break;
-case "lock":
-  $date = mysqli_real_escape_string($mysqli, $transaction['data']['date']);
-  $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
-  $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
-  lockSlot($date, $time, $room, $mysqli);
-  break;
-case "unschedule":
-  $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
-  $date = mysqli_real_escape_string($mysqli, $transaction['data']['date']);
-  $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
-  $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
-  unscheduleSession($date, $time, $room, $id, $mysqli);
-  break;
-case "schedule":
-  $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
-  $date = mysqli_real_escape_string($mysqli, $transaction['data']['date']);
-  $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
-  $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
-  scheduleSession($date, $time, $room, $id, $mysqli);
-  break;
-case "move":
-  $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
-  $sdate = mysqli_real_escape_string($mysqli, $transaction['data']['sdate']);
-  $stime = mysqli_real_escape_string($mysqli, $transaction['data']['stime']);
-  $sroom = mysqli_real_escape_string($mysqli, $transaction['data']['sroom']);
-  $tdate = mysqli_real_escape_string($mysqli, $transaction['data']['tdate']);
-  $ttime = mysqli_real_escape_string($mysqli, $transaction['data']['ttime']);
-  $troom = mysqli_real_escape_string($mysqli, $transaction['data']['troom']);
-  moveSession($sdate, $stime, $sroom, $id, 
-	      $tdate, $ttime, $troom, $mysqli);
-  break;
-case "swap":
-  $s1id = mysqli_real_escape_string($mysqli, $transaction['data']['s1id']);
-  $s1date = mysqli_real_escape_string($mysqli, $transaction['data']['s1date']);
-  $s1time = mysqli_real_escape_string($mysqli, $transaction['data']['s1time']);
-  $s1room = mysqli_real_escape_string($mysqli, $transaction['data']['s1room']);
-  $s2id = mysqli_real_escape_string($mysqli, $transaction['data']['s2id']);
-  $s2date = mysqli_real_escape_string($mysqli, $transaction['data']['s2date']);
+  case "lock":
+    $date = mysqli_real_escape_string($mysqli, $transaction['data']['date']);
+    $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
+    $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
+    lockSlot($date, $time, $room, $mysqli);
+    break;
+  case "unschedule":
+    $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
+    $date = mysqli_real_escape_string($mysqli, $transaction['data']['date']);
+    $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
+    $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
+    unscheduleSession($date, $time, $room, $id, $mysqli);
+    break;
+  case "schedule":
+    $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
+    $date = mysqli_real_escape_string($mysqli, $transaction['data']['date']);
+    $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
+    $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
+    scheduleSession($date, $time, $room, $id, $mysqli);
+    break;
+  case "move":
+    $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
+    $sdate = mysqli_real_escape_string($mysqli, $transaction['data']['sdate']);
+    $stime = mysqli_real_escape_string($mysqli, $transaction['data']['stime']);
+    $sroom = mysqli_real_escape_string($mysqli, $transaction['data']['sroom']);
+    $tdate = mysqli_real_escape_string($mysqli, $transaction['data']['tdate']);
+    $ttime = mysqli_real_escape_string($mysqli, $transaction['data']['ttime']);
+    $troom = mysqli_real_escape_string($mysqli, $transaction['data']['troom']);
+    moveSession($sdate, $stime, $sroom, $id, 
+		$tdate, $ttime, $troom, $mysqli);
+    break;
+  case "swap":
+    $s1id = mysqli_real_escape_string($mysqli, $transaction['data']['s1id']);
+    $s1date = mysqli_real_escape_string($mysqli, $transaction['data']['s1date']);
+    $s1time = mysqli_real_escape_string($mysqli, $transaction['data']['s1time']);
+    $s1room = mysqli_real_escape_string($mysqli, $transaction['data']['s1room']);
+    $s2id = mysqli_real_escape_string($mysqli, $transaction['data']['s2id']);
+    $s2date = mysqli_real_escape_string($mysqli, $transaction['data']['s2date']);
   $s2time = mysqli_real_escape_string($mysqli, $transaction['data']['s2time']);
   $s2room = mysqli_real_escape_string($mysqli, $transaction['data']['s2room']);
   swapSessions($s1date, $s1time, $s1room, $s1id, 
 	       $s2date, $s2time, $s2room, $s2id, 
 	       $mysqli);
   break;
-case "swapWithUnscheduled":
+  case "swapWithUnscheduled":
   $s1id = mysqli_real_escape_string($mysqli, $transaction['data']['s1id']);
   $s2id = mysqli_real_escape_string($mysqli, $transaction['data']['s2id']);
   $s2date = mysqli_real_escape_string($mysqli, $transaction['data']['s2date']);
@@ -606,6 +629,7 @@ if(!$GLOBALS['failedTransaction']){ //;mysqli_affected_rows($mysqli) > 0){
   echo json_encode(array('transaction' => $transaction,
 			 'newTransactions' => $newTransactions));
 }
-
+}
 $mysqli->close();
 ?>
+  

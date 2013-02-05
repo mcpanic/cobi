@@ -81,6 +81,8 @@ function displaySchedule(){
 	    $('#debug').append(JSON.stringify(transactions[t]) + '<br/>');
 	}
     }
+
+        $('#debug').append("<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>");
 }
 
 
@@ -186,6 +188,7 @@ function handleChangesInView(changes){
     
     // display the schedule under the changes
     displaySchedule();
+
 }
 
 // Updates current data with latest from the server

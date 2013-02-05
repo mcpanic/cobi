@@ -2017,20 +2017,23 @@ function computePersonaConflicts(s1, s2){
     var s2personas = getSessionPersonas(s2);
   
     if(s1personas == s2personas && s1personas != null){
-	conflicts.push(new conflictObject([s1.id, s2.id], 
-					  "personaInTwoSessions", 
-					  s1personas,
-					  "Someone interested in " + s1personas + " may want to see both '" + s1.title + 
-					  "' and '" + s2.title + "'"));
+	// for handling misc persona
+	if(s1personas != 'Misc'){
+	    conflicts.push(new conflictObject([s1.id, s2.id], 
+					      "personaInTwoSessions", 
+					      s1personas,
+					      "Someone interested in " + s1personas + " may want to see both '" + s1.title + 
+					      "' and '" + s2.title + "'"));
+	}
     }
     //    for(var s1persona in s1personas){
     //	for(var s2persona in s2personas){
     //	    if(s1persona == s2persona){
     //	conflicts.push(new conflictObject([s1.id, s2.id], 
-	// 					  "personaInTwoSessions", 
-// 						  personaHash[s1persona],
-// 						  "Someone interested in " + personaHash[s1persona] + " may want to see both '" + s1.title + 
-// 						  "' and '" + s2.title + "'"));
+    // 					  "personaInTwoSessions", 
+    // 						  personaHash[s1persona],
+    // 						  "Someone interested in " + personaHash[s1persona] + " may want to see both '" + s1.title + 
+    // 						  "' and '" + s2.title + "'"));
 // 	    }
 // 	}
 //     }
