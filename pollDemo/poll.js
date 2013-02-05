@@ -102,6 +102,7 @@ var keepRefreshing = function(){
 				var serverSlots = m['slots'];
 				var serverTransactions = m['transactions'];
 				var serverUnscheduledSubmissions = m['unscheduledSubmissions'];
+				console.log("database unlocked: " + m['dbLocked']);
 				var changes = detectChanges(serverSchedule, 
 							    serverUnscheduled,
 							    serverUnscheduledSubmissions,
