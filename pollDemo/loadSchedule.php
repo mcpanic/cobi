@@ -2,6 +2,18 @@
 ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
 
+function getLockStatus($mysqli){
+  // checking lock to do safe updating
+  $query = "SELECT IS_FREE_LOCK('changeScheduleLock')";
+  $result = mysqli_query($mysqli, $query);
+  echo mysqli_error($mysqli);
+  if($row = $result->fetch_row()){    
+    return $row[0];
+  }else{
+    return NULL;
+  }
+}
+
 define("COBI_MYSQL_SERVER", "mysql.csail.mit.edu");
 define("COBI_MYSQL_USERNAME", "cobi");
 define("COBI_MYSQL_PASSWORD", "su4Biha");
@@ -90,7 +102,8 @@ $output = array('schedule' => $schedule,
 		'unscheduled' => (object)$unscheduled,
 		'unscheduledSubmissions' => (object)$unscheduledSubmissions,
 		'slots' => $slots,
-		'transactions' => $transactions);
+		'transactions' => $transactions,
+		'dbLocked' => getLockStatus($mysqli));
 
 echo json_encode($output);
 

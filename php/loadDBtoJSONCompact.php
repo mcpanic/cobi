@@ -18,6 +18,20 @@ if(mysqli_num_rows($transTable) == 0){
   exit();
 }
 
+// checking lock to do safe updating
+$query = "SELECT IS_FREE_LOCK('changeScheduleLock')";
+$result = mysqli_query($mysqli, $query);
+echo mysqli_error($mysqli);
+if($row = $result->fetch_row()){    
+  if($row[0] != 1){
+    // error
+    die("Locked operation");
+  }
+}else{
+  // error
+  die("Locked operation");
+}
+
 // Get the schedule table
 $scheduleQ = "select * from schedule"; 
 $scheduleTable = mysqli_query($mysqli, $scheduleQ);
