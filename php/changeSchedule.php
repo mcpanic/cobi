@@ -475,8 +475,30 @@ function schedulePaper($sid, $pid, $pos, $mysqli){
   }else{
     $GLOBALS['failedTransaction'] = true;
   }
+}
+
+function getLock($mysqli){
+  $query = "SELECT GET_LOCK('changeScheduleLock', 1)";  
+  $result = mysqli_query($mysqli, $query);
+  echo mysqli_error($mysqli);
+  if($row = $result->fetch_row()){    
+    return $row[0];
+  }else{
+    return NULL;
+  }
+}
+
+
+function releaseLock($mysqli){
+  $query = "SELECT RELEASE_LOCK('changeScheduleLock')";  
+  mysqli_query($mysqli, $query);
+  echo mysqli_error($mysqli);
 }  
 
+if(getLock($mysqli) != 1){
+  echo json_encode(array('transaction' => $transaction,
+			 'newTransactions' => $newTransactions));
+}else{
 /// end paper level
 $transaction = json_decode($_POST['transaction'], true);
 $lastKnownTransaction = $_POST['lastKnownTransaction'];
@@ -606,6 +628,7 @@ if(!$GLOBALS['failedTransaction']){ //;mysqli_affected_rows($mysqli) > 0){
   echo json_encode(array('transaction' => $transaction,
 			 'newTransactions' => $newTransactions));
 }
-
+}
 $mysqli->close();
 ?>
+  
