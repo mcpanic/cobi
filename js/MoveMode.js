@@ -494,7 +494,7 @@ var MoveMode = function() {
         $(".move-dst-selected").removeClass("move-dst-selected");
         $(".proposed-swap").removeClass("proposed-swap"); 
         $(".proposed-swap-paper").removeClass("proposed-swap-paper");   
-        $(".highlight").removeClass("highlight");          
+        // $(".highlight").removeClass("highlight");          
         //$("#statusbar .swap-preview-link").popover("destroy");
         $("body").off("click", ".slot", slotClickHandler); 
         $("body").off("click", ".slot-paper", paperSlotClickHandler);     

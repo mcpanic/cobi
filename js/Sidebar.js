@@ -98,16 +98,23 @@ var Sidebar = function() {
      // }
 
      function displaySessionHistory(t){
-          var $link, $li;
+          var $link, $link2, $li;
           var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("status icon-exclamation-sign") : $("<span/>").addClass("status icon-ok");
           var user = isTransactionMyChange(t) ? "" : getUsernameByUID(t.uid);
           $li = $("<li/>").attr("data-local-hash", t.localHash).append($statusLabel).append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
           
           if (t.type.indexOf("swap") !== -1){
                $link = getCellLinkByID(t.data.s1id);
-               var $link2 = getCellLinkByID(t.data.s2id);
+               $link2 = getCellLinkByID(t.data.s2id);
                $li = $li.append($link).append(" and ").append($link2);    
-
+          } else if (t.type == "unschedule") {
+               $link = getCellLinkByID(t.data.id);
+               $link2 = getCellLinkByDateTimeRoom(t.data.date, t.data.time, t.data.room);
+               $li = $li.append($link).append(" from ").append($link2);  
+          } else if (t.type == "move") {
+               $link = getCellLinkByID(t.data.id);
+               $link2 = getCellLinkByDateTimeRoom(t.data.sdate, t.data.stime, t.data.sroom);
+               $li = $li.append($link).append(" from ").append($link2);  
           } else {
                $link = (typeof t.data.id === "undefined") ? getCellLinkByDateTimeRoom(t.data.date, t.data.time, t.data.room) : getCellLinkByID(t.data.id);
                $li = $li.append($link);
@@ -117,35 +124,34 @@ var Sidebar = function() {
      }
 
      function displayPaperHistory(t){
-          var $link, $li;
+          var $link, $link2, $li;
           var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("status icon-exclamation-sign") : $("<span/>").addClass("status icon-ok");
           var user = isTransactionMyChange(t) ? "" : getUsernameByUID(t.uid);
           $li = $("<li/>").attr("data-local-hash", t.localHash).append($statusLabel).append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
-          
-          if (t.type.indexOf("swap") !== -1){
-               if (t.type == "swapPapers"){
-                    $link = getPaperCellLinkByID(t.data.s1id, t.data.p2id);
-                    var $link2 = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
-                    $li = $li.append($link).append(" and ").append($link2); 
-               } else if (t.type == "swapWithUnscheduledPaper"){
-                    $link = getPaperCellLinkByID(undefined, t.data.p2id);
-                    var $link2 = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
-                    $li = $li.append($link).append(" and ").append($link2); 
-               }                  
 
-          } else {
-               console.log(t.type, t.data);
-               if (t.type == "unschedulePaper")
-                    $link = getPaperCellLinkByID(undefined, t.data.pid);
-               else if (t.type == "schedulePaper")
-                    $link = getPaperCellLinkByID(t.data.sid, t.data.pid);
-               else if (t.type == "movePaper")
-                    $link = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
-               else if (t.type == "reorderPapers")
-                    $link = getPaperCellLinkByID(t.data.id, "");
-               $li = $li.append($link);
-          }
-
+        if (t.type == "swapPapers"){
+            $link = getPaperCellLinkByID(t.data.s1id, t.data.p2id);
+            $link2 = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
+            $li = $li.append($link).append(" and ").append($link2); 
+        } else if (t.type == "swapWithUnscheduledPaper"){
+            $link = getPaperCellLinkByID(undefined, t.data.p2id);
+            $link2 = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
+            $li = $li.append($link).append(" and ").append($link2); 
+        } else if (t.type == "unschedulePaper") {
+            $link = getPaperCellLinkByID(undefined, t.data.pid);
+            $link2 = getCellLinkByID(t.data.sid);
+            $li = $li.append($link).append(" from ").append($link2); 
+        } else if (t.type == "schedulePaper") {
+            $link = getPaperCellLinkByID(t.data.sid, t.data.pid);
+            $li = $li.append($link);
+        } else if (t.type == "movePaper") {
+            $link = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
+            $link2 = getCellLinkByID(t.data.s1id);
+            $li = $li.append($link).append(" from ").append($link2); 
+        } else if (t.type == "reorderPapers") {
+            $link = getPaperCellLinkByID(t.data.id, "");
+            $li = $li.append($link);
+        }
           $("#list-history").prepend($li);
      }
 

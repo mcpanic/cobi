@@ -13,7 +13,7 @@ function getUsernameByUID(uid){
 	if (typeof uid == "undefined" || uid == null || uid == "" || typeof allUsers[uid] == "undefined")
 		return "Anonymous User";
 	else
-		return allUsers[uid].name;
+		return allUsers[uid].name.substring(0,32);
 }
 
 function getCellLinkByID(id){

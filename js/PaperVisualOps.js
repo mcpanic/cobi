@@ -16,7 +16,7 @@ var PaperVisualOps = function() {
         var cell = getSubmissionDetail("paperMove", "scheduled", s, srcType, allSessions[s.session]);
         $(cell).insertBefore($(".popover-inner .list-submissions li").eq(pos));
         $(".popover-inner button").addClass("disabled");
-		$(".popover-inner .list-submissions li").eq(pos).effect("highlight", {color: "yellow"}, 10000);
+		$(".popover-inner .list-submissions li").eq(pos).effect("highlight", {color: "yellow"}, 7000);
 	}
 
     // returns the position that was removed
@@ -31,7 +31,7 @@ var PaperVisualOps = function() {
 	function _addSubmissionToUnscheduled(s){
         var cell = getSubmissionCell("unscheduled", s);
         $("#unscheduled-papers tr").append($(cell));
-        $(cell).effect("highlight", {color: "yellow"}, 10000);
+        $(cell).effect("highlight", {color: "yellow"}, 7000);
 	}
 
 	function _removeSubmissionFromUnscheduled(s){
@@ -52,8 +52,8 @@ var PaperVisualOps = function() {
         var $s2 = $(".popover-inner #" + scheduled2.id);
         if ($s1.length > 0 && $s2.length > 0) {
             _swapNodes($s1[0], $s2[0]);
-            $s1.effect("highlight", {color: "yellow"}, 10000);
-            $s2.effect("highlight", {color: "yellow"}, 10000);
+            $s1.effect("highlight", {color: "yellow"}, 7000);
+            $s2.effect("highlight", {color: "yellow"}, 7000);
         } else if ($s1.length > 0) {
             var pos = _removeSubmissionFromSlot(scheduled1, true);
             _addSubmissionToSlot(scheduled2, pos, "paper-scheduled");
@@ -62,8 +62,8 @@ var PaperVisualOps = function() {
             _addSubmissionToSlot(scheduled1, pos, "paper-scheduled");
         }
 
-		$("#program #session-" + scheduled1.session).effect("highlight", {color: "yellow"}, 10000);
-		$("#program #session-" + scheduled2.session).effect("highlight", {color: "yellow"}, 10000);
+		$("#program #session-" + scheduled1.session).effect("highlight", {color: "yellow"}, 7000);
+		$("#program #session-" + scheduled2.session).effect("highlight", {color: "yellow"}, 7000);
  
     }
 

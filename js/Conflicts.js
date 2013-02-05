@@ -206,13 +206,14 @@ var Conflicts = function() {
         $.each(constraints_list, function(index, conflict){
             $("#list-constraints li").each(function(){
                 if (conflict.type == $(this).attr("data-type")){
-                    $(this).find(".count").html(conflict_count_array[conflict.type]);
+                  // Pairwise counted as 1
+                    $(this).find(".count").html(Math.round(conflict_count_array[conflict.type]/2));
                     total += conflict_count_array[conflict.type];
                 }
             });
         });
 
-        $("#constraints-count").html(total);
+        $("#constraints-count").html(Math.round(total/2));
      }
 
     return {

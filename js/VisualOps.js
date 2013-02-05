@@ -15,7 +15,7 @@ var VisualOps = function() {
 		var session = getSessionCell("scheduled", s, s.date, s.time, s.room);
 		if ($emptySlot != null){
 			$emptySlot.popover("destroy").replaceWith($(session));
-			$(session).effect("highlight", {color: "yellow"}, 10000); // css("background-color", "white")
+			$(session).effect("highlight", {color: "yellow"}, 7000); // css("background-color", "white")
 		}
 	}
 
@@ -32,7 +32,7 @@ var VisualOps = function() {
 	function _addSessionToUnscheduled(s){
         var cell = getSessionCell("unscheduled", s);
         $("#unscheduled tr").append(cell);
-        $(cell).effect("highlight", {color: "yellow"}, 10000);
+        $(cell).effect("highlight", {color: "yellow"}, 7000);
 	}
 
 	function _removeSessionFromUnscheduled(s){
@@ -68,8 +68,8 @@ var VisualOps = function() {
         _swapNodes($("#program #session-" + scheduled1.id)[0], $("#program #session-" + scheduled2.id)[0]);
         // switching date, time, and room information
         _swapDateTimeRoom($("#program #session-" + scheduled1.id), $("#program #session-" + scheduled2.id));
-		$("#program #session-" + scheduled1.id).effect("highlight", {color: "yellow"}, 10000);
-		$("#program #session-" + scheduled2.id).effect("highlight", {color: "yellow"}, 10000);
+		$("#program #session-" + scheduled1.id).effect("highlight", {color: "yellow"}, 7000);
+		$("#program #session-" + scheduled2.id).effect("highlight", {color: "yellow"}, 7000);
     }
 
     // CASE 2. src: scheduled, dst: unscheduled && src: unscheduled, dst: scheduled
@@ -101,13 +101,13 @@ var VisualOps = function() {
     // CASE 6. lock a session
     function lock($cell){
         $cell.find(".title").addClass("locked");
-        $cell.effect("highlight", {color: "yellow"}, 10000);               
+        $cell.effect("highlight", {color: "yellow"}, 7000);               
     }
 
     // CASE 7. lock a session
     function unlock($cell){
         $cell.find(".title").removeClass("locked");
-        $cell.effect("highlight", {color: "yellow"}, 10000);       
+        $cell.effect("highlight", {color: "yellow"}, 7000);       
     }
 
     return {
