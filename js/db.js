@@ -17,11 +17,14 @@ var Transact = function(){
 	return;
     }
     function addServerTransaction(t){
+	console.log("incoming server transaction");
+	console.log(t);
 	if(transactions.length == 0 || t.id > transactions[transactions.length - 1].id){
 	    transactions.push(t);
 	    DataOps.handleTransaction(t); // TODO: check for case where this couldn't be applied
 	    $(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);	
 	}else{ // must be some action I did that is already incorporated?
+	    console.log("must be some action I already incorporated?");
 	}
 	return;
     }
