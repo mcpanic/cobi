@@ -12,6 +12,7 @@ var PaperVisualOps = function() {
 	}
 
 	function _addSubmissionToSlot(s, pos, srcType){
+        console.log(srcType);
         var cell = getSubmissionDetail("paperMove", "scheduled", s, srcType, allSessions[s.session]);
         $(cell).insertBefore($(".popover-inner .list-submissions li").eq(pos));
         $(".popover-inner button").addClass("disabled");

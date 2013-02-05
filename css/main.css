@@ -9,11 +9,11 @@ body {
 
 .main {
     position: fixed;
-    margin-left: 15% !important;
-    max-width: 85%;
+    margin-left: 17% !important;
+    max-width: 83%;
     max-height: 85%;
-    overflow-y: auto;
-    padding-right: 30px;
+    overflow-y: scroll;
+    padding-right: 50px;
     -webkit-user-select: none;  
     -moz-user-select: none;    
     -ms-user-select: none;      
@@ -95,7 +95,7 @@ body.loading .modal {
 .sidebar-fixed {
     position: fixed;
     max-width: 15%;
-    max-height: 80%;
+    max-height: 85%;
     overflow-y: auto;
 }
 
@@ -131,7 +131,8 @@ body.loading .modal {
 /* class assigned by select2 plugin from Searchbox.js */
 .navbar .searchbox {
     width: 100%;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 /* class assigned by select2 plugin from Searchbox.js */
