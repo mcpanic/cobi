@@ -42,7 +42,10 @@ var communityList = ["ux",
 var DataOps = function() {
     function handleFailedTransaction(t){
 	var rollbackTransaction = new TransactionData(t.uid, t.previousType, t.previous, t.type, t.data);
+	console.log("rolling back the failed transaction");
+	console.log(rollbackTransaction);
 	handleTransaction(rollbackTransaction);
+
     }
 
     function handleTransaction(t){
@@ -217,8 +220,10 @@ var DataOps = function() {
 	// remove session from slot
 	removeSessionFromSlot(s, sdate, stime, sroom);
 	
+	console.log("before unscheduling.." + JSON.stringify(unscheduled));
 	// add to unscheduled
 	addToUnscheduled(s);
+	console.log("after unscheduling.." + JSON.stringify(unscheduled));
     }
 
     // schedule a session
@@ -229,7 +234,8 @@ var DataOps = function() {
 	}
 	
 	console.log("Test: scheduling session " + s.id + " to " + sdate + ", " + stime + ", " + sroom);
-	
+
+	console.log("before scheduling.." + JSON.stringify(unscheduled));
 	var isUnscheduled = false;
 	// remove session from unscheduled
 	if(s.id in unscheduled){
@@ -242,6 +248,7 @@ var DataOps = function() {
 	    removeSessionFromSlot(s, s.date, s.time, s.room)
 	}
 	addSessionToSlot(s, sdate, stime, sroom);
+	console.log("after scheduling.." + JSON.stringify(unscheduled));
     }
     
     
@@ -2022,7 +2029,7 @@ function computePersonaConflicts(s1, s2){
 	    conflicts.push(new conflictObject([s1.id, s2.id], 
 					      "personaInTwoSessions", 
 					      s1personas,
-					      "Someone interested in " + s1personas + " may want to see both '" + s1.title + 
+					      "Someone interested in '" + s1personas + "' may want to see both '" + s1.title + 
 					      "' and '" + s2.title + "'"));
 	}
     }

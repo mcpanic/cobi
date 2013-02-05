@@ -137,8 +137,8 @@ while ($row = $transTable->fetch_assoc()) {
 }
 
 $output = array('schedule' => $schedule, 
-		'unscheduled' => $unscheduled,
-		'unscheduledSubmissions' => $unscheduledSubmissions,
+		'unscheduled' => (object)$unscheduled,
+		'unscheduledSubmissions' => (object)$unscheduledSubmissions,
 		'slots' => $slots,
 		'transactions' => $transactions);
 
