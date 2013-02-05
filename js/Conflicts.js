@@ -11,19 +11,11 @@ var Conflicts = function() {
 
 	}
 
-    return {
-        initialize: initialize
-    };
-}();       
-
-
-	function clearConflictDisplay(){
-		$(".slot .display").each(function(){
-			$(this).html("");
-		});
-
-
-	}
+  function clearConflictDisplay(){
+    $(".slot .display").each(function(){
+      $(this).html("");
+    });
+  }
 
      // Given an array of "conflicts", display the palette and count for each constraint in the "element"
      // Can be used both for individual sessions and entire rows
@@ -83,7 +75,7 @@ var Conflicts = function() {
         //console.log(getConflictLength(input_array, conflict));
         var filtered_array = input_array == null? []: input_array.filter(function(x){return x.type==conflict.type});
         //if (filtered_array.length > 0)
-        //	html += ment;
+        //  html += ment;
         for (var i=0; i<filtered_array.length; i++) {
             html += "<span class='conflict-preview-display'>" + sign + "</span>";
         }
@@ -107,9 +99,9 @@ var Conflicts = function() {
           element.find(".conflicts").html("");
 
           if (swapValues.value > 0)
-          	element.find(".conflicts").append("<div class='swap-total-full stronger-text'>" + swapValues.value + " conflicts will be resolved.</div>");	
+            element.find(".conflicts").append("<div class='swap-total-full stronger-text'>" + swapValues.value + " conflicts will be resolved.</div>"); 
           else
-          	element.find(".conflicts").append("<div class='swap-total-full weaker-text'>" + (-1)*swapValues.value + " conflicts will be added.</div>");	
+            element.find(".conflicts").append("<div class='swap-total-full weaker-text'>" + (-1)*swapValues.value + " conflicts will be added.</div>"); 
           
           var filtered_array = [];          
           var isChanged = false;
@@ -124,8 +116,8 @@ var Conflicts = function() {
             var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 
                         - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
             if (netCount == 0)
-          		return;
-          	isChanged = true;
+              return;
+            isChanged = true;
             var $palette = $(html).css("background-color", conflict.color);
             var netCountClass = "conflict-netcount-added";
             if (netCount < 0)
@@ -143,8 +135,8 @@ var Conflicts = function() {
                 //.append("<span class='" + netCountClass + "'>" + addSign(netCount) + "</span>")
                 .append($palette);             
           });
-			if (!isChanged)
-          		element.find(".swap-total-full").hide();
+      if (!isChanged)
+              element.find(".swap-total-full").hide();
      }
 
 
@@ -155,9 +147,9 @@ var Conflicts = function() {
                return;
 
           if (swapValues.value > 0)
-          	element.append("<div class='swap-total stronger-text'>" + addSign((-1)*swapValues.value) + "</div>");	
+            element.append("<div class='swap-total stronger-text'>" + addSign((-1)*swapValues.value) + "</div>"); 
           else
-          	element.append("<div class='swap-total weaker-text'>" + addSign((-1)*swapValues.value) + "</div>");	
+            element.append("<div class='swap-total weaker-text'>" + addSign((-1)*swapValues.value) + "</div>"); 
 
           var filtered_array = [];          
           var isChanged = false;
@@ -166,9 +158,9 @@ var Conflicts = function() {
           $.each(constraints_list, function(index, conflict){  
 
             var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict)
-            			- getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
+                  - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
             if (netCount == 0) 
-            	return;
+              return;
             isChanged = true;
             var $palette = $(displayConflictPreviewHTML(netCount)).css("background-color", conflict.color);
             var netCountClass = "conflict-netcount-added";
@@ -176,14 +168,14 @@ var Conflicts = function() {
                 netCountClass = "conflict-netcount-removed";
             
             var $inner = $("<div class='conflict-type-preview'/>")
-            		.append($palette) 
-            		.append("<span class='" + netCountClass + "'>" + addSign(netCount) + "</span>");
+                .append($palette) 
+                .append("<span class='" + netCountClass + "'>" + addSign(netCount) + "</span>");
             element.append($inner);
-                	
+                  
           });
 
           if (!isChanged)
-          	element.find(".swap-total").hide();
+            element.find(".swap-total").hide();
      }
 
      // Refresh conflicts information display.
@@ -222,3 +214,18 @@ var Conflicts = function() {
 
         $("#constraints-count").html(total);
      }
+
+    return {
+        initialize: initialize,
+        clearConflictDisplay: clearConflictDisplay,
+        // displayConflicts: displayConflicts,
+        // displayConflictPreviewHTML: displayConflictPreviewHTML,
+        // displayConflictFullHTML: displayConflictFullHTML,
+        // getConflictLength: getConflictLength,
+        //displayFullConflicts: displayFullConflicts,
+        //displayPreviewConflicts: displayPreviewConflicts,
+        updateConflicts: updateConflicts
+    };
+}();       
+
+

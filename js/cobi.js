@@ -235,7 +235,7 @@ var DataOps = function() {
 	
 	console.log("Test: scheduling session " + s.id + " to " + sdate + ", " + stime + ", " + sroom);
 
-	console.log("before scheduling.." + JSON.stringify(unscheduled));
+//	console.log("before scheduling.." + JSON.stringify(unscheduled));
 	var isUnscheduled = false;
 	// remove session from unscheduled
 	if(s.id in unscheduled){
@@ -248,7 +248,7 @@ var DataOps = function() {
 	    removeSessionFromSlot(s, s.date, s.time, s.room)
 	}
 	addSessionToSlot(s, sdate, stime, sroom);
-	console.log("after scheduling.." + JSON.stringify(unscheduled));
+//	console.log("after scheduling.." + JSON.stringify(unscheduled));
     }
     
     

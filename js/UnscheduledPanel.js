@@ -1,6 +1,5 @@
 var UnscheduledPanel = function() {
 
-
     // Initialize the view mode 
     function initialize(){
         refreshButtons();

@@ -13,7 +13,7 @@ var MoveMode = function() {
             paperId = pid;
             ViewMode.destroy();
             $(".main").addClass("move-mode");
-            clearConflictDisplay();
+            Conflicts.clearConflictDisplay();
             bindEvents();
             runPropose();
         }
@@ -313,8 +313,8 @@ var MoveMode = function() {
                 $cell.addClass("recommended");
 
             //console.log(swapValues[i]);
-            displayPreviewConflicts(swapValues[i], $cell.find(".display"));
-            displayFullConflicts(swapValues[i], $cell.find(".detail"));
+            Conflicts.displayPreviewConflicts(swapValues[i], $cell.find(".display"));
+            Conflicts.displayFullConflicts(swapValues[i], $cell.find(".detail"));
         }
         // Mark the current selection, which is the source session
         $session.addClass("move-src-selected");

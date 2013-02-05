@@ -22,7 +22,8 @@ var Transact = function(){
 	if(transactions.length == 0 || t.id > transactions[transactions.length - 1].id){
 	    transactions.push(t);
 	    DataOps.handleTransaction(t); // TODO: check for case where this couldn't be applied
-	    $(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);	
+	    Polling.transactionUpdate(transactions[transactions.length -1]);
+	    //$(document).trigger('transactionUpdate', [transactions[transactions.length -1]]);	
 	}else{ // must be some action I did that is already incorporated?
 	    console.log("must be some action I already incorporated?");
 	}
@@ -39,7 +40,8 @@ var Transact = function(){
 	    }
 	}
 	// tell view
-	$(document).trigger('transactionAccepted', [transactions[transactions.length -1]]);	
+	Polling.transactionAccepted(transactions[transactions.length -1]);
+//	$(document).trigger('transactionAccepted', []);	
 	return;
     }
     
@@ -48,7 +50,8 @@ var Transact = function(){
 	// TODO: handle case where it was somewhere in the middle and view depends on it to be in order (e.g., undoing this move doesn't work because of some other move?)
 	
 	DataOps.handleFailedTransaction(t);
-	$(document).trigger('transactionFailed', t);	
+	Polling.transactionFailed(t);
+	//$(document).trigger('transactionFailed', t);	
 	
 	for(var i = 0; i < localTransactions.length; i++){
 	    if(localTransactions[i].localHash == t.localHash){

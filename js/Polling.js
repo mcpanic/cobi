@@ -102,9 +102,9 @@ var Polling = function() {
         updateUnscheduledCount();
         // the backend conflicts update
         getAllConflicts();
-        clearConflictDisplay();
+        Conflicts.clearConflictDisplay();
         // the frontend conflicts update: the row view of conflicts.
-        updateConflicts();
+        Conflicts.updateConflicts();
         UnscheduledPanel.refreshButtons();
     }
 

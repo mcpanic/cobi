@@ -182,14 +182,7 @@ var Sidebar = function() {
                     });
                break;
                case "conflicts":
-               /*
-                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-                         var id = $(item).attr("id").substr(8);
-                         $(item).find(".display").html("");
-                         displayConflicts(conflictsBySession[id], $(item).find(".display"));
-                         //$(item).find(".display").html(conflictsBySession[id]);
-                    });*/
-                    updateConflicts();
+                    Conflicts.updateConflicts();
                break;                 
                case "popularity":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
