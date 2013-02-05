@@ -23,30 +23,12 @@ var Sidebar = function() {
           $(".sidebar-fixed").on("click", ".toggle", clickToggle);
           $(".sidebar-fixed").on("click", ".toggle-options", clickHeaderHandler);
 
-          $(document).on("addHistory", addHistoryHandler);
-          $(document).on("updateHistoryAccepted", updateHistoryHandler);
-          $(document).on("updateHistoryFailed", updateHistoryHandler);
+          // $(document).on("addHistory", addHistoryHandler);
+          // $(document).on("updateHistoryAccepted", updateHistoryHandler);
+          // $(document).on("updateHistoryFailed", updateHistoryHandler);
      }
 
-     function updateHistoryHandler(event, t){
-          // find the matching localHash
-          var $item;
-          $("#list-history li").each(function(index, item){
-               // console.log($(item).attr("data-local-hash"), t.localHash);
-               if (typeof $(item).attr("data-local-hash") !== "undefined" && $(item).attr("data-local-hash") == t.localHash){
-                    $item = $(item);
-               }
-          });
-          
-          if (typeof $item !== "undefined"){
-               if (event.type == "updateHistoryAccepted")
-                    $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-ok");
-               else if (event.type == "updateHistoryFailed")
-                    $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-remove");
-          }
-     }
-
-     function addHistoryHandler(event, t){
+     function addHistory(t){
           console.log("HISTORY", t);
           // hack that fixes the bug where when history is open with 0 items, prepend doesn't work because height is automatically set to 0px.
           // so force height to be auto when collapsed
@@ -61,6 +43,59 @@ var Sidebar = function() {
           var count = $("#history-count").html();
           $("#history-count").html(parseInt(count)+1);
      }
+
+     function updateHistory(type, t){
+          // find the matching localHash
+          var $item;
+          $("#list-history li").each(function(index, item){
+               // console.log($(item).attr("data-local-hash"), t.localHash);
+               if (typeof $(item).attr("data-local-hash") !== "undefined" && $(item).attr("data-local-hash") == t.localHash){
+                    $item = $(item);
+               }
+          });
+          
+          if (typeof $item !== "undefined"){
+               if (type == "updateHistoryAccepted")
+                    $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-ok");
+               else if (type == "updateHistoryFailed")
+                    $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-remove");
+          }
+     }
+
+
+     // function updateHistoryHandler(event, t){
+     //      // find the matching localHash
+     //      var $item;
+     //      $("#list-history li").each(function(index, item){
+     //           // console.log($(item).attr("data-local-hash"), t.localHash);
+     //           if (typeof $(item).attr("data-local-hash") !== "undefined" && $(item).attr("data-local-hash") == t.localHash){
+     //                $item = $(item);
+     //           }
+     //      });
+          
+     //      if (typeof $item !== "undefined"){
+     //           if (event.type == "updateHistoryAccepted")
+     //                $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-ok");
+     //           else if (event.type == "updateHistoryFailed")
+     //                $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-remove");
+     //      }
+     // }
+
+     // function addHistoryHandler(event, t){
+     //      console.log("HISTORY", t);
+     //      // hack that fixes the bug where when history is open with 0 items, prepend doesn't work because height is automatically set to 0px.
+     //      // so force height to be auto when collapsed
+     //      if ($("#list-history").hasClass("in"))
+     //           $("#list-history").css("height", "auto");
+          
+     //      if (isTransactionSessionLevel(t))
+     //           displaySessionHistory(t);
+     //      else 
+     //           displayPaperHistory(t);
+
+     //      var count = $("#history-count").html();
+     //      $("#history-count").html(parseInt(count)+1);
+     // }
 
      function displaySessionHistory(t){
           var $link, $li;
@@ -416,6 +451,8 @@ var Sidebar = function() {
 
      return {
           initialize: initialize,
-          getActiveOptions: getActiveOptions
+          getActiveOptions: getActiveOptions,
+          addHistory: addHistory,
+          updateHistory: updateHistory
      };
 }();

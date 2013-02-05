@@ -10,27 +10,28 @@ var Statusbar = function() {
     }
 
     function bindEvents(){
-        $(document).on("addStatus", addStatusHandler);  
-        $(document).on("updateStatusAccepted", updateStatusHandler);      
-        $(document).on("updateStatusFailed", updateStatusHandler);  
+        // $(document).on("addStatus", addStatusHandler);  
+        // $(document).on("updateStatusAccepted", updateStatusHandler);      
+        // $(document).on("updateStatusFailed", updateStatusHandler);  
         $(document).on("addMoveStatus", addMoveStatusHandler);
         $(document).on("addPaperMoveStatus", addPaperMoveStatusHandler);
         $bar.on("click", ".history-link", clickLinkHandler);    
         $bar.on("click", ".history-paper-link", clickPaperLinkHandler);
     }
 
-    function updateStatusHandler(event, t){
+    function updateStatus(type, t){
         // the current transaction is still displayed
         var $status = $bar.find(".status").first();
         if ($status.attr("data-local-hash") == t.localHash){
-            if (event.type == "updateStatusAccepted")
+            if (type == "updateStatusAccepted")
                 $status.find(".label").removeClass("label-info").addClass("label-success").html("Success");
-            else if (t.type == "updateStatusFailed")
+            else if (type == "updateStatusFailed")
                 $status.find(".label").removeClass("label-info").addClass("label-warning").html("Failed");
         }
     }
 
-    function addStatusHandler(event, t){
+
+    function addStatus(t){
         console.log("STATUS", t, MoveMode.isOn, !isTransactionMyChange(t));
         // TODO: do something also for move mode without touching the cancel button
         if (MoveMode.isOn && !isTransactionMyChange(t))
@@ -41,6 +42,30 @@ var Statusbar = function() {
         else 
             displayPaperStatus(t);
     }
+
+
+    // function updateStatusHandler(event, t){
+    //     // the current transaction is still displayed
+    //     var $status = $bar.find(".status").first();
+    //     if ($status.attr("data-local-hash") == t.localHash){
+    //         if (event.type == "updateStatusAccepted")
+    //             $status.find(".label").removeClass("label-info").addClass("label-success").html("Success");
+    //         else if (t.type == "updateStatusFailed")
+    //             $status.find(".label").removeClass("label-info").addClass("label-warning").html("Failed");
+    //     }
+    // }
+
+    // function addStatusHandler(event, t){
+    //     console.log("STATUS", t, MoveMode.isOn, !isTransactionMyChange(t));
+    //     // TODO: do something also for move mode without touching the cancel button
+    //     if (MoveMode.isOn && !isTransactionMyChange(t))
+    //         return;
+
+    //     if (isTransactionSessionLevel(t))
+    //         displaySessionStatus(t);
+    //     else 
+    //         displayPaperStatus(t);
+    // }
 
 
     function addMoveStatusHandler(event, id){
@@ -161,6 +186,8 @@ var Statusbar = function() {
 
     return {
         initialize: initialize,
+        updateStatus: updateStatus,
+        addStatus: addStatus,
         display: display,
         destroy: destroy
     };

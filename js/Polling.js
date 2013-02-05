@@ -21,8 +21,8 @@ var Polling = function() {
 
     function transactionAccepted(t){
         console.log("transactionAccepted", t);
-        $(document).trigger("updateStatusAccepted", [t]); 
-        $(document).trigger("updateHistoryAccepted", [t]); 
+        Statusbar.updateStatus("updateStatusAccepted", t);
+        Sidebar.updateHistory("updateHistoryAccepted", t);
     }
 
     // function transactionAcceptedHandler(event, t){
@@ -35,8 +35,8 @@ var Polling = function() {
         console.log("transactionFailed", t);
         var rollbackTransaction = new TransactionData(t.uid, t.previousType, t.previous, t.type, t.data);
         handleTransaction(rollbackTransaction);
-        $(document).trigger("updateStatusFailed", [t]); 
-        $(document).trigger("updateHistoryFailed", [t]); 
+        Statusbar.updateStatus("updateStatusFailed", t);
+        Sidebar.updateHistory("updateHistoryFailed", t);        
     }
 
     // function transactionFailedHandler(event, t){
@@ -51,9 +51,8 @@ var Polling = function() {
         console.log("transactionUpdate", t);
         //type: event type, uid: user who made the change, data: object
         handleTransaction(t);
-
-        $(document).trigger("addStatus", [t]); 
-        $(document).trigger("addHistory", [t]); 
+        Statusbar.addStatus(t);
+        Sidebar.addHistory(t);    
     }  
 
     // function transactionUpdateHandler(event, t){
