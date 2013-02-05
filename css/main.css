@@ -66,13 +66,13 @@ body.loading .modal {
 }
 
 .main-fixed {
-    position: fixed;
+    /*position: fixed;*/
     /*margin-left: 17% !important;*/
     /*max-width: 83%;*/
     max-height: 85%;
     overflow-y: scroll;
-    padding-right: 50px;
-    width: 80%;
+    padding-right: 30px;
+    /*width: 80%;*/
 }
 
 /* ==========================================================================
