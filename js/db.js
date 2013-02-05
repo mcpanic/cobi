@@ -12,7 +12,8 @@ var Transact = function(){
     function addTransaction(t){
 	localTransactions.push(t);
 	DataOps.handleTransaction(t);
-	$(document).trigger('transactionUpdate', [localTransactions[localTransactions.length -1]]);	
+	Polling.transactionUpdate(localTransactions[localTransactions.length -1]);
+//	$(document).trigger('transactionUpdate', []]);	
 	db.addTransaction(t);
 	return;
     }
