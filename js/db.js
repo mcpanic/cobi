@@ -197,7 +197,7 @@ DB.prototype.refresh = function(){
 					//				    alert("there is an inconsistency in data!");
 				    }
 				}
-			    }else{// nothing changed, nothing to do
+			    }else {
 				console.log("nothing changed");
 			    }
 			    poll((function(){
@@ -206,12 +206,18 @@ DB.prototype.refresh = function(){
 				    }else{
 					return {uid: userData.id, transactionId: transactions[transactions.length -1]['id']};
 				    }})());
-			}, 
+			    }, 
 			    error : function(m){
-			    //alert(JSON.stringify(m));
-			},
+				console.log("error:" + JSON.stringify(m));
+				poll((function(){
+				    if(transactions.length == 0){
+					return {uid: userData.id, transactionId: 0};
+				    }else{
+					return {uid: userData.id, transactionId: transactions[transactions.length -1]['id']};
+				    }})());
+			    },
 			    dataType: "json"});
-	    }, 15000);
+	}, 15000);
     })((function(){
 	    if(transactions.length == 0){
 		return {uid: userData.id, transactionId: 0};
