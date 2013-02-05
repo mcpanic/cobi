@@ -222,8 +222,8 @@ var Conflicts = function() {
         // displayConflictPreviewHTML: displayConflictPreviewHTML,
         // displayConflictFullHTML: displayConflictFullHTML,
         // getConflictLength: getConflictLength,
-        //displayFullConflicts: displayFullConflicts,
-        //displayPreviewConflicts: displayPreviewConflicts,
+        displayFullConflicts: displayFullConflicts,
+        displayPreviewConflicts: displayPreviewConflicts,
         updateConflicts: updateConflicts
     };
 }();       
