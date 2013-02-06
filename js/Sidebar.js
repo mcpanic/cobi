@@ -242,8 +242,11 @@ var Sidebar = function() {
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);
                          var session = allSessions[id];
-			          //$(item).find(".display").html("80");
-			          $(item).find(".display").html(getSessionDuration(session));
+                         var duration = getSessionDuration(session);
+                         if (duration > 80)
+                              $(item).find(".display").html("<strong>" + duration + "</strong>");
+                         else
+                              $(item).find(".display").html(duration);
 			});
                break;
                case "awards":

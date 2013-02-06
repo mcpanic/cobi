@@ -1,6 +1,7 @@
 var Statusbar = function() {
 
 	var $bar;
+    var pendingQueue = [];
 
     // Initialize the view mode 
     function initialize(){
@@ -19,6 +20,22 @@ var Statusbar = function() {
         $bar.on("click", ".history-paper-link", clickPaperLinkHandler);
     }
 
+    // Display message in the following way:
+    // Display immediately if nothing is pending in the queue. After a delay, add a class that indicates removal possible. Delay of -1 indicates blocking.
+    // Otherwise, queue up and wait until I become the top
+
+    // [[ message kinds ]]
+    // Delay 0, initial loading message
+    // Delay 0, viewmode: default message w/ instruction
+    // Delay -1, movemode: with cancel
+    // Delay -1, paper movemode: with cancel
+    // Delay 3, transaction from server (mine, other's)
+    // Delay N/A, transaction update from server (only affects status) -- no need to take care, working at the visual level
+    function process(item, delay){
+        // if currently displayed item expired, remove from the queue and display the new top item. 
+    }
+
+
     function updateStatus(type, t){
         // the current transaction is still displayed
         var $status = $bar.find(".status").first();
@@ -33,10 +50,10 @@ var Statusbar = function() {
 
     function addStatus(t){
         console.log("STATUS", t, MoveMode.isOn, !isTransactionMyChange(t));
-        // TODO: do something also for move mode without touching the cancel button
-        if (MoveMode.isOn && !isTransactionMyChange(t))
+        if (MoveMode.isOn) {
+            // TODO: stack up messages so that once MoveMode is over, it is displayed
             return;
-
+        }
         if (isTransactionSessionLevel(t))
             displaySessionStatus(t);
         else 

@@ -7,8 +7,8 @@ var MoveMode = function() {
     function initialize(moveType, pid){
         //console.log("PaperID", pid, pid == "");
         // If already on, do not register multiple events
-        if (!isOn){
-            isOn = true;
+        if (!MoveMode.isOn){
+            MoveMode.isOn = true;
             type = moveType;
             paperId = pid;
             ViewMode.destroy();
@@ -232,6 +232,11 @@ var MoveMode = function() {
     function runPropose(){
         var $session = $(".selected").first();
         var id = getID($session);  
+        var recommendedSpecialList = [];
+        var recommendedScheduledList = [];
+        var numSpecialRecommended = 2; // we want to ensure at most 2 empty and unscheduled recommendations out of 5.
+        var numScheduledRecommended = 5; // we want to ensure at most 5 empty and unscheduled recommendations out of 5.
+        var numRecommended = 5; // total number of recommendations
 
         var swapValues; 
         if (type === "scheduled") {
@@ -278,23 +283,35 @@ var MoveMode = function() {
                     $cell = findCellByDateTimeRoom(swapValues[i].target.date, swapValues[i].target.time, swapValues[i].target.room);
                     console.log("runPropose", i, swapValues[i]);
                     $cell.addClass("proposed-swap"); //.data("title", "Empty slot");
+                    if (numSpecialRecommended > 0){
+                        recommendedSpecialList.push($cell);
+                        numSpecialRecommended--;
+                    }
                 }
 
-                var submission = swapValues[i].target.paper;  
-                console.log("session null", submission);        
+                var submission = swapValues[i].target.paper;   
                 // Paper-level unscheduled candidate exists: session null, submission id
                 if (typeof submission !== "undefined") {                    
                         $("#"+submission).attr("data-proposed-swap-paper", "true").addClass("proposed-swap");
                         console.log("runPropose: unscheduled");   
                 }   
-            
             // non-empty session candidate
             } else {
                 var session = swapValues[i].target.session;
                 var submission = swapValues[i].target.paper;
                 $cell = findCellByID(swapValues[i].target.session);
                 $cell.addClass("proposed-swap"); //.data("title", allSessions[swapValues[i].target.session].title);
-                //console.log($cell, session, submission);
+                if ($cell.hasClass("unscheduled")) {
+                    if (numSpecialRecommended > 0){
+                        recommendedSpecialList.push($cell);
+                        numSpecialRecommended--;
+                    }
+                } else {
+                    if (numScheduledRecommended > 0){
+                        recommendedScheduledList.push($cell);
+                        numScheduledRecommended--;
+                    }                   
+                }
                 // Paper-level empty or scheduled candidate exists
                 if (typeof submission !== "undefined") {                    
                     // store currently inserted paper-level proposals
@@ -308,20 +325,34 @@ var MoveMode = function() {
                     $cell.attr("data-proposed-swap-paper", curList);                                       
                 }
             }
-
-            if (i<5)    // display recommended
-                $cell.addClass("recommended");
-
             //console.log(swapValues[i]);
             Conflicts.displayPreviewConflicts(swapValues[i], $cell.find(".display"));
             Conflicts.displayFullConflicts(swapValues[i], $cell.find(".detail"));
         }
+
+
         // Mark the current selection, which is the source session
         $session.addClass("move-src-selected");
 
-        if (type.indexOf("paper") === -1)
+        if (type.indexOf("paper") === -1) {
+            var numAssigned = 0;
             $(document).trigger("addMoveStatus", [id]);
-        else
+            // specials (unscheduled, empty) first because they get the priority
+            $.each(recommendedSpecialList, function(index, rec) {
+                if (numAssigned < numRecommended) {
+                    $(rec).addClass("recommended");
+                    numAssigned++;
+                }                
+            });  
+            // scheduled sessions until numRecommended is met        
+            $.each(recommendedScheduledList, function(index, rec) {
+                if (numAssigned < numRecommended) {
+                    $(rec).addClass("recommended");
+                    numAssigned++;
+                }                
+            });
+
+        } else
             $(document).trigger("addPaperMoveStatus", [id, paperId]);
 
     }
@@ -331,6 +362,7 @@ var MoveMode = function() {
  ******************************/
 
     $("body").on("click", ".popover #swap-button", function(){  
+        $(this).click(false);     // avoiding multiple clicks            
         var $source = $(".move-src-selected").first();
         var src_id = getID($source);
         var dst_id = $(this).attr("data-session-id");
@@ -340,6 +372,7 @@ var MoveMode = function() {
     });
 
     $("body").on("click", ".popover #swap-with-unscheduled-button", function(){  
+        $(this).click(false);     // avoiding multiple clicks            
         var scheduledId = -1;
         var unscheduledId = -1;
 
@@ -357,6 +390,7 @@ var MoveMode = function() {
     });
 
     $("body").on("click", ".popover #move-button", function(){  
+        $(this).click(false);     // avoiding multiple clicks            
         var $session = null;     // session to schedule
         var $emptySlot = null;   // empty slot into which the session is going
         var id = -1;
@@ -383,6 +417,7 @@ var MoveMode = function() {
     });
 
     $("body").on("click", ".popover #schedule-button", function(){  
+        $(this).click(false);     // avoiding multiple clicks            
         var $session = null;     // session to schedule
         var $emptySlot = null;   // empty slot into which the session is going
         var id = -1;
@@ -412,6 +447,7 @@ var MoveMode = function() {
  ******************************/
 
     $("body").on("click", ".popover .button-paper-swap", function(){  
+        $(this).click(false);     // avoiding multiple clicks                    
         var src_id = paperId;
         var dst_id = $(this).parent().attr("id");
 
@@ -420,6 +456,7 @@ var MoveMode = function() {
     }); 
 
     $("body").on("click", ".popover .button-paper-swap-with-unscheduled", function(){  
+        $(this).click(false);     // avoiding multiple clicks            
         var scheduledId = -1;
         var unscheduledId = -1;
 
@@ -437,6 +474,7 @@ var MoveMode = function() {
     });
 
     $("body").on("click", ".popover .button-paper-move", function(){  
+        $(this).click(false);     // avoiding multiple clicks            
         var scheduledId = -1;
         var emptySessionId = -1;   // empty slot into which the session is going
         // src: scheduled, dst: empty
@@ -454,6 +492,7 @@ var MoveMode = function() {
     });
 
     $("body").on("click", ".popover .button-paper-schedule", function(){  
+        $(this).click(false);     // avoiding multiple clicks               
         var emptySessionId = -1;
         var unscheduledPaperId = -1;
 
@@ -475,13 +514,14 @@ var MoveMode = function() {
     // clicking the 'cancel swap' link while swap in progress.
     // should return to the clean state with no selection and proposals.
     $("body").on("click", ".move-cancel-button", function(){
+        $(this).click(false);     // avoiding multiple clicks               
         destroy();
         Statusbar.display("Select a session for scheduling options and more information.");    
     });
 
     // Reset any change created in this view mode
     function destroy(){
-        isOn = false;
+        MoveMode.isOn = false;
         type = "";
         // TOOD: check all the other things the swapping mode has created and reset/undo them.
         

@@ -4,8 +4,9 @@ var ViewMode = function() {
     // Initialize the view mode 
     function initialize(){
         // If already on, do not register multiple events
-        if (!isOn){
-            isOn = true;
+        if (!ViewMode.isOn){
+            ViewMode.isOn = true;
+            console.log(ViewMode.isOn);
             //MoveMode.destroy();
             $(".main").addClass("view-mode");
             bindEvents();
@@ -123,6 +124,7 @@ var ViewMode = function() {
     }
 
     function paperUnscheduleHandler(event){
+        $(this).click(false);     // avoiding multiple clicks            
         var $session = $(".selected").first();
         var id = getID($session);
         if (id === -1)
@@ -136,7 +138,8 @@ var ViewMode = function() {
 
     // When move is request, forward this request to MoveMode.
     // This is the only way to switch modes from ViewMode to MoveMode.
-    function proposeHandler(event){       
+    function proposeHandler(event){  
+        $(this).click(false);     // avoiding multiple clicks             
         var pid = "";
         if (event.data.type == "paper-scheduled" || event.data.type == "paper-unscheduled")
             pid = $(this).parent().attr("id");
@@ -148,6 +151,7 @@ var ViewMode = function() {
 
     // When the unschedule button is clicked. Move the item to the unscheduled workspace.
     function unscheduleHandler(){
+        $(this).click(false);     // avoiding multiple clicks        
         var $session = $(".selected").first();
         var id = getID($session);
         if (id === -1)
@@ -159,6 +163,7 @@ var ViewMode = function() {
 
     // HQ: Handles a lock request
     function lockHandler(){
+        $(this).click(false);     // avoiding multiple clicks          
         var $session = $(".selected").first();
         var id = getID($session);  
         var date, time, room; 
@@ -171,6 +176,7 @@ var ViewMode = function() {
 
     // HQ: handle an unlock request
     function unlockHandler(){
+        $(this).click(false);     // avoiding multiple clicks            
         var $session = $(".selected").first();
         var id = getID($session);  
         if(id in allSessions){
@@ -234,7 +240,7 @@ var ViewMode = function() {
 
     // Reset any change created in this view mode
     function destroy(){
-        isOn = false;
+        ViewMode.isOn = false;
 
         $("body").off("click", ".slot", slotClickHandler); 
         $("body").off("click", ".popover .button-unschedule", unscheduleHandler); 

@@ -314,7 +314,7 @@ body.loading .modal {
 }
 */
 #program .recommended, #unscheduled .recommended, #unscheduled-papers .recommended, #statusbar .recommended {
-    background: #fd8d3c;
+    background: #03BF57; /*#fd8d3c;*/
 }
 
 #program .proposed-swap, #unscheduled .proposed-swap, #unscheduled-papers .proposed-swap {

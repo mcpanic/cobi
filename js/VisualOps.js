@@ -15,7 +15,8 @@ var VisualOps = function() {
 		var session = getSessionCell("scheduled", s, s.date, s.time, s.room);
 		if ($emptySlot != null){
 			$emptySlot.popover("destroy").replaceWith($(session));
-			$(session).effect("highlight", {color: "yellow"}, 7000); // css("background-color", "white")
+            var $newSession = findCellByID(s.id);
+			$newSession.effect("highlight", {color: "yellow"}, 7000); // css("background-color", "white")
 		}
 	}
 
