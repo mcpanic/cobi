@@ -236,10 +236,13 @@
     function _getViewSubmissionDetail(type, submission, session){
         var element; 
         var isLocked = false;
+        // if the session is a single submission type special session (sig, panel, bof, ...), do not display buttons
+        var isSpecial = false;
         if (typeof session !== "undefined" && session != null){
             if (!(session.id in unscheduled)) {
                 isLocked = scheduleSlots[session.date][session.time][session.room]['locked'];
             }
+            isSpecial = isSpecialSession(session);
         }
 
         if (type == "scheduled") {
@@ -248,7 +251,7 @@
             $(element).addClass("submission").attr("id", submission.id);
             $("<span/>").addClass("reorder-icon").appendTo($(element));
             $("<span/>").addClass("submission-type").html(stype).appendTo($(element));
-            if (!isLocked){
+            if (!isLocked && !isSpecial){
                 $("<button/>").addClass("btn btn-mini button-paper-unschedule").html("Unschedule").appendTo($(element));
                 $("<button/>").addClass("btn btn-mini button-paper-propose-scheduled").html("Propose Move").appendTo($(element));
             }
@@ -265,7 +268,7 @@
             element = document.createElement("div");
             $(element).attr("id", submission.id);
             //$("<span/>").attr("id", "popover-submission-" + submission.id).addClass("hidden").appendTo($(element));
-            if (!isLocked)
+            if (!isLocked && !isSpecial)
                 $("<button/>").addClass("btn btn-mini button-paper-propose-unscheduled").html("Propose Move").appendTo($(element));
             $("<div/>").addClass("conflicts").appendTo($(element));
             $("<br/>").appendTo($(element));
@@ -280,7 +283,7 @@
             // html += " <div class='conflicts'/>";
             // html += "<br><strong>Authors</strong>: " + displayAuthors(submission.authors);
         } else if (type == "empty") {
-            if (isLocked){
+            if (isLocked || isSpecial){
                 element = document.createElement("div");
             } else {
                 element = document.createElement("li");
@@ -527,53 +530,34 @@
         // console.log("session", typeof session);
 
         // Empty Session
-           if (type == "empty" || submission == -1){
-                // //console.log("empty", slotDate, slotTime, slotRoom);
-                // if(scheduleSlots[slotDate][slotTime][slotRoom]['locked'])
-                //     $(cell).find(".title").addClass("locked");
+        if (type == "empty" || submission == -1){   
+            console.log("empty submission display: not used");
+        // Unavailable / Locked Session                         
+        } else if (type == "unavailable" || submission == "") {
+            console.log("unavailable submission display: not used");
+        // Scheduled
+        } else if (type == "scheduled") {
+            console.log("scheduled submission display: not used");
+        // Unscheduled
+        } else {
+            // if(type !== "unscheduled" && scheduleSlots[session.date][session.time][session.room]['locked'])
+            //     $(cell).find(".title").addClass("locked");
 
-                // var detail = document.createElement("div");
-                // $(detail).hide()
-                //      .addClass("detail")
-                //      .html(getSessionDetail(type, session));
-                // // TODO: how to easily get day, time, room info
-                // $(cell)
-                //      //.attr("id", "session-" + session.id)
-                //      //.data("session-id", session.id)
-                //      .addClass("empty")
-                //      .data("date", slotDate)
-                //      .data("time", slotTime)
-                //      .data("room", slotRoom)                     
-                //      .append($(detail));
-                // $(cell).find(".title").append("<i class='icon-plus'></i>")     
-                console.log("empty submission display: not used");
-           // Unavailable / Locked Session                         
-            } else if (type == "unavailable" || submission == "") {
-                //console.log("unavailable");
-                //$(cell).addClass("unavailable");
-                console.log("unavailable submission display: not used");
-           // Scheduled / Unscheduled Session
-            } else if (type == "scheduled") {
-                console.log("scheduled submission display: not used");
-            } else {
-                // if(type !== "unscheduled" && scheduleSlots[session.date][session.time][session.room]['locked'])
-                //     $(cell).find(".title").addClass("locked");
-
-                // var detail = document.createElement("div");
-                // $(detail).hide()
-                //      .addClass("detail")
-                //      .html(getSessionDetail(type, session));
-               
-                $(cell).attr("id", "" + submission.id)
-                     .addClass(type);
-                     //.data("submission-id", submission.id)
-                     // .append($(detail));
-                
-                if (typeof submission.title !== "undefined")
-                     $(cell).find(".title").html(submission.title);
-                
-           } 
-           return cell;
+            // var detail = document.createElement("div");
+            // $(detail).hide()
+            //      .addClass("detail")
+            //      .html(getSessionDetail(type, session));
+           
+            $(cell).attr("id", "" + submission.id)
+                 .addClass(type);
+                 //.data("submission-id", submission.id)
+                 // .append($(detail));
+            
+            if (typeof submission.title !== "undefined")
+                 $(cell).find(".title").html(submission.title);
+            
+       } 
+       return cell;
     }
 
      function displayAuthors(authors){

@@ -65,6 +65,13 @@ body.loading .modal {
     user-select: none;
 }
 
+.popover-inner {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;  
+}
+
 .main-fixed {
     /*position: fixed;*/
     /*margin-left: 17% !important;*/
@@ -152,6 +159,10 @@ body.loading .modal {
 }
 
 /* class assigned by select2 plugin from Searchbox.js */
+.dropdown-item {
+    position: absolute;
+}
+
 .dropdown-item li {
     line-height: 14px;    
 }
@@ -454,6 +465,7 @@ body.loading .modal {
 
 .swap-total-full {
     font-size: 14px;
+    margin: 5px;
 }
 
 .stronger-text {
@@ -481,11 +493,19 @@ body.loading .modal {
 }
 
 .conflict-preview-display {
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-left: 2px;
-    margin-right: 2px;  
+    /*padding-left: 5px;
+    padding-right: 5px;*/
+    padding: 3px 6px 3px 6px;
+    margin-left: 5px;
+    margin-right: 5px;  
     color: white;
+    cursor: pointer;
+}
+
+.conflict-preview-detail {
+    padding: 10px;
+    line-height: 12px;
+    background: #F2D9BB;
 }
 
 .conflict-netcount-added, .conflict-netcount-removed {

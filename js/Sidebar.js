@@ -8,6 +8,44 @@ var Sidebar = function() {
           displayCommunities();
           displayHistory();
           bindEvents();
+
+          addCount();
+     }
+
+     // Display counts for each community and persona
+     function addCount(){
+          var personaCount = {};
+          var communityCount = {};
+          $.each(personaList, function(index, item){
+               personaCount[item] = 0;
+          });
+          $.each(communityList, function(index, item){
+               communityCount[item] = 0;
+          });
+
+          // get count
+          $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+               var id = $(item).attr("id").substr(8);
+               var session = allSessions[id];    
+               $.each(personaList, function(index, key){
+                    if (session.personas != "" && key.indexOf(session.personas) != -1)
+                         personaCount[key]++;
+               });
+               $.each(session.coreCommunities, function(index, key){
+                    communityCount[key]++;
+               });
+          });  
+
+          $("#list-personas li").each(function(){
+               var type = $(this).attr("data-type");
+               if (typeof personaCount[type] != "undefined")
+                    $(this).find(".count").html(personaCount[type]);                
+          });
+          $("#list-communities li").each(function(index, key){
+               var type = $(this).attr("data-type");
+               if (typeof communityCount[type] != "undefined")
+                    $(this).find(".count").html(communityCount[type]);                
+          });          
      }
 
      // Add event handlers to each sidebar item
@@ -129,29 +167,29 @@ var Sidebar = function() {
           var user = isTransactionMyChange(t) ? "" : getUsernameByUID(t.uid);
           $li = $("<li/>").attr("data-local-hash", t.localHash).append($statusLabel).append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
 
-        if (t.type == "swapPapers"){
-            $link = getPaperCellLinkByID(t.data.s1id, t.data.p2id);
-            $link2 = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
-            $li = $li.append($link).append(" and ").append($link2); 
-        } else if (t.type == "swapWithUnscheduledPaper"){
-            $link = getPaperCellLinkByID(undefined, t.data.p2id);
-            $link2 = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
-            $li = $li.append($link).append(" and ").append($link2); 
-        } else if (t.type == "unschedulePaper") {
-            $link = getPaperCellLinkByID(undefined, t.data.pid);
-            $link2 = getCellLinkByID(t.data.sid);
-            $li = $li.append($link).append(" from ").append($link2); 
-        } else if (t.type == "schedulePaper") {
-            $link = getPaperCellLinkByID(t.data.sid, t.data.pid);
-            $li = $li.append($link);
-        } else if (t.type == "movePaper") {
-            $link = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
-            $link2 = getCellLinkByID(t.data.s1id);
-            $li = $li.append($link).append(" from ").append($link2); 
-        } else if (t.type == "reorderPapers") {
-            $link = getPaperCellLinkByID(t.data.id, "");
-            $li = $li.append($link);
-        }
+          if (t.type == "swapPapers"){
+               $link = getPaperCellLinkByID(t.data.s1id, t.data.p2id);
+               $link2 = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
+               $li = $li.append($link).append(" and ").append($link2); 
+          } else if (t.type == "swapWithUnscheduledPaper"){
+               $link = getPaperCellLinkByID(undefined, t.data.p2id);
+               $link2 = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
+               $li = $li.append($link).append(" and ").append($link2); 
+          } else if (t.type == "unschedulePaper") {
+               $link = getPaperCellLinkByID(undefined, t.data.pid);
+               $link2 = getCellLinkByID(t.data.sid);
+               $li = $li.append($link).append(" from ").append($link2); 
+          } else if (t.type == "schedulePaper") {
+               $link = getPaperCellLinkByID(t.data.sid, t.data.pid);
+               $li = $li.append($link);
+          } else if (t.type == "movePaper") {
+               $link = getPaperCellLinkByID(t.data.s2id, t.data.p1id);
+               $link2 = getCellLinkByID(t.data.s1id);
+               $li = $li.append($link).append(" from ").append($link2); 
+          } else if (t.type == "reorderPapers") {
+               $link = getPaperCellLinkByID(t.data.id, "");
+               $li = $li.append($link);
+          }
           $("#list-history").prepend($li);
      }
 
@@ -187,6 +225,9 @@ var Sidebar = function() {
      function clickConstraintsHandler(){
           var $this = $(this);
           var toggle = true;
+          _toggleAllCheckboxes($("#list-personas"), false);
+          _toggleAllCheckboxes($("#list-communities"), false);
+
           if ($(this).parent().hasClass("view-option-active"))
                toggle = false;
           $("#list-constraints .view-option-active").removeClass("view-option-active");
@@ -243,7 +284,7 @@ var Sidebar = function() {
                          var id = $(item).attr("id").substr(8);
                          var session = allSessions[id];
                          var duration = getSessionDuration(session);
-                         if (duration > 80)
+                         if (duration != 80)
                               $(item).find(".display").html("<strong>" + duration + "</strong>");
                          else
                               $(item).find(".display").html(duration);
@@ -288,6 +329,8 @@ var Sidebar = function() {
      
      function clickPersonasHandler(event){
           var $this = $(this);
+          _toggleAllCheckboxes($("#list-constraints"), false);
+          _toggleAllCheckboxes($("#list-communities"), false);          
           if ($this.parent().hasClass("view-option-active")) {
                $this.parent().removeClass("view-option-active");
                $this.parent().find(".myCheckbox").prop("checked", false);
@@ -311,10 +354,10 @@ var Sidebar = function() {
                $(item).css("background-color", "");
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
-	       // HQ: slight changes here
-	       if (selected_personas.indexOf(session.personas) != -1){
-		   $(item).css("background-color", color_palette_1[5]);
-	       }
+	          // HQ: slight changes here
+	          if (selected_personas.indexOf(session.personas) != -1){
+		         $(item).css("background-color", color_palette_2[1]);
+	          }
 //                $.each(keys(session.personas), function(index, key){
 //                     if (selected_personas.indexOf(key) != -1){
 //                          $(item).css("background-color", color_palette_1[5]);
@@ -324,12 +367,20 @@ var Sidebar = function() {
          return false;
      }
 
+     // Turn off all checkboxes in curList
+     function _toggleAllCheckboxes($list, toggle){
+          $list.find("li").removeClass("view-option-active");
+          $list.find("li").find(".myCheckbox").prop("checked", toggle);
+     }
+
      function clickCheckboxCommunitiesHandler(){
           $(this).parent().find("a").trigger("click");
      }
      
      function clickCommunitiesHandler(event){
           var $this = $(this);
+          _toggleAllCheckboxes($("#list-constraints"), false);
+          _toggleAllCheckboxes($("#list-personas"), false);
           if ($this.parent().hasClass("view-option-active")) {
                $this.parent().removeClass("view-option-active");
                $this.parent().find(".myCheckbox").prop("checked", false);
@@ -355,7 +406,7 @@ var Sidebar = function() {
                var session = allSessions[id];     
                $.each(session.coreCommunities, function(index, key){
                     if (selected_communities.indexOf(key) != -1){
-                         $(item).css("background-color", color_palette_1[4]);
+                         $(item).css("background-color", color_palette_2[0]);
                     }
                });
           });
@@ -424,7 +475,10 @@ var Sidebar = function() {
 	 // HQ: minor changes here
      	$.each(personaList, function(index, persona){
      		var item = document.createElement("li");
-      		$(item).attr("data-type", persona).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" + persona + "</a>");
+      		$(item).attr("data-type", persona).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" 
+                    + persona 
+                    + " (<span class='count'></span>)"
+                    + "</a>");
      		$("#list-personas").append($(item));    		
      		//$(item).find("span.palette").css("background-color", color_palette_1[5]);
                //color_index++;
@@ -444,10 +498,12 @@ var Sidebar = function() {
 //           }
 // //          console.log($.unique(dl));
 //           commList = $.unique(commList);
-	 var commList = communityList;
-          $.each(commList, function(index, community){
+          $.each(communityList, function(index, community){
                var item = document.createElement("li");
-               $(item).attr("data-type", community).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" + community + "</a>");
+               $(item).attr("data-type", community).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" 
+                    + community 
+                    + " (<span class='count'></span>)"
+                    + "</a>");
                $("#list-communities").append($(item));              
                //$(item).find("span.palette").css("background-color", color_palette_1[5]);
                //color_index++;

@@ -63,6 +63,8 @@ var options_list = [
 /*{"id": "persona", "label": "Tracks"} */
 ];
 
+var color_palette_2 = ["#A69E86", "#F2D9BB"];
+
 var color_palette_1 = ["#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78", "#2ca02c", 
 "#98df8a", "#d62728", "#ff9896", "#9467bd", "#c5b0d5", 
 "#8c564b", "#c49c94", "#e377c2", "#f7b6d2", "#7f7f7f", 

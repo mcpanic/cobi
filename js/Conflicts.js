@@ -8,14 +8,14 @@ var Conflicts = function() {
 	}
 
 	function bindEvents(){
-
+        $(document).on("click", ".conflict-preview-display", conflictPreviewDisplayHandler);
 	}
 
-  function clearConflictDisplay(){
-    $(".slot .display").each(function(){
-      $(this).html("");
-    });
-  }
+    function clearConflictDisplay(){
+        $(".slot .display").each(function(){
+            $(this).html("");
+        });
+    }
 
      // Given an array of "conflicts", display the palette and count for each constraint in the "element"
      // Can be used both for individual sessions and entire rows
@@ -58,28 +58,48 @@ var Conflicts = function() {
      }
 
      function displayConflictPreviewHTML(netCount) {
-        var html = "";
-        //for (var i=0; i<Math.abs(netCount); i++) {
+        var $view;
             if (netCount > 0)
-                html += "<span class='conflict-preview-added'></span>";
+                $view = $("<span/>").addClass("conflict-preview-added");
             else if (netCount < 0)
-                html += "<span class='conflict-preview-removed'></span>";
-        //}
-        return html;
+                $view = $("<span/>").addClass("conflict-preview-removed");
+            else
+                $view = $("<span/>");
+        return $view;
      }
 
+
+    // show details for a conflict added / removed when a +/- icon is clicked.
+    function conflictPreviewDisplayHandler(event){
+        $(this).closest(".conflicts").find(".conflict-preview-detail").html($(this).attr("data-content")).show();
+    }
+
      function displayConflictFullHTML(ment, input_array, conflict, sign) {
-        if (input_array === null)
-            return "";
-        var html = "";
-        //console.log(getConflictLength(input_array, conflict));
+        var $view = $("<span/>");
+        // if (input_array === null)
+        //     return $("<span/>");
+        
         var filtered_array = input_array == null? []: input_array.filter(function(x){return x.type==conflict.type});
-        //if (filtered_array.length > 0)
-        //  html += ment;
         for (var i=0; i<filtered_array.length; i++) {
-            html += "<span class='conflict-preview-display'>" + sign + "</span>";
+            // html += "<span class='conflict-preview-display'>" + sign + "</span>";
+            console.log(ment, conflict.label, filtered_array[i].description);
+            $("<span/>")
+                    .addClass("conflict-preview-display").html(sign)
+                    .attr("data-html", "true")
+                    .attr("data-title", ment)
+                    .attr("data-trigger", "manual")
+                    .attr("data-content", "<strong>Type: " + conflict.label + "</strong><br>" + filtered_array[i].description)
+                    // .popover({
+                    //     html:true,
+                    //     title: ment,
+                    //     trigger: "hover",
+                    //     html: "Type: " + conflict.label + "<br>" + filtered_array[i].description
+                    // })
+                    .css("background-color", conflict.color)
+                    .appendTo($view);
         }
-        return html;
+
+        return $view;
      }
 
      function getConflictLength(input_array, conflict) {
@@ -97,46 +117,44 @@ var Conflicts = function() {
             var id = getID($session);  
             //console.log("HERE");
           element.find(".conflicts").html("");
-
+          var plural = isPlural(swapValues.value) ? "s" : "";
           if (swapValues.value > 0)
-            element.find(".conflicts").append("<div class='swap-total-full stronger-text'>" + swapValues.value + " conflicts will be resolved.</div>"); 
+            element.find(".conflicts").append("<div class='swap-total-full stronger-text'>" + swapValues.value 
+              + " conflict" + plural 
+              + " will be resolved. <small>(click icons for details)</small></div>"); 
           else
-            element.find(".conflicts").append("<div class='swap-total-full weaker-text'>" + (-1)*swapValues.value + " conflicts will be added.</div>"); 
-          
-          var filtered_array = [];          
+            element.find(".conflicts").append("<div class='swap-total-full weaker-text'>" + (-1)*swapValues.value 
+                + " conflict" + plural 
+                + " will be added. <small>(click icons for details)<small></div> "); 
+                
           var isChanged = false;
 
           // for each constraint, count and add a modal dialog with descriptions
           $.each(constraints_list, function(index, conflict){  
-            var html = displayConflictFullHTML("Added to source", swapValues.addedSrc, conflict, "+")
-                + displayConflictFullHTML("Added to destination", swapValues.addedDest, conflict, "+")
-                + displayConflictFullHTML("Removed from source", swapValues.removedSrc, conflict, "-")
-                + displayConflictFullHTML("Removed from destination", swapValues.removedDest, conflict, "-");
-
             var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 
                         - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
             if (netCount == 0)
-              return;
+                 return;
+            // console.log(conflict, swapValues);
             isChanged = true;
-            var $palette = $(html).css("background-color", conflict.color);
-            var netCountClass = "conflict-netcount-added";
-            if (netCount < 0)
-                netCountClass = "conflict-netcount-removed";
-
-            // var ment = "";
-            // if (netCount > 0)
-            //     ment += conflict.type + ": " + netCount + " conflicts will be resolved.";
-            // else
-            //     ment += conflict.type + ": " + (-1)*netCount + " conflicts will be added.";
-
-            element.find(".conflicts")
-                //.append("<div class='swap-total'>" + ment + "</div>")
-                //.append("<div class='conflict-type-preview'/>")
-                //.append("<span class='" + netCountClass + "'>" + addSign(netCount) + "</span>")
-                .append($palette);             
+            
+            var $view = element.find(".conflicts");
+            if (swapValues.addedSrc != null)
+                $view.append(displayConflictFullHTML("Adding a conflict", swapValues.addedSrc, conflict, "+"));
+            if (swapValues.addedDest != null)
+                $view.append(displayConflictFullHTML("Adding a conflict", swapValues.addedDest, conflict, "+"))
+            if (swapValues.removedSrc != null)
+                $view.append(displayConflictFullHTML("Resolving a conflict", swapValues.removedSrc, conflict, "-"))
+            if (swapValues.removedDest != null)
+                $view.append(displayConflictFullHTML("Resolving a conflict", swapValues.removedDest, conflict, "-"));      
+            // var netCountClass = "conflict-netcount-added";
+            // if (netCount < 0)
+            //     netCountClass = "conflict-netcount-removed";            
           });
-      if (!isChanged)
+            if (!isChanged)
               element.find(".swap-total-full").hide();
+          var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
+          element.find(".conflicts").append($detail);
      }
 
 
@@ -150,8 +168,7 @@ var Conflicts = function() {
             element.append("<div class='swap-total stronger-text'>" + addSign((-1)*swapValues.value) + "</div>"); 
           else
             element.append("<div class='swap-total weaker-text'>" + addSign((-1)*swapValues.value) + "</div>"); 
-
-          var filtered_array = [];          
+   
           var isChanged = false;
 
           // for each constraint, count and add a modal dialog with descriptions

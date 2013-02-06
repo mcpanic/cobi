@@ -47,6 +47,12 @@ function getRandomColor(){
 	return '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
 }
 
+function isPlural(num){
+	if (num == 0 || Math.abs(num) == 1)
+		return false;
+	return true;
+}
+
 
 function getSessionNumSubmissions(submissions){
 	var key, count = 0;
@@ -56,18 +62,24 @@ function getSessionNumSubmissions(submissions){
 	return count;
 }
 
+function isSpecialSession(session){
+    switch(session.venue){
+	    case 'panel':
+	    case 'SIG':
+	    case 'course':
+	    case 'special':
+	    case 'bof':
+		return true;
+    default:
+		break;
+    }
+}
+
 // HQ: added new durartion function
 function getSessionDuration(session){
-    switch(session.venue){
-    case 'panel':
-    case 'SIG':
-    case 'course':
-    case 'special':
-    case 'bof':
-	return 80;
-    default:
-	break;
-    }
+	if (isSpecialSession(session))
+		return 80;
+
     var submissions = session.submissions;
     var key, count = 0;
     for (key in submissions){
