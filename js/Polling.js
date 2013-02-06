@@ -99,12 +99,17 @@ var Polling = function() {
 
     function postPollingMove(){
         updateUnscheduledCount();
-        // the backend conflicts update
-        getAllConflicts();
-        Conflicts.clearConflictDisplay();
-        // the frontend conflicts update: the row view of conflicts.
-        Conflicts.updateConflicts();
         UnscheduledPanel.refreshButtons();
+
+        // Do not update the conflicts view when the current mode is Move Mode
+        if (!MoveMode.isOn){
+            // the backend conflicts update
+            getAllConflicts();
+            Conflicts.clearConflictDisplay();
+            // the frontend conflicts update: the row view of conflicts.
+            Conflicts.updateConflicts();
+            // Prev/Next button status update based on the current panel size
+        }
     }
 
 /******************************

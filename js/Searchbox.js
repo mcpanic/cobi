@@ -13,9 +13,9 @@ var Searchbox = function() {
                 var q = query.term.toLowerCase();
                 var data = search(q);
                 query.callback(data);
-            },
-            formatSelection: format,
-            formatResult: format
+            }
+            //formatSelection: format
+            //formatResult: format
         });
 
         $("#searchbox").on("change", function(e){
@@ -46,12 +46,86 @@ var Searchbox = function() {
         });
     }
 
+    // t: string to compare against, q: query string
+    function runDist(t, q) {
+        var len = q.length;
+        var threshold = len > 3 ? Math.min(len-3, 2) : 0;
+        var curDist = 10000;
+        var curIndex = -1;
+        var success = false;
+        for (var i=0; i<t.length-len; i++){
+            var dist = StringDist.levenshtein(t.substr(i, len), q);
+            if (dist <= threshold && curDist > dist){
+                success = true;
+                curDist = dist;
+                curIndex = i;
+            }
+        }                
+        return {
+            success: success, 
+            index: curIndex,
+            dist: curDist};
+    }
+
+    function sortByDist(a, b){
+        return (a.dist - b.dist);
+    }
+
     // Perform search, using a modified version of fuse.js, not fuse.min.js
     function search(q) {
         var data = {results: []};
         var sessionData = {text: "Sessions", children:[]};
         var submissionData = {text: "Submissions", children:[]};
+        var result = {};
 
+
+        $.each(allSessions, function(index, session){
+            var isMatch = false;
+            //console.log(session.id, session.title);
+            var t = session.title.toLowerCase();
+            result = runDist(t,q);
+            if (result.success)
+                sessionData.children.push({id: session.id, text: session.title, authors: "", match: "title", index: result.index, dist: result.dist, q:q});                  
+        });
+        $.each(allSubmissions, function(index, submission){
+            var isMatch = false;
+            var t = submission.title.toLowerCase();
+            var authors = displayAuthors(submission.authors); //.replace(/,/g,'');
+            result = runDist(t, q);
+            var text = "<strong>" + submission.title + "</strong><br>" + authors;
+            if (result.success)
+                submissionData.children.push({id: submission.id, text: text, authors: authors, match: "title", index: result.index, dist: result.dist, q:q});  
+            result = runDist(authors.toLowerCase(), q);
+            if (result.success)
+                submissionData.children.push({id: submission.id, text: text, authors: authors, match: "authors", index: result.index, dist: result.dist, q:q});  
+            
+            //console.log(submission.id, authors, submission.title);
+            
+            sessionData.children.sort(sortByDist);
+            submissionData.children.sort(sortByDist);
+            
+        });
+        // console.log(sessionData, submissionData);
+
+/*    
+        // exact match    
+        $.each(allSessions, function(index, session){
+            //console.log(session.id, session.title);
+            if (session.title.toLowerCase().indexOf(q) != -1)
+                sessionData.children.push({id: session.id, text: session.title});  
+        });
+        $.each(allSubmissions, function(index, submission){
+
+            var authors = displayAuthors(submission.authors).toLowerCase(); //.replace(/,/g,'');
+            //console.log(submission.id, authors, submission.title);
+            if (submission.title.toLowerCase().indexOf(q) != -1)
+                submissionData.children.push({id: submission.id, text: submission.title, authors: authors});              
+            if (authors.toLowerCase().indexOf(q) != -1)
+                submissionData.children.push({id: submission.id, text: submission.title, authors: authors});  
+        });
+        //console.log(sessionData, submissionData);
+*/        
+/*
         // fuzzy query match
         var options = {
           keys: ["title"],   
@@ -88,21 +162,39 @@ var Searchbox = function() {
         result = f.search(q);
         // console.log("FUSE2", q, result);
 
+
         for (id in result) {
             submissionData.children.push({id: result[id], text: submissions[result[id]].title, authors: submissions[result[id]].authors});   
         }
-            
+*/            
         data.results.push(sessionData);
         data.results.push(submissionData);
         return data;
     }
 
-    function format(item) { 
-        if (typeof allSubmissions[item.id] === "undefined")
-            return "<strong>" + item.text + "</strong>"; 
-        else
-            return "<strong>" + item.text + "</strong><br>" + displayAuthors(allSubmissions[item.id].authors);
-    }
+    // function addSpan(item){
+    //     var src = (item.match == "title") ? item.text : item.authors;
+    //     console.log(src, item);
+    //     var text = src.slice(0, item.index) 
+    //         + "<span style='text-decoration: underline;'>"
+    //         + src.slice(item.index, item.index+item.q.len) 
+    //         + "</span>" 
+    //         + src.slice(item.index+item.q.len);
+
+    //     return text;
+    // }
+
+    // function format(item) { 
+    //     console.log(item);
+    //     if (typeof allSubmissions[item.id] === "undefined")
+    //         return "<strong>" + addSpan(item) + "</strong>"; 
+    //     else {
+    //         if (item.match == "title")
+    //             return "<strong>" + addSpan(item) + "</strong><br>" + item.authors;
+    //         else
+    //             return "<strong>" + item.text + "</strong><br>" + addSpan(item);
+    //     }
+    // }
 
     function destroy(){
 

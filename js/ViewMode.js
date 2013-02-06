@@ -6,7 +6,6 @@ var ViewMode = function() {
         // If already on, do not register multiple events
         if (!ViewMode.isOn){
             ViewMode.isOn = true;
-            console.log(ViewMode.isOn);
             //MoveMode.destroy();
             $(".main").addClass("view-mode");
             bindEvents();
