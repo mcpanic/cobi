@@ -3,6 +3,11 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
 include "settings.php";
 
+if(count($argv) != 2 or $argv[1] != 'pineapple'){
+  echo "wrong password" . "\n";
+  exit(1);
+}
+
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
 // Form the schedule table
@@ -159,5 +164,33 @@ foreach ($sessions as $session) {
 /*   } */
 /* } */
 
+// duplicate the tables into initial tqables
+$query = "CREATE TABLE initial_schedule LIKE schedule";
+mysqli_query($mysqli, $query);
+echo  mysqli_error($mysqli);
+
+$query = "INSERT initial_schedule SELECT * FROM schedule";
+mysqli_query($mysqli, $query);
+echo mysqli_error($mysqli);
+
+// duplicate the tables into initial tqables
+$query = "CREATE TABLE initial_session LIKE session";
+mysqli_query($mysqli, $query);
+echo  mysqli_error($mysqli);
+
+$query = "INSERT initial_session SELECT * FROM session";
+mysqli_query($mysqli, $query);
+echo mysqli_error($mysqli);
+
+// duplicate the tables into initial tqables
+$query = "CREATE TABLE initial_entity LIKE entity";
+mysqli_query($mysqli, $query);
+echo  mysqli_error($mysqli);
+
+$query = "INSERT initial_entity SELECT * FROM entity";
+mysqli_query($mysqli, $query);
+echo mysqli_error($mysqli);
+
 $mysqli->close();
+
 ?>
