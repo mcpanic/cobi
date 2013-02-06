@@ -82,7 +82,7 @@ var Conflicts = function() {
         var filtered_array = input_array == null? []: input_array.filter(function(x){return x.type==conflict.type});
         for (var i=0; i<filtered_array.length; i++) {
             // html += "<span class='conflict-preview-display'>" + sign + "</span>";
-            console.log(ment, conflict.label, filtered_array[i].description);
+            //console.log(ment, conflict.label, filtered_array[i].description);
             $("<span/>")
                     .addClass("conflict-preview-display").html(sign)
                     .attr("data-html", "true")

@@ -118,15 +118,15 @@ var MoveMode = function() {
                 var html = "";
                 if ($(this).hasClass("move-src-selected")) {
                     console.log("slotClickHandler: move-src-selected");                   
-                    html += "<strong>Select another session to schedule this session.</strong><br>" + getCancelButtonHTML();
+                    html += "<div class='alert alert-info'><strong>Select another session to schedule this session.</strong></div>" + getCancelButtonHTML();
                     if (id !== -1)
                         html += getSubmissionList("move", session, type);
 
-                } else if ($(this).find(".title").hasClass("locked")) {
-                    console.log("slotClickHandler: locked");                  
-                    html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong><br>" + getCancelButtonHTML();
-                    if (id !== -1)
-                        html += getSubmissionList("move", session, type);
+                // } else if ($(this).find(".title").hasClass("locked")) {
+                //     console.log("slotClickHandler: locked");                  
+                //     html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong><br>" + getCancelButtonHTML();
+                //     if (id !== -1)
+                //         html += getSubmissionList("move", session, type);
 
                 } else if (type == "scheduled" || type == "unscheduled" || type == "empty"){
                     if ($(this).hasClass("scheduled")){

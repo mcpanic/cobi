@@ -93,16 +93,19 @@
         else
             $cell = findCellByID(session.id);
 
-        // if (type == "empty"){
-        //     $cell = findCellByDateTimeRoom(session.date, session.time, session.room);
-        // } else if (type == "scheduled" || type == "unscheduled"){
-        //     $cell = findCellByID(session.id);
-        // }
+        var isLocked = false;
+        if (type != "unscheduled" && typeof session !== "undefined" && session != null){
+            isLocked = scheduleSlots[session.date][session.time][session.room]['locked'];
+        }
+        console.log("ISLOCKED", isLocked);
 
         console.log("src:", srcType, "dst:", type);
         if (srcType == "scheduled"){
             if (type == "scheduled"){
-                $("<button/>").attr("id", "swap-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Swap with this session").appendTo($(element));
+                if (isLocked)
+                    $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
+                else
+                    $("<button/>").attr("id", "swap-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Swap with this session").appendTo($(element));
                 $(element).append($(_getCancelButton())).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0])).append(getSubmissionList("move", session));
 
                 // html +=  "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
@@ -118,8 +121,12 @@
                   + $(this).find(".detail ul")[0].outerHTML;
                 */
             } else if (type == "empty"){
-                $("<button/>").attr("id", "move-button").addClass("btn btn-primary")
+                if (isLocked)
+                    $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
+                else {
+                    $("<button/>").attr("id", "move-button").addClass("btn btn-primary")
                     .attr("data-date", session.date).attr("data-time", session.time).attr("data-room", session.room).html("Move to this slot").appendTo($(element));
+                }
                 $(element).append($(_getCancelButton())).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0]));
 
                 // html +=  "<button class='btn btn-primary' id='move-button'" 
@@ -129,7 +136,10 @@
             } 
         } else if (srcType == "unscheduled") {
             if (type == "scheduled"){
-                $("<button/>").attr("id", "swap-with-unscheduled-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Swap with this session").appendTo($(element));
+                if (isLocked)
+                    $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
+                else
+                    $("<button/>").attr("id", "swap-with-unscheduled-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Swap with this session").appendTo($(element));
                 $(element).append($(_getCancelButton())).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0])).append(getSubmissionList("move", session));
 
                 // html +=  "<button class='btn btn-primary' id='swap-with-unscheduled-button' data-session-id='" + id 
@@ -139,9 +149,12 @@
             } else if (type == "unscheduled"){
                 console.log("Not supported");
             } else if (type == "empty"){
-                console.log(session, session.date);
-                $("<button/>").attr("id", "schedule-button").addClass("btn btn-primary")
+                if (isLocked)
+                    $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
+                else{
+                    $("<button/>").attr("id", "schedule-button").addClass("btn btn-primary")
                     .attr("data-date", session.date).attr("data-time", session.time).attr("data-room", session.room).html("Schedule in this slot").appendTo($(element));
+                }
                 $(element).append($(_getCancelButton())).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0]));
 
                 // html +=  "<button class='btn btn-primary' id='schedule-button'" 
@@ -151,7 +164,10 @@
             }
         } else if (srcType == "empty") {
             if (type == "scheduled"){
-                $("<button/>").attr("id", "move-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Move this session").appendTo($(element));
+                if (isLocked)
+                    $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
+                else
+                    $("<button/>").attr("id", "move-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Move this session").appendTo($(element));
                 $(element).append($(_getCancelButton())).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0])).append(getSubmissionList("move", session));
 
                 // html +=  "<button class='btn btn-primary' id='move-button' data-session-id='" + id 
@@ -159,7 +175,10 @@
                 //   + $(this).find(".detail .conflicts")[0].outerHTML
                 //   + $(this).find(".detail ul")[0].outerHTML;                           
             } else if (type == "unscheduled"){
-                $("<button/>").attr("id", "schedule-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Schedule this session").appendTo($(element));
+                if (isLocked)
+                    $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
+                else
+                    $("<button/>").attr("id", "schedule-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Schedule this session").appendTo($(element));
                 $(element).append($(_getCancelButton())).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0])).append(getSubmissionList("move", session));
 
                 // html +=  "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
