@@ -291,11 +291,23 @@ body.loading .modal {
     /*color: #aaaaaa;*/
 }
 
-#unscheduled .cell .display, #unscheduled-papers .cell .display {
+#program .cell .conflicts {
+    display: none;
+    height: 30px;
+    border-top: solid 1px #cccccc;
+    overflow-x: hidden;
+    overflow-y: hidden;    
+}
+
+#unscheduled .cell .display, #unscheduled-papers .cell .display, #unscheduled .cell .conflicts, #unscheduled-papers .cell .conflicts {
     width: 44px;
 }
 
 #program .cell .display .icon, #unscheduled .cell .display .icon, #unscheduled-papers .cell .display .icon {
+    width: 24px;
+}
+
+#program .cell .conflicts .icon, #unscheduled .cell .conflicts .icon, #unscheduled-papers .cell .conflicts .icon {
     width: 24px;
 }
 

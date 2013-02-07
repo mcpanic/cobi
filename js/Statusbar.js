@@ -45,7 +45,7 @@ var Statusbar = function() {
             else if (type == "updateStatusFailed")
                 $status.find(".label").removeClass("label-info").addClass("label-warning").html("Failed");
             else if (type == "moveCanceled") // You got kicked out of the move mode because server changed collided with my selection
-                $status.find(".label").removeClass("label-info").addClass("label-important").html("Your Move Canceled by Server Change");
+                $status.find(".label").removeClass("label-info").addClass("label-important").html("Your Move Canceled by Someone's Change");
         }
 
     }

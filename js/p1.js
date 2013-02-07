@@ -491,7 +491,7 @@
         var slotTime = typeof slotTime !== "undefined" ? slotTime : null;
         var slotRoom = typeof slotRoom !== "undefined" ? slotRoom : null;
         var cell = document.createElement('td');
-        $(cell).addClass("cell slot").append("<div class='user'/><div class='title'/><div class='display'/>");
+        $(cell).addClass("cell slot").append("<div class='user'/><div class='title'/><div class='display'/><div class='conflicts'/>");
 
         // Empty Session
 		if (type == "empty" || session == -1){
@@ -545,7 +545,8 @@
         //var slotRoom = typeof slotRoom !== "undefined" ? slotRoom : null;
         var cell = document.createElement('td');
         $(cell).addClass("cell slot-paper")
-            .append("<div class='title'/><div class='display'/>");
+            .append("<div class='user'/><div class='title'/><div class='display'/><div class='conflicts'/>");
+            
         // console.log("session", typeof session);
 
         // Empty Session

@@ -281,7 +281,6 @@ var MoveMode = function() {
             if (swapValues[i].target.session === null){
                 if (typeof swapValues[i].target.date !== "undefined" && typeof swapValues[i].target.time !== "undefined" && typeof swapValues[i].target.room !== "undefined"){
                     $cell = findCellByDateTimeRoom(swapValues[i].target.date, swapValues[i].target.time, swapValues[i].target.room);
-                    console.log("runPropose", i, swapValues[i]);
                     $cell.addClass("proposed-swap"); //.data("title", "Empty slot");
                     if (numSpecialRecommended > 0){
                         recommendedSpecialList.push($cell);
@@ -326,7 +325,9 @@ var MoveMode = function() {
                 }
             }
             //console.log(swapValues[i]);
-            Conflicts.displayPreviewConflicts(swapValues[i], $cell.find(".display"));
+            Conflicts.displayPreviewConflicts(swapValues[i], $cell.find(".conflicts"));
+            // console.log(outerHTML($cell.find(".conflicts")));
+            $cell.find(".display").html($cell.find(".conflicts").html());
             Conflicts.displayFullConflicts(swapValues[i], $cell.find(".detail"));
         }
 

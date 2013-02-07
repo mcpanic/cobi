@@ -268,7 +268,12 @@ var Sidebar = function() {
                     });
                break;
                case "conflicts":
-                    Conflicts.updateConflicts();
+                    if (MoveMode.isOn){
+                         $(".slot:not('.unavailable')").each(function(index, item){
+                              $(item).find(".display").html($(item).find(".conflicts").html());
+                         });
+                    } else
+                         Conflicts.updateConflicts();
                break;                 
                case "popularity":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){

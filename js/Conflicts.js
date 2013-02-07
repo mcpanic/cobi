@@ -15,6 +15,9 @@ var Conflicts = function() {
         $(".slot .display").each(function(){
             $(this).html("");
         });
+        $(".slot .conflicts").each(function(){
+            $(this).html("");
+        });
     }
 
      // Given an array of "conflicts", display the palette and count for each constraint in the "element"
