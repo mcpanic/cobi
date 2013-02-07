@@ -12,7 +12,7 @@ $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASS
 
 // Form the schedule table
 //schedule-2013-0-30-13-51-39.json
-$scheduleFile = file_get_contents('schedule-2013-0-30-13-51-39.json');
+$scheduleFile = file_get_contents('schedule-2013-2-7-0-16-1.json');
 //$scheduleFile = file_get_contents('schedule-2012-11-16-14-55-35.json');
 $schedule = json_decode($scheduleFile, true);
 $schedule = $schedule["rows"];
@@ -80,7 +80,7 @@ foreach ($entities as $entity) {
 }
 
 // Form the session table
-$sessionsFile = file_get_contents('sessions-2013-0-30-23-58-36.json');
+$sessionsFile = file_get_contents('sessions-2013-2-7-0-15-58.json');
 //
 //sessions-2012-11-16-14-55-33.json');
 $sessions = json_decode($sessionsFile, true);
@@ -165,27 +165,27 @@ foreach ($sessions as $session) {
 /* } */
 
 // duplicate the tables into initial tqables
-$query = "CREATE TABLE initial_schedule LIKE schedule";
-mysqli_query($mysqli, $query);
-echo  mysqli_error($mysqli);
+/* $query = "CREATE TABLE initial_schedule LIKE schedule"; */
+/* mysqli_query($mysqli, $query); */
+/* echo  mysqli_error($mysqli); */
 
 $query = "INSERT initial_schedule SELECT * FROM schedule";
 mysqli_query($mysqli, $query);
 echo mysqli_error($mysqli);
 
 // duplicate the tables into initial tqables
-$query = "CREATE TABLE initial_session LIKE session";
-mysqli_query($mysqli, $query);
-echo  mysqli_error($mysqli);
+/* $query = "CREATE TABLE initial_session LIKE session"; */
+/* mysqli_query($mysqli, $query); */
+/* echo  mysqli_error($mysqli); */
 
 $query = "INSERT initial_session SELECT * FROM session";
 mysqli_query($mysqli, $query);
 echo mysqli_error($mysqli);
 
-// duplicate the tables into initial tqables
-$query = "CREATE TABLE initial_entity LIKE entity";
-mysqli_query($mysqli, $query);
-echo  mysqli_error($mysqli);
+/* // duplicate the tables into initial tqables */
+/* $query = "CREATE TABLE initial_entity LIKE entity"; */
+/* mysqli_query($mysqli, $query); */
+/* echo  mysqli_error($mysqli); */
 
 $query = "INSERT initial_entity SELECT * FROM entity";
 mysqli_query($mysqli, $query);
