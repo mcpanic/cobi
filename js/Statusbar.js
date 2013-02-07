@@ -44,7 +44,10 @@ var Statusbar = function() {
                 $status.find(".label").removeClass("label-info").addClass("label-success").html("Success");
             else if (type == "updateStatusFailed")
                 $status.find(".label").removeClass("label-info").addClass("label-warning").html("Failed");
+            else if (type == "moveCanceled") // You got kicked out of the move mode because server changed collided with my selection
+                $status.find(".label").removeClass("label-info").addClass("label-important").html("Your Move Canceled by Server Change");
         }
+
     }
 
 
@@ -60,6 +63,9 @@ var Statusbar = function() {
             displayPaperStatus(t);
     }
 
+    function addStatusInterrupted(t){
+
+    }
 
     // function updateStatusHandler(event, t){
     //     // the current transaction is still displayed
@@ -109,7 +115,7 @@ var Statusbar = function() {
         var $link, $link2, $li;
         var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("label label-info").html("In progress") : $("<span/>").addClass("label label-info").html("Updated");
 
-        var user = isTransactionMyChange(t) ? "" : getUsernameByUID(t.uid);
+        var user = isTransactionMyChange(t) ? "You" : getUsernameByUID(t.uid);
         $li = $("<div/>").addClass("status").attr("data-local-hash", t.localHash).append($statusLabel).append(" " + user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
 
         if (t.type.indexOf("swap") !== -1){
@@ -136,7 +142,7 @@ var Statusbar = function() {
         var $link, $link2, $li;
         var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("label label-info").html("In progress") : $("<span/>").addClass("label label-info").html("Updated");
 
-        var user = isTransactionMyChange(t) ? "" : getUsernameByUID(t.uid);
+        var user = isTransactionMyChange(t) ? "You" : getUsernameByUID(t.uid);
         $li = $("<div/>").addClass("status").attr("data-local-hash", t.localHash).append($statusLabel).append(" " + user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
 
         //console.log(t.type, t.data);

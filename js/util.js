@@ -198,3 +198,14 @@ function isSpecialCell($item){
 	else
 		return false;
 }
+
+
+function isEqualCell($cell1, $cell2) {
+	return $cell1.get(0) == $cell2.get(0);
+}
+
+function isEqualDateTimeRoom(date1, time1, room1, date2, time2, room2) {
+	return date1 == date2 && time1 == time2 && room1 == room2;
+}
+
+

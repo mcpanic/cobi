@@ -10,6 +10,10 @@ var Sidebar = function() {
           bindEvents();
 
           addCount();
+
+          // by default, open conflicts and history
+          $(".toggle-options").first().trigger("click");
+          $(".toggle-options").last().trigger("click");
      }
 
      // Display counts for each community and persona
@@ -138,7 +142,7 @@ var Sidebar = function() {
      function displaySessionHistory(t){
           var $link, $link2, $li;
           var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("status icon-exclamation-sign") : $("<span/>").addClass("status icon-ok");
-          var user = isTransactionMyChange(t) ? "" : getUsernameByUID(t.uid);
+          var user = isTransactionMyChange(t) ? "You" : getUsernameByUID(t.uid);
           $li = $("<li/>").attr("data-local-hash", t.localHash).append($statusLabel).append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
           
           if (t.type.indexOf("swap") !== -1){
@@ -164,7 +168,7 @@ var Sidebar = function() {
      function displayPaperHistory(t){
           var $link, $link2, $li;
           var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("status icon-exclamation-sign") : $("<span/>").addClass("status icon-ok");
-          var user = isTransactionMyChange(t) ? "" : getUsernameByUID(t.uid);
+          var user = isTransactionMyChange(t) ? "You" : getUsernameByUID(t.uid);
           $li = $("<li/>").attr("data-local-hash", t.localHash).append($statusLabel).append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
 
           if (t.type == "swapPapers"){

@@ -8,10 +8,6 @@ var Polling = function() {
 
     // Add event handlers to each sidebar item
     function bindEvents(){
-        // $(document).on("transactionUpdate", transactionUpdateHandler);
-        // $(document).on("transactionAccepted", transactionAcceptedHandler);
-        // $(document).on("transactionFailed", transactionFailedHandler);
-
         $(document).on("userLoaded", userLoadedHandler);
     }
 
@@ -25,76 +21,68 @@ var Polling = function() {
         Sidebar.updateHistory("updateHistoryAccepted", t);
     }
 
-    // function transactionAcceptedHandler(event, t){
-    //     console.log(event.type, t);
-    //     $(document).trigger("updateStatusAccepted", [t]); 
-    //     $(document).trigger("updateHistoryAccepted", [t]); 
-    // }
-
     function transactionFailed(t){
         console.log("transactionFailed", t);
         var rollbackTransaction = new TransactionData(t.uid, t.previousType, t.previous, t.type, t.data);
-        handleTransaction(rollbackTransaction);
+        var isInterrupted = handleTransaction(rollbackTransaction);
         Statusbar.updateStatus("updateStatusFailed", t);
         Sidebar.updateHistory("updateHistoryFailed", t);        
     }
 
-    // function transactionFailedHandler(event, t){
-    //     console.log(event.type, t);
-    //     var rollbackTransaction = new TransactionData(t.uid, t.previousType, t.previous, t.type, t.data);
-    //     handleTransaction(rollbackTransaction);
-    //     $(document).trigger("updateStatusFailed", [t]); 
-    //     $(document).trigger("updateHistoryFailed", [t]); 
-    // }
-
     function transactionUpdate(t){
         console.log("transactionUpdate", t);
         //type: event type, uid: user who made the change, data: object
-        handleTransaction(t);
-        Statusbar.addStatus(t);
-        Sidebar.addHistory(t);    
+        var isInterrupted = handleTransaction(t);
+        if (t.type != "schedulePaper" && t.type != "swapPapers" && t.type != "movePaper" && t.type != "swapWithUnscheduledPaper"){
+            Statusbar.addStatus(t); 
+            Sidebar.addHistory(t);   
+            if (isInterrupted)
+                Statusbar.updateStatus("moveCanceled", t);              
+        }
     }  
 
-    // function transactionUpdateHandler(event, t){
-    //     console.log(event.type, t);
-    //     //type: event type, uid: user who made the change, data: object
-    //     handleTransaction(t);
+    // Update is delayed for paper move operations
+    function delayedTransactionUpdate(t, isInterrupted){
+        Statusbar.addStatus(t); 
+        Sidebar.addHistory(t);   
+        if (isInterrupted)
+            Statusbar.updateStatus("moveCanceled", t);   
+    }
 
-    //     $(document).trigger("addStatus", [t]); 
-    //     $(document).trigger("addHistory", [t]); 
-    // }  
 
     function handleTransaction(t){
+        var isInterrupted = false;
         var isMyChange = isTransactionMyChange(t);
 
         if (t.type == "lock"){
-            handlePollingLock(t, isMyChange);
+            isInterrupted = handlePollingLock(t, isMyChange);
         } else if (t.type == "unlock"){
-            handlePollingUnlock(t, isMyChange);
+            isInterrupted = handlePollingUnlock(t, isMyChange);
         } else if (t.type == "unschedule"){
-            handlePollingUnschedule(t, isMyChange);
+            isInterrupted = handlePollingUnschedule(t, isMyChange);
         } else if (t.type == "schedule"){
-            handlePollingSchedule(t, isMyChange);
+            isInterrupted = handlePollingSchedule(t, isMyChange);
         } else if (t.type == "swap"){
-            handlePollingSwap(t, isMyChange);
+            isInterrupted = handlePollingSwap(t, isMyChange);
         } else if (t.type == "move"){
-            handlePollingMove(t, isMyChange);
+            isInterrupted = handlePollingMove(t, isMyChange);
         } else if (t.type == "swapWithUnscheduled"){
-            handlePollingSwapWithUnscheduled(t, isMyChange);
+            isInterrupted = handlePollingSwapWithUnscheduled(t, isMyChange);
         } else if (t.type == "reorderPapers"){
-            handlePollingReorderPapers(t, isMyChange);
+            isInterrupted = handlePollingReorderPapers(t, isMyChange);
         } else if (t.type == "unschedulePaper"){
-            handlePollingUnschedulePaper(t, isMyChange);
+            isInterrupted = handlePollingUnschedulePaper(t, isMyChange);
         } else if (t.type == "schedulePaper"){
-            handlePollingSchedulePaper(t, isMyChange);
+            isInterrupted = handlePollingSchedulePaper(t, isMyChange);
         } else if (t.type == "swapPapers"){ 
-            handlePollingSwapPaper(t, isMyChange);
+            isInterrupted = handlePollingSwapPaper(t, isMyChange);
         } else if (t.type == "movePaper"){
-            handlePollingMovePaper(t, isMyChange);
+            isInterrupted = handlePollingMovePaper(t, isMyChange);
         } else if (t.type == "swapWithUnscheduledPaper"){
-            handlePollingSwapWithUnscheduledPaper(t, isMyChange);
+            isInterrupted = handlePollingSwapWithUnscheduledPaper(t, isMyChange);
         } else 
             console.log("unsupported transaction detected");
+        return isInterrupted;
     }
 
     function postPollingMove(){
@@ -117,6 +105,7 @@ var Polling = function() {
  ******************************/
 
     function handlePollingLock(t, isMyChange){
+        var isInterrupted = false;
         // TODO: lock needs to get id in t.data.id
         var id = null;
         for (s in schedule[t.data.date][t.data.time][t.data.room]){
@@ -126,15 +115,30 @@ var Polling = function() {
         var $cell = (id == null) ? findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room): findCellByID(id);
         if ($cell == null || typeof $cell === "undefined")
             return;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+            if (selectedID == -1 && isEqualCell($cell, $(".move-src-selected").first()))  // me: empty, server: empty
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
         VisualOps.lock($cell);
 
         postPollingMove();  
         if (isMyChange)
             $(".selected").removeClass("selected").popover("hide");
+        if (isInterrupted) // current selection affected by the server change
+            MoveMode.destroy();
+            
+        return isInterrupted;
     }
 
     function handlePollingUnlock(t, isMyChange){
+        var isInterrupted = false;
         // TODO: lock needs to get id in t.data.id
         var id = null;
         for (s in schedule[t.data.date][t.data.time][t.data.room]){
@@ -143,82 +147,178 @@ var Polling = function() {
         // empty cells can also be locked or unlocked
         var $cell = (id == null) ? findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room): findCellByID(id);
         if ($cell == null || typeof $cell === "undefined")
-            return;
+            return isInterrupted;;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (id == selectedID) // IMPOSSIBLE. me: scheduled, server: scheduled
+                isInterrupted = true;
+            if (selectedID == -1 && isEqualCell($cell, $(".move-src-selected").first()))  // IMPOSSIBLE. me: empty, server: empty
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
         VisualOps.unlock($cell);
 
         postPollingMove();  
         if (isMyChange)
             $(".selected").removeClass("selected").popover("hide");
+        if (isInterrupted) // current selection affected by the server change
+            MoveMode.destroy();
+
+        return isInterrupted;
     }
 
     function handlePollingUnschedule(t, isMyChange){
+        var isInterrupted = false;
         var id = t.data.id;
         var $cell = findCellByID(id);
         if ($cell == null || typeof $cell === "undefined")
-            return;
+            return isInterrupted;;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+            if (selectedID == -1 && isEqualCell($cell, $(".move-src-selected").first())) // IMPOSSIBLE. me: empty, server: scheduled
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
         VisualOps.unschedule(allSessions[id], t.data.date, t.data.time, t.data.room);
 
         postPollingMove();  
         if (isMyChange)
             $(".selected").removeClass("selected");
+        if (isInterrupted) // current selection affected by the server change
+            MoveMode.destroy();
+
+        return isInterrupted;
     }
 
     function handlePollingSchedule(t, isMyChange){
+        var isInterrupted = false;
         var id = t.data.id;
         var $cell = findCellByID(id);
         if ($cell == null || typeof $cell === "undefined")
-         return;
+         return isInterrupted;;
 
-        $emptySlot = findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room);
+        var $emptySlot = findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room);
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (id == selectedID) // me: unscheduled, server: unscheduled
+                isInterrupted = true;
+            if (selectedID == -1 && isEqualCell($emptySlot, $(".move-src-selected").first()))  // me: empty, server: empty
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+
+
         VisualOps.scheduleUnscheduled(allSessions[id], $emptySlot);
 
         postPollingMove();  
         if (isMyChange)
-            MoveMode.destroy();           
+            MoveMode.destroy();    
+        if (isInterrupted) // current selection affected by the server change
+            MoveMode.destroy();
+
+        return isInterrupted;   
     }
 
     function handlePollingSwap(t, isMyChange){
+        var isInterrupted = false;
         var s1id = t.data.s1id;
         var s2id = t.data.s2id;
         var $s1Cell = findCellByID(s1id);
         if ($s1Cell == null || typeof $s1Cell === "undefined")
-         return;
+         return isInterrupted;;
         var $s2Cell = findCellByID(s2id);
         if ($s2Cell == null || typeof $s2Cell === "undefined")
-         return;
+         return isInterrupted;;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (s1id == selectedID || s2id == selectedID) // me: scheduled, server: s1 and s2 both scheduled
+                isInterrupted = true;
+            // if (selectedID == -1 && isEqualCell($emptySlot, $(".move-src-selected").first()))  // IMPOSSIBLE me: empty, server: empty
+            //     isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
         VisualOps.swap(allSessions[s1id], allSessions[s2id]);
 
         postPollingMove();  
         if (isMyChange)
             MoveMode.destroy();
+        if (isInterrupted) // current selection affected by the server change
+            MoveMode.destroy();
+
+        return isInterrupted;       
     }
 
     function handlePollingMove(t, isMyChange){
+        var isInterrupted = false;
         var id = t.data.id;
         var $cell = findCellByID(id);
         if ($cell == null || typeof $cell === "undefined")
-         return;
+         return isInterrupted;;
 
-        $emptySlot = findCellByDateTimeRoom(t.data.tdate, t.data.ttime, t.data.troom);
+        var $oldCell = findCellByDateTimeRoom(t.data.sdate, t.data.stime, t.data.sroom);
+        var $emptySlot = findCellByDateTimeRoom(t.data.tdate, t.data.ttime, t.data.troom);
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+            // me: empty, server: empty
+            // console.log(selectedID == -1, isEqualCell($emptySlot, $(".move-src-selected").first()), isEqualCell($oldCell, $(".move-src-selected").first()));
+            if (selectedID == -1 && (isEqualCell($emptySlot, $(".move-src-selected").first()) || isEqualCell($oldCell, $(".move-src-selected").first())))  
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+
+
         VisualOps.swapWithEmpty(allSessions[id], $emptySlot, t.data.sdate, t.data.stime, t.data.sroom);
 
         postPollingMove();  
         if (isMyChange)
             MoveMode.destroy();
+        if (isInterrupted) // current selection affected by the server change
+            MoveMode.destroy();       
+
+        return isInterrupted;   
     }
 
     function handlePollingSwapWithUnscheduled(t, isMyChange){
+        var isInterrupted = false;
         var scheduledId = t.data.s2id;
         var unscheduledId = t.data.s1id;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (scheduledId == selectedID || unscheduledId == selectedID) // me: scheduled, server: s1 and s2 both scheduled
+                isInterrupted = true;
+            // if (selectedID == -1 && isEqualCell($emptySlot, $(".move-src-selected").first()))  // IMPOSSIBLE me: empty, server: empty
+            //     isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
         VisualOps.swapWithUnscheduled(allSessions[unscheduledId], allSessions[scheduledId]);
 
         postPollingMove();  
         if (isMyChange)
             MoveMode.destroy();
+        if (isInterrupted) // current selection affected by the server change
+            MoveMode.destroy();  
+
+        return isInterrupted;         
     }
 
 /******************************
@@ -226,49 +326,157 @@ var Polling = function() {
  ******************************/
 
     function handlePollingReorderPapers(t, isMyChange){
+        var isInterrupted = false;
         // no frontend work is necessary because it's already updated.
-        postPollingMove();            
+        
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (t.data.id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+            if (selectedID == -1 && isEqualCell($cell, $(".move-src-selected").first())) // IMPOSSIBLE. me: empty, server: scheduled
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+
+        // Add frontend functionality to reorder manually because server updates will be applied this way?
+        // It's actually okay not to add this functionality because the frontend gets canceled anyway.
+
+        postPollingMove();     
+
+        if (isMyChange) // shouldn't do MoveMode.destroy() because it's the user's own change.
+            ; //MoveMode.destroy();
+        if (isInterrupted) // current selection affected by the server change
+            MoveMode.destroy();  
+
+        return isInterrupted;       
     }
 
     function handlePollingUnschedulePaper(t, isMyChange){
+        var isInterrupted = false;    
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (t.data.sid == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+            if (selectedID == -1 && isEqualCell($cell, $(".move-src-selected").first())) // IMPOSSIBLE. me: empty, server: scheduled
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+
         PaperVisualOps.unschedule(allSubmissions[t.data.pid]);
-        postPollingMove();            
+        
+        postPollingMove();  
+        if (isMyChange) // shouldn't do MoveMode.destroy() because it's the user's own change.
+            ; //MoveMode.destroy();
+        if (isInterrupted) // current selection affected by the server change
+            MoveMode.destroy();      
+   
+        return isInterrupted;       
     }
 
     function handlePollingSchedulePaper(t, isMyChange){
+        var isInterrupted = false;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            console.log(selectedID, $(".move-src-selected").first().attr("id"), t.data.pid, $(".move-src-selected").first().attr("id")==t.data.pid, $(".move-src-selected").first().attr("id").length, t.data.pid.length);
+            if (t.data.sid == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+            if (selectedID == "" && $(".move-src-selected").first().attr("id") == t.data.pid)  // me: unscheduled paper, server: empty
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+        console.log(isMyChange, isInterrupted);
         PaperVisualOps.scheduleUnscheduled(allSubmissions[t.data.pid], t.data.pos);
+
         setTimeout(function (){
             postPollingMove();  
             if (isMyChange)
-                MoveMode.destroy();  
-        }, 2300);                   
+                MoveMode.destroy();
+            if (isInterrupted)
+                MoveMode.destroy();
+            delayedTransactionUpdate(t, isInterrupted);
+        }, 2300); 
+        return isInterrupted;            
     }
 
     function handlePollingSwapPaper(t, isMyChange){
+        var isInterrupted = false;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (t.data.s1id == selectedID || t.data.s2id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+
         PaperVisualOps.swap(allSubmissions[t.data.p1id], allSubmissions[t.data.p2id]);  
+
         setTimeout(function (){
             postPollingMove();  
             if (isMyChange)
                 MoveMode.destroy();
-        }, 2300);                
+            if (isInterrupted)
+                MoveMode.destroy();
+            delayedTransactionUpdate(t, isInterrupted);
+        }, 2300);
+          
+        return isInterrupted;                          
     }
 
     function handlePollingMovePaper(t, isMyChange){
+        var isInterrupted = false;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());          
+            if (t.data.s1id == selectedID || t.data.s2id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+
         PaperVisualOps.swapWithEmpty(allSubmissions[t.data.p1id], t.data.pos); 
+
         setTimeout(function (){
             postPollingMove();  
             if (isMyChange)
                 MoveMode.destroy();
+            if (isInterrupted)
+                MoveMode.destroy();
+            delayedTransactionUpdate(t, isInterrupted);
         }, 2300);
+          
+        return isInterrupted;  
     }
 
     function handlePollingSwapWithUnscheduledPaper(t, isMyChange){
+        var isInterrupted = false;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());         
+            if (t.data.s2id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+            if (selectedID == "" && ($(".move-src-selected").first().attr("id") == t.data.p1id || $(".move-src-selected").first().attr("id") == t.data.p2id))  // me: unscheduled paper, server: empty
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+
         PaperVisualOps.swapWithUnscheduled(allSubmissions[t.data.p1id], allSubmissions[t.data.p2id]); 
         setTimeout(function (){
             postPollingMove();  
             if (isMyChange)
                 MoveMode.destroy();
+            if (isInterrupted)
+                MoveMode.destroy();
+            delayedTransactionUpdate(t, isInterrupted);
         }, 2300);
+
+        return isInterrupted;  
     }
 
     return {
