@@ -541,7 +541,7 @@ body.loading .modal {
 }
 
 .conflict-netcount-added, .conflict-netcount-removed {
-    color: #888888;
+    color: #000000; /*#888888;*/
 }
 /*
 .conflict-netcount-removed {

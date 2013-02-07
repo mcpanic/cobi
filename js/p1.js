@@ -295,7 +295,10 @@
                 $("<button/>").addClass("btn btn-mini button-paper-propose-unscheduled").html("Propose Move").appendTo($(element));
             $("<div/>").addClass("conflicts").appendTo($(element));
             $("<br/>").appendTo($(element));
-            $("<span/>").addClass("awards").appendTo($(element));
+            if (submission.bestPaperAward)
+                $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
+                if (submission.bestPaperNominee)
+                $("<span/>").addClass("awards").html("<img src='img/nominee.png' class='icon'/>").appendTo($(element));
             $("<span/>").html("<strong>Authors</strong>: " + displayAuthors(submission.authors)).appendTo($(element));
 
             // console.log(typeof submission, submission == null);

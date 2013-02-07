@@ -308,6 +308,14 @@ var Sidebar = function() {
                          else
                               $(item).find(".display").html("");
                     });
+                    // $(".slot-paper:not('.unavailable'):not('.empty')").each(function(index, item){
+                    //      var id = $(item).attr("id");
+                    //      var submission = allSubmissions[id];                         
+                    //      if (submission.bestPaperAward)
+                    //          $(item).find(".display").html("<img src='img/best-paper.png' class='icon'/>");
+                    //      else
+                    //          $(item).find(".display").html(""); 
+                    // });                      
                break;
                case "honorable-mentions":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
@@ -317,7 +325,15 @@ var Sidebar = function() {
                              $(item).find(".display").html("<img src='img/nominee.png' class='icon'/>");
                          else
                              $(item).find(".display").html(""); 
-                    });                           
+                    });
+                    // $(".slot-paper:not('.unavailable'):not('.empty')").each(function(index, item){
+                    //      var id = $(item).attr("id");
+                    //      var submission = allSubmissions[id];                         
+                    //      if (submission.bestPaperNominee)
+                    //          $(item).find(".display").html("<img src='img/nominee.png' class='icon'/>");
+                    //      else
+                    //          $(item).find(".display").html(""); 
+                    // });                              
                break;
                case "persona":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
