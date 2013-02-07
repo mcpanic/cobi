@@ -14,11 +14,12 @@ function getLockStatus($mysqli){
   }
 }
 
+
+
 define("COBI_MYSQL_SERVER", "mysql.csail.mit.edu");
 define("COBI_MYSQL_USERNAME", "cobi");
 define("COBI_MYSQL_PASSWORD", "su4Biha");
-define("COBI_MYSQL_DATABASE", "cobi");
-
+define("COBI_MYSQL_DATABASE", "cobiDev");
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
 $clientId = mysqli_real_escape_string($mysqli, $_POST['lastId']);

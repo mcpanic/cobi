@@ -73,6 +73,7 @@ var DataOps = function() {
 			    t.data.troom);
 	    break;
 	case 'swap':
+	    console.log("data from swapping:" + JSON.stringify(t));
 	    swapSessions(allSessions[t.data.s1id],
 			 allSessions[t.data.s2id]);
 	    break;
@@ -708,6 +709,10 @@ function scheduleSession(s, tdate, ttime, troom){
 
 // Swaps two sessions into the original schedule data structure
 function swapSessions(s1, s2){
+    console.log("swapSessions is called by frontend handler");
+//    console.log("s1 from frontend: " + JSON.stringify(s1));
+//    console.log("s2 from frontend: " + JSON.stringify(s2));
+
     var td = { 's1id': s1.id,
 	       's1date': s1.date,
 	       's1time': s1.time,
