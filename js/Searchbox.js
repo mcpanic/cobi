@@ -18,6 +18,10 @@ var Searchbox = function() {
             //formatResult: format
         });
 
+        $(window).scroll(function() {
+            $(".select2-container.select2-dropdown-open").not($(this)).select2('positionDropdown');
+        });
+        
         $("#searchbox").on("change", function(e){
             var id = e.val;
             //console.log(JSON.stringify({val:e.val, added:e.added, removed:e.removed}));

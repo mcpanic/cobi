@@ -160,7 +160,11 @@ body.loading .modal {
 
 /* class assigned by select2 plugin from Searchbox.js */
 .dropdown-item {
-    position: absolute;
+    /*position: fixed;
+    display: block;
+    top: 38px !important;
+    left: 266px !important;
+    width: 703px !important;*/
 }
 
 .dropdown-item li {
