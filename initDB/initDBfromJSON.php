@@ -10,6 +10,35 @@ if(count($argv) != 2 or $argv[1] != 'pineapple'){
 
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
+$query = "delete from initial_schedule";
+mysqli_query($mysqli, $query);
+echo mysqli_error($mysqli);
+
+$query = "delete from initial_session";
+mysqli_query($mysqli, $query);
+echo mysqli_error($mysqli);
+
+$query = "delete from initial_entity";
+mysqli_query($mysqli, $query);
+echo mysqli_error($mysqli);
+
+$query = "delete from schedule";
+mysqli_query($mysqli, $query);
+echo mysqli_error($mysqli);
+
+$query = "delete from session";
+mysqli_query($mysqli, $query);
+echo mysqli_error($mysqli);
+
+
+$query = "delete from entity";
+mysqli_query($mysqli, $query);
+echo mysqli_error($mysqli);
+
+$query = "delete from transactions";
+mysqli_query($mysqli, $query);
+echo mysqli_error($mysqli);
+
 // Form the schedule table
 //schedule-2013-0-30-13-51-39.json
 $scheduleFile = file_get_contents('schedule-2013-2-7-0-16-1.json');
@@ -34,7 +63,7 @@ foreach ($schedule as $slot) {
 
 
 // Form the entity table
-$entityFile = file_get_contents('submissions-2013-0-29-3-26-59-unicode.json');
+$entityFile = file_get_contents('submissions-2013-2-7-0-15-55.json');
 $entities = json_decode($entityFile, true);
 $entities = $entities["rows"];
 $awardHash = array();
@@ -46,19 +75,18 @@ foreach ($entities as $entity) {
   $acmLink   = "";
   // TODO  
   $authors             = mysqli_real_escape_string($mysqli, json_encode($entity['value']['authorList'])             );
-    
-  $note      = $entity['value']['notes']  ;
-  if (strcasecmp($note, "Best Paper") == 0) {
-    $awardHash[$entity['id']] = true;
-    $bestPaperAward = 1;
-  }else{
-    $bestPaperAward = 0;
-  }
 
   $bestPaperNominee = 0;
-  if (strcasecmp($entity['value']['nomination'], "Best Paper") == 0) {
-    $honorableHash[$entity['id']] = true;
-    $bestPaperNominee = 1;
+  $bestPaperAward = 0;
+  if(array_key_exists("award", $entity['value'])){    
+    $awardee      = $entity['value']['award']  ;
+    if (strcasecmp($awardee, "Best") == 0){
+      $awardHash[$entity['id']] = true;
+      $bestPaperAward = 1;
+    }else{
+      $honorableHash[$entity['id']] = true;
+      $bestPaperNominee = 1;
+    }
   }
   $cAndB               = mysqli_real_escape_string($mysqli, json_encode($entity['value']['cbStatement']));
   $contactEmail        = mysqli_real_escape_string($mysqli, $entity['value']['contactEmail']        );
