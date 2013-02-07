@@ -100,6 +100,22 @@ var Polling = function() {
         }
     }
 
+    function highlight(isMyChange, $cell, username){      
+        if (typeof $cell === "undefined" || $cell == null || $cell == "")
+            return;
+
+        if (isMyChange)
+            $cell.effect("highlight", {color: "yellow"}, 7000);
+        else {
+            console.log(username);
+            $cell.find(".user").html(username).show();
+            $cell.effect("highlight", {color: "#FFDE49"}, 7000);
+            setTimeout(function(){
+               $cell.find(".user").html("").hide();// or fade, css display however you'd like.
+            }, 7000);            
+        }
+    }
+
 /******************************
  * Session level operations
  ******************************/
@@ -127,7 +143,7 @@ var Polling = function() {
         isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
         VisualOps.lock($cell);
-
+        highlight(isMyChange, $cell, getUsernameByUID(t.uid));
         postPollingMove();  
         if (isMyChange)
             $(".selected").removeClass("selected").popover("hide");
@@ -160,7 +176,7 @@ var Polling = function() {
         isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
         VisualOps.unlock($cell);
-
+        highlight(isMyChange, $cell, getUsernameByUID(t.uid));
         postPollingMove();  
         if (isMyChange)
             $(".selected").removeClass("selected").popover("hide");
@@ -188,6 +204,10 @@ var Polling = function() {
         isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
         VisualOps.unschedule(allSessions[id], t.data.date, t.data.time, t.data.room);
+
+        highlight(isMyChange, findCellByID(id), getUsernameByUID(t.uid));
+        var $oldCell = findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room);
+        highlight(isMyChange, $oldCell, getUsernameByUID(t.uid));
 
         postPollingMove();  
         if (isMyChange)
@@ -217,8 +237,9 @@ var Polling = function() {
         }
         isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
-
         VisualOps.scheduleUnscheduled(allSessions[id], $emptySlot);
+
+        highlight(isMyChange, findCellByID(id), getUsernameByUID(t.uid));
 
         postPollingMove();  
         if (isMyChange)
@@ -252,6 +273,9 @@ var Polling = function() {
 
         VisualOps.swap(allSessions[s1id], allSessions[s2id]);
 
+        highlight(isMyChange, findCellByID(s1id), getUsernameByUID(t.uid));
+        highlight(isMyChange, findCellByID(s2id), getUsernameByUID(t.uid));
+
         postPollingMove();  
         if (isMyChange)
             MoveMode.destroy();
@@ -283,9 +307,10 @@ var Polling = function() {
         }
         isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
-
         VisualOps.swapWithEmpty(allSessions[id], $emptySlot, t.data.sdate, t.data.stime, t.data.sroom);
 
+        highlight(isMyChange, findCellByID(id), getUsernameByUID(t.uid));
+        highlight(isMyChange, findCellByDateTimeRoom(t.data.sdate, t.data.stime, t.data.sroom), getUsernameByUID(t.uid));
         postPollingMove();  
         if (isMyChange)
             MoveMode.destroy();
@@ -311,7 +336,8 @@ var Polling = function() {
         isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
         VisualOps.swapWithUnscheduled(allSessions[unscheduledId], allSessions[scheduledId]);
-
+        highlight(isMyChange, findCellByID(scheduledId), getUsernameByUID(t.uid));
+        highlight(isMyChange, findCellByID(unscheduledId), getUsernameByUID(t.uid));
         postPollingMove();  
         if (isMyChange)
             MoveMode.destroy();
@@ -341,7 +367,8 @@ var Polling = function() {
 
         // Add frontend functionality to reorder manually because server updates will be applied this way?
         // It's actually okay not to add this functionality because the frontend gets canceled anyway.
-
+        
+        highlight(isMyChange, findCellByID(t.data.id), getUsernameByUID(t.uid));
         postPollingMove();     
 
         if (isMyChange) // shouldn't do MoveMode.destroy() because it's the user's own change.
@@ -366,7 +393,9 @@ var Polling = function() {
         isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
         PaperVisualOps.unschedule(allSubmissions[t.data.pid]);
-        
+        highlight(isMyChange, findCellByID(t.data.sid), getUsernameByUID(t.uid));
+        highlight(isMyChange, $("#" + t.data.pid), getUsernameByUID(t.uid));
+
         postPollingMove();  
         if (isMyChange) // shouldn't do MoveMode.destroy() because it's the user's own change.
             ; //MoveMode.destroy();
@@ -389,8 +418,11 @@ var Polling = function() {
                 isInterrupted = true;
         }
         isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
-        console.log(isMyChange, isInterrupted);
+
         PaperVisualOps.scheduleUnscheduled(allSubmissions[t.data.pid], t.data.pos);
+        
+        highlight(isMyChange, findCellByID(t.data.sid), getUsernameByUID(t.uid));
+        highlight(isMyChange, $(".popover-inner #" + t.data.pid), getUsernameByUID(t.uid));
 
         setTimeout(function (){
             postPollingMove();  
@@ -416,6 +448,10 @@ var Polling = function() {
 
         PaperVisualOps.swap(allSubmissions[t.data.p1id], allSubmissions[t.data.p2id]);  
 
+        highlight(isMyChange, findCellByID(t.data.s1id), getUsernameByUID(t.uid));
+        highlight(isMyChange, findCellByID(t.data.s2id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $(".popover-inner #" + t.data.p1id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $(".popover-inner #" + t.data.p2id), getUsernameByUID(t.uid));
         setTimeout(function (){
             postPollingMove();  
             if (isMyChange)
@@ -440,6 +476,10 @@ var Polling = function() {
         isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
         PaperVisualOps.swapWithEmpty(allSubmissions[t.data.p1id], t.data.pos); 
+
+        highlight(isMyChange, findCellByID(t.data.s1id), getUsernameByUID(t.uid));
+        highlight(isMyChange, findCellByID(t.data.s2id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $(".popover-inner #" + t.data.p1id), getUsernameByUID(t.uid));
 
         setTimeout(function (){
             postPollingMove();  
@@ -467,6 +507,11 @@ var Polling = function() {
         isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
         PaperVisualOps.swapWithUnscheduled(allSubmissions[t.data.p1id], allSubmissions[t.data.p2id]); 
+
+        highlight(isMyChange, findCellByID(t.data.s2id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $(".popover-inner #" + t.data.p1id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $("#" + t.data.p2id), getUsernameByUID(t.uid));
+
         setTimeout(function (){
             postPollingMove();  
             if (isMyChange)

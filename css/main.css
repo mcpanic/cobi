@@ -235,6 +235,17 @@ body.loading .modal {
     overflow-y: hidden;
 }
 
+#program .cell .user, #unscheduled .cell .user, #unscheduled-papers .cell .user {
+    position: absolute;
+    margin-top: -16px;
+    margin-left: -3px;
+    padding: 1px;
+    background: #703030;
+    color: white;
+    z-index: 100;
+    display: none;
+}
+
 #program .header-cell {
     vertical-align: middle;
     text-align: center;
@@ -302,12 +313,12 @@ body.loading .modal {
 }
 
 #program .selected, #unscheduled .selected, #unscheduled-papers .selected {
-    background: yellow;
+    background: yellow !important;
     /*#ffb7b7;*/
 }
 
 #program .move-src-selected, #unscheduled .move-src-selected, #unscheduled-papers .move-src-selected {
-    background: yellow;
+    background: yellow !important;
 }
 
 #program .unavailable {
@@ -325,7 +336,7 @@ body.loading .modal {
 }
 */
 #program .recommended, #unscheduled .recommended, #unscheduled-papers .recommended, #statusbar .recommended {
-    background: #03BF57; /*#fd8d3c;*/
+    background: #03BF57 !important; /*#fd8d3c;*/
 }
 
 #program .proposed-swap, #unscheduled .proposed-swap, #unscheduled-papers .proposed-swap {
