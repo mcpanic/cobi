@@ -530,6 +530,10 @@ body.loading .modal {
     cursor: pointer;
 }
 
+.conflict-selected {
+    outline: 3px solid #bbbbbb;
+}
+
 .conflict-preview-detail {
     padding: 10px;
     line-height: 12px;

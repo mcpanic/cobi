@@ -74,6 +74,8 @@ var Conflicts = function() {
 
     // show details for a conflict added / removed when a +/- icon is clicked.
     function conflictPreviewDisplayHandler(event){
+        $(".conflict-preview-display").removeClass("conflict-selected");
+        $(this).addClass("conflict-selected");
         $(this).closest(".conflicts").find(".conflict-preview-detail").html($(this).attr("data-content")).show();
     }
 
