@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
-include "settings.php";
+include "../settings/settings.php";
 
 if(count($argv) != 2 or $argv[1] != 'pineapple'){
   echo "wrong password" . "\n";

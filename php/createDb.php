@@ -1,5 +1,5 @@
 <?php
-include "settings.php";
+include "../settings/settings.php";
 
 mysql_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD);
 @mysql_select_db(COBI_MYSQL_PASSWORD) or die( "Unable to select database");
