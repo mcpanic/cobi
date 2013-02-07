@@ -30,14 +30,43 @@ $query = "delete from session";
 mysqli_query($mysqli, $query);
 echo mysqli_error($mysqli);
 
-
 $query = "delete from entity";
+mysqli_query($mysqli, $query);
+echo mysqli_error($mysqli);
+
+$query = "delete from authors";
 mysqli_query($mysqli, $query);
 echo mysqli_error($mysqli);
 
 $query = "delete from transactions";
 mysqli_query($mysqli, $query);
 echo mysqli_error($mysqli);
+
+// Form the author table
+$authorFile = file_get_contents('authors-2013-2-7-0-16-5.json');
+$authorData = json_decode($authorFile, true);
+$authorData = $authorData['rows'];
+
+foreach ($authorData as $auth) {
+  $authorId = mysqli_real_escape_string($mysqli, $auth['id']); 
+  $type = mysqli_real_escape_string($mysqli, $auth['value']['type']          );
+  
+  foreach ($auth['value']['submissions'] as $detail){
+    $venue = mysqli_real_escape_string($mysqli, $detail['venue']);
+    $id = mysqli_real_escape_string($mysqli, $detail['id']);
+    $rank = $detail['rank'];
+    $givenName = mysqli_real_escape_string($mysqli, $detail['author']['givenName']);
+    $middleInitial = mysqli_real_escape_string($mysqli, $detail['author']['middleInitial']);
+    $familyName = mysqli_real_escape_string($mysqli, $detail['author']['familyName']);
+    $email= mysqli_real_escape_string($mysqli, $detail['author']['email']);
+    $role= mysqli_real_escape_string($mysqli, $detail['author']['role']);
+    $primary =  mysqli_real_escape_string($mysqli, json_encode($detail['author']['primary']));
+    $secondary = mysqli_real_escape_string($mysqli, json_encode($detail['author']['secondary']));
+    $aquery = "INSERT INTO authors (authorId, type, id, venue, rank, givenName, middleInitial, familyName, email, role, primaryAff, secondaryAff) VALUES ('$authorId', '$type', '$id', '$venue', $rank, '$givenName', '$middleInitial', '$familyName', '$email', '$role', '$primary', '$secondary')";
+    mysqli_query($mysqli, $aquery);
+    echo  mysqli_error($mysqli);
+  } 
+}
 
 // Form the schedule table
 //schedule-2013-0-30-13-51-39.json
