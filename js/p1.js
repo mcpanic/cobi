@@ -270,6 +270,10 @@
             $(element).addClass("submission").attr("id", submission.id);
             $("<span/>").addClass("reorder-icon").appendTo($(element));
             $("<span/>").addClass("submission-type").html(stype).appendTo($(element));
+            if (submission.bestPaperAward)
+                    $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
+                if (submission.bestPaperNominee)
+                    $("<span/>").addClass("awards").html("<img src='img/nominee.png' class='icon'/>").appendTo($(element));
             if (!isLocked && !isSpecial){
                 $("<button/>").addClass("btn btn-mini button-paper-unschedule").html("Unschedule").appendTo($(element));
                 $("<button/>").addClass("btn btn-mini button-paper-propose-scheduled").html("Propose Move").appendTo($(element));
@@ -291,6 +295,7 @@
                 $("<button/>").addClass("btn btn-mini button-paper-propose-unscheduled").html("Propose Move").appendTo($(element));
             $("<div/>").addClass("conflicts").appendTo($(element));
             $("<br/>").appendTo($(element));
+            $("<span/>").addClass("awards").appendTo($(element));
             $("<span/>").html("<strong>Authors</strong>: " + displayAuthors(submission.authors)).appendTo($(element));
 
             // console.log(typeof submission, submission == null);
@@ -325,6 +330,10 @@
             $(element).addClass("submission").attr("id", submission.id)
             $("<span/>").addClass("reorder-icon").appendTo($(element));
             $("<span/>").addClass("submission-type").html(stype).appendTo($(element));
+            if (submission.bestPaperAward)
+                $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
+            if (submission.bestPaperNominee)
+                $("<span/>").addClass("awards").html("<img src='img/nominee.png' class='icon'/>").appendTo($(element));
             $("<br/>").appendTo($(element));
             $("<span/>").addClass("submission-title").html(submission.title).appendTo($(element));
             $("<br/>").appendTo($(element));
@@ -387,6 +396,10 @@
                 $(element).addClass("submission").attr("id", submission.id);
                 $("<span/>").addClass("reorder-icon").appendTo($(element));
                 $("<span/>").addClass("submission-type").html(stype).appendTo($(element));
+                if (submission.bestPaperAward)
+                    $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
+                if (submission.bestPaperNominee)
+                    $("<span/>").addClass("awards").html("<img src='img/nominee.png' class='icon'/>").appendTo($(element));
                 if (isProposed)
                     $("<button/>").addClass("btn btn-mini button-paper-swap").html("Swap with this paper").appendTo($(element));
                 $("<br/>").appendTo($(element));
@@ -415,6 +428,10 @@
                 $(element).addClass("submission").attr("id", submission.id);
                 $("<span/>").addClass("reorder-icon").appendTo($(element));
                 $("<span/>").addClass("submission-type").html(stype).appendTo($(element));
+                if (submission.bestPaperAward)
+                    $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
+                if (submission.bestPaperNominee)
+                    $("<span/>").addClass("awards").html("<img src='img/nominee.png' class='icon'/>").appendTo($(element));
                 if (isProposed)
                     $("<button/>").addClass("btn btn-mini button-paper-swap-with-unscheduled").html("Swap with this paper").appendTo($(element));
                 $("<br/>").appendTo($(element));
@@ -442,6 +459,10 @@
                 $(element).addClass("submission").attr("id", submission.id);
                 $("<span/>").addClass("reorder-icon").appendTo($(element));
                 $("<span/>").addClass("submission-type").html(stype).appendTo($(element));
+                if (submission.bestPaperAward)
+                    $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
+                if (submission.bestPaperNominee)
+                    $("<span/>").addClass("awards").html("<img src='img/nominee.png' class='icon'/>").appendTo($(element));
                 if (isProposed)
                     $("<button/>").addClass("btn btn-mini button-paper-move").html("Move this paper").appendTo($(element));
                 $("<br/>").appendTo($(element));
@@ -546,7 +567,7 @@
         var cell = document.createElement('td');
         $(cell).addClass("cell slot-paper")
             .append("<div class='user'/><div class='title'/><div class='display'/><div class='conflicts'/>");
-            
+
         // console.log("session", typeof session);
 
         // Empty Session

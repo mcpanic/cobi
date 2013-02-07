@@ -311,6 +311,11 @@ body.loading .modal {
     width: 24px;
 }
 
+.popover-inner .icon {
+    width: 24px;
+    margin-top: -13px;
+}
+
 #program .header-row, #program .header-col {
     /*position: fixed;*/
     font-weight: bold;

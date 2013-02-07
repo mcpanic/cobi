@@ -91,7 +91,7 @@ var Conflicts = function() {
                     .attr("data-html", "true")
                     .attr("data-title", ment)
                     .attr("data-trigger", "manual")
-                    .attr("data-content", "<strong>Type: " + conflict.label + "</strong><br>" + filtered_array[i].description)
+                    .attr("data-content", "<strong>" + ment + "</strong><br><strong>Type: " + conflict.label + "</strong><br>" + filtered_array[i].description)
                     // .popover({
                     //     html:true,
                     //     title: ment,
@@ -143,13 +143,13 @@ var Conflicts = function() {
             
             var $view = element.find(".conflicts");
             if (swapValues.addedSrc != null)
-                $view.append(displayConflictFullHTML("Adding a conflict", swapValues.addedSrc, conflict, "+"));
+                $view.append(displayConflictFullHTML("[Conflict added]", swapValues.addedSrc, conflict, "+"));
             if (swapValues.addedDest != null)
-                $view.append(displayConflictFullHTML("Adding a conflict", swapValues.addedDest, conflict, "+"))
+                $view.append(displayConflictFullHTML("[Conflict added]", swapValues.addedDest, conflict, "+"))
             if (swapValues.removedSrc != null)
-                $view.append(displayConflictFullHTML("Resolving a conflict", swapValues.removedSrc, conflict, "-"))
+                $view.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedSrc, conflict, "-"))
             if (swapValues.removedDest != null)
-                $view.append(displayConflictFullHTML("Resolving a conflict", swapValues.removedDest, conflict, "-"));      
+                $view.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedDest, conflict, "-"));      
             // var netCountClass = "conflict-netcount-added";
             // if (netCount < 0)
             //     netCountClass = "conflict-netcount-removed";            
