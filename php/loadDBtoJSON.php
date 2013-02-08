@@ -43,8 +43,8 @@ while ($row = $entityTable->fetch_assoc()) {
 	$authorKey = $author['id'];
       }
       $inst = "";
-      if(array_key_exists('primary', $author)){
-	if(array_key_exists('institution', $author['primary'])){
+      if(array_key_exists('primary', $author) and !is_null($author['primary'])){
+	if(array_key_exists('institution', $author['primary']) and !is_null($author['primary'])){
 	  $inst = $author['primary']['institution'];
 	}
       }
@@ -65,10 +65,6 @@ while ($row = $entityTable->fetch_assoc()) {
       $authors[$authorKey] = $authorData;
     }
   }
-  /*     {"nameKey":  */
-  /*      {"affiliations": [ {"country":"", "name": ""}], "email":"", "firstName":"", "lastName":"", "middleName":"", "submissions":[""]}, */
-  /*     } */
-  // TODO: ERROR HERE?
   $row['authors'] = $authors;
   //  var_dump($authors);
   $row['keywords'] = json_decode($row['keywords']);
