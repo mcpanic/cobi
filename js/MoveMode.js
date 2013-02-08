@@ -14,6 +14,7 @@ var MoveMode = function() {
             ViewMode.destroy();
             $(".main").addClass("move-mode");
             Conflicts.clearConflictDisplay();
+            $("#list-view-options li a").first().trigger("click");
             bindEvents();
             runPropose();
         }
