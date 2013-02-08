@@ -34,7 +34,7 @@ var Transact = function(){
 	// add server's changes, and 
 	transactions.push(t);
 	// mark local one as done (give it the ID?)
-	console.log('this was accepted:' + JSON.stringify(t));
+//	console.log('this was accepted:' + JSON.stringify(t));
 	for (var i = 0; i < localTransactions.length; i++){
 	    if (localTransactions[i].localHash == t.localHash) {
 		localTransactions[i].id = t.id;
@@ -47,7 +47,7 @@ var Transact = function(){
     }
     
     function failedLocalTransaction(t){
-	console.log("FAILED TRANSACTION: " + JSON.stringify(t));
+	//console.log("FAILED TRANSACTION: " + JSON.stringify(t));
 	// TODO: handle case where it was somewhere in the middle and view depends on it to be in order (e.g., undoing this move doesn't work because of some other move?)
 	
 	DataOps.handleFailedTransaction(t);
@@ -84,7 +84,7 @@ function DB(){
 var db = new DB();
 
 DB.prototype.addTransaction = function(t){
-    console.log("adding transaction... " + JSON.stringify(t));
+//    console.log("adding transaction... " + JSON.stringify(t));
     $.ajax({
  	async: true,
 	type: 'POST',
@@ -92,7 +92,7 @@ DB.prototype.addTransaction = function(t){
 		lastKnownTransaction: Transact.lastRecordedTransaction()},
 	url: "./php/changeSchedule.php",
 	success: function(m){		
-	    console.log("returned transaction... " + JSON.stringify(m));
+	//    console.log("returned transaction... " + JSON.stringify(m));
 	    if(m['transaction'].id != null){
 		// add server transactions 
 		// (TODO: assuming no rollback needed)
@@ -238,7 +238,7 @@ DB.prototype.loadUsers = function(uid){
 	    }
 	},
 	error : function(m){
-	    alert(JSON.stringify(m));
+//	    alert(JSON.stringify(m));
 	},
 	dataType: "json"
     });
@@ -259,7 +259,7 @@ DB.prototype.loadUser = function(uid){
 		$(document).trigger('userLoaded');
 	    },
 	    error : function(m){
-		alert(JSON.stringify(m));
+//		alert(JSON.stringify(m));
 	    },
 	    dataType: "json"
 	});
@@ -277,7 +277,7 @@ DB.prototype.loadSchedule = function(){
 		initAfterScheduleLoads(m);
 	    },
 	    error : function(m){
-		alert(JSON.stringify(m));
+//		alert(JSON.stringify(m));
 	    },
 	    dataType: "json"
 	});

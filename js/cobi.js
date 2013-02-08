@@ -86,8 +86,8 @@ var communityList = ["ux",
 var DataOps = function() {
     function handleFailedTransaction(t){
 	var rollbackTransaction = new TransactionData(t.uid, t.previousType, t.previous, t.type, t.data);
-	console.log("rolling back the failed transaction");
-	console.log(rollbackTransaction);
+//	console.log("rolling back the failed transaction");
+//	console.log(rollbackTransaction);
 	handleTransaction(rollbackTransaction);
     }
 
@@ -116,7 +116,7 @@ var DataOps = function() {
 			    t.data.troom);
 	    break;
 	case 'swap':
-	    console.log("data from swapping:" + JSON.stringify(t));
+//	    console.log("data from swapping:" + JSON.stringify(t));
 	    swapSessions(allSessions[t.data.s1id],
 			 allSessions[t.data.s2id]);
 	    break;
@@ -156,7 +156,7 @@ var DataOps = function() {
 				     allSubmissions[t.data.p2id]);
 	    break;
 	default: 
-	    console.log("Weird, nonexistent operation? " + t.type);
+//	    console.log("Weird, nonexistent operation? " + t.type);
 	}
 //	getAllConflicts();
     }
@@ -198,27 +198,27 @@ var DataOps = function() {
     }
     
     function toggleSlotLock(day, time, room){
-	console.log("Test: toggling slot: " + day + ", " + time + ", " + room);    
+//	console.log("Test: toggling slot: " + day + ", " + time + ", " + room);    
 	scheduleSlots[day][time][room]['locked'] = !scheduleSlots[day][time][room]['locked'];
     }
     
     function lockSlot(day, time, room){
-	console.log("Test: locking slot: " + day + ", " + time + ", " + room);    
+//	console.log("Test: locking slot: " + day + ", " + time + ", " + room);    
 	scheduleSlots[day][time][room]['locked'] = true;
     }
     
     function unlockSlot(day, time, room){
-	console.log("Test: unlocking slot: " + day + ", " + time + ", " + room);
+//	console.log("Test: unlocking slot: " + day + ", " + time + ", " + room);
 	scheduleSlots[day][time][room]['locked'] = false;
     }
     
     function removeSessionFromSlot(s, date, time, room){
-	console.log("Test: removing session " + s.id + " from " + date + ", " + time + ", " + room);
+//	console.log("Test: removing session " + s.id + " from " + date + ", " + time + ", " + room);
 	delete schedule[date][time][room][s.id];
     }
     
     function clearSlot(date, time, room){
-	console.log("Test: removing sessions from " + date + ", " + time + ", " + room);
+//	console.log("Test: removing sessions from " + date + ", " + time + ", " + room);
 	for(s in schedule[date][time][room]){
 	    removeSessionFromSlot(allSessions[s], date, time, room);
 	}
@@ -226,7 +226,7 @@ var DataOps = function() {
     
     
     function addSessionToSlot(s, date, time, room){
-	console.log("Test: adding session " + s.id + " to " + date + ", " + time + ", " + room);
+//	console.log("Test: adding session " + s.id + " to " + date + ", " + time + ", " + room);
 	schedule[date][time][room][s.id] = s;
 	schedule[date][time][room][s.id]['date'] = date;
 	schedule[date][time][room][s.id]['time'] = time;
@@ -235,7 +235,7 @@ var DataOps = function() {
     }
     
     function addToUnscheduled(s){
-	console.log("Test: adding session " + s.id + " to unscheduled list.");
+//	console.log("Test: adding session " + s.id + " to unscheduled list.");
 	unscheduled[s.id] = s;
 	s['date'] = "";
 	s['time'] = "";
@@ -244,7 +244,7 @@ var DataOps = function() {
     
     function removeFromUnscheduled(s){
 	// remove session from unscheduled
-	console.log("Test: removing session " + s.id + " from unscheduled list.");
+//	console.log("Test: removing session " + s.id + " from unscheduled list.");
 	delete unscheduled[s.id];
     }
     
@@ -255,7 +255,7 @@ var DataOps = function() {
 	var stime = s.time;
 	var sroom = s.room;
 	
-	console.log("Test: unscheduling session " + s.id + " from " + sdate + ", " + stime + ", " + sroom);
+//	console.log("Test: unscheduling session " + s.id + " from " + sdate + ", " + stime + ", " + sroom);
 	
 	if(scheduleSlots[sdate][stime][sroom]['locked']){
 	    $(document).trigger('slotLocked', [sdate, stime, sroom]);
@@ -278,7 +278,7 @@ var DataOps = function() {
 	    return;
 	}
 	
-	console.log("Test: scheduling session " + s.id + " to " + sdate + ", " + stime + ", " + sroom);
+//	console.log("Test: scheduling session " + s.id + " to " + sdate + ", " + stime + ", " + sroom);
 
 //	console.log("before scheduling.." + JSON.stringify(unscheduled));
 	var isUnscheduled = false;
@@ -306,7 +306,7 @@ var DataOps = function() {
 	var s2time = s2.time;
 	var s2room = s2.room;
 	
-	console.log("Test: swapping sessions " + s1.id + " and " + s2.id);
+//	console.log("Test: swapping sessions " + s1.id + " and " + s2.id);
 	
 	if(scheduleSlots[s1date][s1time][s1room]['locked']){
 	    $(document).trigger('slotLocked', [s1date, s1time, s1room]);
@@ -341,7 +341,7 @@ var DataOps = function() {
 	var s2time = s2.time;
 	var s2room = s2.room;
 	
-	console.log("Test: swapping unscheduled session " + s1.id + " with scheduled session " + s2.id);
+//	console.log("Test: swapping unscheduled session " + s1.id + " with scheduled session " + s2.id);
 	
 	if(scheduleSlots[s2date][s2time][s2room]['locked']){
 	    $(document).trigger('slotLocked', [s2date, s2time, s2room]);
@@ -361,7 +361,7 @@ var DataOps = function() {
     function reorderPapers(s, newPaperOrder){
 	// assume paperOrder is an array of paper IDs
 	
-	console.log("Test: reordering papers in session " + s.id + " to " + JSON.stringify(newPaperOrder));
+//	console.log("Test: reordering papers in session " + s.id + " to " + JSON.stringify(newPaperOrder));
 	var submissions = [];
 	
 	for(var i = 0; i < newPaperOrder.length; i++){
@@ -411,7 +411,7 @@ var DataOps = function() {
 	if(!(paperIsInSession(s1, p1) && paperIsInSession(s2, p2))) return;
 	
 	
-	console.log("Test: swapping papers " + p1.id + " and " + p2.id);
+//	console.log("Test: swapping papers " + p1.id + " and " + p2.id);
 	
 	for(var i = 0; i < s1.submissions.length; i++){
 	    if(s1.submissions[i] == p1){
@@ -430,12 +430,12 @@ var DataOps = function() {
     }
 
     function clearSession(s){
-	console.log("Test: removing papers from " + s.id);
+//	console.log("Test: removing papers from " + s.id);
 	s.submissions = []; 
     }
     
     function removePaperFromSession(s, p){
-	console.log("Test: removing paper " + p.id + " from " + s.id);
+//	console.log("Test: removing paper " + p.id + " from " + s.id);
 	// change it from the session
 	
 	// erase paper from list of submissions in session
@@ -446,7 +446,7 @@ var DataOps = function() {
     }
     
     function addToUnscheduledPaper(p){
-	console.log("Test: adding paper " + p.id + " to unscheduledSubmissions list.");
+//	console.log("Test: adding paper " + p.id + " to unscheduledSubmissions list.");
 	unscheduledSubmissions[p.id] = p;
 	p.session = "null";
     }
@@ -457,7 +457,7 @@ var DataOps = function() {
     function unschedulePaper(s, p){
 	if(isLocked(s) || !paperIsInSession(s,p)) return;
 	
-	console.log("Test: unscheduling paper " + p.id + " from " + s.id);
+//	console.log("Test: unscheduling paper " + p.id + " from " + s.id);
 	
 	removePaperFromSession(s, p);
 	addToUnscheduledPaper(p);
@@ -465,8 +465,8 @@ var DataOps = function() {
     
     // note: always add at start of session
     function insertPaperIntoSession(s, p, pos){
-	console.log(s);
-	console.log("Test: adding paper " + p.id + " to " + s.id + " at position " + pos);
+//	console.log(s);
+//	console.log("Test: adding paper " + p.id + " to " + s.id + " at position " + pos);
 	if(pos <= 0){
 	    s.submissions.unshift(p);
 	}else if(pos >= s.submissions.length){
@@ -481,7 +481,7 @@ var DataOps = function() {
     }
 
     function removeFromUnscheduledPaper(p){
-	console.log("Test: removing paper " + p.id + " from unscheduledSubmissions list.");
+//	console.log("Test: removing paper " + p.id + " from unscheduledSubmissions list.");
 	delete unscheduledSubmissions[p.id];
     }
     
@@ -491,7 +491,7 @@ var DataOps = function() {
     function schedulePaper(s, p, pos){
 	if(isLocked(s) || !(p.id in unscheduledSubmissions)) return;
 	
-	console.log("Test: scheduling paper " + p.id + " into " + s.id);
+//	console.log("Test: scheduling paper " + p.id + " into " + s.id);
 	
 	insertPaperIntoSession(s, p, pos);
 	removeFromUnscheduledPaper(p);
@@ -509,7 +509,7 @@ var DataOps = function() {
 	if(s1.venue != s2.venue) return;
 	if(!(paperIsInSession(s1, p1)))return;
 	
-	console.log("Test: moving paper " + p1.id + " from " + s1.id + " to " + s2.id);
+//	console.log("Test: moving paper " + p1.id + " from " + s1.id + " to " + s2.id);
 	
 	removePaperFromSession(s1, p1);
 	insertPaperIntoSession(s2, p1, pos);
@@ -525,7 +525,7 @@ var DataOps = function() {
 	if(p1.type != s2.venue) return;
 	if(!(paperIsInSession(s2,p2))) return;
 	
-	console.log("Test: swapping unscheduled paper " + p1.id + " with scheduled paper " + p2.id + " in " + s2.id);
+//	console.log("Test: swapping unscheduled paper " + p1.id + " with scheduled paper " + p2.id + " in " + s2.id);
 	
 	removeFromUnscheduledPaper(p1);
 	for(var i = 0; i < s2.submissions.length; i++){
@@ -753,7 +753,7 @@ function scheduleSession(s, tdate, ttime, troom){
 
 // Swaps two sessions into the original schedule data structure
 function swapSessions(s1, s2){
-    console.log("swapSessions is called by frontend handler");
+//    console.log("swapSessions is called by frontend handler");
 //    console.log("s1 from frontend: " + JSON.stringify(s1));
 //    console.log("s2 from frontend: " + JSON.stringify(s2));
 
@@ -1149,8 +1149,8 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
     if(!consistent){
 	// all changes are in the transactions data itself,
 	// at the new transactions indices. So trigger 
-	console.log("triggering serverScheduleChange with indices: ");
-	console.log(newTransactionIndices);
+//	console.log("triggering serverScheduleChange with indices: ");
+//	console.log(newTransactionIndices);
 	$(document).trigger('serverScheduleChange', [newTransactionIndices]);    
 //	for(var i = 0; i < newTransactionIndices.length; i++){
 //	    $(document).trigger('transactionUpdate', transactions[newTransactionIndices[i]]);
@@ -1193,7 +1193,7 @@ function getAllSubmissions(){
 			
 			
 			var id = schedule[day][time][room][session]["submissions"][submission]['id'];
-			if(id == 'pn710') console.log(schedule[day][time][room][session]["submissions"][submission]);
+			
 			submissions[id] = schedule[day][time][room][session]["submissions"][submission];
 		    }
 		}
@@ -1554,7 +1554,7 @@ function proposeSessionForSlot(day, time, room){
 function proposeUnscheduledSessionForSlot(day, time, room) {
     // ASSUME: day time room points to a currently unscheduled slot
     if(keys(schedule[day][time][room]).length != 0){
-		alert("There is already a session scheduled here.");
+//		alert("There is already a session scheduled here.");
 		return;
     }
 
@@ -1776,7 +1776,7 @@ function calculateNumConflictsCausedBy(s){
 }
 
 function getAllConflicts(){
-    console.log("calling getAllConflicts");
+//    console.log("calling getAllConflicts");
     var conflicts = {}
     // assume conflicts already initialized
     // assume allRooms initialized
