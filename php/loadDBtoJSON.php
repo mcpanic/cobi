@@ -3,6 +3,26 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
 include "../settings/settings.php";
 
+function checkDupKey($k){
+  $dups = array(
+		'auth1132' => 'auth29797',
+		'auth11521' => 'auth28194',
+		'auth1220' => 'auth34702',
+		'auth1508' => 'auth29796',
+		'auth22371' => 'auth32501',
+		'auth23564' => 'auth27369',
+		'auth24484' => 'auth29438',
+		'auth26514' => 'auth34954',
+		'auth28619' => 'auth6155',
+		'auth29726' => 'auth3090',
+		'auth32954' => 'auth3496',
+		'auth34701' => 'auth4635');
+  if(array_key_exists($k, $dups)){
+    return $dups[$k];
+  }
+  return $k;
+}
+
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
 // Get the schedule table
@@ -62,7 +82,7 @@ while ($row = $entityTable->fetch_assoc()) {
       if(array_key_exists('middleInitial', $author)){
 	$authorData['middleName'] = $author['middleInitial'];
       }
-      $authors[$authorKey] = $authorData;
+      $authors[checkDupKey($authorKey)] = $authorData;
     }
   }
   $row['authors'] = $authors;

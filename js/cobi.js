@@ -15,6 +15,50 @@ var allUsers = {};
 var transactions = [];
 var localTransactions = [];
 
+var roomCapacity = [
+    {   "Blue": "Amphitheater, 862p"},
+    {   "Bordeaux": "Amphitheater, 650p"},
+    {   "252B": "Theater, 220p"},
+    {   "352AB": "Theater, 380p"},
+    {   "Havane": "Amphitheater, 373p"},
+    {   "241": "Theater, 220p"},
+    {   "342A": "Theater, 220p"},
+    {   "251": "Theater, 220p"},
+    {   "351": "Theater, 220p"},
+    {   "242AB": "Theater, 280p"},
+    {   "242A": "Theater, ??p"},
+    {   "242B": "Theater, ??p"},
+    {   "243": "Classroom, 60p"},
+    {   "253": "Classroom, 60p"},
+    {   "343": "Classroom, 60p"},
+    {   "252A": "Theater, 120p"},
+    {   "361": "Conference, 24p"},
+    {   "362/363": "Conference, 32p"},
+    {   "221/221M": "Conference, 64p"}
+];
+
+var desiredRoomOrder = [
+    "Blue",
+    "Bordeaux",
+    "252B",
+    "352AB",
+    "Havane",
+    "241",
+    "342A",
+    "251",
+    "351",
+    "242AB",
+    "242A",
+    "242B",
+    "243",
+    "253",
+    "343",
+    "252A",
+    "361",
+    "362/363",
+    "221/221M",
+];
+
 var personaList = ["Online social communities & crowdsourcing",
 		   "Design",
 		   "UIST",
@@ -45,7 +89,6 @@ var DataOps = function() {
 	console.log("rolling back the failed transaction");
 	console.log(rollbackTransaction);
 	handleTransaction(rollbackTransaction);
-
     }
 
     function handleTransaction(t){
@@ -115,6 +158,7 @@ var DataOps = function() {
 	default: 
 	    console.log("Weird, nonexistent operation? " + t.type);
 	}
+//	getAllConflicts();
     }
 
     function lockSlotsAtDayTime(day, time){
@@ -1730,6 +1774,7 @@ function calculateNumConflictsCausedBy(s){
 }
 
 function getAllConflicts(){
+    console.log("calling getAllConflicts");
     var conflicts = {}
     // assume conflicts already initialized
     // assume allRooms initialized
