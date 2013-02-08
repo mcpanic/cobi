@@ -344,11 +344,16 @@ var MoveMode = function() {
         if (type.indexOf("paper") === -1) {
             var numAssigned = 0;
             $(document).trigger("addMoveStatus", [id]);
-            // specials (unscheduled, empty) first because they get the priority
+            // specials (unscheduled, empty) first because they have the priority
             $.each(recommendedSpecialList, function(index, rec) {
                 if (numAssigned < numRecommended) {
-                    $(rec).addClass("recommended");
-                    numAssigned++;
+                    if (type == "scheduled" && $(rec).hasClass("empty")){ // for move (target is empty), we don't recommend empty sessions
+
+                    } else {
+                        $(rec).addClass("recommended");
+                        numAssigned++;    
+                    }
+                    
                 }                
             });  
             // scheduled sessions until numRecommended is met        

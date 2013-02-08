@@ -256,7 +256,7 @@ body.loading .modal {
 }
 
 #program .slot, #unscheduled .slot, #unscheduled-papers .slot-paper {
-    min-width: 44px;
+    min-width: 48px;
     font-size: 10px;
     line-height: 12px;
 }
@@ -279,7 +279,7 @@ body.loading .modal {
 }
 
 #unscheduled .cell .title, #unscheduled-papers .cell .title {
-    width: 44px;
+    width: 48px;
 }
 
 #program .cell .title .icon-plus{
@@ -295,7 +295,7 @@ body.loading .modal {
     /*color: #aaaaaa;*/
 }
 
-#program .cell .conflicts {
+#program .cell .conflicts, #unscheduled .cell .conflicts, #unscheduled-papers .cell .conflicts {
     display: none;
     height: 30px;
     border-top: solid 1px #cccccc;
@@ -304,7 +304,7 @@ body.loading .modal {
 }
 
 #unscheduled .cell .display, #unscheduled-papers .cell .display, #unscheduled .cell .conflicts, #unscheduled-papers .cell .conflicts {
-    width: 44px;
+    width: 48px;
 }
 
 #program .cell .display .icon, #unscheduled .cell .display .icon, #unscheduled-papers .cell .display .icon {
