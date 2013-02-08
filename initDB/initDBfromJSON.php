@@ -63,27 +63,21 @@ foreach ($authorData as $auth) {
     $primary =  mysqli_real_escape_string($mysqli, json_encode($detail['author']['primary']));
     $secondary = mysqli_real_escape_string($mysqli, json_encode($detail['author']['secondary']));
     $aquery = "INSERT INTO authors (authorId, type, id, venue, rank, givenName, middleInitial, familyName, email, role, primaryAff, secondaryAff) VALUES ('$authorId', '$type', '$id', '$venue', $rank, '$givenName', '$middleInitial', '$familyName', '$email', '$role', '$primary', '$secondary')";
-
-    $authorHash[$authorId][$id] = {
-"id"
-"givenName"
-"familyName"
-"middleINitial"
-"email"
-"primary"
-"secondary"
-"rank"
-"role"
-
-      key  => value,
-      key2 => value2,
-      key3 => value3,
-      
-      
-    }
     mysqli_query($mysqli, $aquery);
     echo  mysqli_error($mysqli);
-  } 
+    
+    $authorHash[$authorId][$id] = array(
+      "id" => $auth['id'],
+      "givenName"     =>      $detail['author']['givenName'],
+      "middleInitial" =>    $detail['author']['middleInitial'],  
+      "familyName" =>    $detail['author']['familyName'],
+      "email" =>        $detail['author']['email'],     
+      "primary"=>  $detail['author']['primary'],
+      "secondary"=>   $detail['author']['secondary'],   
+      "rank"=>      $detail['rank'],
+      "role"=>       trim($detail['author']['role']) 
+					);
+  }
 }
 
 // Form the schedule table
@@ -120,9 +114,29 @@ foreach ($entities as $entity) {
   $eid = mysqli_real_escape_string($mysqli, $entity['id']); 
   $abstract = mysqli_real_escape_string($mysqli, $entity['value']['abstract']          );
   $acmLink   = "";
-  // TODO  
-  $authors             = mysqli_real_escape_string($mysqli, json_encode($entity['value']['authorList'])             );
+  $authors = array();
+  $authorsInvolved = array();
+  foreach ($entity['value']['authorList'] as $auth){
+    if(!in_array($auth['id'], $authorsInvolved)){
+      array_push($authorsInvolved, $auth['id']);
+    }
+  }
+  foreach ($entity['value']['presenters'] as $auth){
+    if(!in_array($auth['id'], $authorsInvolved)){
+      array_push($authorsInvolved, $auth['id']);
+    }
+  }
+  foreach ($authorsInvolved as $auth){
+    if(array_key_exists($auth, $authorHash) and 
+       array_key_exists($eid, $authorHash[$auth])){
+      array_push($authors, $authorHash[$auth][$eid]);
+    }else{
+      die($auth . ',' . $eid);
+    }
+  }
 
+  $authors             = mysqli_real_escape_string($mysqli, json_encode($authors)             );
+  
   $bestPaperNominee = 0;
   $bestPaperAward = 0;
   if(array_key_exists("award", $entity['value'])){    
