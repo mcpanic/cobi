@@ -242,7 +242,13 @@ var MoveMode = function() {
         if (type === "scheduled") {
             var tempArray = proposeSlotAndSwap(allSessions[id]);
             swapValues = tempArray.slotValue.concat(tempArray.swapValue);
-            //console.log(swapValues);
+	    	    for(i in tempArray.swapValue){
+			if(tempArray.swapValue[i].target.session == 's204'){
+			    console.log("look here");
+			    console.log(tempArray.swapValue[i]);
+			}
+		    }
+
         } else if (type === "unscheduled") {
             var tempArray = proposeSlotAndSwap(allSessions[id]);
             swapValues = tempArray.slotValue.concat(tempArray.swapValue);

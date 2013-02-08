@@ -5,18 +5,19 @@ include "../settings/settings.php";
 
 function checkDupKey($k){
   $dups = array(
-		'auth1132' => 'auth29797',
-		'auth11521' => 'auth28194',
-		'auth1220' => 'auth34702',
-		'auth1508' => 'auth29796',
-		'auth22371' => 'auth32501',
-		'auth23564' => 'auth27369',
-		'auth24484' => 'auth29438',
-		'auth26514' => 'auth34954',
-		'auth28619' => 'auth6155',
-		'auth29726' => 'auth3090',
-		'auth32954' => 'auth3496',
-		'auth34701' => 'auth4635');
+		'auth29797' =>		'auth1132' ,
+		'auth28194' => 'auth11521' ,
+		'auth34702' => 'auth1220' ,
+		'auth29796' => 'auth1508' ,
+		'auth32501' => 'auth22371' ,
+		'auth27369' => 'auth23564' ,
+		'auth29438' => 'auth24484' ,
+		'auth34954' => 'auth26514' ,
+		'auth6155' => 'auth28619' ,
+		'auth3090' => 'auth29726' ,
+		'auth3496' => 'auth32954' ,
+		'auth4635' => 'auth34701' );
+  
   if(array_key_exists($k, $dups)){
     return $dups[$k];
   }

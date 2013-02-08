@@ -1309,7 +1309,7 @@ function proposeSwapForUnscheduled(s) {
 		// in case there are multiple sessions in a room, shouldn't be
 		for(var s2 in schedule[day][time][room]){
 		    var conflicts = authorConflictsAmongSessions[s.id][s2];
-		    conflicts.concat(personaConflictsAmongSessions[s.id][s2]);
+		    conflicts = conflicts.concat(personaConflictsAmongSessions[s.id][s2]);
 		    conflictsWithRow[day][time]["session"][s2] = conflicts;
 		    conflictsWithRow[day][time]["sum"] = conflictsWithRow[day][time]["sum"].concat(conflicts);
 		}
@@ -1396,7 +1396,7 @@ function proposeSwap(s) {
 		// in case there are multiple sessions in a room, shouldn't be
 		for(var s2 in schedule[day][time][room]){
 		    var conflicts = authorConflictsAmongSessions[s.id][s2];
-		    conflicts.concat(personaConflictsAmongSessions[s.id][s2]);
+		    conflicts = conflicts.concat(personaConflictsAmongSessions[s.id][s2]);
 		    conflictsWithRow[day][time]["session"][s2] = conflicts;
 		    conflictsWithRow[day][time]["sum"] = conflictsWithRow[day][time]["sum"].concat(conflicts);
 		}
@@ -1405,7 +1405,9 @@ function proposeSwap(s) {
 	    for(var room in schedule[day][time]){
 		// in case there are multiple sessions in a room, shouldn't be
 		for(var s2 in schedule[day][time][room]){
-		    
+//		    if(s2 == 's204'){
+//			console.log(conflictsWithRow[day][time]["sum"]);
+//		    }
 		    // 1. number of conflicts caused by moving offending item to there
 		    var conflictsCausedByOffending = [];
 		    for(var i = 0; i < conflictsWithRow[day][time]["sum"].length; i++){
@@ -1477,7 +1479,7 @@ function proposeSlot(s) {
 		// in case there are multiple sessions in a room, shouldn't be
 		for(var s2 in schedule[day][time][room]){
 		    var conflicts = authorConflictsAmongSessions[s.id][s2];
-		    conflicts.concat(personaConflictsAmongSessions[s.id][s2]);
+		    conflicts = conflicts.concat(personaConflictsAmongSessions[s.id][s2]);
 		    conflictsWithRow[day][time]["session"][s2] = conflicts;
 		    conflictsWithRow[day][time]["sum"] = conflictsWithRow[day][time]["sum"].concat(conflicts);
 		}
