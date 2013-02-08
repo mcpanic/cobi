@@ -52,7 +52,7 @@ var Statusbar = function() {
 
 
     function addStatus(t){
-        console.log("STATUS", t, MoveMode.isOn, !isTransactionMyChange(t));
+        // console.log("STATUS", t, MoveMode.isOn, !isTransactionMyChange(t));
         if (MoveMode.isOn) {
             // TODO: stack up messages so that once MoveMode is over, it is displayed
             return;

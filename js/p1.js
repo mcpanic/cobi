@@ -1,7 +1,7 @@
 
     // Popover close button interaction
     $("body").on("click", ".popover-close", function(){
-        console.log("popover-close", $(this).attr("data-session-id"));
+        // console.log("popover-close", $(this).attr("data-session-id"));
         var $cell = null;
         if (typeof $(this).attr("data-session-id") === "undefined"){
             $cell = findCellByDateTimeRoom($(this).attr("data-date"), $(this).attr("data-time"), $(this).attr("data-room"));
@@ -97,9 +97,9 @@
         if (type != "unscheduled" && typeof session !== "undefined" && session != null){
             isLocked = scheduleSlots[session.date][session.time][session.room]['locked'];
         }
-        console.log("ISLOCKED", isLocked);
+        // console.log("ISLOCKED", isLocked);
 
-        console.log("src:", srcType, "dst:", type);
+        // console.log("src:", srcType, "dst:", type);
         if (srcType == "scheduled"){
             if (type == "scheduled"){
                 if (isLocked)
@@ -113,7 +113,7 @@
                 //   + $(this).find(".detail .conflicts")[0].outerHTML
                 //   + $(this).find(".detail ul")[0].outerHTML;
             } else if (type == "unscheduled"){
-                console.log("Not supported");
+                // console.log("Not supported");
                 /*
                 html +=  "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
                   + "'>Swap with this session</button>" + _getCancelButtonHTML() + "<br>"
@@ -147,7 +147,7 @@
                 //   + $(this).find(".detail .conflicts")[0].outerHTML
                 //   + $(this).find(".detail ul")[0].outerHTML;                            
             } else if (type == "unscheduled"){
-                console.log("Not supported");
+                // console.log("Not supported");
             } else if (type == "empty"){
                 if (isLocked)
                     $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
@@ -186,7 +186,7 @@
                 //       + $(this).find(".detail .conflicts")[0].outerHTML
                 //       + $(this).find(".detail ul")[0].outerHTML;
             } else if (type == "empty"){
-                console.log("Not supported");   
+                // console.log("Not supported");   
             }
         }
         //console.log(element.outerHTML);
@@ -230,7 +230,7 @@
                 $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));
             } else if (type == "empty"){
                 $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));
-                console.log("Not supported");   
+                // console.log("Not supported");   
             }
         }
         //console.log(element.outerHTML);
@@ -348,10 +348,10 @@
             //     + displayAuthors(submission.authors) + "</li>";
         } else if (type == "unscheduled") {
             element = document.createElement("div");
-            console.log("return nothing");
+            // console.log("return nothing");
         } else if (type == "empty") {
             element = document.createElement("div");
-            console.log("return nothing");
+            // console.log("return nothing");
         }
         return element;
     }
@@ -361,12 +361,12 @@
         var element;
         var proposedList = [];
         var isProposed = false;
-        console.log("src:", srcType, "dst:", type);
+        // console.log("src:", srcType, "dst:", type);
 
         // unscheduled: session null, submission id
         if (type == "unscheduled" && session == null){
             isProposed = typeof $("#"+submission.id).attr("data-proposed-swap-paper") !== "undefined";
-            console.log(null, submission.id, isProposed);
+            // console.log(null, submission.id, isProposed);
         // empty: session id, submission null
         } else if (type == "empty" && submission == null){
             var $session = findCellByID(session.id);
@@ -377,7 +377,7 @@
                 // because attr returns all strings, "null" not null is returned.
                 isProposed = $.inArray("null", proposedList) !== -1;
             }
-            console.log(session.id, null, isProposed, proposedList);
+            // console.log(session.id, null, isProposed, proposedList);
         // scheduled: session id, submission id
         } else if (type == "scheduled" && session != null && submission != null){
             var $session = findCellByID(session.id);
@@ -387,7 +387,7 @@
                 proposedList = $session.attr("data-proposed-swap-paper").split(",");
                 isProposed = $.inArray(submission.id, proposedList) !== -1;
             }
-            console.log(session.id, submission.id, isProposed);
+            // console.log(session.id, submission.id, isProposed);
         } else {
             console.log("IMPOSSIBLE");
         }
@@ -412,7 +412,7 @@
 
             } else if (type == "unscheduled"){
                 element = document.createElement("div");
-                console.log("No return");
+                // console.log("No return");
 
             } else if (type == "empty"){
                 // TODO: maybe also save date, time, room, and order info
@@ -444,7 +444,7 @@
                         
             } else if (type == "unscheduled"){
                 element = document.createElement("div");
-                console.log("No return");
+                // console.log("No return");
             } else if (type == "empty"){
                 // TODO: maybe also save date, time, room, and order info
                 if (isProposed) {
@@ -485,7 +485,7 @@
 
             } else if (type == "empty"){
                 element = document.createElement("div");
-                console.log("No return");   
+                // console.log("No return");   
             }
         }
 

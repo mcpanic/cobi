@@ -71,7 +71,7 @@ var Sidebar = function() {
      }
 
      function addHistory(t){
-          console.log("HISTORY", t);
+          // console.log("HISTORY", t);
           // hack that fixes the bug where when history is open with 0 items, prepend doesn't work because height is automatically set to 0px.
           // so force height to be auto when collapsed
           if ($("#list-history").hasClass("in"))
@@ -247,7 +247,7 @@ var Sidebar = function() {
 
           $("#list-constraints li").each(function(index, constraint){
                var type = $(constraint).attr("data-type");
-               console.log(type, $this.parent().attr("data-type"), toggle);
+               // console.log(type, $this.parent().attr("data-type"), toggle);
                if (type == $this.parent().attr("data-type"))
                     Conflicts.updateConstraintBackground(type, toggle);     
                else

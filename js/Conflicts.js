@@ -144,8 +144,6 @@ var Conflicts = function() {
             isChanged = true;
             
             var $view = element.find(".conflicts");
-            if (swapValues.target.session == "s249")
-                console.log("=====s249===== START", index);
             if (swapValues.addedSrc != null && swapValues.addedSrc.length > 0)
                 $view.append(displayConflictFullHTML("[Conflict added]", swapValues.addedSrc, conflict, "+"));
             if (swapValues.addedDest != null && swapValues.addedDest.length > 0)
@@ -162,9 +160,6 @@ var Conflicts = function() {
               element.find(".swap-total-full").hide();
           var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
           element.find(".conflicts").append($detail);
-
-                      if (swapValues.target.session == "s249")
-                console.log("=====s249===== END");
 
      }
 
@@ -282,7 +277,7 @@ var Conflicts = function() {
         $("#constraints-count").html(Math.round(total/2));
 
         $("#list-constraints li").each(function(index, item){
-            console.log("update", $(item).hasClass("view-option-active"), $(item).attr("data-type"));
+            // console.log("update", $(item).hasClass("view-option-active"), $(item).attr("data-type"));
             if ($(item).hasClass("view-option-active"))
                 updateConstraintBackground($(item).attr("data-type"), true);
             else

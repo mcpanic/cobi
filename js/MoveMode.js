@@ -118,7 +118,7 @@ var MoveMode = function() {
                 
                 var html = "";
                 if ($(this).hasClass("move-src-selected")) {
-                    console.log("slotClickHandler: move-src-selected");                   
+                    // console.log("slotClickHandler: move-src-selected");                   
                     html += "<div class='alert alert-info'><strong>Select another session to schedule this session.</strong></div>" + getCancelButtonHTML();
                     if (id !== -1)
                         html += getSubmissionList("move", session, type);
@@ -161,11 +161,11 @@ var MoveMode = function() {
 
      // Event handler for clicking an individual paper (only in the unscheduled panel)
     function paperSlotClickHandler(){
-        console.log("MM.paperSlotClickHandler");
+        // console.log("MM.paperSlotClickHandler");
 
         var $selection = $(".move-dst-selected");
         $(".move-dst-selected").removeClass("move-dst-selected").popover("hide");   
-        console.log("slotClick", $selection[0] == $(this)[0], $(this).hasClass("unavailable"), typeof $(this).attr("data-proposed-swap-paper") === "undefined");
+        // console.log("slotClick", $selection[0] == $(this)[0], $(this).hasClass("unavailable"), typeof $(this).attr("data-proposed-swap-paper") === "undefined");
         // if reselected, do nothing.
         if ($selection[0] == $(this)[0])
            return;
@@ -199,15 +199,15 @@ var MoveMode = function() {
            },
            content:function(){
                 var html = "";
-                console.log($(this));
+                // console.log($(this));
                 if ($(this).hasClass("move-src-selected")) {
-                    console.log("paperSlotClickHandler: move-src-selected");                   
+                    // console.log("paperSlotClickHandler: move-src-selected");                   
                     html += "<strong>Select another session to schedule this session.</strong><br>" + getCancelButtonHTML();
                     if (id !== -1)
                         html += getSubmissionDetail("move", "unscheduled", submission, type);
 
                 } else if ($(this).find(".title").hasClass("locked")) {
-                    console.log("paperSlotClickHandler: locked");                  
+                    // console.log("paperSlotClickHandler: locked");                  
                     html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong><br>" + getCancelButtonHTML();
                     if (id !== -1)
                         html += getSubmissionDetail("move", "unscheduled", submission, type);
@@ -216,7 +216,7 @@ var MoveMode = function() {
                     console.log("impossible");
                     //html += getSubmissionDetail("paperMove", "empty", new slot($(this).data("date"), $(this).data("time"), $(this).data("room"), null), type);
                 } else if ($(this).hasClass("unscheduled")){
-                    console.log("paperSlotClickHandler: unscheduled");   
+                    // console.log("paperSlotClickHandler: unscheduled");   
                     html += getSubmissionDetail("paperMove", "unscheduled", submission, type, null);
                 } else if ($(this).hasClass("scheduled")) {
                     console.log("impossible");
@@ -243,13 +243,6 @@ var MoveMode = function() {
         if (type === "scheduled") {
             var tempArray = proposeSlotAndSwap(allSessions[id]);
             swapValues = tempArray.slotValue.concat(tempArray.swapValue);
-	    	    for(i in tempArray.swapValue){
-			if(tempArray.swapValue[i].target.session == 's249'){
-			    console.log("look here");
-			    console.log(tempArray.swapValue[i]);
-			}
-		    }
-
         } else if (type === "unscheduled") {
             var tempArray = proposeSlotAndSwap(allSessions[id]);
             swapValues = tempArray.slotValue.concat(tempArray.swapValue);
@@ -299,7 +292,7 @@ var MoveMode = function() {
                 // Paper-level unscheduled candidate exists: session null, submission id
                 if (typeof submission !== "undefined") {                    
                         $("#"+submission).attr("data-proposed-swap-paper", "true").addClass("proposed-swap");
-                        console.log("runPropose: unscheduled");   
+                        // console.log("runPropose: unscheduled");   
                 }   
             // non-empty session candidate
             } else {
@@ -450,7 +443,7 @@ var MoveMode = function() {
 
         id = getID($session);
         // the backend scheduling
-        console.log("SCHEDULE", id, "into", $emptySlot.attr("data-date"), $emptySlot.attr("data-time"), $emptySlot.attr("data-room"));
+        // console.log("SCHEDULE", id, "into", $emptySlot.attr("data-date"), $emptySlot.attr("data-time"), $emptySlot.attr("data-room"));
         scheduleSession(allSessions[id], $emptySlot.attr("data-date"), $emptySlot.attr("data-time"), $emptySlot.attr("data-room"));
     });
 

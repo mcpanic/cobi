@@ -41,7 +41,7 @@ var ViewMode = function() {
 
      // Event handler for clicking an individual paper (only in the unscheduled panel)
     function paperSlotClickHandler(){
-        console.log("VM.slotpaperclick");
+        // console.log("VM.slotpaperclick");
         // detect if the currently selected item is selected again.
         //var $selection = $(this).hasClass("unscheduled")? $("#unscheduled .selected"): $("#program .selected");
         //var $otherSelection = $(this).hasClass("unscheduled")? $("#program .selected"): $("#unscheduled .selected");
@@ -187,7 +187,7 @@ var ViewMode = function() {
 
      // Event handler for clicking an individual session
     function slotClickHandler(){
-        console.log("VM.slotclick");
+        // console.log("VM.slotclick");
         // detect if the currently selected item is selected again.
         //var $selection = $(this).hasClass("unscheduled")? $("#unscheduled .selected"): $("#program .selected");
         //var $otherSelection = $(this).hasClass("unscheduled")? $("#program .selected"): $("#unscheduled .selected");

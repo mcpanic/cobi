@@ -22,7 +22,6 @@ var VisualOps = function() {
 
 	function _removeSessionFromSlot(s, oldDate, oldTime, oldRoom){
 		var $session = findCellByID(s.id);
-        //console.log("hello", s, oldDate, oldTime, oldRoom);        
         $session.removeClass("selected").popover("destroy").removeAttr("id");
         removeDataAttributes($session);
         var after = getSessionCell("empty", null, oldDate, oldTime, oldRoom);

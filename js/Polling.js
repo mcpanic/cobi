@@ -12,17 +12,17 @@ var Polling = function() {
     }
 
     function userLoadedHandler(event){
-        console.log("userLoadedHandler", allUsers, userData);
+        // console.log("userLoadedHandler", allUsers, userData);
     }
 
     function transactionAccepted(t){
-        console.log("transactionAccepted", t);
+        // console.log("transactionAccepted", t);
         Statusbar.updateStatus("updateStatusAccepted", t);
         Sidebar.updateHistory("updateHistoryAccepted", t);
     }
 
     function transactionFailed(t){
-        console.log("transactionFailed", t);
+        // console.log("transactionFailed", t);
         var rollbackTransaction = new TransactionData(t.uid, t.previousType, t.previous, t.type, t.data);
         var isInterrupted = handleTransaction(rollbackTransaction);
         Statusbar.updateStatus("updateStatusFailed", t);
@@ -30,7 +30,7 @@ var Polling = function() {
     }
 
     function transactionUpdate(t){
-        console.log("transactionUpdate", t);
+        // console.log("transactionUpdate", t);
         //type: event type, uid: user who made the change, data: object
         var isInterrupted = handleTransaction(t);
         if (t.type != "schedulePaper" && t.type != "swapPapers" && t.type != "movePaper" && t.type != "swapWithUnscheduledPaper"){
@@ -415,7 +415,7 @@ var Polling = function() {
         var selectedID = -1;
         if ($(".move-src-selected").first().length != 0){
             selectedID = getID($(".move-src-selected").first());
-            console.log(selectedID, $(".move-src-selected").first().attr("id"), t.data.pid, $(".move-src-selected").first().attr("id")==t.data.pid, $(".move-src-selected").first().attr("id").length, t.data.pid.length);
+            // console.log(selectedID, $(".move-src-selected").first().attr("id"), t.data.pid, $(".move-src-selected").first().attr("id")==t.data.pid, $(".move-src-selected").first().attr("id").length, t.data.pid.length);
             if (t.data.sid == selectedID) // me: scheduled, server: scheduled
                 isInterrupted = true;
             if (selectedID == "" && $(".move-src-selected").first().attr("id") == t.data.pid)  // me: unscheduled paper, server: empty
