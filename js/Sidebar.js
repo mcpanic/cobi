@@ -225,12 +225,19 @@ var Sidebar = function() {
           return options;
      }
 
+     function _toggleAllConflicts(toggle){
+          $("#list-constraints li").each(function(index, constraint){
+               Conflicts.updateConstraintBackground($(constraint).attr("data-type"), toggle);         
+          });          
+     }
 
      function clickConstraintsHandler(){
           var $this = $(this);
           var toggle = true;
           _toggleAllCheckboxes($("#list-personas"), false);
           _toggleAllCheckboxes($("#list-communities"), false);
+          $(".slot.cell-persona").removeClass("cell-persona");
+          $(".slot.cell-community").removeClass("cell-community");
 
           if ($(this).parent().hasClass("view-option-active"))
                toggle = false;
@@ -350,7 +357,11 @@ var Sidebar = function() {
      function clickPersonasHandler(event){
           var $this = $(this);
           _toggleAllCheckboxes($("#list-constraints"), false);
-          _toggleAllCheckboxes($("#list-communities"), false);          
+          _toggleAllCheckboxes($("#list-communities"), false);  
+          _toggleAllConflicts(false);        
+          $(".slot.cell-persona").removeClass("cell-persona");
+          $(".slot.cell-community").removeClass("cell-community");
+
           if ($this.parent().hasClass("view-option-active")) {
                $this.parent().removeClass("view-option-active");
                $this.parent().find(".myCheckbox").prop("checked", false);
@@ -359,6 +370,8 @@ var Sidebar = function() {
                $this.parent().find(".myCheckbox").prop("checked", true);
           }
           
+          var className = "cell-persona";
+
           // get current selections. allowing multiple selections. 
           var selected_personas = [];
           $("#list-personas li a").each(function(){
@@ -371,12 +384,14 @@ var Sidebar = function() {
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                if (isSpecialCell($(item)))
                     return;
-               $(item).css("background-color", "");
+               // $(item).css("background-color", "");
+               $(item).removeClass(className);
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
 	          // HQ: slight changes here
 	          if (selected_personas.indexOf(session.personas) != -1){
-		         $(item).css("background-color", color_palette_2[1]);
+		         // $(item).css("background-color", color_palette_2[1]);
+                   $(item).addClass(className);
 	          }
 //                $.each(keys(session.personas), function(index, key){
 //                     if (selected_personas.indexOf(key) != -1){
@@ -401,6 +416,10 @@ var Sidebar = function() {
           var $this = $(this);
           _toggleAllCheckboxes($("#list-constraints"), false);
           _toggleAllCheckboxes($("#list-personas"), false);
+          _toggleAllConflicts(false);
+          $(".slot.cell-persona").removeClass("cell-persona");
+          $(".slot.cell-community").removeClass("cell-community");
+
           if ($this.parent().hasClass("view-option-active")) {
                $this.parent().removeClass("view-option-active");
                $this.parent().find(".myCheckbox").prop("checked", false);
@@ -408,6 +427,8 @@ var Sidebar = function() {
                $this.parent().addClass("view-option-active");
                $this.parent().find(".myCheckbox").prop("checked", true);
           }
+
+          var className = "cell-community";
           
           // get current selections. allowing multiple selections. 
           var selected_communities = [];
@@ -421,12 +442,14 @@ var Sidebar = function() {
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                if (isSpecialCell($(item)))
                     return;
-               $(item).css("background-color", "");
+               // $(item).css("background-color", "");
+               $(item).removeClass(className);
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
                $.each(session.coreCommunities, function(index, key){
                     if (selected_communities.indexOf(key) != -1){
-                         $(item).css("background-color", color_palette_2[0]);
+                         // $(item).css("background-color", color_palette_2[0]);
+                         $(item).addClass(className);
                     }
                });
           });
