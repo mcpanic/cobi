@@ -237,22 +237,17 @@ var Sidebar = function() {
           $("#list-constraints .view-option-active").removeClass("view-option-active");
           if (toggle)
               $(this).parent().addClass("view-option-active");
-          var selected_constraint = $(this).parent().attr("data-type");
-          $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-               if (isSpecialCell($(item)))
-                    return;
-               $(item).css("background-color", "");
-               var id = $(item).attr("id").substr(8);
-               var session = allSessions[id];     
-               var color = ""; // default white
-               if (toggle)
-                    color = $this.find(".palette").css("background-color");
-               $.each(conflictsBySession[id], function(index, constraint){
-                    if (constraint.type == selected_constraint){
-                         $(item).css("background-color", color);
-                    }
-               });
+
+          $("#list-constraints li").each(function(index, constraint){
+               var type = $(constraint).attr("data-type");
+               console.log(type, $this.parent().attr("data-type"), toggle);
+               if (type == $this.parent().attr("data-type"))
+                    Conflicts.updateConstraintBackground(type, toggle);     
+               else
+                    Conflicts.updateConstraintBackground(type, false);     
           });
+          
+
          return false;          
      }
 

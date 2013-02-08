@@ -609,4 +609,23 @@ body.loading .modal {
     margin-right: 7px;
 }
 
+/* ==========================================================================
+    Color palette
+   ========================================================================== */
+.cell-conflict-0{
+    background-color: #913A52;    
+}
+
+.cell-conflict-1{
+    background-color: #C77F77;    
+}
+
+.cell-persona{
+    background-color: #F2D9BB;
+}
+
+.cell-community{
+    background-color: #9edae5;
+}
+
 
