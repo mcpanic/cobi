@@ -88,17 +88,17 @@ var Polling = function() {
     function postPollingMove(){
         updateUnscheduledCount();
         UnscheduledPanel.refreshButtons();
-                    // the backend conflicts update
-            getAllConflicts();
-            Conflicts.updateConflicts();
-            // Prev/Next button status update based on the current panel size
-
-        // Do not update the conflicts view when the current mode is Move Mode
-
         if (!MoveMode.isOn){
             Conflicts.clearConflictDisplay();
             // the frontend conflicts update: the row view of conflicts.
         }
+
+        // the backend conflicts update
+        getAllConflicts();
+        Conflicts.updateConflicts();
+        // Prev/Next button status update based on the current panel size
+        // Do not update the conflicts view when the current mode is Move Mode
+
     }
 
     function highlight(isMyChange, $cell, username){      
