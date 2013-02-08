@@ -243,7 +243,7 @@ var MoveMode = function() {
             var tempArray = proposeSlotAndSwap(allSessions[id]);
             swapValues = tempArray.slotValue.concat(tempArray.swapValue);
 	    	    for(i in tempArray.swapValue){
-			if(tempArray.swapValue[i].target.session == 's204'){
+			if(tempArray.swapValue[i].target.session == 's249'){
 			    console.log("look here");
 			    console.log(tempArray.swapValue[i]);
 			}
