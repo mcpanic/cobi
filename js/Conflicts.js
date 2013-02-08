@@ -202,7 +202,7 @@ var Conflicts = function() {
 
      // Refresh conflicts information display.
      // Called after an interaction occurs that affects conflicts. (swap, unschedule, schedule)
-     function updateConflicts(){
+     function updateConflicts(isSidebarOn, isSlotOn){
 
         var conflict_count_array = {};
         $.each(constraints_list, function(index, conflict){
@@ -212,7 +212,8 @@ var Conflicts = function() {
         $(".slot").each(function(){
             var id = getID($(this));
             if (id !== -1) {
-                displayConflicts(conflictsBySession[id], $(this).find(".display"));
+                if (isSlotOn)
+                    displayConflicts(conflictsBySession[id], $(this).find(".display"));
                 var conflicts_array = conflictsBySession[id].map(function(co) {return co.type});          
                     // for each constraint, count and add a modal dialog with descriptions
                     $.each(constraints_list, function(index, conflict){
@@ -220,10 +221,14 @@ var Conflicts = function() {
                         conflict_count_array[conflict.type] += filtered_array.length;             
                     });
             } else { // empty cells should clear the display
-              $(this).find(".display").html("");
+                if (isSlotOn)
+                    $(this).find(".display").html("");
             }
         });         
         
+        if (!isSidebarOn)
+            return;
+
         var total = 0;
         $.each(constraints_list, function(index, conflict){
             $("#list-constraints li").each(function(){

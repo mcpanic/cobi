@@ -85,20 +85,23 @@ var Polling = function() {
         return isInterrupted;
     }
 
-    function postPollingMove(){
+    function postPollingMove(isMyChange){
         updateUnscheduledCount();
         UnscheduledPanel.refreshButtons();
-        if (!MoveMode.isOn){
-            Conflicts.clearConflictDisplay();
+
+        if (isMyChange || !MoveMode.isOn){
+            Conflicts.clearConflictDisplay();        
+            // the backend conflicts update
+            getAllConflicts();
             // the frontend conflicts update: the row view of conflicts.
+            Conflicts.updateConflicts(true, true); // only sidebar
+        } else {
+            // the backend conflicts update
+            getAllConflicts();
+            // the frontend conflicts update: the row view of conflicts.
+            Conflicts.updateConflicts(true, false); // only sidebar
+
         }
-
-        // the backend conflicts update
-        getAllConflicts();
-        Conflicts.updateConflicts();
-        // Prev/Next button status update based on the current panel size
-        // Do not update the conflicts view when the current mode is Move Mode
-
     }
 
     function highlight(isMyChange, $cell, username){      
@@ -145,7 +148,7 @@ var Polling = function() {
 
         VisualOps.lock($cell);
         highlight(isMyChange, $cell, getUsernameByUID(t.uid));
-        postPollingMove();  
+        postPollingMove(isMyChange);  
         if (isMyChange)
             $(".selected").removeClass("selected").popover("hide");
         if (isInterrupted) // current selection affected by the server change
@@ -178,7 +181,7 @@ var Polling = function() {
 
         VisualOps.unlock($cell);
         highlight(isMyChange, $cell, getUsernameByUID(t.uid));
-        postPollingMove();  
+        postPollingMove(isMyChange);  
         if (isMyChange)
             $(".selected").removeClass("selected").popover("hide");
         if (isInterrupted) // current selection affected by the server change
@@ -210,7 +213,7 @@ var Polling = function() {
         var $oldCell = findCellByDateTimeRoom(t.data.date, t.data.time, t.data.room);
         highlight(isMyChange, $oldCell, getUsernameByUID(t.uid));
 
-        postPollingMove();  
+        postPollingMove(isMyChange);  
         if (isMyChange)
             $(".selected").removeClass("selected");
         if (isInterrupted) // current selection affected by the server change
@@ -242,7 +245,7 @@ var Polling = function() {
 
         highlight(isMyChange, findCellByID(id), getUsernameByUID(t.uid));
 
-        postPollingMove();  
+        postPollingMove(isMyChange);  
         if (isMyChange)
             MoveMode.destroy();    
         if (isInterrupted) // current selection affected by the server change
@@ -277,7 +280,7 @@ var Polling = function() {
         highlight(isMyChange, findCellByID(s1id), getUsernameByUID(t.uid));
         highlight(isMyChange, findCellByID(s2id), getUsernameByUID(t.uid));
 
-        postPollingMove();  
+        postPollingMove(isMyChange);  
         if (isMyChange)
             MoveMode.destroy();
         if (isInterrupted) // current selection affected by the server change
@@ -312,7 +315,7 @@ var Polling = function() {
 
         highlight(isMyChange, findCellByID(id), getUsernameByUID(t.uid));
         highlight(isMyChange, findCellByDateTimeRoom(t.data.sdate, t.data.stime, t.data.sroom), getUsernameByUID(t.uid));
-        postPollingMove();  
+        postPollingMove(isMyChange);  
         if (isMyChange)
             MoveMode.destroy();
         if (isInterrupted) // current selection affected by the server change
@@ -339,7 +342,7 @@ var Polling = function() {
         VisualOps.swapWithUnscheduled(allSessions[unscheduledId], allSessions[scheduledId]);
         highlight(isMyChange, findCellByID(scheduledId), getUsernameByUID(t.uid));
         highlight(isMyChange, findCellByID(unscheduledId), getUsernameByUID(t.uid));
-        postPollingMove();  
+        postPollingMove(isMyChange);  
         if (isMyChange)
             MoveMode.destroy();
         if (isInterrupted) // current selection affected by the server change
@@ -370,7 +373,7 @@ var Polling = function() {
         // It's actually okay not to add this functionality because the frontend gets canceled anyway.
         
         highlight(isMyChange, findCellByID(t.data.id), getUsernameByUID(t.uid));
-        postPollingMove();     
+        postPollingMove(isMyChange);     
 
         if (isMyChange) // shouldn't do MoveMode.destroy() because it's the user's own change.
             ; //MoveMode.destroy();
@@ -397,7 +400,7 @@ var Polling = function() {
         highlight(isMyChange, findCellByID(t.data.sid), getUsernameByUID(t.uid));
         highlight(isMyChange, $("#" + t.data.pid), getUsernameByUID(t.uid));
 
-        postPollingMove();  
+        postPollingMove(isMyChange);  
         if (isMyChange) // shouldn't do MoveMode.destroy() because it's the user's own change.
             ; //MoveMode.destroy();
         if (isInterrupted) // current selection affected by the server change
@@ -426,7 +429,7 @@ var Polling = function() {
         highlight(isMyChange, $(".popover-inner #" + t.data.pid), getUsernameByUID(t.uid));
 
         setTimeout(function (){
-            postPollingMove();  
+            postPollingMove(isMyChange);  
             if (isMyChange)
                 MoveMode.destroy();
             if (isInterrupted)
@@ -454,7 +457,7 @@ var Polling = function() {
         highlight(isMyChange, $(".popover-inner #" + t.data.p1id), getUsernameByUID(t.uid));
         highlight(isMyChange, $(".popover-inner #" + t.data.p2id), getUsernameByUID(t.uid));
         setTimeout(function (){
-            postPollingMove();  
+            postPollingMove(isMyChange);  
             if (isMyChange)
                 MoveMode.destroy();
             if (isInterrupted)
@@ -483,7 +486,7 @@ var Polling = function() {
         highlight(isMyChange, $(".popover-inner #" + t.data.p1id), getUsernameByUID(t.uid));
 
         setTimeout(function (){
-            postPollingMove();  
+            postPollingMove(isMyChange);  
             if (isMyChange)
                 MoveMode.destroy();
             if (isInterrupted)
@@ -514,7 +517,7 @@ var Polling = function() {
         highlight(isMyChange, $("#" + t.data.p2id), getUsernameByUID(t.uid));
 
         setTimeout(function (){
-            postPollingMove();  
+            postPollingMove(isMyChange);  
             if (isMyChange)
                 MoveMode.destroy();
             if (isInterrupted)

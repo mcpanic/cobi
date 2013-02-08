@@ -273,7 +273,7 @@ var Sidebar = function() {
                               $(item).find(".display").html($(item).find(".conflicts").html());
                          });
                     } else
-                         Conflicts.updateConflicts();
+                         Conflicts.updateConflicts(true, true);
                break;                 
                case "popularity":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
