@@ -679,9 +679,9 @@
           //var orderedDates = keys(schedule).sort(function(a,b) {return new Date(a) - new Date(b);});
           //var orderedRooms = keys(allRooms).sort(function(a,b) {return allRooms[a] - allRooms[b];});
           var orderedDates = keys(schedule).sort(function(a,b) {return days[a] - days[b];});
-         var orderedRooms = keys(allRooms).sort(function(a, b){
-	     return desiredRoomOrder.indexOf(a) - desiredRoomOrder.indexOf(b);
-	 });
+          var orderedRooms = keys(allRooms).sort(function(a, b){
+	       return desiredRoomOrder.indexOf(a) - desiredRoomOrder.indexOf(b);
+	      });
 
           var i, cell;
           // Table Header

@@ -111,7 +111,7 @@ var Polling = function() {
         if (isMyChange)
             $cell.effect("highlight", {color: "yellow"}, 7000);
         else {
-            console.log(username);
+            //console.log(username);
             $cell.find(".user").html(username).show();
             $cell.effect("highlight", {color: "#FFDE49"}, 7000);
             setTimeout(function(){

@@ -79,26 +79,26 @@ var Conflicts = function() {
         $(this).closest(".conflicts").find(".conflict-preview-detail").html($(this).attr("data-content")).show();
     }
 
-     function displayConflictFullHTML(ment, input_array, conflict, sign) {
+     function displayConflictFullHTML(ment, inputArray, conflict, sign) {
         var $view = $("<span/>");
-        // if (input_array === null)
+        // if (inputArray === null)
         //     return $("<span/>");
         
-        var filtered_array = input_array == null? []: input_array.filter(function(x){return x.type==conflict.type});
-        for (var i=0; i<filtered_array.length; i++) {
-            // html += "<span class='conflict-preview-display'>" + sign + "</span>";
-            //console.log(ment, conflict.label, filtered_array[i].description);
+        var filteredArray = inputArray == null? []: inputArray.filter(function(x){return x.type==conflict.type});
+        // console.log(ment, inputArray, conflict, sign);
+        for (var i=0; i<filteredArray.length; i++) {
+        //for (var i=0; i<inputArray.length; i++) {
             $("<span/>")
                     .addClass("conflict-preview-display").html(sign)
                     .attr("data-html", "true")
                     .attr("data-title", ment)
                     .attr("data-trigger", "manual")
-                    .attr("data-content", "<strong>" + ment + "</strong><br><strong>Type: " + conflict.label + "</strong><br>" + filtered_array[i].description)
+                    .attr("data-content", "<strong>" + ment + "</strong><br><strong>Type: " + conflict.label + "</strong><br>" + filteredArray[i].description)
                     // .popover({
                     //     html:true,
                     //     title: ment,
                     //     trigger: "hover",
-                    //     html: "Type: " + conflict.label + "<br>" + filtered_array[i].description
+                    //     html: "Type: " + conflict.label + "<br>" + filteredArray[i].description
                     // })
                     .css("background-color", conflict.color)
                     .appendTo($view);
@@ -107,8 +107,8 @@ var Conflicts = function() {
         return $view;
      }
 
-     function getConflictLength(input_array, conflict) {
-        var filtered_array = input_array == null? []: input_array.filter(function(x){return x.type==conflict.type});
+     function getConflictLength(inputArray, conflict) {
+        var filtered_array = inputArray == null? []: inputArray.filter(function(x){return x.type==conflict.type});
         return filtered_array.length;
      }
 
@@ -136,21 +136,23 @@ var Conflicts = function() {
 
           // for each constraint, count and add a modal dialog with descriptions
           $.each(constraints_list, function(index, conflict){  
-            var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 
-                        - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
-            if (netCount == 0)
-                 return;
+            // var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 
+            //             - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
+            // if (netCount == 0)
+            //      return;
             // console.log(conflict, swapValues);
             isChanged = true;
             
             var $view = element.find(".conflicts");
-            if (swapValues.addedSrc != null)
+            if (swapValues.target.session == "s249")
+                console.log("=====s249===== START", index);
+            if (swapValues.addedSrc != null && swapValues.addedSrc.length > 0)
                 $view.append(displayConflictFullHTML("[Conflict added]", swapValues.addedSrc, conflict, "+"));
-            if (swapValues.addedDest != null)
+            if (swapValues.addedDest != null && swapValues.addedDest.length > 0)
                 $view.append(displayConflictFullHTML("[Conflict added]", swapValues.addedDest, conflict, "+"))
-            if (swapValues.removedSrc != null)
+            if (swapValues.removedSrc != null && swapValues.removedSrc.length > 0)
                 $view.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedSrc, conflict, "-"))
-            if (swapValues.removedDest != null)
+            if (swapValues.removedDest != null && swapValues.removedDest.length > 0)
                 $view.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedDest, conflict, "-"));      
             // var netCountClass = "conflict-netcount-added";
             // if (netCount < 0)
@@ -160,6 +162,10 @@ var Conflicts = function() {
               element.find(".swap-total-full").hide();
           var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
           element.find(".conflicts").append($detail);
+
+                      if (swapValues.target.session == "s249")
+                console.log("=====s249===== END");
+
      }
 
 
@@ -200,6 +206,40 @@ var Conflicts = function() {
             element.find(".swap-total").hide();
      }
 
+
+     function updateConstraintBackground(selectedConstraint, toggle){
+        
+        var className = "";
+        $.each(constraints_list, function(index, constraint){
+            if (constraint.type == selectedConstraint)
+                className = "cell-conflict-" + index;
+                // color = constraint.color;
+        });
+        
+          $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+               if (isSpecialCell($(item)))
+                    return;
+               // $(item).css("background-color", "");
+               $(item).removeClass(className);
+               var id = $(item).attr("id").substr(8);
+               // var session = allSessions[id];     
+               // var color = ""; // default white
+               // if (toggle)
+               //      color = $this.find(".palette").css("background-color");
+               $.each(conflictsBySession[id], function(index, constraint){
+                    //console.log(id, constraint.type, selectedConstraint, constraint.type == selectedConstraint, toggle, className);
+                    if (constraint.type == selectedConstraint && toggle){
+                         // $(item).css("background-color", color);
+                         $(item).addClass(className);
+                    } else if (constraint.type == selectedConstraint && !toggle){
+                         // $(item).css("background-color", "");
+                         $(item).removeClass(className);
+                    }
+               });
+          });
+     }
+
+
      // Refresh conflicts information display.
      // Called after an interaction occurs that affects conflicts. (swap, unschedule, schedule)
      function updateConflicts(isSidebarOn, isSlotOn){
@@ -239,8 +279,15 @@ var Conflicts = function() {
                 }
             });
         });
-
         $("#constraints-count").html(Math.round(total/2));
+
+        $("#list-constraints li").each(function(index, item){
+            console.log("update", $(item).hasClass("view-option-active"), $(item).attr("data-type"));
+            if ($(item).hasClass("view-option-active"))
+                updateConstraintBackground($(item).attr("data-type"), true);
+            else
+                updateConstraintBackground($(item).attr("data-type"), false);
+        });
      }
 
     return {
@@ -252,7 +299,8 @@ var Conflicts = function() {
         // getConflictLength: getConflictLength,
         displayFullConflicts: displayFullConflicts,
         displayPreviewConflicts: displayPreviewConflicts,
-        updateConflicts: updateConflicts
+        updateConflicts: updateConflicts,
+        updateConstraintBackground: updateConstraintBackground
     };
 }();       
 
