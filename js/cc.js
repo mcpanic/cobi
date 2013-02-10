@@ -13,24 +13,24 @@
      }
 
      function getAllRooms(){
-		 var rooms = {};
-		 var index = 0;
-		 for(var day in sessions){
-		     for(var time in sessions[day]){
-			 for(var room in sessions[day][time]){
-			     if(room in rooms){
-			     }else{
-				 rooms[room] = index;
-				 index++;
-			     }
-			 }
-		     }
-		 }
+          var rooms = {};
+          var index = 0;
+          for(var day in sessions){
+               for(var time in sessions[day]){
+                for(var room in sessions[day][time]){
+                    if(room in rooms){
+                    }else{
+               	 rooms[room] = index;
+               	 index++;
+                    }
+                }
+               }
+          }
 	 	return rooms;
      }
 
+function display(){
 
-     $(document).ready(function() {
           console.log(entities);
           // Entity-begin
           $(".expression .entity-begin").append("<select class='dropdown'/>");
@@ -143,5 +143,32 @@
                }               
           });
 
-          $("select").chosen();
+          $("select").chosen();     
+}
+
+
+     $(document).ready(function() {
+
+        $("body").addClass("loading"); 
+        // Statusbar.initialize(); 
+         
+        // triggered once initialize is complete
+        // initialize() is async, thus the bind
+        $(document).bind("fullyLoaded", function(){
+            display();
+            Comp.test();
+            // displayScheduled();
+            // displayUnscheduled();
+            // Sidebar.initialize(); 
+            // Searchbox.initialize();
+            // Polling.initialize();
+            // // default is view mode.
+            // ViewMode.initialize();   
+            // UnscheduledPanel.initialize(); 
+            // Conflicts.initialize();
+            $(".user-display").append("<span class='icon-user icon-white'/>").append(getUsernameByUID(userData.id));
+            // Statusbar.display("Select a session for scheduling options and more information.");
+            $("body").removeClass("loading");             
+        });
+        initialize();
 	});
