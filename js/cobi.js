@@ -14,7 +14,6 @@ var userData = new userInfo(null, "Anon", null, "rookie");
 var allUsers = {};
 var transactions = [];
 var localTransactions = [];
-
 var roomCapacity = [
     {   "Blue": "Amphitheater, 862p"},
     {   "Bordeaux": "Amphitheater, 650p"},

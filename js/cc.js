@@ -1,4 +1,3 @@
-
      var allRooms = [];
 
      function keys(obj){
