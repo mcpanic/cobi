@@ -155,7 +155,7 @@ function display(){
         // initialize() is async, thus the bind
         $(document).bind("fullyLoaded", function(){
             display();
-            Comp.test();
+            Comp.initialize();
             // displayScheduled();
             // displayUnscheduled();
             // Sidebar.initialize(); 
