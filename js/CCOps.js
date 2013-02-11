@@ -13,71 +13,112 @@ function entityTrace(session, submission, author){
     this.author = author;
 }
 
-// level == session
-// level == submission
-// level == author
-function exist(s, level, comp){
-    var matches = [];
-    if(level == 'session'){
-	if(comp(s)){
-	    matches.push(new entityTrace(s.id, null, null));
-	}
-	return matches;
-    }else if(level == 'submission'){
-	for(var sub in s.submissions){
-	    if(comp(s.submissions[sub])){
-		matches.push(new entityTrace(s.id, sub, null));
-	    }
-	}
-	return matches;
-    }else if(level == 'author'){
-	for(var sub in s.submissions){
-	    for(var auth in s.submissions[sub].authors){
-		if(comp(s.submissions[sub].authors[auth])){
-		    matches.push(new entityTrace(s.id, sub, auth));
-		}
-	    }
-	}
-	return matches;
-    }
-}
-
-function Rule(keyHierarchy, comp){
-    this.keyHierarchy = keyHierarchy;
+function Rule(level, comp){
+    this.level = level;
     this.comp = comp;
 }
 
 var CCOps = function(){
     function tester(){
-	alert("hi");
+	var example = new SingleEntityConstraint("singleEntity", 
+						 "only before 11",
+						 10,
+						 "because I am early riser",
+						 [new Rule('submission', 
+							   function(x){ 
+							       return x.title.indexOf("Don") != -1
+							   })],
+						 [new Rule('session',
+							   function (x){
+							       return x.time == '9:00-10:20';
+							   })]);
+	console.log(checkConflicts(example));
     }
     function equal(a, b){
 	return a == b;
     }
-    function sessionMatchesRules(x, rules){
-	var violatedRules = [];
+    function pathBelongs(levels, path){
 	
-	for (var i in rules){
-	    if(!sessionMatchesPred(x, rules[i].keyHierarchy, rules[i].comp)){
-		violatedRules.push(rules[i]);
+	// TODO: track where violations are happening
+	// check session level
+	for (var sessionRule in levels['session']){
+	    if(!(levels['session'][sessionRule].comp)(allSessions[path.session])){
+		return false;
 	    }
 	}
-	return violatedRules;
+	// check submission level
+	for(var submissionRule in levels['submission']){
+	    var comp = levels['submission'][submissionRule].comp;
+	    if(!comp(allSessions[path.session].submissions[path.submission])){
+		return false;
+	    }else{
+	    }
+	}
+	
+	// check author level 
+	for(var authorRule in levels['author']){
+	    if(!(levels['author'][authorRule].comp)(allSessions[path.session].submissions[path.submission].authors[path.author])){
+		return false;
+	    }
+	}
+	
+	return true;
     }
-function multiLevel(rules){
-    var matches = [];
-    var levels = {};
-    levels['session'] = [];
-    levels['submission'] = [];
-    levels['author'] = [];
     
-    for(var i = 0; i < rules.length; i++){
-	levels[levels[rules[i].level]].push(rules[i]);
+    function pathsBelongs(levels, paths){
+	// return paths if session satisfies rules
+	var legal = [];
+	for(var i in paths){
+	    legal.push(true);
+	}
+	for(var i in paths){
+	    legal[i] = pathBelongs(levels, paths[i]);	    
+	}
+	return legal;
     }
-    // define all paths
-    var paths = [];
+    
+    function groupRulesByLevel(rules){
+	var levels = {};
+	// group rules by the level at which they operate
+	levels['session'] = [];
+	levels['submission'] = [];
+	levels['author'] = [];
+	for(var i = 0; i < rules.length; i++){
+	    levels[rules[i].level].push(rules[i]);
+	}
+	return levels;
+    }
 
-    for(var s in allSessions){
+    function belongs(rules){
+	var matches = {};
+	var levels = groupRulesByLevel(rules);
+	for(var s in allSessions){
+	    var paths = generatePaths(s, levels);
+	    var legal = pathsBelongs(levels, paths);
+	    var legalPaths = [];
+	    for(var i in legal){
+		if (legal[i]) legalPaths.push(paths[i]);
+	    }
+	    if(legalPaths.length > 0){
+		matches[s] = legalPaths;
+	    }
+	}
+	return matches;
+    }
+
+    function violates(rules, paths){
+	// given a set of paths, figure out which paths violates the rules
+	var levels = groupRulesByLevel(rules);
+	var legal = pathsBelongs(levels, paths);
+	var violatingPaths = [];
+	for(var i in legal){
+	    if (!legal[i]) violatingPaths.push(paths[i]);
+	}
+	return violatingPaths;
+    }
+    
+    function generatePaths(s, levels){
+	var paths = [];
 	if(levels['submission'].length != 0 || levels['author'].length != 0){
 	    for(var sub in allSessions[s].submissions){
 		if(levels['author'].length != 0){
@@ -92,113 +133,34 @@ function multiLevel(rules){
 	}else{
 	    paths.push(new entityTrace(s, null, null));
 	}
+	return paths;
     }
     
-    var legal = [];
-    for(var i in paths){
-	legal.push(true);
-    }
-    // filter through level by level
-    for(var i in paths){
-	if(legal[i]){
-	    for(var sessionRule in levels['session']){
-		if(!(levels['session'][sessionRule].comp)(allSessions[paths[i].session])){
-		    legal[i] = false;
-		}
-	    }
-	}
-    }
-
-    for(var i in paths){
-	if(legal[i]){
-	    for(var submissionRule in levels['submission']){
-		if(!(levels['submission'][submissionRule].comp)(allSessions[paths[i].session].submissions[paths[i].submission])){
-		    legal[i] = false;
-		}
-	    }
-	}
-    }
-
-    for(var i in paths){
-	if(legal[i]){
-	    for(var authorRule in levels['author']){
-		if(!(levels['author'][authorRule].comp)(allSessions[paths[i].session].submissions[paths[i].submission].authors[paths[i].author])){
-		    legal[i] = false;
-		}
-	    }
-	}
-    }
-    
-    var legalPaths = [];
-    for (var i in paths){
-	if(legal[i]){
-	    legalPaths.push(paths[i])
-	}
-    }
-    return legalPaths;
-}
-    
-    function sessionMatchesPred(x, keyHierarchy, comp, value){
-	var o = x;
-	for (i in keyHierarchy){
-	    if (keyHierarchy[i] in x){
-		o = x[keyHierarchy[i]];
-	    }else{
-		// not this object
-		return false;
-	    }
-	}
-	return comp(o, value);
-    }
-
-    function getAllMatchingSessions(sessionKeys, rule){
-	var matchingSessions = [];
-	for (s in sessionKeys){
-	    if(sessionMatchesPred(allSessions[sessionKeys[s]], rule.keyHierarchy, rule.comp, rule.value)){
-		matchingSessions.push(s);
-	    }
-	}
-	return matchingSessions;
-    }
-    
-    // find all sessions that satisfy a set of rules
-    function belongs(rules){
-	var belongList = [];
-	for(s in allSessions){
-	    var violations = sessionMatchesRules(allSessions[s], rules);
-	    if(violations.length == 0){
-		belongList.push(s);
-	    }
-	}
-	return belongList;
-    }
-    
-    function checkForViolation(constraint){
+    function checkConflicts(constraint){
 	// TODO: explain why doesn't match
 	// assume single entity constraint
-	var sessionViolations = [];
+	var violationsBySession = {};
 	// 1. Get eligible sessions
-	belongList = belongs(constraint.entityRules);
+	var belongList = belongs(constraint.entityRules);
+	console.log(belongList);
+	
 	// 2. find all that violates constraint
 	for (s in belongList){
-	    var violations = sessionMatchesRules(allSessions[s], 
-						 constraint.constraintObjectRules);
-	    if(violations.length != 0){
-		sessionViolations.push(new conflictObject([s],
-							  constraint.type,
-							  violations,
-							  constraint.description));
+	    var violations = violates(constraint.constraintObjectRules,
+				      belongList[s]); // paths
+	    if(violations.length > 0){
+		violationsBySession[s] = new conflictObject([s], 
+							    constraint.type, 
+							    violations, 
+							    constraint.description);
 	    }
 	}
-	return sessionViolations;
+	return violationsBySession;
     }
     
     return {tester: tester,
-	    checkForViolation: checkForViolation,
-	    sessionMatchesPred: sessionMatchesPred,
-	    getAllMatchingSessions: getAllMatchingSessions,
 	    belongs: belongs,
-	    multiLevel: multiLevel,
-	    equal: equal};
+	    equal: equal,
+	    checkConflicts: checkConflicts};
 }();
 
