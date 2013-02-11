@@ -21,16 +21,16 @@ function Rule(level, comp){
 var CCOps = function(){
     function tester(){
 	var example = new SingleEntityConstraint("singleEntity", 
-						 "only before 11",
+						 "at 11",
 						 10,
-						 "because I am early riser",
+						 "because it's my favorite time",
 						 [new Rule('submission', 
 							   function(x){ 
 							       return x.title.indexOf("Don") != -1
 							   })],
 						 [new Rule('session',
 							   function (x){
-							       return x.time == '9:00-10:20';
+							       return x.time == '11:00-12:20';
 							   })]);
 	console.log(checkConflicts(example));
     }
@@ -142,7 +142,6 @@ var CCOps = function(){
 	var violationsBySession = {};
 	// 1. Get eligible sessions
 	var belongList = belongs(constraint.entityRules);
-	console.log(belongList);
 	
 	// 2. find all that violates constraint
 	for (s in belongList){
