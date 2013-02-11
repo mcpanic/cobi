@@ -21,9 +21,9 @@ function Rule(level, comp){
 var CCOps = function(){
     function tester(){
 	var example = new SingleEntityConstraint("singleEntity", 
-						 "at 11",
+						 "Submissions whose title begin with 'Don' should be at 11am",
 						 10,
-						 "because it's my favorite time",
+						 "because it's my favorite time and I am a don",
 						 [new Rule('submission', 
 							   function(x){ 
 							       return x.title.indexOf("Don") != -1
