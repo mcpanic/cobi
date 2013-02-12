@@ -53,11 +53,11 @@ var CCOps = function(){
 							   })]);
 
 	var example2 = new EntityPairConstraint("pairEntity", 
-						"Authors whose first name is Dan should not be in opposing sessions",
+						"Authors whose first name is Dan should not be in opposing sessions with authors whose first name is John",
 						100,
-						"because Dan should only have to be at one place at any given time",
+						"because Dan and John want to see each other's talks",
 						[new Rule('author', function(x){ return x.firstName == "Dan"})],
-						[new Rule('author', function(x){ return x.firstName == "Dan"})],
+						[new Rule('author', function(x){ return x.firstName == "John"})],
 						[new Rule('session', function(a, b){ // assume paths, check not opposing sessions
 						    return !((allSessions[a.session].time == allSessions[b.session].time) &&
 							     (allSessions[a.session].date == allSessions[b.session].date) && 
