@@ -53,20 +53,37 @@ var CCOps = function(){
 							   })]);
 
 	var example2 = new EntityPairConstraint("pairEntity", 
-						"Authors whose first name is Dan should not be opposite each other",
+						"Authors whose first name is Dan should not be in opposing sessions",
 						100,
-						"because they should only have to be at one place at any given time",
+						"because Dan should only have to be at one place at any given time",
 						[new Rule('author', function(x){ return x.firstName == "Dan"})],
 						[new Rule('author', function(x){ return x.firstName == "Dan"})],
-						[function(a, b){ // assume paths, check not opposing sessions
+						[new Rule('session', function(a, b){ // assume paths, check not opposing sessions
 						    return !((allSessions[a.session].time == allSessions[b.session].time) &&
 							     (allSessions[a.session].date == allSessions[b.session].date) && 
 							     (allSessions[a.session].room != allSessions[b.session].room));
-						}]);
+						})]);
+
+
+	var example3 = new EntityPairConstraint("pairEntity", 
+						"Sessions with the same author should not be opposing",
+						100,
+						"because authors should only have to be at one place at any given time",
+						[new Rule('author', function(x){ return true})],
+						[new Rule('author', function(x){ return true})],
+						[new Rule('session', function(a, b){ // assume paths, check not opposing sessions
+						    return !((allSessions[a.session].time == allSessions[b.session].time) &&
+							     (allSessions[a.session].date == allSessions[b.session].date) && 
+							     (allSessions[a.session].room != allSessions[b.session].room) &&
+							     a.author == b.author);
+						})]);
+
 	console.log("Conflicts created by constraint 1");
 	console.log(checkConflicts(example));
 	console.log("Conflicts created by constraint 2");
 	console.log(checkPairConflicts(example2));
+	console.log("Conflicts created by constraint 3");
+	console.log(checkPairConflicts(example3));
     }
 
     function equal(a, b){
@@ -183,7 +200,7 @@ var CCOps = function(){
 	for (var i in belongLHS){
 	    for (var j in belongRHS){
 		for (var rr in constraint.relationRules){
-		    if(!((constraint.relationRules[rr])(belongLHS[i],
+		    if(!((constraint.relationRules[rr].comp)(belongLHS[i],
 							belongRHS[j]))){
 			var conflict = new conflictObject([belongLHS[i].session, belongRHS[j].session], 
 							  constraint.type, 
