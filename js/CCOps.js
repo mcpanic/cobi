@@ -7,6 +7,16 @@ function SingleEntityConstraint(type, description, importance, rationale, entity
     this.type = type;
 }
 
+function EntityPairConstraint(type, description, importance, rationale, entity1Rules, entity2Rules, relationRules){
+    this.importance = importance;
+    this.rationale = rationale;
+    this.entity1Rules = entity1Rules;
+    this.entity2Rules = entity2Rules;
+    this.relationRules = relationRules;
+    this.description = description;
+    this.type = type;
+}
+
 function entityTrace(session, submission, author){
     this.session = session;
     this.submission = submission;
@@ -27,13 +37,38 @@ var CCOps = function(){
 						 [new Rule('submission', 
 							   function(x){ 
 							       return x.title.indexOf("Don") != -1
-							   })],
+							   }),
+// 						  new Rule('author', 
+// 							   function(x){
+// 							       return x.lastName == "Fu"
+// 							   })
+						 ],
 						 [new Rule('session',
 							   function (x){
-							       return x.time == '11:00-12:20';
+							       return x.time == '11:00-12:20'
+							   }),
+						  new Rule('session',
+							   function(x){ // assume a session, a submission, or an author
+							       return x.date != "Monday"
 							   })]);
+
+	var example2 = new EntityPairConstraint("pairEntity", 
+						"Authors whose first name is Dan should not be opposite each other",
+						100,
+						"because they should only have to be at one place at any given time",
+						[new Rule('author', function(x){ return x.firstName == "Dan"})],
+						[new Rule('author', function(x){ return x.firstName == "Dan"})],
+						[function(a, b){ // assume paths, check not opposing sessions
+						    return !((allSessions[a.session].time == allSessions[b.session].time) &&
+							     (allSessions[a.session].date == allSessions[b.session].date) && 
+							     (allSessions[a.session].room != allSessions[b.session].room));
+						}]);
+	console.log("Conflicts created by constraint 1");
 	console.log(checkConflicts(example));
+	console.log("Conflicts created by constraint 2");
+	console.log(checkPairConflicts(example2));
     }
+
     function equal(a, b){
 	return a == b;
     }
@@ -90,7 +125,7 @@ var CCOps = function(){
     }
 
     function belongs(rules){
-	var matches = {};
+	var matches = [];
 	var levels = groupRulesByLevel(rules);
 	for(var s in allSessions){
 	    var paths = generatePaths(s, levels);
@@ -100,9 +135,10 @@ var CCOps = function(){
 		if (legal[i]) legalPaths.push(paths[i]);
 	    }
 	    if(legalPaths.length > 0){
-		matches[s] = legalPaths;
+		matches = matches.concat(legalPaths);
 	    }
 	}
+//	console.log(matches);
 	return matches;
     }
 
@@ -135,27 +171,55 @@ var CCOps = function(){
 	}
 	return paths;
     }
+
+    function checkPairConflicts(constraint){
+	var violationsBySession = {};
+	var conflictList = [];
+	// 1. Get eligible LHS sessions
+	var belongLHS = belongs(constraint.entity1Rules);	
+	var belongRHS = belongs(constraint.entity2Rules);	
+	
+	// 2. Get eligible RHS sessions
+	for (var i in belongLHS){
+	    for (var j in belongRHS){
+		for (var rr in constraint.relationRules){
+		    if(!((constraint.relationRules[rr])(belongLHS[i],
+							belongRHS[j]))){
+			var conflict = new conflictObject([belongLHS[i].session, belongRHS[j].session], 
+							  constraint.type, 
+							  [belongLHS[i], belongRHS[j]],
+							  constraint.description);
+			conflictList.push(conflict);
+			break; 
+			// TODO: only record one form of violation per entities
+		    }
+		}
+	    }
+	}
+	return conflictList;
+    }
     
     function checkConflicts(constraint){
 	// TODO: explain why doesn't match
 	// assume single entity constraint
-	var violationsBySession = {};
 	// 1. Get eligible sessions
 	var belongList = belongs(constraint.entityRules);
 	
 	// 2. find all that violates constraint
-	for (s in belongList){
-	    var violations = violates(constraint.constraintObjectRules,
-				      belongList[s]); // paths
-	    if(violations.length > 0){
-		violationsBySession[s] = new conflictObject([s], 
-							    constraint.type, 
-							    violations, 
-							    constraint.description);
-	    }
+	var violations = violates(constraint.constraintObjectRules,
+				  belongList); // paths
+	var conflicts = [];
+	for(var i in violations){
+	    conflicts.push(new conflictObject([violations[i].session],
+					      constraint.type, 
+					      violations[i],
+					      constraint.description));
+
 	}
-	return violationsBySession;
+		
+	return conflicts;
     }
+    
     
     return {tester: tester,
 	    belongs: belongs,
