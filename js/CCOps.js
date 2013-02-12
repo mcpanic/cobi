@@ -17,6 +17,17 @@ function EntityPairConstraint(type, description, importance, rationale, entity1R
     this.type = type;
 }
 
+function EntityFilterPairConstraint(type, description, importance, rationale, entity1Rules, entity2Rules, filterRules, relationRules){
+    this.importance = importance;
+    this.rationale = rationale;
+    this.entity1Rules = entity1Rules;
+    this.entity2Rules = entity2Rules;
+    this.filterRules = filterRules;
+    this.relationRules = relationRules;
+    this.description = description;
+    this.type = type;
+}
+
 function entityTrace(session, submission, author){
     this.session = session;
     this.submission = submission;
@@ -59,36 +70,67 @@ var CCOps = function(){
 						[new Rule('author', function(x){ return x.firstName == "Dan"})],
 						[new Rule('author', function(x){ return x.firstName == "John"})],
 						[new Rule('session', function(a, b){ // assume paths, check not opposing sessions
-						    return !((allSessions[a.session].time == allSessions[b.session].time) &&
-							     (allSessions[a.session].date == allSessions[b.session].date) && 
-							     (allSessions[a.session].room != allSessions[b.session].room));
+						    return !((a.time == b.time) &&
+							     (a.date == b.date) &&
+							     (a.room != b.room));
 						})]);
+	
 
-
-	var example3 = new EntityPairConstraint("pairEntity", 
-						"Sessions with the same author should not be opposing",
-						100,
-						"because authors should only have to be at one place at any given time",
-						[new Rule('author', function(x){ return true})],
-						[new Rule('author', function(x){ return true})],
-						[new Rule('session', function(a, b){ // assume paths, check not opposing sessions
-						    return !((allSessions[a.session].time == allSessions[b.session].time) &&
-							     (allSessions[a.session].date == allSessions[b.session].date) && 
-							     (allSessions[a.session].room != allSessions[b.session].room) &&
-							     a.author == b.author);
-						})]);
+	var example3 = new EntityFilterPairConstraint("pairFilteredEntity", 
+						      "Sessions with the same author should not be opposing",
+						      100,
+						      "because authors should only have to be at one place at any given time",
+						      [new Rule('author', function(x){ return true})],
+						      [new Rule('author', function(x){ return true})],
+						      [new Rule('author', function(a, b){ return a.authorId == b.authorId })], 
+						      [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
+							  return !((a.time == b.time) &&
+								   (a.date == b.date) &&
+								   (a.room != b.room));
+						      })]);
 
 	console.log("Conflicts created by constraint 1");
 	console.log(checkConflicts(example));
 	console.log("Conflicts created by constraint 2");
 	console.log(checkPairConflicts(example2));
 	console.log("Conflicts created by constraint 3");
-	console.log(checkPairConflicts(example3));
+	console.log(checkFilteredPairConflicts(example3));
     }
 
     function equal(a, b){
 	return a == b;
     }
+
+    function pathRelates(levels, path1, path2){
+	// TODO: track where violations are happening
+	// check session level
+	for (var sessionRule in levels['session']){
+	    if(!(levels['session'][sessionRule].comp)(allSessions[path1.session], 
+						      allSessions[path2.session])){
+		return false;
+	    }
+	}
+	// check submission level
+	for(var submissionRule in levels['submission']){
+	    var comp = levels['submission'][submissionRule].comp;
+	    if(!comp(allSessions[path1.session].submissions[path1.submission],
+		     allSessions[path2.session].submissions[path2.submission])){
+		return false;
+	    }else{
+	    }
+	}
+	
+	// check author level 
+	for(var authorRule in levels['author']){
+	    if(!(levels['author'][authorRule].comp)(allSessions[path1.session].submissions[path1.submission].authors[path1.author],
+						    allSessions[path2.session].submissions[path2.submission].authors[path2.author])){
+		return false;
+	    }
+	}
+	
+	return true;
+    }
+    
     function pathBelongs(levels, path){
 	
 	// TODO: track where violations are happening
@@ -197,19 +239,43 @@ var CCOps = function(){
 	var belongRHS = belongs(constraint.entity2Rules);	
 	
 	// 2. Get eligible RHS sessions
+	var levels = groupRulesByLevel(constraint.relationRules);
 	for (var i in belongLHS){
 	    for (var j in belongRHS){
-		for (var rr in constraint.relationRules){
-		    if(!((constraint.relationRules[rr].comp)(belongLHS[i],
-							belongRHS[j]))){
-			var conflict = new conflictObject([belongLHS[i].session, belongRHS[j].session], 
-							  constraint.type, 
-							  [belongLHS[i], belongRHS[j]],
-							  constraint.description);
-			conflictList.push(conflict);
-			break; 
-			// TODO: only record one form of violation per entities
-		    }
+		if(!pathRelates(levels, 
+				belongLHS[i], 
+				belongRHS[j])){
+		    var conflict = new conflictObject([belongLHS[i].session, belongRHS[j].session], 
+						      constraint.type, 
+						      [belongLHS[i], belongRHS[j]],
+						      constraint.description);
+		    conflictList.push(conflict);
+		}
+	    }
+	}
+	return conflictList;
+    }
+
+    function checkFilteredPairConflicts(constraint){
+	var violationsBySession = {};
+	var conflictList = [];
+	// 1. Get eligible LHS sessions
+	var belongLHS = belongs(constraint.entity1Rules);	
+	var belongRHS = belongs(constraint.entity2Rules);	
+	
+	// 2. Get eligible RHS sessions
+	var levels = groupRulesByLevel(constraint.relationRules);
+	var filterLevels = groupRulesByLevel(constraint.filterRules);
+	
+	for (var i in belongLHS){
+	    for (var j in belongRHS){
+		if(pathRelates(filterLevels, belongLHS[i], belongRHS[j]) &&
+		   !pathRelates(levels, belongLHS[i], belongRHS[j])){
+		    var conflict = new conflictObject([belongLHS[i].session, belongRHS[j].session], 
+						      constraint.type, 
+						      [belongLHS[i], belongRHS[j]],
+						      constraint.description);
+		    conflictList.push(conflict);
 		}
 	    }
 	}
