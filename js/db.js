@@ -172,7 +172,7 @@ DB.prototype.addTransaction = function(t){
 DB.prototype.refresh = function(){
     // Traditional polling to check for changes
     (function poll(e){
-	console.log("polling with " + e.transactionId);
+//	console.log("polling with " + e.transactionId);
 	setTimeout(function(){
 		$.ajax({    url: "./php/loadDBtoJSONCompact.php",
 			    type: 'POST',
@@ -192,13 +192,13 @@ DB.prototype.refresh = function(){
 									    serverSlots, 
 									    serverTransactions);
 				    if(consistencyReport.isConsistent){
-					console.log("still consistent");
+	//				console.log("still consistent");
 				    }else{
 					//				    alert("there is an inconsistency in data!");
 				    }
 				}
 			    }else {
-				console.log("nothing changed");
+//				console.log("nothing changed");
 			    }
 			    poll((function(){
 				    if(transactions.length == 0){

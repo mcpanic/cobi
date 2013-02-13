@@ -75,7 +75,8 @@ while ($row = $entityTable->fetch_assoc()) {
 			  "email" => $author['email'],
 			  "firstName" => $author['givenName'],
 			  "lastName" => $author['familyName'],
-			  "middleName" => ""
+			  "middleName" => "",
+			  "authorId" => $authorKey
 			  );
       if(array_key_exists('role', $author)){
 	$authorData['role'] = $author['role'];
