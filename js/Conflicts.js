@@ -24,10 +24,10 @@ var Conflicts = function() {
      // Can be used both for individual sessions and entire rows
      function displayConflicts(conflicts, element){
           if (typeof conflicts === "undefined")
-               return;
-          element.html("");
-          var conflicts_array = conflicts.map(function(co) {return co.type});
-          
+              return;
+         element.html("");
+         var conflicts_array = conflicts.map(function(co) {return co.type});
+         
           // for each constraint, count and add a modal dialog with descriptions
           $.each(constraints_list, function(index, conflict){
                var filtered_array = conflicts_array.filter(function(x){return x==conflict.type});
