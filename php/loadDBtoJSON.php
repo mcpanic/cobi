@@ -127,7 +127,7 @@ while ($row = $sessionTable->fetch_assoc()) {
       }
     }
   }
-  if (empty($subs)) $subs = (object) null;
+  //  if (empty($subs)) $subs = (object) null;
   $row['submissions'] = $subs;
   $ses[$row['id']] = $row; 
   
