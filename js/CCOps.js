@@ -47,7 +47,7 @@ var CCOps = function(){
 						 "because it's my favorite time and I am a don",
 						 [new Rule('submission', 
 							   function(x){ 
-							       return x.title.indexOf("Don") != -1
+							       return Comp.stringStartsWith(x.title, "Don");
 							   }),
 // 						  new Rule('author', 
 // 							   function(x){
@@ -56,11 +56,11 @@ var CCOps = function(){
 						 ],
 						 [new Rule('session',
 							   function (x){
-							       return x.time == '11:00-12:20'
+							       return Comp.timeEquals(x.time, "11:00-12:20");
 							   }),
 						  new Rule('session',
 							   function(x){ // assume a session, a submission, or an author
-							       return x.date != "Monday"
+							       return !Comp.dateEquals(x.date, "Monday");
 							   })]);
 
 	var example2 = new EntityPairConstraint("pairEntity", 
@@ -85,16 +85,15 @@ var CCOps = function(){
 						      [new Rule('author', function(a, b){ return a.authorId == b.authorId })], 
 						      [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
 							  return !((a.time == b.time) &&
-								   (a.date == b.date) &&
-								   (a.room != b.room));
+								   (a.date == b.date) &&								   (a.room != b.room));
 						      })]);
 
 	console.log("Conflicts created by constraint 1");
-	console.log(checkConflicts(example));
+	console.log(example, checkConflicts(example));
 	console.log("Conflicts created by constraint 2");
-	console.log(checkPairConflicts(example2));
+	console.log(example2, checkPairConflicts(example2));
 	console.log("Conflicts created by constraint 3");
-	console.log(checkFilteredPairConflicts(example3));
+	console.log(example3, checkFilteredPairConflicts(example3));
     }
 
     function equal(a, b){

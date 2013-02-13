@@ -107,6 +107,8 @@ var Comp = function() {
 
     // v1 starts with v2
     function stringStartsWith(v1, v2){
+        // if (v1.indexOf(v2)===0)
+        //     console.log(v1, v2);
         return v1.indexOf(v2) === 0;
     }
 

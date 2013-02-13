@@ -28,6 +28,118 @@
 	 	return rooms;
      }
 
+
+function register(){
+    var mappingList = {
+        "session-has-award":{
+            name:"session-has-award",
+            level:"session",
+            key:"hasAward",
+            comp:Comp.booleanEquals,
+            display:"that include best papers",
+            hasValue:true
+        },
+        "session-has-honorable-mention":{
+            name:"session-has-honorable-mention",
+            level:"session",
+            key:"hasHonorableMention",
+            comp:Comp.booleanEquals,
+            display:"that include honorable mention papers",
+            hasValue:true
+        },
+        "session-title-is":{
+            name:"session-title-is",
+            level:"session",
+            key:"title",
+            comp:Comp.stringEquals,
+            display:"whose title is",
+            hasValue:true
+        },
+        "session-title-contains":{
+            name:"session-title-contains",
+            level:"session",
+            key:"title",
+            comp:Comp.stringContains,
+            display:"whose title contains",
+            hasValue:true
+        },
+        "session-title-starts-with":{
+            name:"session-title-starts-with",
+            level:"session",
+            key:"title",
+            comp:Comp.stringStartsWith,
+            display:"whose title starts with",
+            hasValue:true
+        },                
+        "session-persona-is":{
+            name:"session-persona-is",
+            level:"session",
+            key:"persona",
+            comp:Comp.stringEquals,
+            display:"whose persona is",
+            hasValue:true
+        },
+        "session-community-is":{
+            name:"session-community-is",
+            level:"session",
+            key:"persona",
+            comp:Comp.stringEquals,
+            display:"whose community is",
+            hasValue:true
+        },        
+        "session-venue-is":{
+            name:"session-venue-is",
+            level:"session",
+            key:"venue",
+            comp:Comp.stringEquals,
+            display:"whose type is",
+            hasValue:true
+        },        
+        "session-venue-is-regular":{
+            name:"session-venue-is-regular",
+            level:"session",
+            key:"venue",
+            comp:Comp.sessionTypeRegular,
+            display:"that contain papers and notes",
+            hasValue:false
+        }, 
+        "session-venue-is":{
+            name:"session-venue-is",
+            level:"session",
+            key:"venue",
+            comp:Comp.sessionTypeSpecial,
+            display:"that are non-paper sessions (course, panel, SIG, ...)",
+            hasValue:false
+        }, 
+        "session-duration-full":{
+            name:"session-duration-full",
+            level:"session",
+            key:"duration",
+            comp:Comp.numEquals,
+            display:"that are fully scheduled",
+            hasValue:false
+        },   
+        "session-duration-over":{
+            name:"session-duration-over",
+            level:"session",
+            key:"duration",
+            comp:Comp.numGreaterThan,
+            display:"that are over-scheduled",
+            hasValue:false
+        }, 
+        "session-duration-under":{
+            name:"session-duration-under",
+            level:"session",
+            key:"duration",
+            comp:Comp.numLessThan,
+            display:"that are under-scheduled",
+            hasValue:false
+        },                                       
+    };
+    console.log(mappingList);
+}
+
+
 function display(){
 
           console.log(entities);
@@ -146,7 +258,7 @@ function display(){
 }
 
 
-     $(document).ready(function() {
+    $(document).ready(function() {
 
         $("body").addClass("loading"); 
         // Statusbar.initialize(); 
@@ -154,8 +266,10 @@ function display(){
         // triggered once initialize is complete
         // initialize() is async, thus the bind
         $(document).bind("fullyLoaded", function(){
-            display();
             Comp.initialize();
+            CCOps.tester();
+            display();
+            register();
             // displayScheduled();
             // displayUnscheduled();
             // Sidebar.initialize(); 
