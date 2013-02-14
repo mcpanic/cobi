@@ -703,7 +703,7 @@
           // Main content
           $.each(orderedDates, function(index, date){
             
-            var orderedTimes = keys(schedule[date]).sort(function(a,b) {return a - b;});
+              var orderedTimes = keys(schedule[date]).sort(function(a,b) {return a.split(":")[0] - b.split(":")[0];});
 
             $.each(orderedTimes, function(index2, time){
                 // add an extra row for daily borders

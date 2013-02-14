@@ -98,6 +98,12 @@ function isScheduled($id, $mysqli){
   }
 }
 
+function editSessionTitle($title, $id, $mysqli){
+  $query = "UPDATE session SET title='$title' WHERE id='$id'";
+  mysqli_query($mysqli, $query);
+  echo mysqli_error($mysqli);
+}
+
 function unscheduleSession($date, $time, $room, $id, $mysqli){
   if(sessionIsInSlot($date, $time, $room, $id, $mysqli)){
     // remove the session from the schedule
@@ -523,6 +529,11 @@ if(getLock($mysqli) != 1){
     $time = mysqli_real_escape_string($mysqli, $transaction['data']['time']);
     $room = mysqli_real_escape_string($mysqli, $transaction['data']['room']);
     lockSlot($date, $time, $room, $mysqli);
+    break;
+  case "editSessionTitle":
+    $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
+    $title = mysqli_real_escape_string($mysqli, $transaction['data']['title']);
+    editSessionTitle($title, $id, $mysqli);
     break;
   case "unschedule":
     $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
