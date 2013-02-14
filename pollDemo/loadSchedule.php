@@ -35,7 +35,7 @@ $scheduleTable = mysqli_query($mysqli, $scheduleQ);
 echo mysqli_error($mysqli);
 
 // Get unscheduled sessions
-$sessionUQ = "select * from session where scheduled=0"; 
+$sessionUQ = "select id,submissions,title from session where scheduled=0"; 
 $sessionUnscheduledTable = mysqli_query($mysqli, $sessionUQ);
 echo mysqli_error($mysqli);
 
@@ -57,7 +57,7 @@ while ($row = $entityUnscheduledTable->fetch_assoc()) {
 }
 
 // Get the session table with submissions only
-$sessionQ = "select id,submissions from session"; 
+$sessionQ = "select id,title,submissions from session"; 
 $sessionTable = mysqli_query($mysqli, $sessionQ);
 echo mysqli_error($mysqli);
 
@@ -74,6 +74,7 @@ while ($row = $sessionTable->fetch_assoc()) {
 
   //  if (empty($subs)) $subs = (object) null;
   $row['submissions'] = $subs;
+  $sessions[$row['id']] = $row['title'];
   $ses[$row['id']] = $row; 
 }
 
@@ -94,7 +95,8 @@ while ($row = $transTable->fetch_assoc()) {
   array_unshift($transactions, $row);
 }
 
-$output = array('schedule' => $schedule, 
+$output = array('sessions' => $sessions,
+		'schedule' => $schedule, 
 		'unscheduled' => (object)$unscheduled,
 		'unscheduledSubmissions' => (object)$unscheduledSubmissions,
 		'slots' => $slots,
