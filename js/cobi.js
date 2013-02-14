@@ -98,6 +98,9 @@ var DataOps = function() {
 	case 'unlock':
 	    unlockSlot(t.data.date, t.data.time, t.data.room);
 	    break;
+	case 'editSessionTitle':
+	    editSessionTitle(allSessions[t.data.id], t.data.title);
+	    break;
 	case 'unschedule':
 	    // first check if session is actually there?
 	    unscheduleSession(allSessions[t.data.id]);
@@ -233,6 +236,10 @@ var DataOps = function() {
 	// todo doesn't deal with endTime
     }
     
+    function editSessionTitle(s, t){
+	s.title = t;
+    }
+
     function addToUnscheduled(s){
 //	console.log("Test: adding session " + s.id + " to unscheduled list.");
 	unscheduled[s.id] = s;
@@ -376,6 +383,9 @@ var DataOps = function() {
     }
 
     function isLocked(s1){
+	if(s1.id in unscheduled){
+	    return false;
+	} 
 	var s1date = s1.date;
 	var s1time = s1.time;
 	var s1room = s1.room;
@@ -685,6 +695,20 @@ function unlockSlot(date, time, room){
 				'lock',
 				tp);
     Transact.addTransaction(t);		
+}
+
+// changing the session title
+function editSessionTitle(s, t){
+    var td = { 'id': s.id,
+	       'title': t };
+    var tp = { 'id': s.id,
+	       'title': s.title};
+    var t = new TransactionData(userData.id,
+				'editSessionTitle',
+				td,
+				'editSessionTitle',
+				tp);
+    Transact.addTransaction(t);
 }
 
 // Unschedule a session

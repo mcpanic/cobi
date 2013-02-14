@@ -3,6 +3,7 @@ var unscheduled = null; // the unscheduled sessions
 var unscheduledSubmissions = null; // the unscheduled papers/submissions
 var scheduleSlots = null; // which slots are locked
 var transactions = []; // transaction records
+var sessions = null;
 
 $(document).ready(function() {
     loadSchedule();
@@ -21,7 +22,7 @@ function loadSchedule(){
 	    unscheduledSubmissions = m['unscheduledSubmissions'];
 	    scheduleSlots = m['slots'];
 	    transactions = m['transactions'];
-
+	    sessions = m['sessions'];
 	    displaySchedule();
 	    keepRefreshing(); // polls and displays changes as they are made
 	},
@@ -44,7 +45,7 @@ function displaySchedule(){
 		    $('#debug').append(day + ", " + time + ", " + room + ": empty.<br/>");
  		}
 		for(var s in schedule[day][time][room]){
-		    $('#debug').append(day + ", " + time + ", " + room + ", " + s + ": ");
+		    $('#debug').append(day + ", " + time + ", " + room + ", " + s + ", " + schedule[day][time][room][s]['title'] +": ");
 		    $('#debug').append(schedule[day][time][room][s]['submissions'] + '<br/>');
 
 		}}}}
@@ -52,7 +53,7 @@ function displaySchedule(){
     // demonstrating how to traverse the unscheduled data
     $('#debug').append('<br/>Unscheduled sessions:<br/>');
     for(var item in unscheduled){
-	$('#debug').append(item + "<br/>");
+	$('#debug').append(item + ", " + unscheduled[item]['title'] + "<br/>");
     }
     // demonstrating how to traverse the unscheduled submissions data
     $('#debug').append('<br/>Unscheduled submissions:<br/>');
@@ -91,7 +92,7 @@ var keepRefreshing = function(){
     (function poll(e){
 	console.log("polling with " + e.transactionId);
 	setTimeout(function(){
-	    $.ajax({    url: "http://people.csail.mit.edu/hqz/cobi/pollDemo/loadSchedule.php",
+	    $.ajax({     url: "http://people.csail.mit.edu/hqz/cobi/pollDemo/loadSchedule.php",
 			type: 'POST',
 			data: {lastId: e.transactionId},   
 			success: function(m){
@@ -102,17 +103,20 @@ var keepRefreshing = function(){
 				var serverSlots = m['slots'];
 				var serverTransactions = m['transactions'];
 				var serverUnscheduledSubmissions = m['unscheduledSubmissions'];
+				var serverSessions = m['sessions'];
 				console.log("database unlocked: " + m['dbLocked']);
 				var changes = detectChanges(serverSchedule, 
 							    serverUnscheduled,
 							    serverUnscheduledSubmissions,
 							    serverSlots, 
-							    serverTransactions);
+							    serverTransactions,
+							    serverSessions);
 				makeChanges(serverSchedule, 
 					    serverUnscheduled,
 					    serverUnscheduledSubmissions,
 					    serverSlots, 
-					    serverTransactions);
+					    serverTransactions,
+					    serverSessions);
 				handleChangesInView(changes);
 			    }
 			    poll((function(){
@@ -174,6 +178,13 @@ function handleChangesInView(changes){
 	}
     }
 
+    if(changes.titleChange.length > 0){
+	$('#debug').append("session title change: " + "<br/>");
+	for(change in changes.titleChange){
+	    $('#debug').append(JSON.stringify(changes.titleChange[change]) + "<br/>");
+	}
+    }
+
     if(changes.lockChange.length > 0){
 	$('#debug').append("lock change: " + "<br/>");
 	for(change in changes.lockChange){
@@ -193,7 +204,7 @@ function handleChangesInView(changes){
 }
 
 // Updates current data with latest from the server
-function makeChanges(serverSchedule, serverUnscheduled, serverUnscheduledSubmissions, serverSlots, serverTransactions){
+function makeChanges(serverSchedule, serverUnscheduled, serverUnscheduledSubmissions, serverSlots, serverTransactions, serverSessions){
     // add new transactions
     for(var i = 0; i < serverTransactions.length; i++){
 	transactions.push(serverTransactions[i]);
@@ -203,13 +214,15 @@ function makeChanges(serverSchedule, serverUnscheduled, serverUnscheduledSubmiss
     unscheduled = serverUnscheduled;
     unscheduledSubmissions = serverUnscheduledSubmissions;
     scheduleSlots = serverSlots;
+    sessions = serverSessions;
 }
 
 // Look for where the changes have been made
-function detectChanges(serverSchedule, serverUnscheduled, serverUnscheduledSubmissions, serverSlots, serverTransactions){
+function detectChanges(serverSchedule, serverUnscheduled, serverUnscheduledSubmissions, serverSlots, serverTransactions, serverSessions){
     var scheduleChange = [];
     var sessionChange = [];
     var lockChange = [];
+    var titleChange = [];
     var unscheduledChange = false;
     var unscheduledSubmissionsChange = false;
     
@@ -245,6 +258,11 @@ function detectChanges(serverSchedule, serverUnscheduled, serverUnscheduledSubmi
 	}
     }
     
+    for(var i in sessions){
+	if(sessions[i] != serverSessions[i]){
+	    titleChange.push({'id': i});
+	}
+    }
     if(!arraysEqual(keys(unscheduled).sort(),  keys(serverUnscheduled).sort())){
 	// trigger a change in unscheduled data
 	unscheduledChange = true;
@@ -260,7 +278,8 @@ function detectChanges(serverSchedule, serverUnscheduled, serverUnscheduledSubmi
 	     sessionChange: sessionChange,
 	     lockChange: lockChange,
 	     unscheduledChange: unscheduledChange,
-	     unscheduledSubmissionsChange: unscheduledSubmissionsChange
+	     unscheduledSubmissionsChange: unscheduledSubmissionsChange,
+	     titleChange: titleChange
 	   };
 }
 
