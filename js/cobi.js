@@ -1914,6 +1914,19 @@ function proposeSessionForPaper(p){
 	    }
 	}
     }
+
+    for(var session in unscheduled){
+	if ((unscheduled[session]["venue"] == p.type ||
+	     (p.type == "TOCHI" && unscheduled[session]["venue"] == "paper")) && 
+	    (p.id in unscheduledSubmissions || p.session != session)){
+	    	swapValue.push(new swapDetails(new sessionPaper(session, null),
+						       0,
+						       null,
+						       null,
+						       null,
+						       null));
+	}
+    }
     return swapValue;
 }
 
