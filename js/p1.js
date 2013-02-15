@@ -1,4 +1,36 @@
 
+    // popover title update
+    // $('body').on('focus', '[contenteditable]', function() {
+    //     var $this = $(this);
+    //     $this.attr('data-before', $this.html());
+    //     return $this;
+    // }).on('blur keyup paste', '[contenteditable]', function() {
+    //     var $this = $(this);
+    //     // if ($this.attr('data-before') !== $this.html()) {
+    //     //     $this.attr('data-before', $this.html());
+    //     //     $this.trigger('change');
+    //     // }
+    //     return $this;
+    // });
+
+    $("body").on("click", ".popover-inner .save-button", function(){
+        var $text = $(this).closest(".popover-inner").find("[contenteditable]")
+        if ($(this).html() == "edit") {
+            $text.attr("contenteditable", true);
+            $(this).html("save");
+        } else {            
+            $text.attr("contenteditable", false);
+            $(this).html("edit");
+            var id = $(this).attr("data-session-id");
+            console.log("change", id, $text.html());
+            if (typeof id !== "undefined"){
+                editSessionTitle(allSessions[id], $text.html());    
+            }
+            
+        }
+    });
+
+
     // Popover close button interaction
     $("body").on("click", ".popover-close", function(){
         // console.log("popover-close", $(this).attr("data-session-id"));
@@ -270,6 +302,7 @@
             $(element).addClass("submission").attr("id", submission.id);
             $("<span/>").addClass("reorder-icon").appendTo($(element));
             $("<span/>").addClass("submission-type").html(stype).appendTo($(element));
+            $("<span/>").addClass("submission-id").html(submission.id).appendTo($(element));
             if (submission.bestPaperAward)
                     $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
                 if (submission.bestPaperNominee)
@@ -333,6 +366,7 @@
             $(element).addClass("submission").attr("id", submission.id)
             $("<span/>").addClass("reorder-icon").appendTo($(element));
             $("<span/>").addClass("submission-type").html(stype).appendTo($(element));
+            $("<span/>").addClass("submission-id").html(submission.id).appendTo($(element));
             if (submission.bestPaperAward)
                 $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
             if (submission.bestPaperNominee)
@@ -399,6 +433,7 @@
                 $(element).addClass("submission").attr("id", submission.id);
                 $("<span/>").addClass("reorder-icon").appendTo($(element));
                 $("<span/>").addClass("submission-type").html(stype).appendTo($(element));
+                $("<span/>").addClass("submission-id").html(submission.id).appendTo($(element));
                 if (submission.bestPaperAward)
                     $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
                 if (submission.bestPaperNominee)
@@ -431,6 +466,7 @@
                 $(element).addClass("submission").attr("id", submission.id);
                 $("<span/>").addClass("reorder-icon").appendTo($(element));
                 $("<span/>").addClass("submission-type").html(stype).appendTo($(element));
+                $("<span/>").addClass("submission-id").html(submission.id).appendTo($(element));
                 if (submission.bestPaperAward)
                     $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
                 if (submission.bestPaperNominee)
@@ -462,6 +498,7 @@
                 $(element).addClass("submission").attr("id", submission.id);
                 $("<span/>").addClass("reorder-icon").appendTo($(element));
                 $("<span/>").addClass("submission-type").html(stype).appendTo($(element));
+                $("<span/>").addClass("submission-id").html(submission.id).appendTo($(element));
                 if (submission.bestPaperAward)
                     $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
                 if (submission.bestPaperNominee)
@@ -703,8 +740,7 @@
           // Main content
           $.each(orderedDates, function(index, date){
             
-              var orderedTimes = keys(schedule[date]).sort(function(a,b) {return a.split(":")[0] - b.split(":")[0];});
-
+            var orderedTimes = keys(schedule[date]).sort(function(a,b) {return a.split(":")[0] - b.split(":")[0];});
             $.each(orderedTimes, function(index2, time){
                 // add an extra row for daily borders
                 if (index2 == 0) {

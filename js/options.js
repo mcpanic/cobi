@@ -13,18 +13,20 @@ var constraints_list = [
 	}	
 ];
 
-var communities_list = [
-{"label": "design", "color": "#9edae5"},
-{"label": "engineering", "color": "#9edae5"},
-{"label": "management", "color": "#9edae5"},
-{"label": "user experience", "color": "#9edae5"},
-{"label": "child-computer interaction", "color": "#9edae5"},
-{"label": "digital arts", "color": "#9edae5"},
-{"label": "games & entertainment", "color": "#9edae5"},
-{"label": "health", "color": "#9edae5"},
-{"label": "sustainability", "color": "#9edae5"},
-{"label": "HCI4D", "color": "#9edae5"}
-];
+// var communities_list = [
+// {"label": "design", "color": "#9edae5"},
+// {"label": "engineering", "color": "#9edae5"},
+// {"label": "management", "color": "#9edae5"},
+// {"label": "user experience", "color": "#9edae5"},
+// {"label": "child-computer interaction", "color": "#9edae5"},
+// {"label": "digital arts", "color": "#9edae5"},
+// {"label": "games & entertainment", "color": "#9edae5"},
+// {"label": "health", "color": "#9edae5"},
+// {"label": "sustainability", "color": "#9edae5"},
+// {"label": "HCI4D", "color": "#9edae5"}
+// ];
+
+var sessionTypeList = ["paper", "casestudy", "panel", "course", "SIG", "altchi", "special", "bof", "unavailable"];
 
 var typeDisplayList = {
 	lock: "locked slot",
@@ -34,6 +36,7 @@ var typeDisplayList = {
 	swap: "swapped session",
 	move: "moved session",
 	swapWithUnscheduled: "swapped with unscheduled",
+	editSessionTitle: "edited session title",
 	reorderPapers: "reordered papers",
 	unschedulePaper: "unscheduled paper",
 	schedulePaper: "scheduled paper",
@@ -42,7 +45,50 @@ var typeDisplayList = {
 	swapWithUnscheduledPaper: "swapped with unscheduled paper"
 }
 
+    var dateList = {
+        "Saturday": 0,
+        "Sunday": 1,
+        "Monday": 2,
+        "Tuesday": 3,
+        "Wednesday": 4,
+        "Thursday": 5,
+        "Friday": 6
+    };
 
+    var timeList = {
+        "9:00-10:20": 0, 
+        "11:00-12:20": 1, 
+        "14:00-15:20": 2, 
+        "16:00-17:20": 3
+    };
+
+    var roomList = {
+        "221/221M": {floor: "2", size: "", type: ""},
+        "241": {floor: "2", size: "", type: ""},
+        "242A": {floor: "2", size: "", type: ""},
+        "242B": {floor: "2", size: "", type: ""},
+        "243":  {floor: "2", size: "", type: ""},
+        "251":  {floor: "2", size: "", type: ""},
+        "252A": {floor: "2", size: "", type: ""},
+        "252B": {floor: "2", size: "", type: ""},
+        "253": {floor: "2", size: "", type: ""},
+        "342A": {floor: "3", size: "", type: ""},
+        "343": {floor: "3", size: "", type: ""},
+        "351": {floor: "3", size: "", type: ""},
+        "352AB": {floor: "3", size: "", type: ""},
+        "361": {floor: "3", size: "", type: ""},
+        "362/363": {floor: "3", size: "", type: ""},
+        "Blue": {floor: "2", size: "", type: ""},
+        "Bordeaux": {floor: "2", size: "", type: ""},
+        "Havane": {floor: "2", size: "", type: ""}
+    };
+
+    var roomTypeList = ["Amphitheater", "Theater", "Classroom", "Conference"];
+    var sessionTypeList = ["paper", "course", "special", "panel", "casestudy", "SIG", "bof", "altchi"];
+    var submissionTypeList = ["paper", "TOCHI", "course", "panel", "casestudy", "SIG"];
+
+    var submissionOrderList = ["first", "second (if exists)", "third (if exists)", "fourth (if exists)", "last"];
+    var authorRoleList = ["presenter", "backup presenter"];
 /*
 var personas_list = [
 {"id": "uist", "label": "UIST", "color": "#443266"},
@@ -52,7 +98,7 @@ var personas_list = [
 {"id": "ict4d", "label": "ICT4D", "color": "#008888"}
 ];
 */
-var options_list = [
+var optionsList = [
 {"id": "conflicts", "label": "Conflicts"}, 
 {"id": "session-type", "label": "Session Type"}, 
 //{"id": "popularity", "label": "Popularity"}, 

@@ -108,9 +108,9 @@ var MoveMode = function() {
                         + "data-date='"+$(this).attr("data-date")+"' data-time='"+$(this).attr("data-time")+"' data-room='"+$(this).attr("data-room")
                         + "' href='#''>&times;</a>";
                 else
-                    return "<strong>[" + session.venue + "] " + session.title + "</strong> "                       
-                        + "<a class='close popover-close' data-dismiss='clickover' data-session-id='" + id 
-                        + "' href='#''>&times;</a>";
+                    return "<strong>[" + session.venue + "] " + id + ". <span contenteditable='false'>" + session.title + "</span></strong> "                       
+                        + "<a class='close popover-close' data-dismiss='clickover' data-session-id='" + id + "' href='#''>&times;</a>"
+                        + "<a class='save-button pull-right' data-session-id='" + id + "' href='#''>edit</a>";
             },
             content:function(){
                 //var id = $(this).data("session-id");
@@ -193,7 +193,7 @@ var MoveMode = function() {
                         + "data-date='"+$(this).attr("data-date")+"' data-time='"+$(this).attr("data-time")+"' data-room='"+$(this).attr("data-room")
                         + "' href='#''>&times;</a>";
                 else
-                    return "<strong>[" + submissionType + "]</strong> " + submission.title                         
+                    return "<strong>[" + submissionType + "]</strong> " + id + ". " + submission.title                         
                         + "<a class='close popover-close' data-dismiss='clickover' data-session-id='" + id 
                         + "' href='#''>&times;</a>";            
            },

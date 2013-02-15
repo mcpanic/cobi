@@ -68,16 +68,16 @@ var CCOps = function(){
 						 "because it's my favorite time and I am a don",
 						 [new Rule('submission', 
 							   function(x){ 
-							       return x.title.indexOf("Don") != -1
+							       return Comp.stringStartsWith(x.title, "Don");
 							   }),
 						 ],
 						 [new Rule('session',
 							   function (x){
-							       return x.time == '11:00-12:20'
+							       return Comp.timeEquals(x.time, "11:00-12:20");
 							   }),
 						  new Rule('session',
 							   function(x){ // assume a session, a submission, or an author
-							       return x.date != "Monday"
+							       return !Comp.dateEquals(x.date, "Monday");
 							   })]);
 	
 	var example2 = new EntityPairConstraint("danjohn",
@@ -180,8 +180,7 @@ var CCOps = function(){
 						      [new Rule('author', function(a, b){ return a.authorId == b.authorId })], 
 						      [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
 							  return !((a.time == b.time) &&
-								   (a.date == b.date) &&
-								   (a.room != b.room));
+								   (a.date == b.date) &&								   (a.room != b.room));
 						      })]);
 
 	var generated = $.now();
@@ -192,14 +191,6 @@ var CCOps = function(){
 	for(var i in results){
  	    console.log(results[i].conflict[0].author + ", " + results[i].conflict[0].session + ", " + results[i].conflict[0].submission + ", " + allSessions[results[i].conflict[0].session].date + ", " + allSessions[results[i].conflict[0].session].time + ", " + allSessions[results[i].conflict[0].session].room + ", " + results[i].conflict[1].author + ", " + results[i].conflict[1].session + ", " + results[i].conflict[1].submission + ", " + allSessions[results[i].conflict[1].session].date + ", " + allSessions[results[i].conflict[1].session].time + ", " + allSessions[results[i].conflict[1].session].room);
 	}
-	
-	
-	console.log("Conflicts created by constraint 1");
-	console.log(checkSingleConflicts(example));
-	console.log("Conflicts created by constraint 2");
-	console.log(checkPairConflicts(example2));
-	console.log("Conflicts created by constraint 3");
-	console.log(checkFilteredPairConflicts(example3));
 	
 // 	console.log("time to check: " + ($.now() - generated));
  	updateConstraintEntities(['s288', 's204'], example);

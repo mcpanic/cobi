@@ -57,7 +57,7 @@ var Searchbox = function() {
         var curDist = 10000;
         var curIndex = -1;
         var success = false;
-        for (var i=0; i<t.length-len; i++){
+        for (var i=0; i<t.length-len+1; i++){
             var dist = StringDist.levenshtein(t.substr(i, len), q);
             if (dist <= threshold && curDist > dist){
                 success = true;
@@ -88,8 +88,16 @@ var Searchbox = function() {
             //console.log(session.id, session.title);
             var t = session.title.toLowerCase();
             result = runDist(t,q);
-            if (result.success)
-                sessionData.children.push({id: session.id, text: session.title, authors: "", match: "title", index: result.index, dist: result.dist, q:q});                  
+
+            // id matching
+            var id = session.id.toLowerCase();
+            var index = id.indexOf(q);
+
+            if (index !== -1)                
+                sessionData.children.push({id: session.id, text: id + " " + session.title, authors: "", match: "id", index: index, dist: 0, q:q});  
+            else if (result.success)
+                sessionData.children.push({id: session.id, text: id + " " + session.title, authors: "", match: "title", index: result.index, dist: result.dist, q:q});  
+            
         });
         $.each(allSubmissions, function(index, submission){
             var isMatch = false;
@@ -97,11 +105,19 @@ var Searchbox = function() {
             var authors = displayAuthors(submission.authors); //.replace(/,/g,'');
             result = runDist(t, q);
             var text = "<strong>" + submission.title + "</strong><br>" + authors;
-            if (result.success)
-                submissionData.children.push({id: submission.id, text: text, authors: authors, match: "title", index: result.index, dist: result.dist, q:q});  
+            
+
+            // id matching
+            var id = submission.id.toLowerCase();
+            var index = id.indexOf(q);
+
+            if (index !== -1)                
+                sessionData.children.push({id: submission.id, text: id + " " + text, authors: authors, match: "id", index: index, dist: 0, q:q});  
+            else if (result.success)
+                submissionData.children.push({id: submission.id, text: id + " " + text, authors: authors, match: "title", index: result.index, dist: result.dist, q:q});  
             result = runDist(authors.toLowerCase(), q);
             if (result.success)
-                submissionData.children.push({id: submission.id, text: text, authors: authors, match: "authors", index: result.index, dist: result.dist, q:q});  
+                submissionData.children.push({id: submission.id, text: id + " " + text, authors: authors, match: "authors", index: result.index, dist: result.dist, q:q});  
             
             //console.log(submission.id, authors, submission.title);
             

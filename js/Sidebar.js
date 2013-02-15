@@ -4,6 +4,7 @@ var Sidebar = function() {
      function initialize(){
           displayConstraints();
           displayViewOptions();
+          displaySessionTypes(); 
           displayPersonas();  
           displayCommunities();
           displayHistory();
@@ -18,8 +19,13 @@ var Sidebar = function() {
 
      // Display counts for each community and persona
      function addCount(){
+          var sessionTypeCount = {};
           var personaCount = {};
           var communityCount = {};
+          $.each(sessionTypeList, function(index, item){
+               sessionTypeCount[item] = 0;
+          });
+
           $.each(personaList, function(index, item){
                personaCount[item] = 0;
           });
@@ -31,6 +37,10 @@ var Sidebar = function() {
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];    
+               $.each(sessionTypeList, function(index, key){
+                    if (session.venue != "" && key.indexOf(session.venue) != -1)
+                         sessionTypeCount[key]++;
+               });               
                $.each(personaList, function(index, key){
                     if (session.personas != "" && key.indexOf(session.personas) != -1)
                          personaCount[key]++;
@@ -40,6 +50,11 @@ var Sidebar = function() {
                });
           });  
 
+          $("#list-session-types li").each(function(){
+               var type = $(this).attr("data-type");
+               if (typeof sessionTypeCount[type] != "undefined")
+                    $(this).find(".count").html(sessionTypeCount[type]);                
+          });
           $("#list-personas li").each(function(){
                var type = $(this).attr("data-type");
                if (typeof personaCount[type] != "undefined")
@@ -56,6 +71,8 @@ var Sidebar = function() {
      function bindEvents(){
           $("#list-constraints").on("click", "li a", clickConstraintsHandler);          
           $("#list-view-options").on("click", "li a", clickViewOptionsHandler);
+          $("#list-session-types").on("click", "li a", clickSessionTypesHandler);
+          $("#list-session-types").on("click", ".myCheckbox", clickCheckboxSessionTypesHandler);           
           $("#list-personas").on("click", "li a", clickPersonasHandler);
           $("#list-personas").on("click", ".myCheckbox", clickCheckboxPersonasHandler); 
           $("#list-communities").on("click", "li a", clickCommunitiesHandler);
@@ -225,6 +242,15 @@ var Sidebar = function() {
           return options;
      }
 
+     // function _resetSidebarSelections(){
+     //      _toggleAllCheckboxes($("#list-session-types"), false);
+     //      _toggleAllCheckboxes($("#list-personas"), false);
+     //      _toggleAllCheckboxes($("#list-communities"), false);
+     //      $(".slot.cell-session-type").removeClass("cell-session-type");
+     //      $(".slot.cell-persona").removeClass("cell-persona");
+     //      $(".slot.cell-community").removeClass("cell-community");          
+     // }
+
      function _toggleAllConflicts(toggle){
           $("#list-constraints li").each(function(index, constraint){
                Conflicts.updateConstraintBackground($(constraint).attr("data-type"), toggle);         
@@ -234,10 +260,14 @@ var Sidebar = function() {
      function clickConstraintsHandler(){
           var $this = $(this);
           var toggle = true;
+          // _resetSidebarSelections();
+          _toggleAllCheckboxes($("#list-session-types"), false);
           _toggleAllCheckboxes($("#list-personas"), false);
           _toggleAllCheckboxes($("#list-communities"), false);
+          $(".slot.cell-session-type").removeClass("cell-session-type");
           $(".slot.cell-persona").removeClass("cell-persona");
-          $(".slot.cell-community").removeClass("cell-community");
+          $(".slot.cell-community").removeClass("cell-community");   
+          
 
           if ($(this).parent().hasClass("view-option-active"))
                toggle = false;
@@ -295,10 +325,17 @@ var Sidebar = function() {
                          var id = $(item).attr("id").substr(8);
                          var session = allSessions[id];
                          var duration = getSessionDuration(session);
-                         if (duration != 80)
-                              $(item).find(".display").html("<strong>" + duration + "</strong>");
-                         else
-                              $(item).find(".display").html(duration);
+                         var $duration = $("<span/>").addClass("duration").html(duration);
+                         if (duration > 80)
+                              $duration.addClass("duration-overtime");
+                         else if (duration == 80)
+                              $duration.addClass("duration-full");
+                         else if (duration == 0)
+                              $duration.addClass("duration-none");
+                         else 
+                              $duration.addClass("duration-undertime");
+
+                         $(item).find(".display").html($duration);
 			});
                break;
                case "awards":
@@ -350,17 +387,67 @@ var Sidebar = function() {
           return false;     
      }
 
+
+     function clickCheckboxSessionTypesHandler(){
+          console.log("click session types");
+          $(this).parent().find("a").trigger("click");
+     }
+     
+     function clickSessionTypesHandler(event){
+          var $this = $(this);
+          // _resetSidebarSelections();
+          // _toggleAllCheckboxes($("#list-session-types"), false);
+          _toggleAllCheckboxes($("#list-personas"), false);
+          _toggleAllCheckboxes($("#list-communities"), false);
+          // $(".slot.cell-session-type").removeClass("cell-session-type");
+          $(".slot.cell-persona").removeClass("cell-persona");
+          $(".slot.cell-community").removeClass("cell-community");   
+          _toggleAllConflicts(false);
+
+          if ($this.parent().hasClass("view-option-active")) {
+               $this.parent().removeClass("view-option-active");
+               $this.parent().find(".myCheckbox").prop("checked", false);
+          } else {
+               $this.parent().addClass("view-option-active");
+               $this.parent().find(".myCheckbox").prop("checked", true);
+          }
+
+          var className = "cell-session-type";
+          
+          // get current selections. allowing multiple selections. 
+          var selections = [];
+          $("#list-session-types li a").each(function(){
+               if ($(this).parent().hasClass("view-option-active")) {
+                    selections.push($(this).parent().attr("data-type"))
+               }
+          });
+
+          $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+               if (isSpecialCell($(item)))
+                    return;
+               $(item).removeClass(className);
+               var id = $(item).attr("id").substr(8);
+               var session = allSessions[id];     
+               if (selections.indexOf(session.venue) != -1){
+                    $(item).addClass(className);
+               }
+          });
+         return false;
+     }
+
      function clickCheckboxPersonasHandler(){
           $(this).parent().find("a").trigger("click");
      }
      
      function clickPersonasHandler(event){
           var $this = $(this);
-          _toggleAllCheckboxes($("#list-constraints"), false);
-          _toggleAllCheckboxes($("#list-communities"), false);  
+          _toggleAllCheckboxes($("#list-session-types"), false);
+          // _toggleAllCheckboxes($("#list-personas"), false);
+          _toggleAllCheckboxes($("#list-communities"), false);
+          $(".slot.cell-session-type").removeClass("cell-session-type");
+          // $(".slot.cell-persona").removeClass("cell-persona");
+          $(".slot.cell-community").removeClass("cell-community");   
           _toggleAllConflicts(false);        
-          $(".slot.cell-persona").removeClass("cell-persona");
-          $(".slot.cell-community").removeClass("cell-community");
 
           if ($this.parent().hasClass("view-option-active")) {
                $this.parent().removeClass("view-option-active");
@@ -373,12 +460,11 @@ var Sidebar = function() {
           var className = "cell-persona";
 
           // get current selections. allowing multiple selections. 
-          var selected_personas = [];
+          var selections = [];
           $("#list-personas li a").each(function(){
                if ($(this).parent().hasClass("view-option-active")) {
-                    selected_personas.push($(this).parent().attr("data-type"))
+                    selections.push($(this).parent().attr("data-type"))
                }
-                    //arr.splice(arr.indexOf('specific'), 1);
           });
           
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
@@ -388,16 +474,9 @@ var Sidebar = function() {
                $(item).removeClass(className);
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
-	          // HQ: slight changes here
-	          if (selected_personas.indexOf(session.personas) != -1){
-		         // $(item).css("background-color", color_palette_2[1]);
+	          if (selections.indexOf(session.personas) != -1){
                    $(item).addClass(className);
 	          }
-//                $.each(keys(session.personas), function(index, key){
-//                     if (selected_personas.indexOf(key) != -1){
-//                          $(item).css("background-color", color_palette_1[5]);
-//                     }
-//                });
           });
          return false;
      }
@@ -414,11 +493,15 @@ var Sidebar = function() {
      
      function clickCommunitiesHandler(event){
           var $this = $(this);
-          _toggleAllCheckboxes($("#list-constraints"), false);
+          // _resetSidebarSelections();
+          _toggleAllCheckboxes($("#list-session-types"), false);
           _toggleAllCheckboxes($("#list-personas"), false);
-          _toggleAllConflicts(false);
+          // _toggleAllCheckboxes($("#list-communities"), false);
+          $(".slot.cell-session-type").removeClass("cell-session-type");
           $(".slot.cell-persona").removeClass("cell-persona");
-          $(".slot.cell-community").removeClass("cell-community");
+          // $(".slot.cell-community").removeClass("cell-community");   
+          
+          _toggleAllConflicts(false);
 
           if ($this.parent().hasClass("view-option-active")) {
                $this.parent().removeClass("view-option-active");
@@ -431,12 +514,11 @@ var Sidebar = function() {
           var className = "cell-community";
           
           // get current selections. allowing multiple selections. 
-          var selected_communities = [];
+          var selections = [];
           $("#list-communities li a").each(function(){
                if ($(this).parent().hasClass("view-option-active")) {
-                    selected_communities.push($(this).parent().attr("data-type"))
+                    selections.push($(this).parent().attr("data-type"))
                }
-                    //arr.splice(arr.indexOf('specific'), 1);
           });
           
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
@@ -447,8 +529,7 @@ var Sidebar = function() {
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
                $.each(session.coreCommunities, function(index, key){
-                    if (selected_communities.indexOf(key) != -1){
-                         // $(item).css("background-color", color_palette_2[0]);
+                    if (selections.indexOf(key) != -1){
                          $(item).addClass(className);
                     }
                });
@@ -504,18 +585,30 @@ var Sidebar = function() {
 
      // Display the View options list
      function displayViewOptions(){
-     	$.each(options_list, function(index, option){
+     	$.each(optionsList, function(index, option){
      		var item = document.createElement("li");
      		$(item).attr("data-type", option.id).html("<a href='#'>" + option.label + "</a>");
      		$("#list-view-options").append($(item));
       	});
       	$("#list-view-options li:first-child").addClass("view-option-active");
+
+     }
+
+
+     // Display the session types list
+     function displaySessionTypes(){
+          $.each(sessionTypeList, function(index, sessionType){
+               var item = document.createElement("li");
+               $(item).attr("data-type", sessionType).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" 
+                    + sessionType 
+                    + " (<span class='count'></span>)"
+                    + "</a>");
+               $("#list-session-types").append($(item));              
+          });
      }
 
      // Display the persona list
      function displayPersonas(){
-          //var color_index = 0;
-	 // HQ: minor changes here
      	$.each(personaList, function(index, persona){
      		var item = document.createElement("li");
       		$(item).attr("data-type", persona).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" 
@@ -523,8 +616,6 @@ var Sidebar = function() {
                     + " (<span class='count'></span>)"
                     + "</a>");
      		$("#list-personas").append($(item));    		
-     		//$(item).find("span.palette").css("background-color", color_palette_1[5]);
-               //color_index++;
      	});
      }
 
@@ -539,7 +630,6 @@ var Sidebar = function() {
 //                          commList.push(v);
 //                     });
 //           }
-// //          console.log($.unique(dl));
 //           commList = $.unique(commList);
           $.each(communityList, function(index, community){
                var item = document.createElement("li");

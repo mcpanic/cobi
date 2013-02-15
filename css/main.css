@@ -66,10 +66,10 @@ body.loading .modal {
 }
 
 .popover-inner {
-    -webkit-user-select: none;  
+   /* -webkit-user-select: none;  
     -moz-user-select: none;    
     -ms-user-select: none;      
-    user-select: none;  
+    user-select: none;  */
 }
 
 .main-fixed {
@@ -311,6 +311,29 @@ body.loading .modal {
     width: 24px;
 }
 
+#program .cell .display .duration, #unscheduled .cell .display .duration, #unscheduled-papers .cell .display .duration {
+    font-size: 14px;
+    padding: 10px;
+}
+
+#program .cell .display .duration-overtime, #unscheduled .cell .display .duration-overtime, #unscheduled-papers .cell .display .duration-overtime {
+    color: red;
+    font-weight: bold;
+}
+
+#program .cell .display .duration-undertime, #unscheduled .cell .display .duration-undertime, #unscheduled-papers .cell .display .duration-undertime {
+    color: #FF8A00;
+    font-weight: bold;
+}
+
+#program .cell .display .duration-full, #unscheduled .cell .display .duration-full, #unscheduled-papers .cell .display .duration-full {
+    color: #bbbbbb;
+}
+
+#program .cell .display .duration-none, #unscheduled .cell .display .duration-none, #unscheduled-papers .cell .display .duration-none {
+    color: #bbbbbb;
+}
+
 #program .cell .conflicts .icon, #unscheduled .cell .conflicts .icon, #unscheduled-papers .cell .conflicts .icon {
     width: 24px;
 }
@@ -472,6 +495,7 @@ body.loading .modal {
     font-weight: bold;
     font-size: 14px;
     margin-bottom:3px;
+    margin-right:5px;
 }
 
 .list-submissions .submission-empty {
@@ -601,6 +625,11 @@ body.loading .modal {
     line-height: 14px;
 }
 
+.popover-inner .save-button {
+    margin-top: 3px;
+    margin-right: 5px;
+}
+
 .popover-inner li {
     line-height: 14px;  
 }
@@ -627,5 +656,19 @@ body.loading .modal {
 .cell-community{
     background-color: #A69E86;
 }
+
+.cell-session-type{
+    background-color: #ffcf73;
+}
+.cell-type-paper { background-color: #eee;} 
+.cell-type-casestudy { background-color: #aae3ff;} 
+.cell-type-panel { background-color: #ffb5e1;} 
+.cell-type-course { background-color: #faff7e;} 
+.cell-type-SIG { background-color: #83ff87;} 
+.cell-type-altchi { background-color: #aaa;} 
+.cell-type-special { background-color: #ffcf73;} 
+.cell-type-bof { background-color: #d1ffd2;}
+.cell-type-unavailable { background-color: #333;} 
+
 
 
