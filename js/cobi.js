@@ -1209,27 +1209,48 @@ function getAllSessions(){
 
 function getAllSubmissions(){
     var submissions = {};
-    for(var day in schedule){
-	for(var time in schedule[day]){
-	    for(var room in schedule[day][time]){
-		for(var session in schedule[day][time][room]){
-		    for(var submission in schedule[day][time][room][session]["submissions"]){
-			
-			
-			var id = schedule[day][time][room][session]["submissions"][submission]['id'];
-			
-			submissions[id] = schedule[day][time][room][session]["submissions"][submission];
-		    }
-		}
-	    }
+    for(var s in allSessions){
+	for(var submission in allSessions[s]["submissions"]){
+	    var id = allSessions[s]["submissions"][submission]['id'];
+	    submissions[id] = allSessions[s]["submissions"][submission];
 	}
     }
-    
     // get unscheduled submissions too
     for(var e in unscheduledSubmissions){
 	submissions[e] = unscheduledSubmissions[e];
     }
+
     return submissions;
+
+//     var submissions = {};
+//     for(var day in schedule){
+// 	for(var time in schedule[day]){
+// 	    for(var room in schedule[day][time]){
+// 		for(var session in schedule[day][time][room]){
+// 		    for(var submission in schedule[day][time][room][session]["submissions"]){
+			
+			
+// 			var id = schedule[day][time][room][session]["submissions"][submission]['id'];
+			
+// 			submissions[id] = schedule[day][time][room][session]["submissions"][submission];
+// 		    }
+// 		}
+// 	    }
+// 	}
+//     }
+    
+//     // get submissions in unscheduled sessions
+//     for(var s in unscheduled){
+// 	for (var submission in unscheduled[s]["submissions"]){
+// 	    var id = unscheduled[s]["submissions"][submission]['id'];
+// 	    submissions[id] = unscheduled[s]["submissions"][submission];
+// 	}
+//     }
+//     // get unscheduled submissions too
+//     for(var e in unscheduledSubmissions){
+// 	submissions[e] = unscheduledSubmissions[e];
+//     }
+//     return submissions;
 }
 
 function randomizeSchedule(){
@@ -1893,6 +1914,19 @@ function proposeSessionForPaper(p){
 	    }
 	}
     }
+
+    for(var session in unscheduled){
+	if ((unscheduled[session]["venue"] == p.type ||
+	     (p.type == "TOCHI" && unscheduled[session]["venue"] == "paper")) && 
+	    (p.id in unscheduledSubmissions || p.session != session)){
+	    	swapValue.push(new swapDetails(new sessionPaper(session, null),
+						       0,
+						       null,
+						       null,
+						       null,
+						       null));
+	}
+    }
     return swapValue;
 }
 
@@ -1919,6 +1953,37 @@ function proposeSwapForUnscheduledPaper(p){
 	    }
 	}
     }
+
+
+		    if ((schedule[day][time][room][session]["venue"] == p.type ||
+			 (p.type == "TOCHI" && schedule[day][time][room][session]["venue"] == "paper"))){
+			for(var submission in schedule[day][time][room][session]['submissions']){
+			    swapValue.push(new swapDetails(new sessionPaper(session, 
+									    schedule[day][time][room][session]['submissions'][submission]['id']),
+							   0,
+							   null,
+							   null,
+							   null,
+							   null));
+			}
+		    }
+
+
+    for(var session in unscheduled){
+	if ((unscheduled[session]["venue"] == p.type ||
+	     (p.type == "TOCHI" && unscheduled[session]["venue"] == "paper"))){
+	    for(var submission in unscheduled[session]["submissions"]){
+	    	swapValue.push(new swapDetails(new sessionPaper(session, 
+								unscheduled[session]["submissions"][submission]['id']),
+					       0,
+					       null,
+					       null,
+					       null,
+					       null));
+	    }
+	}
+    }
+
     return swapValue;
 }
 
