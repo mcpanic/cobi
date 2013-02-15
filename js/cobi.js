@@ -1953,6 +1953,37 @@ function proposeSwapForUnscheduledPaper(p){
 	    }
 	}
     }
+
+
+		    if ((schedule[day][time][room][session]["venue"] == p.type ||
+			 (p.type == "TOCHI" && schedule[day][time][room][session]["venue"] == "paper"))){
+			for(var submission in schedule[day][time][room][session]['submissions']){
+			    swapValue.push(new swapDetails(new sessionPaper(session, 
+									    schedule[day][time][room][session]['submissions'][submission]['id']),
+							   0,
+							   null,
+							   null,
+							   null,
+							   null));
+			}
+		    }
+
+
+    for(var session in unscheduled){
+	if ((unscheduled[session]["venue"] == p.type ||
+	     (p.type == "TOCHI" && unscheduled[session]["venue"] == "paper"))){
+	    for(var submission in unscheduled[session]["submissions"]){
+	    	swapValue.push(new swapDetails(new sessionPaper(session, 
+								unscheduled[session]["submissions"][submission]['id']),
+					       0,
+					       null,
+					       null,
+					       null,
+					       null));
+	    }
+	}
+    }
+
     return swapValue;
 }
 
