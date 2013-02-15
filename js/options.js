@@ -13,18 +13,20 @@ var constraints_list = [
 	}	
 ];
 
-var communities_list = [
-{"label": "design", "color": "#9edae5"},
-{"label": "engineering", "color": "#9edae5"},
-{"label": "management", "color": "#9edae5"},
-{"label": "user experience", "color": "#9edae5"},
-{"label": "child-computer interaction", "color": "#9edae5"},
-{"label": "digital arts", "color": "#9edae5"},
-{"label": "games & entertainment", "color": "#9edae5"},
-{"label": "health", "color": "#9edae5"},
-{"label": "sustainability", "color": "#9edae5"},
-{"label": "HCI4D", "color": "#9edae5"}
-];
+// var communities_list = [
+// {"label": "design", "color": "#9edae5"},
+// {"label": "engineering", "color": "#9edae5"},
+// {"label": "management", "color": "#9edae5"},
+// {"label": "user experience", "color": "#9edae5"},
+// {"label": "child-computer interaction", "color": "#9edae5"},
+// {"label": "digital arts", "color": "#9edae5"},
+// {"label": "games & entertainment", "color": "#9edae5"},
+// {"label": "health", "color": "#9edae5"},
+// {"label": "sustainability", "color": "#9edae5"},
+// {"label": "HCI4D", "color": "#9edae5"}
+// ];
+
+var sessionTypeList = ["paper", "casestudy", "panel", "course", "SIG", "altchi", "special", "bof", "unavailable"];
 
 var typeDisplayList = {
 	lock: "locked slot",
@@ -34,6 +36,7 @@ var typeDisplayList = {
 	swap: "swapped session",
 	move: "moved session",
 	swapWithUnscheduled: "swapped with unscheduled",
+	editSessionTitle: "edited session title",
 	reorderPapers: "reordered papers",
 	unschedulePaper: "unscheduled paper",
 	schedulePaper: "scheduled paper",
@@ -95,7 +98,7 @@ var personas_list = [
 {"id": "ict4d", "label": "ICT4D", "color": "#008888"}
 ];
 */
-var options_list = [
+var optionsList = [
 {"id": "conflicts", "label": "Conflicts"}, 
 {"id": "session-type", "label": "Session Type"}, 
 //{"id": "popularity", "label": "Popularity"}, 

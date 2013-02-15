@@ -1,4 +1,36 @@
 
+    // popover title update
+    // $('body').on('focus', '[contenteditable]', function() {
+    //     var $this = $(this);
+    //     $this.attr('data-before', $this.html());
+    //     return $this;
+    // }).on('blur keyup paste', '[contenteditable]', function() {
+    //     var $this = $(this);
+    //     // if ($this.attr('data-before') !== $this.html()) {
+    //     //     $this.attr('data-before', $this.html());
+    //     //     $this.trigger('change');
+    //     // }
+    //     return $this;
+    // });
+
+    $("body").on("click", ".popover-inner .save-button", function(){
+        var $text = $(this).closest(".popover-inner").find("[contenteditable]")
+        if ($(this).html() == "edit") {
+            $text.attr("contenteditable", true);
+            $(this).html("save");
+        } else {            
+            $text.attr("contenteditable", false);
+            $(this).html("edit");
+            var id = $(this).attr("data-session-id");
+            console.log("change", id, $text.html());
+            if (typeof id !== "undefined"){
+                editSessionTitle(allSessions[id], $text.html());    
+            }
+            
+        }
+    });
+
+
     // Popover close button interaction
     $("body").on("click", ".popover-close", function(){
         // console.log("popover-close", $(this).attr("data-session-id"));

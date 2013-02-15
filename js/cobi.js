@@ -699,6 +699,7 @@ function unlockSlot(date, time, room){
 
 // changing the session title
 function editSessionTitle(s, t){
+	console.log(editSessionTitle, s.id, t);
     var td = { 'id': s.id,
 	       'title': t };
     var tp = { 'id': s.id,

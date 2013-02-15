@@ -80,6 +80,8 @@ var Polling = function() {
             isInterrupted = handlePollingMovePaper(t, isMyChange);
         } else if (t.type == "swapWithUnscheduledPaper"){
             isInterrupted = handlePollingSwapWithUnscheduledPaper(t, isMyChange);
+        } else if (t.type == "editSessionTitle"){
+            isInterrupted = handleEditSessionTitle(t, isMyChange);
         } else 
             console.log("unsupported transaction detected");
         return isInterrupted;
@@ -123,6 +125,34 @@ var Polling = function() {
 /******************************
  * Session level operations
  ******************************/
+
+    function handleEditSessionTitle(t, isMyChange){
+        var isInterrupted = false;
+        var id = t.data.id;
+        var $cell = findCellByID(id);
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+            if (selectedID == -1 && isEqualCell($cell, $(".move-src-selected").first()))  // me: empty, server: empty
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+        $cell.find(".title").html(t.data.title);
+        highlight(isMyChange, $cell, getUsernameByUID(t.uid));
+        postPollingMove(isMyChange);     
+        if (isMyChange) // shouldn't do MoveMode.destroy() because it's the user's own change.
+            ; //MoveMode.destroy();
+        if (isInterrupted) // current selection affected by the server change
+            MoveMode.destroy();  
+
+        // when popover is open when a server change occurs
+        if (!isMyChange)
+            $(".selected").removeClass("selected").popover("hide");
+        return isInterrupted;           
+    }
 
     function handlePollingLock(t, isMyChange){
         var isInterrupted = false;
@@ -380,6 +410,9 @@ var Polling = function() {
         if (isInterrupted) // current selection affected by the server change
             MoveMode.destroy();  
 
+        // when popover is open when a server change occurs
+        if (!isMyChange)
+            $(".selected").removeClass("selected").popover("hide");
         return isInterrupted;       
     }
 
