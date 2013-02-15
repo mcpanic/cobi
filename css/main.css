@@ -472,6 +472,7 @@ body.loading .modal {
     font-weight: bold;
     font-size: 14px;
     margin-bottom:3px;
+    margin-right:5px;
 }
 
 .list-submissions .submission-empty {

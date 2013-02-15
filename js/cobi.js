@@ -1775,7 +1775,6 @@ function calculateNumConflictsCausedBy(s){
 }
 
 function getAllConflicts(){
-//    console.log("calling getAllConflicts");
     var conflicts = {}
     // assume conflicts already initialized
     // assume allRooms initialized

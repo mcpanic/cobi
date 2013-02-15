@@ -75,7 +75,7 @@ var ViewMode = function() {
                         + "data-date='"+$(this).attr("data-date")+"' data-time='"+$(this).attr("data-time")+"' data-room='"+$(this).attr("data-room")
                         + "' href='#''>&times;</a>";
                 else
-                    return "<strong>[" + submissionType + "]</strong> " + submission.title                         
+                    return "<strong>[" + submissionType + "]</strong> " + id + ". " + submission.title                         
                         + "<a class='close popover-close' data-dismiss='clickover' data-session-id='" + id 
                         + "' href='#''>&times;</a>";            
            },
@@ -219,7 +219,7 @@ var ViewMode = function() {
                         + "data-date='"+$(this).attr("data-date")+"' data-time='"+$(this).attr("data-time")+"' data-room='"+$(this).attr("data-room")
                         + "' href='#''>&times;</a>";
                 else
-                    return "<strong>[" + session.venue + "] " + session.title + "</strong> "
+                    return "<strong>[" + session.venue + "] " + id + ". " + session.title + "</strong> "
                         + "<a class='close popover-close' data-dismiss='clickover' data-session-id='" + id 
                         + "' href='#''>&times;</a>";            
             },

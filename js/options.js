@@ -42,7 +42,50 @@ var typeDisplayList = {
 	swapWithUnscheduledPaper: "swapped with unscheduled paper"
 }
 
+    var dateList = {
+        "Saturday": 0,
+        "Sunday": 1,
+        "Monday": 2,
+        "Tuesday": 3,
+        "Wednesday": 4,
+        "Thursday": 5,
+        "Friday": 6
+    };
 
+    var timeList = {
+        "9:00-10:20": 0, 
+        "11:00-12:20": 1, 
+        "14:00-15:20": 2, 
+        "16:00-17:20": 3
+    };
+
+    var roomList = {
+        "221/221M": {floor: "2", size: "", type: ""},
+        "241": {floor: "2", size: "", type: ""},
+        "242A": {floor: "2", size: "", type: ""},
+        "242B": {floor: "2", size: "", type: ""},
+        "243":  {floor: "2", size: "", type: ""},
+        "251":  {floor: "2", size: "", type: ""},
+        "252A": {floor: "2", size: "", type: ""},
+        "252B": {floor: "2", size: "", type: ""},
+        "253": {floor: "2", size: "", type: ""},
+        "342A": {floor: "3", size: "", type: ""},
+        "343": {floor: "3", size: "", type: ""},
+        "351": {floor: "3", size: "", type: ""},
+        "352AB": {floor: "3", size: "", type: ""},
+        "361": {floor: "3", size: "", type: ""},
+        "362/363": {floor: "3", size: "", type: ""},
+        "Blue": {floor: "2", size: "", type: ""},
+        "Bordeaux": {floor: "2", size: "", type: ""},
+        "Havane": {floor: "2", size: "", type: ""}
+    };
+
+    var roomTypeList = ["Amphitheater", "Theater", "Classroom", "Conference"];
+    var sessionTypeList = ["paper", "course", "special", "panel", "casestudy", "SIG", "bof", "altchi"];
+    var submissionTypeList = ["paper", "TOCHI", "course", "panel", "casestudy", "SIG"];
+
+    var submissionOrderList = ["first", "second (if exists)", "third (if exists)", "fourth (if exists)", "last"];
+    var authorRoleList = ["presenter", "backup presenter"];
 /*
 var personas_list = [
 {"id": "uist", "label": "UIST", "color": "#443266"},
