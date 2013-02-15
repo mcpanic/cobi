@@ -130,6 +130,7 @@ var ViewMode = function() {
 
         var $paper = $(this).parent();
         var pid = $paper.attr("id");
+        // console.log(id, $paper, pid, allSubmissions[pid]);
         // the backend unschedule paper
         unschedulePaper(allSessions[id], allSubmissions[pid]);
     }

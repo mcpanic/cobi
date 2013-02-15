@@ -275,7 +275,7 @@ var MoveMode = function() {
 
         var $cell = null;
         for(var i = 0; i < swapValues.length; i++){    
-            //console.log("SWAP", swapValues[i]);   
+            console.log("SWAP", swapValues[i].target.session);   
 
             // empty session candidate
             if (swapValues[i].target.session === null){
@@ -301,6 +301,7 @@ var MoveMode = function() {
                 $cell = findCellByID(swapValues[i].target.session);
                 $cell.addClass("proposed-swap"); //.data("title", allSessions[swapValues[i].target.session].title);
                 if ($cell.hasClass("unscheduled")) {
+                    // console.log("SWAP", swapValues[i]); 
                     if (numSpecialRecommended > 0){
                         recommendedSpecialList.push($cell);
                         numSpecialRecommended--;

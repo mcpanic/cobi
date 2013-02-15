@@ -396,6 +396,7 @@ var Sidebar = function() {
      function clickSessionTypesHandler(event){
           var $this = $(this);
           // _resetSidebarSelections();
+          _toggleAllCheckboxes($("#list-constraints"), false);
           // _toggleAllCheckboxes($("#list-session-types"), false);
           _toggleAllCheckboxes($("#list-personas"), false);
           _toggleAllCheckboxes($("#list-communities"), false);
@@ -441,6 +442,7 @@ var Sidebar = function() {
      
      function clickPersonasHandler(event){
           var $this = $(this);
+          _toggleAllCheckboxes($("#list-constraints"), false);
           _toggleAllCheckboxes($("#list-session-types"), false);
           // _toggleAllCheckboxes($("#list-personas"), false);
           _toggleAllCheckboxes($("#list-communities"), false);
@@ -494,6 +496,7 @@ var Sidebar = function() {
      function clickCommunitiesHandler(event){
           var $this = $(this);
           // _resetSidebarSelections();
+          _toggleAllCheckboxes($("#list-constraints"), false);
           _toggleAllCheckboxes($("#list-session-types"), false);
           _toggleAllCheckboxes($("#list-personas"), false);
           // _toggleAllCheckboxes($("#list-communities"), false);

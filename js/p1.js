@@ -17,6 +17,7 @@
         var $text = $(this).closest(".popover-inner").find("[contenteditable]")
         if ($(this).html() == "edit") {
             $text.attr("contenteditable", true);
+            $text.trigger("focus");
             $(this).html("save");
         } else {            
             $text.attr("contenteditable", false);
