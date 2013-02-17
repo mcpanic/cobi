@@ -60,10 +60,10 @@ function Rule(level, comp){
 
 
 var CCOps = function(){
-    this.allConstraints = [];
-    this.allCurrentConflicts = [];
+    var allConstraints = [];
+    var allConflicts = [];
 
-    function init(){
+    function initialize(){
     	var example = new SingleEntityConstraint("donat11",
 						 "Submissions whose title begin with 'Don' should be at 11am",
 						 10,
@@ -106,29 +106,43 @@ var CCOps = function(){
 								    (a.date == b.date) &&
 								    (a.room != b.room));
 						       })]);
+
+	 var example4 = new EntityFilterPairConstraint("personaInTwoSessions", 
+						       "Sessions with the same persona should not be opposing",
+						       100,
+						       "because someone interested in one may be interested in the other",
+						       [new Rule('session', function(x){ return true})],
+						       [new Rule('session', function(x){ return true})],
+						       [new Rule('session', function(a, b){ return a.personas != "" && a.personas != "Misc" && a.personas == b.personas })], 
+						       [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
+							   return !((a.time == b.time) &&
+								    (a.date == b.date) &&
+ 								    (a.room != b.room));
+						       })]);
 	
-	allConstraints.push(example);
-	allConstraints.push(example2);
-	allConstraints.push(example3);
-	getAllCurrentConflicts();
+//	CCOps.allConstraints.push(example);
+//	CCOps.allConstraints.push(example2);
+	CCOps.allConstraints.push(example3);
+	CCOps.allConstraints.push(example4);
+	
+	getAllConflicts();
     }
     
-    function getAllCurrentConflicts(){
+    function getAllConflicts(){
 	var conflicts = {};
 	conflicts["sessions"] = {};
 	conflicts["all"] = [];
 	for(var session in allSessions)
 	    conflicts["sessions"][session] = [];
 	
-	for(var i in allConstraints){
+	for(var i in CCOps.allConstraints){
 	    var constraintConflicts;
-	    if(allConstraints[i].constraintType == 'single'){
-		constraintConflicts = checkSingleConflicts(allConstraints[i]);
-		
-	    }else if(allConstraints[i].constraintType == 'pair'){
-		constraintConflicts = checkPairConflicts(allConstraints[i]);
+	    if(CCOps.allConstraints[i].constraintType == 'single'){
+		constraintConflicts = checkSingleConflicts(CCOps.allConstraints[i]);
+	    }else if(CCOps.allConstraints[i].constraintType == 'pair'){
+		constraintConflicts = checkPairConflicts(CCOps.allConstraints[i]);
 	    }else{// pairFiltered
-		constraintConflicts = checkFilteredPairConflicts(allConstraints[i]);
+		constraintConflicts = checkFilteredPairConflicts(CCOps.allConstraints[i]);
 	    }
 	    conflicts["all"] = conflicts["all"].concat(constraintConflicts);
 	    
@@ -139,13 +153,13 @@ var CCOps = function(){
 		}
 	    }
 	}
-	this.allCurrentConflicts = conflicts;
+	CCOps.allConflicts = conflicts;
 	return conflicts;
     }
     
     function proposeSwap(s){
 	// how many conflicts are caused by the offending item
-	var conflictsCausedByItem = allCurrentConflicts["sessions"][s.id];
+	var conflictsCausedByItem = CCOps.allConflicts["sessions"][s.id];
 	var swapValue = [];
 	
 	// for each item, compute: 
@@ -153,10 +167,8 @@ var CCOps = function(){
 	// 2. number of conflicts mitigated by removing offeding item from there
 	// 3. number of conflicts caused by moving item there to offending location
 	
-	
 	// calculate number of conflicts caused by moving item into another row
 	var conflictsWithRow = {};
-	
 	for(var date in schedule){
 	    conflictsWithRow[date] = {}
 	    for(var time in schedule[date]){
@@ -164,10 +176,55 @@ var CCOps = function(){
 		conflictsWithRow[date][time]["sum"] = [];
 		conflictsWithRow[date][time]["session"] = {};
 
-		// precompute for pairs
-		for(var room in schedule[date][time]){
-		    for(var s2 in schedule[date][time][room]){
-			if(s2 != s.id){
+		if(date == s.date && time == s.time){
+		    for(var room in schedule[date][time]){
+			if(room != s.room){
+			    for(var s2 in schedule[date][time][room]){
+				// in same row; assume only single constraints affected
+				var singleConflictsCausedByItem = [];
+				for(var i in CCOps.allConflicts["sessions"][s.id]){
+				    if(CCOps.allConflicts["sessions"][s.id][i].conflict.length == 1){
+					singleConflictsCausedByItem.push(CCOps.allConflicts["sessions"][s.id][i]);
+				    }
+				}
+				var singleConflictsCausedByCandidate = [];
+				for(var i in CCOps.allConflicts["sessions"][s2]){
+				    if(CCOps.allConflicts["sessions"][s2][i].conflict.length == 1){
+					singleConflictsCausedByItem.push(CCOps.allConflicts["sessions"][s2][i]);
+				    }
+				}
+				var hypSessions = {};
+				var hypS = createHypSessionLoc(s, 
+							       allSessions[s2].date, 
+							       allSessions[s2].time,
+							       allSessions[s2].room);
+				var hypS2 = createHypSessionLoc(allSessions[s2], 
+								s.date,
+								s.time,
+								s.room);
+				hypSessions[s.id] = hypS;
+				hypSessions[s2] = hypS2;
+				
+				var singleConflictsCausedByOffending = computeNewSingleConflicts(s.id, hypSessions);
+			    	var singleConflictsCausedByCandidateAtOffending = computeNewSingleConflicts(s2, hypSessions);
+				var conflictsResolved = singleConflictsCausedByCandidate.length + 
+				    singleConflictsCausedByItem.length - 
+				    singleConflictsCausedByOffending.length - 
+				    singleConflictsCausedByCandidateAtOffending.length;
+				swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
+							       conflictsResolved,
+							       singleConflictsCausedByCandidateAtOffending,
+							       singleConflictsCausedByOffending,
+							       singleConflictsCausedByItem,
+							       singleConflictsCausedByCandidate
+							      ));
+			    }
+			}
+		    }
+		}else{
+		    // precompute for pairs
+		    for(var room in schedule[date][time]){
+			for(var s2 in schedule[date][time][room]){
 			    // TODO: edit here
 			    var conflicts = computeNewPairConflicts(s.id, s2);
 			    conflicts = conflicts.concat(computeNewFilteredPairConflicts(s.id, s2));
@@ -175,18 +232,16 @@ var CCOps = function(){
 			    conflictsWithRow[date][time]["sum"] = conflictsWithRow[date][time]["sum"].concat(conflicts);
 			}
 		    }
-		}
-
-		for(var room in schedule[date][time]){
-		    for(var s2 in schedule[date][time][room]){
-			if(s2 != s.id){
-			    var conflictsCausedByCandidate = allCurrentConflicts["sessions"][s2];
+		    
+		    for(var room in schedule[date][time]){
+			for(var s2 in schedule[date][time][room]){
+			    var conflictsCausedByCandidate = CCOps.allConflicts["sessions"][s2];
 			    
 			    var hypSessions = {};
 			    var hypS = createHypSessionLoc(s, 
-						allSessions[s2].date, 
-						allSessions[s2].time,
-						allSessions[s2].room);
+							   allSessions[s2].date, 
+							   allSessions[s2].time,
+							   allSessions[s2].room);
 			    var hypS2 = createHypSessionLoc(allSessions[s2], 
 							    s.date,
 							    s.time,
@@ -202,12 +257,13 @@ var CCOps = function(){
 				    conflictsCausedByOffending.push(item);
 				}
 			    }
-
+			    
 			    // 3. number of conflicts caused by moving item there to offending location
 			    var conflictsCausedByCandidateAtOffending = computeNewSingleConflicts(s2, hypSessions);
+			    
 			    for(var rs in schedule[s.date][s.time]){
 				for(var sk in schedule[s.date][s.time][rs]){
-				    if(ss != s.id){
+				    if(sk != s.id){
 					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewPairConflicts(sk, s2));
 					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewFilteredPairConflicts(sk, s2));
 				    }
@@ -215,8 +271,7 @@ var CCOps = function(){
 			    }
 			    
 			    // 4. number of conflicts mitigated by moving offending items away
-			    // numConflictsCausedByItem 
-			
+			// numConflictsCausedByItem 
 			    var conflictsResolved = conflictsCausedByCandidate.length + 
 				conflictsCausedByItem.length - 
 				conflictsCausedByOffending.length - 
@@ -231,11 +286,12 @@ var CCOps = function(){
 			}
 		    }
 		}
+		
 	    }
 	}
 	return swapValue;	
     }
-	
+    
     function clone(obj) {
 	// Handle the 3 simple types, and null or undefined
 	if (null == obj || "object" != typeof obj) return obj;
@@ -631,6 +687,7 @@ var CCOps = function(){
 					    for (var entityPair in entityPairs[s1][s2]){
 						if(!pathRelates(levels, entityPairs[s1][s2][entityPair].p1, 
 								entityPairs[s1][s2][entityPair].p2)){
+						    
 						    var conflict = new conflictObject([entityPairs[s1][s2][entityPair].p1.session, 
 										       entityPairs[s1][s2][entityPair].p2.session], 
 										      constraint.type, 
@@ -696,8 +753,8 @@ var CCOps = function(){
     function computeNewFilteredPairConflicts(s1, s2){
 	var conflicts = [];
 
-	for(var i in allConstraints){
-	    var constraint = allConstraints[i];
+	for(var i in CCOps.allConstraints){
+	    var constraint = CCOps.allConstraints[i];
 	    if(constraint.constraintType == "pairFiltered"){
 		var entityPairs = constraint.entityPairs;
 		var levels = groupRulesByLevel(constraint.relationRules);
@@ -736,8 +793,8 @@ var CCOps = function(){
     function computeNewPairConflicts(s1, s2){
 	var conflicts = [];
 
-	for(var i in allConstraints){
-	    var constraint = allConstraints[i];
+	for(var i in CCOps.allConstraints){
+	    var constraint = CCOps.allConstraints[i];
 	    if(constraint.constraintType == "pair"){
 		var belongLHS = constraint.entities1;
 		var belongRHS = constraint.entities2;
@@ -780,8 +837,9 @@ var CCOps = function(){
     function computeNewSingleConflicts(s, hypSessions){
 	var conflicts = [];
 	
-	for(var i in allConstraints){
-	    if(allConstraints[i].constraintType == "single"){
+	for(var i in CCOps.allConstraints){
+	    var constraint = CCOps.allConstraints[i];
+	    if(constraint.constraintType == "single"){
 		var belongList = constraint.entities;
 		if(s in belongList){
 		    var levels = groupRulesByLevel(constraint.constraintObjectRules);
@@ -802,9 +860,10 @@ var CCOps = function(){
     
     
     return {allConstraints: allConstraints,
-	    allCurrentConflicts: allCurrentConflicts,
-	    init: init,
-	    getAllCurrentConflicts: getAllCurrentConflicts,
+	    allConflicts: allConflicts,
+	    proposeSwap: proposeSwap,
+	    initialize: initialize,
+	    getAllConflicts: getAllConflicts,
 	    belongs: belongs,
 	    equal: equal,
 	    legalPathPairs: legalPathPairs};

@@ -37,8 +37,8 @@
         // initialize() is async, thus the bind
         $(document).bind("fullyLoaded", function(){
             Comp.initialize();
-            CCOps.init();
-	    console.log("should've saved");
+
+            CCOps.initialize();
             Expression.initialize();
 
             $(".user-display").append("<span class='icon-user icon-white'/>").append(getUsernameByUID(userData.id));
