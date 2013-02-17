@@ -60,8 +60,10 @@ function Rule(level, comp){
 
 
 var CCOps = function(){
-    var allConstraints = [];
-    var init = function(){
+    this.allConstraints = [];
+    this.allCurrentConflicts = [];
+
+    function init(){
     	var example = new SingleEntityConstraint("donat11",
 						 "Submissions whose title begin with 'Don' should be at 11am",
 						 10,
@@ -93,24 +95,25 @@ var CCOps = function(){
 						})]);
 	
 	 var example3 = new EntityFilterPairConstraint("authorInTwoSessions", 
-						      "Sessions with the same author should not be opposing",
-						      100,
-						      "because authors should only have to be at one place at any given time",
-						      [new Rule('author', function(x){ return true})],
-						      [new Rule('author', function(x){ return true})],
-						      [new Rule('author', function(a, b){ return a.authorId == b.authorId })], 
-						      [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
-							  return !((a.time == b.time) &&
-								   (a.date == b.date) &&
-								   (a.room != b.room));
-						      })]);
-
+						       "Sessions with the same author should not be opposing",
+						       100,
+						       "because authors should only have to be at one place at any given time",
+						       [new Rule('author', function(x){ return true})],
+						       [new Rule('author', function(x){ return true})],
+						       [new Rule('author', function(a, b){ return a.authorId == b.authorId })], 
+						       [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
+							   return !((a.time == b.time) &&
+								    (a.date == b.date) &&
+								    (a.room != b.room));
+						       })]);
+	
 	allConstraints.push(example);
 	allConstraints.push(example2);
 	allConstraints.push(example3);
+	getAllCurrentConflicts();
     }
-
-    function getAllConflicts(){
+    
+    function getAllCurrentConflicts(){
 	var conflicts = {};
 	conflicts["sessions"] = {};
 	conflicts["all"] = [];
@@ -136,94 +139,147 @@ var CCOps = function(){
 		}
 	    }
 	}
+	this.allCurrentConflicts = conflicts;
 	return conflicts;
     }
     
-    function tester(){
-	var startTime = $.now();
-	var example = new SingleEntityConstraint("don11", 
-						 "Submissions whose title begin with 'Don' should be at 11am",
-						 10,
-						 "because it's my favorite time and I am a don",
-						 [new Rule('submission', 
-							   function(x){ 
-							       return x.title.indexOf("Don") != -1
-							   }),
-						 ],
-						 [new Rule('session',
-							   function (x){
-							       return x.time == '11:00-12:20'
-							   }),
-						  new Rule('session',
-							   function(x){ // assume a session, a submission, or an author
-							       return x.date != "Monday"
-							   })]);
+    function proposeSwap(s){
+	// how many conflicts are caused by the offending item
+	var conflictsCausedByItem = allCurrentConflicts["sessions"][s.id];
+	var swapValue = [];
 	
-	var example2 = new EntityPairConstraint("danjohn",
-						"Authors whose first name is Dan should not be in opposing sessions with authors whose first name is John",
-						100,
-						"because Dan and John want to see each other's talks",
-						[new Rule('author', function(x){ return x.firstName == "Dan"})],
-						[new Rule('author', function(x){ return x.firstName == "John"})],
-						[new Rule('session', function(a, b){ // assume paths, check not opposing sessions
-						    return !((a.time == b.time) &&
-							     (a.date == b.date) &&
-							     (a.room != b.room));
-						})]);
+	// for each item, compute: 
+	// 1. number of conflicts caused by moving offending item to there
+	// 2. number of conflicts mitigated by removing offeding item from there
+	// 3. number of conflicts caused by moving item there to offending location
 	
-	 var example3 = new EntityFilterPairConstraint("authorInTwoSessions", 
-						      "Sessions with the same author should not be opposing",
-						      100,
-						      "because authors should only have to be at one place at any given time",
-						      [new Rule('author', function(x){ return true})],
-						      [new Rule('author', function(x){ return true})],
-						      [new Rule('author', function(a, b){ return a.authorId == b.authorId })], 
-						      [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
-							  return !((a.time == b.time) &&
-								   (a.date == b.date) &&								   (a.room != b.room));
-						      })]);
+	
+	// calculate number of conflicts caused by moving item into another row
+	var conflictsWithRow = {};
+	
+	for(var date in schedule){
+	    conflictsWithRow[date] = {}
+	    for(var time in schedule[date]){
+		conflictsWithRow[date][time] = {};
+		conflictsWithRow[date][time]["sum"] = [];
+		conflictsWithRow[date][time]["session"] = {};
 
-	var generated = $.now();
-	console.log("time to create: " + (generated - startTime));
-	console.log(example2.entities1);
+		// precompute for pairs
+		for(var room in schedule[date][time]){
+		    for(var s2 in schedule[date][time][room]){
+			if(s2 != s.id){
+			    // TODO: edit here
+			    var conflicts = computeNewPairConflicts(s.id, s2);
+			    conflicts = conflicts.concat(computeNewFilteredPairConflicts(s.id, s2));
+			    conflictsWithRow[date][time]["session"][s2] = conflicts;
+			    conflictsWithRow[date][time]["sum"] = conflictsWithRow[date][time]["sum"].concat(conflicts);
+			}
+		    }
+		}
 
-	var results = checkPairConflicts(example2);
-	for(var i in results){
- 	    console.log(results[i].conflict[0].author + ", " + results[i].conflict[0].session + ", " + results[i].conflict[0].submission + ", " + allSessions[results[i].conflict[0].session].date + ", " + allSessions[results[i].conflict[0].session].time + ", " + allSessions[results[i].conflict[0].session].room + ", " + results[i].conflict[1].author + ", " + results[i].conflict[1].session + ", " + results[i].conflict[1].submission + ", " + allSessions[results[i].conflict[1].session].date + ", " + allSessions[results[i].conflict[1].session].time + ", " + allSessions[results[i].conflict[1].session].room);
+		for(var room in schedule[date][time]){
+		    for(var s2 in schedule[date][time][room]){
+			if(s2 != s.id){
+			    var conflictsCausedByCandidate = allCurrentConflicts["sessions"][s2];
+			    
+			    var hypSessions = {};
+			    var hypS = createHypSessionLoc(s, 
+						allSessions[s2].date, 
+						allSessions[s2].time,
+						allSessions[s2].room);
+			    var hypS2 = createHypSessionLoc(allSessions[s2], 
+							    s.date,
+							    s.time,
+							    s.room);
+			    hypSessions[s.id] = hypS;
+			    hypSessions[s2] = hypS2;
+			    
+			    var conflictsCausedByOffending = computeNewSingleConflicts(s.id, hypSessions);
+			    
+			    for(var i = 0; i < conflictsWithRow[date][time]["sum"].length; i++){
+				var item = conflictsWithRow[date][time]["sum"][i];
+				if(conflictsWithRow[date][time]["session"][s2].indexOf(item) == -1){
+				    conflictsCausedByOffending.push(item);
+				}
+			    }
+
+			    // 3. number of conflicts caused by moving item there to offending location
+			    var conflictsCausedByCandidateAtOffending = computeNewSingleConflicts(s2, hypSessions);
+			    for(var rs in schedule[s.date][s.time]){
+				for(var sk in schedule[s.date][s.time][rs]){
+				    if(ss != s.id){
+					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewPairConflicts(sk, s2));
+					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewFilteredPairConflicts(sk, s2));
+				    }
+				}
+			    }
+			    
+			    // 4. number of conflicts mitigated by moving offending items away
+			    // numConflictsCausedByItem 
+			
+			    var conflictsResolved = conflictsCausedByCandidate.length + 
+				conflictsCausedByItem.length - 
+				conflictsCausedByOffending.length - 
+				conflictsCausedByCandidateAtOffending.length;
+			    swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
+							   conflictsResolved,
+							   conflictsCausedByCandidateAtOffending,
+							   conflictsCausedByOffending,
+							   conflictsCausedByItem,
+							   conflictsCausedByCandidate
+							  ));
+			}
+		    }
+		}
+	    }
+	}
+	return swapValue;	
+    }
+	
+    function clone(obj) {
+	// Handle the 3 simple types, and null or undefined
+	if (null == obj || "object" != typeof obj) return obj;
+	
+	// Handle Array
+	if (obj instanceof Array) {
+	    var copy = [];
+	    for (var i = 0, len = obj.length; i < len; i++) {
+		copy[i] = clone(obj[i]);
+	    }
+	    return copy;
 	}
 	
-// 	console.log("time to check: " + ($.now() - generated));
- 	updateConstraintEntities(['s288', 's204'], example);
- 	updateConstraintEntities(['s207', 's203'], example2);
-  	updateConstraintEntities(['s214', 's215'], example3);
- 	console.log("Conflicts created by constraint 1");
- 	console.log(checkSingleConflicts(example));
- 	console.log("Conflicts created by constraint 2");
- 	console.log(checkPairConflicts(example2));
- 	console.log("Conflicts created by constraint 3");
- 	console.log(checkFilteredPairConflicts(example3));
+	// Handle Object
+	if (obj instanceof Object) {
+	    var copy = {};
+	    for (var attr in obj) {
+		if (obj.hasOwnProperty(attr)) copy[attr] = clone(obj[attr]);
+	    }
+	    return copy;
+	}
 	
-	
-// 	for(var i = 0; i< 10; i++){
-// 	    //checkConflicts(example);
-// 	    //	checkPairConflicts(example2);
-// 	    checkFilteredPairConflicts(example3);
-// 	}
-// 	console.log("time to check many more times: " + ($.now() - generated));
+	throw new Error("Unable to copy obj! Its type isn't supported.");
     }
     
+    function copySession(s){
+	return clone(s);
+    }
+    
+    function createHypSessionLoc(s, date, time, room){
+	hypSession = clone(s);
+	hypSession.date = date;
+	hypSession.time = time;
+	hypSession.room = room;
+	return hypSession;
+    } 
 
-	function formatTimeOfDay(millisSinceEpoch) {
-	    var secondsSinceEpoch = (millisSinceEpoch / 1000) | 0;
-	    var secondsInDay = ((secondsSinceEpoch % 86400) + 86400) % 86400;
-	    var seconds = secondsInDay % 60;
-	    var minutes = ((secondsInDay / 60) | 0) % 60;
-	    var hours = (secondsInDay / 3600) | 0;
-	    return hours + (minutes < 10 ? ":0" : ":")
-		+ minutes + (seconds < 10 ? ":0" : ":")
-		+ seconds;
-	}
+    function createHypSessionSubs(s, subs){
+	hypSession = clone(s);
+	hypSession['submissions'] = subs;
+	return hypSession;
+    }
 
+    
     function equal(a, b){
 	return a == b;
     }
@@ -319,6 +375,38 @@ var CCOps = function(){
 	// check author level 
 	for(var authorRule in levels['author']){
 	    if(!(levels['author'][authorRule].comp)(allSessions[path.session].submissions[path.submission].authors[path.author])){
+		return false;
+	    }
+	}
+	
+	return true;
+    }
+
+    function pathHypBelongs(levels, path, hypSessions){
+	// TODO: track where violations are happening
+	// check session level
+	var session = allSessions[path.session];
+	if(path.session in hypSessions){
+	    session = hypSessions[path.session];
+	}
+	
+	for (var sessionRule in levels['session']){
+	    if(!(levels['session'][sessionRule].comp)(session)){
+		return false;
+	    }
+	}
+	// check submission level
+	for(var submissionRule in levels['submission']){
+	    var comp = levels['submission'][submissionRule].comp;
+	    if(!comp(session.submissions[path.submission])){
+		return false;
+	    }else{
+	    }
+	}
+	
+	// check author level 
+	for(var authorRule in levels['author']){
+	    if(!(levels['author'][authorRule].comp)(session.submissions[path.submission].authors[path.author])){
 		return false;
 	    }
 	}
@@ -425,7 +513,7 @@ var CCOps = function(){
 	//	console.log(matches);
 	return matchesBySession;
     }
-
+	
     function violates(rules, paths){
 	// given a set of paths, figure out which paths violates the rules
 	var levels = groupRulesByLevel(rules);
@@ -435,6 +523,17 @@ var CCOps = function(){
 	    if (!legal[i]) violatingPaths.push(paths[i]);
 	}
 	return violatingPaths;
+    }
+
+    function satisfies(rules, paths){
+	// given a set of paths, figure out which paths violates the rules
+	var levels = groupRulesByLevel(rules);
+	var legal = pathsBelongs(levels, paths);
+	var acceptingPaths = [];
+	for(var i in legal){
+	    if (legal[i]) acceptingPaths.push(paths[i]);
+	}
+	return acceptingPaths;
     }
     
     function generatePaths(s, levels){
@@ -552,6 +651,26 @@ var CCOps = function(){
 	}
     	return conflictList;
     }
+
+    function checkSinglePreference(preference){
+	// 1. Get eligible sessions
+	var belongList = preference.entities;
+	var meets = [];
+	
+	// 2. find all that satisfies preference
+	for(var s in belongList){
+	    var satisfactions = satisfies(preference.constraintObjectRules,
+				      belongList[s]); // paths
+	    for(var i in satisfactions){
+		meets.push(new conflictObject([satisfactions[i].session],
+					      preference.type, 
+						  satisfactions[i],
+					      preference.description));
+	    }
+	}
+	return meets;
+    }
+    
     
     function checkSingleConflicts(constraint){
 	// TODO: explain why doesn't match
@@ -574,11 +693,118 @@ var CCOps = function(){
 	return conflicts;
     }
     
+    function computeNewFilteredPairConflicts(s1, s2){
+	var conflicts = [];
+
+	for(var i in allConstraints){
+	    var constraint = allConstraints[i];
+	    if(constraint.constraintType == "pairFiltered"){
+		var entityPairs = constraint.entityPairs;
+		var levels = groupRulesByLevel(constraint.relationRules);
+		
+		// go one direction first
+		if((s1 in entityPairs) && (s2 in entityPairs[s1])){
+		    for(var entityPair in entityPairs[s1][s2]){
+			// TODO, assume don't need hyp session here 
+			// or even to check if path relates
+			var conflict = new conflictObject([entityPairs[s1][s2][entityPair].p1.session, 
+							   entityPairs[s1][s2][entityPair].p2.session], 
+							  constraint.type, 
+							  [entityPairs[s1][s2][entityPair].p1, 
+							   entityPairs[s1][s2][entityPair].p2],
+							  constraint.description);
+			conflicts.push(conflict);
+		    }
+		}
+		// then the other
+		if(!constraint.isSymmetric && (s2 in entityPairs) && (s1 in entityPairs[s2])){
+		    for(var entityPair in entityPairs[s2][s1]){
+			var conflict = new conflictObject([entityPairs[s2][s1][entityPair].p1.session, 
+							   entityPairs[s2][s1][entityPair].p2.session], 
+							  constraint.type, 
+							  [entityPairs[s2][s1][entityPair].p1, 
+							   entityPairs[s2][s1][entityPair].p2],
+							  constraint.description);
+			conflicts.push(conflict);
+		    }
+		}
+	    }
+	}
+	return conflicts;
+    }
+
+    function computeNewPairConflicts(s1, s2){
+	var conflicts = [];
+
+	for(var i in allConstraints){
+	    var constraint = allConstraints[i];
+	    if(constraint.constraintType == "pair"){
+		var belongLHS = constraint.entities1;
+		var belongRHS = constraint.entities2;
+		var levels = groupRulesByLevel(constraint.relationRules);
+		// go one direction first
+		if((s1 in belongLHS) && (s2 in belongRHS)){
+		    for(var e1 in belongLHS[s1]){
+			for(var e2 in belongRHS[s2]){
+			    // TODO, assume don't need hyp session here 
+			    // or even to check if path relates
+			    var conflict = new conflictObject([belongLHS[s1][e1].session, 
+							       belongRHS[s2][e2].session], 
+							      constraint.type, 
+							      [belongLHS[s1][e1], 
+							       belongRHS[s2][e2]],
+							      constraint.description);
+			    conflicts.push(conflict);
+			}
+		    }
+		}
+		// then the other
+		if(!constraint.isSymmetric && (s2 in belongLHS) && (s1 in belongRHS)){
+		    for(var e1 in belongLHS[s2]){
+			for(var e2 in belongRHS[s1]){
+			    var conflict = new conflictObject([belongLHS[s2][e1].session, 
+							       belongRHS[s1][e2].session], 
+							      constraint.type, 
+							      [belongLHS[s2][e1], 
+							       belongRHS[s1][e2]],
+							      constraint.description);
+			    conflicts.push(conflict);
+			}
+		    }
+		}
+	    }
+	}
+	return conflicts;
+    }   
     
-    return {tester: tester,
-	    allConstraints: allConstraints,
+    function computeNewSingleConflicts(s, hypSessions){
+	var conflicts = [];
+	
+	for(var i in allConstraints){
+	    if(allConstraints[i].constraintType == "single"){
+		var belongList = constraint.entities;
+		if(s in belongList){
+		    var levels = groupRulesByLevel(constraint.constraintObjectRules);
+		    
+		    for(var p in belongList[s]){
+			if(!pathHypBelongs(levels, belongList[s][p], hypSessions)){ 
+			    conflicts.push(new conflictObject([s],
+							      constraint.type,
+							      belongList[s][p],
+							      constraint.description));
+			}
+		    }
+		}
+	    }
+	}
+	return conflicts;
+    }
+    
+    
+    return {allConstraints: allConstraints,
+	    allCurrentConflicts: allCurrentConflicts,
 	    init: init,
-	    getAllConflicts: getAllConflicts,
+	    getAllCurrentConflicts: getAllCurrentConflicts,
 	    belongs: belongs,
 	    equal: equal,
 	    legalPathPairs: legalPathPairs};
