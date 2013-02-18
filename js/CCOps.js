@@ -64,35 +64,35 @@ var CCOps = function(){
     var allConflicts = [];
 
     function initialize(){
-    	var example = new SingleEntityConstraint("donat11",
-						 "Submissions whose title begin with 'Don' should be at 11am",
-						 10,
-						 "because it's my favorite time and I am a don",
-						 [new Rule('submission', 
-							   function(x){ 
-							       return Comp.stringStartsWith(x.title, "Don");
-							   }),
-						 ],
-						 [new Rule('session',
-							   function (x){
-							       return Comp.timeEquals(x.time, "11:00-12:20");
-							   }),
-						  new Rule('session',
-							   function(x){ // assume a session, a submission, or an author
-							       return !Comp.dateEquals(x.date, "Monday");
-							   })]);
+//     	var example = new SingleEntityConstraint("donat11",
+// 						 "Submissions whose title begin with 'Don' should be at 11am",
+// 						 10,
+// 						 "because it's my favorite time and I am a don",
+// 						 [new Rule('submission', 
+// 							   function(x){ 
+// 							       return Comp.stringStartsWith(x.title, "Don");
+// 							   }),
+// 						 ],
+// 						 [new Rule('session',
+// 							   function (x){
+// 							       return Comp.timeEquals(x.time, "11:00-12:20");
+// 							   }),
+// 						  new Rule('session',
+// 							   function(x){ // assume a session, a submission, or an author
+// 							       return !Comp.dateEquals(x.date, "Monday");
+// 							   })]);
 	
-	var example2 = new EntityPairConstraint("danjohn",
-						"Authors whose first name is Dan should not be in opposing sessions with authors whose first name is John",
-						100,
-						"because Dan and John want to see each other's talks",
-						[new Rule('author', function(x){ return x.firstName == "Dan"})],
-						[new Rule('author', function(x){ return x.firstName == "John"})],
-						[new Rule('session', function(a, b){ // assume paths, check not opposing sessions
-						    return !((a.time == b.time) &&
-							     (a.date == b.date) &&
-							     (a.room != b.room));
-						})]);
+// 	var example2 = new EntityPairConstraint("danjohn",
+// 						"Authors whose first name is Dan should not be in opposing sessions with authors whose first name is John",
+// 						100,
+// 						"because Dan and John want to see each other's talks",
+// 						[new Rule('author', function(x){ return x.firstName == "Dan"})],
+// 						[new Rule('author', function(x){ return x.firstName == "John"})],
+// 						[new Rule('session', function(a, b){ // assume paths, check not opposing sessions
+// 						    return !((a.time == b.time) &&
+// 							     (a.date == b.date) &&
+// 							     (a.room != b.room));
+// 						})]);
 	
 	 var example3 = new EntityFilterPairConstraint("authorInTwoSessions", 
 						       "Sessions with the same author should not be opposing",
@@ -157,22 +157,27 @@ var CCOps = function(){
 	return conflicts;
     }
     
+    function computeConflictsWithRowAtTimeSlot(s, date, time){
+	var ret = {};
+	ret["sum"] = [];
+	ret["session"] = {};
+	for(var room in schedule[date][time]){
+	    for(var s2 in schedule[date][time][room]){
+		var conflicts = computeNewPairConflicts(s.id, s2);
+		conflicts = conflicts.concat(computeNewFilteredPairConflicts(s.id, s2));
+		ret["session"][s2] = conflicts;
+		ret["sum"] = ret["sum"].concat(conflicts);
+	    }
+	}
+	return ret;
+    }
+    
     function computeConflictsWithRow(s){
 	var conflictsWithRow = {};
 	for(var date in schedule){
 	    conflictsWithRow[date] = {}
 	    for(var time in schedule[date]){
-		conflictsWithRow[date][time] = {};
-		conflictsWithRow[date][time]["sum"] = [];
-		conflictsWithRow[date][time]["session"] = {};
-		for(var room in schedule[date][time]){
-		    for(var s2 in schedule[date][time][room]){
-			var conflicts = computeNewPairConflicts(s.id, s2);
-			conflicts = conflicts.concat(computeNewFilteredPairConflicts(s.id, s2));
-			conflictsWithRow[date][time]["session"][s2] = conflicts;
-			conflictsWithRow[date][time]["sum"] = conflictsWithRow[date][time]["sum"].concat(conflicts);
-		    }
-		}
+		conflictsWithRow[date][time] = computeConflictsWithRowAtTimeSlot(s, date, time);
 	    }
 	}
 	return conflictsWithRow;
@@ -180,15 +185,17 @@ var CCOps = function(){
 
     function computeAllSingleConflicts(s1, s2){
 	var singleConflictsCausedByItem = [];
-	for(var i in CCOps.allConflicts["sessions"][s1]){
-	    if(CCOps.allConflicts["sessions"][s1][i].conflict.length == 1){
-		singleConflictsCausedByItem.push(CCOps.allConflicts["sessions"][s1][i]);
+	if(!(s1 in unscheduled)){
+	    for(var i in CCOps.allConflicts["sessions"][s1]){
+		if(CCOps.allConflicts["sessions"][s1][i].conflict.length == 1){
+		    singleConflictsCausedByItem.push(CCOps.allConflicts["sessions"][s1][i]);
+		}
 	    }
 	}
 	var singleConflictsCausedByCandidate = [];
 	for(var i in CCOps.allConflicts["sessions"][s2]){
 	    if(CCOps.allConflicts["sessions"][s2][i].conflict.length == 1){
-		singleConflictsCausedByItem.push(CCOps.allConflicts["sessions"][s2][i]);
+		singleConflictsCausedByCandidate.push(CCOps.allConflicts["sessions"][s2][i]);
 	    }
 	}
 	var hypSessions = {};
@@ -204,11 +211,63 @@ var CCOps = function(){
 	hypSessions[s2] = hypS2;
 	
 	var singleConflictsCausedByOffending = computeNewSingleConflicts(s1, hypSessions);
-	var singleConflictsCausedByCandidateAtOffending = computeNewSingleConflicts(s2, hypSessions);
+	var singleConflictsCausedByCandidateAtOffending = [];
+	if(!(s1 in unscheduled)){
+	    singleConflictsCausedByCandidateAtOffending = computeNewSingleConflicts(s2, hypSessions);
+	}
 	return {conflictsCausedByItem: singleConflictsCausedByItem,
 		conflictsCausedByCandidate: singleConflictsCausedByCandidate,
 		conflictsCausedByOffending: singleConflictsCausedByOffending,
 		conflictsCausedByCandidateAtOffending: singleConflictsCausedByCandidateAtOffending};
+    }
+
+    function computeAllSingleConflictsSlot(s1, space){
+	var singleConflictsCausedByItem = [];
+	if(!(s1 in unscheduled)){
+	    for(var i in CCOps.allConflicts["sessions"][s1]){
+		if(CCOps.allConflicts["sessions"][s1][i].conflict.length == 1){
+		    singleConflictsCausedByItem.push(CCOps.allConflicts["sessions"][s1][i]);
+		}
+	    }
+	}
+	var hypSessions = {};
+	var hypS = createHypSessionLoc(allSessions[s1], 
+				       space.date,
+				       space.time,
+				       space.room);
+	hypSessions[s1] = hypS;
+	
+	var singleConflictsCausedByOffending = computeNewSingleConflicts(s1, hypSessions);
+
+	return {conflictsCausedByItem: singleConflictsCausedByItem,
+		conflictsCausedByCandidate: [],
+		conflictsCausedByOffending: singleConflictsCausedByOffending,
+		conflictsCausedByCandidateAtOffending: []};
+    }
+
+
+    function computeAllConflictsSlot(s1, space, conflictsCausedByItem, conflictsWithRow){
+	var hypSessions = {};
+	var hypS = createHypSessionLoc(allSessions[s1], 
+				       space.date,
+				       space.time,
+				       space.room);
+	hypSessions[s1] = hypS;
+	var conflictsCausedByOffending = computeNewSingleConflicts(s1, hypSessions);
+	
+	var s = allSessions[s1];
+	var date = space.date;
+	var time = space.time;
+
+	for(var i = 0; i < conflictsWithRow[date][time]["sum"].length; i++){
+	    var item = conflictsWithRow[date][time]["sum"][i];
+	    conflictsCausedByOffending.push(item);
+	}
+
+	return {conflictsCausedByItem: conflictsCausedByItem,
+		conflictsCausedByCandidate: [],
+		conflictsCausedByOffending: conflictsCausedByOffending,
+		conflictsCausedByCandidateAtOffending: []};
     }
 
     function computeAllConflicts(s1, s2, conflictsCausedByItem, conflictsWithRow){
@@ -226,8 +285,10 @@ var CCOps = function(){
 	hypSessions[s2] = hypS2;
 	
 	var conflictsCausedByOffending = computeNewSingleConflicts(s1, hypSessions);
-	var conflictsCausedByCandidateAtOffending = computeNewSingleConflicts(s2, hypSessions);
-
+	var conflictsCausedByCandidateAtOffending = [];
+	if(!(s1 in unscheduled)){
+	    conflictsCausedByCandidateAtOffending = computeNewSingleConflicts(s2, hypSessions);
+	}
 	var s = allSessions[s1];
 	var date = allSessions[s2].date;
 	var time = allSessions[s2].time;
@@ -239,11 +300,13 @@ var CCOps = function(){
 	    }
 	}
 
-	for(var rs in schedule[s.date][s.time]){
-	    for(var sk in schedule[s.date][s.time][rs]){
-		if(sk != s.id){
-		    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewPairConflicts(sk, s2));
-		    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewFilteredPairConflicts(sk, s2));
+	if(!(s1 in unscheduled)){
+	    for(var rs in schedule[s.date][s.time]){
+		for(var sk in schedule[s.date][s.time][rs]){
+		    if(sk != s.id){
+			conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewPairConflicts(sk, s2));
+			conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewFilteredPairConflicts(sk, s2));
+		    }
 		}
 	    }
 	}
@@ -253,43 +316,117 @@ var CCOps = function(){
 		conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
     }
 
-    function proposeSwap(s){
-	var swapValue = [];
-	var conflictsCausedByItem = CCOps.allConflicts["sessions"][s.id];
-	var conflictsWithRow = computeConflictsWithRow(s);
+    function proposeSessionForSlot(sdate, stime, sroom){
+	var scheduleValue = [];
+	var unscheduleValue = [];
 	
+	// proposing unscheduled session
+	if(keys(schedule[sdate][stime][sroom]).length != 0) return;
+	
+	var conflictsWithSession = {};
+	for(var s2 in unscheduled){
+	    var cc = null;
+	    var conflictsCausedByItem = [];
+	    var conflictsWithRow = computeConflictsWithRowAtTimeSlot(allSessions[s2], sdate, stime);
+
+	    var sc = {conflictsCausedByItem: [],
+		      conflictsCausedByCandidate: [],
+		      conflictsCausedByOffending: conflictsWithRow['sum'], 
+		      conflictsCausedByCandidateAtOffending: []};
+	    unscheduleValue.push(createSwapDetails(sc, new slot(null, null, null, s2)));
+	}
+
+	// proposing scheduled session
 	for(var date in schedule){
 	    for(var time in schedule[date]){
 		for(var room in schedule[date][time]){
 		    for(var s2 in schedule[date][time][room]){
 			var cc = null;
-			if(date == s.date && time == s.time){
+			var space = new slot(sdate, stime, sroom, null);
+			if(date == sdate && time == stime){
 			    // in same row; assume only single constraints affected
-			    if(room == s.room) continue;
-			    cc = computeAllSingleConflicts(s.id, s2);
+			    if(room == sroom) continue;
+			    cc = computeAllSingleConflictsSlot(s2, space);
 			}else{
-			    cc = computeAllConflicts(s.id, s2, conflictsCausedByItem, conflictsWithRow);
+			    var conflictsCausedByItem = CCOps.allConflicts["sessions"][s2];
+			    var conflictsWithRow = {};
+			    conflictsWithRow[sdate] = {};
+			    conflictsWithRow[sdate][stime] = computeConflictsWithRowAtTimeSlot(allSessions[s2], sdate, stime);
+			    cc = computeAllConflictsSlot(s2, space, conflictsCausedByItem, conflictsWithRow);
 			}
-
-			var conflictsResolved = cc.conflictsCausedByCandidate.length + 
-			    cc.conflictsCausedByItem.length - 
-			    cc.conflictsCausedByOffending.length - 
-			    cc.conflictsCausedByCandidateAtOffending.length;
-			
-			swapValue.push(new swapDetails(new slot(allSessions[s2].date, 
-								allSessions[s2].time, 
-								allSessions[s2].room, s2),
-						       conflictsResolved,
-						       cc.conflictsCausedByCandidateAtOffending,
-						       cc.conflictsCausedByOffending,
-						       cc.conflictsCausedByItem,
-						       cc.conflictsCausedByCandidate
-						      ));
+			var sc = {conflictsCausedByItem: cc.conflictsCausedByCandidate,
+				  conflictsCausedByCandidate: cc.conflictsCausedByItem,
+				  conflictsCausedByOffending: cc.conflictsCausedByCandidateAtOffending,
+				  conflictsCausedByCandidateAtOffending: cc.conflictsCausedByOffending};
+			scheduleValue.push(createSwapDetails(sc, new slot(date, time, room, s2)));
 		    }
 		}
 	    }
 	}
-	return swapValue;	
+    	return {scheduleValue: scheduleValue,
+		unscheduleValue: unscheduleValue};
+    }
+    
+    function proposeSlotAndSwap(s){
+	var swapValue = [];
+	var slotValue = [];
+	
+	var conflictsCausedByItem = [];
+	if(!(s.id in unscheduled)){
+	    conflictsCausedByItem = CCOps.allConflicts["sessions"][s.id];
+	}
+	var conflictsWithRow = computeConflictsWithRow(s);
+	
+	for(var date in schedule){
+	    for(var time in schedule[date]){
+		for(var room in schedule[date][time]){
+		    if(keys(schedule[date][time][room]).length == 0){
+			// if is an empty slot
+			var sc = null;
+			var space = new slot(date, time, room, null);
+			if(date == s.date && time == s.time){
+			    // in same row; assume only single constraints affected
+			    if(room == s.room) continue;
+			    cc = computeAllSingleConflictsSlot(s.id, space);
+			}else{
+			    cc = computeAllConflictsSlot(s.id, space, conflictsCausedByItem, conflictsWithRow);
+			}
+			slotValue.push(createSwapDetails(cc, space));
+		    }else{
+			// if has sessions here
+			for(var s2 in schedule[date][time][room]){
+			    var cc = null;
+			    if(date == s.date && time == s.time){
+				// in same row; assume only single constraints affected
+				if(room == s.room) continue;
+				cc = computeAllSingleConflicts(s.id, s2);
+			    }else{
+				cc = computeAllConflicts(s.id, s2, conflictsCausedByItem, conflictsWithRow);
+			    }
+			    var space = new slot(date, time, room, s2);
+			    swapValue.push(createSwapDetails(cc, space));
+			}
+		    }
+		}
+	    }
+	}
+	return {swapValue: swapValue,
+		slotValue: slotValue};	
+    }
+    
+    function createSwapDetails(cc, space){
+	var conflictsResolved = cc.conflictsCausedByCandidate.length + 
+	    cc.conflictsCausedByItem.length - 
+	    cc.conflictsCausedByOffending.length - 
+	    cc.conflictsCausedByCandidateAtOffending.length;
+	
+	return new swapDetails(space,
+			       conflictsResolved,
+			       cc.conflictsCausedByCandidateAtOffending,
+			       cc.conflictsCausedByOffending,
+			       cc.conflictsCausedByItem,
+			       cc.conflictsCausedByCandidate
+			      );
     }
     
     function clone(obj) {
@@ -693,7 +830,7 @@ var CCOps = function(){
 										      constraint.type, 
 										      [entityPairs[s1][s2][entityPair].p1, 
 										       entityPairs[s1][s2][entityPair].p2],
-										      constraint.description);
+										      constraint.description + ", " +  revealPath(entityPairs[s1][s2][entityPair].p1) + ", " + revealPath(entityPairs[s1][s2][entityPair].p2));
 						    conflictList.push(conflict);
 						}
 					    }
@@ -750,6 +887,18 @@ var CCOps = function(){
 	return conflicts;
     }
     
+    function revealPath(path){
+	if(path.author != null) {
+	    return allSessions[path.session].submissions[path.submission].authors[path.author].firstName + " " + 
+		allSessions[path.session].submissions[path.submission].authors[path.author].lastName + ", " + 
+		allSessions[path.session].title;
+	}else if(path.submission != null){
+	    return allSessions[path.session].submissions[path.submission].title + ", " + allSessions[path.session].title;
+	}else{
+	    return allSessions[path.session].personas + ", " + allSessions[path.session].title;
+	}
+    }
+
     function computeNewFilteredPairConflicts(s1, s2){
 	var conflicts = [];
 
@@ -769,7 +918,7 @@ var CCOps = function(){
 							  constraint.type, 
 							  [entityPairs[s1][s2][entityPair].p1, 
 							   entityPairs[s1][s2][entityPair].p2],
-							  constraint.description);
+							  constraint.description + ", " +  revealPath(entityPairs[s1][s2][entityPair].p1) + ", " + revealPath(entityPairs[s1][s2][entityPair].p2));
 			conflicts.push(conflict);
 		    }
 		}
@@ -781,7 +930,7 @@ var CCOps = function(){
 							  constraint.type, 
 							  [entityPairs[s2][s1][entityPair].p1, 
 							   entityPairs[s2][s1][entityPair].p2],
-							  constraint.description);
+							  constraint.description + ", " + revealPath(entityPairs[s2][s1][entityPair].p1) + ", " + revealPath(entityPairs[s2][s1][entityPair].p2));
 			conflicts.push(conflict);
 		    }
 		}
@@ -861,7 +1010,8 @@ var CCOps = function(){
     
     return {allConstraints: allConstraints,
 	    allConflicts: allConflicts,
-	    proposeSwap: proposeSwap,
+	    proposeSlotAndSwap: proposeSlotAndSwap,
+	    proposeSessionForSlot: proposeSessionForSlot,
 	    initialize: initialize,
 	    getAllConflicts: getAllConflicts,
 	    belongs: belongs,

@@ -275,7 +275,7 @@ var MoveMode = function() {
 
         var $cell = null;
         for(var i = 0; i < swapValues.length; i++){    
-            console.log("SWAP", swapValues[i].target.session);   
+ //           console.log("SWAP", swapValues[i].target.session);   
 
             // empty session candidate
             if (swapValues[i].target.session === null){

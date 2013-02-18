@@ -1573,6 +1573,12 @@ function proposeSlot(s) {
 }
 
 function proposeSlotAndSwap(s){
+    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	console.log("relying on CCOps propose");
+	return CCOps.proposeSlotAndSwap(s);
+    }
+
+
     if(s.id in unscheduled){
 	var slotValue = proposeSlot(s);
 	var swapValue = proposeSwapForUnscheduled(s);
@@ -1588,6 +1594,11 @@ function proposeSlotAndSwap(s){
 }
 
 function proposeSessionForSlot(day, time, room){
+    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	console.log("relying on CCOps propose");
+	return CCOps.proposeSessionForSlot(day, time, room);
+    }
+    
     var scheduleValue = proposeScheduledSessionForSlot(day,time,room);
     var unscheduleValue = proposeUnscheduledSessionForSlot(day,time,room);
     return {scheduleValue: scheduleValue,
@@ -1612,8 +1623,9 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
 	for(var r2 in schedule[day][time]){
 	    // in case there are multiple sessions in a room, shouldn't be
 	    for(var s2 in schedule[day][time][r2]){
-			var conflicts = authorConflictsAmongSessions[s][s2];
-			conflictsWithSession[s] = conflictsWithSession[s].concat(conflicts);
+		var conflicts = authorConflictsAmongSessions[s][s2];
+		conflicts = conflicts.concat(personaConflictsAmongSessions[s][s2]);
+		conflictsWithSession[s] = conflictsWithSession[s].concat(conflicts);
 	    }
 	}
 	
@@ -1675,17 +1687,17 @@ function proposeScheduledSessionForSlot(sdate, stime, sroom) {
 		      
 		      var conflictsResolved = conflictsCausedByCandidate.length - 
 			  conflictsCausedByCandidateAtOffending.length;
-		    swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
-						   conflictsResolved,
-						   conflictsCausedByCandidateAtOffending,
-						   null,
-						   null,
-						   conflictsCausedByCandidate
-						   ));
-		}
-	    }
-	}
-    }
+		      swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
+						     conflictsResolved,
+						     conflictsCausedByCandidateAtOffending,
+						     null,
+						     null,
+						     conflictsCausedByCandidate
+						    ));
+		  }
+	      }
+	  }
+      }
     
     return swapValue;
 }
