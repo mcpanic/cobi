@@ -414,6 +414,234 @@ var CCOps = function(){
 		slotValue: slotValue};	
     }
     
+    function matchingSessionPaper(session, p){
+	return (session["venue"] == p.type ||
+		(p.type == "TOCHI" && session["venue"] == "paper"));
+    }
+
+    function computePaperSwapConflicts(p1, s1, p2, s2){
+	var ignorePairs = false;
+	if (!(s1 in unscheduled) && !(s2 in unscheduled) && 
+	    ((allSessions[s1].date == allSessions[s2].date) &&
+	     (allSessions[s1].time == allSessions[s2].time))){
+	    ignorePairs = true;
+	}
+	
+	var conflictsCausedByItem = [];
+	if(!(s1 in unscheduled) && p1.session != "null"){
+	    if(ignorePairs){
+		for(var c in CCOps.allConflicts["sessions"][s1]){
+		    if(CCOps.allConflicts["sessions"][s1][c].constraintType == 'single'){
+			conflictsCausedByItem.push(CCOps.allConflicts["sessions"][s1][c]);
+		    }
+		}
+	    }else{
+		conflictsCausedByItem = CCOps.allConflicts["sessions"][s1];
+	    }
+	}
+	var conflictsCausedByCandidate = []
+	if(!(s2 in unscheduled) && p2 != null && p2.session != "null"){
+	    if(ignorePairs){
+		for(var c in CCOps.allConflicts["sessions"][s2]){
+		    if(CCOps.allConflicts["sessions"][s2][c].constraintType == 'single'){
+			conflictsCausedByItem.push(CCOps.allConflicts["sessions"][s2][c]);
+		    }
+		}
+	    }else{
+		conflictsCausedByCandidate = CCOps.allConflicts["sessions"][s2];
+	    }
+	}
+	
+	var subS1 = [];
+	var subS2 = [];
+	if(p2 == null){ // inserting into s2
+	    for(var sub in allSessions[s1].submissions){
+		if(allSessions[s1].submissions[sub].id != p1.id)
+		    subS1.push(allSessions[s1].submissions[sub]);
+	    }
+	    for(var sub in allSessions[s2].submissions){
+		subS2.push(allSessions[s2].submissions[sub]);
+	    }
+	    subS2.push(p1);
+	}else{ // swapping p1 and p2
+	    for(var sub in allSessions[s1].submissions){
+		if(allSessions[s1].submissions[sub].id == p1.id)
+		    subS1.push(p2);
+		else
+		    subS1.push(allSessions[s1].submissions[sub]);
+	    }
+	    for(var sub in allSessions[s2].submissions){
+		if(allSessions[s2].submissions[sub].id == p2.id)
+		    subS2.push(p1);
+		else
+		    subS2.push(allSessions[s2].submissions[sub]);
+	    }
+	}
+	var hypSessions = {};
+	var hypS1 = createHypSessionSubs(allSessions[s1], subS1); 
+	var hypS2 = createHypSessionSubs(allSessions[s2], subS2);
+	hypSessions[s1] = hypS1;
+	hypSessions[s2] = hypS2;
+
+	var conflictsCausedByOffending = computeConflictsFromSession(s2, hypSessions, ignorePairs);
+	var conflictsCausedByCandidateAtOffending = computeConflictsFromSession(s1, hypSessions, ignorePairs);
+		
+	return {conflictsCausedByItem: conflictsCausedByItem,
+		conflictsCausedByCandidate: conflictsCausedByCandidate,
+		conflictsCausedByOffending: conflictsCausedByOffending,
+		conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
+    }
+    
+    function computeConflictsFromSession(s, hypSessions, ignorePairs){
+	
+	var conflicts = [];
+	// conflicts caused by offending
+	if (s in unscheduled){
+	    return conflicts;
+	}
+	
+	for(var i in CCOps.allConstraints){
+	    var constraint = CCOps.allConstraints[i];
+            if(constraint.constraintType == "single"){
+		var paths = hypLegalPaths(s, constraint.entityRules, hypSessions);
+		var levels = groupRulesByLevel(constraint.constraintObjectRules);
+		for (var p in paths){
+		    if(!pathHypBelongs(levels, paths[p], hypSessions)){
+			conflicts.push(new conflictObject([s],
+							  constraint.type,
+							  paths[p],
+							  constraint.description));
+		    }
+		}
+	    }else if(constraint.constraintType =="pair" && !ignorePairs) {
+		var paths1 = hypLegalPaths(s, constraint.entity1Rules, hypSessions);
+		var paths2 = hypLegalPaths(s, constraint.entity2Rules, hypSessions);
+		var date = hypSessions[s].date;
+		var time = hypSessions[s].time;
+		var belongLHS = constraint.entities1;
+		var belongRHS = constraint.entities2;
+		var levels = groupRulesByLevel(constraint.relationRules);
+	
+		for(var room in schedule[date][time]){
+		    for(var s2 in schedule[date][time][room]){
+			// go one direction first
+			if(s != s2 && s2 in belongRHS){
+			    for(var e1 in paths1){
+				for(var e2 in belongRHS[s2]){
+				    conflicts.push(new conflictObject([paths1[e1].session,
+								       belongRHS[s2][e2].session],
+								      constraint.type,
+								      [paths1[e1],
+								       belongRHS[s2][e2]],
+								      constraint.description));
+				}
+			    }
+			} // then the other
+			if(!constraint.isSymmetric && (s2 in belongLHS)){
+			    for(var e1 in belongLHS[s2]){
+				for(var e2 in paths2){
+				    conflicts.push(new conflictObject([belongLHS[s2][e1].session,
+								       paths2[e2].session],
+								      constraint.type,
+								      [belongLHS[s2][e1],
+								       paths2[e2]],
+								      constraint.description));
+				}
+			    }
+			}
+		    }
+		}
+	    }else if(constraint.constraintType =="pairFiltered" && !ignorePairs) {
+		// TODO: Assume symmetric
+		var paths1 = hypLegalPaths(s, constraint.entity1Rules, hypSessions);
+		var date = hypSessions[s].date;
+		var time = hypSessions[s].time;
+		var belongLHS = constraint.entities1;
+		var belongRHS = constraint.entities2;
+		var levels = groupRulesByLevel(constraint.relationRules);
+
+		for(var room in schedule[date][time]){
+		    for(var s2 in schedule[date][time][room]){
+			if(s != s2 && s2 in belongRHS){
+			    for(var e1 in paths1){
+				for(var e2 in belongRHS[s2]){
+				    if(pathHypRelates(levels, paths1[e1], belongRHS[s2][e2], hypSessions)){
+					conflicts.push(new conflictObject([paths1[e1].session,
+									   belongRHS[s2][e2].session],
+									  constraint.type,
+									  [paths1[e1],
+									   belongRHS[s2][e2]],
+									  constraint.description));
+				    }
+				}
+			    }
+			}
+		    }
+		}
+	    }
+	}
+	return conflicts;
+    }
+
+    function proposePaperSessionAndSwap(p){
+	var swapValue = [];
+	var sessionValue = [];
+	
+	for(var date in schedule){
+	    for(var time in schedule[date]){
+		for(var room in schedule[date][time]){
+		    for(var session in schedule[date][time][room]){
+			if(p.session != session && matchingSessionPaper(schedule[date][time][room][session], p)){
+			    var cc = null;
+			    // swapping...
+			    for(var p2 in schedule[date][time][room][session]['submissions']){
+				cc = computePaperSwapConflicts(p, p.session, schedule[date][time][room][session]['submissions'][p2], session);
+				var space = new sessionPaper(session, schedule[date][time][room][session]['submissions'][p2]['id']);
+				swapValue.push(createSwapDetails(cc, space));
+			    }
+			    
+			    // inserting...
+			    cc = computePaperSwapConflicts(p, p.session, null, session);
+			    var space = new sessionPaper(session, null);
+			    sessionValue.push(createSwapDetails(cc, space));
+			}
+		    }
+		}
+	    }
+	}
+	
+	for(var session in unscheduled){
+	    if(p.session != session && matchingSessionPaper(unscheduled[session], p)){
+		var cc = null;
+		// swapping...
+		for(var p2 in unscheduled[session]['submissions']){
+		    cc = computePaperSwapConflicts(p, p.session, unscheduled[session]['submissions'][p2], session);
+		    var space = new sessionPaper(session, unscheduled[session]['submissions'][p2]['id']);
+		    swapValue.push(createSwapDetails(cc, space));
+		}
+		
+		// inserting...
+		cc = computePaperSwapConflicts(p, p.session, null, session);
+		var space = new sessionPaper(session, null);
+		sessionValue.push(createSwapDetails(cc, space));
+	    }
+	}
+	return {swapValue: swapValue,
+		sessionValue: sessionValue};
+    }
+    
+    
+    function proposePaperForSession(s){
+	return;
+	// 	var scheduleValue = proposeScheduledPaperForSession(s);
+	// 	var unscheduleValue = proposeUnscheduledPaperForSession(s);
+	//	      	return {scheduleValue: scheduleValue,
+	//     			unscheduleValue: unscheduleValue};
+    }
+    
+    
+    
+    
     function createSwapDetails(cc, space){
 	var conflictsResolved = cc.conflictsCausedByCandidate.length + 
 	    cc.conflictsCausedByItem.length - 
@@ -471,7 +699,6 @@ var CCOps = function(){
 	hypSession['submissions'] = subs;
 	return hypSession;
     }
-
     
     function equal(a, b){
 	return a == b;
@@ -489,35 +716,93 @@ var CCOps = function(){
 	return pathPairs;
     }
     
-    function legalPathPairsForSession(s1, levels, entities1, entities2){
+    function legalPathPairsForHypSession(paths1, levels, entities2, hypSessions){
 	var pathPairs = {};
-	var changed = false;
 	for(var s2 in entities2){
 	    var paths = [];
-	    for(var e1 in entities1[s1]){
+	    for (var e1 in paths1){
 		for(var e2 in entities2[s2]){
-		    var path1 = entities1[s1][e1];
+		    var path1 = paths1[e1];
 		    var path2 = entities2[s2][e2];
-		    if(pathRelates(levels, path1, path2)){
+		    if(pathHypRelates(levels, path1, path2, hypSessions)){
 			paths.push({'p1': path1,
 				    'p2': path2});
 		    }
 		}
 	    }
+	}
+	return pathPairs;
+    }
+
+    
+    function legalPathPairsForTwoSessions(s1, s2, levels, entities1, entities2){
+	var paths = [];
+	for(var e1 in entities1[s1]){
+	    for(var e2 in entities2[s2]){
+		var path1 = entities1[s1][e1];
+		var path2 = entities2[s2][e2];
+		if(pathRelates(levels, path1, path2)){
+		    paths.push({'p1': path1,
+				'p2': path2});
+		}
+	    }
+	}
+	return paths;
+    }
+    
+    function legalPathPairsForSession(s1, levels, entities1, entities2){
+	var pathPairs = {};
+	var changed = false;
+	for(var s2 in entities2){
+	    var paths = legalPathPairsForTwoSessions(s1, s2, levels, entities1, entities2);
 	    if(paths.length > 0){
 		changed = true;
 		pathPairs[s2] = paths;
 	    }
 	}
-	if(!changed){
+	if(!changed)
 	    return null;
-	}else{
+	else
 	    return pathPairs;
-	}
+	
     }
 
 
-
+    function pathHypRelates(levels, path1, path2, hypSessions){
+	var session1 = allSessions[path1.session];
+	var session2 = allSessions[path2.session];
+	if(path1.session in hypSessions)
+	    session1 = hypSessions[path1.session];
+	if(path2.session in hypSessions)
+	    session2 = hypSessions[path1.session];
+	
+	for (var sessionRule in levels['session']){
+	    if(!(levels['session'][sessionRule].comp)(session1,
+						      session2)){
+		return false;
+	    }
+	}
+	// check submission level
+	for(var submissionRule in levels['submission']){
+	    var comp = levels['submission'][submissionRule].comp;
+	    if(!comp(session1.submissions[path1.submission],
+		     session2.submissions[path2.submission])){
+		return false;
+	    }else{
+	    }
+	}
+	
+	// check author level 
+	for(var authorRule in levels['author']){
+	    if(!(levels['author'][authorRule].comp)(session1.submissions[path1.submission].authors[path1.author],
+						    session2.submissions[path2.submission].authors[path2.author])){
+		return false;
+	    }
+	}
+	
+	return true;
+	
+    }
     function pathRelates(levels, path1, path2){
 	// TODO: track where violations are happening
 	// check session level
@@ -574,6 +859,19 @@ var CCOps = function(){
 	
 	return true;
     }
+    
+    function pathsHypBelongs(levels, paths, hypSessions){
+	// return paths if session satisfies rules
+	var legal = [];
+	for(var i in paths){
+	    legal.push(true);
+	}
+	for(var i in paths){
+	    legal[i] = pathHypBelongs(levels, paths[i], hypSessions);	    
+	}
+	return legal;
+    }
+    
 
     function pathHypBelongs(levels, path, hypSessions){
 	// TODO: track where violations are happening
@@ -607,6 +905,7 @@ var CCOps = function(){
 	return true;
     }
     
+    
     function pathsBelongs(levels, paths){
 	// return paths if session satisfies rules
 	var legal = [];
@@ -618,6 +917,7 @@ var CCOps = function(){
 	}
 	return legal;
     }
+    
     
     function groupRulesByLevel(rules){
 	var levels = {};
@@ -673,14 +973,32 @@ var CCOps = function(){
 		    if(paths != null){
 			constraint.entityPairs[affectedSessions[i]] = paths;
 		    }
+		    // still have to go through all paths where sessions are on RHS and update 
+		    // them too
+		    for(var s in constraint.entityPairs){
+			constraint.entityPairs[s][affectedSessions[i]] = 
+			    legalPathPairsForTwoSessions(s, affectedSessions[i], levels, constraint.entities1, constraint.entities2);
+		    }
 		}
 	    }
 	}
     }
 
+    function hypLegalPaths(s, rules, hypSessions){
+	var levels = groupRulesByLevel(rules);
+	var paths = generatePaths(hypSessions[s], levels); 
+	var legal = pathsHypBelongs(levels, paths, hypSessions);
+	var legalPaths = [];
+	for(var i in legal){
+	    if (legal[i]) legalPaths.push(paths[i]);
+	}
+	return legalPaths;
+
+    }
+    
     function updateLegalPaths(s, rules){
 	var levels = groupRulesByLevel(rules);
-	var paths = generatePaths(s, levels);
+	var paths = generatePaths(allSessions[s], levels);
 	var legal = pathsBelongs(levels, paths);
 	var legalPaths = [];
 	for(var i in legal){
@@ -693,7 +1011,7 @@ var CCOps = function(){
 	var matchesBySession = {};
 	var levels = groupRulesByLevel(rules);
 	for(var s in allSessions){
-	    var paths = generatePaths(s, levels);
+	    var paths = generatePaths(allSessions[s], levels);
 	    var legal = pathsBelongs(levels, paths);
 	    var legalPaths = [];
 	    for(var i in legal){
@@ -732,18 +1050,18 @@ var CCOps = function(){
     function generatePaths(s, levels){
 	var paths = [];
 	if(levels['submission'].length != 0 || levels['author'].length != 0){
-	    for(var sub in allSessions[s].submissions){
+	    for(var sub in s.submissions){
 		if(levels['author'].length != 0){
-		    for(var auth in allSessions[s].submissions[sub].authors){
-			paths.push(new entityTrace(s, sub, auth));
+		    for(var auth in s.submissions[sub].authors){
+			paths.push(new entityTrace(s.id, sub, auth));
 		    }
 		}else{
 		    // just generate sub level paths
-		    paths.push(new entityTrace(s, sub, null));
+		    paths.push(new entityTrace(s.id, sub, null));
 		}
 	    }
 	}else{
-	    paths.push(new entityTrace(s, null, null));
+	    paths.push(new entityTrace(s.id, null, null));
 	}
 	return paths;
     }
@@ -1011,6 +1329,8 @@ var CCOps = function(){
     return {allConstraints: allConstraints,
 	    allConflicts: allConflicts,
 	    proposeSlotAndSwap: proposeSlotAndSwap,
+	    proposePaperSessionAndSwap: proposePaperSessionAndSwap,
+	    proposePaperForSession: proposePaperForSession,
 	    proposeSessionForSlot: proposeSessionForSlot,
 	    initialize: initialize,
 	    getAllConflicts: getAllConflicts,

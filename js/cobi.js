@@ -1884,6 +1884,12 @@ function getAllConflicts(){
 
 /////////// start paper propose functions
 function proposePaperSessionAndSwap(p){
+    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	console.log("relying on CCOps propose");
+	return CCOps.proposePaperSessionAndSwap(p);
+    }
+    
+
     if(p.id in unscheduledSubmissions){
 	var sessionValue = proposeSessionForPaper(p);
 	var swapValue = proposeSwapForUnscheduledPaper(p);
