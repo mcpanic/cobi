@@ -647,15 +647,50 @@ var CCOps = function(){
     
     
     function proposePaperForSession(s){
-	return;
-	// 	var scheduleValue = proposeScheduledPaperForSession(s);
-	// 	var unscheduleValue = proposeUnscheduledPaperForSession(s);
-	//	      	return {scheduleValue: scheduleValue,
-	//     			unscheduleValue: unscheduleValue};
+	var scheduleValue = [];
+	var unscheduleValue = [];
+	
+	for(var date in schedule){
+	    for(var time in schedule[date]){
+		for(var room in schedule[date][time]){
+		    for(var session in schedule[date][time][room]){
+			for(var submission in schedule[date][time][room][session]['submissions']){
+			    var p = schedule[date][time][room][session]['submissions'][submission];
+			    if(s.id != session && matchingSessionPaper(s, p)){
+				var cc = null;
+				cc = computePaperSwapConflicts(p, p.session, null, s.id);
+				var space = new sessionPaper(session, p.id);
+				var sc = {conflictsCausedByItem: cc.conflictsCausedByCandidate,
+					  conflictsCausedByCandidate: cc.conflictsCausedByItem,
+					  conflictsCausedByOffending: cc.conflictsCausedByCandidateAtOffending,
+					  conflictsCausedByCandidateAtOffending: cc.conflictsCausedByOffending};
+				
+				scheduleValue.push(createSwapDetails(sc, space));
+			    }
+			}
+		    }
+		}
+	    }
+	}
+	
+	// look for unscheduled paper
+	for(var submission in unscheduledSubmissions){
+	    var p = unscheduledSubmissions[submission];
+	    if(matchingSessionPaper(s, p)){
+		var cc = null;
+		cc = computePaperSwapConflicts(p, p.session, null, s.id);
+		var sc = {conflictsCausedByItem: cc.conflictsCausedByCandidate,
+			  conflictsCausedByCandidate: cc.conflictsCausedByItem,
+			  conflictsCausedByOffending: cc.conflictsCausedByCandidateAtOffending,
+			  conflictsCausedByCandidateAtOffending: cc.conflictsCausedByOffending};
+		var space = new sessionPaper(null, p.id);
+		unscheduleValue.push(createSwapDetails(sc, space));
+	    }
+	}
+	
+	return {scheduleValue: scheduleValue,
+	     	unscheduleValue: unscheduleValue};
     }
-    
-    
-    
     
     function createSwapDetails(cc, space){
 	var conflictsResolved = cc.conflictsCausedByCandidate.length + 

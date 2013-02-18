@@ -1905,6 +1905,11 @@ function proposePaperSessionAndSwap(p){
 }
 
 function proposePaperForSession(s){
+    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	console.log("relying on CCOps propose");
+	return CCOps.proposePaperForSession(s);
+    }
+    
     var scheduleValue = proposeScheduledPaperForSession(s);
     var unscheduleValue = proposeUnscheduledPaperForSession(s);
     return {scheduleValue: scheduleValue,
