@@ -157,17 +157,7 @@ var CCOps = function(){
 	return conflicts;
     }
     
-    function proposeSwap(s){
-	// how many conflicts are caused by the offending item
-	var conflictsCausedByItem = CCOps.allConflicts["sessions"][s.id];
-	var swapValue = [];
-	
-	// for each item, compute: 
-	// 1. number of conflicts caused by moving offending item to there
-	// 2. number of conflicts mitigated by removing offeding item from there
-	// 3. number of conflicts caused by moving item there to offending location
-	
-	// calculate number of conflicts caused by moving item into another row
+    function computeConflictsWithRow(s){
 	var conflictsWithRow = {};
 	for(var date in schedule){
 	    conflictsWithRow[date] = {}
@@ -175,118 +165,128 @@ var CCOps = function(){
 		conflictsWithRow[date][time] = {};
 		conflictsWithRow[date][time]["sum"] = [];
 		conflictsWithRow[date][time]["session"] = {};
-
-		if(date == s.date && time == s.time){
-		    for(var room in schedule[date][time]){
-			if(room != s.room){
-			    for(var s2 in schedule[date][time][room]){
-				// in same row; assume only single constraints affected
-				var singleConflictsCausedByItem = [];
-				for(var i in CCOps.allConflicts["sessions"][s.id]){
-				    if(CCOps.allConflicts["sessions"][s.id][i].conflict.length == 1){
-					singleConflictsCausedByItem.push(CCOps.allConflicts["sessions"][s.id][i]);
-				    }
-				}
-				var singleConflictsCausedByCandidate = [];
-				for(var i in CCOps.allConflicts["sessions"][s2]){
-				    if(CCOps.allConflicts["sessions"][s2][i].conflict.length == 1){
-					singleConflictsCausedByItem.push(CCOps.allConflicts["sessions"][s2][i]);
-				    }
-				}
-				var hypSessions = {};
-				var hypS = createHypSessionLoc(s, 
-							       allSessions[s2].date, 
-							       allSessions[s2].time,
-							       allSessions[s2].room);
-				var hypS2 = createHypSessionLoc(allSessions[s2], 
-								s.date,
-								s.time,
-								s.room);
-				hypSessions[s.id] = hypS;
-				hypSessions[s2] = hypS2;
-				
-				var singleConflictsCausedByOffending = computeNewSingleConflicts(s.id, hypSessions);
-			    	var singleConflictsCausedByCandidateAtOffending = computeNewSingleConflicts(s2, hypSessions);
-				var conflictsResolved = singleConflictsCausedByCandidate.length + 
-				    singleConflictsCausedByItem.length - 
-				    singleConflictsCausedByOffending.length - 
-				    singleConflictsCausedByCandidateAtOffending.length;
-				swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
-							       conflictsResolved,
-							       singleConflictsCausedByCandidateAtOffending,
-							       singleConflictsCausedByOffending,
-							       singleConflictsCausedByItem,
-							       singleConflictsCausedByCandidate
-							      ));
-			    }
-			}
-		    }
-		}else{
-		    // precompute for pairs
-		    for(var room in schedule[date][time]){
-			for(var s2 in schedule[date][time][room]){
-			    // TODO: edit here
-			    var conflicts = computeNewPairConflicts(s.id, s2);
-			    conflicts = conflicts.concat(computeNewFilteredPairConflicts(s.id, s2));
-			    conflictsWithRow[date][time]["session"][s2] = conflicts;
-			    conflictsWithRow[date][time]["sum"] = conflictsWithRow[date][time]["sum"].concat(conflicts);
-			}
-		    }
-		    
-		    for(var room in schedule[date][time]){
-			for(var s2 in schedule[date][time][room]){
-			    var conflictsCausedByCandidate = CCOps.allConflicts["sessions"][s2];
-			    
-			    var hypSessions = {};
-			    var hypS = createHypSessionLoc(s, 
-							   allSessions[s2].date, 
-							   allSessions[s2].time,
-							   allSessions[s2].room);
-			    var hypS2 = createHypSessionLoc(allSessions[s2], 
-							    s.date,
-							    s.time,
-							    s.room);
-			    hypSessions[s.id] = hypS;
-			    hypSessions[s2] = hypS2;
-			    
-			    var conflictsCausedByOffending = computeNewSingleConflicts(s.id, hypSessions);
-			    
-			    for(var i = 0; i < conflictsWithRow[date][time]["sum"].length; i++){
-				var item = conflictsWithRow[date][time]["sum"][i];
-				if(conflictsWithRow[date][time]["session"][s2].indexOf(item) == -1){
-				    conflictsCausedByOffending.push(item);
-				}
-			    }
-			    
-			    // 3. number of conflicts caused by moving item there to offending location
-			    var conflictsCausedByCandidateAtOffending = computeNewSingleConflicts(s2, hypSessions);
-			    
-			    for(var rs in schedule[s.date][s.time]){
-				for(var sk in schedule[s.date][s.time][rs]){
-				    if(sk != s.id){
-					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewPairConflicts(sk, s2));
-					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewFilteredPairConflicts(sk, s2));
-				    }
-				}
-			    }
-			    
-			    // 4. number of conflicts mitigated by moving offending items away
-			// numConflictsCausedByItem 
-			    var conflictsResolved = conflictsCausedByCandidate.length + 
-				conflictsCausedByItem.length - 
-				conflictsCausedByOffending.length - 
-				conflictsCausedByCandidateAtOffending.length;
-			    swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
-							   conflictsResolved,
-							   conflictsCausedByCandidateAtOffending,
-							   conflictsCausedByOffending,
-							   conflictsCausedByItem,
-							   conflictsCausedByCandidate
-							  ));
-			}
+		for(var room in schedule[date][time]){
+		    for(var s2 in schedule[date][time][room]){
+			var conflicts = computeNewPairConflicts(s.id, s2);
+			conflicts = conflicts.concat(computeNewFilteredPairConflicts(s.id, s2));
+			conflictsWithRow[date][time]["session"][s2] = conflicts;
+			conflictsWithRow[date][time]["sum"] = conflictsWithRow[date][time]["sum"].concat(conflicts);
 		    }
 		}
-		
+	    }
+	}
+	return conflictsWithRow;
+    }
+
+    function computeAllSingleConflicts(s1, s2){
+	var singleConflictsCausedByItem = [];
+	for(var i in CCOps.allConflicts["sessions"][s1]){
+	    if(CCOps.allConflicts["sessions"][s1][i].conflict.length == 1){
+		singleConflictsCausedByItem.push(CCOps.allConflicts["sessions"][s1][i]);
+	    }
+	}
+	var singleConflictsCausedByCandidate = [];
+	for(var i in CCOps.allConflicts["sessions"][s2]){
+	    if(CCOps.allConflicts["sessions"][s2][i].conflict.length == 1){
+		singleConflictsCausedByItem.push(CCOps.allConflicts["sessions"][s2][i]);
+	    }
+	}
+	var hypSessions = {};
+	var hypS = createHypSessionLoc(allSessions[s1], 
+				       allSessions[s2].date, 
+				       allSessions[s2].time,
+				       allSessions[s2].room);
+	var hypS2 = createHypSessionLoc(allSessions[s2], 
+					allSessions[s1].date,
+					allSessions[s1].time,
+					allSessions[s1].room);
+	hypSessions[s1] = hypS;
+	hypSessions[s2] = hypS2;
+	
+	var singleConflictsCausedByOffending = computeNewSingleConflicts(s1, hypSessions);
+	var singleConflictsCausedByCandidateAtOffending = computeNewSingleConflicts(s2, hypSessions);
+	return {conflictsCausedByItem: singleConflictsCausedByItem,
+		conflictsCausedByCandidate: singleConflictsCausedByCandidate,
+		conflictsCausedByOffending: singleConflictsCausedByOffending,
+		conflictsCausedByCandidateAtOffending: singleConflictsCausedByCandidateAtOffending};
+    }
+
+    function computeAllConflicts(s1, s2, conflictsCausedByItem, conflictsWithRow){
+	var conflictsCausedByCandidate = CCOps.allConflicts["sessions"][s2];
+	var hypSessions = {};
+	var hypS = createHypSessionLoc(allSessions[s1], 
+				       allSessions[s2].date, 
+				       allSessions[s2].time,
+				       allSessions[s2].room);
+	var hypS2 = createHypSessionLoc(allSessions[s2], 
+					allSessions[s1].date,
+					allSessions[s1].time,
+					allSessions[s1].room);
+	hypSessions[s1] = hypS;
+	hypSessions[s2] = hypS2;
+	
+	var conflictsCausedByOffending = computeNewSingleConflicts(s1, hypSessions);
+	var conflictsCausedByCandidateAtOffending = computeNewSingleConflicts(s2, hypSessions);
+
+	var s = allSessions[s1];
+	var date = allSessions[s2].date;
+	var time = allSessions[s2].time;
+
+	for(var i = 0; i < conflictsWithRow[date][time]["sum"].length; i++){
+	    var item = conflictsWithRow[date][time]["sum"][i];
+	    if(conflictsWithRow[date][time]["session"][s2].indexOf(item) == -1){
+		conflictsCausedByOffending.push(item);
+	    }
+	}
+
+	for(var rs in schedule[s.date][s.time]){
+	    for(var sk in schedule[s.date][s.time][rs]){
+		if(sk != s.id){
+		    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewPairConflicts(sk, s2));
+		    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewFilteredPairConflicts(sk, s2));
+		}
+	    }
+	}
+	return {conflictsCausedByItem: conflictsCausedByItem,
+		conflictsCausedByCandidate: conflictsCausedByCandidate,
+		conflictsCausedByOffending: conflictsCausedByOffending,
+		conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
+    }
+
+    function proposeSwap(s){
+	var swapValue = [];
+	var conflictsCausedByItem = CCOps.allConflicts["sessions"][s.id];
+	var conflictsWithRow = computeConflictsWithRow(s);
+	
+	for(var date in schedule){
+	    for(var time in schedule[date]){
+		for(var room in schedule[date][time]){
+		    for(var s2 in schedule[date][time][room]){
+			var cc = null;
+			if(date == s.date && time == s.time){
+			    // in same row; assume only single constraints affected
+			    if(room == s.room) continue;
+			    cc = computeAllSingleConflicts(s.id, s2);
+			}else{
+			    cc = computeAllConflicts(s.id, s2, conflictsCausedByItem, conflictsWithRow);
+			}
+
+			var conflictsResolved = cc.conflictsCausedByCandidate.length + 
+			    cc.conflictsCausedByItem.length - 
+			    cc.conflictsCausedByOffending.length - 
+			    cc.conflictsCausedByCandidateAtOffending.length;
+			
+			swapValue.push(new swapDetails(new slot(allSessions[s2].date, 
+								allSessions[s2].time, 
+								allSessions[s2].room, s2),
+						       conflictsResolved,
+						       cc.conflictsCausedByCandidateAtOffending,
+						       cc.conflictsCausedByOffending,
+						       cc.conflictsCausedByItem,
+						       cc.conflictsCausedByCandidate
+						      ));
+		    }
+		}
 	    }
 	}
 	return swapValue;	
