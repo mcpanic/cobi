@@ -119,6 +119,24 @@ var CCOps = function(){
 								    (a.date == b.date) &&
  								    (a.room != b.room));
 						       })]);
+// 	var example5 = new EntityFilterPairConstraint("badTogether",
+// 						      "These papers shouldn't be together",
+// 						      100,
+// 						      "because they are not related",
+// 						      [new Rule('submission', 
+// 								function(x){ 
+// 								    return x.title.indexOf("Don") != -1;
+//  							   }),
+//  						      ],
+// 						      [new Rule('session',
+// 								function (x){
+// 								    return Comp.timeEquals(x.time, "11:00-12:20");
+// 							   }),
+// 						  new Rule('session',
+// 							   function(x){ // assume a session, a submission, or an author
+// 							       return !Comp.dateEquals(x.date, "Monday");
+// 							   })]);
+
 	
 //	CCOps.allConstraints.push(example);
 //	CCOps.allConstraints.push(example2);
@@ -545,11 +563,11 @@ var CCOps = function(){
 			    for(var e1 in paths1){
 				for(var e2 in belongRHS[s2]){
 				    conflicts.push(new conflictObject([paths1[e1].session,
-								       belongRHS[s2][e2].session],
-								      constraint.type,
-								      [paths1[e1],
-								       belongRHS[s2][e2]],
-								      constraint.description));
+									   belongRHS[s2][e2].session],
+									  constraint.type,
+									  [paths1[e1],
+									   belongRHS[s2][e2]],
+									  constraint.description));
 				}
 			    }
 			} // then the other
@@ -558,7 +576,7 @@ var CCOps = function(){
 				for(var e2 in paths2){
 				    conflicts.push(new conflictObject([belongLHS[s2][e1].session,
 								       paths2[e2].session],
-								      constraint.type,
+									  constraint.type,
 								      [belongLHS[s2][e1],
 								       paths2[e2]],
 								      constraint.description));
