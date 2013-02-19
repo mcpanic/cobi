@@ -435,6 +435,7 @@ var DataOps = function() {
 	    }
 	}
 	
+	CCOps.updateAllConstraintEntities([s1.id, s2.id]);
 	// associate papers with different sessions
     }
 
@@ -470,6 +471,7 @@ var DataOps = function() {
 	
 	removePaperFromSession(s, p);
 	addToUnscheduledPaper(p);
+	CCOps.updateAllConstraintEntities([s.id]);
     }
     
     // note: always add at start of session
@@ -504,6 +506,7 @@ var DataOps = function() {
 	
 	insertPaperIntoSession(s, p, pos);
 	removeFromUnscheduledPaper(p);
+	CCOps.updateAllConstraintEntities([s.id]);
     }
     
     // Example: 
@@ -522,6 +525,7 @@ var DataOps = function() {
 	
 	removePaperFromSession(s1, p1);
 	insertPaperIntoSession(s2, p1, pos);
+	CCOps.updateAllConstraintEntities([s1.id, s2.id]);
     }
 
     // Example:
@@ -545,6 +549,7 @@ var DataOps = function() {
 	    }
 	}
 	addToUnscheduledPaper(p2);
+	CCOps.updateAllConstraintEntities([s2.id]);
     }
     
     return {

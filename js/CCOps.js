@@ -106,7 +106,8 @@ var CCOps = function(){
 						       "because authors should only have to be at one place at any given time",
 						       [new Rule('author', function(x){ return true})],
 						       [new Rule('author', function(x){ return true})],
-						       [new Rule('author', function(a, b){ return a.authorId == b.authorId })], 
+						       [new Rule('author', function(a, b){ return a.authorId == b.authorId }),
+							new Rule('session', function(a, b) { return a.id != b.id})], 
 						       [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
 							   return !((a.time == b.time) &&
 								    (a.date == b.date) &&
@@ -119,7 +120,10 @@ var CCOps = function(){
 						       "because someone interested in one may be interested in the other",
 						       [new Rule('session', function(x){ return true})],
 						       [new Rule('session', function(x){ return true})],
-						       [new Rule('session', function(a, b){ return a.personas != "" && a.personas != "Misc" && a.personas == b.personas })], 
+						       [new Rule('session', function(a, b){ return a.personas != "" && 
+											    a.personas != "Misc" 
+											    && a.personas == b.personas }),
+							new Rule('session', function(a, b){ return a.id != b.id})], 
 						       [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
 							   return !((a.time == b.time) &&
 								    (a.date == b.date) &&
@@ -559,7 +563,7 @@ var CCOps = function(){
     }
     
     function computeConflictsFromSession(s, hypSessions, ignorePairs){
-	console.log(s, hypSessions, ignorePairs);
+	
 	var conflicts = [];
 	// conflicts caused by offending
 	if (s in unscheduled){
@@ -879,7 +883,6 @@ var CCOps = function(){
 	
     }
 
-
     function pathHypRelates(levels, path1, path2, hypSessions){
 	var session1 = allSessions[path1.session];
 	var session2 = allSessions[path2.session];
@@ -1043,6 +1046,13 @@ var CCOps = function(){
 	return levels;
     }
     
+    function updateAllConstraintEntities(affectedSessions){
+	// array of session ids
+	for(var i in CCOps.allConstraints){
+	    updateConstraintEntities(affectedSessions, CCOps.allConstraints[i]);
+	}
+    }
+
     function updateConstraintEntities(affectedSessions, constraint){
 	if(constraint.constraintType == "single"){		
 	    for(var i in affectedSessions){
@@ -1068,7 +1078,7 @@ var CCOps = function(){
 		sessionPath = updateLegalPaths(affectedSessions[i], 
 					       constraint.entity2Rules);
 		if(sessionPath.length == 0 && (affectedSessions[i] in constraint.entities2)){
-		    delete constraint.entities1[affectedSessions[i]];
+		    delete constraint.entities2[affectedSessions[i]];
 		}else{
 		    constraint.entities2[affectedSessions[i]] = sessionPath;
 		}
@@ -1088,14 +1098,19 @@ var CCOps = function(){
 		    // still have to go through all paths where sessions are on RHS and update 
 		    // them too
 		    for(var s in constraint.entityPairs){
-			constraint.entityPairs[s][affectedSessions[i]] = 
-			    legalPathPairsForTwoSessions(s, affectedSessions[i], levels, constraint.entities1, constraint.entities2);
+			if(affectedSessions[i] in constraint.entityPairs[s]){
+			    delete constraint.entityPairs[s][affectedSessions[i]];
+			}
+			var affPaths = legalPathPairsForTwoSessions(s, affectedSessions[i], levels, constraint.entities1, constraint.entities2);
+			if(affPaths.length > 0)
+			    constraint.entityPairs[s][affectedSessions[i]] = affPaths; 
+			
 		    }
 		}
 	    }
 	}
     }
-
+    
     function hypLegalPaths(s, rules, hypSessions){
 	var levels = groupRulesByLevel(rules);
 	var paths = generatePaths(hypSessions[s], levels); 
@@ -1443,6 +1458,7 @@ var CCOps = function(){
 	    proposePaperSessionAndSwap: proposePaperSessionAndSwap,
 	    proposePaperForSession: proposePaperForSession,
 	    proposeSessionForSlot: proposeSessionForSlot,
+	    updateAllConstraintEntities: updateAllConstraintEntities,
 	    computePaperSwapConflicts: computePaperSwapConflicts,
 	    initialize: initialize,
 	    getAllConflicts: getAllConflicts,
