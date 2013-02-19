@@ -1047,13 +1047,15 @@ function initAfterScheduleLoads(m){
     allRooms = getAllRooms();
     allSessions = getAllSessions();
     allSubmissions = getAllSubmissions();
-   
+
+    
     // TODO: deal with personas
     //attachPersonas();  // loads personas from a file into schedule JSON
     
     initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
     initializePersonaConflictsAmongSessions(); // this can be loaded from a file
     
+    CCOps.initialize();
     getAllConflicts();
     
     // Traditional polling for now...
@@ -1838,6 +1840,11 @@ function calculateNumConflictsCausedBy(s){
 }
 
 function getAllConflicts(){
+    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	conflictsBySession = CCOps.getAllConflicts().sessions;
+	return;    
+    }
+
     var conflicts = {}
     // assume conflicts already initialized
     // assume allRooms initialized

@@ -102,7 +102,7 @@ var CCOps = function(){
 	
 	 var example3 = new EntityFilterPairConstraint("authorInTwoSessions", 
 						       "Sessions with the same author should not be opposing",
-						       100,
+						       -10,
 						       "because authors should only have to be at one place at any given time",
 						       [new Rule('author', function(x){ return true})],
 						       [new Rule('author', function(x){ return true})],
@@ -116,7 +116,7 @@ var CCOps = function(){
 
 	 var example4 = new EntityFilterPairConstraint("personaInTwoSessions", 
 						       "Sessions with the same persona should not be opposing",
-						       100,
+						       -4,
 						       "because someone interested in one may be interested in the other",
 						       [new Rule('session', function(x){ return true})],
 						       [new Rule('session', function(x){ return true})],
@@ -131,7 +131,7 @@ var CCOps = function(){
 						       })]);
  	var example5 = new EntityPairConstraint("badTogether",
  						"These papers shouldn't be together",
- 						100,
+ 						-7,
  						"because they are not related",
  						[new Rule('submission', 
  							  function(x){ 
@@ -148,7 +148,7 @@ var CCOps = function(){
 						})]);
 	var example6 = new EntityPairConstraint("goodTogether",
  						"These papers should be together",
- 						100,
+ 						4,
  						"because they are related",
  						[new Rule('submission', 
  							  function(x){ 

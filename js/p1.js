@@ -829,7 +829,6 @@
             Sidebar.initialize(); 
             Searchbox.initialize();
             Polling.initialize();
-	    CCOps.initialize();
             // default is view mode.
             ViewMode.initialize();   
             UnscheduledPanel.initialize(); 
