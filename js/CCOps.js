@@ -147,7 +147,7 @@ var CCOps = function(){
 						  text[type],
 						  function (sessionA, violationA, sessionB, violationB){
 						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
-							  sessionB.submissions[violationB.submission].title + "'" + filler + ".";
+							  sessionB.submissions[violationB.submission].title + "'" + filler[type] + ".";
 						  },
  						  scores[type],
  						  "this is what an author said",
@@ -183,12 +183,12 @@ var CCOps = function(){
 		}
 	    }
 	}
-
     }
    
     function initialize(){
 	loadAuthorsourcingData();
 	generateAuthorsourcingConstraints();
+	console.log("loading finished");
 //     	var example = new SingleEntityConstraint("donat11",
 // 						 "Submissions whose title begin with 'Don' should be at 11am",
 // 						 10,
@@ -881,7 +881,7 @@ var CCOps = function(){
 	    cc.conflictsCausedByOffending.length - 
 	    cc.conflictsCausedByCandidateAtOffending.length;
 	
-	cc = removeAddRemove(cc);
+//	cc = removeAddRemove(cc);
 	return new swapDetails(space,
 			       conflictsResolved,
 			       cc.conflictsCausedByCandidateAtOffending,
