@@ -1,15 +1,16 @@
-function SingleEntityConstraint(type, description, importance, rationale, entityRules, constraintObjectRules){
+function SingleEntityConstraint(type, description, descriptionFunc, importance, rationale, entityRules, constraintObjectRules){
     this.importance = importance;
     this.rationale = rationale;
     this.entityRules = entityRules;
     this.entities = CCOps.belongs(entityRules);
     this.constraintObjectRules = constraintObjectRules;
     this.description = description;
+    this.descriptionFunc = descriptionFunc;
     this.type = type;
     this.constraintType = "single";
 }
 
-function EntityPairConstraint(type, description, importance, rationale, entity1Rules, entity2Rules, relationRules){
+function EntityPairConstraint(type, description, descriptionFunc, importance, rationale, entity1Rules, entity2Rules, relationRules){
     this.importance = importance;
     this.rationale = rationale;
     this.entity1Rules = entity1Rules;
@@ -30,11 +31,12 @@ function EntityPairConstraint(type, description, importance, rationale, entity1R
     this.entities2 = CCOps.belongs(entity2Rules);
     this.relationRules = relationRules;
     this.description = description;
+    this.descriptionFunc = descriptionFunc;
     this.type = type;
     this.constraintType = "pair";
 }
 
-function EntityFilterPairConstraint(type, description, importance, rationale, entity1Rules, entity2Rules, filterRules, relationRules){
+function EntityFilterPairConstraint(type, description, descriptionFunc, importance, rationale, entity1Rules, entity2Rules, filterRules, relationRules){
     this.importance = importance;
     this.rationale = rationale;
     this.entity1Rules = entity1Rules;
@@ -48,6 +50,7 @@ function EntityFilterPairConstraint(type, description, importance, rationale, en
 					    this.entities2);
     this.relationRules = relationRules;
     this.description = description;
+    this.descriptionFunc = descriptionFunc;
     this.type = type;
     this.constraintType = "pairFiltered";
 }
@@ -73,7 +76,7 @@ var CCOps = function(){
 	return new conflictObject([violation.session],
 				  constraint.type,
 				  [violation],
-				  constraint.description(session, violation));
+				  constraint.descriptionFunc(session, violation));
     }
     function createPairConflict(violationA, violationB, constraint){
 	var sessionA = allSessions[violationA.session];
@@ -81,7 +84,7 @@ var CCOps = function(){
 	return new conflictObject([violationA.session, violationB.session],
 				  constraint.type,
 				  [violationA, violationB],
-				  constraint.description(sessionA, violationA, sessionB, violationB));
+				  constraint.descriptionFunc(sessionA, violationA, sessionB, violationB));
     }
     function createSingleHypConflict(violation, constraint, hypSessions){
 	var session = allSessions[violation.session];
@@ -91,7 +94,7 @@ var CCOps = function(){
 	return new conflictObject([violation.session],
 				  constraint.type,
 				  [violation],
-				  constraint.description(session, violation));
+				  constraint.descriptionFunc(session, violation));
     }
     function createPairHypConflict(violationA, violationB, constraint, hypSessions){
 	var sessionA = allSessions[violationA.session];
@@ -105,7 +108,7 @@ var CCOps = function(){
 	return new conflictObject([violationA.session, violationB.session],
 				  constraint.type,
 				  [violationA, violationB],
-				  constraint.description(sessionA, violationA, sessionB, violationB));
+				  constraint.descriptionFunc(sessionA, violationA, sessionB, violationB));
     }
 
     function initialize(){
@@ -140,6 +143,7 @@ var CCOps = function(){
 // 						})]);
 	
 	 var example3 = new EntityFilterPairConstraint("authorInTwoSessions", 
+						       "same author shouldn't be in simultaneous sessions", 
 						       function (sessionA, violationA, sessionB, violationB){
 							   return sessionA.submissions[violationA.submission].authors[violationA.author].firstName + " " + 
 							       sessionA.submissions[violationA.submission].authors[violationA.author].lastName + 
@@ -159,6 +163,7 @@ var CCOps = function(){
 						       })]);
 
 	 var example4 = new EntityFilterPairConstraint("personaInTwoSessions", 
+						       "same persona shouldn't be in simultaneous sessions", 
 						       function (sessionA, violationA, sessionB, violationB){
 							   return "Someone interested in '" + sessionA.personas + "' may want to see both '" + 
 							       sessionA.title + "' and '" + sessionB.title + "'.";
@@ -177,6 +182,7 @@ var CCOps = function(){
  								    (a.room != b.room));
 						       })]);
  	var example5 = new EntityPairConstraint("badTogether",
+						"these papers aren't good together",
 						function (sessionA, violationA, sessionB, violationB){
 						    return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
 							sessionB.submissions[violationB.submission].title + "' should not be in the same session.";
@@ -197,6 +203,7 @@ var CCOps = function(){
 						    return !(a.id == b.id);
 						})]);
 	var example6 = new EntityPairConstraint("goodTogether",
+						"these papers are good together",
 						function (sessionA, violationA, sessionB, violationB){
 						    return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
 							sessionB.submissions[violationB.submission].title + "' are good in the same session.";
