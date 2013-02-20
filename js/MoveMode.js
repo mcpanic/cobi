@@ -275,8 +275,7 @@ var MoveMode = function() {
 
         var $cell = null;
         for(var i = 0; i < swapValues.length; i++){    
-            console.log("SWAP", swapValues[i].target.session);   
-
+            // console.log("SWAP", swapValues[i].target.session);   
             // empty session candidate
             if (swapValues[i].target.session === null){
                 if (typeof swapValues[i].target.date !== "undefined" && typeof swapValues[i].target.time !== "undefined" && typeof swapValues[i].target.room !== "undefined"){
@@ -533,6 +532,7 @@ var MoveMode = function() {
         // TOOD: check all the other things the swapping mode has created and reset/undo them.
         
         $("#unscheduled-papers .slot-paper").removeAttr("data-proposed-swap-paper");
+        $("#unscheduled .slot").removeAttr("data-proposed-swap-paper");
         $("#program .slot").removeAttr("data-proposed-swap-paper");
 
         $(".recommended").removeClass("recommended");

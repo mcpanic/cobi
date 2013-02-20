@@ -1,6 +1,7 @@
 var allRooms = null;
 var allSessions = null;
 var allSubmissions = null;
+var allAuthors = null;
 var authorConflictsAmongSessions = {};
 var personaConflictsAmongSessions = {};
 var conflictsByTime = null;
@@ -435,6 +436,10 @@ var DataOps = function() {
 	    }
 	}
 	
+	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	    console.log("relying on CCOps");
+	    CCOps.updateAllConstraintEntities([s1.id, s2.id]);
+	}
 	// associate papers with different sessions
     }
 
@@ -470,6 +475,10 @@ var DataOps = function() {
 	
 	removePaperFromSession(s, p);
 	addToUnscheduledPaper(p);
+	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	    console.log("relying on CCOps");
+	    CCOps.updateAllConstraintEntities([s.id]);
+	}
     }
     
     // note: always add at start of session
@@ -504,6 +513,10 @@ var DataOps = function() {
 	
 	insertPaperIntoSession(s, p, pos);
 	removeFromUnscheduledPaper(p);
+	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	    console.log("relying on CCOps");
+	    CCOps.updateAllConstraintEntities([s.id]);
+	}
     }
     
     // Example: 
@@ -522,6 +535,10 @@ var DataOps = function() {
 	
 	removePaperFromSession(s1, p1);
 	insertPaperIntoSession(s2, p1, pos);
+	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	    console.log("relying on CCOps");
+	    CCOps.updateAllConstraintEntities([s1.id, s2.id]);
+	}
     }
 
     // Example:
@@ -545,6 +562,10 @@ var DataOps = function() {
 	    }
 	}
 	addToUnscheduledPaper(p2);
+	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	    console.log("relying on CCOps");
+	    CCOps.updateAllConstraintEntities([s2.id]);
+	}
     }
     
     return {
@@ -1042,13 +1063,18 @@ function initAfterScheduleLoads(m){
     allRooms = getAllRooms();
     allSessions = getAllSessions();
     allSubmissions = getAllSubmissions();
-   
+    allAuthors = getAllAuthors(); // only used for conflict display
+    
     // TODO: deal with personas
     //attachPersonas();  // loads personas from a file into schedule JSON
     
     initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
     initializePersonaConflictsAmongSessions(); // this can be loaded from a file
     
+    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	console.log("relying on CCOps initialize");
+	CCOps.initialize();
+    }
     getAllConflicts();
     
     // Traditional polling for now...
@@ -1251,6 +1277,16 @@ function getAllSubmissions(){
 // 	submissions[e] = unscheduledSubmissions[e];
 //     }
 //     return submissions;
+}
+
+function getAllAuthors(){
+    var authors = {};
+    for(var e in allSubmissions){
+	for(var auth in allSubmissions[e].authors){
+	    authors[auth] = allSubmissions[e].authors[auth];
+	}
+    }
+    return authors;
 }
 
 function randomizeSchedule(){
@@ -1573,6 +1609,12 @@ function proposeSlot(s) {
 }
 
 function proposeSlotAndSwap(s){
+    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	console.log("relying on CCOps propose");
+	return CCOps.proposeSlotAndSwap(s);
+    }
+
+
     if(s.id in unscheduled){
 	var slotValue = proposeSlot(s);
 	var swapValue = proposeSwapForUnscheduled(s);
@@ -1588,6 +1630,11 @@ function proposeSlotAndSwap(s){
 }
 
 function proposeSessionForSlot(day, time, room){
+    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	console.log("relying on CCOps propose");
+	return CCOps.proposeSessionForSlot(day, time, room);
+    }
+    
     var scheduleValue = proposeScheduledSessionForSlot(day,time,room);
     var unscheduleValue = proposeUnscheduledSessionForSlot(day,time,room);
     return {scheduleValue: scheduleValue,
@@ -1612,8 +1659,9 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
 	for(var r2 in schedule[day][time]){
 	    // in case there are multiple sessions in a room, shouldn't be
 	    for(var s2 in schedule[day][time][r2]){
-			var conflicts = authorConflictsAmongSessions[s][s2];
-			conflictsWithSession[s] = conflictsWithSession[s].concat(conflicts);
+		var conflicts = authorConflictsAmongSessions[s][s2];
+		conflicts = conflicts.concat(personaConflictsAmongSessions[s][s2]);
+		conflictsWithSession[s] = conflictsWithSession[s].concat(conflicts);
 	    }
 	}
 	
@@ -1675,17 +1723,17 @@ function proposeScheduledSessionForSlot(sdate, stime, sroom) {
 		      
 		      var conflictsResolved = conflictsCausedByCandidate.length - 
 			  conflictsCausedByCandidateAtOffending.length;
-		    swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
-						   conflictsResolved,
-						   conflictsCausedByCandidateAtOffending,
-						   null,
-						   null,
-						   conflictsCausedByCandidate
-						   ));
-		}
-	    }
-	}
-    }
+		      swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
+						     conflictsResolved,
+						     conflictsCausedByCandidateAtOffending,
+						     null,
+						     null,
+						     conflictsCausedByCandidate
+						    ));
+		  }
+	      }
+	  }
+      }
     
     return swapValue;
 }
@@ -1821,6 +1869,11 @@ function calculateNumConflictsCausedBy(s){
 }
 
 function getAllConflicts(){
+    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	conflictsBySession = CCOps.getAllConflicts().sessions;
+	return;    
+    }
+
     var conflicts = {}
     // assume conflicts already initialized
     // assume allRooms initialized
@@ -1872,6 +1925,12 @@ function getAllConflicts(){
 
 /////////// start paper propose functions
 function proposePaperSessionAndSwap(p){
+    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	console.log("relying on CCOps propose");
+	return CCOps.proposePaperSessionAndSwap(p);
+    }
+    
+
     if(p.id in unscheduledSubmissions){
 	var sessionValue = proposeSessionForPaper(p);
 	var swapValue = proposeSwapForUnscheduledPaper(p);
@@ -1887,6 +1946,11 @@ function proposePaperSessionAndSwap(p){
 }
 
 function proposePaperForSession(s){
+    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	console.log("relying on CCOps propose");
+	return CCOps.proposePaperForSession(s);
+    }
+    
     var scheduleValue = proposeScheduledPaperForSession(s);
     var unscheduleValue = proposeUnscheduledPaperForSession(s);
     return {scheduleValue: scheduleValue,
@@ -2015,6 +2079,23 @@ function proposeSwapForPaper(p){
 	    }
 	}
     }
+
+    for(var session in unscheduled){
+	if ((unscheduled[session]["venue"] == p.type ||
+	     (p.type == "TOCHI" && unscheduled[session]["venue"] == "paper"))){
+	    for(var submission in unscheduled[session]["submissions"]){
+	    	swapValue.push(new swapDetails(new sessionPaper(session, 
+								unscheduled[session]["submissions"][submission]['id']),
+					       0,
+					       null,
+					       null,
+					       null,
+					       null));
+	    }
+	}
+    }
+    
+
     return swapValue;
 }
 
