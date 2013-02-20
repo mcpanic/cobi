@@ -532,6 +532,7 @@ var MoveMode = function() {
         // TOOD: check all the other things the swapping mode has created and reset/undo them.
         
         $("#unscheduled-papers .slot-paper").removeAttr("data-proposed-swap-paper");
+        $("#unscheduled .slot").removeAttr("data-proposed-swap-paper");
         $("#program .slot").removeAttr("data-proposed-swap-paper");
 
         $(".recommended").removeClass("recommended");
