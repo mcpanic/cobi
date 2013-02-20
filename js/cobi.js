@@ -2079,6 +2079,23 @@ function proposeSwapForPaper(p){
 	    }
 	}
     }
+
+    for(var session in unscheduled){
+	if ((unscheduled[session]["venue"] == p.type ||
+	     (p.type == "TOCHI" && unscheduled[session]["venue"] == "paper"))){
+	    for(var submission in unscheduled[session]["submissions"]){
+	    	swapValue.push(new swapDetails(new sessionPaper(session, 
+								unscheduled[session]["submissions"][submission]['id']),
+					       0,
+					       null,
+					       null,
+					       null,
+					       null));
+	    }
+	}
+    }
+    
+
     return swapValue;
 }
 
