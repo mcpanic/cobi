@@ -43,7 +43,7 @@ mysqli_query($mysqli, $query);
 echo mysqli_error($mysqli);
 
 // Form the author table
-$authorFile = file_get_contents('authors-2013-2-7-0-16-5.json');
+$authorFile = file_get_contents('authors-2013-2-20-12-25-28.json');
 $authorData = json_decode($authorFile, true);
 $authorData = $authorData['rows'];
 
@@ -82,7 +82,7 @@ foreach ($authorData as $auth) {
 
 // Form the schedule table
 //schedule-2013-0-30-13-51-39.json
-$scheduleFile = file_get_contents('schedule-2013-2-7-0-16-1.json');
+$scheduleFile = file_get_contents('schedule-2013-2-20-12-25-24.json');
 //$scheduleFile = file_get_contents('schedule-2012-11-16-14-55-35.json');
 $schedule = json_decode($scheduleFile, true);
 $schedule = $schedule["rows"];
@@ -104,7 +104,7 @@ foreach ($schedule as $slot) {
 
 
 // Form the entity table
-$entityFile = file_get_contents('submissions-2013-2-7-0-15-55.json');
+$entityFile = file_get_contents('submissions-2013-2-20-12-25-16.json');
 $entities = json_decode($entityFile, true);
 $entities = $entities["rows"];
 $awardHash = array();
@@ -169,7 +169,7 @@ foreach ($entities as $entity) {
 }
 
 // Form the session table
-$sessionsFile = file_get_contents('sessions-2013-2-7-0-15-58.json');
+$sessionsFile = file_get_contents('sessions-2013-2-20-12-25-20.json');
 //
 //sessions-2012-11-16-14-55-33.json');
 $sessions = json_decode($sessionsFile, true);
