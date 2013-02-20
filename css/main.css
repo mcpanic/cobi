@@ -597,6 +597,23 @@ body.loading .modal {
 }
 
 
+/* conflict in the sidebar */
+#list-constraints li.constraint-entry {
+
+}
+
+#list-constraints {
+    margin-top: -10px;
+}
+
+#list-constraints h5 {
+    margin-bottom: -10px;
+}
+
+#list-constraints .sublist-constraints {
+    margin-top: -10px;
+}
+
 /* ==========================================================================
     Interface misc
    ========================================================================== */
@@ -641,11 +658,15 @@ body.loading .modal {
 /* ==========================================================================
     Color palette
    ========================================================================== */
-.cell-conflict-0{
+[class*="cell-conflict-high"]{
     background-color: #913A52;    
 }
 
-.cell-conflict-1{
+[class*="cell-conflict-medium"]{
+    background-color: #C77F77;    
+}
+
+[class*="cell-conflict-low"]{
     background-color: #C77F77;    
 }
 

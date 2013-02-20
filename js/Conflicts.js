@@ -19,11 +19,17 @@ var Conflicts = function() {
             var constraint = {};
             constraint.id = index;
             constraint.description = c.description;
-            constraint.color = "#913A52"
+            constraint.color = "#913A52";
+            // TODO: make it more reasonable
+            if (c.importance < -5) {
+                constraint.severity = "high";
+            } else
+                constraint.severity = "medium";
             constraint.importance = c.importance;
             constraint.type = c.type;
             Conflicts.constraintsList.push(constraint);
         });
+        Conflicts.constraintsList.sort(function(a,b){ return a.importance > b.importance; });
         console.log(CCOps.allConstraints, Conflicts.constraintsList);        
     }
 
@@ -57,7 +63,8 @@ var Conflicts = function() {
                     for (i=0; i<filtered_array.length; i++) {
                          html += "<span class='conflict-display'></span>";
                     }
-                    var $palette = $(html).css("background-color", conflict.color);
+                    var $palette = $(html).addClass("cell-conflict-" + conflict.severity)
+                    //.css("background-color", conflict.color);
                     element.append(filtered_array.length).append($palette);
                     var palette_title = "Conflicts: " + conflict.description;
                     var palette_content = conflicts.map(function(co) {
@@ -226,28 +233,20 @@ var Conflicts = function() {
         
         var className = "";
         $.each(Conflicts.constraintsList, function(index, constraint){
+            // class name should be unique so that ones with same severity doesn't influence others
             if (constraint.type == selectedConstraint)
-                className = "cell-conflict-" + index;
-                // color = constraint.color;
+                className = "cell-conflict-" + constraint.severity + constraint.id;
         });
-        
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                if (isSpecialCell($(item)))
                     return;
-               // $(item).css("background-color", "");
-               $(item).removeClass(className);
+
+                $(item).removeClass(className);
                var id = $(item).attr("id").substr(8);
-               // var session = allSessions[id];     
-               // var color = ""; // default white
-               // if (toggle)
-               //      color = $this.find(".palette").css("background-color");
                $.each(conflictsBySession[id], function(index, constraint){
-                    //console.log(id, constraint.type, selectedConstraint, constraint.type == selectedConstraint, toggle, className);
                     if (constraint.type == selectedConstraint && toggle){
-                         // $(item).css("background-color", color);
                          $(item).addClass(className);
                     } else if (constraint.type == selectedConstraint && !toggle){
-                         // $(item).css("background-color", "");
                          $(item).removeClass(className);
                     }
                });
@@ -286,7 +285,7 @@ var Conflicts = function() {
 
         var total = 0;
         $.each(Conflicts.constraintsList, function(index, conflict){
-            $("#list-constraints li").each(function(){
+            $("#list-constraints li.constraint-entry").each(function(){
                 if (conflict.type == $(this).attr("data-type")){
                   // Pairwise counted as 1
                     $(this).find(".count").html(Math.round(conflict_count_array[conflict.type]/2));
@@ -296,7 +295,7 @@ var Conflicts = function() {
         });
         $("#constraints-count").html(Math.round(total/2));
 
-        $("#list-constraints li").each(function(index, item){
+        $("#list-constraints li.constraint-entry").each(function(index, item){
             // console.log("update", $(item).hasClass("view-option-active"), $(item).attr("data-type"));
             if ($(item).hasClass("view-option-active"))
                 updateConstraintBackground($(item).attr("data-type"), true);

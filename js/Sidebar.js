@@ -252,7 +252,7 @@ var Sidebar = function() {
      // }
 
      function _toggleAllConflicts(toggle){
-          $("#list-constraints li").each(function(index, constraint){
+          $("#list-constraints li.constraint-entry").each(function(index, constraint){
                Conflicts.updateConstraintBackground($(constraint).attr("data-type"), toggle);         
           });          
      }
@@ -275,9 +275,9 @@ var Sidebar = function() {
           if (toggle)
               $(this).parent().addClass("view-option-active");
 
-          $("#list-constraints li").each(function(index, constraint){
+          $("#list-constraints li.constraint-entry").each(function(index, constraint){
                var type = $(constraint).attr("data-type");
-               // console.log(type, $this.parent().attr("data-type"), toggle);
+               console.log(type, $this.parent().attr("data-type"), toggle);
                if (type == $this.parent().attr("data-type"))
                     Conflicts.updateConstraintBackground(type, toggle);     
                else
@@ -472,7 +472,6 @@ var Sidebar = function() {
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                if (isSpecialCell($(item)))
                     return;
-               // $(item).css("background-color", "");
                $(item).removeClass(className);
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
@@ -527,7 +526,6 @@ var Sidebar = function() {
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                if (isSpecialCell($(item)))
                     return;
-               // $(item).css("background-color", "");
                $(item).removeClass(className);
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
@@ -576,13 +574,16 @@ var Sidebar = function() {
 	function displayConstraints(){
      	$.each(Conflicts.constraintsList, function(index, constraint){
      		var item = document.createElement("li");
-     		$(item).attr("data-type", constraint.type).html("<a href='#'><span class='palette'></span>" 
+     		$(item).attr("data-type", constraint.type)
+                    .addClass("constraint-entry")
+                    .html("<a href='#'><span class='palette'></span>" 
                     + constraint.description 
                     + "</a>"
                     + " (<span class='count'></span>)"
                     );
-     		$("#list-constraints").append($(item));
-     		$(item).find("span.palette").css("background-color", constraint.color);
+     		$("#list-constraints #" + constraint.severity + "-severity-constraints").append($(item));
+     		$(item).find("span.palette").addClass("cell-conflict-" + constraint.severity);
+               //.css("background-color", constraint.color);
       	});
 	}
 
