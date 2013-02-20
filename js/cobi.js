@@ -1,6 +1,7 @@
 var allRooms = null;
 var allSessions = null;
 var allSubmissions = null;
+var allAuthors = null;
 var authorConflictsAmongSessions = {};
 var personaConflictsAmongSessions = {};
 var conflictsByTime = null;
@@ -1047,7 +1048,7 @@ function initAfterScheduleLoads(m){
     allRooms = getAllRooms();
     allSessions = getAllSessions();
     allSubmissions = getAllSubmissions();
-
+    allAuthors = getAllAuthors(); // only used for conflict display
     
     // TODO: deal with personas
     //attachPersonas();  // loads personas from a file into schedule JSON
@@ -1258,6 +1259,16 @@ function getAllSubmissions(){
 // 	submissions[e] = unscheduledSubmissions[e];
 //     }
 //     return submissions;
+}
+
+function getAllAuthors(){
+    var authors = {};
+    for(var e in allSubmissions){
+	for(var auth in allSubmissions[e].authors){
+	    authors[auth] = allSubmissions[e].authors[auth];
+	}
+    }
+    return authors;
 }
 
 function randomizeSchedule(){
