@@ -1871,6 +1871,7 @@ function calculateNumConflictsCausedBy(s){
 function getAllConflicts(){
     if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
 	conflictsBySession = CCOps.getAllConflicts().sessions;
+	console.log("get all conflicts just got called");
 	return;    
     }
 

@@ -176,21 +176,19 @@ var CCOps = function(){
 		    var cases = {'great': [], 'ok':[], 'notsure':[],'notok':[]};
 		    for(var j in cases){
 			cases[j] = CCOps.authorsourcingData[submission][auth][i][j].split(',');
-			if(j == 'notok'){
-			    for(var k in cases[j]){
-				CCOps.allConstraints.push(generateFitInSessionConstraint(submission, cases[j][k], j));
-			    }
+			for(var k in cases[j]){
+			    CCOps.allConstraints.push(generateFitInSessionConstraint(submission, cases[j][k], j));
 			}
 		    }
 		}
 	    }
 	}
-
     }
    
     function initialize(){
 	loadAuthorsourcingData();
 	generateAuthorsourcingConstraints();
+	console.log("loading finished");
 //     	var example = new SingleEntityConstraint("donat11",
 // 						 "Submissions whose title begin with 'Don' should be at 11am",
 // 						 10,
@@ -883,7 +881,7 @@ var CCOps = function(){
 	    cc.conflictsCausedByOffending.length - 
 	    cc.conflictsCausedByCandidateAtOffending.length;
 	
-	cc = removeAddRemove(cc);
+//	cc = removeAddRemove(cc);
 	return new swapDetails(space,
 			       conflictsResolved,
 			       cc.conflictsCausedByCandidateAtOffending,
