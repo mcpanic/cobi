@@ -574,10 +574,10 @@ var Sidebar = function() {
 
      // Display the constraints list
 	function displayConstraints(){
-     	$.each(constraints_list, function(index, constraint){
+     	$.each(Conflicts.constraintsList, function(index, constraint){
      		var item = document.createElement("li");
      		$(item).attr("data-type", constraint.type).html("<a href='#'><span class='palette'></span>" 
-                    + constraint.label 
+                    + constraint.description 
                     + "</a>"
                     + " (<span class='count'></span>)"
                     );
