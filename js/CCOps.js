@@ -147,7 +147,7 @@ var CCOps = function(){
 						  text[type],
 						  function (sessionA, violationA, sessionB, violationB){
 						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
-							  sessionB.submissions[violationB.submission].title + "'" + filler + ".";
+							  sessionB.submissions[violationB.submission].title + "'" + filler[type] + ".";
 						  },
  						  scores[type],
  						  "this is what an author said",
