@@ -70,6 +70,7 @@ function Rule(level, comp){
 var CCOps = function(){
     var allConstraints = [];
     var allConflicts = [];
+    var authorsourcingData = null;
     
     function createSingleConflict(violation, constraint){
 	var session = allSessions[violation.session];
@@ -111,7 +112,84 @@ var CCOps = function(){
 				  constraint.descriptionFunc(sessionA, violationA, sessionB, violationB));
     }
 
+    function loadAuthorsourcingData(){
+	$.ajax({
+ 	    async: false,
+	    type: 'GET',
+	    url: "./php/loadAuthorsourcing.php",
+	    success: function(m){	
+		if(m != null){
+		    CCOps.authorsourcingData = m;
+		}
+	    },
+	    error : function(m){
+		console.log("error: " + JSON.stringify(m));
+	    },
+	    dataType: "json"
+	});
+    }
+    
+    function generateFitInSessionConstraint(e1, e2, type){
+	var text = {'great': 'these papers are great together',
+		    'ok' : 'these papers are good together',
+		    'notsure': 'not sure if these papers are good together',
+		    'notok': 'these papers should not be together'};
+	var scores = {'great': 10,
+		      'ok': 5,
+		      'notsure': -5,
+		      'notok' : -10};
+	var filler = {'great' : 'should be',
+		      'ok': 'should be',
+		      'notsure': 'should not be',
+		      'notok': 'should not be'};
+	
+	var constraint = new EntityPairConstraint(type,
+						  text[type],
+						  function (sessionA, violationA, sessionB, violationB){
+						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
+							  sessionB.submissions[violationB.submission].title + "'" + filler + ".";
+						  },
+ 						  scores[type],
+ 						  "this is what an author said",
+ 						  [new Rule('submission', 
+ 							    function(x){ 
+ 								return x.id == e1;
+  							    }),
+  						  ],
+ 						  [new Rule('submission',
+ 							    function (x){
+ 								return x.id == e2;
+							    }),
+						      ],
+						  [new Rule('session', function(a,b){
+						      return !(a.id == b.id);
+						  })]);
+//	console.log(constraint);
+	return constraint;
+    }
+
+
+    function generateAuthorsourcingConstraints(){
+	for(var submission in CCOps.authorsourcingData){
+	    for(var auth in CCOps.authorsourcingData[submission]){
+		for(var i in CCOps.authorsourcingData[submission][auth]){
+		    var cases = {'great': [], 'ok':[], 'notsure':[],'notok':[]};
+		    for(var j in cases){
+			cases[j] = CCOps.authorsourcingData[submission][auth][i][j].split(',');
+			for(var k in cases[j]){
+			    CCOps.allConstraints.push(generateFitInSessionConstraint(submission, cases[j][k], j));
+			    
+			}
+		    }
+		}
+	    }
+	}
+
+    }
+   
     function initialize(){
+	loadAuthorsourcingData();
+	generateAuthorsourcingConstraints();
 //     	var example = new SingleEntityConstraint("donat11",
 // 						 "Submissions whose title begin with 'Don' should be at 11am",
 // 						 10,
@@ -1528,8 +1606,8 @@ var CCOps = function(){
 	    belongs: belongs,
 	    equal: equal,
 	    legalPathPairs: legalPathPairs,
-	    removeSames: removeSames};
-
-
+	    removeSames: removeSames,
+	    authorsourcingData: authorsourcingData
+	   };
 }();
 
