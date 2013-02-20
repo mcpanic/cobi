@@ -177,11 +177,19 @@ $sessions = $sessions["rows"];
 
 foreach ($sessions as $session) {
   $sid = mysqli_real_escape_string($mysqli, $session['id']); 
-  $timeslot = explode(" ", $session['value']['timeslot']);
-  $sdate = mysqli_real_escape_string($mysqli, $timeslot[0]);
-  $stime = mysqli_real_escape_string($mysqli, $timeslot[1]);
 
-  $sroom = mysqli_real_escape_string($mysqli, $timeslot[2]);
+  if($session['value']['timeslot'] == "" or $session['value']['timeslot'] == null){
+    $sdate = "";
+    $stime = "";
+    $sroom = "";
+    $scheduled = 0;
+  }else{
+    $timeslot = explode(" ", $session['value']['timeslot']);
+    $sdate = mysqli_real_escape_string($mysqli, $timeslot[0]);
+    $stime = mysqli_real_escape_string($mysqli, $timeslot[1]);
+    $sroom = mysqli_real_escape_string($mysqli, $timeslot[2]);
+    $scheduled = 1;
+  }
   if($sroom == "242AB"){
     $sroom = "242A";
   }
@@ -225,7 +233,7 @@ foreach ($sessions as $session) {
   }
   
   
-  $squery = "INSERT INTO session (id, date, time, chairAffiliations, chairs, coreCommunities, featuredCommunities, personas, hasAward, hasHonorableMention, notes, room, submissions, title, venue, scheduled) VALUES ('$sid', '$sdate', '$stime', '$chairAffiliations', '$chairs', '$coreCommunities', '$featuredCommunities', '$personas', '$hasAward', '$hasHonorableMention', '$notes', '$sroom', '$submissionKeys', '$title', '$venue', 1)";
+  $squery = "INSERT INTO session (id, date, time, chairAffiliations, chairs, coreCommunities, featuredCommunities, personas, hasAward, hasHonorableMention, notes, room, submissions, title, venue, scheduled) VALUES ('$sid', '$sdate', '$stime', '$chairAffiliations', '$chairs', '$coreCommunities', '$featuredCommunities', '$personas', '$hasAward', '$hasHonorableMention', '$notes', '$sroom', '$submissionKeys', '$title', '$venue', '$scheduled')";
   mysqli_query($mysqli, $squery);
   echo  mysqli_error($mysqli);
 }

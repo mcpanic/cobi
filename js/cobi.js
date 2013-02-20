@@ -436,7 +436,10 @@ var DataOps = function() {
 	    }
 	}
 	
-	CCOps.updateAllConstraintEntities([s1.id, s2.id]);
+	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	    console.log("relying on CCOps");
+	    CCOps.updateAllConstraintEntities([s1.id, s2.id]);
+	}
 	// associate papers with different sessions
     }
 
@@ -472,7 +475,10 @@ var DataOps = function() {
 	
 	removePaperFromSession(s, p);
 	addToUnscheduledPaper(p);
-	CCOps.updateAllConstraintEntities([s.id]);
+	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	    console.log("relying on CCOps");
+	    CCOps.updateAllConstraintEntities([s.id]);
+	}
     }
     
     // note: always add at start of session
@@ -507,7 +513,10 @@ var DataOps = function() {
 	
 	insertPaperIntoSession(s, p, pos);
 	removeFromUnscheduledPaper(p);
-	CCOps.updateAllConstraintEntities([s.id]);
+	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	    console.log("relying on CCOps");
+	    CCOps.updateAllConstraintEntities([s.id]);
+	}
     }
     
     // Example: 
@@ -526,7 +535,10 @@ var DataOps = function() {
 	
 	removePaperFromSession(s1, p1);
 	insertPaperIntoSession(s2, p1, pos);
-	CCOps.updateAllConstraintEntities([s1.id, s2.id]);
+	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	    console.log("relying on CCOps");
+	    CCOps.updateAllConstraintEntities([s1.id, s2.id]);
+	}
     }
 
     // Example:
@@ -550,7 +562,10 @@ var DataOps = function() {
 	    }
 	}
 	addToUnscheduledPaper(p2);
-	CCOps.updateAllConstraintEntities([s2.id]);
+	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	    console.log("relying on CCOps");
+	    CCOps.updateAllConstraintEntities([s2.id]);
+	}
     }
     
     return {
@@ -1056,7 +1071,10 @@ function initAfterScheduleLoads(m){
     initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
     initializePersonaConflictsAmongSessions(); // this can be loaded from a file
     
-    CCOps.initialize();
+    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	console.log("relying on CCOps initialize");
+	CCOps.initialize();
+    }
     getAllConflicts();
     
     // Traditional polling for now...
