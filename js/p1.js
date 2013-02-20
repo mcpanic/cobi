@@ -826,13 +826,17 @@
         $(document).bind("fullyLoaded", function(){
             displayScheduled();
             displayUnscheduled();
+            
+            // should come before Sidebar initialization because we need to generate the conflicts list from here dynamically
+            Conflicts.initialize();
+
             Sidebar.initialize(); 
             Searchbox.initialize();
             Polling.initialize();
             // default is view mode.
             ViewMode.initialize();   
             UnscheduledPanel.initialize(); 
-            Conflicts.initialize();
+ 
             $(".user-display").append("<span class='icon-user icon-white'/>").append(getUsernameByUID(userData.id));
             Statusbar.display("Select a session for scheduling options and more information.");
             $("body").removeClass("loading");             

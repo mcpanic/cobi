@@ -2,10 +2,30 @@
 // These can be combined to form more complex operations.
 
 var Conflicts = function() {
+
+    var constraintsList = [];
+
 	// Initialize the sidebar with a default view 
 	function initialize(){
+        updateConstraintsList();
 	  	bindEvents();
 	}
+
+    // From CCOps.allConstraints, get all existing contraints existing in the data.
+    // TODO: when constraint types are added as a transaction, handle them dynamically here, working with Polling.js
+    function updateConstraintsList(){
+
+        $.each(CCOps.allConstraints, function(index, c){
+            var constraint = {};
+            constraint.id = index;
+            constraint.description = c.description;
+            constraint.color = "#913A52"
+            constraint.importance = c.importance;
+            constraint.type = c.type;
+            Conflicts.constraintsList.push(constraint);
+        });
+        console.log(CCOps.allConstraints, Conflicts.constraintsList);        
+    }
 
 	function bindEvents(){
         $(document).on("click", ".conflict-preview-display", conflictPreviewDisplayHandler);
@@ -29,7 +49,7 @@ var Conflicts = function() {
          var conflicts_array = conflicts.map(function(co) {return co.type});
          
           // for each constraint, count and add a modal dialog with descriptions
-          $.each(constraints_list, function(index, conflict){
+          $.each(Conflicts.constraintsList, function(index, conflict){
                var filtered_array = conflicts_array.filter(function(x){return x==conflict.type});
                if (filtered_array.length > 0) {
                     var html = "";
@@ -39,7 +59,7 @@ var Conflicts = function() {
                     }
                     var $palette = $(html).css("background-color", conflict.color);
                     element.append(filtered_array.length).append($palette);
-                    var palette_title = "Conflicts: " + conflict.label;
+                    var palette_title = "Conflicts: " + conflict.description;
                     var palette_content = conflicts.map(function(co) {
                          if (co.type == conflict.type)
                               return "<li>"+co.description+"</li>";
@@ -93,7 +113,7 @@ var Conflicts = function() {
                     .attr("data-html", "true")
                     .attr("data-title", ment)
                     .attr("data-trigger", "manual")
-                    .attr("data-content", "<strong>" + ment + "</strong><br><strong>Type: " + conflict.label + "</strong><br>" + filteredArray[i].description)
+                    .attr("data-content", "<strong>" + ment + "</strong><br><strong>Type: " + conflict.description + "</strong><br>" + filteredArray[i].description)
                     // .popover({
                     //     html:true,
                     //     title: ment,
@@ -135,7 +155,7 @@ var Conflicts = function() {
           var isChanged = false;
 
           // for each constraint, count and add a modal dialog with descriptions
-          $.each(constraints_list, function(index, conflict){  
+          $.each(Conflicts.constraintsList, function(index, conflict){  
             // var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 
             //             - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
             // if (netCount == 0)
@@ -178,7 +198,7 @@ var Conflicts = function() {
           var isChanged = false;
 
           // for each constraint, count and add a modal dialog with descriptions
-          $.each(constraints_list, function(index, conflict){  
+          $.each(Conflicts.constraintsList, function(index, conflict){  
 
             var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict)
                   - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
@@ -205,7 +225,7 @@ var Conflicts = function() {
      function updateConstraintBackground(selectedConstraint, toggle){
         
         var className = "";
-        $.each(constraints_list, function(index, constraint){
+        $.each(Conflicts.constraintsList, function(index, constraint){
             if (constraint.type == selectedConstraint)
                 className = "cell-conflict-" + index;
                 // color = constraint.color;
@@ -240,7 +260,7 @@ var Conflicts = function() {
      function updateConflicts(isSidebarOn, isSlotOn){
 
         var conflict_count_array = {};
-        $.each(constraints_list, function(index, conflict){
+        $.each(Conflicts.constraintsList, function(index, conflict){
             conflict_count_array[conflict.type] = 0;
         });
 
@@ -251,7 +271,7 @@ var Conflicts = function() {
                     displayConflicts(conflictsBySession[id], $(this).find(".display"));
                 var conflicts_array = conflictsBySession[id].map(function(co) {return co.type});          
                     // for each constraint, count and add a modal dialog with descriptions
-                    $.each(constraints_list, function(index, conflict){
+                    $.each(Conflicts.constraintsList, function(index, conflict){
                         var filtered_array = conflicts_array.filter(function(x){return x==conflict.type});
                         conflict_count_array[conflict.type] += filtered_array.length;             
                     });
@@ -265,7 +285,7 @@ var Conflicts = function() {
             return;
 
         var total = 0;
-        $.each(constraints_list, function(index, conflict){
+        $.each(Conflicts.constraintsList, function(index, conflict){
             $("#list-constraints li").each(function(){
                 if (conflict.type == $(this).attr("data-type")){
                   // Pairwise counted as 1
@@ -287,6 +307,7 @@ var Conflicts = function() {
 
     return {
         initialize: initialize,
+        constraintsList: constraintsList,
         clearConflictDisplay: clearConflictDisplay,
         // displayConflicts: displayConflicts,
         // displayConflictPreviewHTML: displayConflictPreviewHTML,
