@@ -176,9 +176,10 @@ var CCOps = function(){
 		    var cases = {'great': [], 'ok':[], 'notsure':[],'notok':[]};
 		    for(var j in cases){
 			cases[j] = CCOps.authorsourcingData[submission][auth][i][j].split(',');
-			for(var k in cases[j]){
-			    CCOps.allConstraints.push(generateFitInSessionConstraint(submission, cases[j][k], j));
-			    
+			if(j == 'notok'){
+			    for(var k in cases[j]){
+				CCOps.allConstraints.push(generateFitInSessionConstraint(submission, cases[j][k], j));
+			    }
 			}
 		    }
 		}
