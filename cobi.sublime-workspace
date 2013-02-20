@@ -4,6 +4,106 @@
 		"selected_items":
 		[
 			[
+				"cons",
+				"constraintObjects"
+			],
+			[
+				"create",
+				"createConstraintObjectDisplay"
+			],
+			[
+				"rela",
+				"relationMappingList"
+			],
+			[
+				"conflict",
+				"conflictObjectMappingList"
+			],
+			[
+				"date",
+				"dateEquals  (variable)"
+			],
+			[
+				"time",
+				"timeEquals  (variable)"
+			],
+			[
+				"or",
+				"orderedDateList"
+			],
+			[
+				"session",
+				"sessionHasAward"
+			],
+			[
+				"selec",
+				"selectedConstraint"
+			],
+			[
+				"sele",
+				"selectedConstraint"
+			],
+			[
+				"find",
+				"findCellByDateTimeRoom"
+			],
+			[
+				"is",
+				"isInterrupted"
+			],
+			[
+				"Move",
+				"MoveMode"
+			],
+			[
+				"list-",
+				"list-personas"
+			],
+			[
+				"recom",
+				"recommendedList"
+			],
+			[
+				"iS",
+				"isTransactionMyChange"
+			],
+			[
+				"isTran",
+				"isTransactionMyChange"
+			],
+			[
+				"cell",
+				"findCellByID"
+			],
+			[
+				"proposed-",
+				"proposed-swap-paper"
+			],
+			[
+				"paper-uns",
+				"paper-unscheduled"
+			],
+			[
+				"type",
+				"submissionType"
+			],
+			[
+				"unscheduled",
+				"unscheduledId"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"netCount",
+				"netCountClass"
+			],
+			[
+				"getS",
+				"getSessionDetail"
+			],
+			[
 				"SERVER",
 				"_SERVER"
 			],
@@ -76,14 +176,6 @@
 				"thumb_html"
 			],
 			[
-				"time",
-				"timeline-bottom"
-			],
-			[
-				"list-",
-				"list-style-type"
-			],
-			[
 				"icon",
 				"icon-chevron-up"
 			],
@@ -100,9 +192,140 @@
 	"buffers":
 	[
 		{
+			"file": "p1.html",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 10677,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/main.css",
+			"settings":
+			{
+				"buffer_size": 15061,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n    // popover title update\n    // $('body').on('focus', '[contenteditable]', function() {\n    //     var $this = $(this);\n    //     $this.attr('data-before', $this.html());\n    //     return $this;\n    // }).on('blur keyup paste', '[contenteditable]', function() {\n    //     var $this = $(this);\n    //     // if ($this.attr('data-before') !== $this.html()) {\n    //     //     $this.attr('data-before', $this.html());\n    //     //     $this.trigger('change');\n    //     // }\n    //     return $this;\n    // });\n\n    $(\"body\").on(\"click\", \".popover-inner .save-button\", function(){\n        var $text = $(this).closest(\".popover-inner\").find(\"[contenteditable]\")\n        if ($(this).html() == \"edit\") {\n            $text.attr(\"contenteditable\", true);\n            $text.trigger(\"focus\");\n            $(this).html(\"save\");\n        } else {            \n            $text.attr(\"contenteditable\", false);\n            $(this).html(\"edit\");\n            var id = $(this).attr(\"data-session-id\");\n            console.log(\"change\", id, $text.html());\n            if (typeof id !== \"undefined\"){\n                editSessionTitle(allSessions[id], $text.html());    \n            }\n            \n        }\n    });\n\n\n    // Popover close button interaction\n    $(\"body\").on(\"click\", \".popover-close\", function(){\n        // console.log(\"popover-close\", $(this).attr(\"data-session-id\"));\n        var $cell = null;\n        if (typeof $(this).attr(\"data-session-id\") === \"undefined\"){\n            $cell = findCellByDateTimeRoom($(this).attr(\"data-date\"), $(this).attr(\"data-time\"), $(this).attr(\"data-room\"));\n        } else {\n            $cell = findCellByID($(this).attr(\"data-session-id\"));\n        }\n        $cell.trigger(\"click\");\n//        $cell.popover(\"hide\");\n    });\n\n    // Read paper IDs in order from a submission list\n    function _readPaperOrder($list){\n        var order = [];\n        $.each($list.find(\"li\"), function(index, item){\n            // not including the last empty element\n            if (item.id != \"\")\n                order.push(item.id);\n        });\n        return order;\n    }\n\n    // Get html for a list of submissions for a session\n    function getSubmissionList(mode, session, srcType){\n        var element = document.createElement(\"ul\");\n        $(element).addClass(\"list-submissions\");\n        $.each(session.submissions, function(index, submission){\n            $(element).append(getSubmissionDetail(mode, \"scheduled\", submission, srcType, session));                    \n        });\n        if (mode != \"move\") // do not show empty submission when move\n            $(element).append(getSubmissionDetail(mode, \"empty\", null, srcType, session));    \n        return outerHTML(element); \n    }\n\n    // get html for a session in the view mode\n    function _getViewSessionDetail(type, session){\n        var element = document.createElement(\"div\");\n        if (typeof session !== \"undefined\" && session != null && typeof session.id !== \"undefined\" && session.id != null) {\n           //$(\"<span/>\").attr(\"id\", \"popover-session-\" + session.id).addClass(\"hidden\").appendTo($(element));\n           $(element).attr(\"id\", session.id);\n        }\n\n        // HQ: locked sessions get only a locked button\n        var isLocked = false;\n        if (type != \"unscheduled\" && typeof session !== \"undefined\" && session != null){\n            isLocked = scheduleSlots[session.date][session.time][session.room]['locked'];\n        }\n\n        if(isLocked){\n            $(\"<button/>\").addClass(\"btn btn-inverse button-unlock\").html(\"Unlock\").appendTo($(element));\n        } else {\n            var $lockButton = $(\"<button/>\").addClass(\"btn btn-inverse button-lock\").html(\"Lock\");\n            if (type == \"scheduled\") {\n                $(\"<button/>\").addClass(\"btn btn-info button-propose-scheduled\").html(\"Propose Move\").appendTo($(element));\n                $(\"<button/>\").addClass(\"btn btn-danger button-unschedule\").html(\"Unschedule\").appendTo($(element));\n                $lockButton.appendTo($(element));\n            } else if (type == \"unscheduled\") {\n                $(\"<button/>\").addClass(\"btn btn-info button-propose-unscheduled\").html(\"Propose Schedule\").appendTo($(element));\n            } else if (type == \"empty\") {\n                $(\"<button/>\").addClass(\"btn btn-info button-propose-empty\").html(\"Propose Schedule\").appendTo($(element));\n                $lockButton.appendTo($(element));\n            }\n\n            if (typeof session !== \"undefined\" && session != null && typeof session.submissions !== \"undefined\" && session.submissions != null && session.submissions.length > 1) {\n                $(\"<button/>\").addClass(\"btn btn-inverse button-paper-reorder\").html(\"Reorder\").appendTo($(element));\n            }\n        }\n\n        // html += \" <div class='conflicts'/>\";\n        $(\"<div/>\").addClass(\"conflicts\").appendTo($(element));\n\n        if (typeof session !== \"undefined\" && session != null && typeof session.submissions !== \"undefined\" && session.submissions != null) {\n            $(element).append(getSubmissionList(\"view\", session));\n            // $list.appendTo($(element));\n        }\n        return element;\n    }\n\n    function _getCancelButton(){\n        // return \"  <button class='btn move-cancel-button'>Cancel Move</button>\";\n        return $(\"<button/>\").addClass(\"btn move-cancel-button\").html(\"Cancel Move\");\n    }\n\n    // get html for a session in the move mode\n    function _getMoveSessionDetail(type, session, srcType){\n        var element = document.createElement(\"div\");\n        var $cell = null;\n        if (typeof session.id === \"undefined\")\n            $cell = findCellByDateTimeRoom(session.date, session.time, session.room);\n        else\n            $cell = findCellByID(session.id);\n\n        var isLocked = false;\n        if (type != \"unscheduled\" && typeof session !== \"undefined\" && session != null){\n            isLocked = scheduleSlots[session.date][session.time][session.room]['locked'];\n        }\n        // console.log(\"ISLOCKED\", isLocked);\n\n        // console.log(\"src:\", srcType, \"dst:\", type);\n        if (srcType == \"scheduled\"){\n            if (type == \"scheduled\"){\n                if (isLocked)\n                    $(\"<div/>\").addClass(\"alert alert-info\").append(\"<strong>This is a locked session. Unlock to change the schedule.</strong>\").appendTo($(element));\n                else\n                    $(\"<button/>\").attr(\"id\", \"swap-button\").addClass(\"btn btn-primary\").attr(\"data-session-id\", session.id).html(\"Swap with this session\").appendTo($(element));\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(outerHTML($cell.find(\".detail .conflicts\")[0])).append(getSubmissionList(\"move\", session));\n\n                // html +=  \"<button class='btn btn-primary' id='swap-button' data-session-id='\" + id \n                //   + \"'>Swap with this session</button>\" + _getCancelButtonHTML() + \"<br>\"\n                //   + $(this).find(\".detail .conflicts\")[0].outerHTML\n                //   + $(this).find(\".detail ul\")[0].outerHTML;\n            } else if (type == \"unscheduled\"){\n                // console.log(\"Not supported\");\n                /*\n                html +=  \"<button class='btn btn-primary' id='swap-button' data-session-id='\" + id \n                  + \"'>Swap with this session</button>\" + _getCancelButtonHTML() + \"<br>\"\n                  + $(this).find(\".detail .conflicts\")[0].outerHTML\n                  + $(this).find(\".detail ul\")[0].outerHTML;\n                */\n            } else if (type == \"empty\"){\n                if (isLocked)\n                    $(\"<div/>\").addClass(\"alert alert-info\").append(\"<strong>This is a locked session. Unlock to change the schedule.</strong>\").appendTo($(element));\n                else {\n                    $(\"<button/>\").attr(\"id\", \"move-button\").addClass(\"btn btn-primary\")\n                    .attr(\"data-date\", session.date).attr(\"data-time\", session.time).attr(\"data-room\", session.room).html(\"Move to this slot\").appendTo($(element));\n                }\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(outerHTML($cell.find(\".detail .conflicts\")[0]));\n\n                // html +=  \"<button class='btn btn-primary' id='move-button'\" \n                //  + \"data-date='\"+$(this).data(\"date\")+\"' data-time='\"+$(this).data(\"time\")+\"' data-room='\"+$(this).data(\"room\")\n                //  +\"'>Move to this slot</button>\" + _getCancelButtonHTML() + \"<br>\"\n                //  + $(this).find(\".detail .conflicts\")[0].outerHTML;\n            } \n        } else if (srcType == \"unscheduled\") {\n            if (type == \"scheduled\"){\n                if (isLocked)\n                    $(\"<div/>\").addClass(\"alert alert-info\").append(\"<strong>This is a locked session. Unlock to change the schedule.</strong>\").appendTo($(element));\n                else\n                    $(\"<button/>\").attr(\"id\", \"swap-with-unscheduled-button\").addClass(\"btn btn-primary\").attr(\"data-session-id\", session.id).html(\"Swap with this session\").appendTo($(element));\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(outerHTML($cell.find(\".detail .conflicts\")[0])).append(getSubmissionList(\"move\", session));\n\n                // html +=  \"<button class='btn btn-primary' id='swap-with-unscheduled-button' data-session-id='\" + id \n                //   + \"'>Swap with this session</button>\" + _getCancelButtonHTML() + \"<br>\"\n                //   + $(this).find(\".detail .conflicts\")[0].outerHTML\n                //   + $(this).find(\".detail ul\")[0].outerHTML;                            \n            } else if (type == \"unscheduled\"){\n                // console.log(\"Not supported\");\n            } else if (type == \"empty\"){\n                if (isLocked)\n                    $(\"<div/>\").addClass(\"alert alert-info\").append(\"<strong>This is a locked session. Unlock to change the schedule.</strong>\").appendTo($(element));\n                else{\n                    $(\"<button/>\").attr(\"id\", \"schedule-button\").addClass(\"btn btn-primary\")\n                    .attr(\"data-date\", session.date).attr(\"data-time\", session.time).attr(\"data-room\", session.room).html(\"Schedule in this slot\").appendTo($(element));\n                }\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(outerHTML($cell.find(\".detail .conflicts\")[0]));\n\n                // html +=  \"<button class='btn btn-primary' id='schedule-button'\" \n                //  + \"data-date='\"+$(this).data(\"date\")+\"' data-time='\"+$(this).data(\"time\")+\"' data-room='\"+$(this).data(\"room\")\n                //  +\"'>Schedule in this slot</button>\" + _getCancelButtonHTML() + \"<br>\"\n                //  + $(this).find(\".detail .conflicts\")[0].outerHTML;     \n            }\n        } else if (srcType == \"empty\") {\n            if (type == \"scheduled\"){\n                if (isLocked)\n                    $(\"<div/>\").addClass(\"alert alert-info\").append(\"<strong>This is a locked session. Unlock to change the schedule.</strong>\").appendTo($(element));\n                else\n                    $(\"<button/>\").attr(\"id\", \"move-button\").addClass(\"btn btn-primary\").attr(\"data-session-id\", session.id).html(\"Move this session\").appendTo($(element));\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(outerHTML($cell.find(\".detail .conflicts\")[0])).append(getSubmissionList(\"move\", session));\n\n                // html +=  \"<button class='btn btn-primary' id='move-button' data-session-id='\" + id \n                //   + \"'>Move this session</button>\" + _getCancelButtonHTML() + \"<br>\"\n                //   + $(this).find(\".detail .conflicts\")[0].outerHTML\n                //   + $(this).find(\".detail ul\")[0].outerHTML;                           \n            } else if (type == \"unscheduled\"){\n                if (isLocked)\n                    $(\"<div/>\").addClass(\"alert alert-info\").append(\"<strong>This is a locked session. Unlock to change the schedule.</strong>\").appendTo($(element));\n                else\n                    $(\"<button/>\").attr(\"id\", \"schedule-button\").addClass(\"btn btn-primary\").attr(\"data-session-id\", session.id).html(\"Schedule this session\").appendTo($(element));\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(outerHTML($cell.find(\".detail .conflicts\")[0])).append(getSubmissionList(\"move\", session));\n\n                // html +=  \"<button class='btn btn-primary' id='schedule-button' data-session-id='\" + id \n                //       + \"'>Schedule this session</button>\" + _getCancelButtonHTML() + \"<br>\"\n                //       + $(this).find(\".detail .conflicts\")[0].outerHTML\n                //       + $(this).find(\".detail ul\")[0].outerHTML;\n            } else if (type == \"empty\"){\n                // console.log(\"Not supported\");   \n            }\n        }\n        //console.log(element.outerHTML);\n        return element;\n    }\n\n    // get html for a session in the paper move mode\n    function _getPaperMoveSessionDetail(type, session, srcType){\n        var element = document.createElement(\"div\");\n\n        if (srcType == \"paper-scheduled\"){\n            if (type == \"scheduled\"){\n                //$(\"<button/>\").attr(\"id\", \"swap-button\").addClass(\"btn btn-primary\").data(\"session-id\", session.id).html(\"Swap with this session\").appendTo($(element));\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(getSubmissionList(\"paperMove\", session, srcType));\n            } else if (type == \"unscheduled\"){\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(getSubmissionList(\"paperMove\", session, srcType));\n            } else if (type == \"empty\"){\n                //$(\"<button/>\").attr(\"id\", \"move-button\").addClass(\"btn btn-primary\")\n                //    .data(\"date\", session.date).data(\"time\", session.time).data(\"room\", session.room).html(\"Move to this slot\").appendTo($(element));\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(getSubmissionList(\"paperMove\", session, srcType));\n            } \n\n        } else if (srcType == \"paper-unscheduled\") {\n            if (type == \"scheduled\"){\n                //$(\"<button/>\").attr(\"id\", \"swap-with-unscheduled-button\").addClass(\"btn btn-primary\").data(\"session-id\", session.id).html(\"Swap with this session\").appendTo($(element));\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(getSubmissionList(\"paperMove\", session, srcType));                           \n            } else if (type == \"unscheduled\"){\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(getSubmissionList(\"paperMove\", session, srcType));    \n            } else if (type == \"empty\"){\n                //$(\"<button/>\").attr(\"id\", \"schedule-button\").addClass(\"btn btn-primary\")\n                //    .data(\"date\", session.date).data(\"time\", session.time).data(\"room\", session.room).html(\"Schedule in this slot\").appendTo($(element));\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(getSubmissionList(\"paperMove\", session, srcType));    \n            }\n\n        } else if (srcType == \"paper-empty\") {\n            if (type == \"scheduled\"){\n                //$(\"<button/>\").attr(\"id\", \"move-button\").addClass(\"btn btn-primary\").data(\"session-id\", session.id).html(\"Move this session\").appendTo($(element));\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(getSubmissionList(\"paperMove\", session, srcType));                        \n            } else if (type == \"unscheduled\"){\n                //$(\"<button/>\").attr(\"id\", \"schedule-button\").addClass(\"btn btn-primary\").data(\"session-id\", session.id).html(\"Schedule this session\").appendTo($(element));\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(getSubmissionList(\"paperMove\", session, srcType));\n            } else if (type == \"empty\"){\n                $(element).append($(_getCancelButton())).append(\"<br>\").append(getSubmissionList(\"paperMove\", session, srcType));\n                // console.log(\"Not supported\");   \n            }\n        }\n        //console.log(element.outerHTML);\n        return element;\n    }\n\n    // Getting html for session details\n    function getSessionDetail(mode, type, session, srcType){\n        var element;\n        if (mode == \"view\")\n           element = _getViewSessionDetail(type, session);\n        else if (mode == \"move\")\n           element = _getMoveSessionDetail(type, session, srcType);\n        else if (mode == \"paperMove\")\n           element = _getPaperMoveSessionDetail(type, session, srcType);\n        else\n           return \"\";\n        return outerHTML(element);\n    }\n\n    // get html for a submission in the view mode\n    function _getViewSubmissionDetail(type, submission, session){\n        var element; \n        var isLocked = false;\n        // if the session is a single submission type special session (sig, panel, bof, ...), do not display buttons\n        var isSpecial = false;\n        if (typeof session !== \"undefined\" && session != null){\n            if (!(session.id in unscheduled)) {\n                isLocked = scheduleSlots[session.date][session.time][session.room]['locked'];\n            }\n            isSpecial = isSpecialSession(session);\n        }\n\n        if (type == \"scheduled\") {\n            var stype = (submission.type == \"paper\") ? submission.subtype : submission.type;\n            element = document.createElement(\"li\");\n            $(element).addClass(\"submission\").attr(\"id\", submission.id);\n            $(\"<span/>\").addClass(\"reorder-icon\").appendTo($(element));\n            $(\"<span/>\").addClass(\"submission-type\").html(stype).appendTo($(element));\n            $(\"<span/>\").addClass(\"submission-id\").html(submission.id).appendTo($(element));\n            if (submission.bestPaperAward)\n                    $(\"<span/>\").addClass(\"awards\").html(\"<img src='img/best-paper.png' class='icon'/>\").appendTo($(element));\n                if (submission.bestPaperNominee)\n                    $(\"<span/>\").addClass(\"awards\").html(\"<img src='img/nominee.png' class='icon'/>\").appendTo($(element));\n            if (!isLocked && !isSpecial){\n                $(\"<button/>\").addClass(\"btn btn-mini button-paper-unschedule\").html(\"Unschedule\").appendTo($(element));\n                $(\"<button/>\").addClass(\"btn btn-mini button-paper-propose-scheduled\").html(\"Propose Move\").appendTo($(element));\n            }\n            $(\"<br/>\").appendTo($(element));\n            $(\"<span/>\").addClass(\"submission-title\").html(submission.title).appendTo($(element));\n            $(\"<br/>\").appendTo($(element));\n            $(\"<span/>\").addClass(\"submission-authors\").html(displayAuthors(submission.authors)).appendTo($(element));\n\n            // html += \"<li class='submission' id='\" + submission.id\n            //      +\"'><span class='reorder-icon'/> <span class='submission-type'>\" + type + \"</span> <button class='btn btn-mini button-paper-unschedule'>Unschedule</button> <button class='btn btn-mini button-paper-propose-scheduled'>Propose Move</button><br>\" \n            //      + \"<strong>\" + submission.title + \"</strong><br>\"\n            //      + displayAuthors(submission.authors) + \"</li>\";\n        } else if (type == \"unscheduled\") {\n            element = document.createElement(\"div\");\n            $(element).attr(\"id\", submission.id);\n            //$(\"<span/>\").attr(\"id\", \"popover-submission-\" + submission.id).addClass(\"hidden\").appendTo($(element));\n            if (!isLocked && !isSpecial)\n                $(\"<button/>\").addClass(\"btn btn-mini button-paper-propose-unscheduled\").html(\"Propose Move\").appendTo($(element));\n            $(\"<div/>\").addClass(\"conflicts\").appendTo($(element));\n            $(\"<br/>\").appendTo($(element));\n            if (submission.bestPaperAward)\n                $(\"<span/>\").addClass(\"awards\").html(\"<img src='img/best-paper.png' class='icon'/>\").appendTo($(element));\n                if (submission.bestPaperNominee)\n                $(\"<span/>\").addClass(\"awards\").html(\"<img src='img/nominee.png' class='icon'/>\").appendTo($(element));\n            $(\"<span/>\").html(\"<strong>Authors</strong>: \" + displayAuthors(submission.authors)).appendTo($(element));\n\n            // console.log(typeof submission, submission == null);\n            // if (typeof submission !== \"undefined\" && submission != null && typeof submission.id !== \"undefined\" && submission.id != null) {\n            //      console.log( typeof submission.id, submission.id);\n            //      html += \"<span id='popover-session-\" + submission.id + \"' class='hidden'/>\";\n            // }\n            // html += \"<button class='btn btn-info button-paper-propose-unscheduled'>Propose Schedule</button>\";\n            // html += \" <div class='conflicts'/>\";\n            // html += \"<br><strong>Authors</strong>: \" + displayAuthors(submission.authors);\n        } else if (type == \"empty\") {\n            if (isLocked || isSpecial){\n                element = document.createElement(\"div\");\n            } else {\n                element = document.createElement(\"li\");\n                $(element).addClass(\"submission-empty\");\n                $(\"<button/>\").addClass(\"btn btn-small button-paper-propose-empty\").html(\"<span class='icon-plus'/> Propose a paper to add\").appendTo($(element));\n            }\n            // html += \"<li class='submission-empty'><button class='btn btn-small button-paper-propose-empty'><span class='icon-plus'/> Propose a paper to add</button></li>\";\n        } else \n            document.createElement(\"div\");\n        return element;\n    }\n\n    // get html for a submission in the move mode\n    function _getMoveSubmissionDetail(type, submission){\n        var element;\n\n        if (type == \"scheduled\"){\n            var stype = (submission.type == \"paper\") ? submission.subtype : submission.type;\n            element = document.createElement(\"li\");\n            $(element).addClass(\"submission\").attr(\"id\", submission.id)\n            $(\"<span/>\").addClass(\"reorder-icon\").appendTo($(element));\n            $(\"<span/>\").addClass(\"submission-type\").html(stype).appendTo($(element));\n            $(\"<span/>\").addClass(\"submission-id\").html(submission.id).appendTo($(element));\n            if (submission.bestPaperAward)\n                $(\"<span/>\").addClass(\"awards\").html(\"<img src='img/best-paper.png' class='icon'/>\").appendTo($(element));\n            if (submission.bestPaperNominee)\n                $(\"<span/>\").addClass(\"awards\").html(\"<img src='img/nominee.png' class='icon'/>\").appendTo($(element));\n            $(\"<br/>\").appendTo($(element));\n            $(\"<span/>\").addClass(\"submission-title\").html(submission.title).appendTo($(element));\n            $(\"<br/>\").appendTo($(element));\n            $(\"<span/>\").addClass(\"submission-authors\").html(displayAuthors(submission.authors)).appendTo($(element));\n\n            // html += \"<li class='submission' id='\" + submission.id\n            //     +\"'><span class='reorder-icon'/> <span class='submission-type'>\" + stype + \"</span> <br>\" \n            //     + \"<strong>\" + submission.title + \"</strong><br>\"\n            //     + displayAuthors(submission.authors) + \"</li>\";\n        } else if (type == \"unscheduled\") {\n            element = document.createElement(\"div\");\n            // console.log(\"return nothing\");\n        } else if (type == \"empty\") {\n            element = document.createElement(\"div\");\n            // console.log(\"return nothing\");\n        }\n        return element;\n    }\n\n    // get html for a submission in the paper move mode\n    function _getPaperMoveSubmissionDetail(type, submission, srcType, session){\n        var element;\n        var proposedList = [];\n        var isProposed = false;\n        // console.log(\"src:\", srcType, \"dst:\", type);\n\n        // unscheduled: session null, submission id\n        if (type == \"unscheduled\" && session == null){\n            isProposed = typeof $(\"#\"+submission.id).attr(\"data-proposed-swap-paper\") !== \"undefined\";\n            // console.log(null, submission.id, isProposed);\n        // empty: session id, submission null\n        } else if (type == \"empty\" && submission == null){\n            var $session = findCellByID(session.id);\n            if (typeof $session.attr(\"data-proposed-swap-paper\") === \"undefined\")\n                isProposed = false;\n            else {\n                proposedList = $session.attr(\"data-proposed-swap-paper\").split(\",\");\n                // because attr returns all strings, \"null\" not null is returned.\n                isProposed = $.inArray(\"null\", proposedList) !== -1;\n            }\n            // console.log(session.id, null, isProposed, proposedList);\n        // scheduled: session id, submission id\n        } else if (type == \"scheduled\" && session != null && submission != null){\n            var $session = findCellByID(session.id);\n            if (typeof $session.attr(\"data-proposed-swap-paper\") === \"undefined\")\n                isProposed = false;\n            else {\n                proposedList = $session.attr(\"data-proposed-swap-paper\").split(\",\");\n                isProposed = $.inArray(submission.id, proposedList) !== -1;\n            }\n            // console.log(session.id, submission.id, isProposed);\n        } else {\n            console.log(\"IMPOSSIBLE\");\n        }\n\n        if (srcType == \"paper-scheduled\"){\n            if (type == \"scheduled\"){\n                var stype = (submission.type == \"paper\") ? submission.subtype : submission.type;\n                element = document.createElement(\"li\");\n                $(element).addClass(\"submission\").attr(\"id\", submission.id);\n                $(\"<span/>\").addClass(\"reorder-icon\").appendTo($(element));\n                $(\"<span/>\").addClass(\"submission-type\").html(stype).appendTo($(element));\n                $(\"<span/>\").addClass(\"submission-id\").html(submission.id).appendTo($(element));\n                if (submission.bestPaperAward)\n                    $(\"<span/>\").addClass(\"awards\").html(\"<img src='img/best-paper.png' class='icon'/>\").appendTo($(element));\n                if (submission.bestPaperNominee)\n                    $(\"<span/>\").addClass(\"awards\").html(\"<img src='img/nominee.png' class='icon'/>\").appendTo($(element));\n                if (isProposed)\n                    $(\"<button/>\").addClass(\"btn btn-mini button-paper-swap\").html(\"Swap with this paper\").appendTo($(element));\n                $(\"<br/>\").appendTo($(element));\n                $(\"<span/>\").addClass(\"submission-title\").html(submission.title).appendTo($(element));\n                $(\"<br/>\").appendTo($(element));\n                $(\"<span/>\").addClass(\"submission-authors\").html(displayAuthors(submission.authors)).appendTo($(element));\n\n            } else if (type == \"unscheduled\"){\n                element = document.createElement(\"div\");\n                // console.log(\"No return\");\n\n            } else if (type == \"empty\"){\n                // TODO: maybe also save date, time, room, and order info\n                if (isProposed){\n                    element = document.createElement(\"li\");\n                    $(element).addClass(\"submission-empty\");\n                    $(\"<button/>\").addClass(\"btn btn-small button-paper-move\").html(\"<span class='icon-plus'/> Move to this slot\").appendTo($(element));\n                } else {\n                    element = document.createElement(\"div\");\n                }\n            } \n        } else if (srcType == \"paper-unscheduled\") {\n            if (type == \"scheduled\"){\n                var stype = (submission.type == \"paper\") ? submission.subtype : submission.type;\n                element = document.createElement(\"li\");\n                $(element).addClass(\"submission\").attr(\"id\", submission.id);\n                $(\"<span/>\").addClass(\"reorder-icon\").appendTo($(element));\n                $(\"<span/>\").addClass(\"submission-type\").html(stype).appendTo($(element));\n                $(\"<span/>\").addClass(\"submission-id\").html(submission.id).appendTo($(element));\n                if (submission.bestPaperAward)\n                    $(\"<span/>\").addClass(\"awards\").html(\"<img src='img/best-paper.png' class='icon'/>\").appendTo($(element));\n                if (submission.bestPaperNominee)\n                    $(\"<span/>\").addClass(\"awards\").html(\"<img src='img/nominee.png' class='icon'/>\").appendTo($(element));\n                if (isProposed)\n                    $(\"<button/>\").addClass(\"btn btn-mini button-paper-swap-with-unscheduled\").html(\"Swap with this paper\").appendTo($(element));\n                $(\"<br/>\").appendTo($(element));\n                $(\"<span/>\").addClass(\"submission-title\").html(submission.title).appendTo($(element));\n                $(\"<br/>\").appendTo($(element));\n                $(\"<span/>\").addClass(\"submission-authors\").html(displayAuthors(submission.authors)).appendTo($(element));\n                        \n            } else if (type == \"unscheduled\"){\n                element = document.createElement(\"div\");\n                // console.log(\"No return\");\n            } else if (type == \"empty\"){\n                // TODO: maybe also save date, time, room, and order info\n                if (isProposed) {\n                    element = document.createElement(\"li\");\n                    $(element).addClass(\"submission-empty\");\n                    $(\"<button/>\").addClass(\"btn btn-small button-paper-schedule\").html(\"<span class='icon-plus'/> Schedule in this slot\").appendTo($(element));\n                } else {\n                    element = document.createElement(\"div\");\n                }\n            }\n        } else if (srcType == \"paper-empty\") {\n            if (type == \"scheduled\"){\n                var stype = (submission.type == \"paper\") ? submission.subtype : submission.type;\n                element = document.createElement(\"li\");\n                $(element).addClass(\"submission\").attr(\"id\", submission.id);\n                $(\"<span/>\").addClass(\"reorder-icon\").appendTo($(element));\n                $(\"<span/>\").addClass(\"submission-type\").html(stype).appendTo($(element));\n                $(\"<span/>\").addClass(\"submission-id\").html(submission.id).appendTo($(element));\n                if (submission.bestPaperAward)\n                    $(\"<span/>\").addClass(\"awards\").html(\"<img src='img/best-paper.png' class='icon'/>\").appendTo($(element));\n                if (submission.bestPaperNominee)\n                    $(\"<span/>\").addClass(\"awards\").html(\"<img src='img/nominee.png' class='icon'/>\").appendTo($(element));\n                if (isProposed)\n                    $(\"<button/>\").addClass(\"btn btn-mini button-paper-move\").html(\"Move this paper\").appendTo($(element));\n                $(\"<br/>\").appendTo($(element));\n                $(\"<span/>\").addClass(\"submission-title\").html(submission.title).appendTo($(element));\n                $(\"<br/>\").appendTo($(element));\n                $(\"<span/>\").addClass(\"submission-authors\").html(displayAuthors(submission.authors)).appendTo($(element));\n                      \n            } else if (type == \"unscheduled\"){\n                // TODO: maybe also save date, time, room, and order info\n                if (isProposed) {\n                    element = document.createElement(\"li\");\n                    $(element).addClass(\"submission-empty\").css(\"list-style-type\", \"none\");;\n                    $(\"<button/>\").addClass(\"btn btn-small button-paper-schedule\").html(\"<span class='icon-plus'/> Schedule this paper\").appendTo($(element));\n                } else {\n                    element = document.createElement(\"div\");\n                }\n\n            } else if (type == \"empty\"){\n                element = document.createElement(\"div\");\n                // console.log(\"No return\");   \n            }\n        }\n\n        if (isProposed)\n            $(element).addClass(\"proposed-swap-paper\");\n\n        return element;\n    }\n\n    // Getting html for submission details\n    function getSubmissionDetail(mode, type, submission, srcType, session){\n        var element;\n        if (mode == \"view\")\n           element = _getViewSubmissionDetail(type, submission, session);\n        else if (mode == \"move\")\n           element = _getMoveSubmissionDetail(type, submission);\n        else if (mode == \"paperMove\")\n           element = _getPaperMoveSubmissionDetail(type, submission, srcType, session);\n        else\n           return \"\";\n        return outerHTML(element);\n    }\n\n     // For each session item, render session display\n    function getSessionCell(type, session, slotDate, slotTime, slotRoom){\n	    var slotDate = typeof slotDate !== \"undefined\" ? slotDate : null;\n        var slotTime = typeof slotTime !== \"undefined\" ? slotTime : null;\n        var slotRoom = typeof slotRoom !== \"undefined\" ? slotRoom : null;\n        var cell = document.createElement('td');\n        $(cell).addClass(\"cell slot\").append(\"<div class='user'/><div class='title'/><div class='display'/><div class='conflicts'/>\");\n\n        // Empty Session\n		if (type == \"empty\" || session == -1){\n            //console.log(\"empty\", slotDate, slotTime, slotRoom);\n            if(scheduleSlots[slotDate][slotTime][slotRoom]['locked'])\n                $(cell).find(\".title\").addClass(\"locked\");\n\n            var detail = document.createElement(\"div\");\n            $(detail).hide()\n                 .addClass(\"detail\")\n                 .html(getSessionDetail(\"view\", type, session));\n            $(cell)\n                 //.attr(\"id\", \"session-\" + session.id)\n                 //.data(\"session-id\", session.id)\n                 .addClass(\"empty\")\n                 .attr(\"data-date\", slotDate).attr(\"data-time\", slotTime).attr(\"data-room\", slotRoom)                     \n                 .append($(detail));\n\n            $(cell).find(\".title\").append(\"<i class='icon-plus'></i>\")     \n\n            // Unavailable / Locked Session                         \n        } else if (type == \"unavailable\" || session == \"\") {\n            $(cell).addClass(\"unavailable\");\n       \n        // Scheduled / Unscheduled Session\n        } else {\n            if(type !== \"unscheduled\" && scheduleSlots[session.date][session.time][session.room]['locked'])\n                $(cell).find(\".title\").addClass(\"locked\");\n\n            var detail = document.createElement(\"div\");\n            $(detail).hide()\n                .addClass(\"detail\")\n                .html(getSessionDetail(\"view\", type, session));\n	 	\n            $(cell).attr(\"id\", \"session-\" + session.id)\n                .addClass(type)\n                .attr(\"data-session-id\", session.id)                 \n                .attr(\"data-date\", slotDate).attr(\"data-time\", slotTime).attr(\"data-room\", slotRoom)\n                .append($(detail));\n            \n            if (typeof session.title !== \"undefined\")\n                $(cell).find(\".title\").html(session.title);\n		} \n		return cell;\n    }\n\n     // For each submission item, render submission display, only to be used for the unscheduled papers panel at the top\n    function getSubmissionCell(type, submission){\n        //var slotDate = typeof slotDate !== \"undefined\" ? slotDate : null;\n        //var slotTime = typeof slotTime !== \"undefined\" ? slotTime : null;\n        //var slotRoom = typeof slotRoom !== \"undefined\" ? slotRoom : null;\n        var cell = document.createElement('td');\n        $(cell).addClass(\"cell slot-paper\")\n            .append(\"<div class='user'/><div class='title'/><div class='display'/><div class='conflicts'/>\");\n\n        // console.log(\"session\", typeof session);\n\n        // Empty Session\n        if (type == \"empty\" || submission == -1){   \n            console.log(\"empty submission display: not used\");\n        // Unavailable / Locked Session                         \n        } else if (type == \"unavailable\" || submission == \"\") {\n            console.log(\"unavailable submission display: not used\");\n        // Scheduled\n        } else if (type == \"scheduled\") {\n            console.log(\"scheduled submission display: not used\");\n        // Unscheduled\n        } else {\n            // if(type !== \"unscheduled\" && scheduleSlots[session.date][session.time][session.room]['locked'])\n            //     $(cell).find(\".title\").addClass(\"locked\");\n\n            // var detail = document.createElement(\"div\");\n            // $(detail).hide()\n            //      .addClass(\"detail\")\n            //      .html(getSessionDetail(type, session));\n           \n            $(cell).attr(\"id\", \"\" + submission.id)\n                 .addClass(type);\n                 //.data(\"submission-id\", submission.id)\n                 // .append($(detail));\n            \n            if (typeof submission.title !== \"undefined\")\n                 $(cell).find(\".title\").html(submission.title);\n            \n       } \n       return cell;\n    }\n\n     function displayAuthors(authors){\n          var html = \"\";      \n          $.each(authors, function(i, author){\n               html += author.firstName + \" \" + author.lastName + \", \";\n          }); \n          // remove the trailing comma at the end\n          return html.slice(0, -2);\n     }\n\n\n\n     // Display textually the slot title. (slot data structure)\n     // When session exists: Name of the session\n     // When session is empty: show date, time, room\n     function displaySlotTitle(slot) {\n          if (slot.session === null) {\n               return slot.date + \" \" + slot.time + \" \" + slot.room;\n          } else {\n               return allSessions[slot.session].title;\n          }\n     }\n\n     // Display textually the session title.\n     // When session exists: Name of the session\n     // When session is empty: show date, time, room\n     function displaySessionTitle(session) {\n          if (session.hasClass(\"empty\")) {\n               return session.attr(\"data-date\") + \" \" + session.attr(\"data-time\") + \" \" + session.attr(\"data-room\");\n          } else {\n               //console.log(session);\n               return allSessions[getID(session)].title;\n          }\n     }\n\n    // Update the unscheduled session count just by looking at the DOM nodes, not the database\n     function updateUnscheduledCount(){\n          count = $(\"#unscheduled .slot\").length;\n          $(\"#unscheduled-count\").html(count);\n\n          count = $(\"#unscheduled-papers .slot-paper\").length;\n          $(\"#unscheduled-papers-count\").html(count);\n     }\n\n\n     // Display the unscheduled panel\n     function displayUnscheduled(){\n          var cell = null;\n          keys(unscheduled).map(function(id){\n               cell = getSessionCell(\"unscheduled\", allSessions[id]);\n               $(\"#unscheduled tr\").append(cell);         \n          });\n\n          keys(unscheduledSubmissions).map(function(id){\n               cell = getSubmissionCell(\"unscheduled\", allSubmissions[id]);\n               $(\"#unscheduled-papers tr\").append(cell);         \n          });\n\n          updateUnscheduledCount();\n     }\n\n\n     // Display all scheduled sessions in the main grid\n     function displayScheduled(){\n          var days = {\n            \"Sunday\": 0,\n            \"Monday\": 1,\n            \"Tuesday\": 2,\n            \"Wednesday\": 3,\n            \"Thursday\": 4,\n            \"Friday\": 5,\n            \"Saturday\": 6\n          }\n          //var orderedDates = keys(schedule).sort(function(a,b) {return new Date(a) - new Date(b);});\n          //var orderedRooms = keys(allRooms).sort(function(a,b) {return allRooms[a] - allRooms[b];});\n          var orderedDates = keys(schedule).sort(function(a,b) {return days[a] - days[b];});\n          var orderedRooms = keys(allRooms).sort(function(a, b){\n	       return desiredRoomOrder.indexOf(a) - desiredRoomOrder.indexOf(b);\n	      });\n\n          var i, cell;\n          // Table Header\n          var table = document.createElement('table'); \n          /*\n          var header = document.createElement('tr');\n          var firstcell = $(document.createElement('td')).addClass(\"cell header-col\").append(\"<div>Room/<br>Time</div>\");\n          //var secondcell = $(document.createElement('td')).addClass(\"cell\").append(\"<div>Conflicts</div>\");\n          $(header).addClass(\"header-row\").append(firstcell); //.append(secondcell);\n          for(var i = 0; i < orderedRooms.length; i++){\n               var cell = document.createElement('td');\n               $(cell).addClass(\"cell header-cell\").append(\"<div>\" + orderedRooms[i] + \"</div>\");\n               $(header).append(cell);\n          }\n          $(\"#program\").append(header);\n          */\n          addHeaderRow(orderedRooms);\n\n          // Main content\n          $.each(orderedDates, function(index, date){\n            \n            var orderedTimes = keys(schedule[date]).sort(function(a,b) {return a.split(\":\")[0] - b.split(\":\")[0];});\n            $.each(orderedTimes, function(index2, time){\n                // add an extra row for daily borders\n                if (index2 == 0) {\n                    addBorderRow(orderedRooms);\n                    // var borderRow = document.createElement('tr');\n                    // var borderSlot = document.createElement('td');\n                    // $(borderSlot).attr(\"colspan\", orderedRooms.length+1).addClass(\"header-day-border\");\n                    // $(borderRow).append(borderSlot);\n                    // $('#program').append(borderRow);\n                    //$(slot).addClass(\"header-day-border\");\n                }\n                var row = document.createElement('tr');\n                var slot = document.createElement('td');\n//              var conflicts = document.createElement('td');\n                $(slot).addClass(\"cell header-col\").append(shortenDate(date) + \" \" + time);\n\n                $(row).append(slot);\n                //console.log(date, time);\n                $.each(orderedRooms, function(index3, room){\n                    var sessions = schedule[date][time][room];\n                    //console.log(schedule[date][time][room]);\n                    // if this room has an associated session, display it.\n                    if (typeof sessions !== \"undefined\") {\n\n                        if (keys(sessions).length === 0){\n                            cell = getSessionCell(\"empty\", null, date, time, room);\n                        } else {\n                            $.each(sessions, function(id, session){\n                                cell = getSessionCell(\"scheduled\", session, date, time, room);\n                            });\n                        }\n                    } else { // otherwise, mark it unavailable.\n                        cell = getSessionCell(\"unavailable\", null);\n                    }\n                    $(row).append(cell);                    \n                });\n\n                $('#program').append(row);\n\n            });\n          });\n\n                    // var borderRow = document.createElement('tr');\n                    // var borderSlot = document.createElement('td');\n                    // $(borderSlot).attr(\"colspan\", orderedRooms.length+1).addClass(\"header-day-border\");\n                    // $(borderRow).append(borderSlot);\n                    // $('#program').append(borderRow);\n\n            addBorderRow(orderedRooms);\n            addHeaderRow(orderedRooms);\n\n  \n     }\n\n     function addHeaderRow(orderedRooms){\n          var header = document.createElement('tr');\n          var firstcell = $(document.createElement('td')).addClass(\"cell header-col\").append(\"<div>Room/<br>Time</div>\");\n          //var secondcell = $(document.createElement('td')).addClass(\"cell\").append(\"<div>Conflicts</div>\");\n          $(header).addClass(\"header-row\").append(firstcell); //.append(secondcell);\n          for(var i = 0; i < orderedRooms.length; i++){\n               var cell = document.createElement('td');\n               $(cell).addClass(\"cell header-cell\").append(\"<div>\" + orderedRooms[i] + \"</div>\");\n               $(header).append(cell);\n          }\n          $(\"#program\").append(header);       \n     }\n\n     function addBorderRow(orderedRooms){\n            var borderRow = document.createElement('tr');\n            var borderSlot = document.createElement('td');\n            $(borderSlot).attr(\"colspan\", orderedRooms.length+1).addClass(\"header-day-border\");\n            $(borderRow).append(borderSlot);\n            $('#program').append(borderRow);\n     }\n\n    $(document).ready(function() {\n        $(\"body\").addClass(\"loading\"); \n        Statusbar.initialize(); \n	    \n        // triggered once initialize is complete\n        // initialize() is async, thus the bind\n        $(document).bind(\"fullyLoaded\", function(){\n            displayScheduled();\n            displayUnscheduled();\n            Sidebar.initialize(); \n            Searchbox.initialize();\n            Polling.initialize();\n            // default is view mode.\n            ViewMode.initialize();   \n            UnscheduledPanel.initialize(); \n            Conflicts.initialize();\n            $(\".user-display\").append(\"<span class='icon-user icon-white'/>\").append(getUsernameByUID(userData.id));\n            Statusbar.display(\"Select a session for scheduling options and more information.\");\n            $(\"body\").removeClass(\"loading\");             \n        });\n        initialize();\n	});\n\n\n",
+			"file": "js/p1.js",
+			"file_size": 45048,
+			"file_write_time": 1360913756000000,
+			"settings":
+			{
+				"buffer_size": 45048,
+				"line_ending": "Unix",
+				"scratch": true
+			}
+		},
+		{
+			"file": "js/Conflicts.js",
+			"settings":
+			{
+				"buffer_size": 13689,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n// detect if the current transaction is mine or not\nfunction isTransactionMyChange(t) {\n    return t.id == null;\n}\n\n// transaction type: session or paper level?\nfunction isTransactionSessionLevel(t){\n  return t.type.indexOf(\"Paper\") === -1;\n}\n\nfunction getUsernameByUID(uid){\n	if (typeof uid == \"undefined\" || uid == null || uid == \"\" || typeof allUsers[uid] == \"undefined\")\n		return \"Anonymous User\";\n	else\n		return allUsers[uid].name.substring(0,32);\n}\n\nfunction getCellLinkByID(id){\n	var title = allSessions[id].title;\n	title = (title.length > 30) ? (title.substring(0, 30) + \"...\") : title; \n 	return $(\"<a/>\").attr(\"href\", \"#\").attr(\"data-session-id\", id).addClass(\"history-link\").html(title);\n}\n\nfunction getPaperCellLinkByID(id, paperId){\n	var title;\n	if (paperId != \"\"){\n		title = allSubmissions[paperId].title;\n		title = (title.length > 30) ? (title.substring(0, 30) + \"...\") : title; \n	} else {\n		title = allSessions[id].title;\n		title = (title.length > 30) ? (title.substring(0, 30) + \"...\") : title; 		\n	}\n	var $cell = $(\"<a/>\").attr(\"href\", \"#\").attr(\"data-submission-id\", paperId).addClass(\"history-paper-link\").html(title);\n	if (typeof id !== \"undefined\")\n		$cell.attr(\"data-session-id\", id);\n	return $cell;\n}\n\nfunction getCellLinkByDateTimeRoom(ldate, ltime, lroom){\n  	return $(\"<a/>\").attr(\"href\", \"#\").attr(\"data-slot-date\", ldate).attr(\"data-slot-time\", ltime).attr(\"data-slot-room\", lroom)\n       .addClass(\"history-link\").html(ldate + \", \" + ltime + \", \" + lroom); \n}\n\n\nfunction getRandomColor(){\n	return '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);\n}\n\nfunction isPlural(num){\n	if (num == 0 || Math.abs(num) == 1)\n		return false;\n	return true;\n}\n\n\nfunction getSessionNumSubmissions(submissions){\n	var key, count = 0;\n	for (key in submissions){\n		count++;\n	}\n	return count;\n}\n\nfunction isSpecialSession(session){\n    switch(session.venue){\n	    case 'panel':\n	    case 'SIG':\n	    case 'course':\n	    case 'special':\n	    case 'bof':\n		return true;\n    default:\n		break;\n    }\n}\n\n// HQ: added new durartion function\nfunction getSessionDuration(session){\n	if (isSpecialSession(session))\n		return 80;\n\n    var submissions = session.submissions;\n    var key, count = 0;\n    for (key in submissions){\n	if(submissions[key].type == \"TOCHI\"){\n	    count += 20;\n	}else if(submissions[key].type == \"paper\"){\n	    if(submissions[key].subtype == \"Note\"){\n		count += 10;\n	    }else{ // paper\n		count += 20;\n	    }\n	}else if(submissions[key].type == \"altchi\"){\n	    count += 20;\n	}else if(submissions[key].type == \"casestudy\"){\n	    count += 20;\n	}\n    }\n    return count;\n}\n\n\nfunction shortenDate(date){\n	/*\n	var str = \"\";\n	\n	if (date == \"May 7, 2012\")\n	   str = \"MON 5/7\";\n	else if (date == \"May 8, 2012\")\n	   str = \"TUE 5/8\";\n	else if (date == \"May 9, 2012\")\n	   str = \"WED 5/9\";\n	else if (date == \"May 10, 2012\")\n	   str = \"THU 5/10\";\n	*/\n	// Monday -> Mon\n	return date.substring(0,3); \n}	\n\n function getLength(item) {\n      if (item === null || typeof item === \"undefined\")\n           return 0;\n      else \n           return item.length;\n }\n\nfunction addSign(val){\n	if (val > 0)\n		return \"+\" + val;\n	else\n		return val;\n}   \n\n// Get outerHTML even when outerHTML is not available\nfunction outerHTML(node){\n	// if IE, Chrome take the internal method otherwise build one\n	return node.outerHTML || (\n	  	function(n){\n		  var div = document.createElement('div'), h;\n		  div.appendChild( n.cloneNode(true) );\n		  h = div.innerHTML;\n		  div = null;\n		  return h;\n	  	})(node);\n}\n\n\n// remove all data attributes from a DOM element\nfunction removeDataAttributes($el){\n    var attributes = $.map($el[0].attributes, function(item) {\n        return item.name;\n    });\n\n    $.each(attributes, function(i, item) {\n        if (item.indexOf(\"data\") == 0)\n            $el.removeAttr(item);\n    });\n}\n\n// Locate an empty session by its date, time, and room\n// Returns null when there is no such cell that's empty.\nfunction findCellByDateTimeRoom(cellDate, cellTime, cellRoom){\n    var cell = null;\n    $(\"#program .slot\").each(function(){\n        if ($(this).attr(\"data-date\") == cellDate && $(this).attr(\"data-time\") == cellTime  && $(this).attr(\"data-room\") == cellRoom)\n            cell = $(this);\n    });\n    return cell;\n}\n\n// return a frontend cell with given ID\nfunction findCellByID(id) {\n    return $(\"#session-\" + id); \n    /*\n    $cell = null;\n    $(\".slot:not('.unavailable')\").each(function(){\n        if ($(this).attr(\"id\").substr(8) == id)\n            $cell = $(this);\n    });\n    return $cell;\n    */\n}\n\n// Retrieve ID from a cell\n// Returns -1 when it doesn't exist.\nfunction getID(cell){\n	if (typeof cell.attr(\"id\") === \"undefined\")\n		return -1;\n	// substr(8) because we are adding \"session-\" in front of the ID\n	return cell.attr(\"id\").substr(8);\n}\n\n// Check if this cell has any special cell status class applied, which change the background color of the cell. (selected, recommended, ...)\nfunction isSpecialCell($item){\n	if ($item.hasClass(\"selected\") || $item.hasClass(\"move-src-selected\") || $item.hasClass(\"recommended\"))\n		return true;\n	else\n		return false;\n}\n\n\nfunction isEqualCell($cell1, $cell2) {\n	return $cell1.get(0) == $cell2.get(0);\n}\n\nfunction isEqualDateTimeRoom(date1, time1, room1, date2, time2, room2) {\n	return date1 == date2 && time1 == time2 && room1 == room2;\n}\n\n\n",
+			"file": "js/util.js",
+			"file_size": 5323,
+			"file_write_time": 1360187791000000,
+			"settings":
+			{
+				"buffer_size": 5323,
+				"line_ending": "Unix",
+				"scratch": true
+			}
+		},
+		{
+			"file": "js/options.js",
+			"settings":
+			{
+				"buffer_size": 4207,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/Sidebar.js",
+			"settings":
+			{
+				"buffer_size": 29908,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/cobi.js",
+			"settings":
+			{
+				"buffer_size": 70355,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/ViewMode.js",
+			"settings":
+			{
+				"buffer_size": 12352,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/MoveMode.js",
+			"settings":
+			{
+				"buffer_size": 26684,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 105 files for \"proposePaperSessionAndSwap\"\n\n/Applications/MAMP/htdocs/cobi/js/cobi.js:\n  852  //\n  853  //  Proposal (DONE with no intelligence)\n  854: //    ProposePaperSessionAndSwap(p) --> done\n  855  //        handles scheduled and unscheduled papers\n  856  //    ProposePaperForSession(s) -> done\n  ...\n 1851  \n 1852  /////////// start paper propose functions\n 1853: function proposePaperSessionAndSwap(p){\n 1854      if(p.id in unscheduledSubmissions){\n 1855  	var sessionValue = proposeSessionForPaper(p);\n\n/Applications/MAMP/htdocs/cobi/js/MoveMode.js:\n  251              swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);\n  252          } else if (type === \"paper-scheduled\") {\n  253:             var tempArray = proposePaperSessionAndSwap(allSubmissions[paperId]);\n  254              swapValues = tempArray.sessionValue.concat(tempArray.swapValue);\n  255          } else if (type === \"paper-unscheduled\") {\n  256:             var tempArray = proposePaperSessionAndSwap(allSubmissions[paperId]);\n  257              swapValues = tempArray.sessionValue.concat(tempArray.swapValue);\n  258          } else if (type === \"paper-empty\") {\n\n4 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 1198,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "js/db.js",
+			"settings":
+			{
+				"buffer_size": 16647,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/Searchbox.js",
+			"settings":
+			{
+				"buffer_size": 8554,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/Polling.js",
+			"settings":
+			{
+				"buffer_size": 24213,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/Statusbar.js",
+			"settings":
+			{
+				"buffer_size": 10105,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/CCOps.js",
+			"settings":
+			{
+				"buffer_size": 24591,
 				"line_ending": "Unix"
 			}
 		}
@@ -113,6 +336,14 @@
 		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"Snippet: cl",
+				"Snippet: console.log"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
 			[
 				"ins",
 				"Package Control: Install Package"
@@ -159,6 +390,75 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/cobi/php/loadDBtoJSON.php",
+		"/Applications/MAMP/htdocs/cobi/entities.json",
+		"/Applications/MAMP/htdocs/cobi/js/CCOps.js",
+		"/Applications/MAMP/htdocs/cobi/css/cc.css",
+		"/Applications/MAMP/htdocs/cobi/js/cc.comp.js",
+		"/Applications/MAMP/htdocs/cobi/cc.html",
+		"/Applications/MAMP/htdocs/cobi/js/cc.js",
+		"/Applications/MAMP/htdocs/cobi/js/cc.expression.js",
+		"/Applications/MAMP/htdocs/cobi/js/cobi.js",
+		"/Applications/MAMP/htdocs/cobi/js/Polling.js",
+		"/Applications/MAMP/htdocs/cobi/pollDemo/poll.js",
+		"/Applications/MAMP/htdocs/cobi/pollDemo/loadSchedule.php",
+		"/Applications/MAMP/htdocs/cobi/pollDemo/frontend.html",
+		"/Applications/MAMP/htdocs/cobi/js/Searchbox.js",
+		"/Applications/MAMP/htdocs/cobi/js/VisualOps.js",
+		"/Applications/MAMP/htdocs/cobi/js/PaperVisualOps.js",
+		"/Applications/MAMP/htdocs/cobi/js/ViewMode.js",
+		"/Applications/MAMP/htdocs/cobi/js/MoveMode.js",
+		"/Applications/MAMP/htdocs/cobi/js/Statusbar.js",
+		"/Applications/MAMP/htdocs/cobi/js/Sidebar.js",
+		"/Applications/MAMP/htdocs/cobi/settings/settings.php",
+		"/Applications/MAMP/htdocs/cobi/initDB/submissions-2013-0-19-3-15-24.json",
+		"/Applications/MAMP/htdocs/cobi/js/db.js",
+		"/Applications/MAMP/htdocs/cobi/js/Conflicts.js",
+		"/Applications/MAMP/htdocs/cobi/js/StringDist.js",
+		"/Applications/MAMP/htdocs/cobi/js/UnscheduledPanel.js",
+		"/Applications/MAMP/htdocs/cobi/js/frontend.js",
+		"/Applications/MAMP/htdocs/cobi/p1.html",
+		"/Applications/MAMP/htdocs/cobi/php/changeSchedule.php",
+		"/Applications/MAMP/htdocs/cobi/js/util.js",
+		"/Applications/MAMP/htdocs/cobi/js/options.js",
+		"/Applications/MAMP/htdocs/cobi/js/vendor/fuse.js",
+		"/Applications/MAMP/htdocs/cobi/js/PaperMoveMode.js",
+		"/Users/juhokim/Desktop/Archive/submissions-2013-0-29-3-26-59.json",
+		"/Applications/MAMP/htdocs/cobi/js/sessionData.js",
+		"/Applications/MAMP/htdocs/cobi/js/scheduleData.js",
+		"/Applications/MAMP/htdocs/cobi/php/loadDBtoJSONCompact.php",
+		"/Users/juhokim/Desktop/Archive/authors-2013-0-29-3-27-5.json",
+		"/Users/juhokim/Desktop/CHI2013 Data/authors-2013-0-19-3-15-28.json",
+		"/Users/juhokim/Desktop/CHI2013 Data/submissions-2013-0-19-3-15-24.json",
+		"/Users/juhokim/Desktop/CHI2013-Data/LC-affinities.json",
+		"/Users/juhokim/Desktop/CHI2013-Data/PA-affinities.json",
+		"/Applications/MAMP/htdocs/cobi/js/p2.js",
+		"/Applications/MAMP/htdocs/CrowdsourcingPhotoshop/Iteration 1/two.html",
+		"/Applications/MAMP/htdocs/cobi/js/p1.js",
+		"/Applications/MAMP/htdocs/cobi/php/settings.php",
+		"/Applications/MAMP/htdocs/cobi/css/main.css",
+		"/Applications/MAMP/htdocs/cobi/p2.html",
+		"/Applications/MAMP/htdocs/cobi/js/vendor/bootstrapx-clickover.js",
+		"/Users/juhokim/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/Applications/MAMP/htdocs/cobi/toolscape-learner.html",
+		"/Applications/MAMP/htdocs/cobi/js/main.js",
+		"/Applications/MAMP/htdocs/cobi/js/sidebar.js",
+		"/Applications/MAMP/htdocs/cobi/php/initDBfromJSON.php",
+		"/Applications/MAMP/htdocs/cobi/php/createDb.php",
+		"/Applications/MAMP/htdocs/cobi/php/options.php",
+		"/Applications/MAMP/htdocs/cobi/js/frontEnd.html",
+		"/Applications/MAMP/htdocs/cobi/js/backend.js",
+		"/Applications/MAMP/htdocs/cobi/js/scheduleDataJsonCompact.js",
+		"/Applications/MAMP/htdocs/cobi/frontEnd.html",
+		"/Users/juhokim/Dropbox/proceedings (1)/Baseline UI/ui/cobi.js",
+		"/Applications/MAMP/htdocs/cobi/.gitignore",
+		"/Applications/MAMP/htdocs/cobi/js/roomSessionPopularity.js",
+		"/Applications/MAMP/htdocs/toolscape-ranking/index.html",
+		"/Applications/MAMP/htdocs/cobi/js/personas.js",
+		"/Applications/MAMP/htdocs/toolscape-ranking/gallery.php",
+		"/Applications/MAMP/htdocs/toolscape-ranking/ranking-1.php",
+		"/Applications/MAMP/htdocs/cobi/js/vendor/require-jquery.js",
+		"/Applications/MAMP/htdocs/cobi/cobi.sublime-workspace",
 		"/Users/juhokim/Desktop/vs-post.csv",
 		"/Applications/MAMP/htdocs/labeler/js/script.js",
 		"/Applications/MAMP/htdocs/labeler/js/libs/log4javascript.js",
@@ -217,76 +517,7 @@
 		"/Applications/MAMP/htdocs/labeler/test.php",
 		"/Applications/MAMP/htdocs/labeler/video/sc/sc.sh",
 		"/Applications/MAMP/htdocs/labeler/vs-post-questionnaire.php",
-		"/Applications/MAMP/htdocs/labeler/preq.php",
-		"/Applications/MAMP/htdocs/labeler/menus.json",
-		"/Applications/MAMP/htdocs/labeler/utils.php",
-		"/Users/juhokim/Library/Application Support/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
-		"/Applications/MAMP/htdocs/labeler/img/tasks/retro.jpg",
-		"/Applications/MAMP/htdocs/labeler/finish.php",
-		"/Applications/MAMP/htdocs/labeler/video/ff/ff.sh",
-		"/Applications/MAMP/htdocs/labeler/tools.json",
-		"/Applications/MAMP/htdocs/labeler/video/7z5YKi5cizA.flv.info.json",
-		"/Applications/MAMP/htdocs/labeler/js/libs/lightbox/jquery.lightbox-0.5.js",
-		"/Applications/MAMP/htdocs/labeler/css/lightbox/jquery.lightbox-0.5.css",
-		"/Applications/MAMP/htdocs/labeler/footer.php",
-		"/Applications/MAMP/htdocs/labeler/js/libs/bootstrap/bootstrap.js",
-		"/Applications/MAMP/htdocs/labeler/list-commands.php",
-		"/Applications/MAMP/htdocs/labeler/js/libs/jcview/jquery.jcview.css",
-		"/Applications/MAMP/htdocs/odk2/header.php",
-		"/Applications/MAMP/htdocs/labeler/js/script.labeler.js",
-		"/Applications/MAMP/htdocs/labeler/autocomplete.php",
-		"/Applications/MAMP/htdocs/labeler/labeler.php",
-		"/Applications/MAMP/htdocs/labeler/browser.php",
-		"/Applications/MAMP/htdocs/labeler/jcrop.php",
-		"/Applications/MAMP/htdocs/labeler/delete-label.php",
-		"/Users/juhokim/Music/Swings - Punchline King III 2012/Punchline King III Official Mixtape.txt",
-		"/Users/juhokim/Music/Swings - Punchline King III 2012/Lyrics/¡¯¬• ∏⁄¿Ô¿Ã feat. Wutan, Deepflow.txt",
-		"/Applications/MAMP/htdocs/labeler/log.php",
-		"/Applications/MAMP/htdocs/labeler/test.html",
-		"/Applications/MAMP/htdocs/labeler/js/libs/jcview/jquery.jcview.js",
-		"/Applications/MAMP/htdocs/labeler/js/libs/jcview/jquery-jcview-0.0.1.min.js",
-		"/Applications/MAMP/htdocs/labeler/index.html",
-		"/Applications/MAMP/htdocs/odk2/css/custom.css",
-		"/Applications/MAMP/htdocs/odk2/hot.php",
-		"/Applications/MAMP/htdocs/odk2/schedule.php",
-		"/Applications/MAMP/htdocs/odk2/doongji.php",
-		"/Applications/MAMP/htdocs/odk2/scene.php",
-		"/Applications/MAMP/htdocs/odk2/star.php",
-		"/Applications/MAMP/htdocs/odk2/drama.php",
-		"/Applications/MAMP/htdocs/odk2/24tv.php",
-		"/Applications/MAMP/htdocs/odk2/account.php",
-		"/Applications/MAMP/htdocs/odk2/_social.php",
-		"/Applications/MAMP/htdocs/odk2/_rating.php",
-		"/Applications/MAMP/htdocs/odk2/playlist.php",
-		"/Applications/MAMP/htdocs/odk2/login.php",
-		"/Applications/MAMP/htdocs/odk2/js/script.js",
-		"/Applications/MAMP/htdocs/odk2/_recent.php",
-		"/Applications/MAMP/htdocs/odk2/_realtime.php",
-		"/Applications/MAMP/htdocs/odk2/_news.php",
-		"/Applications/MAMP/htdocs/odk2/index.php",
-		"/Applications/MAMP/htdocs/odk2/mask.php",
-		"/Applications/MAMP/htdocs/odk2/footer.php",
-		"/Applications/MAMP/htdocs/odk2/juwon.php",
-		"/Applications/MAMP/htdocs/odk2/css/style.css",
-		"/Applications/MAMP/htdocs/labeler/css/jcarousel/skins/tango/skin.css",
-		"/Applications/MAMP/htdocs/labeler/js/jcarousel/examples/static_controls.html",
-		"/Applications/MAMP/htdocs/labeler/css/jcarouosel/style.css",
-		"/Applications/MAMP/htdocs/labeler/video/85WjLBsJVjc.flv.info.json",
-		"/Users/juhokim/Downloads/initializr-verekia-3.0/css/style.css",
-		"/Users/juhokim/Downloads/initializr-verekia-3.0/js/script.js",
-		"/Applications/MAMP/htdocs/labeler/motionblur.php",
-		"/Applications/MAMP/htdocs/odk2/join.php",
-		"/Users/juhokim/Sites/odk2/drama.html",
-		"/Users/juhokim/Sites/odk2/scene.html",
-		"/Users/juhokim/Sites/odk2/css/custom.css",
-		"/Users/juhokim/Sites/odk2/mask.html",
-		"/Users/juhokim/Sites/odk2/js/script.js",
-		"/Users/juhokim/Sites/odk2/index.html",
-		"/Users/juhokim/Sites/odk2/login.html",
-		"/Users/juhokim/Sites/photoshop-video/20120416-prototype/retro.html",
-		"/Applications/MAMP/htdocs/labeler/7z5YKi5cizA.flv.info.json",
-		"/Applications/MAMP/htdocs/labeler/crop-icons.sh",
-		"/Applications/MAMP/htdocs/labeler/youtube-download.sh"
+		"/Applications/MAMP/htdocs/labeler/preq.php"
 	],
 	"find":
 	{
@@ -302,137 +533,137 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
-			"log4javascript",
-			"edit-save-link",
-			"live",
-			"getLabelHTML",
-			"browse",
-			"label.php",
-			"task_id",
-			"part",
-			"cond",
-			"part",
-			"step",
-			"cond",
-			"bar",
-			"progress",
-			"filters",
-			"browse.php",
-			"simple-view",
-			"radio",
-			"all-view",
-			"num_videos",
-			"meta_array",
-			"getIDisplay",
-			"index",
-			"<?",
-			"mediaplayer",
-			"html2",
-			"video_id",
-			"lightbox",
-			"seek",
-			"seek(",
-			"jwplayer",
-			"popover-click-image",
-			"marker-image",
-			"timeline",
-			"popover-tool-bo",
-			"popover-click",
-			"dues",
-			"mycarousel",
-			"date",
-			"filters",
-			"list.php",
-			".alert",
-			"video_filename",
-			"result2",
-			"active",
-			"lightbox",
-			"lightBox",
-			"duplicate",
-			"labels",
-			"$json",
-			"images",
-			"getLikertQuestionHTML",
-			"task_id",
-			"The provided video summary",
-			"File > New",
-			"edit-save-link",
-			"edit-cancel-link",
-			"selector",
-			"popover",
-			"slider",
-			"jwplayer",
-			"popover-click-image",
-			"footer",
-			"jcrop",
-			"videos_array",
-			"result1",
-			"seek",
-			"mycarousel_initCallback",
-			"control_width",
-			"width",
+			"allCurrentConflicts",
+			"isOn",
+			"proposePaperSessionAndSwap",
+			"unschedulePaper",
+			"_toggle",
+			"reset",
 			"duration",
-			"interface_id",
-			"tools_array",
-			"user_id",
-			"#tm",
-			"select-other",
-			"select-image",
-			"select-other",
-			"id=\"select-other\"",
-			"id=\"select-menu\"",
-			"id=\"select-tool\"",
-			"id=\"select-image\"",
-			"capture-tool",
-			"select-image",
-			"checked",
-			"selection",
-			"select-image",
-			"capture-tool",
-			"checked",
-			"select-tool",
-			"pull-right",
-			"play-button",
-			"tool-id",
-			"carousel",
-			"user_id",
-			"labeler",
-			"browser",
-			"$row",
-			"Repousse",
-			"Adjustments",
-			"<?",
-			"video_id",
-			"getLabelByID",
-			"getEditHTML",
-			"Math.random()",
-			"jcrop",
-			"highlight",
-			"jcrop-link",
-			"getLabelByID",
-			"select-image",
-			"selection",
-			"getEditHTML",
-			"javascript:",
-			"video_filename",
-			"$json",
-			"video_filename",
-			"$row",
-			"<?",
-			"imageLoadTimer",
-			"$labels",
-			"tools_array",
-			"result2",
-			"$url",
-			"labels",
-			"mycarousel",
-			"duration",
-			"<?",
-			"json"
+			"displaySessionHistory",
+			"updateHistory",
+			"displaySessionStatus",
+			"isTransactionSessionLevel",
+			"editSessionTitle",
+			"transactionUpdate",
+			"editSessionTitle",
+			"popover-close",
+			"save-button",
+			".popover-inner",
+			"select",
+			"18px",
+			"clickSessionTypesHandler",
+			"sessionTypeList",
+			"clickSessionTypesHandler",
+			"_toggleAllCheckboxes",
+			"selections",
+			"_toggleAllCheckboxes",
+			"options_list",
+			"communityList",
+			"communities_list",
+			"display",
+			"<<",
+			">>",
+			"slotClickHandler",
+			"submission-type",
+			"submissionDetail",
+			"entityList",
+			"that is",
+			"curEntity",
+			"valueType",
+			"hasValue",
+			"\"select\"",
+			"true",
+			"false",
+			"hasValue",
+			"curEntity",
+			"selectedEntity",
+			"var orderedDates = keys(schedule).sort(function(a,b) {return days[a] - days[b];});\n          var orderedRooms = keys(allRooms).sort(function(a, b){\n	       return desiredRoomOrder.indexOf(a) - desiredRoomOrder.indexOf(b);\n	      });",
+			"remove",
+			"curEntity",
+			"_orderedFirst",
+			">>",
+			"getallconflicts",
+			"violates",
+			"pathRelates",
+			"belongs",
+			"groupRulesByLevel",
+			"pathRelates",
+			"generat",
+			"generator",
+			"options_list",
+			"typeDisplayList",
+			"sessionMatchesPred",
+			"getAllMatchingSessions",
+			"console.log",
+			"trigger(\"click\")",
+			"click",
+			"displayViewOptions",
+			"44",
+			"width: 100",
+			".conflicts",
+			"find(\".conflicts\")",
+			".cell .display",
+			"$(\".slot.cell-persona\")",
+			"_toggleAllCheckboxes",
+			"filtered_array",
+			"getConflictLength",
+			"filtered_array",
+			"input_array",
+			"displayConflictFullHTML",
+			"conflict-preview-display",
+			"juho",
+			"conflict-preview-di",
+			"session",
+			"css(",
+			"updateConflicts",
+			"clearConflictDisplay",
+			"updateConflicts",
+			"postPollingMove",
+			"updateConflicts",
+			"getAllConflicts",
+			"loadSchedule.php",
+			"hqz/cobi",
+			"firstName",
+			"conflictPreviewDisplayHandler",
+			"data-title",
+			"submission-type",
+			"nomination",
+			"displayPreviewConflicts",
+			".display",
+			"display",
+			"yellow",
+			"<div class='title'/>",
+			"\"title\"",
+			"\"yellow\"",
+			"clickHeaderHandler",
+			"toggle-options",
+			"setTi",
+			"getID",
+			"user",
+			"move-src-selected",
+			"handleTransaction",
+			"Select another session",
+			"isLocked",
+			"MoveMode.isOn",
+			"refreshButtons",
+			"filtered_array",
+			"displayConflictPreviewHTML",
+			"displayConflictFullHTML",
+			"displayFullConflicts",
+			"preview-display",
+			"swap-total-full",
+			"isSpecialSession",
+			"conflict_count_array",
+			"count",
+			"communi",
+			"Handler",
+			"click",
+			"isOn",
+			"MoveMode.isOn"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -440,6 +671,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\"none\"",
+			"getSessionCell",
+			"unscheduled-papers",
+			"removeSessionFromSlot",
+			"swap"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -450,14 +686,221 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 15,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "p1.html",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 10677,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4391,
+								4391
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 928.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/main.css",
+					"settings":
+					{
+						"buffer_size": 15061,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7673,
+								7673
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4246.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/p1.js",
+					"settings":
+					{
+						"buffer_size": 45048,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11764,
+								11764
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"origin_encoding": "ISO-8859-2",
+							"revert_to_scratch": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6749.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/Conflicts.js",
+					"settings":
+					{
+						"buffer_size": 13689,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10882,
+								10882
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/util.js",
+					"settings":
+					{
+						"buffer_size": 5323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4785,
+								4785
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"origin_encoding": "ISO-8859-2",
+							"revert_to_scratch": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2230.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/options.js",
+					"settings":
+					{
+						"buffer_size": 4207,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1277,
+								1277
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 190.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/Sidebar.js",
+					"settings":
+					{
+						"buffer_size": 29908,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22261,
+								22261
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 5,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6841.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/cobi.js",
+					"settings":
+					{
+						"buffer_size": 70355,
 						"regions":
 						{
 						},
@@ -470,10 +913,267 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 27627.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "js/ViewMode.js",
+					"settings":
+					{
+						"buffer_size": 12352,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6201,
+								6201
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1443.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "js/MoveMode.js",
+					"settings":
+					{
+						"buffer_size": 26684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26555,
+								26559
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7480.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"settings":
+					{
+						"buffer_size": 1198,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										168,
+										194
+									],
+									[
+										391,
+										417
+									],
+									[
+										753,
+										779
+									],
+									[
+										983,
+										1009
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								409,
+								409
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "js/db.js",
+					"settings":
+					{
+						"buffer_size": 16647,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								452,
+								452
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "js/Searchbox.js",
+					"settings":
+					{
+						"buffer_size": 8554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2299,
+								2299
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "js/Polling.js",
+					"settings":
+					{
+						"buffer_size": 24213,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								596,
+								596
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "js/Statusbar.js",
+					"settings":
+					{
+						"buffer_size": 10105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								348,
+								348
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "js/CCOps.js",
+					"settings":
+					{
+						"buffer_size": 24591,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3826,
+								3826
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 4.0,
+						"translation.y": 1010.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -512,9 +1212,13 @@
 		]
 	},
 	"menu_visible": true,
+	"output.git":
+	{
+		"height": 100.0
+	},
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -541,6 +1245,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 272.0,
+	"side_bar_width": 214.0,
 	"status_bar_visible": true
 }
