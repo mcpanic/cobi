@@ -69,17 +69,45 @@ var CCOps = function(){
     var allConflicts = [];
     
     function createSingleConflict(violation, constraint){
+	var session = allSessions[violation.session];
 	return new conflictObject([violation.session],
 				  constraint.type,
 				  [violation],
-				  constraint.description(violation));
+				  constraint.description(session, violation));
     }
     function createPairConflict(violationA, violationB, constraint){
+	var sessionA = allSessions[violationA.session];
+	var sessionB = allSessions[violationB.session];
 	return new conflictObject([violationA.session, violationB.session],
 				  constraint.type,
 				  [violationA, violationB],
-				  constraint.description(violationA, violationB));
+				  constraint.description(sessionA, violationA, sessionB, violationB));
     }
+    function createSingleHypConflict(violation, constraint, hypSessions){
+	var session = allSessions[violation.session];
+	if(violation.session in hypSessions){
+	    session = hypSessions[violation.session];
+	}
+	return new conflictObject([violation.session],
+				  constraint.type,
+				  [violation],
+				  constraint.description(session, violation));
+    }
+    function createPairHypConflict(violationA, violationB, constraint, hypSessions){
+	var sessionA = allSessions[violationA.session];
+	var sessionB = allSessions[violationB.session];
+	if(violationA.session in hypSessions){
+	    sessionA = hypSessions[violationA.session];
+	}
+	if(violationB.session in hypSessions){
+	    sessionB = hypSessions[violationB.session];
+	}
+	return new conflictObject([violationA.session, violationB.session],
+				  constraint.type,
+				  [violationA, violationB],
+				  constraint.description(sessionA, violationA, sessionB, violationB));
+    }
+
     function initialize(){
 //     	var example = new SingleEntityConstraint("donat11",
 // 						 "Submissions whose title begin with 'Don' should be at 11am",
@@ -112,10 +140,11 @@ var CCOps = function(){
 // 						})]);
 	
 	 var example3 = new EntityFilterPairConstraint("authorInTwoSessions", 
-						       function (a, b){
-							   return allAuthors[a.author].firstName + " " + allAuthors[a.author].lastName + 
+						       function (sessionA, violationA, sessionB, violationB){
+							   return sessionA.submissions[violationA.submission].authors[violationA.author].firstName + " " + 
+							       sessionA.submissions[violationA.submission].authors[violationA.author].lastName + 
 							       " is in both '" + 
-							       allSessions[a.session].title + "' and '" + allSessions[b.session].title + "'.";
+							       sessionA.title + "' and '" + sessionB.title + "'.";
 						       },
 						       -10,
 						       "because authors should only have to be at one place at any given time",
@@ -130,9 +159,9 @@ var CCOps = function(){
 						       })]);
 
 	 var example4 = new EntityFilterPairConstraint("personaInTwoSessions", 
-						       function (a, b){
-							   return "Someone interested in '" + allSessions[a.session].personas + "' may want to see both '" + 
-							       allSessions[a.session].title + "' and '" + allSessions[b.session].title + "'.";
+						       function (sessionA, violationA, sessionB, violationB){
+							   return "Someone interested in '" + sessionA.personas + "' may want to see both '" + 
+							       sessionA.title + "' and '" + sessionB.title + "'.";
 						       },
 						       -4,
 						       "because someone interested in one may be interested in the other",
@@ -148,9 +177,9 @@ var CCOps = function(){
  								    (a.room != b.room));
 						       })]);
  	var example5 = new EntityPairConstraint("badTogether",
-						function (a, b){
-						    return "'" + allSubmissions[a.submission].title + "' and '" + 
-							allSubmissions[b.submission].title + "' should not be in the same session.";
+						function (sessionA, violationA, sessionB, violationB){
+						    return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
+							sessionB.submissions[violationB.submission].title + "' should not be in the same session.";
 						},
  						-7,
  						"because they are not related",
@@ -168,9 +197,9 @@ var CCOps = function(){
 						    return !(a.id == b.id);
 						})]);
 	var example6 = new EntityPairConstraint("goodTogether",
- 						function (a, b){
-						   return "'" + allSubmissions[a.submission].title + "' and '" + 
-							allSubmissions[b.submission].title + "' are good in the same session.";
+						function (sessionA, violationA, sessionB, violationB){
+						    return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
+							sessionB.submissions[violationB.submission].title + "' are good in the same session.";
 						},
  						4,
  						"because they are related",
@@ -237,8 +266,8 @@ var CCOps = function(){
 	ret["session"] = {};
 	for(var room in schedule[date][time]){
 	    for(var s2 in schedule[date][time][room]){
-		var conflicts = computeNewPairConflicts(s.id, s2);
-		conflicts = conflicts.concat(computeNewFilteredPairConflicts(s.id, s2));
+		var conflicts = computeNewPairConflicts(s.id, s2, allSessions);
+		conflicts = conflicts.concat(computeNewFilteredPairConflicts(s.id, s2, allSessions));
 		ret["session"][s2] = conflicts;
 		ret["sum"] = ret["sum"].concat(conflicts);
 	    }
@@ -378,8 +407,8 @@ var CCOps = function(){
 	    for(var rs in schedule[s.date][s.time]){
 		for(var sk in schedule[s.date][s.time][rs]){
 		    if(sk != s.id){
-			conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewPairConflicts(sk, s2));
-			conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewFilteredPairConflicts(sk, s2));
+			conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewPairConflicts(sk, s2, hypSessions));
+			conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeNewFilteredPairConflicts(sk, s2, hypSessions));
 		    }
 		}
 	    }
@@ -602,7 +631,7 @@ var CCOps = function(){
 		var levels = groupRulesByLevel(constraint.constraintObjectRules);
 		for (var p in paths){
 		    if(!pathHypBelongs(levels, paths[p], hypSessions)){
-			conflicts.push(createSingleConflict(paths[p], constraint));
+			conflicts.push(createSingleHypConflict(paths[p], constraint, hypSessions));
 		    }
 		}
 	    }else if(constraint.constraintType =="pair" && !ignorePairs) {
@@ -620,14 +649,14 @@ var CCOps = function(){
 			if(s != s2 && s2 in belongRHS){
 			    for(var e1 in paths1){
 				for(var e2 in belongRHS[s2]){
-				    conflicts.push(createPairConflict(paths1[e1], belongRHS[s2][e2], constraint));
+				    conflicts.push(createPairHypConflict(paths1[e1], belongRHS[s2][e2], constraint, hypSessions));
 				}
 			    }
 			} // then the other
 			if(!constraint.isSymmetric && s2 in belongLHS && s != s2){
 			    for(var e1 in belongLHS[s2]){
 				for(var e2 in paths2){
-				    conflicts.push(createPairConflict(belongLHS[s2][e1], paths2[e2], constraint));
+				    conflicts.push(createPairHypConflict(belongLHS[s2][e1], paths2[e2], constraint, hypSessions));
 				}
 			    }
 			}
@@ -635,7 +664,7 @@ var CCOps = function(){
 			    for(var e1 in paths1){
 				for(var e2 in paths2){
 				    if(!pathHypRelates(levels, paths1[e1], paths2[e2], hypSessions)){
-					conflicts.push(createPairConflict(paths1[e1], paths2[e2], constraint));
+					conflicts.push(createPairHypConflict(paths1[e1], paths2[e2], constraint, hypSessions));
 				    }
 				}
 			    }
@@ -656,7 +685,7 @@ var CCOps = function(){
 			    for(var e1 in paths1){
 				for(var e2 in belongRHS[s2]){
 				    if(pathHypRelates(levels, paths1[e1], belongRHS[s2][e2], hypSessions)){
-					conflicts.push(createPairConflict(paths1[e1], belongRHS[s2][e2], constraint));
+					conflicts.push(createPairHypConflict(paths1[e1], belongRHS[s2][e2], constraint, hypSessions));
 				    }
 				}
 			    }
@@ -1382,7 +1411,7 @@ var CCOps = function(){
 	}
     }
 
-    function computeNewFilteredPairConflicts(s1, s2){
+    function computeNewFilteredPairConflicts(s1, s2, hypSessions){
 	var conflicts = [];
 
 	for(var i in CCOps.allConstraints){
@@ -1396,18 +1425,20 @@ var CCOps = function(){
 		    for(var entityPair in entityPairs[s1][s2]){
 			// TODO, assume don't need hyp session here 
 			// or even to check if path relates
-			var conflict = createPairConflict(entityPairs[s1][s2][entityPair].p1,
-							  entityPairs[s1][s2][entityPair].p2,
-							  constraint);
+			var conflict = createPairHypConflict(entityPairs[s1][s2][entityPair].p1,
+							     entityPairs[s1][s2][entityPair].p2,
+							     constraint,
+							     hypSessions);
 			conflicts.push(conflict);
 		    }
 		}
 		// then the other
 		if(!constraint.isSymmetric && (s2 in entityPairs) && (s1 in entityPairs[s2])){
 		    for(var entityPair in entityPairs[s2][s1]){
-			var conflict = createPairConflict(entityPairs[s2][s1][entityPair].p1,
-							  entityPairs[s2][s1][entityPair].p2,
-							  constraint);
+			var conflict = createPairHypConflict(entityPairs[s2][s1][entityPair].p1,
+							     entityPairs[s2][s1][entityPair].p2,
+							     constraint,
+							     hypSessions);
 			conflicts.push(conflict);
 		    }
 		}
@@ -1416,7 +1447,7 @@ var CCOps = function(){
 	return conflicts;
     }
     
-    function computeNewPairConflicts(s1, s2){
+    function computeNewPairConflicts(s1, s2, hypSessions){
 	var conflicts = [];
 
 	for(var i in CCOps.allConstraints){
@@ -1431,9 +1462,9 @@ var CCOps = function(){
 			for(var e2 in belongRHS[s2]){
 			    // TODO, assume don't need hyp session here 
 			    // or even to check if path relates
-			    var conflict = createPairConflict(belongLHS[s1][e1],
-							      belongRHS[s2][e2],
-							      constraint);
+			    var conflict = createPairHypConflict(belongLHS[s1][e1],
+								 belongRHS[s2][e2],
+								 constraint, hypSessions);
 			    conflicts.push(conflict);
 			}
 		    }
@@ -1442,9 +1473,9 @@ var CCOps = function(){
 		if(!constraint.isSymmetric && (s2 in belongLHS) && (s1 in belongRHS)){
 		    for(var e1 in belongLHS[s2]){
 			for(var e2 in belongRHS[s1]){
-			    var conflict = createPairConflict(belongLHS[s2][e1],
+			    var conflict = createPairHypConflict(belongLHS[s2][e1],
 							      belongRHS[s1][e2],
-							      constraint);
+							      constraint, hypSessions);
 			    conflicts.push(conflict);
 			}
 		    }
@@ -1466,8 +1497,8 @@ var CCOps = function(){
 		    
 		    for(var p in belongList[s]){
 			if(!pathHypBelongs(levels, belongList[s][p], hypSessions)){ 
-			    conflicts.push(createSingleConflict(belongList[s][p],
-								constraint));
+			    conflicts.push(createSingleHypConflict(belongList[s][p],
+								   constraint, hypSessions));
 			}
 		    }
 		}
