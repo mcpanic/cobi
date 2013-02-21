@@ -102,12 +102,14 @@
             }
         }
 
-        // html += " <div class='conflicts'/>";
-        $("<div/>").addClass("conflicts").appendTo($(element));
+        // Display conflicts
+        if (typeof session !== "undefined" && session != null && typeof session.id !== "undefined" && session.id != null) {
+            $(element).append("<br>").append(Conflicts.displayViewModeFullConflicts(session.id));
+            // $(element).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0]));
+        }
 
         if (typeof session !== "undefined" && session != null && typeof session.submissions !== "undefined" && session.submissions != null) {
             $(element).append(getSubmissionList("view", session));
-            // $list.appendTo($(element));
         }
         return element;
     }
@@ -119,12 +121,17 @@
 
     // get html for a session in the move mode
     function _getMoveSessionDetail(type, session, srcType){
+        if (type == "empty")
+            console.log(session);
         var element = document.createElement("div");
         var $cell = null;
         if (typeof session.id === "undefined")
             $cell = findCellByDateTimeRoom(session.date, session.time, session.room);
         else
             $cell = findCellByID(session.id);
+
+        if (type == "empty")
+            console.log($cell, $cell.find(".detail"));
 
         var isLocked = false;
         if (type != "unscheduled" && typeof session !== "undefined" && session != null){
@@ -139,20 +146,12 @@
                     $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
                 else
                     $("<button/>").attr("id", "swap-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Swap with this session").appendTo($(element));
-                $(element).append($(_getCancelButton())).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0])).append(getSubmissionList("move", session));
-
-                // html +=  "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
-                //   + "'>Swap with this session</button>" + _getCancelButtonHTML() + "<br>"
-                //   + $(this).find(".detail .conflicts")[0].outerHTML
-                //   + $(this).find(".detail ul")[0].outerHTML;
+                $(element).append($(_getCancelButton())).append("<br>")
+                    //.append(outerHTML($cell.find(".detail .conflicts")[0]))
+                    .append(Conflicts.displayMoveModeFullConflicts(MoveMode.getSwapValueBySession(session)))
+                    .append(getSubmissionList("move", session));
             } else if (type == "unscheduled"){
                 // console.log("Not supported");
-                /*
-                html +=  "<button class='btn btn-primary' id='swap-button' data-session-id='" + id 
-                  + "'>Swap with this session</button>" + _getCancelButtonHTML() + "<br>"
-                  + $(this).find(".detail .conflicts")[0].outerHTML
-                  + $(this).find(".detail ul")[0].outerHTML;
-                */
             } else if (type == "empty"){
                 if (isLocked)
                     $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
@@ -160,12 +159,9 @@
                     $("<button/>").attr("id", "move-button").addClass("btn btn-primary")
                     .attr("data-date", session.date).attr("data-time", session.time).attr("data-room", session.room).html("Move to this slot").appendTo($(element));
                 }
-                $(element).append($(_getCancelButton())).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0]));
-
-                // html +=  "<button class='btn btn-primary' id='move-button'" 
-                //  + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
-                //  +"'>Move to this slot</button>" + _getCancelButtonHTML() + "<br>"
-                //  + $(this).find(".detail .conflicts")[0].outerHTML;
+                $(element).append($(_getCancelButton())).append("<br>")
+                //.append(outerHTML($cell.find(".detail .conflicts")[0]))
+                    .append(Conflicts.displayMoveModeFullConflicts(MoveMode.getSwapValueBySession(session)));
             } 
         } else if (srcType == "unscheduled") {
             if (type == "scheduled"){
@@ -173,12 +169,10 @@
                     $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
                 else
                     $("<button/>").attr("id", "swap-with-unscheduled-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Swap with this session").appendTo($(element));
-                $(element).append($(_getCancelButton())).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0])).append(getSubmissionList("move", session));
-
-                // html +=  "<button class='btn btn-primary' id='swap-with-unscheduled-button' data-session-id='" + id 
-                //   + "'>Swap with this session</button>" + _getCancelButtonHTML() + "<br>"
-                //   + $(this).find(".detail .conflicts")[0].outerHTML
-                //   + $(this).find(".detail ul")[0].outerHTML;                            
+                $(element).append($(_getCancelButton())).append("<br>")
+                    //.append(outerHTML($cell.find(".detail .conflicts")[0]))
+                    .append(Conflicts.displayMoveModeFullConflicts(MoveMode.getSwapValueBySession(session)))
+                    .append(getSubmissionList("move", session));                       
             } else if (type == "unscheduled"){
                 // console.log("Not supported");
             } else if (type == "empty"){
@@ -188,12 +182,9 @@
                     $("<button/>").attr("id", "schedule-button").addClass("btn btn-primary")
                     .attr("data-date", session.date).attr("data-time", session.time).attr("data-room", session.room).html("Schedule in this slot").appendTo($(element));
                 }
-                $(element).append($(_getCancelButton())).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0]));
-
-                // html +=  "<button class='btn btn-primary' id='schedule-button'" 
-                //  + "data-date='"+$(this).data("date")+"' data-time='"+$(this).data("time")+"' data-room='"+$(this).data("room")
-                //  +"'>Schedule in this slot</button>" + _getCancelButtonHTML() + "<br>"
-                //  + $(this).find(".detail .conflicts")[0].outerHTML;     
+                $(element).append($(_getCancelButton())).append("<br>")
+                    //.append(outerHTML($cell.find(".detail .conflicts")[0]))
+                    .append(Conflicts.displayMoveModeFullConflicts(MoveMode.getSwapValueBySession(session))); 
             }
         } else if (srcType == "empty") {
             if (type == "scheduled"){
@@ -201,23 +192,19 @@
                     $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
                 else
                     $("<button/>").attr("id", "move-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Move this session").appendTo($(element));
-                $(element).append($(_getCancelButton())).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0])).append(getSubmissionList("move", session));
-
-                // html +=  "<button class='btn btn-primary' id='move-button' data-session-id='" + id 
-                //   + "'>Move this session</button>" + _getCancelButtonHTML() + "<br>"
-                //   + $(this).find(".detail .conflicts")[0].outerHTML
-                //   + $(this).find(".detail ul")[0].outerHTML;                           
+                $(element).append($(_getCancelButton())).append("<br>")
+                    //.append(outerHTML($cell.find(".detail .conflicts")[0]))
+                    .append(Conflicts.displayMoveModeFullConflicts(MoveMode.getSwapValueBySession(session)))
+                    .append(getSubmissionList("move", session));                       
             } else if (type == "unscheduled"){
                 if (isLocked)
                     $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
                 else
                     $("<button/>").attr("id", "schedule-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Schedule this session").appendTo($(element));
-                $(element).append($(_getCancelButton())).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0])).append(getSubmissionList("move", session));
-
-                // html +=  "<button class='btn btn-primary' id='schedule-button' data-session-id='" + id 
-                //       + "'>Schedule this session</button>" + _getCancelButtonHTML() + "<br>"
-                //       + $(this).find(".detail .conflicts")[0].outerHTML
-                //       + $(this).find(".detail ul")[0].outerHTML;
+                $(element).append($(_getCancelButton())).append("<br>")
+                    // .append(outerHTML($cell.find(".detail .conflicts")[0]))
+                    .append(Conflicts.displayMoveModeFullConflicts(MoveMode.getSwapValueBySession(session)))
+                    .append(getSubmissionList("move", session));
             } else if (type == "empty"){
                 // console.log("Not supported");   
             }
@@ -376,11 +363,6 @@
             $("<span/>").addClass("submission-title").html(submission.title).appendTo($(element));
             $("<br/>").appendTo($(element));
             $("<span/>").addClass("submission-authors").html(displayAuthors(submission.authors)).appendTo($(element));
-
-            // html += "<li class='submission' id='" + submission.id
-            //     +"'><span class='reorder-icon'/> <span class='submission-type'>" + stype + "</span> <br>" 
-            //     + "<strong>" + submission.title + "</strong><br>"
-            //     + displayAuthors(submission.authors) + "</li>";
         } else if (type == "unscheduled") {
             element = document.createElement("div");
             // console.log("return nothing");
@@ -445,6 +427,7 @@
                 $("<span/>").addClass("submission-title").html(submission.title).appendTo($(element));
                 $("<br/>").appendTo($(element));
                 $("<span/>").addClass("submission-authors").html(displayAuthors(submission.authors)).appendTo($(element));
+                $(element).append(Conflicts.displayPaperMoveModeFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
 
             } else if (type == "unscheduled"){
                 element = document.createElement("div");
@@ -456,6 +439,7 @@
                     element = document.createElement("li");
                     $(element).addClass("submission-empty");
                     $("<button/>").addClass("btn btn-small button-paper-move").html("<span class='icon-plus'/> Move to this slot").appendTo($(element));
+                    $(element).append(Conflicts.displayPaperMoveModeFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
                 } else {
                     element = document.createElement("div");
                 }
@@ -478,7 +462,7 @@
                 $("<span/>").addClass("submission-title").html(submission.title).appendTo($(element));
                 $("<br/>").appendTo($(element));
                 $("<span/>").addClass("submission-authors").html(displayAuthors(submission.authors)).appendTo($(element));
-                        
+                $(element).append(Conflicts.displayPaperMoveModeFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
             } else if (type == "unscheduled"){
                 element = document.createElement("div");
                 // console.log("No return");
@@ -488,6 +472,7 @@
                     element = document.createElement("li");
                     $(element).addClass("submission-empty");
                     $("<button/>").addClass("btn btn-small button-paper-schedule").html("<span class='icon-plus'/> Schedule in this slot").appendTo($(element));
+                    $(element).append(Conflicts.displayPaperMoveModeFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
                 } else {
                     element = document.createElement("div");
                 }
@@ -510,13 +495,14 @@
                 $("<span/>").addClass("submission-title").html(submission.title).appendTo($(element));
                 $("<br/>").appendTo($(element));
                 $("<span/>").addClass("submission-authors").html(displayAuthors(submission.authors)).appendTo($(element));
-                      
+                $(element).append(Conflicts.displayPaperMoveModeFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
             } else if (type == "unscheduled"){
                 // TODO: maybe also save date, time, room, and order info
                 if (isProposed) {
                     element = document.createElement("li");
                     $(element).addClass("submission-empty").css("list-style-type", "none");;
                     $("<button/>").addClass("btn btn-small button-paper-schedule").html("<span class='icon-plus'/> Schedule this paper").appendTo($(element));
+                    $(element).append(Conflicts.displayPaperMoveModeFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
                 } else {
                     element = document.createElement("div");
                 }
@@ -561,16 +547,16 @@
             if(scheduleSlots[slotDate][slotTime][slotRoom]['locked'])
                 $(cell).find(".title").addClass("locked");
 
-            var detail = document.createElement("div");
-            $(detail).hide()
-                 .addClass("detail")
-                 .html(getSessionDetail("view", type, session));
+            // var detail = document.createElement("div");
+            // $(detail).hide()
+            //      .addClass("detail")
+            //      .html(getSessionDetail("view", type, session));
             $(cell)
                  //.attr("id", "session-" + session.id)
                  //.data("session-id", session.id)
                  .addClass("empty")
-                 .attr("data-date", slotDate).attr("data-time", slotTime).attr("data-room", slotRoom)                     
-                 .append($(detail));
+                 .attr("data-date", slotDate).attr("data-time", slotTime).attr("data-room", slotRoom);                   
+                 // .append($(detail));
 
             $(cell).find(".title").append("<i class='icon-plus'></i>")     
 
@@ -583,16 +569,16 @@
             if(type !== "unscheduled" && scheduleSlots[session.date][session.time][session.room]['locked'])
                 $(cell).find(".title").addClass("locked");
 
-            var detail = document.createElement("div");
-            $(detail).hide()
-                .addClass("detail")
-                .html(getSessionDetail("view", type, session));
+            // var detail = document.createElement("div");
+            // $(detail).hide()
+            //     .addClass("detail")
+            //     .html(getSessionDetail("view", type, session));
 	 	
             $(cell).attr("id", "session-" + session.id)
                 .addClass(type)
                 .attr("data-session-id", session.id)                 
-                .attr("data-date", slotDate).attr("data-time", slotTime).attr("data-room", slotRoom)
-                .append($(detail));
+                .attr("data-date", slotDate).attr("data-time", slotTime).attr("data-room", slotRoom);
+                // .append($(detail));
             
             if (typeof session.title !== "undefined")
                 $(cell).find(".title").html(session.title);
