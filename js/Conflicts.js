@@ -14,26 +14,31 @@ var Conflicts = function() {
     // From CCOps.allConstraints, get all existing contraints existing in the data.
     // TODO: when constraint types are added as a transaction, handle them dynamically here, working with Polling.js
     function updateConstraintsList(){
-        var typeHash = {};
-        $.each(CCOps.allConstraints, function(index, c){
-            if (c.type in typeHash) 
-                return;
-            typeHash[c.type] = c.type;
-            var constraint = {};
-            constraint.id = index;
-            constraint.description = c.description;
-            // constraint.color = "#913A52";
-            // TODO: make it more reasonable
-            if (c.importance < -5) {
-                constraint.severity = "high";
-            } else
-                constraint.severity = "medium";
-            constraint.importance = c.importance;
-            constraint.type = c.type;
-            Conflicts.constraintsList.push(constraint);
-        });
-        Conflicts.constraintsList.sort(function(a,b){ return a.importance > b.importance; });
-        console.log(CCOps.allConstraints, Conflicts.constraintsList);        
+        if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+
+            var typeHash = {};
+            $.each(CCOps.allConstraints, function(index, c){
+                if (c.type in typeHash) 
+                    return;
+                typeHash[c.type] = c.type;
+                var constraint = {};
+                constraint.id = index;
+                constraint.description = c.description;
+                // constraint.color = "#913A52";
+                // TODO: make it more reasonable
+                if (c.importance < -5) {
+                    constraint.severity = "high";
+                } else
+                    constraint.severity = "medium";
+                constraint.importance = c.importance;
+                constraint.type = c.type;
+                Conflicts.constraintsList.push(constraint);
+            });
+            Conflicts.constraintsList.sort(function(a,b){ return a.importance > b.importance; });
+            console.log(CCOps.allConstraints, Conflicts.constraintsList);        
+        } else {
+            Conflicts.constraintsList = constraints_list;
+        }
     }
 
 	function bindEvents(){
@@ -321,7 +326,7 @@ var Conflicts = function() {
                 
           var isChanged = false;
           $("<div/>").addClass("conflict-preview-display-div-wrapper").appendTo($(element));
-          var $wrapper = $(element).find(".conflict-preview-detail-div-wrapper");
+          var $wrapper = $(element).find(".conflict-preview-display-div-wrapper");
           // for each constraint, count and add a modal dialog with descriptions
           $.each(Conflicts.constraintsList, function(index, conflict){  
             // var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 

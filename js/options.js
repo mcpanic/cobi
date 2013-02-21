@@ -74,20 +74,24 @@
     /*{"id": "persona", "label": "Tracks"} */
     ];
 
-// var constraints_list = [
-//  {
-//      "id": "1",
-//      "label": "simultaneous sessions for an author",
-//      "color": "#913A52", //#C76A61", //#8C489F", //#a55194",
-//      "type": "authorInTwoSessions" 
-//  },
-//  {
-//      "id": "2",
-//      "label": "simultaneous sessions for a persona",
-//      "color": "#C77F77", //#FAB99A", //#ff9896",
-//      "type": "personaInTwoSessions"
-//  }   
-// ];
+var constraints_list = [
+ {
+     "id": "1",
+     "description": "simultaneous sessions for an author",
+     "importance": -10,
+     "severity": "high",
+     // "color": "#913A52", //#C76A61", //#8C489F", //#a55194",
+     "type": "authorInTwoSessions" 
+ },
+ {
+     "id": "2",
+     "description": "simultaneous sessions for a persona",
+     "importance": -4,
+     "severity": "medium",     
+     // "color": "#C77F77", //#FAB99A", //#ff9896",
+     "type": "personaInTwoSessions"
+ }   
+];
 
 // var communities_list = [
 // {"label": "design", "color": "#9edae5"},
