@@ -439,6 +439,7 @@ var DataOps = function() {
 	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
 	    console.log("relying on CCOps");
 	    CCOps.updateAllConstraintEntities([s1.id, s2.id]);
+	    updateAuthorConflicts([s1.id, s2.id]);
 	}
 	// associate papers with different sessions
     }
@@ -478,6 +479,7 @@ var DataOps = function() {
 	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
 	    console.log("relying on CCOps");
 	    CCOps.updateAllConstraintEntities([s.id]);
+	    updateAuthorConflicts([s.id]);
 	}
     }
     
@@ -516,6 +518,7 @@ var DataOps = function() {
 	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
 	    console.log("relying on CCOps");
 	    CCOps.updateAllConstraintEntities([s.id]);
+	    updateAuthorConflicts([s.id]);
 	}
     }
     
@@ -538,6 +541,7 @@ var DataOps = function() {
 	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
 	    console.log("relying on CCOps");
 	    CCOps.updateAllConstraintEntities([s1.id, s2.id]);
+	    updateAuthorConflicts([s1.id, s2.id]);
 	}
     }
 
@@ -565,6 +569,7 @@ var DataOps = function() {
 	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
 	    console.log("relying on CCOps");
 	    CCOps.updateAllConstraintEntities([s2.id]);
+	    updateAuthorConflicts([s2.id]);
 	}
     }
     
@@ -1081,6 +1086,7 @@ function initAfterScheduleLoads(m){
     if(!frontEndOnly){
 	db.refresh();
     }
+    console.log("fully loaded on backend");
     $(document).trigger('fullyLoaded');
 }
 
@@ -1303,6 +1309,21 @@ function randomizeSchedule(){
 	    //    output += "swapping " + sk[current] + " with " + sk[top] + "\n";
 	}
     //    return output;
+}
+
+// update author conflicts on particular sessions 
+function updateAuthorConflicts(affectedSessions){
+    for(var i  = 0; i < affectedSessions.length; i++){
+	var s1 = affectedSessions[i];
+	for(var j = 0; j < sessionKeys.length; j++){
+	    if(i != j){
+		var s2 = sessionKeys[j];
+		var authorConflicts = computeAuthorConflicts(allSessions[s1], allSessions[s2]);
+		authorConflictsAmongSessions[s1][s2] = authorConflicts;
+		authorConflictsAmongSessions[s2][s1] = authorConflicts;
+	    }
+	}
+    }
 }
 
 // Pre-processing to fill a data structure noting a list of conflicts
@@ -1870,6 +1891,7 @@ function calculateNumConflictsCausedBy(s){
 
 function getAllConflicts(){
     if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	console.log("starting getAllConflicts");
 	conflictsBySession = CCOps.getAllConflicts().sessions;
 	console.log("get all conflicts just got called");
 	return;    

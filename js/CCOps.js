@@ -129,14 +129,14 @@ var CCOps = function(){
 	});
     }
     
-    function generateSubmissionNotTogetherConstraint(e1, e2){
+    function generateSubmissionNotTogetherConstraint(e1, e2, score){
 	var constraint = new EntityPairConstraint("interested",
-						  "submissions that should be at different time slots",
+						  "papers should not be in opposing sessions",
 						  function (sessionA, violationA, sessionB, violationB){
 						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
 							  sessionB.submissions[violationB.submission].title + "'" + " should be at different times.";
 						  },
- 						  -5, 
+ 						  score, 
  						  "this is what an author said",
  						  [new Rule('submission', 
  							    function(x){ 
@@ -158,18 +158,14 @@ var CCOps = function(){
     }
 
 
-    function generateFitInSessionConstraint(e1, e2, type){
-	var text = {'great': 'these papers are great together',
-		    'ok' : 'these papers are good together',
-		    'notsure': 'not sure if these papers are good together',
-		    'notok': 'these papers should not be together'};
-	var scores = {'great': 10,
-		      'ok': 5,
-		      'notsure': -5,
-		      'notok' : -10};
-	var filler = {'great' : ' should be great ',
-		      'ok': ' should be ok ',
-		      'notsure': ' should probably not be ',
+    function generateFitInSessionConstraint(e1, e2, score){
+
+	var text = {'great': 'papers that are good in same session',
+		    'notok': 'papers that should not be in same session'};
+	var type = 'great';
+	if(score < 0) type = 'notok';
+
+	var filler = {'great' : ' are good ',
 		      'notok': ' should not be '};
 	
 	var constraint = new EntityPairConstraint(type,
@@ -178,7 +174,7 @@ var CCOps = function(){
 						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
 							  sessionB.submissions[violationB.submission].title + "'" + filler[type] + "in the same session.";
 						  },
- 						  scores[type],
+ 						  score, 
  						  "this is what an author said",
  						  [new Rule('submission', 
  							    function(x){ 
@@ -193,47 +189,118 @@ var CCOps = function(){
 						  [new Rule('session', function(a,b){
 						      return !(a.id == b.id);
 						  })]);
-//	console.log(constraint);
 	return constraint;
     }
     
     
     function generateAuthorsourcingConstraints(){
+	var cases = {'great': [], 'ok':[], 'notsure':[],'notok':[]};
+	var scores = {'great': 10,
+		      'ok': 5,
+		      'notsure': -5,
+		      'notok' : -10};
+	var fitconstraints = {};
+	var interestedconstraints = {};
+	var relevantconstraints = {};
+	
+	for(var i in allSubmissions){
+	    fitconstraints[allSubmissions[i].id] = {};
+	    interestedconstraints[allSubmissions[i].id] = {};
+	    relevantconstraints[allSubmissions[i].id] = {};
+	}
+	
 	for(var submission in CCOps.authorsourcingData){
 	    // generate cohesiveness constraints
 	    for(var auth in CCOps.authorsourcingData[submission]){
 		var i = CCOps.authorsourcingData[submission][auth].length -1; // ignore dups from same author
-//		for(var i in CCOps.authorsourcingData[submission][auth]){
-		    var cases = {'great': [], 'ok':[], 'notsure':[],'notok':[]};
-		    for(var j in cases){
-			cases[j] = CCOps.authorsourcingData[submission][auth][i][j].split(',');
-			    for(var k in cases[j]){
-				CCOps.allConstraints.push(generateFitInSessionConstraint(submission, cases[j][k], j));
-			    }
+		for(var j in cases){
+		    var results = CCOps.authorsourcingData[submission][auth][i][j];
+		    if(results == "") results = [];
+		    else results = results.split(',');
+		
+		    for(var k in results){
+			var pair = [submission, results[k]].sort();
+			if(pair[0] in fitconstraints[pair[1]]){
+			    fitconstraints[pair[1]][pair[0]].push(j);
+			}else{
+			    fitconstraints[pair[1]][pair[0]] = [j];
+			}
 		    }
-	//	}
-	    }
-
-	    for(var auth in CCOps.authorsourcingData[submission]){
-		var i = CCOps.authorsourcingData[submission][auth].length -1; // ignore dups from same author
-		// generate like-so-avoid constraints
-		var interestedList = CCOps.authorsourcingData[submission][auth][i]['interested'].split(',');
-		interestedList.push(submission);
+		}
+		var interestedList = CCOps.authorsourcingData[submission][auth][i]['interested'];
+		if(interestedList =="") interestedList = [];
+		else {
+		    interestedList = interestedList.split(',');		
+		    interestedList.push(submission);
+		    interestedList.sort();
+		}
+		
 		for(var j = 0; j < interestedList.length - 1; j++){
 		    for(var k = j+1; k < interestedList.length; k++){
-			CCOps.allConstraints.push(generateSubmissionNotTogetherConstraint(interestedList[j], interestedList[k]));
-		    }
-		}
-		// generate relevant to special thus avoid
-		var relevantList = [];
-		if(CCOps.authorsourcingData[submission][auth][i]['relevant'] != ""){
-		    relevantList = CCOps.authorsourcingData[submission][auth][i]['relevant'].split(',');
+			if(interestedList[k] in interestedconstraints[interestedList[j]]){
+			    interestedconstraints[interestedList[j]][interestedList[k]] += 1;
+			}else{
+			    interestedconstraints[interestedList[j]][interestedList[k]] = 1;
+			}
+ 		    }
+ 		}
+	
+		var relevantList = CCOps.authorsourcingData[submission][auth][i]['relevant'];
+		if(relevantList == ""){
+		    relevantList = [];
+		}else{
+		    relevantList = relevantList.split(',');
+		    relevantList.sort();
 		}
 		for(var j = 0; j < relevantList.length; j++){
-		    CCOps.allConstraints.push(generateSubmissionNotTogetherConstraint(submission, relevantList[j]));
+		    var pair = [submission, relevantList[j]].sort();
+		    if(pair[0] in relevantconstraints[pair[1]]){
+			relevantconstraints[pair[1]][pair[0]] += 1;
+		    }else{
+			relevantconstraints[pair[1]][pair[0]] = 1;
+		    }
 		}
 	    }
 	}
+
+	// compute scores
+	for(var i in fitconstraints){
+	    for(var j in fitconstraints[i]){
+		var score = fitconstraints[i][j].map(function(x){return scores[x]}).reduce(function(p,c,i,a) {return p + c;});
+		if(score > 5 || score < -5){
+		    // add as constraint
+		    CCOps.allConstraints.push(generateFitInSessionConstraint(i, j, score));
+		}
+	    }
+	}
+	
+	for(var i in interestedconstraints){
+	    for(var j in interestedconstraints[i]){
+		var score = -5 * interestedconstraints[i][j];
+		if(score < -5){
+		    CCOps.allConstraints.push(generateSubmissionNotTogetherConstraint(i, j, score));
+		}
+		//		console.log(score, ' ',i, ' ', j,' ', interestedconstraints[i][j]);
+	    }
+	}
+
+//	var moreRel = 0;
+//	var oneRel = 0;		
+
+	for(var i in relevantconstraints){
+	    for(var j in relevantconstraints[i]){
+		var score = -5 * relevantconstraints[i][j];
+		if(score < -5){
+		    CCOps.allConstraints.push(generateSubmissionNotTogetherConstraint(i, j, score));
+		//    moreRel++;
+		}else{
+	//	    oneRel++;
+		}
+	    }
+	}
+	
+//	console.log(oneRel);
+//	console.log(moreRel);
     }
 	
     function initialize(){
@@ -270,7 +337,7 @@ var CCOps = function(){
 // 							     (a.room != b.room));
 // 						})]);
 	
-	 var example3 = new EntityFilterPairConstraint("authorInTwoSessions", 
+	 var authorconstraint = new EntityFilterPairConstraint("authorInTwoSessions", 
 						       "same author shouldn't be in simultaneous sessions", 
 						       function (sessionA, violationA, sessionB, violationB){
 							   return sessionA.submissions[violationA.submission].authors[violationA.author].firstName + " " + 
@@ -290,7 +357,7 @@ var CCOps = function(){
 								    (a.room != b.room));
 						       })]);
 
-	 var example4 = new EntityFilterPairConstraint("personaInTwoSessions", 
+	 var personaconstraint = new EntityFilterPairConstraint("personaInTwoSessions", 
 						       "same persona shouldn't be in simultaneous sessions", 
 						       function (sessionA, violationA, sessionB, violationB){
 							   return "Someone interested in '" + sessionA.personas + "' may want to see both '" + 
@@ -309,53 +376,53 @@ var CCOps = function(){
 								    (a.date == b.date) &&
  								    (a.room != b.room));
 						       })]);
- 	var example5 = new EntityPairConstraint("badTogether",
-						"example: these papers aren't good together",
-						function (sessionA, violationA, sessionB, violationB){
-						    return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
-							sessionB.submissions[violationB.submission].title + "' should not be in the same session.";
-						},
- 						-7,
- 						"because they are not related",
- 						[new Rule('submission', 
- 							  function(x){ 
- 							      return x.title.indexOf("Don") != -1;
-  							  }),
-  						],
- 						[new Rule('submission',
- 							  function (x){
- 							      return x.title.indexOf("Turk") != -1;
-							  }),
-						],
-						[new Rule('session', function(a,b){
-						    return !(a.id == b.id);
-						})]);
-	var example6 = new EntityPairConstraint("goodTogether",
-						"example: these papers are good together",
-						function (sessionA, violationA, sessionB, violationB){
-						    return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
-							sessionB.submissions[violationB.submission].title + "' are good in the same session.";
-						},
- 						4,
- 						"because they are related",
- 						[new Rule('submission', 
- 							  function(x){ 
- 							      return x.title.indexOf("Don") != -1;
-  							  }),
-  						],
- 						[new Rule('submission',
- 							  function (x){
- 							      return x.title.indexOf("Revisiting") != -1;
-							  }),
-						],
-						[new Rule('session', function(a,b){
-						    return !(a.id == b.id);
-						})]);
+//  	var example5 = new EntityPairConstraint("badTogether",
+// 						"example: these papers aren't good together",
+// 						function (sessionA, violationA, sessionB, violationB){
+// 						    return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
+// 							sessionB.submissions[violationB.submission].title + "' should not be in the same session.";
+// 						},
+//  						-7,
+//  						"because they are not related",
+//  						[new Rule('submission', 
+//  							  function(x){ 
+//  							      return x.title.indexOf("Don") != -1;
+//   							  }),
+//   						],
+//  						[new Rule('submission',
+//  							  function (x){
+//  							      return x.title.indexOf("Turk") != -1;
+// 							  }),
+// 						],
+// 						[new Rule('session', function(a,b){
+// 						    return !(a.id == b.id);
+// 						})]);
+// 	var example6 = new EntityPairConstraint("goodTogether",
+// 						"example: these papers are good together",
+// 						function (sessionA, violationA, sessionB, violationB){
+// 						    return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
+// 							sessionB.submissions[violationB.submission].title + "' are good in the same session.";
+// 						},
+//  						4,
+//  						"because they are related",
+//  						[new Rule('submission', 
+//  							  function(x){ 
+//  							      return x.title.indexOf("Don") != -1;
+//   							  }),
+//   						],
+//  						[new Rule('submission',
+//  							  function (x){
+//  							      return x.title.indexOf("Revisiting") != -1;
+// 							  }),
+// 						],
+// 						[new Rule('session', function(a,b){
+// 						    return !(a.id == b.id);
+// 						})]);
 
-	CCOps.allConstraints.push(example3);
-	CCOps.allConstraints.push(example4);
-	CCOps.allConstraints.push(example5);
-	CCOps.allConstraints.push(example6);
+	CCOps.allConstraints.push(authorconstraint);
+	CCOps.allConstraints.push(personaconstraint);
+//	CCOps.allConstraints.push(example5);
+//	CCOps.allConstraints.push(example6);
 	
 	getAllConflicts();
     }
@@ -1707,7 +1774,8 @@ var CCOps = function(){
 	    equal: equal,
 	    legalPathPairs: legalPathPairs,
 	    removeSames: removeSames,
-	    authorsourcingData: authorsourcingData
+	    authorsourcingData: authorsourcingData,
+	    generateAuthorsourcingConstraints: 	    generateAuthorsourcingConstraints
 	   };
 }();
 
