@@ -106,23 +106,13 @@ var MoveMode = function() {
                         + "<a class='close popover-close' data-dismiss='clickover' data-session-id='" + id + "' href='#''>&times;</a>"
                         + "<a class='save-button pull-right' data-session-id='" + id + "' href='#''>edit</a>";
             },
-            content:function(){
-                //var id = $(this).data("session-id");
-                //console.log(id);
-                
+            content:function(){                
                 var html = "";
                 if ($(this).hasClass("move-src-selected")) {
                     // console.log("slotClickHandler: move-src-selected");                   
                     html += "<div class='alert alert-info'><strong>Select another session to schedule this session.</strong></div>" + getCancelButtonHTML();
                     if (id !== -1)
                         html += getSubmissionList("move", session, type);
-
-                // } else if ($(this).find(".title").hasClass("locked")) {
-                //     console.log("slotClickHandler: locked");                  
-                //     html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong><br>" + getCancelButtonHTML();
-                //     if (id !== -1)
-                //         html += getSubmissionList("move", session, type);
-
                 } else if (type == "scheduled" || type == "unscheduled" || type == "empty"){
                     if ($(this).hasClass("scheduled")){
                         html += getSessionDetail("move", "scheduled", session, type);
@@ -312,7 +302,7 @@ var MoveMode = function() {
                 }
             }
             //console.log(MoveMode.swapValues[i]);
-            Conflicts.displayPreviewConflicts(MoveMode.swapValues[i], $cell.find(".conflicts"));
+            Conflicts.displayMovePreviewConflicts(MoveMode.swapValues[i], $cell.find(".conflicts"));
             // console.log(outerHTML($cell.find(".conflicts")));
             $cell.find(".display").html($cell.find(".conflicts").html());
             //Conflicts.displayFullConflicts(MoveMode.swapValues[i], $cell.find(".detail"));

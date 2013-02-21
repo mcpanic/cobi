@@ -170,56 +170,87 @@ var Conflicts = function() {
         return filtered_array.length;
      }
 
-     // Given a list of added and removed conflicts with a swap candidate,
-     // display the preview to help make the decision to do the swap.
-     function displayFullConflicts(swapValues, element){
-          if (typeof swapValues === "undefined")
-               return;
+     // // Given a list of added and removed conflicts with a swap candidate,
+     // // display the preview to help make the decision to do the swap.
+     // function displayFullConflicts(swapValues, element){
+     //      if (typeof swapValues === "undefined")
+     //           return;
 
-            // var $session = $(".selected").first();
-            // var id = getID($session);  
-            //console.log("HERE");
-          element.find(".conflicts").html("");
-          var plural = isPlural(swapValues.value) ? "s" : "";
-          if (swapValues.value > 0)
-            element.find(".conflicts").append("<div class='swap-total-full stronger-text'>" + swapValues.value 
-              + " conflict" + plural 
-              + " will be resolved. <small>(click icons for details)</small></div>"); 
-          else
-            element.find(".conflicts").append("<div class='swap-total-full weaker-text'>" + (-1)*swapValues.value 
-                + " conflict" + plural 
-                + " will be added. <small>(click icons for details)<small></div> "); 
+     //        // var $session = $(".selected").first();
+     //        // var id = getID($session);  
+     //        //console.log("HERE");
+     //      element.find(".conflicts").html("");
+     //      var plural = isPlural(swapValues.value) ? "s" : "";
+     //      if (swapValues.value > 0)
+     //        element.find(".conflicts").append("<div class='swap-total-full stronger-text'>" + swapValues.value 
+     //          + " conflict" + plural 
+     //          + " will be resolved. <small>(click icons for details)</small></div>"); 
+     //      else
+     //        element.find(".conflicts").append("<div class='swap-total-full weaker-text'>" + (-1)*swapValues.value 
+     //            + " conflict" + plural 
+     //            + " will be added. <small>(click icons for details)<small></div> "); 
                 
-          var isChanged = false;
+     //      var isChanged = false;
 
-          // for each constraint, count and add a modal dialog with descriptions
-          $.each(Conflicts.constraintsList, function(index, conflict){  
-            // var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 
-            //             - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
-            // if (netCount == 0)
-            //      return;
-            // console.log(conflict, swapValues);
-            isChanged = true;
+     //      // for each constraint, count and add a modal dialog with descriptions
+     //      $.each(Conflicts.constraintsList, function(index, conflict){  
+     //        // var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 
+     //        //             - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
+     //        // if (netCount == 0)
+     //        //      return;
+     //        // console.log(conflict, swapValues);
+     //        isChanged = true;
             
-            var $view = element.find(".conflicts");
-            if (swapValues.addedSrc != null && swapValues.addedSrc.length > 0)
-                $view.append(displayConflictFullHTML("[Conflict added]", swapValues.addedSrc, conflict, "+"));
-            if (swapValues.addedDest != null && swapValues.addedDest.length > 0)
-                $view.append(displayConflictFullHTML("[Conflict added]", swapValues.addedDest, conflict, "+"))
-            if (swapValues.removedSrc != null && swapValues.removedSrc.length > 0)
-                $view.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedSrc, conflict, "-"))
-            if (swapValues.removedDest != null && swapValues.removedDest.length > 0)
-                $view.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedDest, conflict, "-"));      
-            // var netCountClass = "conflict-netcount-added";
-            // if (netCount < 0)
-            //     netCountClass = "conflict-netcount-removed";            
-          });
-            if (!isChanged)
-              element.find(".swap-total-full").hide();
-          var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
-          element.find(".conflicts").append($detail);
+     //        var $view = element.find(".conflicts");
+     //        if (swapValues.addedSrc != null && swapValues.addedSrc.length > 0)
+     //            $view.append(displayConflictFullHTML("[Conflict added]", swapValues.addedSrc, conflict, "+"));
+     //        if (swapValues.addedDest != null && swapValues.addedDest.length > 0)
+     //            $view.append(displayConflictFullHTML("[Conflict added]", swapValues.addedDest, conflict, "+"))
+     //        if (swapValues.removedSrc != null && swapValues.removedSrc.length > 0)
+     //            $view.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedSrc, conflict, "-"))
+     //        if (swapValues.removedDest != null && swapValues.removedDest.length > 0)
+     //            $view.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedDest, conflict, "-"));      
+     //        // var netCountClass = "conflict-netcount-added";
+     //        // if (netCount < 0)
+     //        //     netCountClass = "conflict-netcount-removed";            
+     //      });
+     //        if (!isChanged)
+     //          element.find(".swap-total-full").hide();
+     //      var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
+     //      element.find(".conflicts").append($detail);
 
-     }  
+     // }  
+
+
+     // Given a list of conflicts for the given session,
+     // display the preview with details
+     function displayViewModeFullConflicts(id){
+        var element = document.createElement("div");
+        $(element).addClass("conflicts");
+
+        var conflicts = conflictsBySession[id];                
+        var conflicts_array = conflicts.map(function(co) {return co.type});
+
+        var plural = isPlural(conflicts.length) ? "s" : "";
+        if (conflicts.length > 0) {
+            $(element).append("<div class='swap-total-full stronger-text'>" + conflicts.length 
+              + " conflict" + plural 
+              + ". <small>(click icons for details)</small></div>"); 
+        }
+        
+        var isChanged = false;
+        // for each constraint, count and add a modal dialog with descriptions
+        $.each(Conflicts.constraintsList, function(index, conflict){
+            isChanged = true;
+            $(element).append(displayViewModeConflictFullHTML(conflicts, conflict));
+        });
+        if (!isChanged)
+            $(element).find(".swap-total-full").hide();
+        var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
+        $(element).append($detail);
+        return outerHTML(element);
+     }
+
 
      function displayMoveModeFullConflicts(swapValues){
         if (typeof swapValues === "undefined" || swapValues == null)
@@ -320,9 +351,18 @@ var Conflicts = function() {
 
      // Given a list of added and removed conflicts with a swap candidate,
      // display the preview to help make the decision to do the swap.
-     function displayPreviewConflicts(swapValues, element){
+     function displayMovePreviewConflicts(swapValues, element){
           if (typeof swapValues === "undefined")
                return;
+
+           // if the current total already exists, compare and keep the winning one. 
+            if (element.find(".swap-total").length > 0){
+                var oldScore = parseInt(element.find(".swap-total").text());
+                var newScore =  (-1)*swapValues.value;
+                if (oldScore <= newScore)    // the lower the better (less conflicts)
+                    return;
+            }
+
 
           if (swapValues.value > 0)
             element.append("<div class='swap-total stronger-text'>" + addSign((-1)*swapValues.value) + "</div>"); 
@@ -356,7 +396,6 @@ var Conflicts = function() {
             element.find(".swap-total").hide();
      }
 
-
      function updateConstraintBackground(selectedConstraint, toggle){
         
         var className = "";
@@ -380,36 +419,6 @@ var Conflicts = function() {
                });
           });
      }
-
-     // Given a list of conflicts for the given session,
-     // display the preview with details
-     function displayViewModeFullConflicts(id){
-        var element = document.createElement("div");
-        $(element).addClass("conflicts");
-
-        var conflicts = conflictsBySession[id];                
-        var conflicts_array = conflicts.map(function(co) {return co.type});
-
-        var plural = isPlural(conflicts.length) ? "s" : "";
-        if (conflicts.length > 0) {
-            $(element).append("<div class='swap-total-full stronger-text'>" + conflicts.length 
-              + " conflict" + plural 
-              + ". <small>(click icons for details)</small></div>"); 
-        }
-        
-        var isChanged = false;
-        // for each constraint, count and add a modal dialog with descriptions
-        $.each(Conflicts.constraintsList, function(index, conflict){
-            isChanged = true;
-            $(element).append(displayViewModeConflictFullHTML(conflicts, conflict));
-        });
-        if (!isChanged)
-            $(element).find(".swap-total-full").hide();
-        var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
-        $(element).append($detail);
-        return outerHTML(element);
-     }
-
 
      // Refresh conflicts information display.
      // Called after an interaction occurs that affects conflicts. (swap, unschedule, schedule)
@@ -470,9 +479,10 @@ var Conflicts = function() {
         // getConflictLength: getConflictLength,
         displayViewModeFullConflicts: displayViewModeFullConflicts,
         displayMoveModeFullConflicts: displayMoveModeFullConflicts,
-        displayPaperMoveModeFullConflicts: displayPaperMoveModeFullConflicts,
-        displayFullConflicts: displayFullConflicts,
-        displayPreviewConflicts: displayPreviewConflicts,
+        // displayPaperMoveModeFullConflicts: displayPaperMoveModeFullConflicts,
+        // displayFullConflicts: displayFullConflicts,
+        displayMovePreviewConflicts: displayMovePreviewConflicts,
+        displayPaperMovePreviewConflicts: displayPaperMovePreviewConflicts,
         updateConflicts: updateConflicts,
         updateConstraintBackground: updateConstraintBackground
     };
