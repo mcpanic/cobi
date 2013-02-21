@@ -138,16 +138,16 @@ var CCOps = function(){
 		      'ok': 5,
 		      'notsure': -5,
 		      'notok' : -10};
-	var filler = {'great' : 'should be',
-		      'ok': 'should be',
-		      'notsure': 'should not be',
-		      'notok': 'should not be'};
+	var filler = {'great' : ' should be great ',
+		      'ok': ' should be ok ',
+		      'notsure': ' should probably not be ',
+		      'notok': ' should not be '};
 	
 	var constraint = new EntityPairConstraint(type,
 						  text[type],
 						  function (sessionA, violationA, sessionB, violationB){
 						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
-							  sessionB.submissions[violationB.submission].title + "'" + filler[type] + ".";
+							  sessionB.submissions[violationB.submission].title + "'" + filler[type] + "in the same session.";
 						  },
  						  scores[type],
  						  "this is what an author said",
@@ -303,8 +303,8 @@ var CCOps = function(){
 
 	CCOps.allConstraints.push(example3);
 	CCOps.allConstraints.push(example4);
-	CCOps.allConstraints.push(example5);
-	CCOps.allConstraints.push(example6);
+//	CCOps.allConstraints.push(example5);
+//	CCOps.allConstraints.push(example6);
 	
 	getAllConflicts();
     }
@@ -433,7 +433,7 @@ var CCOps = function(){
     }
 
 
-    function computeAllConflictsSlot(s1, space, conflictsCausedByItem, conflictsWithRow){
+    function computeAllConflictsSlot(s1, space, conflictsWithRow){
 	var hypSessions = {};
 	var hypS = createHypSessionLoc(allSessions[s1], 
 				       space.date,
@@ -441,6 +441,20 @@ var CCOps = function(){
 				       space.room);
 	hypSessions[s1] = hypS;
 	var conflictsCausedByOffending = computeNewSingleConflicts(s1, hypSessions);
+	
+	var conflictsCausedByItem = [];
+	if(!(s1 in unscheduled)){
+	    for(var i in CCOps.allConflicts["sessions"][s1]){
+		// self conflicts do not matter when we swap sessions
+		if(CCOps.allConflicts["sessions"][s1][i].entities.length == 2 &&
+		   CCOps.allConflicts["sessions"][s1][i].entities[0] == 
+		   CCOps.allConflicts["sessions"][s1][i].entities[1]){
+		}else{
+		    conflictsCausedByItem.push(CCOps.allConflicts["sessions"][s1][i]);
+		}
+	    }
+	}
+	
 	
 	var s = allSessions[s1];
 	var date = space.date;
@@ -450,15 +464,38 @@ var CCOps = function(){
 	    var item = conflictsWithRow[date][time]["sum"][i];
 	    conflictsCausedByOffending.push(item);
 	}
-
+		
 	return {conflictsCausedByItem: conflictsCausedByItem,
 		conflictsCausedByCandidate: [],
 		conflictsCausedByOffending: conflictsCausedByOffending,
 		conflictsCausedByCandidateAtOffending: []};
     }
 
-    function computeAllConflicts(s1, s2, conflictsCausedByItem, conflictsWithRow){
-	var conflictsCausedByCandidate = CCOps.allConflicts["sessions"][s2];
+    function computeAllConflicts(s1, s2, conflictsWithRow){
+	var conflictsCausedByCandidate = [];
+	if(!(s2 in unscheduled)){
+	    for(var i in CCOps.allConflicts["sessions"][s2]){
+		// self conflicts do not matter when we swap sessions
+		if(CCOps.allConflicts["sessions"][s2][i].entities.length == 2 &&
+		   CCOps.allConflicts["sessions"][s2][i].entities[0] == 
+		   CCOps.allConflicts["sessions"][s2][i].entities[1]){
+		}else{
+		    conflictsCausedByCandidate.push(CCOps.allConflicts["sessions"][s2][i]);
+		}
+	    }
+	}
+	var conflictsCausedByItem = [];
+	if(!(s1 in unscheduled)){
+	    for(var i in CCOps.allConflicts["sessions"][s1]){
+		// self conflicts do not matter when we swap sessions
+		if(CCOps.allConflicts["sessions"][s1][i].entities.length == 2 &&
+		   CCOps.allConflicts["sessions"][s1][i].entities[0] == 
+		   CCOps.allConflicts["sessions"][s1][i].entities[1]){
+		}else{
+		    conflictsCausedByItem.push(CCOps.allConflicts["sessions"][s1][i]);
+		}
+	    }
+	}
 	var hypSessions = {};
 	var hypS = createHypSessionLoc(allSessions[s1], 
 				       allSessions[s2].date, 
@@ -496,6 +533,13 @@ var CCOps = function(){
 		    }
 		}
 	    }
+	}
+	
+	if(s2 == 's230'){
+	    console.log(conflictsCausedByItem);
+	    console.log(conflictsCausedByCandidate);
+	    console.log(conflictsCausedByOffending);
+	    console.log(conflictsCausedByCandidateAtOffending);
 	}
 	return {conflictsCausedByItem: conflictsCausedByItem,
 		conflictsCausedByCandidate: conflictsCausedByCandidate,
@@ -558,10 +602,6 @@ var CCOps = function(){
 	var swapValue = [];
 	var slotValue = [];
 	
-	var conflictsCausedByItem = [];
-	if(!(s.id in unscheduled)){
-	    conflictsCausedByItem = CCOps.allConflicts["sessions"][s.id];
-	}
 	var conflictsWithRow = computeConflictsWithRow(s);
 	
 	for(var date in schedule){
@@ -576,7 +616,7 @@ var CCOps = function(){
 			    if(room == s.room) continue;
 			    cc = computeAllSingleConflictsSlot(s.id, space);
 			}else{
-			    cc = computeAllConflictsSlot(s.id, space, conflictsCausedByItem, conflictsWithRow);
+			    cc = computeAllConflictsSlot(s.id, space, conflictsWithRow);
 			}
 			slotValue.push(createSwapDetails(cc, space));
 		    }else{
@@ -588,7 +628,7 @@ var CCOps = function(){
 				if(room == s.room) continue;
 				cc = computeAllSingleConflicts(s.id, s2);
 			    }else{
-				cc = computeAllConflicts(s.id, s2, conflictsCausedByItem, conflictsWithRow);
+				cc = computeAllConflicts(s.id, s2, conflictsWithRow);
 			    }
 			    var space = new slot(date, time, room, s2);
 			    swapValue.push(createSwapDetails(cc, space));
@@ -880,8 +920,9 @@ var CCOps = function(){
 	    cc.conflictsCausedByItem.length - 
 	    cc.conflictsCausedByOffending.length - 
 	    cc.conflictsCausedByCandidateAtOffending.length;
+
+	cc = removeAddRemove(cc);
 	
-//	cc = removeAddRemove(cc);
 	return new swapDetails(space,
 			       conflictsResolved,
 			       cc.conflictsCausedByCandidateAtOffending,
@@ -896,6 +937,7 @@ var CCOps = function(){
 			       cc.conflictsCausedByItem);
 	var resB = removeSames(cc.conflictsCausedByOffending,
     			       cc.conflictsCausedByCandidate);
+	
 	return { 
 	    conflictsCausedByItem: resA.b,
 	    conflictsCausedByCandidate: resB.b,
@@ -1397,7 +1439,7 @@ var CCOps = function(){
 			    }
 			    for(var j = start; j < roomKeys.length; j++){
 			    	for(var s2 in schedule[date][time][roomKeys[j]]){
-				    if(s2 in belongRHS){
+				    if(s1 != s2 && s2 in belongRHS){
 					for(var e1 in belongLHS[s1]){
 					    for(var e2 in belongRHS[s2]){
 						if(!pathRelates(levels, belongLHS[s1][e1], belongRHS[s2][e2])){
@@ -1406,6 +1448,16 @@ var CCOps = function(){
 						}
 					    }
 					}
+				    }else if(s1 == s2){
+					for(var e1 in belongLHS[s1]){
+					    for(var e2 in belongRHS[s2]){
+						if(!pathRelates(levels, belongLHS[s1][e1], belongRHS[s2][e2])){
+						    var conflict = createPairConflict(belongLHS[s1][e1], belongRHS[s2][e2], constraint);
+						    conflictList.push(conflict);
+						}
+					    }
+					}
+					
 				    }
 				}
 			    }
@@ -1544,30 +1596,32 @@ var CCOps = function(){
 		if((s1 in belongLHS) && (s2 in belongRHS)){
 		    for(var e1 in belongLHS[s1]){
 			for(var e2 in belongRHS[s2]){
-			    // TODO, assume don't need hyp session here 
-			    // or even to check if path relates
-			    var conflict = createPairHypConflict(belongLHS[s1][e1],
-								 belongRHS[s2][e2],
-								 constraint, hypSessions);
-			    conflicts.push(conflict);
+			    if(!pathHypRelates(levels, belongLHS[s1][e1], belongRHS[s2][e2], hypSessions)){
+				var conflict = createPairHypConflict(belongLHS[s1][e1],
+								     belongRHS[s2][e2],
+								     constraint, hypSessions);
+				conflicts.push(conflict);
+			    }
 			}
 		    }
 		}
 		// then the other
-		if(!constraint.isSymmetric && (s2 in belongLHS) && (s1 in belongRHS)){
+		if(!constraint.isSymmetric && s1 != s2 && (s2 in belongLHS) && (s1 in belongRHS)){
 		    for(var e1 in belongLHS[s2]){
 			for(var e2 in belongRHS[s1]){
-			    var conflict = createPairHypConflict(belongLHS[s2][e1],
-							      belongRHS[s1][e2],
-							      constraint, hypSessions);
-			    conflicts.push(conflict);
+			    if(!pathHypRelates(levels, belongLHS[s2][e1], belongRHS[s1][e2], hypSessions)){
+				var conflict = createPairHypConflict(belongLHS[s2][e1],
+								     belongRHS[s1][e2],
+								     constraint, hypSessions);
+				conflicts.push(conflict);
+			    }
 			}
 		    }
 		}
 	    }
 	}
 	return conflicts;
-    }   
+    }
     
     function computeNewSingleConflicts(s, hypSessions){
 	var conflicts = [];

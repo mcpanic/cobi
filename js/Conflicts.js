@@ -14,8 +14,11 @@ var Conflicts = function() {
     // From CCOps.allConstraints, get all existing contraints existing in the data.
     // TODO: when constraint types are added as a transaction, handle them dynamically here, working with Polling.js
     function updateConstraintsList(){
+	var typeHash = {};
 
         $.each(CCOps.allConstraints, function(index, c){
+	    if(c.type in typeHash) return;
+	    typeHash[c.type] = c.type;
             var constraint = {};
             constraint.id = index;
             constraint.description = c.description;
