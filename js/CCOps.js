@@ -71,7 +71,7 @@ var CCOps = function(){
     var allConstraints = [];
     var allConflicts = [];
     var authorsourcingData = null;
-    
+
     function createSingleConflict(violation, constraint){
 	var session = allSessions[violation.session];
 	return new conflictObject([violation.session],
@@ -129,6 +129,35 @@ var CCOps = function(){
 	});
     }
     
+    function generateSubmissionNotTogetherConstraint(e1, e2){
+	var constraint = new EntityPairConstraint("interested",
+						  "submissions that should be at different time slots",
+						  function (sessionA, violationA, sessionB, violationB){
+						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
+							  sessionB.submissions[violationB.submission].title + "'" + " should be at different times.";
+						  },
+ 						  -5, 
+ 						  "this is what an author said",
+ 						  [new Rule('submission', 
+ 							    function(x){ 
+ 								return x.id == e1;
+  							    }),
+  						  ],
+ 						  [new Rule('submission',
+ 							    function (x){
+ 								return x.id == e2;
+							    }),
+						      ],
+						  [new Rule('session', function(a,b){
+						      return !((a.time == b.time) &&
+							       (a.date == b.date) &&
+							       (a.room != b.room));
+						  })]);
+//	console.log(constraint);
+	return constraint;
+    }
+
+
     function generateFitInSessionConstraint(e1, e2, type){
 	var text = {'great': 'these papers are great together',
 		    'ok' : 'these papers are good together',
@@ -167,12 +196,14 @@ var CCOps = function(){
 //	console.log(constraint);
 	return constraint;
     }
-
-
+    
+    
     function generateAuthorsourcingConstraints(){
 	for(var submission in CCOps.authorsourcingData){
+	    // generate cohesiveness constraints
 	    for(var auth in CCOps.authorsourcingData[submission]){
-		for(var i in CCOps.authorsourcingData[submission][auth]){
+		var i = CCOps.authorsourcingData[submission][auth].length -1; // ignore dups from same author
+//		for(var i in CCOps.authorsourcingData[submission][auth]){
 		    var cases = {'great': [], 'ok':[], 'notsure':[],'notok':[]};
 		    for(var j in cases){
 			cases[j] = CCOps.authorsourcingData[submission][auth][i][j].split(',');
@@ -180,20 +211,31 @@ var CCOps = function(){
 			    CCOps.allConstraints.push(generateFitInSessionConstraint(submission, cases[j][k], j));
 			}
 		    }
+	//	}
+	    }
+	    // generate like-so-avoid constraints
+	    for(var auth in CCOps.authorsourcingData[submission]){
+		var i = CCOps.authorsourcingData[submission][auth].length -1; // ignore dups from same author
+		var interestedList = CCOps.authorsourcingData[submission][auth][i]['interested'].split(',');
+		interestedList.push(submission);
+		for(var j = 0; j < interestedList.length - 1; j++){
+		    for(var k = j+1; k < interestedList.length; k++){
+			CCOps.allConstraints.push(generateSubmissionNotTogetherConstraint(interestedList[j], interestedList[k]));
+		    }
 		}
 	    }
 	}
     }
-   
+	
     function initialize(){
 	loadAuthorsourcingData();
 	generateAuthorsourcingConstraints();
 	console.log("loading finished");
-//     	var example = new SingleEntityConstraint("donat11",
-// 						 "Submissions whose title begin with 'Don' should be at 11am",
-// 						 10,
+	//     	var example = new SingleEntityConstraint("donat11",
+	// 						 "Submissions whose title begin with 'Don' should be at 11am",
+	// 						 10,
 // 						 "because it's my favorite time and I am a don",
-// 						 [new Rule('submission', 
+	// 						 [new Rule('submission', 
 // 							   function(x){ 
 // 							       return Comp.stringStartsWith(x.title, "Don");
 // 							   }),
@@ -535,12 +577,7 @@ var CCOps = function(){
 	    }
 	}
 	
-	if(s2 == 's230'){
-	    console.log(conflictsCausedByItem);
-	    console.log(conflictsCausedByCandidate);
-	    console.log(conflictsCausedByOffending);
-	    console.log(conflictsCausedByCandidateAtOffending);
-	}
+
 	return {conflictsCausedByItem: conflictsCausedByItem,
 		conflictsCausedByCandidate: conflictsCausedByCandidate,
 		conflictsCausedByOffending: conflictsCausedByOffending,
@@ -1583,6 +1620,7 @@ var CCOps = function(){
 	return conflicts;
     }
     
+    // assumes s1 and s2 not same and just checking for in different session
     function computeNewPairConflicts(s1, s2, hypSessions){
 	var conflicts = [];
 
