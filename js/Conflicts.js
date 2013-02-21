@@ -19,7 +19,6 @@ var Conflicts = function() {
             if (c.type in typeHash) 
                 return;
             typeHash[c.type] = c.type;
-
             var constraint = {};
             constraint.id = index;
             constraint.description = c.description;

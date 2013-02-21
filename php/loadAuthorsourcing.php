@@ -6,7 +6,7 @@ include "../settings/settings.php";
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
 // Get the schedule table
-$query = "select authorId, id, great, ok, notsure, notok, interested from authorsourcing"; 
+$query = "select authorId, id, great, ok, notsure, notok, interested,relevant from authorsourcing"; 
 $asTable = mysqli_query($mysqli, $query);
 echo mysqli_error($mysqli);
 
