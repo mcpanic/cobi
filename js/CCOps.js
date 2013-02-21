@@ -213,15 +213,24 @@ var CCOps = function(){
 		    }
 	//	}
 	    }
-	    // generate like-so-avoid constraints
+
 	    for(var auth in CCOps.authorsourcingData[submission]){
 		var i = CCOps.authorsourcingData[submission][auth].length -1; // ignore dups from same author
+		// generate like-so-avoid constraints
 		var interestedList = CCOps.authorsourcingData[submission][auth][i]['interested'].split(',');
 		interestedList.push(submission);
 		for(var j = 0; j < interestedList.length - 1; j++){
 		    for(var k = j+1; k < interestedList.length; k++){
 			CCOps.allConstraints.push(generateSubmissionNotTogetherConstraint(interestedList[j], interestedList[k]));
 		    }
+		}
+		// generate relevant to special thus avoid
+		var relevantList = [];
+		if(CCOps.authorsourcingData[submission][auth][i]['relevant'] != ""){
+		    relevantList = CCOps.authorsourcingData[submission][auth][i]['relevant'].split(',');
+		}
+		for(var j = 0; j < relevantList.length; j++){
+		    CCOps.allConstraints.push(generateSubmissionNotTogetherConstraint(submission, relevantList[j]));
 		}
 	    }
 	}
@@ -301,7 +310,7 @@ var CCOps = function(){
  								    (a.room != b.room));
 						       })]);
  	var example5 = new EntityPairConstraint("badTogether",
-						"these papers aren't good together",
+						"example: these papers aren't good together",
 						function (sessionA, violationA, sessionB, violationB){
 						    return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
 							sessionB.submissions[violationB.submission].title + "' should not be in the same session.";
@@ -322,7 +331,7 @@ var CCOps = function(){
 						    return !(a.id == b.id);
 						})]);
 	var example6 = new EntityPairConstraint("goodTogether",
-						"these papers are good together",
+						"example: these papers are good together",
 						function (sessionA, violationA, sessionB, violationB){
 						    return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
 							sessionB.submissions[violationB.submission].title + "' are good in the same session.";
@@ -345,8 +354,8 @@ var CCOps = function(){
 
 	CCOps.allConstraints.push(example3);
 	CCOps.allConstraints.push(example4);
-//	CCOps.allConstraints.push(example5);
-//	CCOps.allConstraints.push(example6);
+	CCOps.allConstraints.push(example5);
+	CCOps.allConstraints.push(example6);
 	
 	getAllConflicts();
     }
