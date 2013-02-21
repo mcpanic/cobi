@@ -478,10 +478,10 @@ var Conflicts = function() {
         // getConflictLength: getConflictLength,
         displayViewModeFullConflicts: displayViewModeFullConflicts,
         displayMoveModeFullConflicts: displayMoveModeFullConflicts,
-        // displayPaperMoveModeFullConflicts: displayPaperMoveModeFullConflicts,
+        displayPaperMoveModeFullConflicts: displayPaperMoveModeFullConflicts,
         // displayFullConflicts: displayFullConflicts,
         displayMovePreviewConflicts: displayMovePreviewConflicts,
-        displayPaperMovePreviewConflicts: displayPaperMovePreviewConflicts,
+        // displayPaperMovePreviewConflicts: displayPaperMovePreviewConflicts,
         updateConflicts: updateConflicts,
         updateConstraintBackground: updateConstraintBackground
     };
