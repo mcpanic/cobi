@@ -111,7 +111,7 @@ var Conflicts = function() {
 
 
      function displayViewModeConflictFullHTML(inputArray, conflict) {
-        var $view = $("<span/>");        
+        var $view = $("<span/>").addClass("conflict-preview-display-wrapper");        
         var filteredArray = inputArray == null? []: inputArray.filter(function(x){return x.type==conflict.type});
         // console.log(ment, inputArray, conflict, filteredArray);
         for (var i=0; i<filteredArray.length; i++) {
@@ -136,7 +136,7 @@ var Conflicts = function() {
      }
 
      function displayConflictFullHTML(ment, inputArray, conflict, sign) {
-        var $view = $("<span/>");
+        var $view = $("<span/>").addClass("conflict-preview-display-wrapper"); 
         // if (inputArray === null)
         //     return $("<span/>");
         
@@ -238,10 +238,11 @@ var Conflicts = function() {
         }
         
         var isChanged = false;
+        $("<div/>").addClass("conflict-preview-display-div-wrapper").appendTo($(element));
         // for each constraint, count and add a modal dialog with descriptions
         $.each(Conflicts.constraintsList, function(index, conflict){
             isChanged = true;
-            $(element).append(displayViewModeConflictFullHTML(conflicts, conflict));
+            $(element).find(".conflict-preview-display-div-wrapper").append(displayViewModeConflictFullHTML(conflicts, conflict));
         });
         if (!isChanged)
             $(element).find(".swap-total-full").hide();
@@ -269,7 +270,8 @@ var Conflicts = function() {
                 + " will be added. <small>(click icons for details)<small></div> "); 
                 
           var isChanged = false;
-
+          $("<div/>").addClass("conflict-preview-display-div-wrapper").appendTo($(element));
+          var $wrapper = $(element).find(".conflict-preview-display-div-wrapper");
           // for each constraint, count and add a modal dialog with descriptions
           $.each(Conflicts.constraintsList, function(index, conflict){  
             // var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 
@@ -280,13 +282,13 @@ var Conflicts = function() {
             isChanged = true;
             
             if (swapValues.addedSrc != null && swapValues.addedSrc.length > 0)
-                $(element).append(displayConflictFullHTML("[Conflict added]", swapValues.addedSrc, conflict, "+"));
+                $wrapper.append(displayConflictFullHTML("[Conflict added]", swapValues.addedSrc, conflict, "+"));
             if (swapValues.addedDest != null && swapValues.addedDest.length > 0)
-                $(element).append(displayConflictFullHTML("[Conflict added]", swapValues.addedDest, conflict, "+"))
+                $wrapper.append(displayConflictFullHTML("[Conflict added]", swapValues.addedDest, conflict, "+"))
             if (swapValues.removedSrc != null && swapValues.removedSrc.length > 0)
-                $(element).append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedSrc, conflict, "-"))
+                $wrapper.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedSrc, conflict, "-"))
             if (swapValues.removedDest != null && swapValues.removedDest.length > 0)
-                $(element).append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedDest, conflict, "-"));      
+                $wrapper.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedDest, conflict, "-"));      
             // var netCountClass = "conflict-netcount-added";
             // if (netCount < 0)
             //     netCountClass = "conflict-netcount-removed";            
@@ -318,7 +320,8 @@ var Conflicts = function() {
                 + " will be added. <small>(click icons for details)<small></div> "); 
                 
           var isChanged = false;
-
+          $("<div/>").addClass("conflict-preview-display-div-wrapper").appendTo($(element));
+          var $wrapper = $(element).find(".conflict-preview-detail-div-wrapper");
           // for each constraint, count and add a modal dialog with descriptions
           $.each(Conflicts.constraintsList, function(index, conflict){  
             // var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 
@@ -329,13 +332,13 @@ var Conflicts = function() {
             isChanged = true;
             
             if (swapValues.addedSrc != null && swapValues.addedSrc.length > 0)
-                $(element).append(displayConflictFullHTML("[Conflict added]", swapValues.addedSrc, conflict, "+"));
+                $wrapper.append(displayConflictFullHTML("[Conflict added]", swapValues.addedSrc, conflict, "+"));
             if (swapValues.addedDest != null && swapValues.addedDest.length > 0)
-                $(element).append(displayConflictFullHTML("[Conflict added]", swapValues.addedDest, conflict, "+"))
+                $wrapper.append(displayConflictFullHTML("[Conflict added]", swapValues.addedDest, conflict, "+"))
             if (swapValues.removedSrc != null && swapValues.removedSrc.length > 0)
-                $(element).append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedSrc, conflict, "-"))
+                $wrapper.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedSrc, conflict, "-"))
             if (swapValues.removedDest != null && swapValues.removedDest.length > 0)
-                $(element).append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedDest, conflict, "-"));      
+                $wrapper.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedDest, conflict, "-"));      
             // var netCountClass = "conflict-netcount-added";
             // if (netCount < 0)
             //     netCountClass = "conflict-netcount-removed";            

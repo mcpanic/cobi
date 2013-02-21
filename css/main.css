@@ -548,6 +548,16 @@ body.loading .modal {
     outline: 1px solid #bbbbbb;
 }
 
+.conflict-preview-display-div-wrapper {
+    line-height: 20px;
+}
+
+.conflict-preview-display-wrapper {
+/*    display: inline-block;
+    float: left;*/
+    overflow-wrap: break-word;
+}
+
 .conflict-preview-display {
     /*padding-left: 5px;
     padding-right: 5px;*/
@@ -556,6 +566,7 @@ body.loading .modal {
     margin-right: 5px;  
     color: white;
     cursor: pointer;
+/*    display: inline-block;*/
 }
 
 .conflict-selected {

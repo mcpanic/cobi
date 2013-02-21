@@ -237,8 +237,8 @@ var CCOps = function(){
     }
 	
     function initialize(){
-	// loadAuthorsourcingData();
-	// generateAuthorsourcingConstraints();
+	loadAuthorsourcingData();
+	generateAuthorsourcingConstraints();
 	console.log("loading finished");
 	//     	var example = new SingleEntityConstraint("donat11",
 	// 						 "Submissions whose title begin with 'Don' should be at 11am",
