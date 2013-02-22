@@ -693,6 +693,10 @@ body.loading .modal {
     background-color: #C77F77;    
 }
 
+.cell-preference{
+    background-color: #36B84F;
+}
+
 .cell-persona{
     background-color: #F2D9BB;
 }

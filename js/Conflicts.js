@@ -42,7 +42,7 @@ var Conflicts = function() {
             });
             Conflicts.constraintsList.sort(function(a,b){ return a.importance > b.importance; });
             Conflicts.preferencesList.sort(function(a,b){ return a.importance > b.importance; });
-            console.log(CCOps.allConstraints, Conflicts.constraintsList);        
+            console.log(Conflicts.constraintsList, Conflicts.preferencesList);        
         } else {
             Conflicts.constraintsList = constraints_list;
         }
@@ -490,15 +490,43 @@ var Conflicts = function() {
           });
      }
 
+     function updatePreferenceBackground(selectedConstraint, toggle){
+        var className = "cell-preference";
+        // $.each(Conflicts.preferencesList, function(index, preference){
+        //     // class name should be unique so that ones with same severity doesn't influence others
+        //     if (preference.type == selectedConstraint)
+        //         className = "cell-preference-" + constraint.severity + constraint.id;
+        // });
+          $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+               if (isSpecialCell($(item)))
+                    return;
+
+                $(item).removeClass(className);
+                var id = $(item).attr("id").substr(8);
+                $.each(conflictsBySession[id], function(index, constraint){
+                    if (constraint.type == selectedConstraint && toggle){
+                         $(item).addClass(className);
+                    } else if (constraint.type == selectedConstraint && !toggle){
+                         $(item).removeClass(className);
+                    }
+               });
+          });
+     }
+
      // Refresh conflicts information display.
      // Called after an interaction occurs that affects conflicts. (swap, unschedule, schedule)
      function updateConflicts(isSidebarOn, isSlotOn){
 
         var conflict_type_count_array = {};
         var conflict_severity_count_array = {};
-        $.each(Conflicts.constraintsList, function(index, conflict){
-            conflict_type_count_array[conflict.type] = 0;
-            conflict_severity_count_array[conflict.severity] = 0;
+        var preference_type_count_array = {};
+        $.each(Conflicts.constraintsList, function(index, item){
+            conflict_type_count_array[item.type] = 0;
+            conflict_severity_count_array[item.severity] = 0;
+        });
+
+        $.each(Conflicts.preferencesList, function(index, item){
+            preference_type_count_array[item.type] = 0;
         });
 
         $(".slot").each(function(){
@@ -508,9 +536,13 @@ var Conflicts = function() {
                     displayConflicts(conflictsBySession[id], $(this).find(".display"));
                 var conflicts_array = conflictsBySession[id].map(function(co) {return co.type});          
                     // for each constraint, count and add a modal dialog with descriptions
-                    $.each(Conflicts.constraintsList, function(index, conflict){
-                        var filtered_array = conflicts_array.filter(function(x){return x==conflict.type});
-                        conflict_type_count_array[conflict.type] += filtered_array.length;            
+                    $.each(Conflicts.constraintsList, function(index, item){
+                        var filtered_array = conflicts_array.filter(function(x){return x==item.type});
+                        conflict_type_count_array[item.type] += filtered_array.length;            
+                    });
+                    $.each(Conflicts.preferencesList, function(index, item){
+                        var filtered_array = conflicts_array.filter(function(x){return x==item.type});
+                        preference_type_count_array[item.type] += filtered_array.length;            
                     });
             } else { // empty cells should clear the display
                 if (isSlotOn)
@@ -521,6 +553,7 @@ var Conflicts = function() {
         if (!isSidebarOn)
             return;
 
+        // Constraints count update
         var total = 0;
         $.each(Conflicts.constraintsList, function(index, conflict){
             $("#list-constraints li.constraint-entry").each(function(){
@@ -544,6 +577,27 @@ var Conflicts = function() {
             else
                 updateConstraintBackground($(item).attr("data-type"), false);
         });
+
+        // Preferences count update
+        total = 0;
+        $.each(Conflicts.preferencesList, function(index, item){
+            $("#list-preferences li.preference-entry").each(function(){
+                if (item.type == $(this).attr("data-type")){
+                    $(this).find(".count").html(Math.round(preference_type_count_array[item.type]));
+                    total += preference_type_count_array[item.type];
+                }
+            });
+        });
+        // now update aggregated counts
+        $("#preferences-count").html(Math.round(total));
+
+        $("#list-preferences li.preference-entry").each(function(index, item){
+            console.log("update", $(item).hasClass("view-option-active"), $(item).attr("data-type"));
+            if ($(item).hasClass("view-option-active"))
+                updatePreferenceBackground($(item).attr("data-type"), true);
+            else
+                updatePreferenceBackground($(item).attr("data-type"), false);
+        });        
      }
 
     return {
@@ -563,7 +617,8 @@ var Conflicts = function() {
         displayMovePreviewConflicts: displayMovePreviewConflicts,
         // displayPaperMovePreviewConflicts: displayPaperMovePreviewConflicts,
         updateConflicts: updateConflicts,
-        updateConstraintBackground: updateConstraintBackground
+        updateConstraintBackground: updateConstraintBackground,
+        updatePreferenceBackground: updatePreferenceBackground
     };
 }();       
 
