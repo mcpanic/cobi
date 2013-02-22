@@ -35,6 +35,14 @@ body {
                 /* 50% 50% */
 }
 
+/*.spinner {
+    z-index: 1000;
+    background: rgba( 100, 100, 100, .8) 
+                url('../img/spinner.gif') 
+                45% 45% 
+                no-repeat;
+}*/
+
 /* When the body has the loading class, we turn
    the scrollbar off with overflow:hidden */
 body.loading {
@@ -623,6 +631,10 @@ body.loading .modal {
 
 #list-constraints .sublist-constraints {
     margin-top: -10px;
+}
+
+#list-constraints .sublist-header {
+
 }
 
 /* ==========================================================================

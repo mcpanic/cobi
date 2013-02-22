@@ -228,7 +228,7 @@ var Conflicts = function() {
 
      // Given a list of conflicts for the given session,
      // display the preview with details
-     function displayViewModeFullConflicts(id){
+     function displayViewModeSessionFullConflicts(id){
         var element = document.createElement("div");
         $(element).addClass("conflicts");
 
@@ -256,8 +256,65 @@ var Conflicts = function() {
         return outerHTML(element);
      }
 
+     // Given a list of conflicts for the given session,
+     // display the preview with details
+     function displayViewModeSubmissionFullConflicts(session, submission){
 
-     function displayMoveModeFullConflicts(swapValues){
+        // - scheduled: session id, submission id
+        // - unscheduled paper: session null, submission id
+        // - empty paper: session id, submission null
+        var element = document.createElement("div");
+        $(element).addClass("conflicts");
+
+        if (session != null && typeof session.id !== "undefined"){                    
+            // scheduled papers
+            if (submission != null && typeof submission.id !== "undefined"){
+
+                var tempConflicts = conflictsBySession[session.id];
+                var conflicts = [];
+                // only find the ones that include this paper
+                $.each(tempConflicts, function(index, item){
+                    $.each(item.conflict, function(i, c){
+                        // for each valid entity trace, see if it's this paper
+                        if (c.submission != null) { // c.submission is indexed order
+                            if (session.submissions[c.submission].id == submission.id) // finally a match
+                                conflicts.push(item);
+                        }
+                    });
+                });
+                console.log(conflicts);
+                var conflicts_array = conflicts.map(function(co) {return co.type});
+
+                var plural = isPlural(conflicts.length) ? "s" : "";
+                if (conflicts.length > 0) {
+                    $(element).append("<div class='swap-total-full stronger-text'>" + conflicts.length 
+                      + " conflict" + plural 
+                      + ". <small>(click icons for details)</small></div>"); 
+                }
+                
+                var isChanged = false;
+                $("<div/>").addClass("conflict-preview-display-div-wrapper").appendTo($(element));
+                // for each constraint, count and add a modal dialog with descriptions
+                $.each(Conflicts.constraintsList, function(index, conflict){
+                    isChanged = true;
+                    $(element).find(".conflict-preview-display-div-wrapper").append(displayViewModeConflictFullHTML(conflicts, conflict));
+                });
+                if (!isChanged)
+                    $(element).find(".swap-total-full").hide();
+                var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
+                $(element).append($detail);  
+            // empty papers
+            } else {
+                // do nothing for now
+            }
+        } else { // unscheduled paper
+            // do nothing for now
+        }
+
+        return outerHTML(element);
+     }
+
+     function displayMoveModeSessionFullConflicts(swapValues){
         if (typeof swapValues === "undefined" || swapValues == null)
                return;   
 
@@ -306,7 +363,7 @@ var Conflicts = function() {
         return outerHTML(element);
      }
 
-     function displayPaperMoveModeFullConflicts(swapValues){
+     function displayMoveModeSubmissionFullConflicts(swapValues){
         if (typeof swapValues === "undefined" || swapValues == null)
            return;      
 
@@ -404,7 +461,6 @@ var Conflicts = function() {
      }
 
      function updateConstraintBackground(selectedConstraint, toggle){
-        
         var className = "";
         $.each(Conflicts.constraintsList, function(index, constraint){
             // class name should be unique so that ones with same severity doesn't influence others
@@ -431,9 +487,11 @@ var Conflicts = function() {
      // Called after an interaction occurs that affects conflicts. (swap, unschedule, schedule)
      function updateConflicts(isSidebarOn, isSlotOn){
 
-        var conflict_count_array = {};
+        var conflict_type_count_array = {};
+        var conflict_severity_count_array = {};
         $.each(Conflicts.constraintsList, function(index, conflict){
-            conflict_count_array[conflict.type] = 0;
+            conflict_type_count_array[conflict.type] = 0;
+            conflict_severity_count_array[conflict.severity] = 0;
         });
 
         $(".slot").each(function(){
@@ -445,7 +503,7 @@ var Conflicts = function() {
                     // for each constraint, count and add a modal dialog with descriptions
                     $.each(Conflicts.constraintsList, function(index, conflict){
                         var filtered_array = conflicts_array.filter(function(x){return x==conflict.type});
-                        conflict_count_array[conflict.type] += filtered_array.length;             
+                        conflict_type_count_array[conflict.type] += filtered_array.length;            
                     });
             } else { // empty cells should clear the display
                 if (isSlotOn)
@@ -460,15 +518,20 @@ var Conflicts = function() {
         $.each(Conflicts.constraintsList, function(index, conflict){
             $("#list-constraints li.constraint-entry").each(function(){
                 if (conflict.type == $(this).attr("data-type")){
-                    $(this).find(".count").html(Math.round(conflict_count_array[conflict.type]));
-                    total += conflict_count_array[conflict.type];
+                    $(this).find(".count").html(Math.round(conflict_type_count_array[conflict.type]));
+                    total += conflict_type_count_array[conflict.type];
+                    conflict_severity_count_array[conflict.severity] += conflict_type_count_array[conflict.type];
                 }
             });
         });
+        // now update aggregated counts
         $("#constraints-count").html(Math.round(total));
+        $.each(conflict_severity_count_array, function(index, severity){
+            $("." + index + "-severity .count").html(severity);
+        });
 
         $("#list-constraints li.constraint-entry").each(function(index, item){
-            // console.log("update", $(item).hasClass("view-option-active"), $(item).attr("data-type"));
+            console.log("update", $(item).hasClass("view-option-active"), $(item).attr("data-type"));
             if ($(item).hasClass("view-option-active"))
                 updateConstraintBackground($(item).attr("data-type"), true);
             else
@@ -484,9 +547,10 @@ var Conflicts = function() {
         // displayConflictPreviewHTML: displayConflictPreviewHTML,
         // displayConflictFullHTML: displayConflictFullHTML,
         // getConflictLength: getConflictLength,
-        displayViewModeFullConflicts: displayViewModeFullConflicts,
-        displayMoveModeFullConflicts: displayMoveModeFullConflicts,
-        displayPaperMoveModeFullConflicts: displayPaperMoveModeFullConflicts,
+        displayViewModeSessionFullConflicts: displayViewModeSessionFullConflicts,
+        displayViewModeSubmissionFullConflicts: displayViewModeSubmissionFullConflicts,
+        displayMoveModeSessionFullConflicts: displayMoveModeSessionFullConflicts,
+        displayMoveModeSubmissionFullConflicts: displayMoveModeSubmissionFullConflicts,
         // displayFullConflicts: displayFullConflicts,
         displayMovePreviewConflicts: displayMovePreviewConflicts,
         // displayPaperMovePreviewConflicts: displayPaperMovePreviewConflicts,

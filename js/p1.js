@@ -104,7 +104,7 @@
 
         // Display conflicts
         if (typeof session !== "undefined" && session != null && typeof session.id !== "undefined" && session.id != null) {
-            $(element).append("<br>").append(Conflicts.displayViewModeFullConflicts(session.id));
+            $(element).append("<br>").append(Conflicts.displayViewModeSessionFullConflicts(session.id));
             // $(element).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0]));
         }
 
@@ -148,7 +148,7 @@
                     $("<button/>").attr("id", "swap-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Swap with this session").appendTo($(element));
                 $(element).append($(_getCancelButton())).append("<br>")
                     //.append(outerHTML($cell.find(".detail .conflicts")[0]))
-                    .append(Conflicts.displayMoveModeFullConflicts(MoveMode.getSwapValueBySession(session)))
+                    .append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session)))
                     .append(getSubmissionList("move", session));
             } else if (type == "unscheduled"){
                 // console.log("Not supported");
@@ -161,7 +161,7 @@
                 }
                 $(element).append($(_getCancelButton())).append("<br>")
                 //.append(outerHTML($cell.find(".detail .conflicts")[0]))
-                    .append(Conflicts.displayMoveModeFullConflicts(MoveMode.getSwapValueBySession(session)));
+                    .append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session)));
             } 
         } else if (srcType == "unscheduled") {
             if (type == "scheduled"){
@@ -171,7 +171,7 @@
                     $("<button/>").attr("id", "swap-with-unscheduled-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Swap with this session").appendTo($(element));
                 $(element).append($(_getCancelButton())).append("<br>")
                     //.append(outerHTML($cell.find(".detail .conflicts")[0]))
-                    .append(Conflicts.displayMoveModeFullConflicts(MoveMode.getSwapValueBySession(session)))
+                    .append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session)))
                     .append(getSubmissionList("move", session));                       
             } else if (type == "unscheduled"){
                 // console.log("Not supported");
@@ -184,7 +184,7 @@
                 }
                 $(element).append($(_getCancelButton())).append("<br>")
                     //.append(outerHTML($cell.find(".detail .conflicts")[0]))
-                    .append(Conflicts.displayMoveModeFullConflicts(MoveMode.getSwapValueBySession(session))); 
+                    .append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session))); 
             }
         } else if (srcType == "empty") {
             if (type == "scheduled"){
@@ -194,7 +194,7 @@
                     $("<button/>").attr("id", "move-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Move this session").appendTo($(element));
                 $(element).append($(_getCancelButton())).append("<br>")
                     //.append(outerHTML($cell.find(".detail .conflicts")[0]))
-                    .append(Conflicts.displayMoveModeFullConflicts(MoveMode.getSwapValueBySession(session)))
+                    .append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session)))
                     .append(getSubmissionList("move", session));                       
             } else if (type == "unscheduled"){
                 if (isLocked)
@@ -203,7 +203,7 @@
                     $("<button/>").attr("id", "schedule-button").addClass("btn btn-primary").attr("data-session-id", session.id).html("Schedule this session").appendTo($(element));
                 $(element).append($(_getCancelButton())).append("<br>")
                     // .append(outerHTML($cell.find(".detail .conflicts")[0]))
-                    .append(Conflicts.displayMoveModeFullConflicts(MoveMode.getSwapValueBySession(session)))
+                    .append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session)))
                     .append(getSubmissionList("move", session));
             } else if (type == "empty"){
                 // console.log("Not supported");   
@@ -303,6 +303,7 @@
             $("<span/>").addClass("submission-title").html(submission.title).appendTo($(element));
             $("<br/>").appendTo($(element));
             $("<span/>").addClass("submission-authors").html(displayAuthors(submission.authors)).appendTo($(element));
+            $(element).append(Conflicts.displayViewModeSubmissionFullConflicts(session, submission));
 
             // html += "<li class='submission' id='" + submission.id
             //      +"'><span class='reorder-icon'/> <span class='submission-type'>" + type + "</span> <button class='btn btn-mini button-paper-unschedule'>Unschedule</button> <button class='btn btn-mini button-paper-propose-scheduled'>Propose Move</button><br>" 
@@ -427,7 +428,7 @@
                 $("<span/>").addClass("submission-title").html(submission.title).appendTo($(element));
                 $("<br/>").appendTo($(element));
                 $("<span/>").addClass("submission-authors").html(displayAuthors(submission.authors)).appendTo($(element));
-                $(element).append(Conflicts.displayPaperMoveModeFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
+                $(element).append(Conflicts.displayMoveModeSubmissionFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
 
             } else if (type == "unscheduled"){
                 element = document.createElement("div");
@@ -439,7 +440,7 @@
                     element = document.createElement("li");
                     $(element).addClass("submission-empty");
                     $("<button/>").addClass("btn btn-small button-paper-move").html("<span class='icon-plus'/> Move to this slot").appendTo($(element));
-                    $(element).append(Conflicts.displayPaperMoveModeFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
+                    $(element).append(Conflicts.displayMoveModeSubmissionFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
                 } else {
                     element = document.createElement("div");
                 }
@@ -462,7 +463,7 @@
                 $("<span/>").addClass("submission-title").html(submission.title).appendTo($(element));
                 $("<br/>").appendTo($(element));
                 $("<span/>").addClass("submission-authors").html(displayAuthors(submission.authors)).appendTo($(element));
-                $(element).append(Conflicts.displayPaperMoveModeFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
+                $(element).append(Conflicts.displayMoveModeSubmissionFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
             } else if (type == "unscheduled"){
                 element = document.createElement("div");
                 // console.log("No return");
@@ -472,7 +473,7 @@
                     element = document.createElement("li");
                     $(element).addClass("submission-empty");
                     $("<button/>").addClass("btn btn-small button-paper-schedule").html("<span class='icon-plus'/> Schedule in this slot").appendTo($(element));
-                    $(element).append(Conflicts.displayPaperMoveModeFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
+                    $(element).append(Conflicts.displayMoveModeSubmissionFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
                 } else {
                     element = document.createElement("div");
                 }
@@ -495,14 +496,14 @@
                 $("<span/>").addClass("submission-title").html(submission.title).appendTo($(element));
                 $("<br/>").appendTo($(element));
                 $("<span/>").addClass("submission-authors").html(displayAuthors(submission.authors)).appendTo($(element));
-                $(element).append(Conflicts.displayPaperMoveModeFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
+                $(element).append(Conflicts.displayMoveModeSubmissionFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
             } else if (type == "unscheduled"){
                 // TODO: maybe also save date, time, room, and order info
                 if (isProposed) {
                     element = document.createElement("li");
                     $(element).addClass("submission-empty").css("list-style-type", "none");;
                     $("<button/>").addClass("btn btn-small button-paper-schedule").html("<span class='icon-plus'/> Schedule this paper").appendTo($(element));
-                    $(element).append(Conflicts.displayPaperMoveModeFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
+                    $(element).append(Conflicts.displayMoveModeSubmissionFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
                 } else {
                     element = document.createElement("div");
                 }
