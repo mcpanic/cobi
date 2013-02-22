@@ -35,7 +35,7 @@ var Conflicts = function() {
                 Conflicts.constraintsList.push(constraint);
             });
             Conflicts.constraintsList.sort(function(a,b){ return a.importance > b.importance; });
-            console.log(CCOps.allConstraints, Conflicts.constraintsList);        
+//            console.log(CCOps.allConstraints, Conflicts.constraintsList);        
         } else {
             Conflicts.constraintsList = constraints_list;
         }

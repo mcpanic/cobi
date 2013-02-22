@@ -2,7 +2,12 @@ function SingleEntityConstraint(type, description, descriptionFunc, importance, 
     this.importance = importance;
     this.rationale = rationale;
     this.entityRules = entityRules;
-    this.entities = CCOps.belongs(entityRules);
+    if(!(type in CCOps.protoConstraints)){
+	console.log("non-prototype constraint, may be slow.");
+	this.entities = CCOps.belongs(entityRules);
+    }else{
+	this.entities = null;
+    }
     this.constraintObjectRules = constraintObjectRules;
     this.description = description;
     this.descriptionFunc = descriptionFunc;
@@ -11,6 +16,7 @@ function SingleEntityConstraint(type, description, descriptionFunc, importance, 
 }
 
 function EntityPairConstraint(type, description, descriptionFunc, importance, rationale, entity1Rules, entity2Rules, relationRules){
+    this.type = type;
     this.importance = importance;
     this.rationale = rationale;
     this.entity1Rules = entity1Rules;
@@ -27,31 +33,46 @@ function EntityPairConstraint(type, description, descriptionFunc, importance, ra
 	    }
 	}
     }
-    this.entities1 = CCOps.belongs(entity1Rules);
-    this.entities2 = CCOps.belongs(entity2Rules);
+    if(!(type in CCOps.protoConstraints)){
+	console.log("non-prototype constraint, may be slow.");
+	this.entities1 = CCOps.belongs(entity1Rules);
+	this.entities2 = CCOps.belongs(entity2Rules);
+    }else{
+	this.entities1 = null;
+	this.entities2 = null;
+    }
     this.relationRules = relationRules;
     this.description = description;
     this.descriptionFunc = descriptionFunc;
-    this.type = type;
     this.constraintType = "pair";
 }
 
 function EntityFilterPairConstraint(type, description, descriptionFunc, importance, rationale, entity1Rules, entity2Rules, filterRules, relationRules){
+    this.type = type;
     this.importance = importance;
     this.rationale = rationale;
     this.entity1Rules = entity1Rules;
     this.entity2Rules = entity2Rules;
-    this.entities1 = CCOps.belongs(entity1Rules);
-    this.entities2 = CCOps.belongs(entity2Rules);
+    if(!(type in CCOps.protoConstraints)){
+	console.log("non-prototype constraint, may be slow.");
+	this.entities1 = CCOps.belongs(entity1Rules);
+	this.entities2 = CCOps.belongs(entity2Rules);
+    }else{
+	this.entities1 = null;
+	this.entities2 = null;
+    }
     this.isSymmetric = true;
     this.filterRules = filterRules;
-    this.entityPairs = CCOps.legalPathPairs(filterRules, 
-					    this.entities1,
-					    this.entities2);
+    if(!(type in CCOps.protoConstraints)){
+	this.entityPairs = CCOps.legalPathPairs(filterRules, 
+						this.entities1,
+						this.entities2);
+    }else{
+	this.entityPairs = null;
+    }
     this.relationRules = relationRules;
     this.description = description;
     this.descriptionFunc = descriptionFunc;
-    this.type = type;
     this.constraintType = "pairFiltered";
 }
 
@@ -66,11 +87,28 @@ function Rule(level, comp){
     this.comp = comp;
 }
 
-
 var CCOps = function(){
     var allConstraints = [];
     var allConflicts = [];
     var authorsourcingData = null;
+    var scoreThreshold = 10;
+    var fitMat = {}; // paper to paper fit
+    var notokMat = {};
+    var intMat = {}; // paper to paper interest
+    //    var relMat = {}; // paper to paper relevant
+    var authorMat = {}; // paper to paper author 
+    var personaMat = {}; // session to session persona
+    var protoConstraints = {
+	'great': null,
+	'notok': null,
+	'authorInTwoSessions': null,
+	'personaInTwoSessions': null,
+	'interested': null
+    }
+    var protoSelfConstraints = {
+	'great' : null,
+	'notok': null
+    }
 
     function createSingleConflict(violation, constraint){
 	var session = allSessions[violation.session];
@@ -130,6 +168,7 @@ var CCOps = function(){
     }
     
     function generateSubmissionNotTogetherConstraint(e1, e2, score){
+
 	var constraint = new EntityPairConstraint("interested",
 						  "papers should not be in opposing sessions",
 						  function (sessionA, violationA, sessionB, violationB){
@@ -171,8 +210,8 @@ var CCOps = function(){
 	var constraint = new EntityPairConstraint(type,
 						  text[type],
 						  function (sessionA, violationA, sessionB, violationB){
-						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
-							  sessionB.submissions[violationB.submission].title + "'" + filler[type] + "in the same session.";
+						      return "'" + allSessions[violationA.session].submissions[violationA.submission].title + "' and '" + 
+							  allSessions[violationA.session].submissions[violationB.submission].title + "'" + filler[type] + "in the same session.";
 						  },
  						  score, 
  						  "this is what an author said",
@@ -192,6 +231,47 @@ var CCOps = function(){
 	return constraint;
     }
     
+    function matfind(m, a, b){
+	if(a in m && b in m[a]) return m[a][b];
+	return null;
+    }
+    function matinsert(m, a, b, v){
+	if(!(a in m)) m[a] = {};
+	m[a][b] = v;
+    }
+
+    function protoMessage(type, e1, e2){
+	var ret = null;
+	if(type == 'authorInTwoSessions'){
+	    ret = function (s1, s2) {
+		var names = e1.map(function(x) {return allAuthors[x].firstName + " " + allAuthors[x].lastName}).join(', ');
+		var fill = " is";
+		if(e1.length > 1) fill = " are";
+		return names + fill +  " in both '" + 
+		    allSessions[s1].title + "' and '" + allSessions[s2].title + "'.";
+	    }
+	}else if(type == 'personaInTwoSessions'){
+	    ret = function (s1, s2) {
+		return "Someone interested in '" + allSessions[s1].personas + "' may want to see both '" + 
+		    allSessions[s2].title + "' and '" + allSessions[s2].title + "'.";
+	    }
+	}else if(type == 'great'){
+	    ret = function (s1, s2) {
+		return "'" + allSubmissions[e1].title + "' and '" + allSubmissions[e2].title + "' are great in the same session.";
+	    }
+	}else if(type == 'notok'){
+	    ret = function (s1, s2) {
+		return "'" + allSubmissions[e1].title + "' and '" + 
+		    allSubmissions[e2].title + "' should not be in the same session.";
+	    }
+	}else if(type == 'interested'){
+	    ret = function (s1, s2) {
+		return "'" + allSubmissions[e1].title + "' and '" + 
+		    allSubmissions[e2].title + "' should not be in opposing sessions.";
+	    }
+	}
+	return ret;
+    }
     
     function generateAuthorsourcingConstraints(){
 	var cases = {'great': [], 'ok':[], 'notsure':[],'notok':[]};
@@ -254,22 +334,31 @@ var CCOps = function(){
 		}
 		for(var j = 0; j < relevantList.length; j++){
 		    var pair = [submission, relevantList[j]].sort();
-		    if(pair[0] in relevantconstraints[pair[1]]){
-			relevantconstraints[pair[1]][pair[0]] += 1;
+		    if(pair[0] in interestedconstraints[pair[1]]){
+			interestedconstraints[pair[1]][pair[0]] += 1;
 		    }else{
-			relevantconstraints[pair[1]][pair[0]] = 1;
+			interestedconstraints[pair[1]][pair[0]] = 1;
 		    }
 		}
 	    }
 	}
 
-	// compute scores
+	// Adding the constraints
 	for(var i in fitconstraints){
 	    for(var j in fitconstraints[i]){
 		var score = fitconstraints[i][j].map(function(x){return scores[x]}).reduce(function(p,c,i,a) {return p + c;});
-		if(score > 5 || score < -5){
-		    // add as constraint
-		    CCOps.allConstraints.push(generateFitInSessionConstraint(i, j, score));
+		if(score > CCOps.scoreThreshold || score < (-1 * CCOps.scoreThreshold)){
+		    var constraint = generateFitInSessionConstraint(i, j, score);
+		    CCOps.allConstraints.push(constraint);
+		    if(score > 0){
+			var msg = protoMessage('great', i, j);
+			matinsert(CCOps.fitMat, i, j, {'score':score, 'msg':msg});
+			matinsert(CCOps.fitMat, j, i, {'score':score, 'msg':msg});
+		    }else{
+			var msg = protoMessage('notok', i, j);
+			matinsert(CCOps.notokMat, i, j, {'score':score, 'msg':msg});
+			matinsert(CCOps.notokMat, j, i, {'score':score, 'msg':msg});
+		    }
 		}
 	    }
 	}
@@ -277,36 +366,113 @@ var CCOps = function(){
 	for(var i in interestedconstraints){
 	    for(var j in interestedconstraints[i]){
 		var score = -5 * interestedconstraints[i][j];
-		if(score < -5){
+		if(score < (-1 * CCOps.scoreThreshold)){
 		    CCOps.allConstraints.push(generateSubmissionNotTogetherConstraint(i, j, score));
-		}
-		//		console.log(score, ' ',i, ' ', j,' ', interestedconstraints[i][j]);
-	    }
-	}
-
-//	var moreRel = 0;
-//	var oneRel = 0;		
-
-	for(var i in relevantconstraints){
-	    for(var j in relevantconstraints[i]){
-		var score = -5 * relevantconstraints[i][j];
-		if(score < -5){
-		    CCOps.allConstraints.push(generateSubmissionNotTogetherConstraint(i, j, score));
-		//    moreRel++;
-		}else{
-	//	    oneRel++;
+		    var msg = protoMessage('interested', i, j);
+		    matinsert(CCOps.intMat, i, j, {'score':score,'msg':msg});
+		    matinsert(CCOps.intMat, j, i, {'score':score,'msg':msg});
 		}
 	    }
 	}
 	
-//	console.log(oneRel);
-//	console.log(moreRel);
+	// 	for(var i in relevantconstraints){
+	// 	    for(var j in relevantconstraints[i]){
+	// 		var score = -5 * relevantconstraints[i][j];
+	// 		if(score < (-1 * CCOps.scoreThreshold)){
+	// 		    CCOps.allConstraints.push(generateSubmissionNotTogetherConstraint(i, j, score));
+	// 		    matinsert(CCOps.relMat, i, j, score);
+	// 		    matinsert(CCOps.relMat, j, i, score);
+	// 		}
+	// 	    }
+	// 	}
     }
+    
+    function generatePersonaConstraints(){
+	var personaconstraint = new EntityFilterPairConstraint("personaInTwoSessions", 
+							       "same persona should not be in opposing sessions", 
+							       function (sessionA, violationA, sessionB, violationB){
+								   return "Someone interested in '" + sessionA.personas + "' may want to see both '" + 
+								       sessionA.title + "' and '" + sessionB.title + "'.";
+							       },
+							       -5,
+							       "because someone interested in one may be interested in the other",
+							       [new Rule('session', function(x){ return true})],
+							       [new Rule('session', function(x){ return true})],
+							       [new Rule('session', function(a, b){ return a.personas != "" && 
+												    a.personas != "Misc" 
+												    && a.personas == b.personas }),
+								new Rule('session', function(a, b){ return a.id != b.id})], 
+							       [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
+								   return !((a.time == b.time) &&
+									    (a.date == b.date) &&
+ 									    (a.room != b.room));
+							       })]);
+	CCOps.allConstraints.push(personaconstraint);
 	
+	for(var i in allSessions){
+	    for(var j in allSessions){
+		if(allSessions[i].personas != "" && 
+		   allSessions[i].personas == allSessions[j].personas && 
+		   allSessions[i].personas != "Misc" && 
+		   i != j){
+		    var msg = protoMessage('personaInTwoSessions', i, j);
+		    matinsert(CCOps.personaMat, i, j, {'score':true,'msg':msg});
+		    matinsert(CCOps.personaMat, j, i, {'score':true,'msg':msg});
+		}
+	    }
+	}
+    }
+    
+    function generateAuthorConstraints(){
+	var authorconstraint = new EntityFilterPairConstraint("authorInTwoSessions", 
+							      "same author should not be in opposing sessions", 
+							      function (sessionA, violationA, sessionB, violationB){
+								  return sessionA.submissions[violationA.submission].authors[violationA.author].firstName + " " + 
+								      sessionA.submissions[violationA.submission].authors[violationA.author].lastName + 
+								      " is in both '" + 
+								      sessionA.title + "' and '" + sessionB.title + "'.";
+							      },
+							      -20,
+							      "because authors should only have to be at one place at any given time",
+							      [new Rule('author', function(x){ return true})],
+							      [new Rule('author', function(x){ return true})],
+							      [new Rule('author', function(a, b){ return a.authorId == b.authorId }),
+							       new Rule('session', function(a, b) { return a.id != b.id})], 
+							      [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
+								  return !((a.time == b.time) &&
+									   (a.date == b.date) &&
+									   (a.room != b.room));
+							      })]);
+	
+	CCOps.allConstraints.push(authorconstraint);	
+
+	for(var i in allSubmissions){
+	    for(var j in allSubmissions){
+		if(i != j){
+		    var matches = [];
+		    for(var k in allSubmissions[i].authors){
+			if(k in allSubmissions[j].authors){
+			    matches.push(k);
+			}
+		    }
+		    if(matches.length > 0){
+			var msg = protoMessage('authorInTwoSessions', matches, matches);
+			matinsert(CCOps.authorMat, i, j, {'score': matches.length, 'msg':msg});
+			matinsert(CCOps.authorMat, j, i, {'score': matches.length, 'msg':msg});
+		    }
+		}
+	    }
+	}
+    }
+    
     function initialize(){
+	console.log(new Date().getTime() / 1000);
 	loadAuthorsourcingData();
 	generateAuthorsourcingConstraints();
-	console.log("loading finished");
+	generatePersonaConstraints();
+	generateAuthorConstraints();
+	console.log("constraint loading finished");
+	console.log(new Date().getTime() / 1000);
 	//     	var example = new SingleEntityConstraint("donat11",
 	// 						 "Submissions whose title begin with 'Don' should be at 11am",
 	// 						 10,
@@ -337,45 +503,8 @@ var CCOps = function(){
 // 							     (a.room != b.room));
 // 						})]);
 	
-	 var authorconstraint = new EntityFilterPairConstraint("authorInTwoSessions", 
-						       "same author shouldn't be in simultaneous sessions", 
-						       function (sessionA, violationA, sessionB, violationB){
-							   return sessionA.submissions[violationA.submission].authors[violationA.author].firstName + " " + 
-							       sessionA.submissions[violationA.submission].authors[violationA.author].lastName + 
-							       " is in both '" + 
-							       sessionA.title + "' and '" + sessionB.title + "'.";
-						       },
-						       -10,
-						       "because authors should only have to be at one place at any given time",
-						       [new Rule('author', function(x){ return true})],
-						       [new Rule('author', function(x){ return true})],
-						       [new Rule('author', function(a, b){ return a.authorId == b.authorId }),
-							new Rule('session', function(a, b) { return a.id != b.id})], 
-						       [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
-							   return !((a.time == b.time) &&
-								    (a.date == b.date) &&
-								    (a.room != b.room));
-						       })]);
+	
 
-	 var personaconstraint = new EntityFilterPairConstraint("personaInTwoSessions", 
-						       "same persona shouldn't be in simultaneous sessions", 
-						       function (sessionA, violationA, sessionB, violationB){
-							   return "Someone interested in '" + sessionA.personas + "' may want to see both '" + 
-							       sessionA.title + "' and '" + sessionB.title + "'.";
-						       },
-						       -4,
-						       "because someone interested in one may be interested in the other",
-						       [new Rule('session', function(x){ return true})],
-						       [new Rule('session', function(x){ return true})],
-						       [new Rule('session', function(a, b){ return a.personas != "" && 
-											    a.personas != "Misc" 
-											    && a.personas == b.personas }),
-							new Rule('session', function(a, b){ return a.id != b.id})], 
-						       [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
-							   return !((a.time == b.time) &&
-								    (a.date == b.date) &&
- 								    (a.room != b.room));
-						       })]);
 //  	var example5 = new EntityPairConstraint("badTogether",
 // 						"example: these papers aren't good together",
 // 						function (sessionA, violationA, sessionB, violationB){
@@ -419,15 +548,140 @@ var CCOps = function(){
 // 						    return !(a.id == b.id);
 // 						})]);
 
-	CCOps.allConstraints.push(authorconstraint);
-	CCOps.allConstraints.push(personaconstraint);
+
 //	CCOps.allConstraints.push(example5);
 //	CCOps.allConstraints.push(example6);
 	
 	getAllConflicts();
+	console.log(new Date().getTime() / 1000);
+    }
+
+    function checkSesConstraint(m, s1, s2, type){
+	var ret = matfind(m, s1.id, s2.id);
+	if(ret != null){
+	    var conflict = new conflictObject([s1.id, s2.id],
+					      type,
+					      [s1.id, s2.id],
+					      ret.msg(s1.id, s2.id));
+	    return [conflict];
+	}
+	return [];
+    }
+    
+    function checkSubSesConstraint(m, s1, p1, s2, type){
+	var conflicts = [];
+	for(var i = 0, len1 = s2.submissions.length; i < len1; i++){
+	    // is there an issue if p in s1?
+	    var p2 = s2.submissions[i].id;
+	    if(p1 == p2) continue;
+	    var ret = matfind(m, p1, p2);
+	    if(ret != null){
+		var conflict = new conflictObject([s1.id, s2.id],
+						  type,
+						  p1, 
+						  s2.submissions[i].id,
+						  ret.msg(s1.id, s2.id));
+		conflicts.push(conflict);
+	    }
+	}
+	return conflicts;
+    }
+    
+    function checkSubConstraint(m, s1, s2, type){
+	var conflicts = [];
+	for(var i = 0, len1 = s1.submissions.length; i < len1; i++){
+	    var start = 0;
+	    if(s1.id == s2.id) start = i+1;
+	    for(var j = start, len2= s2.submissions.length; j < len2; j++){
+		var ret = matfind(m, s1.submissions[i].id, s2.submissions[j].id);
+		if(ret != null){
+		    var conflict = new conflictObject([s1.id, s2.id],
+						      type,
+						      [s1.submissions[i].id,
+						       s2.submissions[j].id],
+						      ret.msg(s1.id, s2.id));
+		    conflicts.push(conflict);
+		}
+	    }
+	}
+	return conflicts;
     }
     
     function getAllConflicts(){
+	var conflicts = {};
+	conflicts["sessions"] = {};
+	conflicts["all"] = [];
+	for(var session in allSessions)
+	    conflicts["sessions"][session] = [];
+	
+	for(var day in schedule){
+	    for(var time in schedule[day]){
+		var roomKeys = keys(schedule[day][time]);
+		for(var i = 0; i < roomKeys.length; i++){
+		    for(var s1 in schedule[day][time][roomKeys[i]]){
+			for(var j = i; j < roomKeys.length; j++){
+			    for(var s2 in schedule[day][time][roomKeys[j]]){
+				if(i == j){ 
+				    // great, notok
+				    var cs = checkSubConstraint(fitMat, allSessions[s1], allSessions[s2], 'great');
+				    cs = cs.concat(checkSubConstraint(notokMat, allSessions[s1], allSessions[s2], 'notok'));
+				    conflicts["all"] = conflicts["all"].concat(cs);
+				    conflicts["sessions"][s1] = conflicts["sessions"][s1].concat(cs);
+				}else{
+				    // interested
+				    var cs = checkSubConstraint(intMat, allSessions[s1], allSessions[s2], 'interested');
+				    // author
+				    cs = cs.concat(checkSubConstraint(authorMat, allSessions[s1], allSessions[s2], 'authorInTwoSessions'));
+				    // persona
+				    cs = cs.concat(checkSesConstraint(personaMat, allSessions[s1], allSessions[s2], 'personaInTwoSessions'));
+				    conflicts["all"] = conflicts["all"].concat(cs);
+				    conflicts["sessions"][s1] = conflicts["sessions"][s1].concat(cs);
+				    conflicts["sessions"][s2] = conflicts["sessions"][s2].concat(cs);
+				}
+			    }
+			}
+		    }
+		}
+	    }
+	}
+	
+	for(var i in CCOps.allConstraints){
+	    if(!(CCOps.allConstraints[i].type in protoConstraints)){
+		console.log("shouldn't be here");
+		console.log(CCOps.allConstraints[i].type);
+		console.log(CCOps.allConstraints[i]);
+		
+		var constraintConflicts;
+		if(CCOps.allConstraints[i].constraintType == 'single'){
+		    constraintConflicts = checkSingleConflicts(CCOps.allConstraints[i]);
+		}else if(CCOps.allConstraints[i].constraintType == 'pair'){
+		    constraintConflicts = checkPairConflicts(CCOps.allConstraints[i]);
+		}else{// pairFiltered
+		    constraintConflicts = checkFilteredPairConflicts(CCOps.allConstraints[i]);
+		}
+		conflicts["all"] = conflicts["all"].concat(constraintConflicts);
+		
+		for(var j in constraintConflicts){
+		    if(constraintConflicts[j].entities.length == 2 && // special case for same session in pair constraint
+		       constraintConflicts[j].entities[0] == constraintConflicts[j].entities[1]){
+			var s = constraintConflicts[j].entities[0];
+			conflicts["sessions"][s].push(constraintConflicts[j]);
+		    }else{
+			for(var k in constraintConflicts[j].entities){
+			    var s = constraintConflicts[j].entities[k];
+			    conflicts["sessions"][s].push(constraintConflicts[j]);
+			}
+		    }
+		}
+	    }
+	}
+	console.log(conflicts);
+	CCOps.allConflicts = conflicts;
+	return conflicts;
+    }
+
+    
+    function getAllConflictsOld(){
 	var conflicts = {};
 	conflicts["sessions"] = {};
 	conflicts["all"] = [];
@@ -488,10 +742,68 @@ var CCOps = function(){
 	return conflictsWithRow;
     }
 
+    function computeProtoPaperWithRow(s, p){
+	var conflictsWithRow = {};
+	for(var date in schedule){
+	    conflictsWithRow[date] = {}
+	    for(var time in schedule[date]){
+		conflictsWithRow[date][time] = computeProtoPaperWithRowAtTimeSlot(s, p, date, time);
+	    }
+	}
+	return conflictsWithRow;
+    }
+
+    
+    function computeProtoPaperWithRowAtTimeSlot(s, p, date, time){
+	var ret = {};
+	ret["sum"] = [];
+	ret["session"] = {};
+	for(var room in schedule[date][time]){
+	    for(var s2 in schedule[date][time][room]){
+		var conflicts = checkSubSesConstraint(intMat,s,p,allSessions[s2], 'interested');
+		conflicts = conflicts.concat(checkSubSesConstraint(authorMat, s, p, allSessions[s2], 'authorInTwoSessions'));
+		conflicts = conflicts.concat(checkSubSesConstraint(greatMat, s, p, allSessions[s2], 'great'));
+		conflicts = conflicts.concat(checkSubSesConstraint(notokMat, s, p, allSessions[s2], 'notok'));
+		
+		ret["session"][s2] = conflicts;
+		ret["sum"] = ret["sum"].concat(conflicts);
+	    }
+	}
+	return ret;
+    }
+
+    function computeProtoConflictsWithRowAtTimeSlot(s, date, time){
+	var ret = {};
+	ret["sum"] = [];
+	ret["session"] = {};
+	for(var room in schedule[date][time]){
+	    for(var s2 in schedule[date][time][room]){
+		var conflicts = checkSubConstraint(intMat, s, allSessions[s2], 'interested');
+		conflicts = conflicts.concat(checkSubConstraint(authorMat, s, allSessions[s2], 'authorInTwoSessions'));
+		conflicts = conflicts.concat(checkSesConstraint(personaMat, s, allSessions[s2], 'personaInTwoSessions'));
+		ret["session"][s2] = conflicts;
+		ret["sum"] = ret["sum"].concat(conflicts);
+	    }
+	}
+	return ret;
+    }
+    
+    function computeProtoConflictsWithRow(s){
+	var conflictsWithRow = {};
+	for(var date in schedule){
+	    conflictsWithRow[date] = {}
+	    for(var time in schedule[date]){
+		conflictsWithRow[date][time] = computeProtoConflictsWithRowAtTimeSlot(s, date, time);
+	    }
+	}
+	return conflictsWithRow;
+    }
+
     function computeAllSingleConflicts(s1, s2){
 	var singleConflictsCausedByItem = [];
 	if(!(s1 in unscheduled)){
 	    for(var i in CCOps.allConflicts["sessions"][s1]){
+		if(CCOps.allConflicts["sessions"][s1][i].type in protoConstraints) continue;
 		if(CCOps.allConflicts["sessions"][s1][i].conflict.length == 1){
 		    singleConflictsCausedByItem.push(CCOps.allConflicts["sessions"][s1][i]);
 		}
@@ -499,6 +811,7 @@ var CCOps = function(){
 	}
 	var singleConflictsCausedByCandidate = [];
 	for(var i in CCOps.allConflicts["sessions"][s2]){
+	    if(CCOps.allConflicts["sessions"][s2][i].type in protoConstraints) continue;
 	    if(CCOps.allConflicts["sessions"][s2][i].conflict.length == 1){
 		singleConflictsCausedByCandidate.push(CCOps.allConflicts["sessions"][s2][i]);
 	    }
@@ -530,6 +843,8 @@ var CCOps = function(){
 	var singleConflictsCausedByItem = [];
 	if(!(s1 in unscheduled)){
 	    for(var i in CCOps.allConflicts["sessions"][s1]){
+		if(CCOps.allConflicts["sessions"][s1][i].type in protoConstraints) continue;
+		
 		if(CCOps.allConflicts["sessions"][s1][i].conflict.length == 1){
 		    singleConflictsCausedByItem.push(CCOps.allConflicts["sessions"][s1][i]);
 		}
@@ -563,6 +878,7 @@ var CCOps = function(){
 	var conflictsCausedByItem = [];
 	if(!(s1 in unscheduled)){
 	    for(var i in CCOps.allConflicts["sessions"][s1]){
+		if(CCOps.allConflicts["sessions"][s1][i].type in protoConstraints) continue;
 		// self conflicts do not matter when we swap sessions
 		if(CCOps.allConflicts["sessions"][s1][i].entities.length == 2 &&
 		   CCOps.allConflicts["sessions"][s1][i].entities[0] == 
@@ -594,6 +910,7 @@ var CCOps = function(){
 	if(!(s2 in unscheduled)){
 	    for(var i in CCOps.allConflicts["sessions"][s2]){
 		// self conflicts do not matter when we swap sessions
+		if(CCOps.allConflicts["sessions"][s2][i].type in protoConstraints) continue;
 		if(CCOps.allConflicts["sessions"][s2][i].entities.length == 2 &&
 		   CCOps.allConflicts["sessions"][s2][i].entities[0] == 
 		   CCOps.allConflicts["sessions"][s2][i].entities[1]){
@@ -605,6 +922,7 @@ var CCOps = function(){
 	var conflictsCausedByItem = [];
 	if(!(s1 in unscheduled)){
 	    for(var i in CCOps.allConflicts["sessions"][s1]){
+		if(CCOps.allConflicts["sessions"][s1][i].type in protoConstraints) continue;
 		// self conflicts do not matter when we swap sessions
 		if(CCOps.allConflicts["sessions"][s1][i].entities.length == 2 &&
 		   CCOps.allConflicts["sessions"][s1][i].entities[0] == 
@@ -664,6 +982,85 @@ var CCOps = function(){
 	var scheduleValue = [];
 	var unscheduleValue = [];
 	
+ 	if(keys(schedule[sdate][stime][sroom]).length != 0) return;
+	
+	for(var s2 in unscheduled){
+	    var sc = {conflictsCausedByItem: [],
+ 		      conflictsCausedByCandidate: [],
+ 		      conflictsCausedByOffending: (computeProtoConflictsWithRowAtTimeSlot(allSessions[s2], sdate, stime))['sum'],
+ 		      conflictsCausedByCandidateAtOffending: []};
+ 	    unscheduleValue.push(createSwapDetails(sc, new slot(null, null, null, s2)));
+	}
+
+	// proposing scheduled session
+	for(var date in schedule){
+	    for(var time in schedule[date]){
+		for(var room in schedule[date][time]){
+		    for(var s2 in schedule[date][time][room]){
+ 			var cc = emptyProtoPropose();
+
+ 			if(date == sdate && time == stime && room != sroom){
+			}else{
+			    cc.conflictsCausedByItem = extractCurrentProtoConflicts(s2);
+			    cc.conflictsCausedByOffending = (computeProtoConflictsWithRowAtTimeSlot(allSessions[s2], sdate, stime))['sum'];
+			}
+			var sc = {conflictsCausedByItem: cc.conflictsCausedByCandidate,
+				  conflictsCausedByCandidate: cc.conflictsCausedByItem,
+ 				  conflictsCausedByOffending: cc.conflictsCausedByCandidateAtOffending,
+				  conflictsCausedByCandidateAtOffending: cc.conflictsCausedByOffending};
+ 			scheduleValue.push(createSwapDetails(sc, new slot(date, time, room, s2)));
+		    }
+		}
+	    }
+	}
+	//	var conflictsWithSession = {};
+	//	for(var s2 in unscheduled){
+	// 	    var cc = null;
+	// 	    var conflictsCausedByItem = [];
+	// 	    var conflictsWithRow = computeConflictsWithRowAtTimeSlot(allSessions[s2], sdate, stime);
+	
+	// 	    var sc = {conflictsCausedByItem: [],
+// 		      conflictsCausedByCandidate: [],
+	// 		      conflictsCausedByOffending: conflictsWithRow['sum'], 
+	// 		      conflictsCausedByCandidateAtOffending: []};
+	// 	    unscheduleValue.push(createSwapDetails(sc, new slot(null, null, null, s2)));
+	// 	}
+
+// 	// proposing scheduled session
+	// 	for(var date in schedule){
+	// 	    for(var time in schedule[date]){
+	// 		for(var room in schedule[date][time]){
+	// 		    for(var s2 in schedule[date][time][room]){
+// 			var cc = null;
+	// 			var space = new slot(sdate, stime, sroom, null);
+// 			if(date == sdate && time == stime){
+	// 			    // in same row; assume only single constraints affected
+	// 			    if(room == sroom && s2 != s1.id) continue;
+	// 			    cc = computeAllSingleConflictsSlot(s2, space);
+// 			}else{
+	// 			    var conflictsCausedByItem = CCOps.allConflicts["sessions"][s2];
+// 			    var conflictsWithRow = {};
+	// 			    conflictsWithRow[sdate] = {};
+// 			    conflictsWithRow[sdate][stime] = computeConflictsWithRowAtTimeSlot(allSessions[s2], sdate, stime);
+// 			    cc = computeAllConflictsSlot(s2, space, conflictsCausedByItem, conflictsWithRow);
+	// 			}
+// 			var sc = {conflictsCausedByItem: cc.conflictsCausedByCandidate,
+// 				  conflictsCausedByCandidate: cc.conflictsCausedByItem,
+	// 				  conflictsCausedByOffending: cc.conflictsCausedByCandidateAtOffending,
+	// 				  conflictsCausedByCandidateAtOffending: cc.conflictsCausedByOffending};
+	// 			scheduleValue.push(createSwapDetails(sc, new slot(date, time, room, s2)));
+// 		    }
+// 		}
+	// 	    }
+// 	}
+    	return {scheduleValue: scheduleValue,
+		unscheduleValue: unscheduleValue};
+    }
+
+    function proposeSessionForSlotOld(sdate, stime, sroom){
+	var scheduleValue = [];
+	var unscheduleValue = [];
+	
 	// proposing unscheduled session
 	if(keys(schedule[sdate][stime][sroom]).length != 0) return;
 	
@@ -689,7 +1086,7 @@ var CCOps = function(){
 			var space = new slot(sdate, stime, sroom, null);
 			if(date == sdate && time == stime){
 			    // in same row; assume only single constraints affected
-			    if(room == sroom) continue;
+			    if(room == sroom && s2 != s1.id) continue;
 			    cc = computeAllSingleConflictsSlot(s2, space);
 			}else{
 			    var conflictsCausedByItem = CCOps.allConflicts["sessions"][s2];
@@ -710,8 +1107,142 @@ var CCOps = function(){
     	return {scheduleValue: scheduleValue,
 		unscheduleValue: unscheduleValue};
     }
+
+    function extractCurrentProtoConflicts(s){
+	var ret = [];
+	var sessionConflicts = CCOps.allConflicts.sessions[s];
+	for(var i in sessionConflicts){
+	    var type = sessionConflicts[i].type;
+	    if(type in protoConstraints && !(type in protoSelfConstraints)){
+		ret.push(sessionConflicts[i]);
+	    }
+	}
+	return ret;
+    }
     
+    function extractAllButFromRow(row, s){
+	var ret = [];
+	for(var i in row["session"]){
+	    if(i != s){
+		ret = ret.concat(row["session"][i]);
+	    }
+	}
+	return ret;
+    }
+
+    function emptyProtoPropose(){
+	return  {conflictsCausedByItem: [],
+		  conflictsCausedByCandidate: [],
+		  conflictsCausedByOffending: [],
+		  conflictsCausedByCandidateAtOffending: []};
+    }
+
     function proposeSlotAndSwap(s){
+	var swapValue = [];
+	var slotValue = [];
+	
+	var conflictsCausedByItem = [];
+	if(!(s.id in unscheduled))
+	    conflictsCausedByItem = extractCurrentProtoConflicts(s.id);
+
+	var conflictsWithRow = 	computeProtoConflictsWithRow(s);
+	for(var date in schedule){
+	    for(var time in schedule[date]){
+		if(!(s.id in unscheduled) && date == s.date && time == s.time){
+		    for(var room in schedule[date][time]){
+			if(room != s.room){
+			    if(keys(schedule[date][time][room]).length == 0){ // empty slot
+				var space = new slot(date, time, room, null);
+				var cc = emptyProtoPropose();
+				slotValue.push(createSwapDetails(cc, space));
+			    }else{
+				for(var s2 in schedule[date][time][room]){
+				    var space = new slot(date, time, room, s2);
+				    var cc = emptyProtoPropose();
+				    swapValue.push(createSwapDetails(cc, space));
+				}
+			    }
+			}	
+		    }
+		    continue; 
+		}
+
+
+		for(var room in schedule[date][time]){
+		    if(keys(schedule[date][time][room]).length == 0){ // empty slot			
+			var conflictsCausedByCandidate = [];
+			var conflictsCausedByCandidateAtOffending = [];
+			var conflictsCausedByOffending = conflictsWithRow[date][time]["sum"];// handle this case
+			var space = new slot(date, time, room, null);
+			var cc = {conflictsCausedByItem: conflictsCausedByItem,
+				  conflictsCausedByCandidate: conflictsCausedByCandidate,
+				  conflictsCausedByOffending: conflictsCausedByOffending,
+				  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
+			slotValue.push(createSwapDetails(cc, space));
+		    }else{ // session slot
+			for(var s2 in schedule[date][time][room]){
+			    var conflictsCausedByCandidate = extractCurrentProtoConflicts(s2);
+			    var conflictsCausedByCandidateAtOffending = [];
+			    if(!(s.id in unscheduled)){
+				var s2row = computeProtoConflictsWithRowAtTimeSlot(allSessions[s2], s.date, s.time)
+				conflictsCausedByCandidateAtOffending = extractAllButFromRow(s2row, s.id);
+			    }
+			    var conflictsCausedByOffending = extractAllButFromRow(conflictsWithRow[date][time], s2);
+			    // handle this case
+			    var cc = {conflictsCausedByItem: conflictsCausedByItem,
+				      conflictsCausedByCandidate: conflictsCausedByCandidate,
+				      conflictsCausedByOffending: conflictsCausedByOffending,
+				      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
+			    var space = new slot(date, time, room, s2);
+			    swapValue.push(createSwapDetails(cc, space));
+			}
+		    }
+		    
+// 		    for(var date in schedule){
+// 			for(var time in schedule[date]){
+// 			    for(var room in schedule[date][time]){
+// 				if(keys(schedule[date][time][room]).length == 0){
+// 				    // if is an empty slot
+// 				    var sc = null;
+// 				    var space = new slot(date, time, room, null);
+// 				    if(date == s.date && time == s.time){
+// 			    // in same row; assume only single constraints affected
+// 			    if(room == s.room) continue;
+// 			    cc = computeAllSingleConflictsSlot(s.id, space);
+// 			}else{
+// 			    cc = computeAllConflictsSlot(s.id, space, conflictsWithRow);
+// 			}
+// 			slotValue.push(createSwapDetails(cc, space));
+// 		    }else{
+// 			// if has sessions here
+// 			for(var s2 in schedule[date][time][room]){
+// 			    var cc = null;
+// 			    if(date == s.date && time == s.time){
+// 				// in same row; assume only single constraints affected
+// 				if(room == s.room) continue;
+// 				cc = computeAllSingleConflicts(s.id, s2);
+// 			    }else{
+// 				cc = computeAllConflicts(s.id, s2, conflictsWithRow);
+// 			    }
+// 			    var space = new slot(date, time, room, s2);
+// 			    swapValue.push(createSwapDetails(cc, space));
+// 			}
+// 		    }
+// 		}
+// 	    }
+		    // 	}
+		}
+	    }
+	}
+	
+	return {swapValue: swapValue,
+		slotValue: slotValue};	
+    }
+    
+
+
+    
+    function proposeSlotAndSwapOld(s){
 	var swapValue = [];
 	var slotValue = [];
 	
@@ -722,7 +1253,7 @@ var CCOps = function(){
 		for(var room in schedule[date][time]){
 		    if(keys(schedule[date][time][room]).length == 0){
 			// if is an empty slot
-			var sc = null;
+			var cc = null;
 			var space = new slot(date, time, room, null);
 			if(date == s.date && time == s.time){
 			    // in same row; assume only single constraints affected
@@ -935,6 +1466,100 @@ var CCOps = function(){
     }
     
     function proposePaperSessionAndSwap(p){
+	var swapValue = [];
+	var sessionValue = [];
+	
+// //	var conflictsWithRow = computeProtoPaperWithRow(p
+// 	for(var date in schedule){
+// 	    for(var time in schedule[date]){
+// 		for(var room in schedule[date][time]){
+// 		    for(var session in schedule[date][time][room]){
+// 			if(p.session != session && matchingSessionPaper(schedule[date][time][room][session], p)){
+// 			    var cc = null;
+// 			    // swapping...
+// 			    for(var p2 in schedule[date][time][room][session]['submissions']){
+				
+
+// checkSubSesConstraint(p, s1
+
+
+// 				cc = computePaperSwapConflicts(p, p.session, schedule[date][time][room][session]['submissions'][p2], session);
+// 				var space = new sessionPaper(session, schedule[date][time][room][session]['submissions'][p2]['id']);
+// 				swapValue.push(createSwapDetails(cc, space));
+// 			    }
+			    
+// 			    // inserting...
+// 			    cc = computePaperSwapConflicts(p, p.session, null, session);
+// 			    var space = new sessionPaper(session, null);
+// 			    sessionValue.push(createSwapDetails(cc, space));
+// 			}
+// 		    }
+// 		}
+// 	    }
+// 	}
+
+// 	for(var session in unscheduled){
+// 	    if(p.session != session && matchingSessionPaper(unscheduled[session], p)){
+// 		var cc = null;
+// 		// swapping...
+// 		for(var p2 in unscheduled[session]['submissions']){
+// 		    cc = computePaperSwapConflicts(p, p.session, unscheduled[session]['submissions'][p2], session);
+// 		    var space = new sessionPaper(session, unscheduled[session]['submissions'][p2]['id']);
+// 		    swapValue.push(createSwapDetails(cc, space));
+// 		}
+		
+// 		// inserting...
+// 		cc = computePaperSwapConflicts(p, p.session, null, session);
+// 		var space = new sessionPaper(session, null);
+// 		sessionValue.push(createSwapDetails(cc, space));
+// 	    }
+// 	}
+	return {swapValue: swapValue,
+		sessionValue: sessionValue};
+
+// 	for(var date in schedule){
+// 	    for(var time in schedule[date]){
+// 		for(var room in schedule[date][time]){
+// 		    for(var session in schedule[date][time][room]){
+// 			if(p.session != session && matchingSessionPaper(schedule[date][time][room][session], p)){
+// 			    var cc = null;
+// 			    // swapping...
+// 			    for(var p2 in schedule[date][time][room][session]['submissions']){
+// 				cc = computePaperSwapConflicts(p, p.session, schedule[date][time][room][session]['submissions'][p2], session);
+// 				var space = new sessionPaper(session, schedule[date][time][room][session]['submissions'][p2]['id']);
+// 				swapValue.push(createSwapDetails(cc, space));
+// 			    }
+			    
+// 			    // inserting...
+// 			    cc = computePaperSwapConflicts(p, p.session, null, session);
+// 			    var space = new sessionPaper(session, null);
+// 			    sessionValue.push(createSwapDetails(cc, space));
+// 			}
+// 		    }
+// 		}
+// 	    }
+// 	}
+	
+// 	for(var session in unscheduled){
+// 	    if(p.session != session && matchingSessionPaper(unscheduled[session], p)){
+// 		var cc = null;
+// 		// swapping...
+// 		for(var p2 in unscheduled[session]['submissions']){
+// 		    cc = computePaperSwapConflicts(p, p.session, unscheduled[session]['submissions'][p2], session);
+// 		    var space = new sessionPaper(session, unscheduled[session]['submissions'][p2]['id']);
+// 		    swapValue.push(createSwapDetails(cc, space));
+// 		}
+		
+// 		// inserting...
+// 		cc = computePaperSwapConflicts(p, p.session, null, session);
+// 		var space = new sessionPaper(session, null);
+// 		sessionValue.push(createSwapDetails(cc, space));
+// 	    }
+// 	}
+
+    }
+
+    function proposePaperSessionAndSwapOld(p){
 	var swapValue = [];
 	var sessionValue = [];
 	
@@ -1371,7 +1996,6 @@ var CCOps = function(){
 	return legal;
     }
     
-    
     function groupRulesByLevel(rules){
 	var levels = {};
 	// group rules by the level at which they operate
@@ -1664,6 +2288,7 @@ var CCOps = function(){
 	var conflicts = [];
 
 	for(var i in CCOps.allConstraints){
+	    if(CCOps.allConstraints[i].type in protoConstraints) continue;
 	    var constraint = CCOps.allConstraints[i];
 	    if(constraint.constraintType == "pairFiltered"){
 		var entityPairs = constraint.entityPairs;
@@ -1701,6 +2326,7 @@ var CCOps = function(){
 	var conflicts = [];
 
 	for(var i in CCOps.allConstraints){
+	    if(CCOps.allConstraints[i].type in protoConstraints) continue;
 	    var constraint = CCOps.allConstraints[i];
 	    if(constraint.constraintType == "pair"){
 		var belongLHS = constraint.entities1;
@@ -1741,6 +2367,7 @@ var CCOps = function(){
 	var conflicts = [];
 	
 	for(var i in CCOps.allConstraints){
+	    if(CCOps.allConstraints[i].type in protoConstraints) continue;
 	    var constraint = CCOps.allConstraints[i];
 	    if(constraint.constraintType == "single"){
 		var belongList = constraint.entities;
@@ -1756,6 +2383,7 @@ var CCOps = function(){
 		}
 	    }
 	}
+    
 	return conflicts;
     }
     
@@ -1775,7 +2403,16 @@ var CCOps = function(){
 	    legalPathPairs: legalPathPairs,
 	    removeSames: removeSames,
 	    authorsourcingData: authorsourcingData,
-	    generateAuthorsourcingConstraints: 	    generateAuthorsourcingConstraints
+	    generateAuthorsourcingConstraints: 	    generateAuthorsourcingConstraints,
+	    generatePersonaConstraints:	    generatePersonaConstraints,
+	    generateAuthorConstraints: generateAuthorConstraints,
+	    scoreThreshold: scoreThreshold,
+	    fitMat: fitMat,
+	    notokMat: notokMat,
+	    intMat: intMat,
+	    authorMat: authorMat, 
+	    personaMat: personaMat,
+	    protoConstraints: protoConstraints
 	   };
 }();
 
