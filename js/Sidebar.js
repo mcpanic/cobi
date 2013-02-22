@@ -3,6 +3,7 @@ var Sidebar = function() {
      // Initialize the sidebar with a default view 
      function initialize(){
           displayConstraints();
+          displayPreferences();
           displayViewOptions();
           displaySessionTypes(); 
           displayPersonas();  
@@ -71,6 +72,7 @@ var Sidebar = function() {
      function bindEvents(){
           $("#list-constraints").on("click", "li.constraint-entry a", clickConstraintsHandler); 
           $("#list-constraints").on("click", ".sublist-header a", clickConstraintHeaderHandler);         
+          $("#list-preferences").on("click", "li a", clickPreferencesHandler);
           $("#list-view-options").on("click", "li a", clickViewOptionsHandler);
           $("#list-session-types").on("click", "li a", clickSessionTypesHandler);
           $("#list-session-types").on("click", ".myCheckbox", clickCheckboxSessionTypesHandler);           
@@ -309,11 +311,63 @@ var Sidebar = function() {
           $(".slot.cell-community").removeClass("cell-community");   
           
           // turn off everything not in the same severity
-          $("#medium-severity-constraints")
           var mySeverity = "";
           var myType = $(this).parent().attr("data-type");
           $.each(Conflicts.constraintsList, function(index, item){
                console.log(item.type, myType);
+               if (item.type == myType)
+                    mySeverity = item.severity; 
+          }); 
+          var mySeverityListID = mySeverity + "-severity-constraints";
+          // console.log("#list-constraints :not(#" + mySeverityListID + ") .view-option-active");
+          $("#list-constraints :not(#" + mySeverityListID + ") .view-option-active").removeClass("view-option-active");
+
+          // toggle
+          if ($this.parent().hasClass("view-option-active")) {
+               $this.parent().removeClass("view-option-active");
+               toggle = false;
+          } else {
+               $this.parent().addClass("view-option-active");
+          }
+
+          // if ($(this).parent().hasClass("view-option-active")){
+               
+          // }
+          // $("#list-constraints .view-option-active").removeClass("view-option-active");
+          // if (toggle)
+          //     $(this).parent().addClass("view-option-active");
+
+          $("#list-constraints li.constraint-entry").each(function(index, item){
+               // var type = $(constraint).attr("data-type");
+               // // console.log(type, $this.parent().attr("data-type"), toggle);
+               // if (type == $this.parent().attr("data-type"))
+               //     Conflicts.updateConstraintBackground(type, toggle);     
+               // else
+               //     Conflicts.updateConstraintBackground(type, false);   
+
+               if ($(item).hasClass("view-option-active"))
+                   Conflicts.updateConstraintBackground($(item).attr("data-type"), true);
+               else
+                   Conflicts.updateConstraintBackground($(item).attr("data-type"), false);  
+          });
+         return false;          
+     }
+
+     function clickPreferencesHandler(){
+          var $this = $(this);
+          var toggle = true;
+          // _resetSidebarSelections();
+          _toggleAllCheckboxes($("#list-session-types"), false);
+          _toggleAllCheckboxes($("#list-personas"), false);
+          _toggleAllCheckboxes($("#list-communities"), false);
+          $(".slot.cell-session-type").removeClass("cell-session-type");
+          $(".slot.cell-persona").removeClass("cell-persona");
+          $(".slot.cell-community").removeClass("cell-community");   
+          
+          // turn off everything not in the same severity
+          var mySeverity = "";
+          var myType = $(this).parent().attr("data-type");
+          $.each(Conflicts.constraintsList, function(index, item){
                if (item.type == myType)
                     mySeverity = item.severity; 
           }); 
@@ -349,7 +403,7 @@ var Sidebar = function() {
                else
                    Conflicts.updateConstraintBackground($(item).attr("data-type"), false);  
           });
-         return false;          
+         return false;     
      }
 
      function clickViewOptionsHandler(){
@@ -650,6 +704,23 @@ var Sidebar = function() {
                //.css("background-color", constraint.color);
       	});
 	}
+
+     // Display the preferences list
+     function displayPreferences(){
+          $.each(Conflicts.preferencesList, function(index, preference){
+               var item = document.createElement("li");
+               $(item).attr("data-type", preference.type)
+                    .addClass("constraint-entry")
+                    .html("<a href='#'><span class='palette'></span>" 
+                    + preference.description 
+                    + "</a>"
+                    + " (<span class='count'></span>)"
+                    );
+               $("#list-preference").append($(item));
+               // $(item).find("span.palette").addClass("cell-conflict-" + preference.severity);
+               //.css("background-color", constraint.color);
+          });
+     }
 
      // Display the View options list
      function displayViewOptions(){

@@ -4,7 +4,7 @@
 var Conflicts = function() {
 
     var constraintsList = [];
-
+    var preferencesList = [];
 	// Initialize the sidebar with a default view 
 	function initialize(){
         updateConstraintsList();
@@ -28,13 +28,20 @@ var Conflicts = function() {
                 // TODO: make it more reasonable
                 if (c.importance < -5) {
                     constraint.severity = "high";
-                } else
+                } else if (c.importance < 0)
                     constraint.severity = "medium";
+                else
+                    constraint.severity = "good";
                 constraint.importance = c.importance;
                 constraint.type = c.type;
-                Conflicts.constraintsList.push(constraint);
+
+                if (constraint.severity != "good")
+                    Conflicts.constraintsList.push(constraint);
+                else
+                    Conflicts.preferencesList.push(constraint);
             });
             Conflicts.constraintsList.sort(function(a,b){ return a.importance > b.importance; });
+            Conflicts.preferencesList.sort(function(a,b){ return a.importance > b.importance; });
             console.log(CCOps.allConstraints, Conflicts.constraintsList);        
         } else {
             Conflicts.constraintsList = constraints_list;
@@ -542,6 +549,7 @@ var Conflicts = function() {
     return {
         initialize: initialize,
         constraintsList: constraintsList,
+        preferencesList: preferencesList,
         clearConflictDisplay: clearConflictDisplay,
         // displayConflicts: displayConflicts,
         // displayConflictPreviewHTML: displayConflictPreviewHTML,
