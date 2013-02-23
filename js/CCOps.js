@@ -466,13 +466,13 @@ var CCOps = function(){
     }
     
     function initialize(){
-	console.log(new Date().getTime() / 1000);
+//	console.log(new Date().getTime() / 1000);
 	loadAuthorsourcingData();
 	generateAuthorsourcingConstraints();
 	generatePersonaConstraints();
 	generateAuthorConstraints();
 	console.log("constraint loading finished");
-	console.log(new Date().getTime() / 1000);
+//	console.log(new Date().getTime() / 1000);
 	//     	var example = new SingleEntityConstraint("donat11",
 	// 						 "Submissions whose title begin with 'Don' should be at 11am",
 	// 						 10,
@@ -553,7 +553,7 @@ var CCOps = function(){
 //	CCOps.allConstraints.push(example6);
 	
 	getAllConflicts();
-	console.log(new Date().getTime() / 1000);
+//	console.log(new Date().getTime() / 1000);
     }
 
     function checkSesConstraint(m, s1, s2, type){
@@ -791,7 +791,6 @@ var CCOps = function(){
     }
 
     function computeProtoPaperWithRowAtTimeSlot(p, date, time){ 
-	console.log(p, date, time);
 	// compute all conflicts between p and papers in sessions at date-time
 	var ret = {};
 	ret["sum"] = [];
