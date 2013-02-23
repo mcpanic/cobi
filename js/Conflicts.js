@@ -78,14 +78,10 @@ var Conflicts = function() {
           if (typeof conflicts === "undefined")
               return;
          element.html("");
-         var conflicts_array = conflicts.map(function(co) {return co.type});
-         console.log(conflicts_array);
-
+         // var conflicts_array = conflicts.map(function(co) {return co.type});
          $.each(Conflicts.constraintsSeverityList, function(index, severity){
             var filtered_array = conflicts.filter(function(x){return getSeverityByType(x.type)==severity});
-            
             if (filtered_array.length > 0){
-                console.log(filtered_array);
                 var html = "";
                 var i;            
                 for (i=0; i<filtered_array.length; i++) {
@@ -221,62 +217,15 @@ var Conflicts = function() {
         return $view;
      }
 
-     function getConflictLength(inputArray, conflict) {
-        var filtered_array = inputArray == null? []: inputArray.filter(function(x){return x.type==conflict.type});
-        return filtered_array.length;
+     function getConflictLengthByType(inputArray, type) {
+        var filteredArray = inputArray == null? []: inputArray.filter(function(x){return x.type==type});
+        return filteredArray.length;
      }
 
-     // // Given a list of added and removed conflicts with a swap candidate,
-     // // display the preview to help make the decision to do the swap.
-     // function displayFullConflicts(swapValues, element){
-     //      if (typeof swapValues === "undefined")
-     //           return;
-
-     //        // var $session = $(".selected").first();
-     //        // var id = getID($session);  
-     //        //console.log("HERE");
-     //      element.find(".conflicts").html("");
-     //      var plural = isPlural(swapValues.value) ? "s" : "";
-     //      if (swapValues.value > 0)
-     //        element.find(".conflicts").append("<div class='swap-total-full stronger-text'>" + swapValues.value 
-     //          + " conflict" + plural 
-     //          + " will be resolved. <small>(click icons for details)</small></div>"); 
-     //      else
-     //        element.find(".conflicts").append("<div class='swap-total-full weaker-text'>" + (-1)*swapValues.value 
-     //            + " conflict" + plural 
-     //            + " will be added. <small>(click icons for details)<small></div> "); 
-                
-     //      var isChanged = false;
-
-     //      // for each constraint, count and add a modal dialog with descriptions
-     //      $.each(Conflicts.constraintsList, function(index, conflict){  
-     //        // var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict) 
-     //        //             - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
-     //        // if (netCount == 0)
-     //        //      return;
-     //        // console.log(conflict, swapValues);
-     //        isChanged = true;
-            
-     //        var $view = element.find(".conflicts");
-     //        if (swapValues.addedSrc != null && swapValues.addedSrc.length > 0)
-     //            $view.append(displayConflictFullHTML("[Conflict added]", swapValues.addedSrc, conflict, "+"));
-     //        if (swapValues.addedDest != null && swapValues.addedDest.length > 0)
-     //            $view.append(displayConflictFullHTML("[Conflict added]", swapValues.addedDest, conflict, "+"))
-     //        if (swapValues.removedSrc != null && swapValues.removedSrc.length > 0)
-     //            $view.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedSrc, conflict, "-"))
-     //        if (swapValues.removedDest != null && swapValues.removedDest.length > 0)
-     //            $view.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedDest, conflict, "-"));      
-     //        // var netCountClass = "conflict-netcount-added";
-     //        // if (netCount < 0)
-     //        //     netCountClass = "conflict-netcount-removed";            
-     //      });
-     //        if (!isChanged)
-     //          element.find(".swap-total-full").hide();
-     //      var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
-     //      element.find(".conflicts").append($detail);
-
-     // }  
-
+     function getConflictLengthBySeverity(inputArray, severity) {
+        var filteredArray = inputArray == null? []: inputArray.filter(function(x){return getSeverityByType(x.type)==severity});
+        return filteredArray.length;
+     }
 
      // Given a list of conflicts for the given session,
      // display the preview with details
@@ -284,9 +233,10 @@ var Conflicts = function() {
         var element = document.createElement("div");
         $(element).addClass("conflicts");
 
-        var conflicts = conflictsBySession[id];                
+        // var conflicts = conflictsBySession[id];    
+        var conflicts = conflictsBySession[id].filter(function(x){ return _.contains(Conflicts.constraintsSeverityList, getSeverityByType(x.type)); });            
         var conflicts_array = conflicts.map(function(co) {return co.type});
-
+        // console.log(conflicts_array);
         var plural = isPlural(conflicts.length) ? "s" : "";
         if (conflicts.length > 0) {
             $(element).append("<div class='swap-total-full stronger-text'>" + conflicts.length 
@@ -322,19 +272,22 @@ var Conflicts = function() {
             // scheduled papers
             if (submission != null && typeof submission.id !== "undefined"){
 
-                var tempConflicts = conflictsBySession[session.id];
+                // var tempConflicts = conflictsBySession[session.id];
+                var tempConflicts = conflictsBySession[session.id].filter(function(x){ return _.contains(Conflicts.constraintsSeverityList, getSeverityByType(x.type)); });            
+        
                 var conflicts = [];
                 // only find the ones that include this paper
                 $.each(tempConflicts, function(index, item){
                     $.each(item.conflict, function(i, c){
+                        // console.log(item, item.conflict, c);
                         // for each valid entity trace, see if it's this paper
-                        if (c.submission != null) { // c.submission is indexed order
-                            if (session.submissions[c.submission].id == submission.id) // finally a match
+                        if (c != null) { // c.submission is indexed order
+                            if (c == submission.id) // finally a match
                                 conflicts.push(item);
                         }
                     });
                 });
-                console.log(conflicts);
+                // console.log(conflicts);
                 var conflicts_array = conflicts.map(function(co) {return co.type});
 
                 var plural = isPlural(conflicts.length) ? "s" : "";
@@ -366,13 +319,39 @@ var Conflicts = function() {
         return outerHTML(element);
      }
 
-     function displayMoveModeSessionFullConflicts(swapValues){
-        if (typeof swapValues === "undefined" || swapValues == null)
+     function filterSwapValue(swapValues){
+        var s = swapValues;
+        console.log("BEFORE", s.value, s);
+        $.each(s.addedDest, function(i, c){
+            if (!_.contains(Conflicts.constraintsSeverityList, getSeverityByType(c.type)))
+                delete s.addedDest[i];
+        });
+        $.each(s.addedSrc, function(i, c){
+            if (!_.contains(Conflicts.constraintsSeverityList, getSeverityByType(c.type)))
+                delete s.addedSrc[i];
+        });
+        $.each(s.removedDest, function(i, c){
+            if (!_.contains(Conflicts.constraintsSeverityList, getSeverityByType(c.type)))
+                delete s.removedDest[i];
+        });
+        $.each(s.removedSrc, function(i, c){
+            if (!_.contains(Conflicts.constraintsSeverityList, getSeverityByType(c.type)))
+                delete s.removedSrc[i];
+        });
+        s.value = s.removedDest.length + s.removedSrc.length - s.addedDest.length - s.addedSrc.length;
+        console.log("AFTER", s.value, s);
+        return s;
+     }
+
+     function displayMoveModeSessionFullConflicts(s){
+        if (typeof s === "undefined" || s == null)
                return;   
 
         var element = document.createElement("div");
         $(element).addClass("conflicts");
-   
+
+        var swapValues = filterSwapValue(s);
+
           var plural = isPlural(swapValues.value) ? "s" : "";
           if (swapValues.value > 0)
             $(element).append("<div class='swap-total-full stronger-text'>" + swapValues.value 
@@ -415,14 +394,14 @@ var Conflicts = function() {
         return outerHTML(element);
      }
 
-     function displayMoveModeSubmissionFullConflicts(swapValues){
-        if (typeof swapValues === "undefined" || swapValues == null)
+     function displayMoveModeSubmissionFullConflicts(s){
+        if (typeof s === "undefined" || s == null)
            return;      
 
         var element = document.createElement("div");
         $(element).addClass("conflicts");
 
-
+        var swapValues = filterSwapValue(s);
           var plural = isPlural(swapValues.value) ? "s" : "";
           if (swapValues.value > 0)
             $(element).append("<div class='swap-total-full stronger-text'>" + swapValues.value 
@@ -467,9 +446,10 @@ var Conflicts = function() {
 
      // Given a list of added and removed conflicts with a swap candidate,
      // display the preview to help make the decision to do the swap.
-     function displayMovePreviewConflicts(swapValues, element){
-          if (typeof swapValues === "undefined")
+     function displayMovePreviewConflicts(s, element){
+          if (typeof s === "undefined")
                return;
+          var swapValues = filterSwapValue(s);
 
            // if the current total already exists, compare and keep the winning one. 
             if (element.find(".swap-total").length > 0){
@@ -479,7 +459,6 @@ var Conflicts = function() {
                     return;
             }
 
-
           if (swapValues.value > 0)
             element.append("<div class='swap-total stronger-text'>" + addSign((-1)*swapValues.value) + "</div>"); 
           else
@@ -487,16 +466,13 @@ var Conflicts = function() {
    
           var isChanged = false;
 
-          // for each constraint, count and add a modal dialog with descriptions
-          $.each(Conflicts.constraintsList, function(index, conflict){  
-
-            var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict)
-                  - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
+         $.each(Conflicts.constraintsSeverityList, function(index, severity){
+            var netCount = getConflictLengthBySeverity(swapValues.addedSrc, severity) + getConflictLengthBySeverity(swapValues.addedDest, severity)
+                  - getConflictLengthBySeverity(swapValues.removedSrc, severity) - getConflictLengthBySeverity(swapValues.removedDest, severity);
             if (netCount == 0) 
               return;
             isChanged = true;
-            var $palette = $(displayConflictPreviewHTML(netCount)).addClass("cell-conflict-" + conflict.severity);
-            //.css("background-color", conflict.color);
+            var $palette = $(displayConflictPreviewHTML(netCount)).addClass("cell-conflict-" + severity);
             var netCountClass = "conflict-netcount-added";
             if (netCount < 0)
                 netCountClass = "conflict-netcount-removed";
@@ -505,8 +481,28 @@ var Conflicts = function() {
                 .append($palette) 
                 .append("<span class='" + netCountClass + "'>" + addSign(netCount) + "</span>");
             element.append($inner);
+         });
+
+          // // for each constraint, count and add a modal dialog with descriptions
+          // $.each(Conflicts.constraintsList, function(index, conflict){  
+
+          //   var netCount = getConflictLength(swapValues.addedSrc, conflict) + getConflictLength(swapValues.addedDest, conflict)
+          //         - getConflictLength(swapValues.removedSrc, conflict) - getConflictLength(swapValues.removedDest, conflict);
+          //   if (netCount == 0) 
+          //     return;
+          //   isChanged = true;
+          //   var $palette = $(displayConflictPreviewHTML(netCount)).addClass("cell-conflict-" + conflict.severity);
+          //   //.css("background-color", conflict.color);
+          //   var netCountClass = "conflict-netcount-added";
+          //   if (netCount < 0)
+          //       netCountClass = "conflict-netcount-removed";
+            
+          //   var $inner = $("<div class='conflict-type-preview'/>")
+          //       .append($palette) 
+          //       .append("<span class='" + netCountClass + "'>" + addSign(netCount) + "</span>");
+          //   element.append($inner);
                   
-          });
+          // });
 
           if (!isChanged)
             element.find(".swap-total").hide();
