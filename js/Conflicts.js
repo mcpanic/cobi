@@ -5,6 +5,8 @@ var Conflicts = function() {
 
     var constraintsList = [];
     var preferencesList = [];
+    var constraintsSeverityList = ["high", "medium"];  // excluding "good"
+
 	// Initialize the sidebar with a default view 
 	function initialize(){
         updateConstraintsList();
@@ -61,6 +63,15 @@ var Conflicts = function() {
         });
     }
 
+    function getSeverityByType(type){
+        var severity = "";
+        $.each(Conflicts.constraintsList, function(index, item){
+            if (item.type == type)
+                severity = item.severity;
+        });
+        return severity;
+    }
+
      // Given an array of "conflicts", display the palette and count for each constraint in the "element"
      // Can be used both for individual sessions and entire rows
      function displayConflicts(conflicts, element){
@@ -68,38 +79,72 @@ var Conflicts = function() {
               return;
          element.html("");
          var conflicts_array = conflicts.map(function(co) {return co.type});
-         
+         console.log(conflicts_array);
+
+         $.each(Conflicts.constraintsSeverityList, function(index, severity){
+            var filtered_array = conflicts.filter(function(x){return getSeverityByType(x.type)==severity});
+            
+            if (filtered_array.length > 0){
+                console.log(filtered_array);
+                var html = "";
+                var i;            
+                for (i=0; i<filtered_array.length; i++) {
+                     html += "<span class='conflict-display'></span>";
+                }
+                var $palette = $(html).addClass("cell-conflict-" + severity)
+
+                element.append(filtered_array.length).append($palette);
+                var palette_title = severity + " severity conflicts";
+                var palette_content = filtered_array.map(function(co) {
+                     // if (co.type == constraint.type)
+                          return "<li>"+co.description+"</li>";
+                }).join("");
+                $palette.popover({
+                     html:true,
+                     placement: "bottom",
+                     trigger: "hover",
+                     title:function(){
+                          return palette_title;
+                     },
+                     content:function(){
+                          return palette_content;
+                     }
+                });
+            }
+         });
+
           // for each constraint, count and add a modal dialog with descriptions
-          $.each(Conflicts.constraintsList, function(index, conflict){
-               var filtered_array = conflicts_array.filter(function(x){return x==conflict.type});
-               if (filtered_array.length > 0) {
-                    var html = "";
-                    var i;
-                    for (i=0; i<filtered_array.length; i++) {
-                         html += "<span class='conflict-display'></span>";
-                    }
-                    var $palette = $(html).addClass("cell-conflict-" + conflict.severity)
-                    //.css("background-color", conflict.color);
-                    element.append(filtered_array.length).append($palette);
-                    var palette_title = "Conflicts: " + conflict.description;
-                    var palette_content = conflicts.map(function(co) {
-                         if (co.type == conflict.type)
-                              return "<li>"+co.description+"</li>";
-                    }).join("");
-                    $palette.popover({
-                         html:true,
-                         placement: "bottom",
-                         trigger: "hover",
-                         title:function(){
-                              return palette_title;
-                         },
-                         content:function(){
-                              return palette_content;
-                         }
-                    });
-                    //$palette.popover();           
-               }
-          });
+          // $.each(Conflicts.constraintsList, function(index, constraint){
+          //      var filtered_array = conflicts_array.filter(function(x){return getSeverityByType(x)==constraint.severity});
+          //      if (filtered_array.length > 0) {
+          //       console.log(filtered_array);
+          //           var html = "";
+          //           var i;
+          //           for (i=0; i<filtered_array.length; i++) {
+          //                html += "<span class='conflict-display'></span>";
+          //           }
+          //           var $palette = $(html).addClass("cell-conflict-" + constraint.severity)
+          //           //.css("background-color", conflict.color);
+          //           element.append(filtered_array.length).append($palette);
+          //           var palette_title = "Conflicts: " + constraint.description;
+          //           var palette_content = conflicts.map(function(co) {
+          //                if (co.type == constraint.type)
+          //                     return "<li>"+co.description+"</li>";
+          //           }).join("");
+          //           $palette.popover({
+          //                html:true,
+          //                placement: "bottom",
+          //                trigger: "hover",
+          //                title:function(){
+          //                     return palette_title;
+          //                },
+          //                content:function(){
+          //                     return palette_content;
+          //                }
+          //           });
+          //           //$palette.popover();           
+          //      }
+          // });
      }
 
      function displayConflictPreviewHTML(netCount) {
@@ -604,6 +649,7 @@ var Conflicts = function() {
         initialize: initialize,
         constraintsList: constraintsList,
         preferencesList: preferencesList,
+        constraintsSeverityList: constraintsSeverityList,
         clearConflictDisplay: clearConflictDisplay,
         // displayConflicts: displayConflicts,
         // displayConflictPreviewHTML: displayConflictPreviewHTML,
