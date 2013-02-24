@@ -170,7 +170,7 @@ var CCOps = function(){
     function generateSubmissionNotTogetherConstraint(e1, e2, score){
 
 	var constraint = new EntityPairConstraint("interested",
-						  "papers should not be in opposing sessions",
+						  "papers of interest should not be in opposing sessions",
 						  function (sessionA, violationA, sessionB, violationB){
 						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
 							  sessionB.submissions[violationB.submission].title + "'" + " should be at different times.";
@@ -200,7 +200,7 @@ var CCOps = function(){
     function generateFitInSessionConstraint(e1, e2, score){
 
 	var text = {'great': 'papers that are good in same session',
-		    'notok': 'papers that should not be in same session'};
+		    'notok': "papers that don't fit well in the same session"};
 	var type = 'great';
 	if(score < 0) type = 'notok';
 
@@ -582,9 +582,11 @@ var CCOps = function(){
     
     function instantiateConflict(s1id, conflict){
 	// adds session information to conflict once known
-	conflict.entities.unshift(s1id);
-	conflict.description = conflict.description(s1id, conflict.entities[1]);
-	return conflict;
+	var newConflict = new conflictObject([s1id, conflict.entities[0]],
+					     conflict.type,
+					     conflict.conflict,
+					     conflict.description(s1id, conflict.entities[0]));
+	return newConflict;
     }
     
     function checkSubSesConstraint(m, p1, s2, type){
@@ -1535,9 +1537,9 @@ var CCOps = function(){
 	var swapValue = []; // paper swaps
 	var sessionValue = []; // inserting p in sessions
 
-	var conflictsWithRow = computeProtoPaperWithRow(allSessions[p.session], p.id);
+	var conflictsWithRow = computeProtoPaperWithRow(p.id);//allSessions[p.session], p.id);
 	var conflictsCausedByItem = [];
-	if(!(p in unscheduledSubmissions) && !(p.session in unscheduled)){
+	if(!(p.id in unscheduledSubmissions) && !(p.session in unscheduled)){
 	    conflictsCausedByItem = extractCurrentProtoPaperConflicts(p.session, p.id);
 	}
 	
@@ -1616,7 +1618,7 @@ var CCOps = function(){
 				conflictsCausedByOffending = conflictsCausedByOffending.concat(conflictsWithoutSession);
 				conflictsCausedByOffending = conflictsCausedByOffending.concat(extractAllButFromSession(conflictsWithSession, subs[p2].id));
 				var conflictsCausedByCandidateAtOffending = [];
-				if(!(p in unscheduledSubmissions) && !(p.session in unscheduled)){
+				if(!(p.id in unscheduledSubmissions) && !(p.session in unscheduled)){
 				    var s2row = computeProtoPaperWithRowAtTimeSlot(subs[p2].id, allSessions[p.session].date, allSessions[p.session].time);
 				    var s2WithSession = computeProtoPaperWithinSession(allSessions[p.session], subs[p2].id);
 				    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(extractAllButFromRow(s2row, p.session));
@@ -1656,7 +1658,7 @@ var CCOps = function(){
 		    var conflictsCausedByCandidate = [];
 		    var conflictsCausedByOffending = [];
 		    var conflictsCausedByCandidateAtOffending = [];
-		    if(!(p in unscheduledSubmissions) && !(p.session in unscheduled)){
+		    if(!(p.id in unscheduledSubmissions) && !(p.session in unscheduled)){
 			var s2row = computeProtoPaperWithRowAtTimeSlot(subs[p2].id, allSessions[p.session].date, allSessions[p.session].time);
 			var s2WithSession = computeProtoPaperWithinSession(allSessions[p.session], subs[p2].id);
 			conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(extractAllButFromRow(s2row, p.session));
@@ -1774,8 +1776,138 @@ var CCOps = function(){
 		sessionValue: sessionValue};
     }
     
-    
     function proposePaperForSession(s){
+	// TODO: in some sense, wouldn't error messages be wrong tho if they depend on the session from 
+	// CausedByItem or CausedByCandidate, because we don't actually update these?
+	var scheduleValue = [];
+	var unscheduleValue = [];
+	
+	var conflictsCausedByItem = [];
+	var conflictsCausedByOffending = [];
+
+
+	for (var date in schedule){
+	    for (var time in schedule[date]){
+		if (!(s.id in unscheduled) && time == s.time && date == s.date){ // at same time slot
+		    for (var room in schedule[date][time]){
+			if(room == s.room) continue;
+			for (var session in schedule[date][time][room]){
+			    var subs = schedule[date][time][room][session]['submissions'];
+			    for(var p2 = 0, len = subs.length; p2 < len; p2++){	
+				var p = subs[p2];
+				if(matchingSessionPaper(s, p)){
+				    var conflictsAtCandidate = extractCurrentProtoPaperConflicts(session, p.id);
+				    // conflicts between p2 and empty session
+				    var conflictsCausedByCandidate = extractCurrentProtoPaperConflicts(s.id, p.id);
+				    // conflicts between p2 and papers in its own session
+				    for(var i = 0; len = conflictsAtCandidate.length, i < len; i++){
+					if(conflictsAtCandidate[i].entities[0] == 
+					   conflictsAtCandidate[i].entities[1]){
+					    conflictsCausedByCandidate.push(conflictsAtCandidate[i]);
+					}
+				    }
+				    var conflictsCausedByCandidateAtOffending = (computeProtoPaperWithinSession(allSessions[s.id], p.id))['sum'];
+				    // conflicts between p2 in empty session with everyone else?
+				    var offendingSelf = computeProtoPaperAcrossSession(allSessions[session], p.id);
+				    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(offendingSelf);
+				    
+				    var cc = {conflictsCausedByItem: conflictsCausedByItem,
+					      conflictsCausedByCandidate: conflictsCausedByCandidate,
+					      conflictsCausedByOffending: conflictsCausedByOffending,
+					      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(s.id, x)})};
+				    
+				    var space = new sessionPaper(session, p.id);
+				    scheduleValue.push(createSwapDetails(cc, space));
+				}
+			    }
+			}
+		    }
+		    continue;
+		}else{
+		    for (var room in schedule[date][time]){
+			for (var session in schedule[date][time][room]){
+			    var subs = schedule[date][time][room][session]['submissions'];
+			    for(var p2 = 0, len = subs.length; p2 < len; p2++){	
+				var p = subs[p2];
+				if(matchingSessionPaper(s, p)){
+				    var conflictsCausedByCandidate = extractCurrentProtoPaperConflicts(session, p.id);
+				    var conflictsCausedByCandidateAtOffending = [];
+				    if(!(s.id in unscheduled)){
+					var conflictsWithRow = computeProtoPaperWithRowAtTimeSlot(p.id, s.date, s.time); //s, p.id);
+					var conflictsWithSession = (computeProtoPaperWithinSession(s, p.id))['sum'];
+					var conflictsWithoutSession = extractAllButFromRow(conflictsWithRow, s.id);
+					console.log(conflictsWithRow);
+					console.log(conflictsWithSession);
+					console.log(conflictsWithoutSession);
+
+					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(conflictsWithoutSession);
+					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(conflictsWithSession);
+					
+				    }
+				    var cc = {conflictsCausedByItem: conflictsCausedByItem,
+					      conflictsCausedByCandidate: conflictsCausedByCandidate,
+					      conflictsCausedByOffending: conflictsCausedByOffending,
+					      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(s.id, x)})};
+				    var space = new sessionPaper(session, p.id);
+				    scheduleValue.push(createSwapDetails(cc, space));
+				}
+			    }
+			}
+		    }
+		}
+	    }
+	}
+	for(var p2 in unscheduledSubmissions){
+	    var p = unscheduledSubmissions[p2];
+	    
+	    if(matchingSessionPaper(s, p)){
+		var conflictsCausedByCandidate = [];
+		var conflictsCausedByCandidateAtOffending = [];
+		if(!(s.id in unscheduled)){
+		    var conflictsWithRow = computeProtoPaperWithRowAtTimeSlot(p.id, s.date, s.time); //s, p.id);
+		    var conflictsWithSession = (computeProtoPaperWithinSession(s, p.id))['sum'];
+		    var conflictsWithoutSession = extractAllButFromRow(conflictsWithRow, s.id);
+		    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(conflictsWithoutSession);
+		    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(conflictsWithSession);
+		    
+		}
+		var cc = {conflictsCausedByItem: conflictsCausedByItem,
+			  conflictsCausedByCandidate: conflictsCausedByCandidate,
+			  conflictsCausedByOffending: conflictsCausedByOffending,
+			  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(s.id, x)})};
+		var space = new sessionPaper(session, p.id);
+		unscheduleValue.push(createSwapDetails(cc, space));
+	    }
+	}
+	for(var s2 in unscheduled){
+	    var subs = unscheduled[s2]['submissions'];
+	    for(var p2 = 0, len = subs.length; p2 < len; p2++){	
+		var p = subs[p2];
+		if(matchingSessionPaper(s, p)){
+		    var conflictsCausedByCandidate = [];
+		    var conflictsCausedByCandidateAtOffending = [];
+		    if(!(s.id in unscheduled)){
+			var conflictsWithRow = computeProtoPaperWithRowAtTimeSlot(p.id, s.date, s.time); //s, p.id);
+			var conflictsWithSession = (computeProtoPaperWithinSession(s, p.id))['sum'];
+			var conflictsWithoutSession = extractAllButFromRow(conflictsWithRow, s.id);
+			conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(conflictsWithoutSession);
+			conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(conflictsWithSession);
+		    }
+		    var cc = {conflictsCausedByItem: conflictsCausedByItem,
+			      conflictsCausedByCandidate: conflictsCausedByCandidate,
+			      conflictsCausedByOffending: conflictsCausedByOffending,
+			      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(s.id, x)})};
+		    var space = new sessionPaper(s2, p.id);
+		    unscheduleValue.push(createSwapDetails(cc, space));
+		}
+	    }
+	}    
+	
+	return {scheduleValue: scheduleValue,
+	     	unscheduleValue: unscheduleValue};
+    }
+
+    function proposePaperForSessionOld(s){
 	var scheduleValue = [];
 	var unscheduleValue = [];
 	
