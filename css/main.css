@@ -693,6 +693,10 @@ body.loading .modal {
     background-color: #C77F77;    
 }
 
+[class*="cell-conflict-good"]{
+    background-color: #36B84F;    
+}
+
 .cell-preference{
     background-color: #36B84F;
 }
