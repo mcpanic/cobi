@@ -250,12 +250,12 @@ var CCOps = function(){
 		var fill = " is";
 		if(e1.length > 1) fill = " are";
 		return names + fill +  " in both '" + 
-		    allSessions[s1].title + "' and '" + allSessions[s2].title + "'.";
+		    abbrTitle(allSessions[s1].title) + "' and '" + abbrTitle(allSessions[s2].title) + "'.";
 	    }
 	}else if(type == 'personaInTwoSessions'){
 	    ret = function (s1, s2) {
 		return "Someone interested in '" + allSessions[s1].personas + "' may want to see both '" + 
-		    allSessions[s2].title + "' and '" + allSessions[s2].title + "'.";
+		    abbrTitle(allSessions[s2].title) + "' and '" + abbrTitle(allSessions[s2].title) + "'.";
 	    }
 	}else if(type == 'great'){
 	    ret = function (s1, s2) {
@@ -276,21 +276,25 @@ var CCOps = function(){
     }
     
     function abbrTitle(title){
-	var maxLength = 30;
-//	if(title.length < maxLength){
+	var maxLength = 40;
+	if(title.length < maxLength){
 	    return title;
-//	}
+	}
 	var titlesplit = title.split(' ');
 	var len = 0;
 	var abbr = "";
 	var i = 0;
 	
-	while(len + titlesplit[i].length < maxLength){
-	    abbr += titlesplit[i] + " ";
-	    i++;
-	    len += titlesplit[i].length;
+	for(var i = 0; i < titlesplit.length; i++){
+	    if(len + titlesplit[i].length < maxLength){
+		abbr += titlesplit[i];
+		abbr += " ";
+		len += titlesplit[i].length;
+	    }else{
+		return abbr.trim() + "...";
+	    }
 	}
-	return abbr.trim() + "...";
+	return "<span class='titlemsg'>" + abbr.trim() + "..." + "</span>";
     }
 
 
@@ -1977,32 +1981,32 @@ var CCOps = function(){
     function createSwapDetails(cc, space){
 	var conflictsResolved = 0;
 	for(var i in cc.conflictsCausedByCandidate){
-	    if(cc.conflictsCausedByCandidate in protoConstraints &&
-	       protoConstraints[cc.conflictsCausedByCandidate.type] > 0){
+	    if(cc.conflictsCausedByCandidate[i] in protoConstraints &&
+	       protoConstraints[cc.conflictsCausedByCandidate[i].type] > 0){
 		conflictsResolved-=1;
 	    }else{
 	    	conflictsResolved+=1;
 	    }
 	}
 	for(var i in cc.conflictsCausedByItem){
-	    if(cc.conflictsCausedByItem in protoConstraints &&
-	       protoConstraints[cc.conflictsCausedByItem.type] > 0){
+	    if(cc.conflictsCausedByItem[i] in protoConstraints &&
+	       protoConstraints[cc.conflictsCausedByItem[i].type] > 0){
 		conflictsResolved-=1;
 	    }else{
 	    	conflictsResolved+=1;
 	    }
 	}
 	for(var i in cc.conflictsCausedByOffending){
-	    if(cc.conflictsCausedByOffending in protoConstraints &&
-	       protoConstraints[cc.conflictsCausedByOffending.type] > 0){
+	    if(cc.conflictsCausedByOffending[i] in protoConstraints &&
+	       protoConstraints[cc.conflictsCausedByOffending[i].type] > 0){
 		conflictsResolved+=1;
 	    }else{
 	    	conflictsResolved-=1;
 	    }
 	}
 	for(var i in cc.conflictsCausedByCandidateAtOffending){
-	    if(cc.conflictsCausedByCandidateAtOffending in protoConstraints &&
-	       protoConstraints[cc.conflictsCausedByCandidateAtOffending.type] > 0){
+	    if(cc.conflictsCausedByCandidateAtOffending[i] in protoConstraints &&
+	       protoConstraints[cc.conflictsCausedByCandidateAtOffending[i].type] > 0){
 		conflictsResolved+=1;
 	    }else{
 	    	conflictsResolved-=1;
