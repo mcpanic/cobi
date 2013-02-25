@@ -1,4 +1,5 @@
 function SingleEntityConstraint(type, description, descriptionFunc, importance, rationale, entityRules, constraintObjectRules){
+    this.type = type;
     this.importance = importance;
     this.rationale = rationale;
     this.entityRules = entityRules;
@@ -11,7 +12,6 @@ function SingleEntityConstraint(type, description, descriptionFunc, importance, 
     this.constraintObjectRules = constraintObjectRules;
     this.description = description;
     this.descriptionFunc = descriptionFunc;
-    this.type = type;
     this.constraintType = "single";
 }
 
@@ -92,6 +92,7 @@ var CCOps = function(){
     var allConflicts = [];
     var authorsourcingData = null;
     var scoreThreshold = 10;
+    var goodThreshold = 9;
     var fitMat = {}; // paper to paper fit
     var notokMat = {};
     var intMat = {}; // paper to paper interest
@@ -105,6 +106,7 @@ var CCOps = function(){
 	'personaInTwoSessions': null,
 	'interested': null
     }
+
     var protoSelfConstraints = {
 	'great' : null,
 	'notok': null
@@ -170,7 +172,7 @@ var CCOps = function(){
     function generateSubmissionNotTogetherConstraint(e1, e2, score){
 
 	var constraint = new EntityPairConstraint("interested",
-						  "papers of interest should not be in opposing sessions",
+						  "papers of mutual interests are in opposing sessions",
 						  function (sessionA, violationA, sessionB, violationB){
 						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
 							  sessionB.submissions[violationB.submission].title + "'" + " should be at different times.";
@@ -347,7 +349,7 @@ var CCOps = function(){
 	for(var i in fitconstraints){
 	    for(var j in fitconstraints[i]){
 		var score = fitconstraints[i][j].map(function(x){return scores[x]}).reduce(function(p,c,i,a) {return p + c;});
-		if(score > CCOps.scoreThreshold || score < (-1 * CCOps.scoreThreshold)){
+		if(score > CCOps.goodThreshold || score < (-1 * CCOps.scoreThreshold)){
 		    var constraint = generateFitInSessionConstraint(i, j, score);
 		    CCOps.allConstraints.push(constraint);
 		    if(score > 0){
@@ -552,7 +554,7 @@ var CCOps = function(){
 //	CCOps.allConstraints.push(example5);
 //	CCOps.allConstraints.push(example6);
 	
-	getAllConflicts();
+	//getAllConflicts();
 //	console.log(new Date().getTime() / 1000);
     }
 
@@ -2311,7 +2313,11 @@ var CCOps = function(){
     function updateAllConstraintEntities(affectedSessions){
 	// array of session ids
 	for(var i in CCOps.allConstraints){
+	    if(!(CCOps.allConstraints[i].type in protoConstraints)){
+		
+	    
 	    updateConstraintEntities(affectedSessions, CCOps.allConstraints[i]);
+	    }
 	}
     }
 
@@ -2707,6 +2713,7 @@ var CCOps = function(){
 	    generatePersonaConstraints:	    generatePersonaConstraints,
 	    generateAuthorConstraints: generateAuthorConstraints,
 	    scoreThreshold: scoreThreshold,
+	    goodThreshold: goodThreshold,
 	    fitMat: fitMat,
 	    notokMat: notokMat,
 	    intMat: intMat,
