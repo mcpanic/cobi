@@ -247,8 +247,13 @@ var CCOps = function(){
 	if(type == 'authorInTwoSessions'){
 	    ret = function (s1, s2) {
 		var names = e1.map(function(x) {return allAuthors[x].firstName + " " + allAuthors[x].lastName}).join(', ');
-		var fill = " is";
-		if(e1.length > 1) fill = " are";
+		var fill = " has a paper ";
+		var prefill = "Author ";
+		if(e1.length > 1) {
+		    fill = " have a paper ";
+		    prefill = "Authors "
+		}
+		
 		return names + fill +  " in both '" + 
 		    abbrTitle(allSessions[s1].title) + "' and '" + abbrTitle(allSessions[s2].title) + "'.";
 	    }
@@ -259,17 +264,17 @@ var CCOps = function(){
 	    }
 	}else if(type == 'great'){
 	    ret = function (s1, s2) {
-		return "'" + abbrTitle(allSubmissions[e1].title) + "' and '" + abbrTitle(allSubmissions[e2].title) + "' are great in the same session.";
+		return "Authors noted that '" + abbrTitle(allSubmissions[e1].title) + "' and '" + abbrTitle(allSubmissions[e2].title) + "' fit well in the same session.";
 	    }
 	}else if(type == 'notok'){
 	    ret = function (s1, s2) {
-		return "'" + abbrTitle(allSubmissions[e1].title) + "' and '" + 
-		    abbrTitle(allSubmissions[e2].title) + "' should not be in the same session.";
+		return "Authors noted that '" + abbrTitle(allSubmissions[e1].title) + "' and '" + 
+		    abbrTitle(allSubmissions[e2].title) + "' do not fit in the same session.";
 	    }
 	}else if(type == 'interested'){
 	    ret = function (s1, s2) {
-		return "'" + abbrTitle(allSubmissions[e1].title) + "' and '" + 
-		    abbrTitle(allSubmissions[e2].title) + "' should not be in opposing sessions.";
+		return "Authors noted that '" + abbrTitle(allSubmissions[e1].title) + "' and '" + 
+		    abbrTitle(allSubmissions[e2].title) + "' are of mutual interest and should not be in opposing sessions.";
 	    }
 	}
 	return ret;
