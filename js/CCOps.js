@@ -1980,40 +1980,45 @@ var CCOps = function(){
     
     function createSwapDetails(cc, space){
 	var conflictsResolved = 0;
+	
 	for(var i in cc.conflictsCausedByCandidate){
-	    if(cc.conflictsCausedByCandidate[i] in protoConstraints &&
+	    if(cc.conflictsCausedByCandidate[i].type in protoConstraints &&
 	       protoConstraints[cc.conflictsCausedByCandidate[i].type] > 0){
 		conflictsResolved-=1;
 	    }else{
 	    	conflictsResolved+=1;
 	    }
 	}
+		
 	for(var i in cc.conflictsCausedByItem){
-	    if(cc.conflictsCausedByItem[i] in protoConstraints &&
+	    if(cc.conflictsCausedByItem[i].type in protoConstraints &&
 	       protoConstraints[cc.conflictsCausedByItem[i].type] > 0){
 		conflictsResolved-=1;
 	    }else{
 	    	conflictsResolved+=1;
 	    }
 	}
+		
 	for(var i in cc.conflictsCausedByOffending){
-	    if(cc.conflictsCausedByOffending[i] in protoConstraints &&
+	    if(cc.conflictsCausedByOffending[i].type in protoConstraints &&
 	       protoConstraints[cc.conflictsCausedByOffending[i].type] > 0){
 		conflictsResolved+=1;
 	    }else{
 	    	conflictsResolved-=1;
 	    }
 	}
+		
 	for(var i in cc.conflictsCausedByCandidateAtOffending){
-	    if(cc.conflictsCausedByCandidateAtOffending[i] in protoConstraints &&
+	    if(cc.conflictsCausedByCandidateAtOffending[i].type in protoConstraints &&
 	       protoConstraints[cc.conflictsCausedByCandidateAtOffending[i].type] > 0){
 		conflictsResolved+=1;
 	    }else{
 	    	conflictsResolved-=1;
 	    }
 	}
-	
-//	cc.conflictsCausedByCandidate.length + 
+		
+
+	    
 //	    cc.conflictsCausedByItem.length - 
 //	    cc.conflictsCausedByOffending.length - 
 //	    cc.conflictsCausedByCandidateAtOffending.length;
