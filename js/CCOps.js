@@ -276,7 +276,7 @@ var CCOps = function(){
     }
     
     function abbrTitle(title){
-	var maxLength = 40;
+	var maxLength = 35;
 	if(title.length < maxLength){
 	    return title;
 	}
@@ -291,7 +291,7 @@ var CCOps = function(){
 		abbr += " ";
 		len += titlesplit[i].length;
 	    }else{
-		return abbr.trim() + "...";
+		return "<span class='titlemsg'>" + abbr.trim() + "..." + "</span>";
 	    }
 	}
 	return "<span class='titlemsg'>" + abbr.trim() + "..." + "</span>";
