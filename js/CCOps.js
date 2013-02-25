@@ -769,11 +769,11 @@ var CCOps = function(){
 	ret["paper"] = [];
 	var subs = s.submissions;
 	
-	for(var p = 0, len = subs.length; p < len; p++){
+	for(var p2 = 0, len = subs.length; p2 < len; p2++){
 	    var conflicts = [];
-	    var great = checkSubSubConstraint(fitMat, p, subs[p].id, s, 'great');
+	    var great = checkSubSubConstraint(fitMat, p, subs[p2].id, s, 'great');
 	    if(great != null) conflicts.push(great);
-	    var notok = checkSubSubConstraint(notokMat, p, subs[p].id, s, 'notok');
+	    var notok = checkSubSubConstraint(notokMat, p, subs[p2].id, s, 'notok');
 	    if(notok != null) conflicts.push(notok);
 	    ret["paper"].push(conflicts);
 	    ret["sum"] = ret["sum"].concat(conflicts);
