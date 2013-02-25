@@ -283,7 +283,7 @@ var CCOps = function(){
     function abbrTitle(title){
 	var maxLength = 35;
 	if(title.length < maxLength){
-	    return "span class='titlemsg'>" + title + "</span>";
+	    return "<span class='titlemsg'>" + title + "</span>";
 	}
 	var titlesplit = title.split(' ');
 	var len = 0;
@@ -462,7 +462,7 @@ var CCOps = function(){
 								      " is in both '" + 
 								      sessionA.title + "' and '" + sessionB.title + "'.";
 							      },
-							      -20,
+							      -100,
 							      "because authors should only have to be at one place at any given time",
 							      [new Rule('author', function(x){ return true})],
 							      [new Rule('author', function(x){ return true})],
@@ -794,7 +794,7 @@ var CCOps = function(){
 	// Find all proto conflicts between p and submissions in s 
 	var ret = {};
 	ret["sum"] = [];
-	ret["paper"] = [];
+	ret["paper"] = {};
 	var subs = s.submissions;
 	
 	for(var p2 = 0, len = subs.length; p2 < len; p2++){
@@ -803,7 +803,7 @@ var CCOps = function(){
 	    if(great != null) conflicts.push(great);
 	    var notok = checkSubSubConstraint(notokMat, p, subs[p2].id, s, 'notok');
 	    if(notok != null) conflicts.push(notok);
-	    ret["paper"].push(conflicts);
+	    ret["paper"][subs[p2].id] = conflicts;
 	    ret["sum"] = ret["sum"].concat(conflicts);
 	}
 	return ret;
@@ -1647,6 +1647,12 @@ var CCOps = function(){
 				var conflictsCausedByOffending = [];
 				conflictsCausedByOffending = conflictsCausedByOffending.concat(conflictsWithoutSession);
 				conflictsCausedByOffending = conflictsCausedByOffending.concat(extractAllButFromSession(conflictsWithSession, subs[p2].id));
+				if(subs[p2].id =='tochi124'){
+				    console.log(conflictsWithoutSession);
+				    console.log(conflictsWithSession);
+				    
+				}
+
 				var conflictsCausedByCandidateAtOffending = [];
 				if(!(p.id in unscheduledSubmissions) && !(p.session in unscheduled)){
 				    var s2row = computeProtoPaperWithRowAtTimeSlot(subs[p2].id, allSessions[p.session].date, allSessions[p.session].time);
@@ -1891,9 +1897,6 @@ var CCOps = function(){
 	    var p = unscheduledSubmissions[p2];
 
 	    if(matchingSessionPaper(s, p)){
-		console.log(s);
-		console.log(p);
-		console.log("HEREEE");
 		var conflictsCausedByCandidate = [];
 		var conflictsCausedByCandidateAtOffending = [];
 		if(!(s.id in unscheduled)){
