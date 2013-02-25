@@ -547,15 +547,15 @@ var Conflicts = function() {
         var pcounts = filterMatchingCount(swapValues, Conflicts.preferencesSeverityList);
         var ccount = ccounts.total;
         var pcount = pcounts.total;
-        var score = ccount; //- pcount;
+        var score = ccount - pcount;
 
        // if the current total already exists, compare and keep the winning one. 
         if (element.find(".swap-total").length > 0){
             var oldScore = parseInt(element.find(".swap-total").text());
-            if (oldScore <= score)    // the lower the better (less conflicts)
+            if (oldScore >= score)    // the lower the better (less conflicts)
                 return;
         }
-        //element.html("");
+        element.html("");
           if (score > 0)
             element.append("<div class='swap-total stronger-text'>" + addSign((-1)*score) + "</div>"); 
           else
@@ -687,21 +687,39 @@ var Conflicts = function() {
             preference_type_count_array[item.type] = 0;
         });
 
+
+        for(var i in CCOps.allConflicts.all){
+            var conflict = CCOps.allConflicts.all[i];
+            $.each(Conflicts.constraintsList, function(index, item){
+                if (conflict.type == item.type) {
+                    conflict_type_count_array[item.type] += 1;            
+                    conflict_severity_count_array[item.severity] += 1;
+                }
+            });
+            $.each(Conflicts.preferencesList, function(index, item){
+                if (conflict.type == item.type)
+                    preference_type_count_array[item.type] += 1;                      
+            });
+        }
+
+
+
+
         $(".slot").each(function(){
             var id = getID($(this));
             if (id !== -1) {
                 if (isSlotOn)
                     displayConflicts(conflictsBySession[id], $(this).find(".display"));
-                var conflicts_array = conflictsBySession[id].map(function(co) {return co.type});          
-                    // for each constraint, count and add a modal dialog with descriptions
-                    $.each(Conflicts.constraintsList, function(index, item){
-                        var filtered_array = conflicts_array.filter(function(x){return x==item.type});
-                        conflict_type_count_array[item.type] += filtered_array.length;            
-                    });
-                    $.each(Conflicts.preferencesList, function(index, item){
-                        var filtered_array = conflicts_array.filter(function(x){return x==item.type});
-                        preference_type_count_array[item.type] += filtered_array.length;            
-                    });
+                // var conflicts_array = conflictsBySession[id].map(function(co) {return co.type});          
+                //     // for each constraint, count and add a modal dialog with descriptions
+                //     $.each(Conflicts.constraintsList, function(index, item){
+                //         var filtered_array = conflicts_array.filter(function(x){return x==item.type});
+                //         conflict_type_count_array[item.type] += filtered_array.length;            
+                //     });
+                //     $.each(Conflicts.preferencesList, function(index, item){
+                //         var filtered_array = conflicts_array.filter(function(x){return x==item.type});
+                //         preference_type_count_array[item.type] += filtered_array.length;            
+                //     });
             } else { // empty cells should clear the display
                 if (isSlotOn)
                     $(this).find(".display").html("");
@@ -718,7 +736,7 @@ var Conflicts = function() {
                 if (conflict.type == $(this).attr("data-type")){
                     $(this).find(".count").html(Math.round(conflict_type_count_array[conflict.type]));
                     total += conflict_type_count_array[conflict.type];
-                    conflict_severity_count_array[conflict.severity] += conflict_type_count_array[conflict.type];
+                    // conflict_severity_count_array[conflict.severity] += conflict_type_count_array[conflict.type];
                 }
             });
         });
