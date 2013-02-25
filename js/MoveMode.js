@@ -257,8 +257,12 @@ var MoveMode = function() {
             }
         });
 
+
         var $cell = null;
         for(var i = 0; i < MoveMode.swapValues.length; i++){    
+            
+if (MoveMode.swapValues[i].target.session == "s284")
+    console.log(MoveMode.swapValues[i]);
             // console.log("SWAP", MoveMode.swapValues[i].target.session);   
             // empty session candidate
             if (MoveMode.swapValues[i].target.session === null){

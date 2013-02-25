@@ -549,13 +549,13 @@ var Conflicts = function() {
         var pcount = pcounts.total;
         var score = ccount; //- pcount;
 
-           // if the current total already exists, compare and keep the winning one. 
-            if (element.find(".swap-total").length > 0){
-                var oldScore = parseInt(element.find(".swap-total").text());
-                if (oldScore <= score)    // the lower the better (less conflicts)
-                    return;
-            }
-
+       // if the current total already exists, compare and keep the winning one. 
+        if (element.find(".swap-total").length > 0){
+            var oldScore = parseInt(element.find(".swap-total").text());
+            if (oldScore <= score)    // the lower the better (less conflicts)
+                return;
+        }
+        //element.html("");
           if (score > 0)
             element.append("<div class='swap-total stronger-text'>" + addSign((-1)*score) + "</div>"); 
           else
