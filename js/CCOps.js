@@ -1961,7 +1961,7 @@ var CCOps = function(){
 	    cc.conflictsCausedByOffending.length - 
 	    cc.conflictsCausedByCandidateAtOffending.length;
 
-	cc = removeAddRemove(cc);
+//	cc = removeAddRemove(cc);
 	
 	return new swapDetails(space,
 			       conflictsResolved,

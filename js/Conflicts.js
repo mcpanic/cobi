@@ -348,6 +348,7 @@ var Conflicts = function() {
      // }
 
      function filterMatchingCount(s, list){
+
         var counts = {};
         counts.total = 0;
         counts.addedDestCount = 0;
@@ -378,6 +379,7 @@ var Conflicts = function() {
                 counts.removedSrcCount++;
             }
         });
+
         return counts;
      }
 
@@ -390,7 +392,8 @@ var Conflicts = function() {
 
         // var swapValues = filterSwapValue(s);
         var ccounts = filterMatchingCount(swapValues, Conflicts.constraintsSeverityList);
-        var pcounts = filterMatchingCount(swapValues, Conflicts.preferencesSeverityList);
+         var pcounts = filterMatchingCount(swapValues, Conflicts.preferencesSeverityList);
+
         var ccount = ccounts.total;
         var pcount = pcounts.total;
         var $display = $("<div/>").addClass("swap-total-full");
@@ -451,6 +454,7 @@ var Conflicts = function() {
 
         var ccounts = filterMatchingCount(swapValues, Conflicts.constraintsSeverityList);
         var pcounts = filterMatchingCount(swapValues, Conflicts.preferencesSeverityList);
+	 	
         var ccount = ccounts.total;
         var pcount = pcounts.total;
         var $display = $("<div/>").addClass("swap-total-full");
@@ -545,21 +549,33 @@ var Conflicts = function() {
 
         var ccounts = filterMatchingCount(swapValues, Conflicts.constraintsSeverityList);
         var pcounts = filterMatchingCount(swapValues, Conflicts.preferencesSeverityList);
+	 if(swapValues.target.session == 's284'){
+	     console.log(swapValues);
+	     console.log(ccounts);
+	     console.log(pcounts);
+	 }
         var ccount = ccounts.total;
         var pcount = pcounts.total;
         var score = ccount - pcount;
 
        // if the current total already exists, compare and keep the winning one. 
         if (element.find(".swap-total").length > 0){
-            var oldScore = parseInt(element.find(".swap-total").text());
+            var oldScore = parseInt(element.find(".swap-total").attr("data-score"));
+	
+    		 if(swapValues.target.session == 's284'){
+    		     console.log(oldScore, score);
+    		 }
+	
             if (oldScore >= score)    // the lower the better (less conflicts)
                 return;
         }
-        element.html("");
-          if (score > 0)
-            element.append("<div class='swap-total stronger-text'>" + addSign((-1)*score) + "</div>"); 
+	      element.html("");
+          if (ccount > 0)
+	      $("<div/>").addClass("swap-total stronger-text").attr("data-score", score).html(addSign((-1)*ccount)).appendTo(element);
+//              element.append("<div class='swap-total stronger-text'>" + addSign((-1)*score)","addSign((-1)*ccount) + "</div>"); 
           else
-            element.append("<div class='swap-total weaker-text'>" + addSign((-1)*score) + "</div>"); 
+	      $("<div/>").addClass("swap-total weaker-text").attr("data-score", score).html(addSign((-1)*ccount)).appendTo(element);
+            //element.append("<div class='swap-total weaker-text'>" + addSign((-1)*ccount) + "</div>"); 
    
           var isChanged = false;
 

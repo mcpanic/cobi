@@ -86,11 +86,11 @@ var communityList = ["ux",
 var DataOps = function() {
     function handleFailedTransaction(t){
 	var rollbackTransaction = new TransactionData(t.uid, t.previousType, t.previous, t.type, t.data);
-//	console.log("rolling back the failed transaction");
+	//	console.log("rolling back the failed transaction");
 	//	console.log(rollbackTransaction);
 	handleTransaction(rollbackTransaction);
     }
-
+    
     function handleTransaction(t){
 	switch (t.type) {
    	case 'lock': 
@@ -570,11 +570,10 @@ var DataOps = function() {
 	CCOps.updateAllConstraintEntities([s2.id]);
 	//  updateAuthorConflicts([s2.id]);
 	//}
-        
-	return {
-	    handleTransaction: handleTransaction,
-	    handleFailedTransaction: handleFailedTransaction
-	}
+    }
+    return {
+	handleTransaction: handleTransaction,
+	handleFailedTransaction: handleFailedTransaction
     }
 }();
 
