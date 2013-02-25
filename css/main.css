@@ -392,8 +392,13 @@ body.loading .modal {
     opacity: 1;
 }
 */
-#program .recommended, #unscheduled .recommended, #unscheduled-papers .recommended, #statusbar .recommended {
-    background: #03BF57 !important; /*#fd8d3c;*/
+/*#program .recommended, #unscheduled .recommended, #unscheduled-papers .recommended, #statusbar .recommended {*/
+.recommended {
+    background: #23E000 !important; /* #03BF57  #fd8d3c;*/
+}
+
+.titlemsg {
+    font-weight: bold;
 }
 
 #program .proposed-swap, #unscheduled .proposed-swap, #unscheduled-papers .proposed-swap {
@@ -717,11 +722,11 @@ body.loading .modal {
 }
 
 [class*="cell-conflict-good"]{
-    background-color: #36B84F;    
+    background-color: #3a87ad; /*#36B84F;    */
 }
 
 .cell-preference{
-    background-color: #36B84F;
+    background-color: #3a87ad; /*#36B84F;    */
 }
 
 .cell-persona{

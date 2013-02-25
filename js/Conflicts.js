@@ -162,8 +162,13 @@ var Conflicts = function() {
     // show details for a conflict added / removed when a +/- icon is clicked.
     function conflictPreviewDisplayHandler(event){
         $(".conflict-preview-display").removeClass("conflict-selected");
-        $(this).addClass("conflict-selected");
-        $(this).closest(".conflicts").find(".conflict-preview-detail").html($(this).attr("data-content")).show();
+        if ($(this).hasClass("conflict-selected")) { // already open, then cloase
+            $(this).removeClass("conflict-selected");
+            $(this).closest(".conflicts").find(".conflict-preview-detail").html($(this).attr("data-content")).hide();
+        } else{    
+            $(this).addClass("conflict-selected");
+            $(this).closest(".conflicts").find(".conflict-preview-detail").html($(this).attr("data-content")).show();
+        }
     }
 
 
@@ -549,11 +554,7 @@ var Conflicts = function() {
 
         var ccounts = filterMatchingCount(swapValues, Conflicts.constraintsSeverityList);
         var pcounts = filterMatchingCount(swapValues, Conflicts.preferencesSeverityList);
-	 if(swapValues.target.session == 's284'){
-	     console.log(swapValues);
-	     console.log(ccounts);
-	     console.log(pcounts);
-	 }
+
         var ccount = ccounts.total;
         var pcount = pcounts.total;
         var score = ccount - pcount;
@@ -561,11 +562,6 @@ var Conflicts = function() {
        // if the current total already exists, compare and keep the winning one. 
         if (element.find(".swap-total").length > 0){
             var oldScore = parseInt(element.find(".swap-total").attr("data-score"));
-	
-    		 if(swapValues.target.session == 's284'){
-    		     console.log(oldScore, score);
-    		 }
-	
             if (oldScore >= score)    // the lower the better (less conflicts)
                 return;
         }
@@ -577,6 +573,17 @@ var Conflicts = function() {
 	      $("<div/>").addClass("swap-total weaker-text").attr("data-score", score).html(addSign((-1)*ccount)).appendTo(element);
             //element.append("<div class='swap-total weaker-text'>" + addSign((-1)*ccount) + "</div>"); 
    
+        // store the best submission (if exists) that has this score
+        console.log(swapValues.target.paper );
+          if (typeof swapValues.target.paper !== "undefined"){
+            if (swapValues.target.paper == null)  // store as string because otherwise it gets ignored
+                element.find(".swap-total").attr("data-best-submission", "null");
+            else
+                element.find(".swap-total").attr("data-best-submission", swapValues.target.paper);
+          }
+            
+
+
           var isChanged = false;
 
          $.each(Conflicts.constraintsSeverityList, function(index, severity){

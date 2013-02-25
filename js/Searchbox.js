@@ -1,5 +1,10 @@
 var Searchbox = function() {
 
+// $(".searchbox .select2-choice").click(function(){
+//     $(".searchbox abbr").trigger("click");
+// });
+
+
     // Initialize the search box functionality
     function initialize(){
         $("#searchbox").select2({

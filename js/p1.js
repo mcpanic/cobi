@@ -379,6 +379,7 @@
         var element;
         var proposedList = [];
         var isProposed = false;
+        var isRecommended = false;
         // console.log("src:", srcType, "dst:", type);
 
         // unscheduled: session null, submission id
@@ -395,6 +396,9 @@
                 // because attr returns all strings, "null" not null is returned.
                 isProposed = $.inArray("null", proposedList) !== -1;
             }
+            if (typeof $session.find(".swap-total").attr("data-best-submission") !== "undefined" 
+                && $session.find(".swap-total").attr("data-best-submission") == "null")
+                isRecommended = true;
             // console.log(session.id, null, isProposed, proposedList);
         // scheduled: session id, submission id
         } else if (type == "scheduled" && session != null && submission != null){
@@ -405,6 +409,9 @@
                 proposedList = $session.attr("data-proposed-swap-paper").split(",");
                 isProposed = $.inArray(submission.id, proposedList) !== -1;
             }
+            if (typeof $session.find(".swap-total").attr("data-best-submission") !== "undefined" 
+                && $session.find(".swap-total").attr("data-best-submission") == submission.id)
+                isRecommended = true;            
             // console.log(session.id, submission.id, isProposed);
         } else {
             console.log("IMPOSSIBLE");
@@ -517,6 +524,9 @@
         if (isProposed)
             $(element).addClass("proposed-swap-paper");
 
+        console.log(isRecommended);
+        if (isRecommended)
+            $(element).addClass("recommended");
         return element;
     }
 
