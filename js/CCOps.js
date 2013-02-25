@@ -254,13 +254,13 @@ var CCOps = function(){
 		    prefill = "Authors "
 		}
 		
-		return names + fill +  " in both '" + 
+		return abbrTitle(names) + fill +  "in both '" + 
 		    abbrTitle(allSessions[s1].title) + "' and '" + abbrTitle(allSessions[s2].title) + "'.";
 	    }
 	}else if(type == 'personaInTwoSessions'){
 	    ret = function (s1, s2) {
-		return "Someone interested in '" + allSessions[s1].personas + "' may want to see both '" + 
-		    abbrTitle(allSessions[s2].title) + "' and '" + abbrTitle(allSessions[s2].title) + "'.";
+		return "Someone interested in '" + abbrTitle(allSessions[s1].personas) + "' may want to see both '" + 
+		    abbrTitle(allSessions[s1].title) + "' and '" + abbrTitle(allSessions[s2].title) + "'.";
 	    }
 	}else if(type == 'great'){
 	    ret = function (s1, s2) {
@@ -283,7 +283,7 @@ var CCOps = function(){
     function abbrTitle(title){
 	var maxLength = 35;
 	if(title.length < maxLength){
-	    return title;
+	    return "span class='titlemsg'>" + title + "</span>";
 	}
 	var titlesplit = title.split(' ');
 	var len = 0;
@@ -1866,9 +1866,9 @@ var CCOps = function(){
 					var conflictsWithRow = computeProtoPaperWithRowAtTimeSlot(p.id, s.date, s.time); //s, p.id);
 					var conflictsWithSession = (computeProtoPaperWithinSession(s, p.id))['sum'];
 					var conflictsWithoutSession = extractAllButFromRow(conflictsWithRow, s.id);
-					console.log(conflictsWithRow);
-					console.log(conflictsWithSession);
-					console.log(conflictsWithoutSession);
+//					console.log(conflictsWithRow);
+//					console.log(conflictsWithSession);
+//					console.log(conflictsWithoutSession);
 
 					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(conflictsWithoutSession);
 					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(conflictsWithSession);
@@ -1889,8 +1889,10 @@ var CCOps = function(){
 	}
 	for(var p2 in unscheduledSubmissions){
 	    var p = unscheduledSubmissions[p2];
-	    
+	    //console.log(s);
+	    //console.log(p);
 	    if(matchingSessionPaper(s, p)){
+		console.log("HEREEE");
 		var conflictsCausedByCandidate = [];
 		var conflictsCausedByCandidateAtOffending = [];
 		if(!(s.id in unscheduled)){
