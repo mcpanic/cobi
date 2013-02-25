@@ -92,7 +92,7 @@ var CCOps = function(){
     var allConflicts = [];
     var authorsourcingData = null;
     var scoreThreshold = 10;
-    var goodThreshold = 4;
+    var goodThreshold = 9;
     var fitMat = {}; // paper to paper fit
     var notokMat = {};
     var intMat = {}; // paper to paper interest
@@ -100,11 +100,11 @@ var CCOps = function(){
     var authorMat = {}; // paper to paper author 
     var personaMat = {}; // session to session persona
     var protoConstraints = {
-	'great': null,
-	'notok': null,
-	'authorInTwoSessions': null,
-	'personaInTwoSessions': null,
-	'interested': null
+	'great': 1,
+	'notok': -1,
+	'authorInTwoSessions': -1,
+	'personaInTwoSessions': -1,
+	'interested': -1
     }
 
     var protoSelfConstraints = {
@@ -259,22 +259,41 @@ var CCOps = function(){
 	    }
 	}else if(type == 'great'){
 	    ret = function (s1, s2) {
-		return "'" + allSubmissions[e1].title + "' and '" + allSubmissions[e2].title + "' are great in the same session.";
+		return "'" + abbrTitle(allSubmissions[e1].title) + "' and '" + abbrTitle(allSubmissions[e2].title) + "' are great in the same session.";
 	    }
 	}else if(type == 'notok'){
 	    ret = function (s1, s2) {
-		return "'" + allSubmissions[e1].title + "' and '" + 
-		    allSubmissions[e2].title + "' should not be in the same session.";
+		return "'" + abbrTitle(allSubmissions[e1].title) + "' and '" + 
+		    abbrTitle(allSubmissions[e2].title) + "' should not be in the same session.";
 	    }
 	}else if(type == 'interested'){
 	    ret = function (s1, s2) {
-		return "'" + allSubmissions[e1].title + "' and '" + 
-		    allSubmissions[e2].title + "' should not be in opposing sessions.";
+		return "'" + abbrTitle(allSubmissions[e1].title) + "' and '" + 
+		    abbrTitle(allSubmissions[e2].title) + "' should not be in opposing sessions.";
 	    }
 	}
 	return ret;
     }
     
+    function abbrTitle(title){
+	var maxLength = 30;
+//	if(title.length < maxLength){
+	    return title;
+//	}
+	var titlesplit = title.split(' ');
+	var len = 0;
+	var abbr = "";
+	var i = 0;
+	
+	while(len + titlesplit[i].length < maxLength){
+	    abbr += titlesplit[i] + " ";
+	    i++;
+	    len += titlesplit[i].length;
+	}
+	return abbr.trim() + "...";
+    }
+
+
     function generateAuthorsourcingConstraints(){
 	var cases = {'great': [], 'ok':[], 'notsure':[],'notok':[]};
 	var scores = {'great': 10,
@@ -1956,11 +1975,46 @@ var CCOps = function(){
     }
     
     function createSwapDetails(cc, space){
-	var conflictsResolved = cc.conflictsCausedByCandidate.length + 
-	    cc.conflictsCausedByItem.length - 
-	    cc.conflictsCausedByOffending.length - 
-	    cc.conflictsCausedByCandidateAtOffending.length;
-
+	var conflictsResolved = 0;
+	for(var i in cc.conflictsCausedByCandidate){
+	    if(cc.conflictsCausedByCandidate in protoConstraints &&
+	       protoConstraints[cc.conflictsCausedByCandidate.type] > 0){
+		conflictsResolved-=1;
+	    }else{
+	    	conflictsResolved+=1;
+	    }
+	}
+	for(var i in cc.conflictsCausedByItem){
+	    if(cc.conflictsCausedByItem in protoConstraints &&
+	       protoConstraints[cc.conflictsCausedByItem.type] > 0){
+		conflictsResolved-=1;
+	    }else{
+	    	conflictsResolved+=1;
+	    }
+	}
+	for(var i in cc.conflictsCausedByOffending){
+	    if(cc.conflictsCausedByOffending in protoConstraints &&
+	       protoConstraints[cc.conflictsCausedByOffending.type] > 0){
+		conflictsResolved+=1;
+	    }else{
+	    	conflictsResolved-=1;
+	    }
+	}
+	for(var i in cc.conflictsCausedByCandidateAtOffending){
+	    if(cc.conflictsCausedByCandidateAtOffending in protoConstraints &&
+	       protoConstraints[cc.conflictsCausedByCandidateAtOffending.type] > 0){
+		conflictsResolved+=1;
+	    }else{
+	    	conflictsResolved-=1;
+	    }
+	}
+	
+//	cc.conflictsCausedByCandidate.length + 
+//	    cc.conflictsCausedByItem.length - 
+//	    cc.conflictsCausedByOffending.length - 
+//	    cc.conflictsCausedByCandidateAtOffending.length;
+	
+	
 //	cc = removeAddRemove(cc);
 	
 	return new swapDetails(space,
