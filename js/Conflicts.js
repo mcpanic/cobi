@@ -549,11 +549,11 @@ var Conflicts = function() {
 
         var ccounts = filterMatchingCount(swapValues, Conflicts.constraintsSeverityList);
         var pcounts = filterMatchingCount(swapValues, Conflicts.preferencesSeverityList);
-	 if(swapValues.target.session == 's284'){
-	     console.log(swapValues);
-	     console.log(ccounts);
-	     console.log(pcounts);
-	 }
+	// if(swapValues.target.session == 's284'){
+//	     console.log(swapValues);
+//	     console.log(ccounts);
+//	     console.log(pcounts);
+//	 }
         var ccount = ccounts.total;
         var pcount = pcounts.total;
         var score = ccount - pcount;
