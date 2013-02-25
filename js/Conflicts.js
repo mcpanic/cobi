@@ -560,7 +560,7 @@ var Conflicts = function() {
         var pcount = pcounts.total;
         var score = ccount - pcount;
 
-       // if the current total already exists, compare and keep the winning one. 
+        // if the current total already exists, compare and keep the winning one. 
         if (element.find(".swap-total").length > 0){
             var oldScore = parseInt(element.find(".swap-total").attr("data-score"));
             if (oldScore >= score)    // the lower the better (less conflicts)
@@ -575,15 +575,13 @@ var Conflicts = function() {
             //element.append("<div class='swap-total weaker-text'>" + addSign((-1)*ccount) + "</div>"); 
    
         // store the best submission (if exists) that has this score
-        console.log(swapValues.target.paper );
+        //console.log(swapValues.target.paper );
           if (typeof swapValues.target.paper !== "undefined"){
             if (swapValues.target.paper == null)  // store as string because otherwise it gets ignored
                 element.find(".swap-total").attr("data-best-submission", "null");
             else
                 element.find(".swap-total").attr("data-best-submission", swapValues.target.paper);
           }
-            
-
 
           var isChanged = false;
 
@@ -771,7 +769,7 @@ var Conflicts = function() {
         });
 
         $("#list-constraints li.constraint-entry").each(function(index, item){
-            console.log("update", $(item).hasClass("view-option-active"), $(item).attr("data-type"));
+            // console.log("update", $(item).hasClass("view-option-active"), $(item).attr("data-type"));
             if ($(item).hasClass("view-option-active"))
                 updateConstraintBackground($(item).attr("data-type"), true);
             else
@@ -792,7 +790,7 @@ var Conflicts = function() {
         $("#preferences-count").html(Math.round(total));
 
         $("#list-preferences li.preference-entry").each(function(index, item){
-            console.log("update", $(item).hasClass("view-option-active"), $(item).attr("data-type"));
+            // console.log("update", $(item).hasClass("view-option-active"), $(item).attr("data-type"));
             if ($(item).hasClass("view-option-active"))
                 updatePreferenceBackground($(item).attr("data-type"), true);
             else

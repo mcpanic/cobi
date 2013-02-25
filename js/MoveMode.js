@@ -273,9 +273,14 @@ var MoveMode = function() {
                 }
                 var submission = MoveMode.swapValues[i].target.paper;   
                 // Paper-level unscheduled candidate exists: session null, submission id
-                if (typeof submission !== "undefined") {                    
-                        $("#"+submission).attr("data-proposed-swap-paper", "true").addClass("proposed-swap");
-                        // console.log("runPropose: unscheduled");   
+                if (typeof submission !== "undefined") {     
+                    $cell = $("#"+submission);
+                    $("#"+submission).attr("data-proposed-swap-paper", "true").addClass("proposed-swap");
+                    if (numSpecialRecommended > 0){
+                        recommendedSpecialList.push($("#"+submission));
+                        numSpecialRecommended--;
+                    }
+                    console.log("runPropose: unscheduled");   
                 }   
             // non-empty session candidate
             } else {
