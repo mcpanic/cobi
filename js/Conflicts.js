@@ -28,7 +28,7 @@ var Conflicts = function() {
                 constraint.description = c.description;
                 // constraint.color = "#913A52";
                 // TODO: make it more reasonable
-                if (c.importance < -5) {
+                if (c.importance < -10) {
                     constraint.severity = "high";
                 } else if (c.importance < 0)
                     constraint.severity = "medium";
