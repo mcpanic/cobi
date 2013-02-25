@@ -296,7 +296,7 @@ body.loading .modal {
 
 #program .cell .display, #unscheduled .cell .display, #unscheduled-papers .cell .display {
     /*width: 44px;*/
-    height: 30px;
+    height: 40px;
     border-top: solid 1px #cccccc;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -309,6 +309,11 @@ body.loading .modal {
     border-top: solid 1px #cccccc;
     overflow-x: hidden;
     overflow-y: hidden;    
+}
+
+/* for line alignment when the submission is empty so no paper info is displayed */
+.submission-empty .conflicts {
+    margin-top: 20px;
 }
 
 #unscheduled .cell .display, #unscheduled-papers .cell .display, #unscheduled .cell .conflicts, #unscheduled-papers .cell .conflicts {
@@ -507,7 +512,7 @@ body.loading .modal {
 }
 
 .list-submissions .submission-empty {
-    padding: 20px 10px 30px 0px;
+    padding: 20px 10px 30px 10px;
 }
 
 .list-submissions .submission-title {
@@ -522,14 +527,21 @@ body.loading .modal {
     width: 17px;
     height: 23px;
     padding-left: 3px;
-    padding-top: 7px;
+    padding-top: 5px;
     font-size: 15px;
     font-weight: bold;
 }
 
+/* session info */
 .swap-total-full {
     font-size: 14px;
     margin: 5px;
+}
+
+/* submission info */
+.list-submissions .swap-total-full {
+    font-size: 12px;
+    margin: 5px 5px 5px 0;
 }
 
 .stronger-text {
@@ -544,7 +556,18 @@ body.loading .modal {
     float: left;
     width: 25px;
     margin-left: 3px;
-    margin-top: 3px;
+    /*margin-top: 3px;*/
+}
+
+.conflict-preview-line{
+    float: left;
+    width: 100%;
+    height: 0px;
+    border: 1px solid #dddddd;    
+}
+
+.pref-type-preview{
+    margin-left:22px;
 }
 
 /* color-coded rectangle in the legend */

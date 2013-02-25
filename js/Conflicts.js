@@ -16,7 +16,7 @@ var Conflicts = function() {
     // From CCOps.allConstraints, get all existing contraints existing in the data.
     // TODO: when constraint types are added as a transaction, handle them dynamically here, working with Polling.js
     function updateConstraintsList(){
-        if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+        // if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
 
             var typeHash = {};
             $.each(CCOps.allConstraints, function(index, c){
@@ -45,9 +45,9 @@ var Conflicts = function() {
             Conflicts.constraintsList.sort(function(a,b){ return a.importance > b.importance; });
             Conflicts.preferencesList.sort(function(a,b){ return a.importance > b.importance; });
             console.log(Conflicts.constraintsList, Conflicts.preferencesList);        
-        } else {
-            Conflicts.constraintsList = constraints_list;
-        }
+        // } else {
+        //     Conflicts.constraintsList = constraints_list;
+        // }
     }
 
 	function bindEvents(){
@@ -245,7 +245,7 @@ var Conflicts = function() {
         if (conflicts.length > 0) {
             $(element).append("<div class='swap-total-full stronger-text'>" + conflicts.length 
               + " conflict" + plural 
-              + ". <small>(click icons for details)</small></div>"); 
+              + ". <small>(click icon for detail)</small></div>"); 
         }
         
         var isChanged = false;
@@ -298,7 +298,7 @@ var Conflicts = function() {
                 if (conflicts.length > 0) {
                     $(element).append("<div class='swap-total-full stronger-text'>" + conflicts.length 
                       + " conflict" + plural 
-                      + ". <small>(click icons for details)</small></div>"); 
+                      + ". <small>(click icon for detail)</small></div>"); 
                 }
                 
                 var isChanged = false;
@@ -399,10 +399,10 @@ var Conflicts = function() {
         else    
             $("<span/>").addClass("weaker-text").append((-1)*ccount + " conflict" + (isPlural(ccount) ? "s" : "") + " will be added.").appendTo($display);
         if (pcount > 0)
-            $("<span/>").addClass("stronger-text").append(" " + pcount + " preference" + (isPlural(pcount) ? "s" : "") + " will be missed.").appendTo($display);
+            $("<span/>").addClass("weaker-text").append(" " + pcount + " preference" + (isPlural(pcount) ? "s" : "") + " will be missed.").appendTo($display);
         else    
-            $("<span/>").addClass("weaker-text").append(" " + (-1)*pcount + " preference" + (isPlural(pcount) ? "s" : "") + " will be met.").appendTo($display);
-        $display.append("<small>(click icons for details)</small>"); 
+            $("<span/>").addClass("stronger-text").append(" " + (-1)*pcount + " preference" + (isPlural(pcount) ? "s" : "") + " will be met.").appendTo($display);
+        $display.append(" <small>(click icon for detail)</small>"); 
         $(element).append($display);
 
           var isChanged = false;
@@ -459,10 +459,10 @@ var Conflicts = function() {
         else    
             $("<span/>").addClass("weaker-text").append((-1)*ccount + " conflict" + (isPlural(ccount) ? "s" : "") + " will be added.").appendTo($display);
         if (pcount > 0)
-            $("<span/>").addClass("stronger-text").append(" " + pcount + " preference" + (isPlural(pcount) ? "s" : "") + " will be missed.").appendTo($display);
+            $("<span/>").addClass("weaker-text").append(" " + pcount + " preference" + (isPlural(pcount) ? "s" : "") + " will be missed.").appendTo($display);
         else    
-            $("<span/>").addClass("weaker-text").append(" " + (-1)*pcount + " preference" + (isPlural(pcount) ? "s" : "") + " will be met.").appendTo($display);
-        $display.append("<small>(click icons for details)</small>"); 
+            $("<span/>").addClass("stronger-text").append(" " + (-1)*pcount + " preference" + (isPlural(pcount) ? "s" : "") + " will be met.").appendTo($display);
+        $display.append(" <small>(click icon for detail)</small>"); 
         $(element).append($display);
 
           var isChanged = false;
@@ -498,11 +498,11 @@ var Conflicts = function() {
         //   if (swapValues.value > 0)
         //     $(element).append("<div class='swap-total-full stronger-text'>" + swapValues.value 
         //       + " conflict" + plural 
-        //       + " will be resolved. <small>(click icons for details)</small></div>"); 
+        //       + " will be resolved. <small>(click icon for detail)</small></div>"); 
         //   else
         //     $(element).append("<div class='swap-total-full weaker-text'>" + (-1)*swapValues.value 
         //         + " conflict" + plural 
-        //         + " will be added. <small>(click icons for details)<small></div> "); 
+        //         + " will be added. <small>(click icon for detail)<small></div> "); 
                 
         //   var isChanged = false;
         //   $("<div/>").addClass("conflict-preview-display-div-wrapper").appendTo($(element));
@@ -543,26 +543,33 @@ var Conflicts = function() {
                return;
           // var swapValues = filterSwapValue(s);
 
+        var ccounts = filterMatchingCount(swapValues, Conflicts.constraintsSeverityList);
+        var pcounts = filterMatchingCount(swapValues, Conflicts.preferencesSeverityList);
+        var ccount = ccounts.total;
+        var pcount = pcounts.total;
+        var score = ccount; //- pcount;
+
            // if the current total already exists, compare and keep the winning one. 
             if (element.find(".swap-total").length > 0){
                 var oldScore = parseInt(element.find(".swap-total").text());
-                var newScore =  (-1)*swapValues.value;
-                if (oldScore <= newScore)    // the lower the better (less conflicts)
+                if (oldScore <= score)    // the lower the better (less conflicts)
                     return;
             }
 
-          if (swapValues.value > 0)
-            element.append("<div class='swap-total stronger-text'>" + addSign((-1)*swapValues.value) + "</div>"); 
+          if (score > 0)
+            element.append("<div class='swap-total stronger-text'>" + addSign((-1)*score) + "</div>"); 
           else
-            element.append("<div class='swap-total weaker-text'>" + addSign((-1)*swapValues.value) + "</div>"); 
+            element.append("<div class='swap-total weaker-text'>" + addSign((-1)*score) + "</div>"); 
    
           var isChanged = false;
 
          $.each(Conflicts.constraintsSeverityList, function(index, severity){
             var netCount = getConflictLengthBySeverity(swapValues.addedSrc, severity) + getConflictLengthBySeverity(swapValues.addedDest, severity)
                   - getConflictLengthBySeverity(swapValues.removedSrc, severity) - getConflictLengthBySeverity(swapValues.removedDest, severity);
-            if (netCount == 0) 
-              return;
+            if (netCount == 0) {
+                $("<div/>").addClass("conflict-type-preview").html("&nbsp;").appendTo(element);
+                return;
+            }
             isChanged = true;
             var $palette = $(displayConflictPreviewHTML(netCount)).addClass("cell-conflict-" + severity);
             var netCountClass = "conflict-netcount-added";
@@ -572,6 +579,24 @@ var Conflicts = function() {
             var $inner = $("<div class='conflict-type-preview'/>")
                 .append($palette) 
                 .append("<span class='" + netCountClass + "'>" + addSign(netCount) + "</span>");
+            element.append($inner);
+         });
+
+         $.each(Conflicts.preferencesSeverityList, function(index, severity){
+            var netCount = getConflictLengthBySeverity(swapValues.addedSrc, severity) + getConflictLengthBySeverity(swapValues.addedDest, severity)
+                  - getConflictLengthBySeverity(swapValues.removedSrc, severity) - getConflictLengthBySeverity(swapValues.removedDest, severity);
+            if (netCount == 0) 
+              return;
+            // isChanged = true;
+            var $palette = $(displayConflictPreviewHTML(netCount)).addClass("cell-conflict-" + severity);
+            var netCountClass = "conflict-netcount-added";
+            if (netCount < 0)
+                netCountClass = "conflict-netcount-removed";
+            
+            var $inner = $("<div class='conflict-type-preview'/>")
+                .append($palette).addClass("pref-type-preview")
+                .append("<span class='" + netCountClass + "'>" + addSign(netCount) + "</span>");
+            $("<div/>").addClass("conflict-preview-line").html("&nbsp;").appendTo(element);
             element.append($inner);
          });
 
