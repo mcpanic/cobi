@@ -283,7 +283,7 @@ var CCOps = function(){
     function abbrTitle(title){
 	var maxLength = 35;
 	if(title.length < maxLength){
-	    return "span class='titlemsg'>" + title + "</span>";
+	    return "<span class='titlemsg'>" + title + "</span>";
 	}
 	var titlesplit = title.split(' ');
 	var len = 0;

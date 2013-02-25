@@ -385,6 +385,9 @@
         // unscheduled: session null, submission id
         if (type == "unscheduled" && session == null){
             isProposed = typeof $("#"+submission.id).attr("data-proposed-swap-paper") !== "undefined";
+            // if (typeof $("#"+submission.id).find(".swap-total").attr("data-best-submission") !== "undefined" 
+            //     && $("#"+submission.id).find(".swap-total").attr("data-best-submission") == "null")
+            //     isRecommended = true;            
             // console.log(null, submission.id, isProposed);
         // empty: session id, submission null
         } else if (type == "empty" && submission == null){
@@ -524,7 +527,6 @@
         if (isProposed)
             $(element).addClass("proposed-swap-paper");
 
-        console.log(isRecommended);
         if (isRecommended)
             $(element).addClass("recommended");
         return element;
