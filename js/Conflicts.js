@@ -421,25 +421,25 @@ var Conflicts = function() {
           $.each(Conflicts.constraintsList, function(index, conflict){  
             isChanged = true;           
             if (swapValues.addedSrc != null && ccounts.addedSrcCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Conflict added]", swapValues.addedSrc, conflict, "+"));
+                $wrapper.append(displayConflictFullHTML("[Conflict added at source]", swapValues.addedSrc, conflict, "+"));
             if (swapValues.addedDest != null && ccounts.addedDestCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Conflict added]", swapValues.addedDest, conflict, "+"))
+                $wrapper.append(displayConflictFullHTML("[Conflict added here]", swapValues.addedDest, conflict, "+"))
             if (swapValues.removedSrc != null && ccounts.removedSrcCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedSrc, conflict, "-"))
+                $wrapper.append(displayConflictFullHTML("[Conflict resolved at source]", swapValues.removedSrc, conflict, "-"))
             if (swapValues.removedDest != null && ccounts.removedDestCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedDest, conflict, "-"));                 
+                $wrapper.append(displayConflictFullHTML("[Conflict resolved here]", swapValues.removedDest, conflict, "-"));                 
           });
 
           $.each(Conflicts.preferencesList, function(index, conflict){  
             isChanged = true;           
             if (swapValues.addedSrc != null && pcounts.addedSrcCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Preference met]", swapValues.addedSrc, conflict, "+"));
+                $wrapper.append(displayConflictFullHTML("[Preference met at source]", swapValues.addedSrc, conflict, "+"));
             if (swapValues.addedDest != null && pcounts.addedDestCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Preference met]", swapValues.addedDest, conflict, "+"))
+                $wrapper.append(displayConflictFullHTML("[Preference met here]", swapValues.addedDest, conflict, "+"))
             if (swapValues.removedSrc != null && pcounts.removedSrcCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Preference missed]", swapValues.removedSrc, conflict, "-"))
+                $wrapper.append(displayConflictFullHTML("[Preference missed at source]", swapValues.removedSrc, conflict, "-"))
             if (swapValues.removedDest != null && pcounts.removedDestCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Preference missed]", swapValues.removedDest, conflict, "-"));              
+                $wrapper.append(displayConflictFullHTML("[Preference missed here]", swapValues.removedDest, conflict, "-"));              
           });
 
 
@@ -482,25 +482,25 @@ var Conflicts = function() {
           $.each(Conflicts.constraintsList, function(index, conflict){  
             isChanged = true;           
             if (swapValues.addedSrc != null && ccounts.addedSrcCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Conflict added]", swapValues.addedSrc, conflict, "+"));
+                $wrapper.append(displayConflictFullHTML("[Conflict added at source]", swapValues.addedSrc, conflict, "+"));
             if (swapValues.addedDest != null && ccounts.addedDestCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Conflict added]", swapValues.addedDest, conflict, "+"))
+                $wrapper.append(displayConflictFullHTML("[Conflict added here]", swapValues.addedDest, conflict, "+"))
             if (swapValues.removedSrc != null && ccounts.removedSrcCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedSrc, conflict, "-"))
+                $wrapper.append(displayConflictFullHTML("[Conflict resolved at source]", swapValues.removedSrc, conflict, "-"))
             if (swapValues.removedDest != null && ccounts.removedDestCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Conflict resolved]", swapValues.removedDest, conflict, "-"));                 
+                $wrapper.append(displayConflictFullHTML("[Conflict resolved here]", swapValues.removedDest, conflict, "-"));                 
           });
 
           $.each(Conflicts.preferencesList, function(index, conflict){  
             isChanged = true;           
             if (swapValues.addedSrc != null && pcounts.addedSrcCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Preference met]", swapValues.addedSrc, conflict, "+"));
+                $wrapper.append(displayConflictFullHTML("[Preference met at source]", swapValues.addedSrc, conflict, "+"));
             if (swapValues.addedDest != null && pcounts.addedDestCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Preference met]", swapValues.addedDest, conflict, "+"))
+                $wrapper.append(displayConflictFullHTML("[Preference met here]", swapValues.addedDest, conflict, "+"))
             if (swapValues.removedSrc != null && pcounts.removedSrcCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Preference missed]", swapValues.removedSrc, conflict, "-"))
+                $wrapper.append(displayConflictFullHTML("[Preference missed at source]", swapValues.removedSrc, conflict, "-"))
             if (swapValues.removedDest != null && pcounts.removedDestCount > 0)
-                $wrapper.append(displayConflictFullHTML("[Preference missed]", swapValues.removedDest, conflict, "-"));              
+                $wrapper.append(displayConflictFullHTML("[Preference missed here]", swapValues.removedDest, conflict, "-"));              
           });
 
         // var swapValues = filterSwapValue(s);
