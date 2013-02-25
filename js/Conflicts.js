@@ -161,8 +161,9 @@ var Conflicts = function() {
 
     // show details for a conflict added / removed when a +/- icon is clicked.
     function conflictPreviewDisplayHandler(event){
+        var toggle = $(this).hasClass("conflict-selected");
         $(".conflict-preview-display").removeClass("conflict-selected");
-        if ($(this).hasClass("conflict-selected")) { // already open, then cloase
+        if (toggle) { // already open, then close
             $(this).removeClass("conflict-selected");
             $(this).closest(".conflicts").find(".conflict-preview-detail").html($(this).attr("data-content")).hide();
         } else{    
