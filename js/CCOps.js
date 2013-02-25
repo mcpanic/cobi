@@ -1889,9 +1889,10 @@ var CCOps = function(){
 	}
 	for(var p2 in unscheduledSubmissions){
 	    var p = unscheduledSubmissions[p2];
-	    //console.log(s);
-	    //console.log(p);
+
 	    if(matchingSessionPaper(s, p)){
+		console.log(s);
+		console.log(p);
 		console.log("HEREEE");
 		var conflictsCausedByCandidate = [];
 		var conflictsCausedByCandidateAtOffending = [];
@@ -1907,7 +1908,7 @@ var CCOps = function(){
 			  conflictsCausedByCandidate: conflictsCausedByCandidate,
 			  conflictsCausedByOffending: conflictsCausedByOffending,
 			  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(s.id, x)})};
-		var space = new sessionPaper(session, p.id);
+		var space = new sessionPaper(null, p.id); //session, p.id
 		unscheduleValue.push(createSwapDetails(cc, space));
 	    }
 	}
