@@ -205,9 +205,10 @@ var CCOps = function(){
 		    'notok': "papers that don't fit well in the same session"};
 	var type = 'great';
 	if(score < 0) type = 'notok';
-
+	if(score < 0) score = -10; // TODO: hack to show as lower priority
 	var filler = {'great' : ' are good ',
 		      'notok': ' should not be '};
+	
 	
 	var constraint = new EntityPairConstraint(type,
 						  text[type],
@@ -455,7 +456,7 @@ var CCOps = function(){
     
     function generateAuthorConstraints(){
 	var authorconstraint = new EntityFilterPairConstraint("authorInTwoSessions", 
-							      "same author should not be in opposing sessions", 
+							      "authors with papers in opposing sessions", 
 							      function (sessionA, violationA, sessionB, violationB){
 								  return sessionA.submissions[violationA.submission].authors[violationA.author].firstName + " " + 
 								      sessionA.submissions[violationA.submission].authors[violationA.author].lastName + 
