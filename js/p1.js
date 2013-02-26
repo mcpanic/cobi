@@ -105,7 +105,6 @@
         // Display conflicts
         if (typeof session !== "undefined" && session != null && typeof session.id !== "undefined" && session.id != null) {
             $(element).append("<br>").append(Conflicts.displayViewModeSessionFullConflicts(session.id));
-            // $(element).append("<br>").append(outerHTML($cell.find(".detail .conflicts")[0]));
         }
 
         if (typeof session !== "undefined" && session != null && typeof session.submissions !== "undefined" && session.submissions != null) {
@@ -115,7 +114,6 @@
     }
 
     function _getCancelButton(){
-        // return "  <button class='btn move-cancel-button'>Cancel Move</button>";
         return $("<button/>").addClass("btn move-cancel-button").html("Cancel Move");
     }
 
