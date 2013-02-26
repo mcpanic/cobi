@@ -255,36 +255,42 @@ var CCOps = function(){
 		    prefill = "Authors "
 		}
 		
-		return abbrTitle(names) + fill +  "in both '" + 
-		    abbrTitle(allSessions[s1].title) + "' and '" + abbrTitle(allSessions[s2].title) + "'.";
+		return abbrItem(names, 'author-msg') + fill +  "in both '" + 
+		    formatTitle(allSessions[s1].title, s1, null) + "' and '" + formatTitle(allSessions[s2].title, s2, null) + "'.";
 	    }
 	}else if(type == 'personaInTwoSessions'){
 	    ret = function (s1, s2) {
-		return "Someone interested in '" + abbrTitle(allSessions[s1].personas) + "' may want to see both '" + 
-		    abbrTitle(allSessions[s1].title) + "' and '" + abbrTitle(allSessions[s2].title) + "'.";
+		return "Someone interested in '" + abbrItem(allSessions[s1].personas, 'persona-msg') + "' may want to see both '" + 
+		    formatTitle(allSessions[s1].title, s1, null) + "' and '" + formatTitle(allSessions[s2].title, s2, null) + "'.";
 	    }
 	}else if(type == 'great'){
 	    ret = function (s1, s2) {
-		return "Authors noted that '" + abbrTitle(allSubmissions[e1].title) + "' and '" + abbrTitle(allSubmissions[e2].title) + "' fit well in the same session.";
+		return "Authors noted that '" + formatTitle(allSubmissions[e1].title, s1, e1) + "' and '" + formatTitle(allSubmissions[e2].title, s2, e2) + "' fit well in the same session.";
 	    }
 	}else if(type == 'notok'){
 	    ret = function (s1, s2) {
-		return "Authors noted that '" + abbrTitle(allSubmissions[e1].title) + "' and '" + 
-		    abbrTitle(allSubmissions[e2].title) + "' do not fit in the same session.";
+		return "Authors noted that '" + formatTitle(allSubmissions[e1].title, s1, e1) + "' and '" + 
+		    formatTitle(allSubmissions[e2].title, s2, e2) + "' do not fit in the same session.";
 	    }
 	}else if(type == 'interested'){
 	    ret = function (s1, s2) {
-		return "Authors noted that '" + abbrTitle(allSubmissions[e1].title) + "' and '" + 
-		    abbrTitle(allSubmissions[e2].title) + "' are of mutual interest and should not be in opposing sessions.";
+		return "Authors noted that '" + formatTitle(allSubmissions[e1].title, s1, e1) + "' and '" + 
+		    formatTitle(allSubmissions[e2].title, s2, e2) + "' are of mutual interest and should not be in opposing sessions.";
 	    }
 	}
 	return ret;
     }
-    
-    function abbrTitle(title){
+
+    function abbrItem(item, classname){
+	var ft = abbr(item);
+	ft = "<span class='" + classname + "'>" + ft + "</span>";
+	return ft;
+    }
+
+    function abbr(title){
 	var maxLength = 35;
 	if(title.length < maxLength){
-	    return "<span class='titlemsg'>" + title + "</span>";
+	    return title;
 	}
 	var titlesplit = title.split(' ');
 	var len = 0;
@@ -297,13 +303,23 @@ var CCOps = function(){
 		abbr += " ";
 		len += titlesplit[i].length;
 	    }else{
-		return "<span class='titlemsg'>" + abbr.trim() + "..." + "</span>";
+		return abbr.trim() + "...";
 	    }
 	}
-	return "<span class='titlemsg'>" + abbr.trim() + "..." + "</span>";
+	return abbr.trim() + "...";
     }
 
+    
+    function formatTitle(title, sessionId, paperId){
+	var ft = abbr(title);
+	if(paperId == null || paperId == ""){
+	    ft = "<a href='#' class='title-msg session-link' data-session-id='" + sessionId + "' data-submission-id='" + paperId + "'>" + ft + "</a>";
 
+	}else{
+	    ft = "<a href='#' class='title-msg submission-link' data-session-id='" + sessionId + "' data-submission-id='" + paperId + "'>" + ft + "</a>";
+	}
+	return ft;
+    }
     function generateAuthorsourcingConstraints(){
 	var cases = {'great': [], 'ok':[], 'notsure':[],'notok':[]};
 	var scores = {'great': 10,
