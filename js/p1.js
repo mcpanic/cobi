@@ -49,7 +49,7 @@
     $("body").on("click", ".session-link", function(){
         var id = $(this).attr("data-session-id");      
         var $cell;
-        if (typeof id === "undefined") {
+        if (typeof id === "undefined" || id == "null") {
             $cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
         } else
             $cell = findCellByID(id);
@@ -66,7 +66,7 @@
         var id = $(this).attr("data-session-id");
         var paperId = $(this).attr("data-submission-id");
         var $cell;
-        if (typeof id === "undefined") {
+        if (typeof id === "undefined" || id == "null") {
             // $cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
             $cell = $("#unscheduled-papers #" + paperId);
         } else
@@ -76,7 +76,8 @@
             scrollTop:$cell.offset().top - 100
         }, 500); 
         $cell.effect("highlight", {color: "#aec7e8"}, 3000);            
-      
+        if ($("#" + paperId).length > 0)
+            $("#" + paperId).effect("highlight", {color: "#aec7e8"}, 3000);            
         return false;
     });
 
