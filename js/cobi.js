@@ -528,6 +528,7 @@ var DataOps = function() {
     // movePaper(allSessions['s288'], allSubmissions['pn1376'], allSessions['s254']);
     // Note: always inserts at front
     function movePaper(s1, p1, s2, pos){
+	console.log(s1, p1, s2, pos);
 	if(isLocked(s1) || isLocked(s2)) return;
 	
 	// make sure types match and papers from their session
@@ -575,6 +576,7 @@ var DataOps = function() {
 	handleTransaction: handleTransaction,
 	handleFailedTransaction: handleFailedTransaction
     }
+
 }();
 
 // $(document).on("transactionUpdate", function(event, transaction){

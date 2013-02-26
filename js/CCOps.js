@@ -172,7 +172,7 @@ var CCOps = function(){
     function generateSubmissionNotTogetherConstraint(e1, e2, score){
 
 	var constraint = new EntityPairConstraint("interested",
-						  "papers of mutual interests are in opposing sessions",
+						  "papers of mutual interests in opposing sessions",
 						  function (sessionA, violationA, sessionB, violationB){
 						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
 							  sessionB.submissions[violationB.submission].title + "'" + " should be at different times.";
@@ -201,7 +201,7 @@ var CCOps = function(){
 
     function generateFitInSessionConstraint(e1, e2, score){
 
-	var text = {'great': 'papers that are good in same session',
+	var text = {'great': 'papers that are good in the same session',
 		    'notok': "papers that don't fit well in the same session"};
 	var type = 'great';
 	if(score < 0) type = 'notok';
@@ -420,7 +420,7 @@ var CCOps = function(){
     
     function generatePersonaConstraints(){
 	var personaconstraint = new EntityFilterPairConstraint("personaInTwoSessions", 
-							       "same persona should not be in opposing sessions", 
+							       "topics of interest to a persona in opposing sessions", 
 							       function (sessionA, violationA, sessionB, violationB){
 								   return "Someone interested in '" + sessionA.personas + "' may want to see both '" + 
 								       sessionA.title + "' and '" + sessionB.title + "'.";
@@ -723,7 +723,7 @@ var CCOps = function(){
 		}
 	    }
 	}
-	console.log(conflicts);
+//	console.log(conflicts);
 	CCOps.allConflicts = conflicts;
 	return conflicts;
     }
