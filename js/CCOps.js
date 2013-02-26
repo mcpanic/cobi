@@ -261,7 +261,7 @@ var CCOps = function(){
 	}else if(type == 'personaInTwoSessions'){
 	    ret = function (s1, s2) {
 		return "Someone interested in '" + abbrItem(allSessions[s1].personas, 'persona-msg') + "' may want to see both '" + 
-		    formatTitle(allSessions[s1].title, s1, null) + "' and '" + formatTitle(allSessions[s2].title, s2, null) + "'.";
+		    formatTitle(allSessions[s1].title, e1, null) + "' and '" + formatTitle(allSessions[s2].title, e2, null) + "'.";
 	    }
 	}else if(type == 'great'){
 	    ret = function (s1, s2) {
@@ -269,13 +269,13 @@ var CCOps = function(){
 	    }
 	}else if(type == 'notok'){
 	    ret = function (s1, s2) {
-		return "Authors noted that '" + formatTitle(allSubmissions[e1].title, s1, e1) + "' and '" + 
-		    formatTitle(allSubmissions[e2].title, s2, e2) + "' do not fit in the same session.";
+		return "Authors noted that '" + formatTitle(allSubmissions[e1].title, allSubmissions[e1].session, e1) + "' and '" + 
+		    formatTitle(allSubmissions[e2].title, allSubmissions[e1].session, e2) + "' do not fit in the same session.";
 	    }
 	}else if(type == 'interested'){
 	    ret = function (s1, s2) {
-		return "Authors noted that '" + formatTitle(allSubmissions[e1].title, s1, e1) + "' and '" + 
-		    formatTitle(allSubmissions[e2].title, s2, e2) + "' are of mutual interest and should not be in opposing sessions.";
+		return "Authors noted that '" + formatTitle(allSubmissions[e1].title, allSubmissions[e1].session, e1) + "' and '" + 
+		    formatTitle(allSubmissions[e2].title, allSubmissions[e2].session, e2) + "' are of mutual interest and should not be in opposing sessions.";
 	    }
 	}
 	return ret;
