@@ -80,8 +80,6 @@ var Sidebar = function() {
           $("#list-personas").on("click", ".myCheckbox", clickCheckboxPersonasHandler); 
           $("#list-communities").on("click", "li a", clickCommunitiesHandler);
           $("#list-communities").on("click", ".myCheckbox", clickCheckboxCommunitiesHandler);          
-          $("#list-history").on("click", ".history-link", clickHistoryHandler);
-          $("#list-history").on("click", ".history-paper-link", clickHistoryPaperHandler);
           $(".sidebar-fixed").on("click", ".toggle", clickToggle);
           $(".sidebar-fixed").on("click", ".toggle-options", clickHeaderHandler);
 
@@ -316,7 +314,7 @@ var Sidebar = function() {
           var mySeverity = "";
           var myType = $(this).parent().attr("data-type");
           $.each(Conflicts.constraintsList, function(index, item){
-               console.log(item.type, myType);
+               // console.log(item.type, myType);
                if (item.type == myType)
                     mySeverity = item.severity; 
           }); 
@@ -658,38 +656,6 @@ var Sidebar = function() {
           });
          return false;
      }
-
-     function clickHistoryHandler(){
-          var id = $(this).attr("data-session-id");
-          var $cell;
-          if (typeof id === "undefined") {
-	          $cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
-	     } else
-               $cell = findCellByID(id);
-
-          $("body").animate({
-            scrollTop:$cell.offset().top - 100
-          }, 500); 
-          $cell.effect("highlight", {color: "#aec7e8"}, 3000);
-
-          return false;
-     } 
-
-     function clickHistoryPaperHandler(){
-          var id = $(this).attr("data-session-id");
-          var paperId = $(this).attr("data-submission-id");
-          var $cell;
-          if (typeof id === "undefined") {
-               //cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
-               $cell = $("#unscheduled-papers #" + paperId);
-          } else
-               $cell = findCellByID(id);
-          $("body").animate({
-            scrollTop:$cell.offset().top - 100
-          }, 500); 
-          $cell.effect("highlight", {color: "#aec7e8"}, 3000);
-          return false;
-     } 
 
      // Display the constraints list
 	function displayConstraints(){

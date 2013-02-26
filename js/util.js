@@ -19,7 +19,7 @@ function getUsernameByUID(uid){
 function getCellLinkByID(id){
 	var title = allSessions[id].title;
 	title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 
- 	return $("<a/>").attr("href", "#").attr("data-session-id", id).addClass("history-link").html(title);
+ 	return $("<a/>").attr("href", "#").attr("data-session-id", id).addClass("session-link").html(title);
 }
 
 function getPaperCellLinkByID(id, paperId){
@@ -31,7 +31,7 @@ function getPaperCellLinkByID(id, paperId){
 		title = allSessions[id].title;
 		title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 		
 	}
-	var $cell = $("<a/>").attr("href", "#").attr("data-submission-id", paperId).addClass("history-paper-link").html(title);
+	var $cell = $("<a/>").attr("href", "#").attr("data-submission-id", paperId).addClass("submission-link").html(title);
 	if (typeof id !== "undefined")
 		$cell.attr("data-session-id", id);
 	return $cell;
@@ -39,7 +39,7 @@ function getPaperCellLinkByID(id, paperId){
 
 function getCellLinkByDateTimeRoom(ldate, ltime, lroom){
   	return $("<a/>").attr("href", "#").attr("data-slot-date", ldate).attr("data-slot-time", ltime).attr("data-slot-room", lroom)
-       .addClass("history-link").html(ldate + ", " + ltime + ", " + lroom); 
+       .addClass("session-link").html(ldate + ", " + ltime + ", " + lroom); 
 }
 
 
