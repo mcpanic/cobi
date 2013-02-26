@@ -61,6 +61,12 @@ var Conflicts = function() {
         $(".slot .conflicts").each(function(){
             $(this).html("");
         });
+        $(".slot-paper .display").each(function(){
+            $(this).html("");
+        });
+        $(".slot-paper .conflicts").each(function(){
+            $(this).html("");
+        });        
     }
 
     function getSeverityByType(type){
