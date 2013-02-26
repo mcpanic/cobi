@@ -61,6 +61,12 @@ var Conflicts = function() {
         $(".slot .conflicts").each(function(){
             $(this).html("");
         });
+        $(".slot-paper .display").each(function(){
+            $(this).html("");
+        });
+        $(".slot-paper .conflicts").each(function(){
+            $(this).html("");
+        });        
     }
 
     function getSeverityByType(type){
@@ -245,22 +251,46 @@ var Conflicts = function() {
 
         // var conflicts = conflictsBySession[id];    
         var conflicts = conflictsBySession[id].filter(function(x){ return _.contains(Conflicts.constraintsSeverityList, getSeverityByType(x.type)); });            
-        var conflicts_array = conflicts.map(function(co) {return co.type});
-        // console.log(conflicts_array);
-        var plural = isPlural(conflicts.length) ? "s" : "";
-        if (conflicts.length > 0) {
-            $(element).append("<div class='swap-total-full stronger-text'>" + conflicts.length 
-              + " conflict" + plural 
-              + ". <small>(click icon for detail)</small></div>"); 
-        }
+        var preferences = conflictsBySession[id].filter(function(x){ return _.contains(Conflicts.preferencesSeverityList, getSeverityByType(x.type)); });            
         
+        // var conflicts_array = conflicts.map(function(co) {return co.type});
+        // // console.log(conflicts_array);
+        // var plural = isPlural(conflicts.length) ? "s" : "";
+        // if (conflicts.length > 0) {
+        //     $(element).append("<div class='swap-total-full stronger-text'>" + conflicts.length 
+        //       + " conflict" + plural 
+        //       + ". <small>(click icon for detail)</small></div>"); 
+        // }
+        var ccount = conflicts.length;
+        var pcount = preferences.length;
+        var $display = $("<div/>").addClass("swap-total-full");
         var isChanged = false;
+        if (ccount > 0){
+            isChanged = true;
+            $("<span/>").addClass("stronger-text").append(ccount + " conflict" + (isPlural(ccount) ? "s" : "")).appendTo($display);
+        }
+        if (pcount > 0) {
+            if (ccount > 0)
+              $display.append(" and ");
+            isChanged = true;
+            $("<span/>").addClass("stronger-text").append(" " + pcount + " preference" + (isPlural(pcount) ? "s" : "")).appendTo($display);
+        }
+        if (isChanged){
+          $display.append(" <small>(click icon for detail)</small>"); 
+          $(element).append($display);
+        }
+
+        isChanged = false;
         $("<div/>").addClass("conflict-preview-display-div-wrapper").appendTo($(element));
         // for each constraint, count and add a modal dialog with descriptions
         $.each(Conflicts.constraintsList, function(index, conflict){
             isChanged = true;
             $(element).find(".conflict-preview-display-div-wrapper").append(displayViewModeConflictFullHTML(conflicts, conflict));
         });
+        $.each(Conflicts.preferencesList, function(index, preference){
+            isChanged = true;
+            $(element).find(".conflict-preview-display-div-wrapper").append(displayViewModeConflictFullHTML(preferences, preference));
+        });        
         if (!isChanged)
             $(element).find(".swap-total-full").hide();
         var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
@@ -398,7 +428,7 @@ var Conflicts = function() {
 
         // var swapValues = filterSwapValue(s);
         var ccounts = filterMatchingCount(swapValues, Conflicts.constraintsSeverityList);
-         var pcounts = filterMatchingCount(swapValues, Conflicts.preferencesSeverityList);
+        var pcounts = filterMatchingCount(swapValues, Conflicts.preferencesSeverityList);
 
         var ccount = ccounts.total;
         var pcount = pcounts.total;
