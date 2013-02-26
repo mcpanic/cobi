@@ -261,7 +261,7 @@ var CCOps = function(){
 	}else if(type == 'personaInTwoSessions'){
 	    ret = function (s1, s2) {
 		return "Someone interested in '" + abbrItem(allSessions[s1].personas, 'persona-msg') + "' may want to see both '" + 
-		    formatTitle(allSessions[s1].title, e1, null) + "' and '" + formatTitle(allSessions[s2].title, e2, null) + "'.";
+		    formatTitle(allSessions[s1].title, s1, null) + "' and '" + formatTitle(allSessions[s2].title, s2, null) + "'.";
 	    }
 	}else if(type == 'great'){
 	    ret = function (s1, s2) {
