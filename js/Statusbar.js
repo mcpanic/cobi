@@ -16,8 +16,6 @@ var Statusbar = function() {
         // $(document).on("updateStatusFailed", updateStatusHandler);  
         $(document).on("addMoveStatus", addMoveStatusHandler);
         $(document).on("addPaperMoveStatus", addPaperMoveStatusHandler);
-        $bar.on("click", ".history-link", clickLinkHandler);    
-        $bar.on("click", ".history-paper-link", clickPaperLinkHandler);
     }
 
     // Display message in the following way:
@@ -177,40 +175,6 @@ var Statusbar = function() {
     function display(html, type){
     	$bar.html(html);
     }
-
-    function clickLinkHandler(){
-        var id = $(this).attr("data-session-id");      
-        var $cell;
-        if (typeof id === "undefined") {
-            $cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
-        } else
-           $cell = findCellByID(id);
-
-        $("body").animate({
-            scrollTop:$cell.offset().top - 100
-        }, 500); 
-        $cell.effect("highlight", {color: "#aec7e8"}, 3000);
-
-        return false;
-    } 
-
-    function clickPaperLinkHandler(){
-        var id = $(this).attr("data-session-id");
-        var paperId = $(this).attr("data-submission-id");
-        var $cell;
-        if (typeof id === "undefined") {
-          // $cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
-          $cell = $("#unscheduled-papers #" + paperId);
-        } else
-           $cell = findCellByID(id);
-
-        $("body").animate({
-            scrollTop:$cell.offset().top - 100
-        }, 500); 
-        $cell.effect("highlight", {color: "#aec7e8"}, 3000);            
-      
-      return false;
-    } 
 
     function destroy(){
 

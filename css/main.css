@@ -397,7 +397,8 @@ body.loading .modal {
     background: #23E000 !important; /* #03BF57  #fd8d3c;*/
 }
 
-.titlemsg {
+/* inside conflict details popover */
+.title-msg, .persona-msg, .author-msg{
     font-weight: bold;
 }
 
