@@ -265,7 +265,7 @@ var CCOps = function(){
 	    }
 	}else if(type == 'great'){
 	    ret = function (s1, s2) {
-		return "Authors noted that '" + formatTitle(allSubmissions[e1].title, s1, e1) + "' and '" + formatTitle(allSubmissions[e2].title, s2, e2) + "' fit well in the same session.";
+		return "Authors noted that '" + formatTitle(allSubmissions[e1].title, allSubmissions[e1].session, e1) + "' and '" + formatTitle(allSubmissions[e2].title, allSubmissions[e2].session, e2) + "' fit well in the same session.";
 	    }
 	}else if(type == 'notok'){
 	    ret = function (s1, s2) {
