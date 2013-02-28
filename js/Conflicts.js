@@ -89,7 +89,6 @@ var Conflicts = function() {
               return;
           var list = isConflict ? Conflicts.constraintsSeverityList : Conflicts.preferencesSeverityList;
           element.html("");
-          // var conflicts_array = conflicts.map(function(co) {return co.type});
           $.each(list, function(index, severity){
             var filtered_array = conflicts.filter(function(x){return getSeverityByType(x.type)==severity});
             if (filtered_array.length > 0){
@@ -230,15 +229,7 @@ var Conflicts = function() {
         // var conflicts = conflictsBySession[id];    
         var conflicts = conflictsBySession[id].filter(function(x){ return _.contains(Conflicts.constraintsSeverityList, getSeverityByType(x.type)); });            
         var preferences = conflictsBySession[id].filter(function(x){ return _.contains(Conflicts.preferencesSeverityList, getSeverityByType(x.type)); });            
-        
-        // var conflicts_array = conflicts.map(function(co) {return co.type});
-        // // console.log(conflicts_array);
-        // var plural = isPlural(conflicts.length) ? "s" : "";
-        // if (conflicts.length > 0) {
-        //     $(element).append("<div class='swap-total-full stronger-text'>" + conflicts.length 
-        //       + " conflict" + plural 
-        //       + ". <small>(click icon for detail)</small></div>"); 
-        // }
+
         var ccount = conflicts.length;
         var pcount = preferences.length;
         var $display = $("<div/>").addClass("swap-total-full");
@@ -289,15 +280,14 @@ var Conflicts = function() {
         if (session != null && typeof session.id !== "undefined"){                    
             // scheduled papers
             if (submission != null && typeof submission.id !== "undefined"){
-
                 // var tempConflicts = conflictsBySession[session.id];
                 var tempConflicts = conflictsBySession[session.id].filter(function(x){ return _.contains(Conflicts.constraintsSeverityList, getSeverityByType(x.type)); });            
-        
+                var tempPreferences = conflictsBySession[session.id].filter(function(x){ return _.contains(Conflicts.preferencesSeverityList, getSeverityByType(x.type)); });            
                 var conflicts = [];
+                var preferences = [];
                 // only find the ones that include this paper
                 $.each(tempConflicts, function(index, item){
                     $.each(item.conflict, function(i, c){
-                        // console.log(item, item.conflict, c);
                         // for each valid entity trace, see if it's this paper
                         if (c != null) { // c.submission is indexed order
                             if (c == submission.id) // finally a match
@@ -305,23 +295,48 @@ var Conflicts = function() {
                         }
                     });
                 });
-                // console.log(conflicts);
-                var conflicts_array = conflicts.map(function(co) {return co.type});
+                $.each(tempPreferences, function(index, item){
+                    $.each(item.conflict, function(i, c){
+                        // for each valid entity trace, see if it's this paper
+                        if (c != null) { // c.submission is indexed order
+                            if (c == submission.id) // finally a match
+                                preferences.push(item);
+                        }
+                    });
+                });                
+                // var conflicts_array = conflicts.map(function(co) {return co.type});
+                // var preferences_array = preferences.map(function(co) {return co.type});
 
-                var plural = isPlural(conflicts.length) ? "s" : "";
-                if (conflicts.length > 0) {
-                    $(element).append("<div class='swap-total-full stronger-text'>" + conflicts.length 
-                      + " conflict" + plural 
-                      + ". <small>(click icon for detail)</small></div>"); 
-                }
-                
+                var ccount = conflicts.length;
+                var pcount = preferences.length;
+                var $display = $("<div/>").addClass("swap-total-full");
                 var isChanged = false;
+                if (ccount > 0){
+                    isChanged = true;
+                    $("<span/>").addClass("stronger-text").append(ccount + " conflict" + (isPlural(ccount) ? "s" : "")).appendTo($display);
+                }
+                if (pcount > 0) {
+                    if (ccount > 0)
+                      $display.append(" and ");
+                    isChanged = true;
+                    $("<span/>").addClass("stronger-text").append(" " + pcount + " preference" + (isPlural(pcount) ? "s" : "")).appendTo($display);
+                }
+                if (isChanged){
+                  $display.append(" <small>(click icon for detail)</small>"); 
+                  $(element).append($display);
+                }
+
+                isChanged = false;
                 $("<div/>").addClass("conflict-preview-display-div-wrapper").appendTo($(element));
                 // for each constraint, count and add a modal dialog with descriptions
                 $.each(Conflicts.constraintsList, function(index, conflict){
                     isChanged = true;
                     $(element).find(".conflict-preview-display-div-wrapper").append(displayViewModeConflictFullHTML(conflicts, conflict));
                 });
+                $.each(Conflicts.preferencesList, function(index, preference){
+                    isChanged = true;
+                    $(element).find(".conflict-preview-display-div-wrapper").append(displayViewModeConflictFullHTML(preferences, preference));
+                });                
                 if (!isChanged)
                     $(element).find(".swap-total-full").hide();
                 var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
