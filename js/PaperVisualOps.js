@@ -60,7 +60,7 @@ var PaperVisualOps = function() {
             var pos = _removeSubmissionFromSlot(scheduled2, true);
             _addSubmissionToSlot(scheduled1, pos, "paper-scheduled");
         }
-
+        $(".move-cancel-button").addClass("disabled");
 		// $("#program #session-" + scheduled1.session).effect("highlight", {color: "yellow"}, 7000);
 		// $("#program #session-" + scheduled2.session).effect("highlight", {color: "yellow"}, 7000);
  
@@ -70,6 +70,7 @@ var PaperVisualOps = function() {
     function swapWithUnscheduled(unscheduled, scheduled){
         var pos = unschedule(scheduled);
     	scheduleUnscheduled(unscheduled, pos);
+        $(".move-cancel-button").addClass("disabled");
     }
 
     // CASE 3. src: scheduled, dst: empty && src: empty, dst: scheduled
@@ -78,6 +79,7 @@ var PaperVisualOps = function() {
         _removeSubmissionFromSlot(scheduled, true);
         if (isAdditionNeeded)
 		    _addSubmissionToSlot(scheduled, pos, "paper-empty");
+        $(".move-cancel-button").addClass("disabled");
     }
 
     // CASE 4. src: unscheduled, dst: empty && src: empty, dst: unscheduled
@@ -86,12 +88,14 @@ var PaperVisualOps = function() {
     	_removeSubmissionFromUnscheduled(unscheduled);	
         if (isAdditionNeeded)
             _addSubmissionToSlot(unscheduled, pos, "paper-unscheduled");
+        $(".move-cancel-button").addClass("disabled");
     }
 
     // CASE 5. session: scheduled
     function unschedule(scheduled){
         var pos = _removeSubmissionFromSlot(scheduled, false);
         _addSubmissionToUnscheduled(scheduled);
+        $(".move-cancel-button").addClass("disabled");
         return pos;
     }
 

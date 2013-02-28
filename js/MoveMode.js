@@ -345,7 +345,8 @@ var MoveMode = function() {
             // specials (unscheduled, empty) first because they have the priority
             $.each(recommendedSpecialList, function(index, rec) {
                 if (numAssigned < numRecommended) {
-                    if (type == "scheduled" && $(rec).hasClass("empty")){ // for move (target is empty), we don't recommend empty sessions
+                    // do not recommend unscheduled sessions 
+                    if (type == "paper-scheduled" || type == "paper-unscheduled"){ 
 
                     } else {
                         $(rec).addClass("recommended");
