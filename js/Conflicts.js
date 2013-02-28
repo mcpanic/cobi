@@ -746,7 +746,13 @@ var Conflicts = function() {
                 if (isSlotOn)
                     $(this).find(".display").html("");
             }
-        });         
+        });       
+        
+        // simply clear the display for unscheduled papers
+        $(".slot-paper").each(function(){
+          if (isSlotOn)
+            $(this).find(".display").html("");
+        });  
         
         if (!isSidebarOn)
             return;
