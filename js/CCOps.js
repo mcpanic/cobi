@@ -234,6 +234,7 @@ var CCOps = function(){
 	return constraint;
     }
     
+    // pairwise constraint matrix lookup
     function matfind(m, a, b){
 	if(a in m && b in m[a]) return m[a][b];
 	return null;
@@ -243,6 +244,7 @@ var CCOps = function(){
 	m[a][b] = v;
     }
 
+    // Closure on messages for conflict detection
     function protoMessage(type, e1, e2){
 	var ret = null;
 	if(type == 'authorInTwoSessions'){
@@ -331,9 +333,9 @@ var CCOps = function(){
 	var relevantconstraints = {};
 	
 	for(var i in allSubmissions){
-	    fitconstraints[allSubmissions[i].id] = {};
-	    interestedconstraints[allSubmissions[i].id] = {};
-	    relevantconstraints[allSubmissions[i].id] = {};
+	    fitconstraints[i] = {};
+	    interestedconstraints[i] = {};
+	    relevantconstraints[i] = {};
 	}
 	
 	for(var submission in CCOps.authorsourcingData){
@@ -421,7 +423,6 @@ var CCOps = function(){
 		}
 	    }
 	}
-	
 	// 	for(var i in relevantconstraints){
 	// 	    for(var j in relevantconstraints[i]){
 	// 		var score = -5 * relevantconstraints[i][j];
@@ -513,13 +514,11 @@ var CCOps = function(){
     }
     
     function initialize(){
-//	console.log(new Date().getTime() / 1000);
 	loadAuthorsourcingData();
 	generateAuthorsourcingConstraints();
 	generatePersonaConstraints();
 	generateAuthorConstraints();
-	console.log("constraint loading finished");
-//	console.log(new Date().getTime() / 1000);
+//	console.log("constraint loading finished");
 	//     	var example = new SingleEntityConstraint("donat11",
 	// 						 "Submissions whose title begin with 'Don' should be at 11am",
 	// 						 10,
@@ -603,6 +602,7 @@ var CCOps = function(){
 //	console.log(new Date().getTime() / 1000);
     }
 
+    // session level conflict
     function checkSesConstraint(m, s1, s2, type){
 	var ret = matfind(m, s1.id, s2.id);
 	if(ret != null){
@@ -615,6 +615,9 @@ var CCOps = function(){
 	return [];
     }
     
+    // check conflict between submissions. Note that 
+    // error message and conflicting sessions not fully
+    // instantiated yet
     function checkSubSubConstraint(m, p1, p2, s2, type){
 	var ret = matfind(m, p1, p2);
 	if(ret != null){
@@ -628,6 +631,9 @@ var CCOps = function(){
     }
     
     function instantiateConflict(s1id, conflict){
+	if(conflict.entities.length > 2){
+	    console.log("Instantiate: shouldn't be here");
+	}
 	// adds session information to conflict once known
 	var newConflict = new conflictObject([s1id, conflict.entities[0]],
 					     conflict.type,
@@ -640,7 +646,6 @@ var CCOps = function(){
 	var conflicts = [];
 	var subs = s2.submissions;
 	for(var i = 0, len1 = subs.length; i < len1; i++){
-	    // is there an issue if p in s1?
 	    var p2 = subs[i].id;
 	    if(p1 == p2) continue;
 	    var ret = checkSubSubConstraint(m, p1, p2, s2, type);
@@ -655,7 +660,8 @@ var CCOps = function(){
 	var conflicts = [];
 	for(var i = 0, len1 = s1.submissions.length; i < len1; i++){
 	    var start = 0;
-	    if(s1.id == s2.id) start = i+1;
+	    if(s1.id == s2.id)  // avoid duplicates
+		start = i+1;
 	    for(var j = start, len2= s2.submissions.length; j < len2; j++){
 		var ret = matfind(m, s1.submissions[i].id, s2.submissions[j].id);
 		if(ret != null){
@@ -744,7 +750,6 @@ var CCOps = function(){
 	return conflicts;
     }
 
-    
     function getAllConflictsOld(){
 	var conflicts = {};
 	conflicts["sessions"] = {};
@@ -806,21 +811,22 @@ var CCOps = function(){
 	return conflictsWithRow;
     }
 
-    
+
     function computeProtoPaperWithinSession(s, p){
-	// Find all proto conflicts between p and submissions in s 
+	// Find proto conflicts between p and submissions in s if they were in same session
 	var ret = {};
 	ret["sum"] = [];
 	ret["paper"] = {};
 	var subs = s.submissions;
 	
-	for(var p2 = 0, len = subs.length; p2 < len; p2++){
+	for(var i = 0, len = subs.length; i < len; i++){
 	    var conflicts = [];
-	    var great = checkSubSubConstraint(fitMat, p, subs[p2].id, s, 'great');
+	    var p2 = subs[i].id;
+	    var great = checkSubSubConstraint(fitMat, p, p2, s, 'great');
 	    if(great != null) conflicts.push(great);
-	    var notok = checkSubSubConstraint(notokMat, p, subs[p2].id, s, 'notok');
+	    var notok = checkSubSubConstraint(notokMat, p, p2, s, 'notok');
 	    if(notok != null) conflicts.push(notok);
-	    ret["paper"][subs[p2].id] = conflicts;
+	    ret["paper"][p2] = conflicts;
 	    ret["sum"] = ret["sum"].concat(conflicts);
 	}
 	return ret;
@@ -847,8 +853,6 @@ var CCOps = function(){
 	for(var room in schedule[date][time]){
 	    for(var s2 in schedule[date][time][room]){
 		var conflicts = computeProtoPaperAcrossSession(allSessions[s2], p);
-		//		    checkSubSesConstraint(intMat, p, allSessions[s2], 'interested');
-		//		conflicts = conflicts.concat(checkSubSesConstraint(authorMat, p, allSessions[s2], 'authorInTwoSessions'));
 		ret["session"][s2] = conflicts;
 		ret["sum"] = ret["sum"].concat(conflicts);
 	    }
@@ -863,6 +867,7 @@ var CCOps = function(){
 	return conflicts;
     }
 
+    // These constraints are fully filled out, don't require instantiation?
     function computeProtoConflictsWithRowAtTimeSlot(s, date, time){
 	var ret = {};
 	ret["sum"] = [];
@@ -1205,7 +1210,9 @@ var CCOps = function(){
 	var sessionConflicts = CCOps.allConflicts.sessions[s];
 	for(var i in sessionConflicts){
 	    var type = sessionConflicts[i].type;
-	    if(type in protoConstraints && type != 'personaInTwoSessions' &&
+	    // TODO: only captures pairwise conflicts now
+	    if(type in protoConstraints && type != 'personaInTwoSessions' && 
+	       sessionConflicts[i].conflict.length == 2 && 
 	       (sessionConflicts[i].conflict[0] == p || sessionConflicts[i].conflict[1] == p)){
 		ret.push(sessionConflicts[i]);
 	    }
@@ -1214,10 +1221,12 @@ var CCOps = function(){
     }
 
     function extractCurrentProtoConflicts(s){
+	// return conflicts other than inner conflicts
 	var ret = [];
 	var sessionConflicts = CCOps.allConflicts.sessions[s];
 	for(var i in sessionConflicts){
 	    var type = sessionConflicts[i].type;
+	    // TODO: only handles limited types right now
 	    if(type in protoConstraints && !(type in protoSelfConstraints)){
 		ret.push(sessionConflicts[i]);
 	    }
@@ -1281,7 +1290,6 @@ var CCOps = function(){
 		    }
 		    continue; 
 		}
-
 
 		for(var room in schedule[date][time]){
 		    if(keys(schedule[date][time][room]).length == 0){ // empty slot			
@@ -1399,7 +1407,6 @@ var CCOps = function(){
 	return {swapValue: swapValue,
 		slotValue: slotValue};	
     }
-    
     
     function matchingSessionPaper(session, p){
 	return (session["venue"] == p.type ||
@@ -1603,34 +1610,57 @@ var CCOps = function(){
 				    // conflicts within p's session, and between p and target session
 				    var subs = schedule[date][time][room][session]['submissions'];
 				    var rowWithSession = computeProtoPaperWithinSession(allSessions[session], p);
-				    var rowCausedByItem = extractCurrentProtoPaperConflicts(session, p.id);
+				    var genericCausedByItem = extractCurrentProtoPaperConflicts(session, p.id);
 				    for(var i = 0; len = conflictsCausedByItem.length, i < len; i++){
 					if(conflictsCausedByItem[i].entities[0] == conflictsCausedByItem[i].entities[1]){
-					    rowCausedByItem.push(conflictsCausedByItem[i]);
+					    genericCausedByItem.push(conflictsCausedByItem[i]);
 					}
 				    }
+				    
 				    // swapping
-				    for(var p2 = 0, len = subs.length; p2 < len; p2++){	
-					var rowCausedByCandidate = extractCurrentProtoPaperConflicts(p.session, subs[p2].id);
-					var targetadd = extractCurrentProtoPaperConflicts(session, subs[p2].id);
-					for(var i = 0, len = targetadd.length; i < len; i++){
+				    for(var j = 0, len = subs.length; j < len; j++){	
+					var p2 = subs[j].id;
+					var rowCausedByItem = [];
+					for(var i = 0; i < genericCausedByItem.length; i++){
+					    if(!((genericCausedByItem[i].conflict[0] == p2 &&
+						  genericCausedByItem[i].conflict[1] == p.id) ||
+						 (genericCausedByItem[i].conflict[1] == p2 &&
+						  genericCausedByItem[i].conflict[0] == p.id) )){
+						rowCausedByItem.push(genericCausedByItem[i]);
+					    }						 
+					}
+					var genericCausedByCandidate = extractCurrentProtoPaperConflicts(p.session, p2);
+					var rowCausedByCandidate = [];
+					for(var i = 0; i < genericCausedByCandidate; i++){
+					    if(!((genericCausedByCandidate[i].conflict[0] == p2 &&
+						  genericCausedByCandidate[i].conflict[1] == p.id) ||
+						 (genericCausedByCandidate[i].conflict[1] == p2 &&
+						  genericCausedByCandidate[i].conflict[0] == p.id) )){
+						rowCausedByCandidate.push(genericCausedByCandidate[i]);
+					    }						 
+					}
+					var targetadd = extractCurrentProtoPaperConflicts(session, p2);
+					for(var i = 0, len2 = targetadd.length; i < len2; i++){
 					    if(targetadd[i].entities[0] == targetadd[i].entities[1]){
 						rowCausedByCandidate.push(targetadd[i]);
 					    }
 					}
-					var rowCausedByOffending = extractAllButFromSession(rowWithSession, subs[p2].id);
+					
+
+					var rowCausedByOffending = extractAllButFromSession(rowWithSession, p2);
 					var offendingSelf = computeProtoPaperAcrossSession(allSessions[p.session],p.id);
 					rowCausedByOffending = rowCausedByOffending.concat(offendingSelf);
 					//
 					var rowCausedByCandidateAtOffending = extractAllButFromSession(computeProtoPaperWithinSession(allSessions[p.session], p2), p.id);
-					var offendingCand = computeProtoPaperAcrossSession(allSessions[session], subs[p2].id);
+					var offendingCand = computeProtoPaperAcrossSession(allSessions[session], p2);
 					rowCausedByCandidateAtOffending = rowCausedByCandidateAtOffending.concat(offendingCand);
 					
 					var cc = {conflictsCausedByItem: rowCausedByItem, 
 						  conflictsCausedByCandidate: rowCausedByCandidate,
-						  conflictsCausedByOffending: rowCausedByOffending.map(function(x){return instantiateConflict(session, x)}),
-						  conflictsCausedByCandidateAtOffending: rowCausedByCandidateAtOffending.map(function(x){return instantiateConflict(p.session, x)})};
-					var space = new sessionPaper(session, subs[p2].id);
+						  conflictsCausedByOffending: rowCausedByOffending.map(function(x){return instantiateConflict(p.session, x)}),
+						  conflictsCausedByCandidateAtOffending: rowCausedByCandidateAtOffending.map(function(x){return instantiateConflict(session, x)})};
+					
+					var space = new sessionPaper(session, p2);
 					swapValue.push(createSwapDetails(cc, space));
 				    }
 				    // inserting..
@@ -1640,9 +1670,9 @@ var CCOps = function(){
 				    var offendingSelf = computeProtoPaperAcrossSession(allSessions[p.session],p.id);
 				    rowCausedByOffending = rowCausedByOffending.concat(offendingSelf);
 				    
-				    var cc = {conflictsCausedByItem: rowCausedByItem,
+				    var cc = {conflictsCausedByItem: genericCausedByItem,
 					      conflictsCausedByCandidate: rowCausedByCandidate,
-					      conflictsCausedByOffending: rowCausedByOffending.map(function(x){return instantiateConflict(session, x)}),
+					      conflictsCausedByOffending: rowCausedByOffending.map(function(x){return instantiateConflict(p.session, x)}),
 					      conflictsCausedByCandidateAtOffending: rowCausedByCandidateAtOffending};
 				    var space = new sessionPaper(session, null);
 				    sessionValue.push(createSwapDetails(cc, space));
@@ -1664,12 +1694,7 @@ var CCOps = function(){
 				var conflictsCausedByOffending = [];
 				conflictsCausedByOffending = conflictsCausedByOffending.concat(conflictsWithoutSession);
 				conflictsCausedByOffending = conflictsCausedByOffending.concat(extractAllButFromSession(conflictsWithSession, subs[p2].id));
-				if(subs[p2].id =='tochi124'){
-				    console.log(conflictsWithoutSession);
-				    console.log(conflictsWithSession);
-				    
-				}
-
+				
 				var conflictsCausedByCandidateAtOffending = [];
 				if(!(p.id in unscheduledSubmissions) && !(p.session in unscheduled)){
 				    var s2row = computeProtoPaperWithRowAtTimeSlot(subs[p2].id, allSessions[p.session].date, allSessions[p.session].time);
@@ -1679,8 +1704,8 @@ var CCOps = function(){
 				}
 				var cc = {conflictsCausedByItem: conflictsCausedByItem,
 					  conflictsCausedByCandidate: conflictsCausedByCandidate,
-					  conflictsCausedByOffending: conflictsCausedByOffending.map(function(x){return instantiateConflict(session, x)}),
-					  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(p.session, x)})};
+					  conflictsCausedByOffending: conflictsCausedByOffending.map(function(x){return instantiateConflict(p.session, x)}),
+					  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(session, x)})};
 				var space = new sessionPaper(session, subs[p2].id);
 				swapValue.push(createSwapDetails(cc, space));
 			    }
@@ -1693,8 +1718,8 @@ var CCOps = function(){
 			    
 			    var cc = {conflictsCausedByItem: conflictsCausedByItem,
 				      conflictsCausedByCandidate: conflictsCausedByCandidate,
-				      conflictsCausedByOffending: conflictsCausedByOffending.map(function(x){return instantiateConflict(session, x)}),
-				      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(p.session, x)})};
+				      conflictsCausedByOffending: conflictsCausedByOffending.map(function(x){return instantiateConflict(p.session, x)}),
+				      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(session, x)})};
 			    var space = new sessionPaper(session, null);
 			    sessionValue.push(createSwapDetails(cc, space));
 			}
@@ -1707,22 +1732,23 @@ var CCOps = function(){
 	    if(p.session != session && matchingSessionPaper(unscheduled[session], p)){
 		var subs = unscheduled[session]['submissions'];
 		// swapping
-		for(var p2 = 0, len =subs.length; p2 < len; p2++){
+		for(var j = 0, len =subs.length; j < len; j++){
+		    var p2 = subs[j].id;
 		    var conflictsCausedByCandidate = [];
 		    var conflictsCausedByOffending = [];
 		    var conflictsCausedByCandidateAtOffending = [];
 		    if(!(p.id in unscheduledSubmissions) && !(p.session in unscheduled)){
-			var s2row = computeProtoPaperWithRowAtTimeSlot(subs[p2].id, allSessions[p.session].date, allSessions[p.session].time);
-			var s2WithSession = computeProtoPaperWithinSession(allSessions[p.session], subs[p2].id);
+			var s2row = computeProtoPaperWithRowAtTimeSlot(p2, allSessions[p.session].date, allSessions[p.session].time);
+			var s2WithSession = computeProtoPaperWithinSession(allSessions[p.session], p2);
 			conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(extractAllButFromRow(s2row, p.session));
 			conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(extractAllButFromSession(s2WithSession, p.id));
 		    }
 		    
 		    var cc = {conflictsCausedByItem: conflictsCausedByItem,
 			      conflictsCausedByCandidate: conflictsCausedByCandidate,
-			      conflictsCausedByOffending: conflictsCausedByOffending.map(function(x){return instantiateConflict(session, x)}),
-			      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(p.session, x)})};
-		    var space = new sessionPaper(session, subs[p2].id);
+			      conflictsCausedByOffending: conflictsCausedByOffending.map(function(x){return instantiateConflict(p.session, x)}),
+			      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(session, x)})};
+		    var space = new sessionPaper(session, p2);
 		    swapValue.push(createSwapDetails(cc, space));
 		}
 		// inserting
@@ -1853,7 +1879,7 @@ var CCOps = function(){
 				    // conflicts between p2 and empty session
 				    var conflictsCausedByCandidate = extractCurrentProtoPaperConflicts(s.id, p.id);
 				    // conflicts between p2 and papers in its own session
-				    for(var i = 0; len = conflictsAtCandidate.length, i < len; i++){
+				    for(var i = 0; len2 = conflictsAtCandidate.length, i < len2; i++){
 					if(conflictsAtCandidate[i].entities[0] == 
 					   conflictsAtCandidate[i].entities[1]){
 					    conflictsCausedByCandidate.push(conflictsAtCandidate[i]);
@@ -1867,7 +1893,7 @@ var CCOps = function(){
 				    var cc = {conflictsCausedByItem: conflictsCausedByItem,
 					      conflictsCausedByCandidate: conflictsCausedByCandidate,
 					      conflictsCausedByOffending: conflictsCausedByOffending,
-					      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(s.id, x)})};
+					      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(session, x)})};
 				    
 				    var space = new sessionPaper(session, p.id);
 				    scheduleValue.push(createSwapDetails(cc, space));
@@ -1900,7 +1926,7 @@ var CCOps = function(){
 				    var cc = {conflictsCausedByItem: conflictsCausedByItem,
 					      conflictsCausedByCandidate: conflictsCausedByCandidate,
 					      conflictsCausedByOffending: conflictsCausedByOffending,
-					      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(s.id, x)})};
+					      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(session, x)})};
 				    var space = new sessionPaper(session, p.id);
 				    scheduleValue.push(createSwapDetails(cc, space));
 				}
@@ -1912,7 +1938,7 @@ var CCOps = function(){
 	}
 	for(var p2 in unscheduledSubmissions){
 	    var p = unscheduledSubmissions[p2];
-
+	    
 	    if(matchingSessionPaper(s, p)){
 		var conflictsCausedByCandidate = [];
 		var conflictsCausedByCandidateAtOffending = [];
@@ -1927,7 +1953,7 @@ var CCOps = function(){
 		var cc = {conflictsCausedByItem: conflictsCausedByItem,
 			  conflictsCausedByCandidate: conflictsCausedByCandidate,
 			  conflictsCausedByOffending: conflictsCausedByOffending,
-			  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(s.id, x)})};
+			  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(null, x)})};
 		var space = new sessionPaper(null, p.id); //session, p.id
 		unscheduleValue.push(createSwapDetails(cc, space));
 	    }
@@ -1949,7 +1975,7 @@ var CCOps = function(){
 		    var cc = {conflictsCausedByItem: conflictsCausedByItem,
 			      conflictsCausedByCandidate: conflictsCausedByCandidate,
 			      conflictsCausedByOffending: conflictsCausedByOffending,
-			      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(s.id, x)})};
+			      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(s2, x)})};
 		    var space = new sessionPaper(s2, p.id);
 		    unscheduleValue.push(createSwapDetails(cc, space));
 		}
