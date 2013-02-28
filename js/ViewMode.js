@@ -100,6 +100,8 @@ var ViewMode = function() {
         $list.sortable();
         if ($(this).html() == "Reorder"){
             $(this).html("Save Order");
+
+            $list.sortable({ cancel: ".submission-empty"});
             $list.sortable("enable").disableSelection();
             $list.attr("data-paper-order", _readPaperOrder($list).join());
             //console.log($list.attr("data-paper-order"));
