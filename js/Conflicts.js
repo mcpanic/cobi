@@ -101,10 +101,15 @@ var Conflicts = function() {
                 var $palette = $(html).addClass("cell-conflict-" + severity)
 
                 element.append(filtered_array.length).append($palette);
-                var palette_title = severity + " severity conflicts";
+                var palette_title = "";
+                if (severity == "good")
+                  palette_title = "preferences met";
+                else
+                  palette_title = severity + " severity conflicts";
+                
                 var palette_content = filtered_array.map(function(co) {
                      // if (co.type == constraint.type)
-                          return "<li>"+co.description+"</li>";
+                          return "<li class='hover-description'>"+co.description+"</li>";
                 }).join("");
                 $palette.popover({
                      html:true,
@@ -150,6 +155,11 @@ var Conflicts = function() {
      function displayViewModeConflictFullHTML(inputArray, conflict) {
         var $view = $("<span/>").addClass("conflict-preview-display-wrapper");        
         var filteredArray = inputArray == null? []: inputArray.filter(function(x){return x.type==conflict.type});
+        var displayType = "";
+        if (conflict.severity == "good")
+          displayType = "Preference Type: ";
+        else
+          displayType = "Conflict Type: ";        
         // console.log(ment, inputArray, conflict, filteredArray);
         for (var i=0; i<filteredArray.length; i++) {
             $("<span/>")
@@ -157,7 +167,7 @@ var Conflicts = function() {
                     .attr("data-html", "true")
                     // .attr("data-title", ment)
                     .attr("data-trigger", "manual")
-                    .attr("data-content", "<strong>Conflict Type: " + conflict.description + "</strong><br>" + filteredArray[i].description)
+                    .attr("data-content", "<strong> " + displayType + conflict.description + "</strong><br>" + filteredArray[i].description)
                     // .popover({
                     //     html:true,
                     //     title: ment,

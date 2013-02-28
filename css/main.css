@@ -548,6 +548,12 @@ body.loading .modal {
     margin: 5px;
 }
 
+/* mouse hover links not activated */
+.hover-description a{
+    text-decoration: none;
+    color: black;
+}
+
 /* submission info */
 .list-submissions .swap-total-full {
     font-size: 12px;
