@@ -84,12 +84,13 @@ var Conflicts = function() {
 
      // Given an array of "conflicts", display the palette and count for each constraint in the "element"
      // Can be used both for individual sessions and entire rows
-     function displayConflicts(conflicts, element){
+     function displayConflicts(conflicts, element, isConflict){
           if (typeof conflicts === "undefined")
               return;
-         element.html("");
-         // var conflicts_array = conflicts.map(function(co) {return co.type});
-         $.each(Conflicts.constraintsSeverityList, function(index, severity){
+          var list = isConflict ? Conflicts.constraintsSeverityList : Conflicts.preferencesSeverityList;
+          element.html("");
+          // var conflicts_array = conflicts.map(function(co) {return co.type});
+          $.each(list, function(index, severity){
             var filtered_array = conflicts.filter(function(x){return getSeverityByType(x.type)==severity});
             if (filtered_array.length > 0){
                 var html = "";
@@ -118,39 +119,6 @@ var Conflicts = function() {
                 });
             }
          });
-
-          // for each constraint, count and add a modal dialog with descriptions
-          // $.each(Conflicts.constraintsList, function(index, constraint){
-          //      var filtered_array = conflicts_array.filter(function(x){return getSeverityByType(x)==constraint.severity});
-          //      if (filtered_array.length > 0) {
-          //       console.log(filtered_array);
-          //           var html = "";
-          //           var i;
-          //           for (i=0; i<filtered_array.length; i++) {
-          //                html += "<span class='conflict-display'></span>";
-          //           }
-          //           var $palette = $(html).addClass("cell-conflict-" + constraint.severity)
-          //           //.css("background-color", conflict.color);
-          //           element.append(filtered_array.length).append($palette);
-          //           var palette_title = "Conflicts: " + constraint.description;
-          //           var palette_content = conflicts.map(function(co) {
-          //                if (co.type == constraint.type)
-          //                     return "<li>"+co.description+"</li>";
-          //           }).join("");
-          //           $palette.popover({
-          //                html:true,
-          //                placement: "bottom",
-          //                trigger: "hover",
-          //                title:function(){
-          //                     return palette_title;
-          //                },
-          //                content:function(){
-          //                     return palette_content;
-          //                }
-          //           });
-          //           //$palette.popover();           
-          //      }
-          // });
      }
 
      function displayConflictPreviewHTML(netCount) {
@@ -725,7 +693,7 @@ var Conflicts = function() {
 
      // Refresh conflicts information display.
      // Called after an interaction occurs that affects conflicts. (swap, unschedule, schedule)
-     function updateConflicts(isSidebarOn, isSlotOn){
+     function updateConflicts(isSidebarOn, isSlotOn, isConflictOn){
 
         var conflict_type_count_array = {};
         var conflict_severity_count_array = {};
@@ -760,8 +728,10 @@ var Conflicts = function() {
         $(".slot").each(function(){
             var id = getID($(this));
             if (id !== -1) {
-                if (isSlotOn)
-                    displayConflicts(conflictsBySession[id], $(this).find(".display"));
+                if (isSlotOn && isConflictOn)
+                    displayConflicts(conflictsBySession[id], $(this).find(".display"), true);
+                else if (isSlotOn && !isConflictOn)
+                    displayConflicts(conflictsBySession[id], $(this).find(".display"), false);
                 // var conflicts_array = conflictsBySession[id].map(function(co) {return co.type});          
                 //     // for each constraint, count and add a modal dialog with descriptions
                 //     $.each(Conflicts.constraintsList, function(index, item){

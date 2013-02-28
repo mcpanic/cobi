@@ -65,6 +65,7 @@
 
     var optionsList = [
     {"id": "conflicts", "label": "Conflicts"}, 
+    {"id": "preferences", "label": "Preferences"}, 
     {"id": "session-type", "label": "Session Type"}, 
     //{"id": "popularity", "label": "Popularity"}, 
     {"id": "num-papers", "label": "Number of Papers"}, 

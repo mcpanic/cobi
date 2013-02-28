@@ -418,8 +418,16 @@ var Sidebar = function() {
                               $(item).find(".display").html($(item).find(".conflicts").html());
                          });
                     } else
-                         Conflicts.updateConflicts(true, true);
-               break;                 
+                         Conflicts.updateConflicts(true, true, true);
+               break;   
+               case "preferences":
+                    if (MoveMode.isOn){
+                         $(".slot:not('.unavailable')").each(function(index, item){
+                              $(item).find(".display").html($(item).find(".conflicts").html());
+                         });
+                    } else
+                         Conflicts.updateConflicts(true, true, false);
+               break;                               
                case "popularity":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);

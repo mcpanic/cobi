@@ -56,8 +56,13 @@
 
         $("body").animate({
             scrollTop:$cell.offset().top - 100
-        }, 500); 
-        $cell.effect("highlight", {color: "#aec7e8"}, 3000);
+        }, 500, function(){
+            $cell.css("z-index", "auto");    
+            $cell.css("position", "static");
+        });         
+        $cell.effect("highlight", {color: "#aec7e8 !important"}, 3000);
+        $cell.css("z-index", "1011");
+        $cell.css("position", "relative");
 
         return false;
     });
@@ -74,10 +79,15 @@
 
         $("body").animate({
             scrollTop:$cell.offset().top - 100
-        }, 500); 
-        $cell.effect("highlight", {color: "#aec7e8"}, 3000);            
+        }, 500, function(){
+            $cell.css("z-index", "auto");   
+            $cell.css("position", "static"); 
+        });    
+        $cell.effect("highlight", {color: "#aec7e8"}, 3000);  
+        $cell.css("z-index", "1011");          
+        $cell.css("position", "relative");
         if ($("#" + paperId).length > 0)
-            $("#" + paperId).effect("highlight", {color: "#aec7e8"}, 3000);            
+            $("#" + paperId).effect("highlight", {color: "#aec7e8 !important"}, 3000);            
         return false;
     });
 
