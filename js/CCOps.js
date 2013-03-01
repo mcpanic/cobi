@@ -256,7 +256,10 @@ var CCOps = function(){
 		    fill = " have a paper ";
 		    prefill = "Authors "
 		}
-		
+		if(s1 == null){
+		    return abbrItem(names, 'author-msg') + " also" + fill +  "in '" + 
+			formatTitle(allSessions[s2].title, s2, null) + "'.";
+		}
 		return abbrItem(names, 'author-msg') + fill +  "in both '" + 
 		    formatTitle(allSessions[s1].title, s1, null) + "' and '" + formatTitle(allSessions[s2].title, s2, null) + "'.";
 	    }
@@ -631,6 +634,7 @@ var CCOps = function(){
     }
     
     function instantiateConflict(s1id, conflict){
+	console.log("Instantiate: " , s1id, conflict);
 	if(conflict.entities.length > 2){
 	    console.log("Instantiate: shouldn't be here");
 	}
@@ -1921,18 +1925,16 @@ var CCOps = function(){
 					var conflictsWithRow = computeProtoPaperWithRowAtTimeSlot(p.id, s.date, s.time); //s, p.id);
 					var conflictsWithSession = (computeProtoPaperWithinSession(s, p.id))['sum'];
 					var conflictsWithoutSession = extractAllButFromRow(conflictsWithRow, s.id);
-//					console.log(conflictsWithRow);
-//					console.log(conflictsWithSession);
-//					console.log(conflictsWithoutSession);
-
 					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(conflictsWithoutSession);
 					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(conflictsWithSession);
 					
 				    }
+				    console.log(session, p.id, conflictsCausedByCandidateAtOffending);
 				    var cc = {conflictsCausedByItem: conflictsCausedByItem,
 					      conflictsCausedByCandidate: conflictsCausedByCandidate,
 					      conflictsCausedByOffending: conflictsCausedByOffending,
 					      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(session, x)})};
+				    console.log(cc);
 				    var space = new sessionPaper(session, p.id);
 				    scheduleValue.push(createSwapDetails(cc, space));
 				}
