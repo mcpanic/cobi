@@ -507,7 +507,7 @@ var Sidebar = function() {
           }
           return false;     
      }
-
+ 
 
      function clickCheckboxSessionTypesHandler(){
           // console.log("click session types");
