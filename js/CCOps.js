@@ -256,7 +256,7 @@ var CCOps = function(){
 		    fill = " have a paper ";
 		    prefill = "Authors "
 		}
-		if(s1 == null){
+		if(s1 == null  || s1 == "null"){
 		    return abbrItem(names, 'author-msg') + " also" + fill +  "in '" + 
 			formatTitle(allSessions[s2].title, s2, null) + "'.";
 		}
@@ -270,12 +270,13 @@ var CCOps = function(){
 	    }
 	}else if(type == 'great'){
 	    ret = function (s1, s2) {
+
 		return "Authors noted that '" + formatTitle(allSubmissions[e1].title, allSubmissions[e1].session, e1) + "' and '" + formatTitle(allSubmissions[e2].title, allSubmissions[e2].session, e2) + "' fit well in the same session.";
 	    }
 	}else if(type == 'notok'){
 	    ret = function (s1, s2) {
 		return "Authors noted that '" + formatTitle(allSubmissions[e1].title, allSubmissions[e1].session, e1) + "' and '" + 
-		    formatTitle(allSubmissions[e2].title, allSubmissions[e1].session, e2) + "' do not fit in the same session.";
+		    formatTitle(allSubmissions[e2].title, allSubmissions[e2].session, e2) + "' do not fit in the same session.";
 	    }
 	}else if(type == 'interested'){
 	    ret = function (s1, s2) {
@@ -325,6 +326,7 @@ var CCOps = function(){
 	}
 	return ft;
     }
+
     function generateAuthorsourcingConstraints(){
 	var cases = {'great': [], 'ok':[], 'notsure':[],'notok':[]};
 	var scores = {'great': 10,
@@ -634,7 +636,6 @@ var CCOps = function(){
     }
     
     function instantiateConflict(s1id, conflict){
-	console.log("Instantiate: " , s1id, conflict);
 	if(conflict.entities.length > 2){
 	    console.log("Instantiate: shouldn't be here");
 	}
@@ -719,13 +720,13 @@ var CCOps = function(){
 	    }
 	}
 	
-	// Unscheduled sessions may still contain paper conflicts
-	for(var s in unscheduled){
-	    var cs = checkSubConstraint(fitMat, allSessions[s], allSessions[s], 'great');
-	    cs = cs.concat(checkSubConstraint(notokMat, allSessions[s], allSessions[s], 'notok'));
-	    conflicts["all"] = conflicts["all"].concat(cs);
-	    conflicts["sessions"][s] = conflicts["sessions"][s].concat(cs);
-	}
+// 	// Unscheduled sessions may still contain paper conflicts
+// 	for(var s in unscheduled){
+// 	    var cs = checkSubConstraint(fitMat, allSessions[s], allSessions[s], 'great');
+// 	    cs = cs.concat(checkSubConstraint(notokMat, allSessions[s], allSessions[s], 'notok'));
+// 	    conflicts["all"] = conflicts["all"].concat(cs);
+// 	    conflicts["sessions"][s] = conflicts["sessions"][s].concat(cs);
+// 	}
 
 	for(var i in CCOps.allConstraints){
 	    if(!(CCOps.allConstraints[i].type in protoConstraints)){
@@ -1093,10 +1094,15 @@ var CCOps = function(){
  	if(keys(schedule[sdate][stime][sroom]).length != 0) return;
 	
 	for(var s2 in unscheduled){
+	    var offendingConflicts = (computeProtoConflictsWithRowAtTimeSlot(allSessions[s2], sdate, stime))['sum'];
+	    var cs = checkSubConstraint(fitMat, allSessions[s2], allSessions[s2], 'great');
+	    cs = cs.concat(checkSubConstraint(notokMat, allSessions[s2], allSessions[s2], 'notok'));
+	    offendingConflicts = offendingConflicts.concat(cs);
+
 	    var sc = {conflictsCausedByItem: [],
  		      conflictsCausedByCandidate: [],
  		      conflictsCausedByOffending: [],
- 		      conflictsCausedByCandidateAtOffending: (computeProtoConflictsWithRowAtTimeSlot(allSessions[s2], sdate, stime))['sum'],};
+ 		      conflictsCausedByCandidateAtOffending: offendingConflicts};
  	    unscheduleValue.push(createSwapDetails(sc, new slot(null, null, null, s2)));
 	}
 
@@ -1245,7 +1251,22 @@ var CCOps = function(){
 	}
 	return ret;
     }
-    
+
+    function extractAllCurrentProtoConflicts(s){
+	// return conflicts includding inner conflicts
+	var ret = [];
+	var sessionConflicts = CCOps.allConflicts.sessions[s];
+	for(var i in sessionConflicts){
+	    var type = sessionConflicts[i].type;
+	    // TODO: only handles limited types right now
+	    if(type in protoConstraints){
+		ret.push(sessionConflicts[i]);
+	    }
+	}
+	return ret;
+    }
+
+
     function extractAllButFromRow(row, s){
 	var ret = [];
 	for(var i in row["session"]){
@@ -1308,6 +1329,14 @@ var CCOps = function(){
 			var conflictsCausedByCandidate = [];
 			var conflictsCausedByCandidateAtOffending = [];
 			var conflictsCausedByOffending = conflictsWithRow[date][time]["sum"];// handle this case
+			
+			if(s.id in unscheduled){
+			    // add inner conflicts
+			    var cs = checkSubConstraint(fitMat, s, s, 'great');
+			    cs = cs.concat(checkSubConstraint(notokMat, s, s, 'notok'));
+			    conflictsCausedByOffending = conflictsCausedByOffending.concat(cs);
+			}
+
 			var space = new slot(date, time, room, null);
 			var cc = {conflictsCausedByItem: conflictsCausedByItem,
 				  conflictsCausedByCandidate: conflictsCausedByCandidate,
@@ -1316,13 +1345,20 @@ var CCOps = function(){
 			slotValue.push(createSwapDetails(cc, space));
 		    }else{ // session slot
 			for(var s2 in schedule[date][time][room]){
-			    var conflictsCausedByCandidate = extractCurrentProtoConflicts(s2);
+			    var conflictsCausedByCandidate = extractAllCurrentProtoConflicts(s2);
 			    var conflictsCausedByCandidateAtOffending = [];
 			    if(!(s.id in unscheduled)){
 				var s2row = computeProtoConflictsWithRowAtTimeSlot(allSessions[s2], s.date, s.time)
 				conflictsCausedByCandidateAtOffending = extractAllButFromRow(s2row, s.id);
 			    }
 			    var conflictsCausedByOffending = extractAllButFromRow(conflictsWithRow[date][time], s2);
+			    if(s.id in unscheduled){
+				// add inner conflicts
+				var cs = checkSubConstraint(fitMat, s,s,'great');
+				cs = cs.concat(checkSubConstraint(notokMat, s,s,'notok'));
+				conflictsCausedByOffending = conflictsCausedByOffending.concat(cs);
+			    }
+			    
 			    // handle this case
 			    var cc = {conflictsCausedByItem: conflictsCausedByItem,
 				      conflictsCausedByCandidate: conflictsCausedByCandidate,
@@ -1929,12 +1965,10 @@ var CCOps = function(){
 					conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(conflictsWithSession);
 					
 				    }
-				    console.log(session, p.id, conflictsCausedByCandidateAtOffending);
 				    var cc = {conflictsCausedByItem: conflictsCausedByItem,
 					      conflictsCausedByCandidate: conflictsCausedByCandidate,
 					      conflictsCausedByOffending: conflictsCausedByOffending,
 					      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending.map(function(x){return instantiateConflict(session, x)})};
-				    console.log(cc);
 				    var space = new sessionPaper(session, p.id);
 				    scheduleValue.push(createSwapDetails(cc, space));
 				}
