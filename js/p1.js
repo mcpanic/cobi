@@ -555,9 +555,18 @@
                 // TODO: maybe also save date, time, room, and order info
                 if (isProposed) {
                     element = document.createElement("li");
-                    $(element).addClass("submission-empty").css("list-style-type", "none");;
+                    // $(element).addClass("submission-empty").css("list-style-type", "none");
+                    $(element).css("list-style-type", "none");                    
                     $("<button/>").addClass("btn btn-small button-paper-schedule").html("<span class='icon-plus'/> Schedule this paper").appendTo($(element));
+                    $("<br/><br/>").appendTo($(element));
+                    if (submission.bestPaperAward)
+                        $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
+                    if (submission.bestPaperNominee)
+                        $("<span/>").addClass("awards").html("<img src='img/nominee.png' class='icon'/>").appendTo($(element));                    
+                    $("<span/>").html("<strong>Authors</strong>: " + displayAuthors(submission.authors)).appendTo($(element));                    
                     $(element).append(Conflicts.displayMoveModeSubmissionFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
+
+
                 } else {
                     element = document.createElement("div");
                 }
