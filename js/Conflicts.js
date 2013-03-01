@@ -44,7 +44,7 @@ var Conflicts = function() {
             });
             Conflicts.constraintsList.sort(function(a,b){ return a.importance > b.importance; });
             Conflicts.preferencesList.sort(function(a,b){ return a.importance > b.importance; });
-            console.log(Conflicts.constraintsList, Conflicts.preferencesList);        
+            // console.log(Conflicts.constraintsList, Conflicts.preferencesList);        
         // } else {
         //     Conflicts.constraintsList = constraints_list;
         // }
@@ -477,8 +477,8 @@ var Conflicts = function() {
      function displayMoveModeSubmissionFullConflicts(swapValues){
         if (typeof swapValues === "undefined" || swapValues == null)
            return;      
-         if (swapValues.target.session == "s210")
-         console.log(swapValues);
+         // if (swapValues.target.session == "s210")
+         // console.log(swapValues);
 
         var element = document.createElement("div");
         $(element).addClass("conflicts");

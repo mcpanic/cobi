@@ -23,7 +23,7 @@
             $text.attr("contenteditable", false);
             $(this).html("edit");
             var id = $(this).attr("data-session-id");
-            console.log("change", id, $text.html());
+            // console.log("change", id, $text.html());
             if (typeof id !== "undefined"){
                 editSessionTitle(allSessions[id], $text.html());    
             }
@@ -165,8 +165,8 @@
 
     // get html for a session in the move mode
     function _getMoveSessionDetail(type, session, srcType){
-        if (type == "empty")
-            console.log(session);
+        // if (type == "empty")
+        //     console.log(session);
         var element = document.createElement("div");
         var $cell = null;
         if (typeof session.id === "undefined")
@@ -174,8 +174,8 @@
         else
             $cell = findCellByID(session.id);
 
-        if (type == "empty")
-            console.log($cell, $cell.find(".detail"));
+        // if (type == "empty")
+        //     console.log($cell, $cell.find(".detail"));
 
         var isLocked = false;
         if (type != "unscheduled" && typeof session !== "undefined" && session != null){
@@ -461,7 +461,7 @@
                 isRecommended = true;            
             // console.log(session.id, submission.id, isProposed);
         } else {
-            console.log(session, submission, isProposed, type, srcType);
+            // console.log(session, submission, isProposed, type, srcType);
             console.log("IMPOSSIBLE");
         }
 

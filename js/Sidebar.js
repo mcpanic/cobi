@@ -510,7 +510,7 @@ var Sidebar = function() {
 
 
      function clickCheckboxSessionTypesHandler(){
-          console.log("click session types");
+          // console.log("click session types");
           $(this).parent().find("a").trigger("click");
      }
      

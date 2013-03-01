@@ -126,7 +126,6 @@ var MoveMode = function() {
                     if ($(this).hasClass("scheduled")){
                         html += getSessionDetail("paperMove", "scheduled", session, type);
                     } else if ($(this).hasClass("unscheduled")){
-                        console.log("here", session, type);
                         html += getSessionDetail("paperMove", "unscheduled", session, type);
                     } else if ($(this).hasClass("empty")) {
                         html += getSessionDetail("paperMove", "empty", new slot($(this).attr("data-date"), $(this).attr("data-time"), $(this).attr("data-room"), null), type);
@@ -260,8 +259,8 @@ var MoveMode = function() {
 
         var $cell = null;
         for(var i = 0; i < MoveMode.swapValues.length; i++){    
-            if (MoveMode.swapValues[i].target.session == "s210")
-                console.log("SWAP", MoveMode.swapValues[i].target.session, MoveMode.swapValues[i]);   
+            // if (MoveMode.swapValues[i].target.session == "s210")
+                // console.log("SWAP", MoveMode.swapValues[i].target.session, MoveMode.swapValues[i]);   
             // empty session candidate
             if (MoveMode.swapValues[i].target.session === null){
                 if (typeof MoveMode.swapValues[i].target.date !== "undefined" && typeof MoveMode.swapValues[i].target.time !== "undefined" && typeof MoveMode.swapValues[i].target.room !== "undefined"){
@@ -281,7 +280,7 @@ var MoveMode = function() {
                         recommendedSpecialList.push($("#"+submission));
                         numSpecialRecommended--;
                     }
-                    console.log("runPropose: unscheduled");   
+                    // console.log("runPropose: unscheduled");   
                 }   
             // non-empty session candidate
             } else {
