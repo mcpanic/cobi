@@ -735,8 +735,8 @@ var CCOps = function(){
 	for(var i in CCOps.allConstraints){
 	    if(!(CCOps.allConstraints[i].type in protoConstraints)){
 		console.log("shouldn't be here");
-		console.log(CCOps.allConstraints[i].type);
-		console.log(CCOps.allConstraints[i]);
+//		console.log(CCOps.allConstraints[i].type);
+//		console.log(CCOps.allConstraints[i]);
 		
 		var constraintConflicts;
 		if(CCOps.allConstraints[i].constraintType == 'single'){
