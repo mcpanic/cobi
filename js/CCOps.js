@@ -1083,8 +1083,8 @@ var CCOps = function(){
 	for(var s2 in unscheduled){
 	    var sc = {conflictsCausedByItem: [],
  		      conflictsCausedByCandidate: [],
- 		      conflictsCausedByOffending: (computeProtoConflictsWithRowAtTimeSlot(allSessions[s2], sdate, stime))['sum'],
- 		      conflictsCausedByCandidateAtOffending: []};
+ 		      conflictsCausedByOffending: [],
+ 		      conflictsCausedByCandidateAtOffending: (computeProtoConflictsWithRowAtTimeSlot(allSessions[s2], sdate, stime))['sum'],};
  	    unscheduleValue.push(createSwapDetails(sc, new slot(null, null, null, s2)));
 	}
 
@@ -1856,8 +1856,6 @@ var CCOps = function(){
     }
     
     function proposePaperForSession(s){
-	// TODO: in some sense, wouldn't error messages be wrong tho if they depend on the session from 
-	// CausedByItem or CausedByCandidate, because we don't actually update these?
 	var scheduleValue = [];
 	var unscheduleValue = [];
 	
