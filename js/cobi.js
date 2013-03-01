@@ -554,11 +554,20 @@ var DataOps = function() {
 	console.log("swapping with unscheduled");
 	console.log(p1, s2, p2);
 	// assume p1 is unscheduled
-	if(isLocked(s2)) return;
-	if(p1.type != s2.venue) return;
-	if(!(paperIsInSession(s2,p2))) return;
+	if(isLocked(s2)) {
+	    console.log("lock");
+	    return;
+	}
+	if(p1.type != s2.venue){
+	    console.log("venue match");
+	    return;
+	}
+	if(!(paperIsInSession(s2,p2))){
+	    console.log("what???" , s2, p2);
+	    return;
+	}
 	
-	//	console.log("Test: swapping unscheduled paper " + p1.id + " with scheduled paper " + p2.id + " in " + s2.id);
+//	console.log("Test: swapping unscheduled paper " + p1.id + " with scheduled paper " + p2.id + " in " + s2.id);
 	
 	removeFromUnscheduledPaper(p1);
 	for(var i = 0; i < s2.submissions.length; i++){
