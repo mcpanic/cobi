@@ -260,6 +260,10 @@ var CCOps = function(){
 		    return abbrItem(names, 'author-msg') + " also" + fill +  "in '" + 
 			formatTitle(allSessions[s2].title, s2, null) + "'.";
 		}
+		if(s2 == null || s2 == "null"){
+		    console.log("s2 null, should never happen");
+		    return abbrItem(names, 'author-msg') +  fill +  "in simultaneous sessions";
+		}
 		return abbrItem(names, 'author-msg') + fill +  "in both '" + 
 		    formatTitle(allSessions[s1].title, s1, null) + "' and '" + formatTitle(allSessions[s2].title, s2, null) + "'.";
 	    }

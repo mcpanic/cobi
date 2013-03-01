@@ -92,6 +92,7 @@ var DataOps = function() {
     }
     
     function handleTransaction(t){
+	console.log(t);
 	switch (t.type) {
    	case 'lock': 
 	    lockSlot(t.data.date, t.data.time, t.data.room);
@@ -550,6 +551,8 @@ var DataOps = function() {
     // swapWithUnscheduledPaper(unscheduledSubmissions['pn1376'], allSessions['s254'], allSubmissions['pn1566']);
     // swapWithUnscheduledPaper(unscheduledSubmissions['pn1566'], allSessions['s254'], allSubmissions['pn1376']);
     function swapWithUnscheduledPaper(p1, s2, p2){
+	console.log("swapping with unscheduled");
+	console.log(p1, s2, p2);
 	// assume p1 is unscheduled
 	if(isLocked(s2)) return;
 	if(p1.type != s2.venue) return;
@@ -571,6 +574,9 @@ var DataOps = function() {
 	CCOps.updateAllConstraintEntities([s2.id]);
 	//  updateAuthorConflicts([s2.id]);
 	//}
+	console.log(p1, s2, p2);
+	console.log(unscheduled);
+	console.log(unscheduledSubmissions);
     }
     return {
 	handleTransaction: handleTransaction,
