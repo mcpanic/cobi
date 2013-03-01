@@ -477,6 +477,8 @@ var Conflicts = function() {
      function displayMoveModeSubmissionFullConflicts(swapValues){
         if (typeof swapValues === "undefined" || swapValues == null)
            return;      
+         if (swapValues.target.session == "s210")
+         console.log(swapValues);
 
         var element = document.createElement("div");
         $(element).addClass("conflicts");

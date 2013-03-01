@@ -53,8 +53,7 @@ var MoveMode = function() {
             });            
         } else { // empty paper. session still exists.
             $.each(MoveMode.swapValues, function(index, v){
-                //if (v.target.date == session.date && v.target.time == session.time && v.target.room == session.room)
-                if (v.target.session == session.id)
+                if (v.target.session == session.id && v.target.paper == null)
                     selected = v;
             });
         }
@@ -260,7 +259,8 @@ var MoveMode = function() {
 
         var $cell = null;
         for(var i = 0; i < MoveMode.swapValues.length; i++){    
-            // console.log("SWAP", MoveMode.swapValues[i].target.session);   
+            if (MoveMode.swapValues[i].target.session == "s210")
+                console.log("SWAP", MoveMode.swapValues[i].target.session, MoveMode.swapValues[i]);   
             // empty session candidate
             if (MoveMode.swapValues[i].target.session === null){
                 if (typeof MoveMode.swapValues[i].target.date !== "undefined" && typeof MoveMode.swapValues[i].target.time !== "undefined" && typeof MoveMode.swapValues[i].target.room !== "undefined"){
