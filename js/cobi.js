@@ -529,7 +529,7 @@ var DataOps = function() {
     // movePaper(allSessions['s288'], allSubmissions['pn1376'], allSessions['s254']);
     // Note: always inserts at front
     function movePaper(s1, p1, s2, pos){
-	console.log(s1, p1, s2, pos);
+//	console.log(s1, p1, s2, pos);
 	if(isLocked(s1) || isLocked(s2)) return;
 	
 	// make sure types match and papers from their session
@@ -551,8 +551,8 @@ var DataOps = function() {
     // swapWithUnscheduledPaper(unscheduledSubmissions['pn1376'], allSessions['s254'], allSubmissions['pn1566']);
     // swapWithUnscheduledPaper(unscheduledSubmissions['pn1566'], allSessions['s254'], allSubmissions['pn1376']);
     function swapWithUnscheduledPaper(p1, s2, p2){
-	console.log("swapping with unscheduled");
-	console.log(p1, s2, p2);
+//	console.log("swapping with unscheduled");
+//	console.log(p1, s2, p2);
 	// assume p1 is unscheduled
 	if(isLocked(s2)) {
 	    console.log("lock");
@@ -583,9 +583,6 @@ var DataOps = function() {
 	CCOps.updateAllConstraintEntities([s2.id]);
 	//  updateAuthorConflicts([s2.id]);
 	//}
-	console.log(p1, s2, p2);
-	console.log(unscheduled);
-	console.log(unscheduledSubmissions);
     }
     return {
 	handleTransaction: handleTransaction,
@@ -740,7 +737,7 @@ function unlockSlot(date, time, room){
 
 // changing the session title
 function editSessionTitle(s, t){
-    console.log(editSessionTitle, s.id, t);
+//    console.log(editSessionTitle, s.id, t);
     var td = { 'id': s.id,
 	       'title': t };
     var tp = { 'id': s.id,
