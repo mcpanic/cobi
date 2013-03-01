@@ -715,6 +715,14 @@ var CCOps = function(){
 	    }
 	}
 	
+	// Unscheduled sessions may still contain paper conflicts
+	for(var s in unscheduled){
+	    var cs = checkSubConstraint(fitMat, allSessions[s], allSessions[s], 'great');
+	    cs = cs.concat(checkSubConstraint(notokMat, allSessions[s], allSessions[s], 'notok'));
+	    conflicts["all"] = conflicts["all"].concat(cs);
+	    conflicts["sessions"][s] = conflicts["sessions"][s].concat(cs);
+	}
+
 	for(var i in CCOps.allConstraints){
 	    if(!(CCOps.allConstraints[i].type in protoConstraints)){
 		console.log("shouldn't be here");
