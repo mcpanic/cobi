@@ -461,6 +461,7 @@
                 isRecommended = true;            
             // console.log(session.id, submission.id, isProposed);
         } else {
+            console.log(session, submission, isProposed, type, srcType);
             console.log("IMPOSSIBLE");
         }
 

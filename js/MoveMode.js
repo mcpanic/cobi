@@ -126,6 +126,7 @@ var MoveMode = function() {
                     if ($(this).hasClass("scheduled")){
                         html += getSessionDetail("paperMove", "scheduled", session, type);
                     } else if ($(this).hasClass("unscheduled")){
+                        console.log("here", session, type);
                         html += getSessionDetail("paperMove", "unscheduled", session, type);
                     } else if ($(this).hasClass("empty")) {
                         html += getSessionDetail("paperMove", "empty", new slot($(this).attr("data-date"), $(this).attr("data-time"), $(this).attr("data-room"), null), type);
@@ -475,7 +476,7 @@ var MoveMode = function() {
         } else {
             return;
         }
-
+        console.log(allSubmissions[unscheduledId], allSessions[allSubmissions[scheduledId].session], allSubmissions[scheduledId]);
         // the backend swap with unscheduled
         swapWithUnscheduledPaper(allSubmissions[unscheduledId], allSessions[allSubmissions[scheduledId].session], allSubmissions[scheduledId]);
     });
