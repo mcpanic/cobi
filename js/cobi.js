@@ -558,8 +558,8 @@ var DataOps = function() {
 	    console.log("lock");
 	    return;
 	}
-	if(p1.type != s2.venue){
-	    console.log("venue match");
+	if(!(p1.type == s2.venue || (p1.type=="TOCHI" && s2.venue == "paper"))){
+	    console.log("venue not match");
 	    return;
 	}
 	if(!(paperIsInSession(s2,p2))){
