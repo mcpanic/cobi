@@ -1,5 +1,10 @@
 var Searchbox = function() {
 
+// $(".searchbox .select2-choice").click(function(){
+//     $(".searchbox abbr").trigger("click");
+// });
+
+
     // Initialize the search box functionality
     function initialize(){
         $("#searchbox").select2({
@@ -47,6 +52,8 @@ var Searchbox = function() {
                 scrollTop:$cell.offset().top - 100
             }, 500);   
             $cell.effect("highlight", {color: "#aec7e8"}, 3000);          
+            // highlight already issued, so empty the value so that multiple runs for the same search still highlights.
+            $("#searchbox").val("");
         });
     }
 

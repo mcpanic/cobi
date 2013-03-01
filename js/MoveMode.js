@@ -2,6 +2,7 @@ var MoveMode = function() {
     var isOn = false;
     var type = "";
     var paperId = "";
+    var swapValues = [];
 
     // Initialize the view mode 
     function initialize(moveType, pid){
@@ -11,6 +12,7 @@ var MoveMode = function() {
             MoveMode.isOn = true;
             type = moveType;
             paperId = pid;
+            MoveMode.swapValues = [];
             ViewMode.destroy();
             $(".main").addClass("move-mode");
             Conflicts.clearConflictDisplay();
@@ -26,45 +28,36 @@ var MoveMode = function() {
         $("body").on("click", ".slot-paper", paperSlotClickHandler);
     }
 
-
-    // for each conflict preview tpe (addedSrc, removedSrc, addedDest, removedDest),
-    // display appropriate message
-    function displayPreviewByType(type, item) {
-        var html = "";
-        var length = getLength(item);
-        var typeMessage = "";
-        if (type === "addedSrc") 
-           typeMessage = " conflicts added to source session";
-        else if (type === "removedSrc")
-           typeMessage = " conflicts removed from source session";
-        else if (type === "addedDest")
-           typeMessage = " conflicts added to this session";
-        else if (type === "removedDest")
-           typeMessage = " conflicts removed to this session";
-
-        html = "<h5>" + length + typeMessage + "</h5>"
-        if (length > 0) 
-           item.map(function(co) {return html + "<li>" + co.description + "</li>";})         
-        else
-           return html;
+    function getSwapValueBySession(session){
+        var selected = null;
+        if (typeof session.id !== "undefined"){
+            $.each(MoveMode.swapValues, function(index, v){
+                if (v.target.session == session.id)
+                    selected = v;
+            });            
+        } else {    // empty sessions. date/time/room still exists.
+            $.each(MoveMode.swapValues, function(index, v){
+                if (v.target.date == session.date && v.target.time == session.time && v.target.room == session.room)
+                    selected = v;
+            });
+        }
+        return selected;
     }
 
-    function getPreviewSwap(swap){
-        //var $session = $(".selected").first();
-        //var id = getID($session);
-        //var session = allSessions[id];
-        //console.log(session.title);      
-
-        //var swapValues = proposeSwap(allSessions[id]);
-        var html = "";
-        html += "<h4>Overall, " + swap.value
-           + " conflicts will be resolved.</h4>" 
-           + displayPreviewByType("addedSrc", swap.addedSrc)
-           + displayPreviewByType("removedSrc", swap.removedSrc)
-           + displayPreviewByType("addedDest", swap.addedDest)
-           + displayPreviewByType("removedDest", swap.removedDest);
-           //console.log(html);
-        return html;
+    function getSwapValueBySubmission(session, submission){
+        var selected = null;
+        if (submission != null && typeof submission.id !== "undefined"){
+            $.each(MoveMode.swapValues, function(index, v){
+                if (v.target.paper == submission.id)
+                    selected = v;
+            });            
+        } else { // empty paper. session still exists.
+            $.each(MoveMode.swapValues, function(index, v){
+                if (v.target.session == session.id && v.target.paper == null)
+                    selected = v;
+            });
+        }
+        return selected;
     }
 
     function getCancelButtonHTML(){
@@ -112,23 +105,13 @@ var MoveMode = function() {
                         + "<a class='close popover-close' data-dismiss='clickover' data-session-id='" + id + "' href='#''>&times;</a>"
                         + "<a class='save-button pull-right' data-session-id='" + id + "' href='#''>edit</a>";
             },
-            content:function(){
-                //var id = $(this).data("session-id");
-                //console.log(id);
-                
+            content:function(){                
                 var html = "";
                 if ($(this).hasClass("move-src-selected")) {
                     // console.log("slotClickHandler: move-src-selected");                   
                     html += "<div class='alert alert-info'><strong>Select another session to schedule this session.</strong></div>" + getCancelButtonHTML();
                     if (id !== -1)
                         html += getSubmissionList("move", session, type);
-
-                // } else if ($(this).find(".title").hasClass("locked")) {
-                //     console.log("slotClickHandler: locked");                  
-                //     html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong><br>" + getCancelButtonHTML();
-                //     if (id !== -1)
-                //         html += getSubmissionList("move", session, type);
-
                 } else if (type == "scheduled" || type == "unscheduled" || type == "empty"){
                     if ($(this).hasClass("scheduled")){
                         html += getSessionDetail("move", "scheduled", session, type);
@@ -239,32 +222,32 @@ var MoveMode = function() {
         var numScheduledRecommended = 5; // we want to ensure at most 5 empty and unscheduled recommendations out of 5.
         var numRecommended = 5; // total number of recommendations
 
-        var swapValues; 
+        // var swapValues; 
         if (type === "scheduled") {
             var tempArray = proposeSlotAndSwap(allSessions[id]);
-            swapValues = tempArray.slotValue.concat(tempArray.swapValue);
+            MoveMode.swapValues = tempArray.slotValue.concat(tempArray.swapValue);
         } else if (type === "unscheduled") {
             var tempArray = proposeSlotAndSwap(allSessions[id]);
-            swapValues = tempArray.slotValue.concat(tempArray.swapValue);
+            MoveMode.swapValues = tempArray.slotValue.concat(tempArray.swapValue);
         } else if (type === "empty") {
             var tempArray = proposeSessionForSlot($session.attr("data-date"), $session.attr("data-time"), $session.attr("data-room"));
-            swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);
+            MoveMode.swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);
         } else if (type === "paper-scheduled") {
             var tempArray = proposePaperSessionAndSwap(allSubmissions[paperId]);
-            swapValues = tempArray.sessionValue.concat(tempArray.swapValue);
+            MoveMode.swapValues = tempArray.sessionValue.concat(tempArray.swapValue);
         } else if (type === "paper-unscheduled") {
             var tempArray = proposePaperSessionAndSwap(allSubmissions[paperId]);
-            swapValues = tempArray.sessionValue.concat(tempArray.swapValue);
+            MoveMode.swapValues = tempArray.sessionValue.concat(tempArray.swapValue);
         } else if (type === "paper-empty") {
             var tempArray = proposePaperForSession(allSessions[id]);
-            swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);
+            MoveMode.swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);
         } else {
             console.log("ERROR: type unknown");
             return;
         }
 	  
         // Now display each candidate 
-        swapValues.sort(function(a, b) {
+        MoveMode.swapValues.sort(function(a, b) {
             // HQ: slight edits here to handle locked slots
             if(a.target.date != null && scheduleSlots[a.target.date][a.target.time][a.target.room]['locked']){
                 return 1;
@@ -273,34 +256,39 @@ var MoveMode = function() {
             }
         });
 
+
         var $cell = null;
-        for(var i = 0; i < swapValues.length; i++){    
-            // console.log("SWAP", swapValues[i].target.session);   
+        for(var i = 0; i < MoveMode.swapValues.length; i++){    
+            // if (MoveMode.swapValues[i].target.session == "s210")
+                // console.log("SWAP", MoveMode.swapValues[i].target.session, MoveMode.swapValues[i]);   
             // empty session candidate
-            if (swapValues[i].target.session === null){
-                if (typeof swapValues[i].target.date !== "undefined" && typeof swapValues[i].target.time !== "undefined" && typeof swapValues[i].target.room !== "undefined"){
-                    $cell = findCellByDateTimeRoom(swapValues[i].target.date, swapValues[i].target.time, swapValues[i].target.room);
+            if (MoveMode.swapValues[i].target.session === null){
+                if (typeof MoveMode.swapValues[i].target.date !== "undefined" && typeof MoveMode.swapValues[i].target.time !== "undefined" && typeof MoveMode.swapValues[i].target.room !== "undefined"){
+                    $cell = findCellByDateTimeRoom(MoveMode.swapValues[i].target.date, MoveMode.swapValues[i].target.time, MoveMode.swapValues[i].target.room);
                     $cell.addClass("proposed-swap"); //.data("title", "Empty slot");
                     if (numSpecialRecommended > 0){
                         recommendedSpecialList.push($cell);
                         numSpecialRecommended--;
                     }
                 }
-
-                var submission = swapValues[i].target.paper;   
+                var submission = MoveMode.swapValues[i].target.paper;   
                 // Paper-level unscheduled candidate exists: session null, submission id
-                if (typeof submission !== "undefined") {                    
-                        $("#"+submission).attr("data-proposed-swap-paper", "true").addClass("proposed-swap");
-                        // console.log("runPropose: unscheduled");   
+                if (typeof submission !== "undefined") {     
+                    $cell = $("#"+submission);
+                    $("#"+submission).attr("data-proposed-swap-paper", "true").addClass("proposed-swap");
+                    if (numSpecialRecommended > 0){
+                        recommendedSpecialList.push($("#"+submission));
+                        numSpecialRecommended--;
+                    }
+                    // console.log("runPropose: unscheduled");   
                 }   
             // non-empty session candidate
             } else {
-                var session = swapValues[i].target.session;
-                var submission = swapValues[i].target.paper;
-                $cell = findCellByID(swapValues[i].target.session);
-                $cell.addClass("proposed-swap"); //.data("title", allSessions[swapValues[i].target.session].title);
+                var session = MoveMode.swapValues[i].target.session;
+                var submission = MoveMode.swapValues[i].target.paper;
+                $cell = findCellByID(MoveMode.swapValues[i].target.session);
+                $cell.addClass("proposed-swap"); //.data("title", allSessions[MoveMode.swapValues[i].target.session].title);
                 if ($cell.hasClass("unscheduled")) {
-                    // console.log("SWAP", swapValues[i]); 
                     if (numSpecialRecommended > 0){
                         recommendedSpecialList.push($cell);
                         numSpecialRecommended--;
@@ -316,25 +304,19 @@ var MoveMode = function() {
                     // store currently inserted paper-level proposals
                     var curList = typeof $cell.attr("data-proposed-swap-paper") === "undefined" ? "" : $cell.attr("data-proposed-swap-paper");
                     curList += "," + submission;
-
-                    // if (submission == null)
-                    //     console.log("runPropose: empty");
-                    // else 
-                    //     console.log("runPropose: scheduled");
                     $cell.attr("data-proposed-swap-paper", curList);                                       
                 }
             }
-            //console.log(swapValues[i]);
-            Conflicts.displayPreviewConflicts(swapValues[i], $cell.find(".conflicts"));
+            //console.log(MoveMode.swapValues[i]);
+            Conflicts.displayMovePreviewConflicts(MoveMode.swapValues[i], $cell.find(".conflicts"));
             // console.log(outerHTML($cell.find(".conflicts")));
             $cell.find(".display").html($cell.find(".conflicts").html());
-            Conflicts.displayFullConflicts(swapValues[i], $cell.find(".detail"));
+            //Conflicts.displayFullConflicts(MoveMode.swapValues[i], $cell.find(".detail"));
         }
-
 
         // Mark the current selection, which is the source session
         $session.addClass("move-src-selected");
-
+        // Move Mode
         if (type.indexOf("paper") === -1) {
             var numAssigned = 0;
             $(document).trigger("addMoveStatus", [id]);
@@ -347,7 +329,6 @@ var MoveMode = function() {
                         $(rec).addClass("recommended");
                         numAssigned++;    
                     }
-                    
                 }                
             });  
             // scheduled sessions until numRecommended is met        
@@ -357,10 +338,30 @@ var MoveMode = function() {
                     numAssigned++;
                 }                
             });
-
-        } else
+        // Paper Move Mode
+        } else {
+            var numAssigned = 0;
             $(document).trigger("addPaperMoveStatus", [id, paperId]);
+            // specials (unscheduled, empty) first because they have the priority
+            $.each(recommendedSpecialList, function(index, rec) {
+                if (numAssigned < numRecommended) {
+                    // do not recommend unscheduled sessions 
+                    if (type == "paper-scheduled" || type == "paper-unscheduled"){ 
 
+                    } else {
+                        $(rec).addClass("recommended");
+                        numAssigned++;    
+                    }
+                }                
+            });  
+            // scheduled sessions until numRecommended is met        
+            $.each(recommendedScheduledList, function(index, rec) {
+                if (numAssigned < numRecommended) {
+                    $(rec).addClass("recommended");
+                    numAssigned++;
+                }                
+            });            
+        }
     }
 
 /******************************
@@ -474,7 +475,7 @@ var MoveMode = function() {
         } else {
             return;
         }
-
+        console.log(allSubmissions[unscheduledId], allSessions[allSubmissions[scheduledId].session], allSubmissions[scheduledId]);
         // the backend swap with unscheduled
         swapWithUnscheduledPaper(allSubmissions[unscheduledId], allSessions[allSubmissions[scheduledId].session], allSubmissions[scheduledId]);
     });
@@ -531,9 +532,9 @@ var MoveMode = function() {
         type = "";
         // TOOD: check all the other things the swapping mode has created and reset/undo them.
         
-        $("#unscheduled-papers .slot-paper").removeAttr("data-proposed-swap-paper");
-        $("#unscheduled .slot").removeAttr("data-proposed-swap-paper");
-        $("#program .slot").removeAttr("data-proposed-swap-paper");
+        $("#unscheduled-papers .slot-paper").removeAttr("data-proposed-swap-paper").find(".conflicts").html("");
+        $("#unscheduled .slot").removeAttr("data-proposed-swap-paper").find(".conflicts").html("");
+        $("#program .slot").removeAttr("data-proposed-swap-paper").find(".conflicts").html("");
 
         $(".recommended").removeClass("recommended");
         $(".selected").removeClass("selected");
@@ -555,8 +556,11 @@ var MoveMode = function() {
 
     return {
         isOn: isOn,
+        swapValues: swapValues,
         initialize: initialize,
         getCancelButtonHTML: getCancelButtonHTML,
+        getSwapValueBySession: getSwapValueBySession,
+        getSwapValueBySubmission: getSwapValueBySubmission, 
         destroy: destroy
     };
 }();     

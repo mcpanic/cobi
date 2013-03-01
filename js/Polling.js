@@ -96,12 +96,12 @@ var Polling = function() {
             // the backend conflicts update
             getAllConflicts();
             // the frontend conflicts update: the row view of conflicts.
-            Conflicts.updateConflicts(true, true); // only sidebar
+            Conflicts.updateConflicts(true, true, true); // only sidebar
         } else {
             // the backend conflicts update
             getAllConflicts();
             // the frontend conflicts update: the row view of conflicts.
-            Conflicts.updateConflicts(true, false); // only sidebar
+            Conflicts.updateConflicts(true, false, true); // only sidebar
 
         }
     }

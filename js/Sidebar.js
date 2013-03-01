@@ -3,6 +3,7 @@ var Sidebar = function() {
      // Initialize the sidebar with a default view 
      function initialize(){
           displayConstraints();
+          displayPreferences();
           displayViewOptions();
           displaySessionTypes(); 
           displayPersonas();  
@@ -69,7 +70,9 @@ var Sidebar = function() {
 
      // Add event handlers to each sidebar item
      function bindEvents(){
-          $("#list-constraints").on("click", "li a", clickConstraintsHandler);          
+          $("#list-constraints").on("click", "li.constraint-entry a", clickConstraintsHandler); 
+          $("#list-constraints").on("click", ".sublist-header a", clickConstraintHeaderHandler);         
+          $("#list-preferences").on("click", "li a", clickPreferencesHandler);
           $("#list-view-options").on("click", "li a", clickViewOptionsHandler);
           $("#list-session-types").on("click", "li a", clickSessionTypesHandler);
           $("#list-session-types").on("click", ".myCheckbox", clickCheckboxSessionTypesHandler);           
@@ -77,8 +80,6 @@ var Sidebar = function() {
           $("#list-personas").on("click", ".myCheckbox", clickCheckboxPersonasHandler); 
           $("#list-communities").on("click", "li a", clickCommunitiesHandler);
           $("#list-communities").on("click", ".myCheckbox", clickCheckboxCommunitiesHandler);          
-          $("#list-history").on("click", ".history-link", clickHistoryHandler);
-          $("#list-history").on("click", ".history-paper-link", clickHistoryPaperHandler);
           $(".sidebar-fixed").on("click", ".toggle", clickToggle);
           $(".sidebar-fixed").on("click", ".toggle-options", clickHeaderHandler);
 
@@ -252,12 +253,13 @@ var Sidebar = function() {
      // }
 
      function _toggleAllConflicts(toggle){
-          $("#list-constraints li").each(function(index, constraint){
+          $("#list-constraints li.constraint-entry").each(function(index, constraint){
                Conflicts.updateConstraintBackground($(constraint).attr("data-type"), toggle);         
           });          
      }
 
-     function clickConstraintsHandler(){
+     // Turn or off all sub constraint under this header
+     function clickConstraintHeaderHandler(){
           var $this = $(this);
           var toggle = true;
           // _resetSidebarSelections();
@@ -268,24 +270,135 @@ var Sidebar = function() {
           $(".slot.cell-persona").removeClass("cell-persona");
           $(".slot.cell-community").removeClass("cell-community");   
           
-
+          // Turn off everything
           if ($(this).parent().hasClass("view-option-active"))
-               toggle = false;
+              toggle = false;
           $("#list-constraints .view-option-active").removeClass("view-option-active");
-          if (toggle)
+          // Turn on everything within my group
+          if (toggle) {
               $(this).parent().addClass("view-option-active");
+              var mySeverityListID = $(this).parent().attr("data-severity") + "-severity-constraints";
+              $("#" + mySeverityListID + " li.constraint-entry").addClass("view-option-active");
+          }
 
-          $("#list-constraints li").each(function(index, constraint){
-               var type = $(constraint).attr("data-type");
-               // console.log(type, $this.parent().attr("data-type"), toggle);
-               if (type == $this.parent().attr("data-type"))
-                    Conflicts.updateConstraintBackground(type, toggle);     
+          $("#list-constraints li.constraint-entry").each(function(index, item){
+               // var type = $(constraint).attr("data-type");
+               // // console.log(type, $this.parent().attr("data-type"), toggle);
+               // if (type == $this.parent().attr("data-type"))
+               //     Conflicts.updateConstraintBackground(type, toggle);     
+               // else
+               //     Conflicts.updateConstraintBackground(type, false);   
+
+               if ($(item).hasClass("view-option-active"))
+                   Conflicts.updateConstraintBackground($(item).attr("data-type"), true);
                else
-                    Conflicts.updateConstraintBackground(type, false);     
-          });
-          
+                   Conflicts.updateConstraintBackground($(item).attr("data-type"), false);  
+          });          
+         return false;     
+     }
 
+     function clickConstraintsHandler(){
+          var $this = $(this);
+          var toggle = true;
+          // _resetSidebarSelections();
+          _toggleAllCheckboxes($("#list-preferences"), false);
+          _toggleAllCheckboxes($("#list-session-types"), false);
+          _toggleAllCheckboxes($("#list-personas"), false);
+          _toggleAllCheckboxes($("#list-communities"), false);
+          $(".slot.cell-preference").removeClass("cell-preference");
+          $(".slot.cell-session-type").removeClass("cell-session-type");
+          $(".slot.cell-persona").removeClass("cell-persona");
+          $(".slot.cell-community").removeClass("cell-community");   
+          
+          // turn off everything not in the same severity
+          var mySeverity = "";
+          var myType = $(this).parent().attr("data-type");
+          $.each(Conflicts.constraintsList, function(index, item){
+               // console.log(item.type, myType);
+               if (item.type == myType)
+                    mySeverity = item.severity; 
+          }); 
+          var mySeverityListID = mySeverity + "-severity-constraints";
+          // console.log("#list-constraints :not(#" + mySeverityListID + ") .view-option-active");
+          $("#list-constraints :not(#" + mySeverityListID + ") .view-option-active").removeClass("view-option-active");
+
+          // toggle
+          if ($this.parent().hasClass("view-option-active")) {
+               $this.parent().removeClass("view-option-active");
+               toggle = false;
+          } else {
+               $this.parent().addClass("view-option-active");
+          }
+
+          // if ($(this).parent().hasClass("view-option-active")){
+               
+          // }
+          // $("#list-constraints .view-option-active").removeClass("view-option-active");
+          // if (toggle)
+          //     $(this).parent().addClass("view-option-active");
+
+          $("#list-constraints li.constraint-entry").each(function(index, item){
+               // var type = $(constraint).attr("data-type");
+               // // console.log(type, $this.parent().attr("data-type"), toggle);
+               // if (type == $this.parent().attr("data-type"))
+               //     Conflicts.updateConstraintBackground(type, toggle);     
+               // else
+               //     Conflicts.updateConstraintBackground(type, false);   
+
+               if ($(item).hasClass("view-option-active"))
+                   Conflicts.updateConstraintBackground($(item).attr("data-type"), true);
+               else
+                   Conflicts.updateConstraintBackground($(item).attr("data-type"), false);  
+          });
          return false;          
+     }
+
+     function clickPreferencesHandler(){
+          var $this = $(this);
+          var toggle = true;
+          // _resetSidebarSelections();
+          _toggleAllCheckboxes($("#list-conflicts"), false);
+          _toggleAllCheckboxes($("#list-session-types"), false);
+          _toggleAllCheckboxes($("#list-personas"), false);
+          _toggleAllCheckboxes($("#list-communities"), false);
+          $(".slot.cell-session-type").removeClass("cell-session-type");
+          $(".slot.cell-persona").removeClass("cell-persona");
+          $(".slot.cell-community").removeClass("cell-community");   
+          _toggleAllConflicts(false);
+
+          // turn off everything not in the same severity
+          // var mySeverity = "";
+          // var myType = $(this).parent().attr("data-type");
+          // $.each(Conflicts.preferencesList, function(index, item){
+          //      if (item.type == myType)
+          //           mySeverity = item.severity; 
+          // }); 
+          // var mySeverityListID = mySeverity + "-severity-constraints";
+          // console.log("#list-constraints :not(#" + mySeverityListID + ") .view-option-active");
+          // $("#list-constraints :not(#" + mySeverityListID + ") .view-option-active").removeClass("view-option-active");
+
+          // toggle
+          if ($this.parent().hasClass("view-option-active")) {
+               $this.parent().removeClass("view-option-active");
+               toggle = false;
+          } else {
+               $this.parent().addClass("view-option-active");
+          }
+
+          $("#list-preferences li.preference-entry").each(function(index, item){
+               // var type = $(constraint).attr("data-type");
+               // // console.log(type, $this.parent().attr("data-type"), toggle);
+               // if (type == $this.parent().attr("data-type"))
+               //     Conflicts.updateConstraintBackground(type, toggle);     
+               // else
+               //     Conflicts.updateConstraintBackground(type, false);   
+
+               if ($(item).hasClass("view-option-active"))
+                   Conflicts.updatePreferenceBackground($(item).attr("data-type"), true);
+               else
+                   Conflicts.updatePreferenceBackground($(item).attr("data-type"), false);  
+          });
+         return false;     
      }
 
      function clickViewOptionsHandler(){
@@ -305,8 +418,16 @@ var Sidebar = function() {
                               $(item).find(".display").html($(item).find(".conflicts").html());
                          });
                     } else
-                         Conflicts.updateConflicts(true, true);
-               break;                 
+                         Conflicts.updateConflicts(true, true, true);
+               break;   
+               case "preferences":
+                    if (MoveMode.isOn){
+                         $(".slot:not('.unavailable')").each(function(index, item){
+                              $(item).find(".display").html($(item).find(".conflicts").html());
+                         });
+                    } else
+                         Conflicts.updateConflicts(true, true, false);
+               break;                               
                case "popularity":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);
@@ -386,10 +507,10 @@ var Sidebar = function() {
           }
           return false;     
      }
-
+ 
 
      function clickCheckboxSessionTypesHandler(){
-          console.log("click session types");
+          // console.log("click session types");
           $(this).parent().find("a").trigger("click");
      }
      
@@ -397,9 +518,11 @@ var Sidebar = function() {
           var $this = $(this);
           // _resetSidebarSelections();
           _toggleAllCheckboxes($("#list-constraints"), false);
+          _toggleAllCheckboxes($("#list-preferences"), false);
           // _toggleAllCheckboxes($("#list-session-types"), false);
           _toggleAllCheckboxes($("#list-personas"), false);
           _toggleAllCheckboxes($("#list-communities"), false);
+          $(".slot.cell-preference").removeClass("cell-preference");
           // $(".slot.cell-session-type").removeClass("cell-session-type");
           $(".slot.cell-persona").removeClass("cell-persona");
           $(".slot.cell-community").removeClass("cell-community");   
@@ -443,9 +566,11 @@ var Sidebar = function() {
      function clickPersonasHandler(event){
           var $this = $(this);
           _toggleAllCheckboxes($("#list-constraints"), false);
+          _toggleAllCheckboxes($("#list-preferences"), false);
           _toggleAllCheckboxes($("#list-session-types"), false);
           // _toggleAllCheckboxes($("#list-personas"), false);
           _toggleAllCheckboxes($("#list-communities"), false);
+          $(".slot.cell-preference").removeClass("cell-preference");
           $(".slot.cell-session-type").removeClass("cell-session-type");
           // $(".slot.cell-persona").removeClass("cell-persona");
           $(".slot.cell-community").removeClass("cell-community");   
@@ -472,7 +597,6 @@ var Sidebar = function() {
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                if (isSpecialCell($(item)))
                     return;
-               // $(item).css("background-color", "");
                $(item).removeClass(className);
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
@@ -497,9 +621,11 @@ var Sidebar = function() {
           var $this = $(this);
           // _resetSidebarSelections();
           _toggleAllCheckboxes($("#list-constraints"), false);
+          _toggleAllCheckboxes($("#list-preferences"), false);
           _toggleAllCheckboxes($("#list-session-types"), false);
           _toggleAllCheckboxes($("#list-personas"), false);
           // _toggleAllCheckboxes($("#list-communities"), false);
+          $(".slot.cell-preference").removeClass("cell-preference");
           $(".slot.cell-session-type").removeClass("cell-session-type");
           $(".slot.cell-persona").removeClass("cell-persona");
           // $(".slot.cell-community").removeClass("cell-community");   
@@ -527,7 +653,6 @@ var Sidebar = function() {
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                if (isSpecialCell($(item)))
                     return;
-               // $(item).css("background-color", "");
                $(item).removeClass(className);
                var id = $(item).attr("id").substr(8);
                var session = allSessions[id];     
@@ -540,51 +665,37 @@ var Sidebar = function() {
          return false;
      }
 
-     function clickHistoryHandler(){
-          var id = $(this).attr("data-session-id");
-          var $cell;
-          if (typeof id === "undefined") {
-	          $cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
-	     } else
-               $cell = findCellByID(id);
-
-          $("body").animate({
-            scrollTop:$cell.offset().top - 100
-          }, 500); 
-          $cell.effect("highlight", {color: "#aec7e8"}, 3000);
-
-          return false;
-     } 
-
-     function clickHistoryPaperHandler(){
-          var id = $(this).attr("data-session-id");
-          var paperId = $(this).attr("data-submission-id");
-          var $cell;
-          if (typeof id === "undefined") {
-               //cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
-               $cell = $("#unscheduled-papers #" + paperId);
-          } else
-               $cell = findCellByID(id);
-          $("body").animate({
-            scrollTop:$cell.offset().top - 100
-          }, 500); 
-          $cell.effect("highlight", {color: "#aec7e8"}, 3000);
-          return false;
-     } 
-
      // Display the constraints list
 	function displayConstraints(){
-     	$.each(constraints_list, function(index, constraint){
+     	$.each(Conflicts.constraintsList, function(index, constraint){
      		var item = document.createElement("li");
-     		$(item).attr("data-type", constraint.type).html("<a href='#'><span class='palette'></span>" 
-                    + constraint.label 
+     		$(item).attr("data-type", constraint.type)
+                    .addClass("constraint-entry")
+                    .html("<a href='#'><span class='palette'></span>" 
+                    + constraint.description 
                     + "</a>"
                     + " (<span class='count'></span>)"
                     );
-     		$("#list-constraints").append($(item));
-     		$(item).find("span.palette").css("background-color", constraint.color);
+     		$("#list-constraints #" + constraint.severity + "-severity-constraints").append($(item));
+     		$(item).find("span.palette").addClass("cell-conflict-" + constraint.severity);
       	});
 	}
+
+     // Display the preferences list
+     function displayPreferences(){
+          $.each(Conflicts.preferencesList, function(index, preference){
+               var item = document.createElement("li");
+               $(item).attr("data-type", preference.type)
+                    .addClass("preference-entry")
+                    .html("<a href='#'><span class='palette'></span>" 
+                    + preference.description 
+                    + "</a>"
+                    + " (<span class='count'></span>)"
+                    );
+               $("#list-preferences").append($(item));
+               $(item).find("span.palette").addClass("cell-preference");
+          });
+     }
 
      // Display the View options list
      function displayViewOptions(){

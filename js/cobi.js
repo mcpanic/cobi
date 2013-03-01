@@ -86,12 +86,13 @@ var communityList = ["ux",
 var DataOps = function() {
     function handleFailedTransaction(t){
 	var rollbackTransaction = new TransactionData(t.uid, t.previousType, t.previous, t.type, t.data);
-//	console.log("rolling back the failed transaction");
-//	console.log(rollbackTransaction);
+	//	console.log("rolling back the failed transaction");
+	//	console.log(rollbackTransaction);
 	handleTransaction(rollbackTransaction);
     }
-
+    
     function handleTransaction(t){
+	console.log(t);
 	switch (t.type) {
    	case 'lock': 
 	    lockSlot(t.data.date, t.data.time, t.data.room);
@@ -382,7 +383,7 @@ var DataOps = function() {
 	
 	s.submissions = submissions;	
     }
-
+    
     function isLocked(s1){
 	if(s1.id in unscheduled){
 	    return false;
@@ -396,7 +397,7 @@ var DataOps = function() {
 	}
 	return false;
     }
-
+    
     function paperIsInSession(s1, p1){
 	// make sure keys come from right place
 	var p1ins1 = false;
@@ -436,15 +437,16 @@ var DataOps = function() {
 	    }
 	}
 	
-	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
-	    console.log("relying on CCOps");
-	    CCOps.updateAllConstraintEntities([s1.id, s2.id]);
-	}
+	//if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	//	    console.log("relying on CCOps");
+	CCOps.updateAllConstraintEntities([s1.id, s2.id]);
+	//	    updateAuthorConflicts([s1.id, s2.id]);
+	//}
 	// associate papers with different sessions
     }
 
     function clearSession(s){
-//	console.log("Test: removing papers from " + s.id);
+	//	console.log("Test: removing papers from " + s.id);
 	s.submissions = []; 
     }
     
@@ -471,20 +473,21 @@ var DataOps = function() {
     function unschedulePaper(s, p){
 	if(isLocked(s) || !paperIsInSession(s,p)) return;
 	
-//	console.log("Test: unscheduling paper " + p.id + " from " + s.id);
+	//	console.log("Test: unscheduling paper " + p.id + " from " + s.id);
 	
 	removePaperFromSession(s, p);
 	addToUnscheduledPaper(p);
-	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
-	    console.log("relying on CCOps");
-	    CCOps.updateAllConstraintEntities([s.id]);
-	}
+	//	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	//	    console.log("relying on CCOps");
+	CCOps.updateAllConstraintEntities([s.id]);
+	//    updateAuthorConflicts([s.id]);
+	//	}
     }
     
     // note: always add at start of session
     function insertPaperIntoSession(s, p, pos){
-//	console.log(s);
-//	console.log("Test: adding paper " + p.id + " to " + s.id + " at position " + pos);
+	//	console.log(s);
+	//	console.log("Test: adding paper " + p.id + " to " + s.id + " at position " + pos);
 	if(pos <= 0){
 	    s.submissions.unshift(p);
 	}else if(pos >= s.submissions.length){
@@ -513,10 +516,11 @@ var DataOps = function() {
 	
 	insertPaperIntoSession(s, p, pos);
 	removeFromUnscheduledPaper(p);
-	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
-	    console.log("relying on CCOps");
+//	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+//	    console.log("relying on CCOps");
 	    CCOps.updateAllConstraintEntities([s.id]);
-	}
+//	    updateAuthorConflicts([s.id]);
+//      }
     }
     
     // Example: 
@@ -525,31 +529,43 @@ var DataOps = function() {
     // movePaper(allSessions['s288'], allSubmissions['pn1376'], allSessions['s254']);
     // Note: always inserts at front
     function movePaper(s1, p1, s2, pos){
+//	console.log(s1, p1, s2, pos);
 	if(isLocked(s1) || isLocked(s2)) return;
 	
 	// make sure types match and papers from their session
 	if(s1.venue != s2.venue) return;
 	if(!(paperIsInSession(s1, p1)))return;
 	
-//	console.log("Test: moving paper " + p1.id + " from " + s1.id + " to " + s2.id);
+	//	console.log("Test: moving paper " + p1.id + " from " + s1.id + " to " + s2.id);
 	
 	removePaperFromSession(s1, p1);
 	insertPaperIntoSession(s2, p1, pos);
-	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
-	    console.log("relying on CCOps");
+	//	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	//	    console.log("relying on CCOps");
 	    CCOps.updateAllConstraintEntities([s1.id, s2.id]);
-	}
+	//	    updateAuthorConflicts([s1.id, s2.id]);
     }
-
+    
     // Example:
     // assuming pn1376 is unscheduled, swap it with paper in Mobile keyword / text that is scheduled
     // swapWithUnscheduledPaper(unscheduledSubmissions['pn1376'], allSessions['s254'], allSubmissions['pn1566']);
     // swapWithUnscheduledPaper(unscheduledSubmissions['pn1566'], allSessions['s254'], allSubmissions['pn1376']);
     function swapWithUnscheduledPaper(p1, s2, p2){
+//	console.log("swapping with unscheduled");
+//	console.log(p1, s2, p2);
 	// assume p1 is unscheduled
-	if(isLocked(s2)) return;
-	if(p1.type != s2.venue) return;
-	if(!(paperIsInSession(s2,p2))) return;
+	if(isLocked(s2)) {
+	    console.log("lock");
+	    return;
+	}
+	if(!(p1.type == s2.venue || (p1.type=="TOCHI" && s2.venue == "paper"))){
+	    console.log("venue not match");
+	    return;
+	}
+	if(!(paperIsInSession(s2,p2))){
+	    console.log("what???" , s2, p2);
+	    return;
+	}
 	
 //	console.log("Test: swapping unscheduled paper " + p1.id + " with scheduled paper " + p2.id + " in " + s2.id);
 	
@@ -562,16 +578,17 @@ var DataOps = function() {
 	    }
 	}
 	addToUnscheduledPaper(p2);
-	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
-	    console.log("relying on CCOps");
-	    CCOps.updateAllConstraintEntities([s2.id]);
-	}
+	//	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	//    console.log("relying on CCOps");
+	CCOps.updateAllConstraintEntities([s2.id]);
+	//  updateAuthorConflicts([s2.id]);
+	//}
     }
-    
     return {
 	handleTransaction: handleTransaction,
 	handleFailedTransaction: handleFailedTransaction
-    };
+    }
+
 }();
 
 // $(document).on("transactionUpdate", function(event, transaction){
@@ -594,7 +611,7 @@ function undo(){
 	var type = transactions[transactions.length -1].type;
 	var previous = transactions[transactions.length -1].previous;
 	$(document).trigger('undoLastStep', [transactions[transactions.length -1]]);
-
+	
 	if(type == "lock"){
 	    toggleSlotLock(previous['date'], 
 			   previous['time'],
@@ -609,7 +626,7 @@ function undo(){
 	    removeFromUnscheduled(allSessions[previous['id']]);
 	    $(document).trigger('slotChange', [previous['date'], previous['time'], previous['room']]);
 	    $(document).trigger('unscheduledChange');
-
+	    
 	}else if(type == "schedule"){
 	    removeSessionFromSlot(allSessions[previous['id']],
 				  previous['date'], 
@@ -720,7 +737,7 @@ function unlockSlot(date, time, room){
 
 // changing the session title
 function editSessionTitle(s, t){
-	console.log(editSessionTitle, s.id, t);
+//    console.log(editSessionTitle, s.id, t);
     var td = { 'id': s.id,
 	       'title': t };
     var tp = { 'id': s.id,
@@ -798,10 +815,10 @@ function scheduleSession(s, tdate, ttime, troom){
 
 // Swaps two sessions into the original schedule data structure
 function swapSessions(s1, s2){
-//    console.log("swapSessions is called by frontend handler");
-//    console.log("s1 from frontend: " + JSON.stringify(s1));
-//    console.log("s2 from frontend: " + JSON.stringify(s2));
-
+    //    console.log("swapSessions is called by frontend handler");
+    //    console.log("s1 from frontend: " + JSON.stringify(s1));
+    //    console.log("s2 from frontend: " + JSON.stringify(s2));
+    
     var td = { 's1id': s1.id,
 	       's1date': s1.date,
 	       's1time': s1.time,
@@ -820,7 +837,7 @@ function swapSessions(s1, s2){
 	       's2time': s2.time,
 	       's2room': s2.room
 	     };
-
+    
     var t = new TransactionData(userData.id,
 				'swap',
 				td,
@@ -1068,19 +1085,20 @@ function initAfterScheduleLoads(m){
     // TODO: deal with personas
     //attachPersonas();  // loads personas from a file into schedule JSON
     
-    initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
-    initializePersonaConflictsAmongSessions(); // this can be loaded from a file
+//    initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
+//    initializePersonaConflictsAmongSessions(); // this can be loaded from a file
     
-    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
-	console.log("relying on CCOps initialize");
-	CCOps.initialize();
-    }
+//    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+//	console.log("relying on CCOps initialize");
+    CCOps.initialize();
+    //    }
     getAllConflicts();
     
     // Traditional polling for now...
     if(!frontEndOnly){
 	db.refresh();
     }
+    console.log("fully loaded on backend");
     $(document).trigger('fullyLoaded');
 }
 
@@ -1303,6 +1321,21 @@ function randomizeSchedule(){
 	    //    output += "swapping " + sk[current] + " with " + sk[top] + "\n";
 	}
     //    return output;
+}
+
+// update author conflicts on particular sessions 
+function updateAuthorConflicts(affectedSessions){
+    for(var i  = 0; i < affectedSessions.length; i++){
+	var s1 = affectedSessions[i];
+	for(var j = 0; j < sessionKeys.length; j++){
+	    if(i != j){
+		var s2 = sessionKeys[j];
+		var authorConflicts = computeAuthorConflicts(allSessions[s1], allSessions[s2]);
+		authorConflictsAmongSessions[s1][s2] = authorConflicts;
+		authorConflictsAmongSessions[s2][s1] = authorConflicts;
+	    }
+	}
+    }
 }
 
 // Pre-processing to fill a data structure noting a list of conflicts
@@ -1609,12 +1642,13 @@ function proposeSlot(s) {
 }
 
 function proposeSlotAndSwap(s){
-    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
-	console.log("relying on CCOps propose");
+//    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+//	console.log("relying on CCOps propose");
 	return CCOps.proposeSlotAndSwap(s);
-    }
+ //   }
+}
 
-
+function proposeSlotAndSwapOld(s){
     if(s.id in unscheduled){
 	var slotValue = proposeSlot(s);
 	var swapValue = proposeSwapForUnscheduled(s);
@@ -1630,11 +1664,13 @@ function proposeSlotAndSwap(s){
 }
 
 function proposeSessionForSlot(day, time, room){
-    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
-	console.log("relying on CCOps propose");
+//    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+//	console.log("relying on CCOps propose");
 	return CCOps.proposeSessionForSlot(day, time, room);
-    }
-    
+//    }
+}
+
+function proposeSessionForSlotOld(day, time, room){  
     var scheduleValue = proposeScheduledSessionForSlot(day,time,room);
     var unscheduleValue = proposeUnscheduledSessionForSlot(day,time,room);
     return {scheduleValue: scheduleValue,
@@ -1869,11 +1905,14 @@ function calculateNumConflictsCausedBy(s){
 }
 
 function getAllConflicts(){
-    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
-	conflictsBySession = CCOps.getAllConflicts().sessions;
-	return;    
-    }
+//    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+//	console.log("starting getAllConflicts");
+    conflictsBySession = CCOps.getAllConflicts().sessions;
+    //	console.log("get all conflicts just got called");
+    return;    
+}
 
+function getAllConflictsOld(){
     var conflicts = {}
     // assume conflicts already initialized
     // assume allRooms initialized
@@ -1925,12 +1964,13 @@ function getAllConflicts(){
 
 /////////// start paper propose functions
 function proposePaperSessionAndSwap(p){
-    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
-	console.log("relying on CCOps propose");
+//    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+//	console.log("relying on CCOps propose");
 	return CCOps.proposePaperSessionAndSwap(p);
-    }
-    
+//    }
+}  
 
+function proposePaperSessionAndSwapOld(p){
     if(p.id in unscheduledSubmissions){
 	var sessionValue = proposeSessionForPaper(p);
 	var swapValue = proposeSwapForUnscheduledPaper(p);
@@ -1946,11 +1986,13 @@ function proposePaperSessionAndSwap(p){
 }
 
 function proposePaperForSession(s){
-    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
-	console.log("relying on CCOps propose");
+//    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+	//console.log("relying on CCOps propose");
 	return CCOps.proposePaperForSession(s);
-    }
-    
+//    }
+}
+
+function proposePaperForSessionOld(s){    
     var scheduleValue = proposeScheduledPaperForSession(s);
     var unscheduleValue = proposeUnscheduledPaperForSession(s);
     return {scheduleValue: scheduleValue,
@@ -1978,17 +2020,17 @@ function proposeSessionForPaper(p){
 	    }
 	}
     }
-
+    
     for(var session in unscheduled){
 	if ((unscheduled[session]["venue"] == p.type ||
 	     (p.type == "TOCHI" && unscheduled[session]["venue"] == "paper")) && 
 	    (p.id in unscheduledSubmissions || p.session != session)){
 	    	swapValue.push(new swapDetails(new sessionPaper(session, null),
-						       0,
-						       null,
-						       null,
-						       null,
-						       null));
+					       0,
+					       null,
+					       null,
+					       null,
+					       null));
 	}
     }
     return swapValue;
@@ -2340,45 +2382,46 @@ function attachPersonas(){
 	 return scheduleMatrix;
      }
 
-     function displayProgram(sm){
-	 var table = document.createElement('table');
-	 
-	 var orderedRooms = keys(allRooms).sort(function(a,b) { return allRooms[a] - allRooms[b];});
-	 
-	 var header = document.createElement('tr');
-	 // leave one empty for 1st column
-	 var firstcell = document.createElement('td');
-	 $(header).append(firstcell);
-	 for(var i = 0; i < orderedRooms.length; i++){
-	     var cell = document.createElement('td');
-	     $(cell).append(orderedRooms[i]);
-	     $(header).append(cell);
-	 }
-	 $(table).append(header);
-
-	 for(var i = 0; i < sm.length; i++){
-	     var row = document.createElement('tr');
-
-	     // add the conflicts
-	     var conflict = document.createElement('td');
-	     $(conflict).append(conflictsByTime[sm[i][0]][sm[i][1]].map(function(co) {return co.description}).join("<br/><br/>"));
-
-	     $(row).append(conflict);
+function displayProgram(sm){
+    var table = document.createElement('table');
+    
+    var orderedRooms = keys(allRooms).sort(function(a,b) { return allRooms[a] - allRooms[b];});
+    
+    var header = document.createElement('tr');
+    // leave one empty for 1st column
+    var firstcell = document.createElement('td');
+    $(header).append(firstcell);
+    for(var i = 0; i < orderedRooms.length; i++){
+	var cell = document.createElement('td');
+	$(cell).append(orderedRooms[i]);
+	$(header).append(cell);
+    }
+    $(table).append(header);
+    
+    for(var i = 0; i < sm.length; i++){
+	var row = document.createElement('tr');
+	
+	// add the conflicts
+	var conflict = document.createElement('td');
+	$(conflict).append(conflictsByTime[sm[i][0]][sm[i][1]].map(function(co) {return co.description}).join("<br/><br/>"));
+	
+	$(row).append(conflict);
 	
 
-	     var slot = document.createElement('td');
-	     $(slot).append(sm[i][0] + ", " + sm[i][1]);
-	     $(row).append(slot);
-	     
-	     for(var j = 2; j < sm[i].length; j++){
-		 var cell = document.createElement('td');
-		 if(sm[i][j] != ""){
+	var slot = document.createElement('td');
+	$(slot).append(sm[i][0] + ", " + sm[i][1]);
+	$(row).append(slot);
+	
+	for(var j = 2; j < sm[i].length; j++){
+	    var cell = document.createElement('td');
+	    if(sm[i][j] != ""){
 		     $(cell).append(sm[i][j].title);
-		 }
-		 $(row).append(cell);
-	     }
-	     $(table).append(row);
-	 }
-	 $('#program').append(table);
-     }
+	    }
+	    $(row).append(cell);
+	}
+	$(table).append(row);
+    }
+    $('#program').append(table);
+}
+
 
