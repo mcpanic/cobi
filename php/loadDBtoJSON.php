@@ -49,6 +49,15 @@ echo mysqli_error($mysqli);
 
 $unscheduledSubmissions = array();
 
+// Get chairs
+$chairsQ = "select * from sessionChairs";
+$chairsTable = mysqli_query($mysqli, $chairsQ);
+echo mysqli_error($mysqli);
+$chairs = array();
+while ($row = $chairsTable->fetch_assoc()){
+  $chairs[$row['authorId']] = $row;
+}
+
 // Reconstruct the JSON
 while ($row = $entityTable->fetch_assoc()) {
   $row['coreCommunities'] = json_decode($row['coreCommunities']);
@@ -157,7 +166,8 @@ $output = array('schedule' => $schedule,
 		'unscheduled' => (object)$unscheduled,
 		'unscheduledSubmissions' => (object)$unscheduledSubmissions,
 		'slots' => $slots,
-		'transactions' => $transactions);
+		'transactions' => $transactions,
+		'chairs' =>$chairs);
 
 echo json_encode($output);
 

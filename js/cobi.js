@@ -2,12 +2,14 @@ var allRooms = null;
 var allSessions = null;
 var allSubmissions = null;
 var allAuthors = null;
+var allChairs = null;
 var authorConflictsAmongSessions = {};
 var personaConflictsAmongSessions = {};
 var conflictsByTime = null;
 var conflictsBySession = null;
 var unscheduled = null;
 var unscheduledSubmissions = null;
+var unscheduledChairs = null;
 var schedule = null;
 var frontEndOnly = false;
 var scheduleSlots = null;
@@ -1077,6 +1079,12 @@ function initAfterScheduleLoads(m){
     unscheduledSubmissions = m['unscheduledSubmissions'];
     scheduleSlots = m['slots'];
     transactions = m['transactions'];
+    allChairs = m['chairs'];
+    unscheduledChairs = {};
+    for(var i in allChairs){
+	if(allChairs[i].id == 'null')
+	    unscheduledChairs[i] = allChairs[i];
+    }
     allRooms = getAllRooms();
     allSessions = getAllSessions();
     allSubmissions = getAllSubmissions();
