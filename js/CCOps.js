@@ -1308,11 +1308,13 @@ var CCOps = function(){
 		    for(var s in schedule[date][time][room]){
 			if(c.id in unscheduledChairs || c.id != s){
 			    var localChair =  allSessions[s].chairs;
-			    var space = new sessionChair(s, localChair);
+
 			    var cc = emptyProtoPropose();
 			    if(localChair == ''){
+				var space = new sessionChair(s, null);
 				sessionValue.push(createSwapDetails(cc, space));
 			    }else{
+				var space = new sessionChair(s, localChair);
 				swapValue.push(createSwapDetails(cc, space));
 			    }
 			}
