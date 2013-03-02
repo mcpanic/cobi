@@ -119,6 +119,11 @@ var DataOps = function() {
 		      allSessions[t.data.s2.id],
 		      allChairs[t.data.chair2Id]);
 	    break;
+	case 'swapWithUnscheduledChair':
+	    swapWithUnscheduledChair(allSessions[t.data.s1id],
+				     allChairs[t.data.chair1Id],
+				     allChairs[t.data.chair2Id]);
+	    break;
 	case 'editSessionTitle':
 	    editSessionTitle(allSessions[t.data.id], t.data.title);
 	    break;
@@ -257,7 +262,7 @@ var DataOps = function() {
 	// todo doesn't deal with endTime
     }
     function unscheduleChair(s,c){
-	c.id = 'null';
+	c.id = '';
 	unscheduledChairs[c.authorId] = c;
 	s.chairs = '';
     }
@@ -277,6 +282,14 @@ var DataOps = function() {
 	s2.chairs = c1.id;
 	c1.id = s2.id;
 	c2.id = s1.id;
+    }
+
+    function swapWithUnscheduledChair(s1, c1, c2){
+	unscheduledChairs[c1.authorId] = c1;
+	delete unscheduledChairs[c2.authorId];
+	c1.id = '';
+	c2.id = s1.id;
+	s1.chairs = c2.id;
     }
     
     function editSessionTitle(s, t){
@@ -842,6 +855,24 @@ function swapChair(s1, c1, s2, c2){
 				tp);
     Transact.addTransaction(t);
 }
+
+function swapWithUnscheduledChair(s1, c1, c2){
+    var td = { 's1id': s1.id,
+	       'chair1Id': c1.authorId,
+	       'chair2Id': c2.authorId,
+	     };
+    var tp = { 's1id': s1.id,
+	       'chair1Id': c2.authorId,
+	       'chair2Id': c1.authorId,
+	     };
+    var t = new TransactionData(userData.id,
+				'swapWithUnscheduledChair',
+				td,
+				'swapWithUnscheduledChair',
+				tp);
+    Transact.addTransaction(t);
+}
+
 //////////////// END CHAIR FUNCTIONALITY /////////
 
 
@@ -1190,7 +1221,7 @@ function initAfterScheduleLoads(m){
     allChairs = m['chairs'];
     unscheduledChairs = {};
     for(var i in allChairs){
-	if(allChairs[i].id == 'null')
+	if(allChairs[i].id == '')
 	    unscheduledChairs[i] = allChairs[i];
     }
     allRooms = getAllRooms();

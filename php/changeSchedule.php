@@ -106,7 +106,7 @@ function unscheduleChair($id, $chairId, $mysqli){
   echo mysqli_error($mysqli);
   
   // set session table row's chairs to ""
-  $query = "UPDATE sessionChairs SET id='null' where authorId='$chairId'";
+  $query = "UPDATE sessionChairs SET id='' where authorId='$chairId'";
   mysqli_query($mysqli, $query);
   echo mysqli_error($mysqli);
 }
@@ -149,6 +149,18 @@ function swapChair($s1id, $chair1Id, $s2id, $chair2Id, $mysqli){
   echo mysqli_error($mysqli);
 }
 ///// end chair ops
+
+function swapWithUnscheduledChair($s1id, $chair1Id, $chair2Id, $mysqli){
+  $query = "UPDATE session SET chairs=$chair2Id' where id='$s1id'";
+  mysqli_query($mysqli, $query);
+  echo mysqli_error($mysqli);
+  $query = "UPDATE sessionChairs SET id='' where authorId='$chair1Id'";
+  mysqli_query($mysqli, $query);
+  echo mysqli_error($mysqli);
+  $query = "UPDATE sessionChairs SET id='$s1id' where authorId='$chair2Id'";
+  mysqli_query($mysqli, $query);
+  echo mysqli_error($mysqli);
+}
 
 function editSessionTitle($title, $id, $mysqli){
   $query = "UPDATE session SET title='$title' WHERE id='$id'";
@@ -604,6 +616,12 @@ if(getLock($mysqli) != 1){
     $s2id = mysqli_real_escape_string($mysqli, $transaction['data']['s2id']);
     $chair2Id = mysqli_real_escape_string($mysqli, $transaction['data']['chair2Id']);
     swapChair($s1id, $chair1Id, $s2id, $chair2Id, $mysqli);
+    break;
+  case "swapWithUnscheduledChair":
+    $s1id = mysqli_real_escape_string($mysqli, $transaction['data']['s1id']);
+    $chair1Id = mysqli_real_escape_string($mysqli, $transaction['data']['chair1Id']);
+    $chair2Id = mysqli_real_escape_string($mysqli, $transaction['data']['chair2Id']);
+    swapWithUnscheduledChair($s1id, $chair1Id, $chair2Id, $mysqli);
     break;
   case "editSessionTitle":
     $id = mysqli_real_escape_string($mysqli, $transaction['data']['id']);
