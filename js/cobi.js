@@ -102,6 +102,23 @@ var DataOps = function() {
 	case 'unlock':
 	    unlockSlot(t.data.date, t.data.time, t.data.room);
 	    break;
+	case 'unscheduleChair':
+	    unscheduleChair(allSessions[t.data.id], allChairs[t.data.chairId]);
+	    break;
+	case 'scheduleChair':
+	    scheduleChair(allSessions[t.data.id], allChairs[t.data.chairId]);
+	    break;
+	case 'moveChair':
+	    moveChair(allSessions[t.data.s1id], 
+		      allChairs[t.data.chairId],
+		      allSessions[t.data.s2id]);
+	    break;
+	case 'swapChair':
+	    swapChair(allSessions[t.data.s1id],
+		      allChairs[t.data.chair1Id],
+		      allSessions[t.data.s2.id],
+		      allChairs[t.data.chair2Id]);
+	    break;
 	case 'editSessionTitle':
 	    editSessionTitle(allSessions[t.data.id], t.data.title);
 	    break;
@@ -238,6 +255,28 @@ var DataOps = function() {
 	schedule[date][time][room][s.id]['time'] = time;
 	schedule[date][time][room][s.id]['room'] = room;
 	// todo doesn't deal with endTime
+    }
+    function unscheduleChair(s,c){
+	c.id = 'null';
+	unscheduledChairs[c.authorId] = c;
+	s.chairs = '';
+    }
+    function scheduleChair(s,c){
+	c.id = s.id;
+	s.chairs = c.id;
+	delete unscheduledChairs[c.authorId];
+    }
+    function moveChair(s1, c1, s2){
+	s1.chairs = '';
+	c1.id = s2.id;
+	s2.chairs = c1.id;
+    }
+    
+    function swapChair(s1, c1, s2, c2){
+	s1.chairs = c2.id;
+	s2.chairs = c1.id;
+	c1.id = s2.id;
+	c2.id = s1.id;
     }
     
     function editSessionTitle(s, t){
@@ -736,6 +775,75 @@ function unlockSlot(date, time, room){
 				tp);
     Transact.addTransaction(t);		
 }
+
+/////////////// CHAIR FUNCTIONALITY //////////////
+function unscheduleChair(s, c){
+    var td = { 'id': s.id,
+	       'chairId': c.authorId
+	     };
+    var tp = { 'id': s.id,
+	       'chairId': c.authorId
+	     };
+    var t = new TransactionData(userData.id,
+				'unscheduleChair',
+				td,
+				'scheduleChair',
+				tp);
+    Transact.addTransaction(t);
+}
+
+function scheduleChair(s, c){
+    var td = { 'id': s.id,
+	       'chairId': c.authorId
+	     };
+    var tp = { 'id': s.id,
+	       'chairId': c.authorId
+	     };
+    var t = new TransactionData(userData.id,
+				'scheduleChair',
+				td,
+				'unscheduleChair',
+				tp);
+    Transact.addTransaction(t);
+}
+
+function moveChair(s1, c1, s2){
+    var td = { 's1id': s1.id,
+	       'chairId': c1.authorId,
+	       's2id' :s2.id
+	     };
+    var tp = { 's1id': s2.id,
+	       'chairId': c1.authorId,
+	       's2id' : s1.id
+	     };
+    var t = new TransactionData(userData.id,
+				'moveChair',
+				td,
+				'moveChair',
+				tp);
+    Transact.addTransaction(t);
+}
+
+function swapChair(s1, c1, s2, c2){
+    var td = { 's1id': s1.id,
+	       'chair1Id': c1.authorId,
+	       's2id' :s2.id,
+	       'chair2Id': c2.authorId,
+	     };
+    var tp = { 's1id': s1.id,
+	       'chair1Id': c2.authorId,
+	       's2id' : s2.id,
+	       'chair2Id': c1.authorId,
+	     };
+    var t = new TransactionData(userData.id,
+				'swapChair',
+				td,
+				'swapChair',
+				tp);
+    Transact.addTransaction(t);
+}
+//////////////// END CHAIR FUNCTIONALITY /////////
+
 
 // changing the session title
 function editSessionTitle(s, t){
