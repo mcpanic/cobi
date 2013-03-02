@@ -113,7 +113,7 @@ while ($row = $entityTable->fetch_assoc()) {
 $unscheduled = array();
 
 while ($row = $sessionTable->fetch_assoc()) {
-  $row['chairs'] = json_decode($row['chairs']);
+  $row['chairs'] = $row['chairs'];
   $row['coreCommunities'] = json_decode($row['coreCommunities']);
   $row['personas'] = $row['personas'];
   

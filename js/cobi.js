@@ -94,7 +94,6 @@ var DataOps = function() {
     }
     
     function handleTransaction(t){
-	console.log(t);
 	switch (t.type) {
    	case 'lock': 
 	    lockSlot(t.data.date, t.data.time, t.data.room);
@@ -116,7 +115,7 @@ var DataOps = function() {
 	case 'swapChair':
 	    swapChair(allSessions[t.data.s1id],
 		      allChairs[t.data.chair1Id],
-		      allSessions[t.data.s2.id],
+		      allSessions[t.data.s2id],
 		      allChairs[t.data.chair2Id]);
 	    break;
 	case 'swapWithUnscheduledChair':
@@ -268,28 +267,32 @@ var DataOps = function() {
     }
     function scheduleChair(s,c){
 	c.id = s.id;
-	s.chairs = c.id;
+	s.chairs = c.authorId;
 	delete unscheduledChairs[c.authorId];
     }
     function moveChair(s1, c1, s2){
 	s1.chairs = '';
 	c1.id = s2.id;
-	s2.chairs = c1.id;
+	s2.chairs = c1.authorId;
     }
     
     function swapChair(s1, c1, s2, c2){
-	s1.chairs = c2.id;
-	s2.chairs = c1.id;
+	console.log(s1, c1, s2, c2);
+	s1.chairs = c2.authorId;
+	s2.chairs = c1.authorId;
 	c1.id = s2.id;
 	c2.id = s1.id;
     }
 
     function swapWithUnscheduledChair(s1, c1, c2){
+	console.log(s1);
+	console.log(c1);
+	console.log(c2);
 	unscheduledChairs[c1.authorId] = c1;
 	delete unscheduledChairs[c2.authorId];
 	c1.id = '';
 	c2.id = s1.id;
-	s1.chairs = c2.id;
+	s1.chairs = c2.authorId;
     }
     
     function editSessionTitle(s, t){
@@ -790,6 +793,8 @@ function unlockSlot(date, time, room){
 }
 
 /////////////// CHAIR FUNCTIONALITY //////////////
+
+// unscheduleChair(allSessions['s202'], allChairs[allSessions['s202'].chairs]);
 function unscheduleChair(s, c){
     var td = { 'id': s.id,
 	       'chairId': c.authorId
@@ -805,6 +810,7 @@ function unscheduleChair(s, c){
     Transact.addTransaction(t);
 }
 
+// scheduleChair(allSessions['s202'], unscheduledChairs['auth1104'])
 function scheduleChair(s, c){
     var td = { 'id': s.id,
 	       'chairId': c.authorId
@@ -820,6 +826,7 @@ function scheduleChair(s, c){
     Transact.addTransaction(t);
 }
 
+// moveChair(allSessions['s202'], allChairs[allSessions['s202'].chairs], allSessions['s230'])
 function moveChair(s1, c1, s2){
     var td = { 's1id': s1.id,
 	       'chairId': c1.authorId,
@@ -837,6 +844,7 @@ function moveChair(s1, c1, s2){
     Transact.addTransaction(t);
 }
 
+// swapChair(allSessions['s202'], allChairs[allSessions['s202'].chairs], allSessions['s199'], allChairs[allSessions['s199'].chairs]);
 function swapChair(s1, c1, s2, c2){
     var td = { 's1id': s1.id,
 	       'chair1Id': c1.authorId,
@@ -848,12 +856,14 @@ function swapChair(s1, c1, s2, c2){
 	       's2id' : s2.id,
 	       'chair2Id': c1.authorId,
 	     };
+    
     var t = new TransactionData(userData.id,
 				'swapChair',
 				td,
 				'swapChair',
 				tp);
     Transact.addTransaction(t);
+	    
 }
 
 function swapWithUnscheduledChair(s1, c1, c2){

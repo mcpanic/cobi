@@ -135,7 +135,7 @@ function moveChair($s1id, $chairId, $s2id, $mysqli){
 }
 
 function swapChair($s1id, $chair1Id, $s2id, $chair2Id, $mysqli){
-  $query = "UPDATE session SET chairs=$chair2Id' where id='$s1id'";
+  $query = "UPDATE session SET chairs='$chair2Id' where id='$s1id'";
   mysqli_query($mysqli, $query);
   echo mysqli_error($mysqli);
   $query = "UPDATE session SET chairs='$chair1Id' where id='$s2id'";
@@ -151,7 +151,7 @@ function swapChair($s1id, $chair1Id, $s2id, $chair2Id, $mysqli){
 ///// end chair ops
 
 function swapWithUnscheduledChair($s1id, $chair1Id, $chair2Id, $mysqli){
-  $query = "UPDATE session SET chairs=$chair2Id' where id='$s1id'";
+  $query = "UPDATE session SET chairs='$chair2Id' where id='$s1id'";
   mysqli_query($mysqli, $query);
   echo mysqli_error($mysqli);
   $query = "UPDATE sessionChairs SET id='' where authorId='$chair1Id'";
