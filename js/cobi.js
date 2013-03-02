@@ -1788,6 +1788,15 @@ function proposeSlot(s) {
     return moveValue;
 }
 
+function proposeChairSessionAndSwap(c){
+    return CCOps.proposeChairSessionAndSwap(c);
+}
+
+function proposeChairForSession(s){
+    // return recommendations of which chairs may be good for this session
+    return CCOps.proposeChairForSession(s);
+}
+
 function proposeSlotAndSwap(s){
 //    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
 //	console.log("relying on CCOps propose");
@@ -2401,6 +2410,11 @@ function slot(date, time, room, session){
 function sessionPaper(session, paper){
     this.session = session;
     this.paper = paper;
+}
+
+function sessionChair(session, chair){
+    this.session = session;
+    this.chair = chair;
 }
 
 function conflictObject(entities, type, conflict, description){

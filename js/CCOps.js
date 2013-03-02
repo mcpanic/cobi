@@ -1298,6 +1298,81 @@ var CCOps = function(){
 		  conflictsCausedByCandidateAtOffending: []};
     }
 
+    function proposeChairSessionAndSwap(c){
+	var swapValue = [];
+	var sessionValue = [];
+	
+	for(var date in schedule){
+	    for(var time in schedule[date]){
+		for(var room in schedule[date][time]){
+		    for(var s in schedule[date][time][room]){
+			if(c.id in unscheduledChairs || c.id != s){
+			    var localChair =  allSessions[s].chairs;
+			    var space = new sessionChair(s, localChair);
+			    var cc = emptyProtoPropose();
+			    if(localChair == ''){
+				sessionValue.push(createSwapDetails(cc, space));
+			    }else{
+				swapValue.push(createSwapDetails(cc, space));
+			    }
+			}
+		    }
+		}
+	    }
+	}
+	for(var s in unscheduled){
+	    if(!(c.id in unscheduledChairs)){
+		var localChair =  allSessions[s].chairs;
+		var space = new sessionChair(s, localChair);
+		var cc = emptyProtoPropose();
+		if(localChair = ''){
+		    sessionValue.push(createSwapDetails(cc, space));
+		}else{
+		    swapValue.push(createSwapDetails(cc, space));
+		}
+	    }
+	}
+	return {swapValue: swapValue,
+		sessionValue: sessionValue};
+    }
+    
+    function proposeChairForSession(session){
+	var scheduleValue = [];
+	var unscheduleValue = [];
+	
+	for(var date in schedule){
+	    for(var time in schedule[date]){
+		for(var room in schedule[date][time]){
+		    for(var s in schedule[date][time][room]){
+			if(allSessions[s].chairs != "" && session.id != s){
+			    var localChair =  allSessions[s].chairs;
+			    var space = new sessionChair(s, localChair);
+			    var cc = emptyProtoPropose();
+			    scheduleValue.push(createSwapDetails(cc, space));
+			}
+		    }
+		}
+	    }
+	}
+	for(var s in unscheduled){
+	    if(allSessions[s].chairs != ""){
+		var localChair =  allSessions[s].chairs;
+		var space = new sessionChair(s, localChair);
+		var cc = emptyProtoPropose();
+		scheduleValue.push(createSwapDetails(cc, space));
+	    }
+	}
+	
+	for(var c in unscheduledChairs){
+	    var space = new sessionChair(null, c);
+	    var cc = emptyProtoPropose();
+	    unscheduleValue.push(createSwapDetails(cc, space));
+	}
+	return {scheduleValue: scheduleValue,
+		unscheduleValue: unscheduleValue};
+    }
+    
+    
     function proposeSlotAndSwap(s){
 	var swapValue = [];
 	var slotValue = [];
@@ -2863,6 +2938,8 @@ var CCOps = function(){
 	    proposePaperSessionAndSwap: proposePaperSessionAndSwap,
 	    proposePaperForSession: proposePaperForSession,
 	    proposeSessionForSlot: proposeSessionForSlot,
+	    proposeChairForSession: proposeChairForSession,
+	    proposeChairSessionAndSwap: proposeChairSessionAndSwap,
 	    updateAllConstraintEntities: updateAllConstraintEntities,
 	    computePaperSwapConflicts: computePaperSwapConflicts,
 	    initialize: initialize,
