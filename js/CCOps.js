@@ -1337,6 +1337,10 @@ var CCOps = function(){
     }
     
     function proposeChairForSession(session){
+	if(session.chairs != ""){
+	    // already has a session chair, not the right function to call
+	    return;
+	}
 	var scheduleValue = [];
 	var unscheduleValue = [];
 	
