@@ -369,7 +369,7 @@ var CCOps = function(){
 
     function generateChairInterestedConstraint(e1, e2, score){
 	var constraint = new EntityPairConstraint("chairInterested",
-						  "chair is interested in paper in opposing session",
+						  "papers of interest to a chair in opposing session",
 						  function (sessionA, violationA, sessionB, violationB){
 						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
 							  sessionB.submissions[violationB.submission].title + "'" + " should be at different times.";
@@ -430,8 +430,8 @@ var CCOps = function(){
     }
     
     function generateChairFitConstraint(i, j, score){
-	var text = {'chairGreat': 'chair fits well in this session',
-		    'chairNotok': "chair does not fit well in this session"};
+	var text = {'chairGreat': 'chairs who fit well in their session',
+		    'chairNotok': "chairs who do not fit their session"};
 	var type = 'chairGreat';
 	if(score < 0) type = 'chairNotok';
 	var filler = {'great' : ' are good ',
