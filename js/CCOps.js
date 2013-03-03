@@ -1,4 +1,3 @@
-var tryit = true;
 function SingleEntityConstraint(type, description, descriptionFunc, importance, rationale, entityRules, constraintObjectRules){
     this.type = type;
     this.importance = importance;
@@ -844,10 +843,6 @@ var CCOps = function(){
     }
     
     function checkChairSubSesConstraint(m, s1, c1, type){
-	if(c1 == null && tryit){
-	    console.log(m, s1, c1, type);
-	    tryit = false;
-	}
 	var conflicts = [];
 	var subs = s1.submissions;
 	
@@ -1695,7 +1690,7 @@ var CCOps = function(){
 					  conflictsCausedByOffending: rowCausedByOffending,
 					  conflictsCausedByCandidateAtOffending: rowCausedByCandidateAtOffending};
 				var space = new sessionChair(s, allSessions[s].chairs);
-				swapValue.push(createSwapDetails(cc, space));
+				swapValue.push(createChairSwapDetails(cc, space));
 			    }else{ // inserting
 				// rowCausedByItem: inner conflict with c.id, external conflict w. s
 				var rowCausedByItem = extractInnerChairConflicts(c.id);
@@ -1718,7 +1713,7 @@ var CCOps = function(){
 					  conflictsCausedByOffending: rowCausedByOffending,
 					  conflictsCausedByCandidateAtOffending: rowCausedByCandidateAtOffending};
 				var space = new sessionChair(s, null);
-				sessionValue.push(createSwapDetails(cc, space));
+				sessionValue.push(createChairSwapDetails(cc, space));
 			    }
 			}
 		    }
@@ -1736,7 +1731,7 @@ var CCOps = function(){
 				      conflictsCausedByCandidate: conflictsCausedByCandidate,
 				      conflictsCausedByOffending: conflictsCausedByOffending,
 				      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
-			    sessionValue.push(createSwapDetails(cc, space));
+			    sessionValue.push(createChairSwapDetails(cc, space));
 			}else{ // swapping
 			    var conflictsCausedByCandidate = extractAllChairConflicts(s);
 			    var conflictsCausedByCandidateAtOffending = [];
@@ -1756,7 +1751,7 @@ var CCOps = function(){
 				      conflictsCausedByOffending: conflictsCausedByOffending,
 				      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
 			    var space = new sessionChair(s, allSessions[s].chairs);
-			    swapValue.push(createSwapDetails(cc, space));
+			    swapValue.push(createChairSwapDetails(cc, space));
 			}
 		    }
 		}
@@ -1773,10 +1768,10 @@ var CCOps = function(){
 		var cc = emptyProtoPropose();
 		if(localChair == ''){
 		    var space = new sessionChair(s, null);
-		    sessionValue.push(createSwapDetails(cc, space));
+		    sessionValue.push(createChairSwapDetails(cc, space));
 		}else{
 		    var space = new sessionChair(s, localChair);
-		    swapValue.push(createSwapDetails(cc, space));
+		    swapValue.push(createChairSwapDetails(cc, space));
 		}
 	    }
 	}
@@ -1804,9 +1799,9 @@ var CCOps = function(){
 			  conflictsCausedByOffending: conflictsCausedByOffending,
 			  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
 		if(allSessions[s].chairs == ''){
-		    sessionValue.push(createSwapDetails(cc, space));
+		    sessionValue.push(createChairSwapDetails(cc, space));
 		}else{
-		    swapValue.push(createSwapDetails(cc, space));
+		    swapValue.push(createChairSwapDetails(cc, space));
 		}
 		
 	    }
@@ -1827,39 +1822,101 @@ var CCOps = function(){
 	var conflictsCausedByItem = [];
 	var conflictsCausedByOffending = [];
 	
-	var conflictsCausedByCandidate = []; // conflicts currently caused by chair
+	// Target Chair Is Unscheduled
+	for(var c in unscheduledChairs){
+	    var space = new sessionChair(null, c);
+	    if(session.id in unscheduled){ // no change
+		var cc = emptyProtoPropose();
+		unscheduleValue.push(createChairSwapDetails(cc, space));
+	    }else{
+		var conflictsCausedByCandidate = [];
+		var conflictsCausedByCandidateAtOffending = []; // moving chair into session;
+		var s2row = computeChairConflictsWithRowAtTimeSlot(allChairs[c], session.date, session.time);
+		var s2inner = computeChairInnerConflicts(session, allChairs[c]);
+		conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(s2row['sum']);
+		conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(s2inner);
+		var cc = {conflictsCausedByItem: [],
+			  conflictsCausedByCandidate: conflictsCausedByCandidate,
+			  conflictsCausedByOffending: [],
+			  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
+		unscheduleValue.push(createChairSwapDetails(cc, space));
+	    }
+	}
+	// Target Chair In Unscheduled Session
+	for(var s in unscheduled){
+	    if(allSessions[s].chairs != ""){
+		var c =  allSessions[s].chairs;
+		var space = new sessionChair(s, c);
+		if(session.id in unscheduled){
+		    var cc = emptyProtoPropose();
+		    scheduleValue.push(createChairSwapDetails(cc, space));
+		}else{
+		    var conflictsCausedByCandidate = [];
+		    var conflictsCausedByCandidateAtOffending = []; // moving chair into session;
+		    var s2row = computeChairConflictsWithRowAtTimeSlot(allChairs[c], session.date, session.time);
+		    var s2inner = computeChairInnerConflicts(session, allChairs[c]);
+		    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(s2row['sum']);
+		    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(s2inner);
+		    var cc = {conflictsCausedByItem: [],
+			      conflictsCausedByCandidate: conflictsCausedByCandidate,
+			      conflictsCausedByOffending: [],
+			      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
+		    scheduleValue.push(createChairSwapDetails(cc, space));
+		}
+	    }
+	}
 	
-	var conflictsCausedByCandidateAtOffending = []; // moving chair into session;
-
+	// Target Chair Is Scheduled
 	for(var date in schedule){
 	    for(var time in schedule[date]){
 		for(var room in schedule[date][time]){
 		    for(var s in schedule[date][time][room]){
-			if(allSessions[s].chairs != "" && session.id != s){
-			    var localChair =  allSessions[s].chairs;
-			    var space = new sessionChair(s, localChair);
-			    var cc = emptyProtoPropose();
-			    scheduleValue.push(createSwapDetails(cc, space));
+			var c = allSessions[s].chairs;
+			if(c != "" && session.id != s){
+			    var space = new sessionChair(s, c);
+			    if(session.id in unscheduled){ // Case: source is unscheduled 
+				var conflictsCausedByCandidateAtOffending = []; // moving chair into session;
+				var conflictsCausedByCandidate = extractAllChairConflicts(s);
+				var cc = {conflictsCausedByItem: [],
+					  conflictsCausedByCandidate: conflictsCausedByCandidate,
+					  conflictsCausedByOffending: [],
+					  conflictsCausedByCandidateAtOffending: []};
+				scheduleValue.push(createChairSwapDetails(cc, space));
+			    }else if(!(time == session.time && room == session.room)){
+				// Case: source in different row
+				var conflictsCausedByCandidateAtOffending = []; // moving chair into session;
+				var s2row = computeChairConflictsWithRowAtTimeSlot(allChairs[c], session.date, session.time);
+				var s2inner = computeChairInnerConflicts(session, allChairs[c]);
+				conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(s2row['sum']);
+				conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(s2inner);
+				var conflictsCausedByCandidate = extractAllChairConflicts(s);
+				var cc = {conflictsCausedByItem: [],
+					  conflictsCausedByCandidate: conflictsCausedByCandidate,
+					  conflictsCausedByOffending: [],
+					  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
+				scheduleValue.push(createChairSwapDetails(cc, space));
+			    }else if(time == session.time && room == session.room){
+				var conflictsCausedByCandidate = extractInnerChairConflicts(s);
+				conflictsCausedByCandidate = conflictsCausedByCandidate.concat(extractChairInSessionConflicts(s, session));
+				var conflictsCausedByCandidateAtOffending = computeChairInnerConflicts(session, allChairs[c]);
+				var cs = checkChairSubSesConstraint(chairAuthorMat, allSessions[s], allChairs[c], 'chairInAnother');
+				cs = cs.concat(checkChairSubSesConstraint(chairIntMat, allSessions[s], allChairs[c], 'chairInterested'));
+				conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(cs);
+				var cc = {conflictsCausedByItem: [],
+					  conflictsCausedByCandidate: conflictsCausedByCandidate,
+					  conflictsCausedByOffending: [],
+					  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
+				scheduleValue.push(createChairSwapDetails(cc, space));
+			    }else{
+				console.log("no other case");
+			    }
 			}
 		    }
 		}
 	    }
 	}
-	for(var s in unscheduled){
-	    if(allSessions[s].chairs != ""){
-		var localChair =  allSessions[s].chairs;
-		var space = new sessionChair(s, localChair);
-		var cc = emptyProtoPropose();
-		scheduleValue.push(createSwapDetails(cc, space));
-	    }
-	}
 	
-	for(var c in unscheduledChairs){
-	    var space = new sessionChair(null, c);
-	    var cc = emptyProtoPropose();
-	    unscheduleValue.push(createSwapDetails(cc, space));
-	}
-	return {scheduleValue: scheduleValue,
+    	return {scheduleValue: scheduleValue,
 		unscheduleValue: unscheduleValue};
     }
     
@@ -2692,6 +2749,55 @@ var CCOps = function(){
 	
 //	cc = removeAddRemove(cc);
 	
+	return new swapDetails(space,
+			       conflictsResolved,
+			       cc.conflictsCausedByCandidateAtOffending,
+			       cc.conflictsCausedByOffending,
+			       cc.conflictsCausedByItem,
+			       cc.conflictsCausedByCandidate
+			      );
+    }
+
+
+    function createChairSwapDetails(cc, space){
+	var conflictsResolved = 0;
+	
+	for(var i in cc.conflictsCausedByCandidate){
+	    if(cc.conflictsCausedByCandidate[i].type in chairConstraints &&
+	       chairConstraints[cc.conflictsCausedByCandidate[i].type] > 0){
+		conflictsResolved-=1;
+	    }else{
+	    	conflictsResolved+=1;
+	    }
+	}
+		
+	for(var i in cc.conflictsCausedByItem){
+	    if(cc.conflictsCausedByItem[i].type in chairConstraints &&
+	       chairConstraints[cc.conflictsCausedByItem[i].type] > 0){
+		conflictsResolved-=1;
+	    }else{
+	    	conflictsResolved+=1;
+	    }
+	}
+		
+	for(var i in cc.conflictsCausedByOffending){
+	    if(cc.conflictsCausedByOffending[i].type in chairConstraints &&
+	       chairConstraints[cc.conflictsCausedByOffending[i].type] > 0){
+		conflictsResolved+=1;
+	    }else{
+	    	conflictsResolved-=1;
+	    }
+	}
+		
+	for(var i in cc.conflictsCausedByCandidateAtOffending){
+	    if(cc.conflictsCausedByCandidateAtOffending[i].type in chairConstraints &&
+	       chairConstraints[cc.conflictsCausedByCandidateAtOffending[i].type] > 0){
+		conflictsResolved+=1;
+	    }else{
+	    	conflictsResolved-=1;
+	    }
+	}
+		
 	return new swapDetails(space,
 			       conflictsResolved,
 			       cc.conflictsCausedByCandidateAtOffending,
