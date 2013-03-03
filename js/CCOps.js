@@ -1,9 +1,10 @@
+var tryit = true;
 function SingleEntityConstraint(type, description, descriptionFunc, importance, rationale, entityRules, constraintObjectRules){
     this.type = type;
     this.importance = importance;
     this.rationale = rationale;
     this.entityRules = entityRules;
-    if(!(type in CCOps.protoConstraints)){
+    if(!(type in CCOps.protoConstraints) && !(type in CCOps.chairConstraints)){
 	console.log("non-prototype constraint, may be slow.");
 	this.entities = CCOps.belongs(entityRules);
     }else{
@@ -63,7 +64,7 @@ function EntityFilterPairConstraint(type, description, descriptionFunc, importan
     }
     this.isSymmetric = true;
     this.filterRules = filterRules;
-    if(!(type in CCOps.protoConstraints)){
+    if(!(type in CCOps.protoConstraints) && !(type in CCOps.chairConstraints)){
 	this.entityPairs = CCOps.legalPathPairs(filterRules, 
 						this.entities1,
 						this.entities2);
@@ -111,6 +112,10 @@ var CCOps = function(){
 	'chairInAnother' : -1,
 	'chairInterested':-1
     }
+    var chairSelfConstraints = {
+	'chairGreat' : null,
+	'chairNotok' : null
+    }
 
     var protoConstraints = {
 	'great': 1,
@@ -119,7 +124,6 @@ var CCOps = function(){
 	'personaInTwoSessions': -1,
 	'interested': -1
     }
-
     var protoSelfConstraints = {
 	'great' : null,
 	'notok': null
@@ -840,6 +844,10 @@ var CCOps = function(){
     }
     
     function checkChairSubSesConstraint(m, s1, c1, type){
+	if(c1 == null && tryit){
+	    console.log(m, s1, c1, type);
+	    tryit = false;
+	}
 	var conflicts = [];
 	var subs = s1.submissions;
 	
@@ -854,6 +862,7 @@ var CCOps = function(){
     }
 
     function checkChairSubConstraint(m, p1, s1, c2, type){
+
 	var ret = matfind(m, c2.authorId, p1);
 	if(ret != null){
 	    return new conflictObject([c2.id, s1.id],
@@ -1126,6 +1135,43 @@ var CCOps = function(){
 	return conflicts;
     }
 
+
+    function computeChairConflictsWithRow(c){
+	var conflictsWithRow = {};
+	for(var date in schedule){
+	    conflictsWithRow[date] = {}
+	    for(var time in schedule[date]){
+		conflictsWithRow[date][time] = computeChairConflictsWithRowAtTimeSlot(c, date, time);
+	    }
+	}
+	return conflictsWithRow;
+    }
+    
+    // These constraints are fully filled out, don't require instantiation?
+    function computeChairConflictsWithRowAtTimeSlot(c, date, time){
+	var ret = {};
+	ret["sum"] = [];
+	ret["session"] = {};
+	for(var room in schedule[date][time]){
+	    for(var s2 in schedule[date][time][room]){
+		var conflicts = checkChairSubSesConstraint(chairAuthorMat, allSessions[s2], c, 'chairInAnother');
+		conflicts = conflicts.concat(checkChairSubSesConstraint(chairIntMat, allSessions[s2], c, 'chairInterested'));
+		ret["session"][s2] = conflicts;
+		ret["sum"] = ret["sum"].concat(conflicts);
+	    }
+	}
+	return ret;
+    }
+    
+    function computeChairInnerConflicts(s, c){
+	var conflicts = [];
+	var chairng = checkChairSesConstraint(chairNotokMat, s, c, 'chairNotok');
+	if(chairng != null) conflicts.push(chairng);
+	var chairg = checkChairSesConstraint(chairFitMat, s, c, 'chairGreat');
+	if(chairg != null) conflicts.push(chairg);
+	return conflicts;
+    }
+
     // These constraints are fully filled out, don't require instantiation?
     function computeProtoConflictsWithRowAtTimeSlot(s, date, time){
 	var ret = {};
@@ -1142,6 +1188,8 @@ var CCOps = function(){
 	}
 	return ret;
     }
+    
+
     
     function computeProtoConflictsWithRow(s){
 	var conflictsWithRow = {};
@@ -1484,6 +1532,61 @@ var CCOps = function(){
 	return ret;
     }
 
+    function extractChairInSessionConflicts(sc, s){
+	// only extract across session conflicts
+	var ret = [];
+	var sessionConflicts = CCOps.allConflicts.sessions[sc];
+	for(var i in sessionConflicts){
+	    var type = sessionConflicts[i].type;
+	    // TODO: only handles limited types right now
+	    if(type in chairConstraints && !(type in chairSelfConstraints) && 
+	       sessionConflicts[i].entities[1] == s){
+		ret.push(sessionConflicts[i]);
+	    }
+	}
+	return ret;
+    }
+
+    function extractCurrentChairConflicts(s){
+	// return conflicts other than inner conflicts
+	var ret = [];
+	var sessionConflicts = CCOps.allConflicts.sessions[s];
+	for(var i in sessionConflicts){
+	    var type = sessionConflicts[i].type;
+	    // TODO: only handles limited types right now
+	    if(type in chairConstraints && !(type in chairSelfConstraints)){
+		ret.push(sessionConflicts[i]);
+	    }
+	}
+	return ret;
+    }
+    
+    function extractInnerChairConflicts(s){
+	// return inner conflicts only
+	var ret = [];
+	var sessionConflicts = CCOps.allConflicts.sessions[s];
+	for(var i in sessionConflicts){
+	    var type = sessionConflicts[i].type;
+	    if(type in chairConstraints && type in chairSelfConstraints){
+		ret.push(sessionConflicts[i]);
+	    }
+	}
+	return ret;
+    }
+    
+    function extractAllChairConflicts(s){
+	var ret = [];
+	var sessionConflicts = CCOps.allConflicts.sessions[s];
+	for(var i in sessionConflicts){
+	    var type = sessionConflicts[i].type;
+	    // TODO: only handles limited types right now
+	    if(type in chairConstraints){
+		ret.push(sessionConflicts[i]);
+	    }
+	}
+	return ret;
+    }
+
     function extractCurrentProtoConflicts(s){
 	// return conflicts other than inner conflicts
 	var ret = [];
@@ -1540,42 +1643,175 @@ var CCOps = function(){
 		  conflictsCausedByCandidateAtOffending: []};
     }
 
+    function chairIsScheduled(c){
+	return !(c.authorId in unscheduledChairs) && !(c.id in unscheduled);
+    }
+    
     function proposeChairSessionAndSwap(c){
 	var swapValue = [];
 	var sessionValue = [];
 	
+	var conflictsCausedByItem = [];
+	if(chairIsScheduled(c)){
+	    // chair of a scheduled session
+	    conflictsCausedByItem = extractAllChairConflicts(c.id);
+	}
+
+	var conflictsWithRow = computeChairConflictsWithRow(c);
+	
 	for(var date in schedule){
 	    for(var time in schedule[date]){
-		for(var room in schedule[date][time]){
-		    for(var s in schedule[date][time][room]){
-			if(c.id in unscheduledChairs || c.id != s){
-			    var localChair =  allSessions[s].chairs;
+		// TODO: same time slot
+		if(chairIsScheduled(c) &&
+		   date == allSessions[c.id].date &&
+		   time == allSessions[c.id].time){
+		    for(var room in schedule[date][time]){
+			for(var s in schedule[date][time][room]){
+			    if(s == c.id) continue;
+			    if(allSessions[s].chairs != ""){ // swapping 
+				// rowCausedByItem: inner conflict with c.id, external conflict w. s
+				var rowCausedByItem = extractInnerChairConflicts(c.id);
+				rowCausedByItem = rowCausedByItem.concat(extractChairInSessionConflicts(c.id, s));
 
-			    var cc = emptyProtoPropose();
-			    if(localChair == ''){
+				// rowCausedByCandidate: inner conflict with s, external conflict w. c.id
+				var rowCausedByCandidate = extractInnerChairConflicts(s);
+				rowCausedByCandidate = rowCausedByCandidate.concat(extractChairInSessionConflicts(s, c.id));
+				
+				// rowCausedByOffending: inner conflict with s, external conflict w. c.id
+				var rowCausedByOffending = computeChairInnerConflicts(allSessions[s], c);
+				var cs = checkChairSubSesConstraint(chairAuthorMat, allSessions[c.id], c, 'chairInAnother');
+				cs = cs.concat(checkChairSubSesConstraint(chairIntMat, allSessions[c.id], c, 'chairInterested'));
+				rowCausedByOffending = rowCausedByOffending.concat(cs);
+				
+				// rowCausedByCandidateAtOffending: inner conflict with c.id, external conflict w. s
+				var c2 = allChairs[allSessions[s].chairs];
+				var rowCausedByCandidateAtOffending = computeChairInnerConflicts(allSessions[c.id], c2);
+				var ws = checkChairSubSesConstraint(chairAuthorMat, allSessions[s], c2, 'chairInAnother');
+				ws = ws.concat(checkChairSubSesConstraint(chairIntMat, allSessions[s], c2, 'chairInterested'));
+				rowCausedByCandidateAtOffending = rowCausedByCandidateAtOffending.concat(ws);
+
+				var cc = {conflictsCausedByItem: rowCausedByItem,
+					  conflictsCausedByCandidate: rowCausedByCandidate,
+					  conflictsCausedByOffending: rowCausedByOffending,
+					  conflictsCausedByCandidateAtOffending: rowCausedByCandidateAtOffending};
+				var space = new sessionChair(s, allSessions[s].chairs);
+				swapValue.push(createSwapDetails(cc, space));
+			    }else{ // inserting
+				// rowCausedByItem: inner conflict with c.id, external conflict w. s
+				var rowCausedByItem = extractInnerChairConflicts(c.id);
+				rowCausedByItem = rowCausedByItem.concat(extractChairInSessionConflicts(c.id, s));
+
+				// rowCausedByCandidate: inner conflict with s, external conflict w. c.id
+				var rowCausedByCandidate = [];
+				
+				// rowCausedByOffending: inner conflict with s, external conflict w. c.id
+				var rowCausedByOffending = computeChairInnerConflicts(allSessions[s], c);
+				var cs = checkChairSubSesConstraint(chairAuthorMat, allSessions[c.id], c, 'chairInAnother');
+				cs = cs.concat(checkChairSubSesConstraint(chairIntMat, allSessions[c.id], c, 'chairInterested'));
+				rowCausedByOffending = rowCausedByOffending.concat(cs);
+				
+				// rowCausedByCandidateAtOffending: inner conflict with c.id, external conflict w. s
+				var rowCausedByCandidateAtOffending = [];
+				
+				var cc = {conflictsCausedByItem: rowCausedByItem,
+					  conflictsCausedByCandidate: rowCausedByCandidate,
+					  conflictsCausedByOffending: rowCausedByOffending,
+					  conflictsCausedByCandidateAtOffending: rowCausedByCandidateAtOffending};
 				var space = new sessionChair(s, null);
 				sessionValue.push(createSwapDetails(cc, space));
-			    }else{
-				var space = new sessionChair(s, localChair);
-				swapValue.push(createSwapDetails(cc, space));
 			    }
+			}
+		    }
+		    continue;
+		}
+		for(var room in schedule[date][time]){
+		    for(var s in schedule[date][time][room]){
+			if(schedule[date][time][room][s].chairs == ""){// empty chair
+			    var conflictsCausedByCandidate = [];
+			    var conflictsCausedByCandidateAtOffending = [];
+			    var conflictsCausedByOffending = conflictsWithRow[date][time]["sum"];// handle this case
+			    conflictsCausedByOffending = conflictsCausedByOffending.concat(computeChairInnerConflicts(allSessions[s], c));
+			    var space = new sessionChair(s, null);
+			    var cc = {conflictsCausedByItem: conflictsCausedByItem,
+				      conflictsCausedByCandidate: conflictsCausedByCandidate,
+				      conflictsCausedByOffending: conflictsCausedByOffending,
+				      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
+			    sessionValue.push(createSwapDetails(cc, space));
+			}else{ // swapping
+			    var conflictsCausedByCandidate = extractAllChairConflicts(s);
+			    var conflictsCausedByCandidateAtOffending = [];
+			    if(chairIsScheduled(c)){
+				// chair of a scheduled session
+				var s2row = computeChairConflictsWithRowAtTimeSlot(allChairs[allSessions[s].chairs], 
+										   allSessions[c.id].date,
+										   allSessions[c.id].time)
+				conflictsCausedByCandidateAtOffending = extractAllButFromRow(s2row, c.id);
+				conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeChairInnerConflicts(allSessions[c.id], allChairs[allSessions[s].chairs]));
+			    }				
+			    var conflictsCausedByOffending = extractAllButFromRow(conflictsWithRow[date][time], s);
+			    conflictsCausedByOffending = conflictsCausedByOffending.concat(computeChairInnerConflicts(allSessions[s], c));
+			    // handle this case
+			    var cc = {conflictsCausedByItem: conflictsCausedByItem,
+				      conflictsCausedByCandidate: conflictsCausedByCandidate,
+				      conflictsCausedByOffending: conflictsCausedByOffending,
+				      conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
+			    var space = new sessionChair(s, allSessions[s].chairs);
+			    swapValue.push(createSwapDetails(cc, space));
 			}
 		    }
 		}
 	    }
 	}
-	for(var s in unscheduled){
-	    if(!(c.id in unscheduledChairs)){
+	// target: unscheduled session
+	//  source: scheduled chair
+	//  supported, nothing happens,  source: unscheduled chair
+	//  not supported -- source: chair in unscheduled session
+	if(c.authorId in unscheduledChairs){
+	    for(var s in unscheduled){
 		var localChair =  allSessions[s].chairs;
-		var space = new sessionChair(s, localChair);
+
 		var cc = emptyProtoPropose();
-		if(localChair = ''){
+		if(localChair == ''){
+		    var space = new sessionChair(s, null);
 		    sessionValue.push(createSwapDetails(cc, space));
 		}else{
+		    var space = new sessionChair(s, localChair);
 		    swapValue.push(createSwapDetails(cc, space));
 		}
 	    }
 	}
+	if(chairIsScheduled(c)){
+	    for(var s in unscheduled){
+		var conflictsCausedByCandidate = [];
+		var conflictsCausedByCandidateAtOffending = [];
+		var space = null;
+		
+		if(allSessions[s].chairs != ''){ // swapping
+		    var s2row = computeChairConflictsWithRowAtTimeSlot(allChairs[allSessions[s].chairs], 
+								       allSessions[c.id].date,
+								       allSessions[c.id].time)
+		    conflictsCausedByCandidateAtOffending = extractAllButFromRow(s2row, c.id);
+		    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeChairInnerConflicts(allSessions[c.id], allChairs[allSessions[s].chairs]));		
+		    space = new sessionChair(s, allSessions[s].chairs);
+		}else{ // inserting here
+		    space = new sessionChair(s, null);
+		}
+		
+		var conflictsCausedByOffending = [];
+		
+		var cc = {conflictsCausedByItem: conflictsCausedByItem,
+			  conflictsCausedByCandidate: conflictsCausedByCandidate,
+			  conflictsCausedByOffending: conflictsCausedByOffending,
+			  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
+		if(allSessions[s].chairs == ''){
+		    sessionValue.push(createSwapDetails(cc, space));
+		}else{
+		    swapValue.push(createSwapDetails(cc, space));
+		}
+		
+	    }
+	}
+	
 	return {swapValue: swapValue,
 		sessionValue: sessionValue};
     }
@@ -1588,6 +1824,13 @@ var CCOps = function(){
 	var scheduleValue = [];
 	var unscheduleValue = [];
 	
+	var conflictsCausedByItem = [];
+	var conflictsCausedByOffending = [];
+	
+	var conflictsCausedByCandidate = []; // conflicts currently caused by chair
+	
+	var conflictsCausedByCandidateAtOffending = []; // moving chair into session;
+
 	for(var date in schedule){
 	    for(var time in schedule[date]){
 		for(var room in schedule[date][time]){
