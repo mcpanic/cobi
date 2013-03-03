@@ -11,6 +11,7 @@ $asTable = mysqli_query($mysqli, $query);
 echo mysqli_error($mysqli);
 
 $output = array();
+$authoroutput = array();
 while ($row = $asTable->fetch_assoc()) {
   if($row['authorId'] == ""){
     $row['authorId'] = "anon";
@@ -18,10 +19,18 @@ while ($row = $asTable->fetch_assoc()) {
   if(array_key_exists($row['id'], $output) and 
      array_key_exists($row['authorId'], $output[$row['id']])){ 
     array_push($output[$row['id']][$row['authorId']], $row); 
+    if($row['authorId'] != "anon"){
+      array_push($authoroutput[$row['authorId']][$row['id']], $row);
+    }
   } else{
     $output[$row['id']][$row['authorId']] = array($row);
+    if($row['authorId'] != "anon"){
+      $authoroutput[$row['authorId']][$row['id']] = array($row);
+    }
   }
 }		      
 
-echo json_encode($output);
+$alloutput = array('sessionauthor' => $output,
+		   'authorsession' => $authoroutput);
+echo json_encode($alloutput);
 		      
