@@ -360,7 +360,7 @@ var MoveMode = function() {
         var $cell = null;
         for(var i = 0; i < MoveMode.swapValues.length; i++){    
             // if (MoveMode.swapValues[i].target.session == "s210")
-            console.log("SWAP", MoveMode.swapValues[i]);   
+            // console.log("SWAP", MoveMode.swapValues[i]);   
             var session = MoveMode.swapValues[i].target.session;
             var submission = MoveMode.swapValues[i].target.paper; 
             var chair = MoveMode.swapValues[i].target.chair; 
