@@ -307,12 +307,12 @@ var CCOps = function(){
 	}else if(type == 'chairNotok'){
 	    ret = function (s1, s2){
 		var name = allChairs[e1].givenName + " " + allChairs[e1].familyName;
-		return abbrItem(name, 'author-msg') +  " should not chair " +formatTitle(allSessions[s1].title, s1, null) + ".";
+		return "Affinity data suggests that " + abbrItem(name, 'author-msg') +  " is not a good fit for chairing " +formatTitle(allSessions[s1].title, s1, null) + ".";
 	    }
 	}else if(type == 'chairGreat'){
 	    ret = function(s1, s2){
 		var name = allChairs[e1].givenName + " " + allChairs[e1].familyName;
-		return abbrItem(name, 'author-msg') + " is fit to chair " +formatTitle(allSessions[s1].title, s1, null) + ".";
+		return "Affinity data suggests that " + abbrItem(name, 'author-msg') + " is a good fit for chairing " +formatTitle(allSessions[s1].title, s1, null) + ".";
 	    }
 	}else if(type == 'chairInAnother'){
 	    ret = function(s1, s2){
@@ -383,7 +383,7 @@ var CCOps = function(){
 
     function generateChairInterestedConstraint(e1, e2, score){
 	var constraint = new EntityPairConstraint("chairInterested",
-						  "papers of interest to a chair in opposing session",
+						  "chairs and their papers of interest in opposing sessions",
 						  function (sessionA, violationA, sessionB, violationB){
 						      return "'" + sessionA.submissions[violationA.submission].title + "' and '" + 
 							  sessionB.submissions[violationB.submission].title + "'" + " should be at different times.";
@@ -410,7 +410,7 @@ var CCOps = function(){
 
     function generateChairAuthorConstraint(){
 	var chairauthorconstraint = new EntityFilterPairConstraint("chairInAnother", 
-								   "chairs with papers in opposing session", 
+								   "chairs with papers in opposing sessions", 
 								   function (sessionA, violationA, sessionB, violationB){
 								       return sessionA.submissions[violationA.submission].authors[violationA.author].firstName + " " + 
 									   sessionA.submissions[violationA.submission].authors[violationA.author].lastName + 
@@ -445,7 +445,7 @@ var CCOps = function(){
     
     function generateChairFitConstraint(i, j, score){
 	var text = {'chairGreat': 'chairs who fit well in their session',
-		    'chairNotok': "chairs who do not fit their session"};
+		    'chairNotok': "chairs who don't fit well in their session"};
 	var type = 'chairGreat';
 	if(score < 0) type = 'chairNotok';
 	var filler = {'great' : ' are good ',
