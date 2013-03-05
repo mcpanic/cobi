@@ -1822,7 +1822,7 @@ var CCOps = function(){
 	//  source: scheduled chair
 	//  supported, nothing happens,  source: unscheduled chair
 	//  not supported -- source: chair in unscheduled session
-	if(c.authorId in unscheduledChairs){
+	if(c.authorId in unscheduledChairs || c.id in unscheduled){
 	    for(var s in unscheduled){
 		var localChair =  allSessions[s].chairs;
 
@@ -1836,6 +1836,7 @@ var CCOps = function(){
 		}
 	    }
 	}
+	
 	if(chairIsScheduled(c)){
 	    for(var s in unscheduled){
 		var conflictsCausedByCandidate = [];
