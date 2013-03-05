@@ -500,14 +500,20 @@ body.loading .modal {
    ========================================================================== */
 .chair-display {
     margin-top: 5px;
-    margin-bottom: 5px;
-    padding-left: 5px;
-    padding-right: 7px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom:thick solid #888888;
+    /*padding-left: 5px;
+    padding-right: 7px;*/
 }
 
 .chair-display button {
     margin-top: -5px;
     float: right;
+}
+
+.chair-display:hover { 
+    outline: 1px solid #333333;
 }
 
 /* ==========================================================================

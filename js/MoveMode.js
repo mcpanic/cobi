@@ -752,7 +752,6 @@ var MoveMode = function() {
     // Reset any change created in this view mode
     function destroy(){
         MoveMode.isOn = false;
-        type = "";
         // TOOD: check all the other things the swapping mode has created and reset/undo them.
         
         $("#unscheduled-papers .slot-paper").removeAttr("data-proposed-swap-paper").find(".conflicts").html("");
@@ -780,7 +779,8 @@ var MoveMode = function() {
         }
         // Everything is done, so now go back to ViewMode.
         $(".main").removeClass("move-mode");
-        ViewMode.initialize();
+        ViewMode.initialize(type);
+        type = "";        
     }
 
     return {
