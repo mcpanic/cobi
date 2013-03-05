@@ -27,6 +27,7 @@ var ChairVisualOps = function() {
 	}
 
 	function _addChairToUnscheduled(s){
+        console.log(s); 
         var cell = getChairCell("unscheduled", s);
         $("#unscheduled-chairs tr").append($(cell));
 	}

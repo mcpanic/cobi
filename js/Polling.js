@@ -710,11 +710,12 @@ var Polling = function() {
         }
         isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
 
-        ChairVisualOps.swapWithUnscheduled(allChairs[t.data.p1id], allChairs[t.data.p2id]); 
+        // the order is reversed from the paper-level equivalent
+        ChairVisualOps.swapWithUnscheduled(allChairs[t.data.chair2Id], allChairs[t.data.chair1Id]); 
 
         highlight(isMyChange, findCellByID(t.data.s1id), getUsernameByUID(t.uid));
-        highlight(isMyChange, $(".popover-inner #" + t.data.chair1Id), getUsernameByUID(t.uid));
-        highlight(isMyChange, $("#" + t.data.chair2Id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $(".popover-inner #" + t.data.chair2Id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $("#" + t.data.chair1Id), getUsernameByUID(t.uid));
 
         setTimeout(function (){
             postPollingMove(isMyChange);  
