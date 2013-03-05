@@ -66,7 +66,15 @@ var Conflicts = function() {
         });
         $(".slot-paper .conflicts").each(function(){
             $(this).html("");
-        });        
+        });      
+        if (Features.chair){
+          $(".slot-chair .display").each(function(){
+              $(this).html("");
+          });
+          $(".slot-chair .conflicts").each(function(){
+              $(this).html("");
+          });            
+        }
     }
 
     function getSeverityByType(type){
@@ -352,29 +360,92 @@ var Conflicts = function() {
         return outerHTML(element);
      }
 
-     // function filterSwapValue(swapValues){
-     //    var s = swapValues;
-     //    // console.log("BEFORE", s.value, s);
-     //    $.each(s.addedDest, function(i, c){
-     //        if (!_.contains(Conflicts.constraintsSeverityList, getSeverityByType(c.type)))
-     //            delete s.addedDest[i];
-     //    });
-     //    $.each(s.addedSrc, function(i, c){
-     //        if (!_.contains(Conflicts.constraintsSeverityList, getSeverityByType(c.type)))
-     //            delete s.addedSrc[i];
-     //    });
-     //    $.each(s.removedDest, function(i, c){
-     //        if (!_.contains(Conflicts.constraintsSeverityList, getSeverityByType(c.type)))
-     //            delete s.removedDest[i];
-     //    });
-     //    $.each(s.removedSrc, function(i, c){
-     //        if (!_.contains(Conflicts.constraintsSeverityList, getSeverityByType(c.type)))
-     //            delete s.removedSrc[i];
-     //    });
-     //    s.value = s.removedDest.length + s.removedSrc.length - s.addedDest.length - s.addedSrc.length;
-     //    // console.log("AFTER", s.value, s);
-     //    return s;
-     // }
+
+     // Given a list of conflicts for the given session,
+     // display the preview with details
+     function displayViewModeChairFullConflicts(session, chair){
+
+        // - scheduled: session id, chair id
+        // - unscheduled paper: session null, chair id
+        // - empty paper: session id, chair null
+        var element = document.createElement("div");
+        $(element).addClass("conflicts");
+
+        if (session != null && typeof session.id !== "undefined"){                    
+            // scheduled papers
+            if (chair != null && typeof chair.authorId !== "undefined"){
+                // var tempConflicts = conflictsBySession[session.id];
+                var tempConflicts = conflictsBySession[session.id].filter(function(x){ return (x.type.indexOf("chair") !== -1) && _.contains(Conflicts.constraintsSeverityList, getSeverityByType(x.type)); });            
+                var tempPreferences = conflictsBySession[session.id].filter(function(x){ return (x.type.indexOf("chair") !== -1) && _.contains(Conflicts.preferencesSeverityList, getSeverityByType(x.type)); });            
+                var conflicts = [];
+                var preferences = [];
+                // only find the ones that include this paper
+                $.each(tempConflicts, function(index, item){
+                    $.each(item.conflict, function(i, c){
+                        // for each valid entity trace, see if it's this paper
+                        if (c != null) { // c.submission is indexed order
+                            if (c == chair.authorId) // finally a match
+                                conflicts.push(item);
+                        }
+                    });
+                });
+                $.each(tempPreferences, function(index, item){
+                    $.each(item.conflict, function(i, c){
+                        // for each valid entity trace, see if it's this paper
+                        if (c != null) { // c.submission is indexed order
+                            if (c == chair.authorId) // finally a match
+                                preferences.push(item);
+                        }
+                    });
+                });                
+                // var conflicts_array = conflicts.map(function(co) {return co.type});
+                // var preferences_array = preferences.map(function(co) {return co.type});
+
+                var ccount = conflicts.length;
+                var pcount = preferences.length;
+                var $display = $("<div/>").addClass("swap-total-full");
+                var isChanged = false;
+                if (ccount > 0){
+                    isChanged = true;
+                    $("<span/>").addClass("stronger-text").append(ccount + " conflict" + (isPlural(ccount) ? "s" : "")).appendTo($display);
+                }
+                if (pcount > 0) {
+                    if (ccount > 0)
+                      $display.append(" and ");
+                    isChanged = true;
+                    $("<span/>").addClass("stronger-text").append(" " + pcount + " preference" + (isPlural(pcount) ? "s" : "")).appendTo($display);
+                }
+                if (isChanged){
+                  $display.append(" <small>(click icon for detail)</small>"); 
+                  $(element).append($display);
+                }
+
+                isChanged = false;
+                $("<div/>").addClass("conflict-preview-display-div-wrapper").appendTo($(element));
+                // for each constraint, count and add a modal dialog with descriptions
+                $.each(Conflicts.constraintsList, function(index, conflict){
+                    isChanged = true;
+                    $(element).find(".conflict-preview-display-div-wrapper").append(displayViewModeConflictFullHTML(conflicts, conflict));
+                });
+                $.each(Conflicts.preferencesList, function(index, preference){
+                    isChanged = true;
+                    $(element).find(".conflict-preview-display-div-wrapper").append(displayViewModeConflictFullHTML(preferences, preference));
+                });                
+                if (!isChanged)
+                    $(element).find(".swap-total-full").hide();
+                var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
+                $(element).append($detail);  
+            // empty papers
+            } else {
+                // do nothing for now
+            }
+        } else { // unscheduled paper
+            // do nothing for now
+        }
+
+        return outerHTML(element);
+     }
+
 
      function filterMatchingCount(s, list){
 
@@ -571,6 +642,69 @@ var Conflicts = function() {
         return outerHTML(element);
      }
 
+
+
+     function displayMoveModeChairFullConflicts(swapValues){
+        if (typeof swapValues === "undefined" || swapValues == null)
+           return;      
+
+        var element = document.createElement("div");
+        $(element).addClass("conflicts");
+
+        var ccounts = filterMatchingCount(swapValues, Conflicts.constraintsSeverityList);
+        var pcounts = filterMatchingCount(swapValues, Conflicts.preferencesSeverityList);
+        
+        var ccount = ccounts.total;
+        var pcount = pcounts.total;
+        var $display = $("<div/>").addClass("swap-total-full");
+        if (ccount > 0)
+            $("<span/>").addClass("stronger-text").append(ccount + " conflict" + (isPlural(ccount) ? "s" : "") + " will be resolved.").appendTo($display);
+        else    
+            $("<span/>").addClass("weaker-text").append((-1)*ccount + " conflict" + (isPlural(ccount) ? "s" : "") + " will be added.").appendTo($display);
+        if (pcount > 0)
+            $("<span/>").addClass("weaker-text").append(" " + pcount + " preference" + (isPlural(pcount) ? "s" : "") + " will be missed.").appendTo($display);
+        else    
+            $("<span/>").addClass("stronger-text").append(" " + (-1)*pcount + " preference" + (isPlural(pcount) ? "s" : "") + " will be met.").appendTo($display);
+        $display.append(" <small>(click icon for detail)</small>"); 
+        $(element).append($display);
+
+          var isChanged = false;
+          $("<div/>").addClass("conflict-preview-display-div-wrapper").appendTo($(element));
+          var $wrapper = $(element).find(".conflict-preview-display-div-wrapper");
+          // for each constraint, count and add a modal dialog with descriptions
+          $.each(Conflicts.constraintsList, function(index, conflict){  
+            isChanged = true;           
+            if (swapValues.addedSrc != null && ccounts.addedSrcCount > 0)
+                $wrapper.append(displayConflictFullHTML("[Conflict added at source]", swapValues.addedSrc, conflict, "+"));
+            if (swapValues.addedDest != null && ccounts.addedDestCount > 0)
+                $wrapper.append(displayConflictFullHTML("[Conflict added here]", swapValues.addedDest, conflict, "+"))
+            if (swapValues.removedSrc != null && ccounts.removedSrcCount > 0)
+                $wrapper.append(displayConflictFullHTML("[Conflict resolved at source]", swapValues.removedSrc, conflict, "-"))
+            if (swapValues.removedDest != null && ccounts.removedDestCount > 0)
+                $wrapper.append(displayConflictFullHTML("[Conflict resolved here]", swapValues.removedDest, conflict, "-"));                 
+          });
+
+          $.each(Conflicts.preferencesList, function(index, conflict){  
+            isChanged = true;           
+            if (swapValues.addedSrc != null && pcounts.addedSrcCount > 0)
+                $wrapper.append(displayConflictFullHTML("[Preference met at source]", swapValues.addedSrc, conflict, "+"));
+            if (swapValues.addedDest != null && pcounts.addedDestCount > 0)
+                $wrapper.append(displayConflictFullHTML("[Preference met here]", swapValues.addedDest, conflict, "+"))
+            if (swapValues.removedSrc != null && pcounts.removedSrcCount > 0)
+                $wrapper.append(displayConflictFullHTML("[Preference missed at source]", swapValues.removedSrc, conflict, "-"))
+            if (swapValues.removedDest != null && pcounts.removedDestCount > 0)
+                $wrapper.append(displayConflictFullHTML("[Preference missed here]", swapValues.removedDest, conflict, "-"));              
+          });
+
+            if (!isChanged)
+              $(element).find(".swap-total-full").hide();
+          var $detail = $("<div/>").addClass("conflict-preview-detail").hide();
+          $(element).append($detail);
+
+        return outerHTML(element);
+     }
+
+
      // Given a list of added and removed conflicts with a swap candidate,
      // display the preview to help make the decision to do the swap.
      function displayMovePreviewConflicts(swapValues, element){
@@ -697,11 +831,12 @@ var Conflicts = function() {
 
      function updatePreferenceBackground(selectedConstraint, toggle){
         var className = "cell-preference";
-        // $.each(Conflicts.preferencesList, function(index, preference){
-        //     // class name should be unique so that ones with same severity doesn't influence others
-        //     if (preference.type == selectedConstraint)
-        //         className = "cell-preference-" + constraint.severity + constraint.id;
-        // });
+        $.each(Conflicts.preferencesList, function(index, preference){
+            // class name should be unique so that ones with same severity doesn't influence others
+            if (preference.type == selectedConstraint)
+                className = "cell-preference-" + preference.severity + preference.id;
+        });
+
           $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                if (isSpecialCell($(item)))
                     return;
@@ -710,9 +845,10 @@ var Conflicts = function() {
                 var id = $(item).attr("id").substr(8);
                 $.each(conflictsBySession[id], function(index, constraint){
                     if (constraint.type == selectedConstraint && toggle){
-                         $(item).addClass(className);
+                        console.log(constraint.type, selectedConstraint, id, toggle, $(item), className);
+                        $(item).addClass(className);
                     } else if (constraint.type == selectedConstraint && !toggle){
-                         $(item).removeClass(className);
+                        $(item).removeClass(className);
                     }
                });
           });
@@ -749,9 +885,6 @@ var Conflicts = function() {
             });
         }
 
-
-
-
         $(".slot").each(function(){
             var id = getID($(this));
             if (id !== -1) {
@@ -780,7 +913,15 @@ var Conflicts = function() {
           if (isSlotOn)
             $(this).find(".display").html("");
         });  
-        
+
+        if (Features.chair){
+          // simply clear the display for unscheduled papers
+          $(".slot-chair").each(function(){
+            if (isSlotOn)
+              $(this).find(".display").html("");
+          });  
+        }
+
         if (!isSidebarOn)
             return;
 
@@ -844,8 +985,10 @@ var Conflicts = function() {
         // getConflictLength: getConflictLength,
         displayViewModeSessionFullConflicts: displayViewModeSessionFullConflicts,
         displayViewModeSubmissionFullConflicts: displayViewModeSubmissionFullConflicts,
+        displayViewModeChairFullConflicts: displayViewModeChairFullConflicts,
         displayMoveModeSessionFullConflicts: displayMoveModeSessionFullConflicts,
         displayMoveModeSubmissionFullConflicts: displayMoveModeSubmissionFullConflicts,
+        displayMoveModeChairFullConflicts: displayMoveModeChairFullConflicts,
         // displayFullConflicts: displayFullConflicts,
         displayMovePreviewConflicts: displayMovePreviewConflicts,
         // displayPaperMovePreviewConflicts: displayPaperMovePreviewConflicts,

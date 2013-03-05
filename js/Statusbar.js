@@ -16,6 +16,8 @@ var Statusbar = function() {
         // $(document).on("updateStatusFailed", updateStatusHandler);  
         $(document).on("addMoveStatus", addMoveStatusHandler);
         $(document).on("addPaperMoveStatus", addPaperMoveStatusHandler);
+        if (Features.chair)
+            $(document).on("addChairMoveStatus", addChairMoveStatusHandler);
     }
 
     // Display message in the following way:
@@ -57,8 +59,12 @@ var Statusbar = function() {
         }
         if (isTransactionSessionLevel(t))
             displaySessionStatus(t);
-        else 
+        else if (isTransactionPaperLevel(t))
             displayPaperStatus(t);
+        else if (isTransactionChairLevel(t))
+            displayChairStatus(t);
+        else
+            console.log("addStatus error");
     }
 
     function addStatusInterrupted(t){
@@ -104,6 +110,16 @@ var Statusbar = function() {
         var $status = $("<div/>").addClass("status").append($statusLabel).append();
         var $session = $(".selected").first();
         var $link = getPaperCellLinkByID($session.attr("data-session-id"), paperId);
+        $status.append(" ").append($link)
+            .append("&nbsp;&nbsp;&nbsp;Number: change in # of conflicts. <span class='palette recommended'>&nbsp;</span>: recommended." + MoveMode.getCancelButtonHTML());
+        $bar.html($status);
+    }
+
+    function addChairMoveStatusHandler(event, id, chairId){
+        var $statusLabel = $("<span/>").addClass("label label-info").html("Scheduling chair");
+        var $status = $("<div/>").addClass("status").append($statusLabel).append();
+        var $session = $(".selected").first();
+        var $link = getChairCellLinkByID($session.attr("data-session-id"), chairId);
         $status.append(" ").append($link)
             .append("&nbsp;&nbsp;&nbsp;Number: change in # of conflicts. <span class='palette recommended'>&nbsp;</span>: recommended." + MoveMode.getCancelButtonHTML());
         $bar.html($status);
@@ -167,6 +183,38 @@ var Statusbar = function() {
             $link = getPaperCellLinkByID(t.data.id, "");
             $li = $li.append($link);
         }
+
+        $bar.html($li);        
+    }
+
+    function displayChairStatus(t){
+        var $link, $link2, $li;
+        var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("label label-info").html("In progress") : $("<span/>").addClass("label label-info").html("Updated");
+
+        var user = isTransactionMyChange(t) ? "You" : getUsernameByUID(t.uid);
+        $li = $("<div/>").addClass("status").attr("data-local-hash", t.localHash).append($statusLabel).append(" " + user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
+
+        //console.log(t.type, t.data);
+        if (t.type == "swapChair"){
+            $link = getChairCellLinkByID(t.data.s1id, t.data.chair2Id);
+            $link2 = getChairCellLinkByID(t.data.s2id, t.data.chair1Id);
+            $li = $li.append($link).append(" and ").append($link2); 
+        } else if (t.type == "swapWithUnscheduledChair"){
+            $link = getChairCellLinkByID(undefined, t.data.chair1Id);
+            $link2 = getChairCellLinkByID(t.data.s1id, t.data.chair2Id);
+            $li = $li.append($link).append(" and ").append($link2); 
+        } else if (t.type == "unscheduleChair") {
+            $link = getChairCellLinkByID(undefined, t.data.chairId);
+            $link2 = getCellLinkByID(t.data.id);
+            $li = $li.append($link).append(" from ").append($link2); 
+        } else if (t.type == "scheduleChair") {
+            $link = getChairCellLinkByID(t.data.id, t.data.chairId);
+            $li = $li.append($link);
+        } else if (t.type == "moveChair") {
+            $link = getChairCellLinkByID(t.data.s2id, t.data.chairId);
+            $link2 = getCellLinkByID(t.data.s1id);
+            $li = $li.append($link).append(" from ").append($link2); 
+        } 
 
         $bar.html($li);        
     }

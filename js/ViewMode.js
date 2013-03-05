@@ -37,6 +37,15 @@ var ViewMode = function() {
         $("body").on("click", ".popover .button-paper-propose-scheduled", {type: "paper-scheduled"}, proposeHandler);
         $("body").on("click", ".popover .button-paper-propose-unscheduled", {type: "paper-unscheduled"}, proposeHandler);
         $("body").on("click", ".popover .button-paper-propose-empty", {type: "paper-empty"}, proposeHandler);
+
+        // chair operations
+        if (Features.chair){
+            $("body").on("click", ".slot-chair", chairSlotClickHandler);
+            $("body").on("click", ".popover .button-chair-unschedule", chairUnscheduleHandler); 
+            $("body").on("click", ".popover .button-chair-propose-scheduled", {type: "chair-scheduled"}, proposeHandler);
+            $("body").on("click", ".popover .button-chair-propose-unscheduled", {type: "chair-unscheduled"}, proposeHandler);
+            $("body").on("click", ".popover .button-chair-propose-empty", {type: "chair-empty"}, proposeHandler);
+        }
     }
 
      // Event handler for clicking an individual paper (only in the unscheduled panel)
@@ -141,13 +150,14 @@ var ViewMode = function() {
     // This is the only way to switch modes from ViewMode to MoveMode.
     function proposeHandler(event){  
         $(this).click(false);     // avoiding multiple clicks             
-        var pid = "";
+        var subId = "";
         if (event.data.type == "paper-scheduled" || event.data.type == "paper-unscheduled")
-            pid = $(this).parent().attr("id");
-
-        //console.log("pid", pid);
+            subId = $(this).parent().attr("id");
+        else if (event.data.type == "chair-scheduled" || event.data.type == "chair-unscheduled")
+            subId = $(this).parent().attr("data-chair-id");
+        console.log("subId", event.data.type, subId);
         // Don't need the actual target information because .selected detects this.
-        MoveMode.initialize(event.data.type, pid);
+        MoveMode.initialize(event.data.type, subId);
     }
 
     // When the unschedule button is clicked. Move the item to the unscheduled workspace.
@@ -239,6 +249,58 @@ var ViewMode = function() {
     }
 
 
+
+    function chairUnscheduleHandler(event){
+        $(this).click(false);     // avoiding multiple clicks            
+        var $session = $(".selected").first();
+        var id = getID($session);
+        if (id === -1)
+            return;
+        // console.log(id, $paper, pid, allSubmissions[pid]);
+        // the backend unschedule paper
+        unscheduleChair(allSessions[id], allChairs[allSessions[id].chairs]);
+    }
+
+
+     // Event handler for clicking an individual chair (only in the unscheduled panel)
+    function chairSlotClickHandler(){
+        // only one popover at a time? this allows multiple selections possible
+        //$selection.removeClass("selected").popover("hide");
+        var $selection = $(".selected");
+        $(".selected").removeClass("selected").popover("hide");          
+
+        // if reselected, do nothing.
+        if ($selection[0] == $(this)[0])
+           return;
+        
+        // do nothing for unavailable slots
+        if ($(this).hasClass("unavailable"))
+           return;
+
+        var id = $(this).attr("data-chair-id");
+        var chair = allChairs[id];
+        $(this).addClass("selected");
+        $(this).popover({
+          html:true,
+          placement: "bottom",
+          trigger: "manual",
+           title:function(){
+                return "<strong>" + displayChairName(chair, false) + "</strong>"
+                    + "<a class='close popover-close' data-dismiss='clickover' href='#''>&times;</a>";
+           },
+           content:function(){
+                if ($(this).hasClass("empty")){
+                    console.log("impossible");
+                } else if ($(this).hasClass("unscheduled")){
+                    return getChairDetail("view", "unscheduled", chair);
+                } else{
+                    console.log("impossible");
+                }
+           }
+        });
+        $(this).popover("show");          
+    }
+
     // Reset any change created in this view mode
     function destroy(){
         ViewMode.isOn = false;
@@ -257,6 +319,15 @@ var ViewMode = function() {
         $("body").off("click", ".popover .button-paper-propose-scheduled", proposeHandler);
         $("body").off("click", ".popover .button-paper-propose-unscheduled", proposeHandler);
         $("body").off("click", ".popover .button-paper-propose-empty", proposeHandler);
+
+        if (Features.chair){
+            $("body").off("click", ".slot-chair", chairSlotClickHandler);
+            $("body").off("click", ".popover .button-chair-unschedule", chairUnscheduleHandler); 
+            $("body").off("click", ".popover .button-chair-propose-scheduled", proposeHandler);
+            $("body").off("click", ".popover .button-chair-propose-unscheduled", proposeHandler);
+            $("body").off("click", ".popover .button-chair-propose-empty", proposeHandler);            
+            $(".slot-chair").popover("destroy"); 
+        }
 
         $(".slot").popover("destroy");   
         $(".slot-paper").popover("destroy");    
