@@ -473,7 +473,32 @@ var CCOps = function(){
     function generateChairConstraints(){
 	var top = 5;
 	var next = 25;
-	// how fit chair is for each session constraints
+	var sessions = {};
+	for(var i in allChairs){// get list of sessions mentioned
+	    for(var j in allChairs[i].affinity){
+		sessions[allChairs[i].affinity[j].session] = [];
+	    }
+	    break;
+	}
+	for(var s in sessions){
+	    for(var i in allChairs){
+		sessions[s].push({'chair':i, 'score':allChairs[i].affinity[s]});
+	    }
+	}
+	for(var s in sessions){
+	    sessions[s].sort(function(a, b) { return b.score - a.score});
+	}
+
+	for(var s in sessions){
+	    for(var k = 0; k < top; k++){
+		if(k >= sessions[s].length) break;
+		CCOps.allConstraints.push(generateChairFitConstraint(sessions[s][k].chair, s, 5));
+		var msg = protoMessage('chairGreat', sessions[s][k].chair, s);
+		matinsert(CCOps.chairFitMat, sessions[s][k].chair, s, {'score': 5, 'msg': msg});
+	    }
+	}
+
+	// how 	fit chair is for each session constraints
 	for(var i in allChairs){
 	    // find best matches of chairs to session
 	    var aff = [];
@@ -485,30 +510,30 @@ var CCOps = function(){
 	    // best
 	    for(var k = 0; k < top; k++){
 		if(k >= aff.length) break;
-		CCOps.allConstraints.push(generateChairFitConstraint(i, aff[k].session, 5));
-		var msg = protoMessage('chairGreat', i, aff[k].session);
-		matinsert(CCOps.chairFitMat, i, aff[k].session, {'score': 5, 'msg': msg});
+		if(matfind(CCOps.chairFitMat, i, aff[k].session) == null){
+		    CCOps.allConstraints.push(generateChairFitConstraint(i, aff[k].session, 5));
+		    var msg = protoMessage('chairGreat', i, aff[k].session);
+		    matinsert(CCOps.chairFitMat, i, aff[k].session, {'score': 5, 'msg': msg});
+		}
 	    }
 	    // worst
 	    for(var k = next; k < aff.length; k++){
-		CCOps.allConstraints.push(generateChairFitConstraint(i, aff[k].session, -5));
-		var msg = protoMessage('chairNotok', i, aff[k].session);
-		matinsert(CCOps.chairNotokMat, i, aff[k].session, {'score': -5, 'msg': msg});
+		var chairBadForSession = false;
+		var s = sessions[aff[k].session];
+		for(var l = next; l < s.length; l++){
+		    if(s[l].chair == i){ // chair in bottom of session
+			chairBadForSession = true;
+			break;
+		    }
+		}
+		if(chairBadForSession){
+		    CCOps.allConstraints.push(generateChairFitConstraint(i, aff[k].session, -5));
+		    var msg = protoMessage('chairNotok', i, aff[k].session);
+		    matinsert(CCOps.chairNotokMat, i, aff[k].session, {'score': -5, 'msg': msg});
+		}
 	    }
-
-// 	    for(var j in allSessions){
-// 		var r = Math.random();
-// 		if(r > 0.8){
-// 		    CCOps.allConstraints.push(generateChairFitConstraint(i, j, 5));
-// 		    var msg = protoMessage('chairGreat', i, j);
-// 		    matinsert(CCOps.chairFitMat, i, j, {'score': 5, 'msg': msg});
-// 		}else{
-// 		    CCOps.allConstraints.push(generateChairFitConstraint(i, j, -5));
-// 		    var msg = protoMessage('chairNotok', i, j);
-// 		    matinsert(CCOps.chairNotokMat, i, j, {'score': -5, 'msg': msg});
-// 		}
-// 	    }
 	}
+	
 	
 	// whether chair has an author conflict with a paper constraints
 	generateChairAuthorConstraint();
