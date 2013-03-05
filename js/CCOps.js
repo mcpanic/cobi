@@ -327,9 +327,15 @@ var CCOps = function(){
 	    }
 	}else if(type == 'chairInterested'){
 	    ret = function(s1, s2){
-		var name = allChairs[e1].givenName + " " + allChairs[e1].familyName;
-		return abbrItem(name, 'author-msg') +  " is chairing " + formatTitle(allSessions[s1].title, s1, null) + " but is interested in " + 
-		    formatTitle(allSubmissions[e2].title, s2, e2) + ".";
+		if(s1 == null || s1 == 'null' || s1 == ""){
+		    var name = allChairs[e1].givenName + " " + allChairs[e1].familyName;
+		    return abbrItem(name, 'author-msg') + " is chairing but is interested in " + formatTitle(allSubmissions[e2].title, s2, e2) + ".";
+		}else{
+		    var name = allChairs[e1].givenName + " " + allChairs[e1].familyName;
+		    return abbrItem(name, 'author-msg') +  " is chairing " + formatTitle(allSessions[s1].title, s1, null) + " but is interested in " + 
+			formatTitle(allSubmissions[e2].title, s2, e2) + ".";
+		
+		}
 	    }
 	}
 	return ret;
