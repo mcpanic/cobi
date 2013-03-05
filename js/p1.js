@@ -733,7 +733,7 @@
             chairButtonDisplay = "Propose Move";
             $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));
             $(element).addClass("alert alert-info chair-display chair");
-            if (!isLocked && !isSpecial){
+            if (!isLocked){
                 $("<button/>").addClass("btn btn-mini button-chair-unschedule").html("Unschedule").appendTo($(element));                    
                 $("<button/>").addClass("btn btn-mini button-chair-propose-scheduled").html(chairButtonDisplay).appendTo($(element));   
             }
@@ -744,13 +744,13 @@
             }else{
               chairButtonDisplay = "Propose Move";
             }
-            if (!isLocked && !isSpecial)
+            if (!isLocked)
                 $("<button/>").addClass("btn btn-mini button-chair-propose-unscheduled").html(chairButtonDisplay).appendTo($(element));
         } else if (type == "empty") {
             chairButtonDisplay = "Propose a chair";
             $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));
             $(element).addClass("alert alert-info chair-display chair");
-            if (!isLocked && !isSpecial)
+            if (!isLocked)
                 $("<button/>").addClass("btn btn-mini button-chair-propose-empty").html(chairButtonDisplay).appendTo($(element));
             $(element).append(Conflicts.displayViewModeChairFullConflicts(session, chair));
         }

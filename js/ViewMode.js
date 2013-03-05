@@ -2,21 +2,28 @@ var ViewMode = function() {
     var isOn = false;
 
     // Initialize the view mode 
-    function initialize(){
+    function initialize(type){
         // If already on, do not register multiple events
         if (!ViewMode.isOn){
             ViewMode.isOn = true;
             //MoveMode.destroy();
             $(".main").addClass("view-mode");
             bindEvents();
-            initDisplay();
+            initDisplay(type);
         }
     }
 
     // Display is the bottom portion of the session display, which summarizes conflicts
-    function initDisplay(){
+    // type is the most recent moveMode operation. undefined for other cases
+    function initDisplay(type){
         // default is the conflict view
-        $("#list-view-options li a").first().trigger("click");
+        if (typeof type === "undefined"){
+            $("#list-view-options li a").first().trigger("click");
+        } else if (type.indexOf("chair") !== -1){
+            $("#list-view-options li a").eq(2).trigger("click");
+        } else {
+            $("#list-view-options li a").first().trigger("click");
+        }
 
     }
 
