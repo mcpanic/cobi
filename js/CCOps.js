@@ -476,7 +476,7 @@ var CCOps = function(){
 	var sessions = {};
 	for(var i in allChairs){// get list of sessions mentioned
 	    for(var j in allChairs[i].affinity){
-		sessions[allChairs[i].affinity[j].session] = [];
+		sessions[j] = [];
 	    }
 	    break;
 	}
@@ -519,6 +519,7 @@ var CCOps = function(){
 	    // worst
 	    for(var k = next; k < aff.length; k++){
 		var chairBadForSession = false;
+		//console.log(k, aff[k], aff[k].session, sessions, sessions[aff[k].session]);
 		var s = sessions[aff[k].session];
 		for(var l = next; l < s.length; l++){
 		    if(s[l].chair == i){ // chair in bottom of session
