@@ -7,6 +7,7 @@ var Conflicts = function() {
     var preferencesList = [];
     var constraintsSeverityList = ["high", "medium"];  // excluding "good"
     var preferencesSeverityList = ["good"]; 
+    var chairSeverityList = ["high", "medium", "good"]; 
 	// Initialize the sidebar with a default view 
 	function initialize(){
         updateConstraintsList();
@@ -92,29 +93,41 @@ var Conflicts = function() {
 
      // Given an array of "conflicts", display the palette and count for each constraint in the "element"
      // Can be used both for individual sessions and entire rows
-     function displayConflicts(conflicts, element, isConflict){
+     function displayConflicts(conflicts, element, mode){
           if (typeof conflicts === "undefined")
               return;
-          var list = isConflict ? Conflicts.constraintsSeverityList : Conflicts.preferencesSeverityList;
+          var list = null;
+          if (mode == "conflict")
+            list = Conflicts.constraintsSeverityList;
+          else if (mode == "preference")
+            list = Conflicts.preferencesSeverityList;
+          else if(mode == "chair")
+            list = Conflicts.chairSeverityList;
+
           element.html("");
           $.each(list, function(index, severity){
-            var filtered_array = conflicts.filter(function(x){return getSeverityByType(x.type)==severity});
-            if (filtered_array.length > 0){
+            var filteredArray = []; 
+            if (mode == "conflict" || mode == "preference")
+                filteredArray = conflicts.filter(function(x){return getSeverityByType(x.type)==severity});
+            else if (mode == "chair")
+                filteredArray = conflicts.filter(function(x){return (getSeverityByType(x.type)==severity) && (x.type in CCOps.chairConstraints) });
+
+            if (filteredArray.length > 0){
                 var html = "";
                 var i;            
-                for (i=0; i<filtered_array.length; i++) {
+                for (i=0; i<filteredArray.length; i++) {
                      html += "<span class='conflict-display'></span>";
                 }
                 var $palette = $(html).addClass("cell-conflict-" + severity)
 
-                element.append(filtered_array.length).append($palette);
+                element.append(filteredArray.length).append($palette);
                 var palette_title = "";
                 if (severity == "good")
                   palette_title = "preferences met";
                 else
                   palette_title = severity + " severity conflicts";
                 
-                var palette_content = filtered_array.map(function(co) {
+                var palette_content = filteredArray.map(function(co) {
                      // if (co.type == constraint.type)
                           return "<li class='hover-description'>"+co.description+"</li>";
                 }).join("");
@@ -856,7 +869,8 @@ var Conflicts = function() {
 
      // Refresh conflicts information display.
      // Called after an interaction occurs that affects conflicts. (swap, unschedule, schedule)
-     function updateConflicts(isSidebarOn, isSlotOn, isConflictOn){
+     // mode: "conflict", "preference", "chair"
+     function updateConflicts(isSidebarOn, isSlotOn, mode){
 
         var conflict_type_count_array = {};
         var conflict_severity_count_array = {};
@@ -888,10 +902,12 @@ var Conflicts = function() {
         $(".slot").each(function(){
             var id = getID($(this));
             if (id !== -1) {
-                if (isSlotOn && isConflictOn)
-                    displayConflicts(conflictsBySession[id], $(this).find(".display"), true);
-                else if (isSlotOn && !isConflictOn)
-                    displayConflicts(conflictsBySession[id], $(this).find(".display"), false);
+                if (isSlotOn && mode == "conflict")
+                    displayConflicts(conflictsBySession[id], $(this).find(".display"), mode);
+                else if (isSlotOn && mode == "preference")
+                    displayConflicts(conflictsBySession[id], $(this).find(".display"), mode);
+                else if (isSlotOn && mode == "chair")
+                    displayConflicts(conflictsBySession[id], $(this).find(".display"), mode);
                 // var conflicts_array = conflictsBySession[id].map(function(co) {return co.type});          
                 //     // for each constraint, count and add a modal dialog with descriptions
                 //     $.each(Conflicts.constraintsList, function(index, item){
@@ -915,7 +931,7 @@ var Conflicts = function() {
         });  
 
         if (Features.chair){
-          // simply clear the display for unscheduled papers
+          // simply clear the display for unscheduled chairs
           $(".slot-chair").each(function(){
             if (isSlotOn)
               $(this).find(".display").html("");
@@ -978,6 +994,7 @@ var Conflicts = function() {
         preferencesList: preferencesList,
         constraintsSeverityList: constraintsSeverityList,
         preferencesSeverityList: preferencesSeverityList,   
+        chairSeverityList: chairSeverityList,
         clearConflictDisplay: clearConflictDisplay,
         // displayConflicts: displayConflicts,
         // displayConflictPreviewHTML: displayConflictPreviewHTML,

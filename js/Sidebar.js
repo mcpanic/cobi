@@ -430,7 +430,7 @@ var Sidebar = function() {
                               $(item).find(".display").html($(item).find(".conflicts").html());
                          });
                     } else
-                         Conflicts.updateConflicts(true, true, true);
+                         Conflicts.updateConflicts(true, true, "conflict");
                break;   
                case "preferences":
                     if (MoveMode.isOn){
@@ -438,9 +438,19 @@ var Sidebar = function() {
                               $(item).find(".display").html($(item).find(".conflicts").html());
                          });
                     } else
-                         Conflicts.updateConflicts(true, true, false);
+                         Conflicts.updateConflicts(true, true, "preference");
                break;   
-               case "chairs":
+               case "chair-conflict":
+                    if (MoveMode.isOn){
+                         $(".slot:not('.unavailable')").each(function(index, item){
+                              // TODO: filter using only chair conflicts
+                              $(item).find(".display").html($(item).find(".conflicts").html());
+                         });
+                    } else
+                         Conflicts.updateConflicts(true, true, "chair");
+               break;   
+
+               case "chair-name":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);
                          var chair = allSessions[id].chairs;

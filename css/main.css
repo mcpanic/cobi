@@ -209,7 +209,7 @@ body.loading .modal {
 /* ==========================================================================
     View Mode Handling
 ========================================================================== */
-.move-mode .slot:not(.proposed-swap), .move-mode .slot-paper:not(.proposed-swap) {
+.move-mode .slot:not(.proposed-swap), .move-mode .slot-paper:not(.proposed-swap), .move-mode .slot-chair:not(.proposed-swap) {
     background-color: #d8d8d8;
     cursor: default !important;
 }

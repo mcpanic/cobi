@@ -75,7 +75,8 @@
     var optionsList = [
     {"id": "conflicts", "label": "Conflict"}, 
     {"id": "preferences", "label": "Preference"}, 
-    {"id": "chairs", "label": "Session Chair"}, 
+    {"id": "chair-conflict", "label": "Session Chair Conflict"}, 
+    {"id": "chair-name", "label": "Session Chair Names"}, 
     {"id": "session-type", "label": "Session Type"}, 
     //{"id": "popularity", "label": "Popularity"}, 
     {"id": "num-papers", "label": "Number of Papers"}, 
