@@ -316,9 +316,14 @@ var CCOps = function(){
 	    }
 	}else if(type == 'chairInAnother'){
 	    ret = function(s1, s2){
-		var name = allChairs[e1].givenName + " " + allChairs[e1].familyName;
-		return abbrItem(name, 'author-msg') + " is chairing " + formatTitle(allSessions[s1].title, s1, null) + " but has a paper in " + 
-		    formatTitle(allSessions[s2].title, s2, null) + ".";
+		if(s1 == null || s1 == 'null' || s1 == ""){
+		    var name = allChairs[e1].givenName + " " + allChairs[e1].familyName;
+		    return abbrItem(name, 'author-msg') + " is chairing but has a paper in " + 	formatTitle(allSessions[s2].title, s2, null) + ".";
+		}else{
+		    var name = allChairs[e1].givenName + " " + allChairs[e1].familyName;
+		    return abbrItem(name, 'author-msg') + " is chairing " + formatTitle(allSessions[s1].title, s1, null) + " but has a paper in " + 
+			formatTitle(allSessions[s2].title, s2, null) + ".";
+		}
 	    }
 	}else if(type == 'chairInterested'){
 	    ret = function(s1, s2){
