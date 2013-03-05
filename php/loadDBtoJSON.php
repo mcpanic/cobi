@@ -55,6 +55,7 @@ $chairsTable = mysqli_query($mysqli, $chairsQ);
 echo mysqli_error($mysqli);
 $chairs = array();
 while ($row = $chairsTable->fetch_assoc()){
+  $row['affinity'] = json_decode($row['affinity']);
   $chairs[$row['authorId']] = $row;
 }
 

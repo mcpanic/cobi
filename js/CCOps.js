@@ -469,21 +469,45 @@ var CCOps = function(){
 	return constraint;
     }
     
+    
     function generateChairConstraints(){
+	var top = 5;
+	var next = 25;
 	// how fit chair is for each session constraints
 	for(var i in allChairs){
-	    for(var j in allSessions){
-		var r = Math.random();
-		if(r > 0.8){
-		    CCOps.allConstraints.push(generateChairFitConstraint(i, j, 5));
-		    var msg = protoMessage('chairGreat', i, j);
-		    matinsert(CCOps.chairFitMat, i, j, {'score': 5, 'msg': msg});
-		}else{
-		    CCOps.allConstraints.push(generateChairFitConstraint(i, j, -5));
-		    var msg = protoMessage('chairNotok', i, j);
-		    matinsert(CCOps.chairNotokMat, i, j, {'score': -5, 'msg': msg});
-		}
+	    // find best matches of chairs to session
+	    var aff = [];
+	    for(var s in allChairs[i].affinity){
+		aff.push({'session':s, 'score':allChairs[i].affinity[s]});
 	    }
+	    aff.sort(function(a, b) {return b.score - a.score});
+	    
+	    // best
+	    for(var k = 0; k < top; k++){
+		if(k >= aff.length) break;
+		CCOps.allConstraints.push(generateChairFitConstraint(i, aff[k].session, 5));
+		var msg = protoMessage('chairGreat', i, aff[k].session);
+		matinsert(CCOps.chairFitMat, i, aff[k].session, {'score': 5, 'msg': msg});
+	    }
+	    // worst
+	    for(var k = next; k < aff.length; k++){
+		CCOps.allConstraints.push(generateChairFitConstraint(i, aff[k].session, -5));
+		var msg = protoMessage('chairNotok', i, aff[k].session);
+		matinsert(CCOps.chairNotokMat, i, aff[k].session, {'score': -5, 'msg': msg});
+	    }
+
+// 	    for(var j in allSessions){
+// 		var r = Math.random();
+// 		if(r > 0.8){
+// 		    CCOps.allConstraints.push(generateChairFitConstraint(i, j, 5));
+// 		    var msg = protoMessage('chairGreat', i, j);
+// 		    matinsert(CCOps.chairFitMat, i, j, {'score': 5, 'msg': msg});
+// 		}else{
+// 		    CCOps.allConstraints.push(generateChairFitConstraint(i, j, -5));
+// 		    var msg = protoMessage('chairNotok', i, j);
+// 		    matinsert(CCOps.chairNotokMat, i, j, {'score': -5, 'msg': msg});
+// 		}
+// 	    }
 	}
 	
 	// whether chair has an author conflict with a paper constraints
