@@ -209,7 +209,7 @@ body.loading .modal {
 /* ==========================================================================
     View Mode Handling
 ========================================================================== */
-.move-mode .slot:not(.proposed-swap), .move-mode .slot-paper:not(.proposed-swap) {
+.move-mode .slot:not(.proposed-swap), .move-mode .slot-paper:not(.proposed-swap), .move-mode .slot-chair:not(.proposed-swap) {
     background-color: #d8d8d8;
     cursor: default !important;
 }
@@ -238,7 +238,7 @@ body.loading .modal {
 
 }
 
-#program .cell, #unscheduled .cell, #unscheduled-papers .cell {
+.main .cell {
     font-size: 10px;
     padding: 3px;
     line-height: 12px;
@@ -247,7 +247,7 @@ body.loading .modal {
     overflow-y: hidden;
 }
 
-#program .cell .user, #unscheduled .cell .user, #unscheduled-papers .cell .user {
+.main .cell .user {
     position: absolute;
     margin-top: -16px;
     margin-left: -3px;
@@ -263,30 +263,30 @@ body.loading .modal {
     text-align: center;
 }
 
-#program .slot, #unscheduled .slot, #unscheduled-papers .slot-paper {
+#program .slot, #unscheduled .slot, #unscheduled-papers .slot-paper, #unscheduled-chairs .slot-chair {
     min-width: 48px;
     font-size: 10px;
     line-height: 12px;
 }
 
 
-#program .slot:not(.unavailable), #unscheduled .slot:not(.unavailable), #unscheduled-papers .slot-paper:not(.unavailable) {
+#program .slot:not(.unavailable), #unscheduled .slot:not(.unavailable), #unscheduled-papers .slot-paper:not(.unavailable), #unscheduled-chairs .slot-chair:not(.unavailable) {
     cursor: pointer;
 }
 
 
-#program .slot:hover, #unscheduled .slot:hover, #unscheduled-papers .slot-paper:hover {
+#program .slot:hover, #unscheduled .slot:hover, #unscheduled-papers .slot-paper:hover, #unscheduled-chairs .slot-chair:hover {
     outline: 1px solid #333333;
 }
 
-#program .cell .title, #unscheduled .cell .title, #unscheduled-papers .cell .title {
+.main .cell .title {
     /*width: 44px;*/
     height: 38px;                
     overflow-x: hidden;
     overflow-y: hidden;
 }
 
-#unscheduled .cell .title, #unscheduled-papers .cell .title {
+#unscheduled .cell .title, #unscheduled-papers .cell .title, #unscheduled-chairs .cell .title {
     width: 48px;
 }
 
@@ -294,7 +294,7 @@ body.loading .modal {
     margin-top: 10px;
 }
 
-#program .cell .display, #unscheduled .cell .display, #unscheduled-papers .cell .display {
+.main .cell .display {
     /*width: 44px;*/
     height: 40px;
     border-top: solid 1px #cccccc;
@@ -303,7 +303,7 @@ body.loading .modal {
     /*color: #aaaaaa;*/
 }
 
-#program .cell .conflicts, #unscheduled .cell .conflicts, #unscheduled-papers .cell .conflicts {
+.main .cell .conflicts {
     display: none;
     height: 30px;
     border-top: solid 1px #cccccc;
@@ -316,38 +316,49 @@ body.loading .modal {
     margin-top: 20px;
 }
 
-#unscheduled .cell .display, #unscheduled-papers .cell .display, #unscheduled .cell .conflicts, #unscheduled-papers .cell .conflicts {
+#unscheduled .cell .display, #unscheduled-papers .cell .display, #unscheduled-chairs .cell .display, #unscheduled .cell .conflicts, #unscheduled-papers .cell .conflicts, #unscheduled-chairs .cell .conflicts {
     width: 48px;
 }
 
-#program .cell .display .icon, #unscheduled .cell .display .icon, #unscheduled-papers .cell .display .icon {
+.main .cell .display .icon {
     width: 24px;
 }
 
-#program .cell .display .duration, #unscheduled .cell .display .duration, #unscheduled-papers .cell .display .duration {
+.chair-text {
+    font-size:12px;
+    font-weight: bold;
+}
+
+.chair-not-available {
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.main .cell .display .duration {
     font-size: 14px;
     padding: 10px;
 }
 
-#program .cell .display .duration-overtime, #unscheduled .cell .display .duration-overtime, #unscheduled-papers .cell .display .duration-overtime {
+.main .cell .display .duration-overtime {
     color: red;
     font-weight: bold;
 }
 
-#program .cell .display .duration-undertime, #unscheduled .cell .display .duration-undertime, #unscheduled-papers .cell .display .duration-undertime {
+.main .cell .display .duration-undertime {
     color: #FF8A00;
     font-weight: bold;
 }
 
-#program .cell .display .duration-full, #unscheduled .cell .display .duration-full, #unscheduled-papers .cell .display .duration-full {
+.main .cell .display .duration-full {
     color: #bbbbbb;
 }
 
-#program .cell .display .duration-none, #unscheduled .cell .display .duration-none, #unscheduled-papers .cell .display .duration-none {
+.main .cell .display .duration-none {
     color: #bbbbbb;
 }
 
-#program .cell .conflicts .icon, #unscheduled .cell .conflicts .icon, #unscheduled-papers .cell .conflicts .icon {
+.main .cell .conflicts .icon {
     width: 24px;
 }
 
@@ -369,13 +380,15 @@ body.loading .modal {
     border-right: solid 3px #bbbbbb;
 }
 
-#program .selected, #unscheduled .selected, #unscheduled-papers .selected {
+/* to keep high specificity, do not just use .recommended */
+#program .selected, #unscheduled .selected, #unscheduled-papers .selected, #unscheduled-chairs .selected {
     background: yellow; /*!important;*/
     z-index: 1000;
     /*#ffb7b7;*/
 }
 
-#program .move-src-selected, #unscheduled .move-src-selected, #unscheduled-papers .move-src-selected {
+/* to keep high specificity, do not just use .recommended */
+#program .move-src-selected, #unscheduled .move-src-selected, #unscheduled-papers .move-src-selected, #unscheduled-chairs .move-src-selected { 
     background: yellow; /*!important;*/
     z-index: 1000;
 }
@@ -396,7 +409,7 @@ body.loading .modal {
 */
 
 /* to keep high specificity, do not just use .recommended */
-#program .recommended, #unscheduled .recommended, #unscheduled-papers .recommended, #statusbar .recommended, .popover-inner .list-submissions li.recommended {
+#program .recommended, #unscheduled .recommended, #unscheduled-papers .recommended, #unscheduled-chairs .recommended, #statusbar .recommended, .popover-inner .list-submissions li.recommended {
     background: #23E000; /*!important;*/ /* #03BF57  #fd8d3c;*/
     z-index: 1000;
 }
@@ -406,11 +419,11 @@ body.loading .modal {
     font-weight: bold;
 }
 
-#program .proposed-swap, #unscheduled .proposed-swap, #unscheduled-papers .proposed-swap {
+#program .proposed-swap, #unscheduled .proposed-swap, #unscheduled-papers .proposed-swap, #unscheduled-chairs .proposed-swap {
     cursor: pointer;
 }
 
-#program .highlight, #unscheduled .highlight, #unscheduled-papers .highlight {
+#program .highlight, #unscheduled .highlight, #unscheduled-papers .highlight, #unscheduled-chairs .highlight {
 	/*outline: 2px solid black;*/
     background: #aec7e8 !important;
 }
@@ -420,14 +433,14 @@ body.loading .modal {
    Unscheduled workspace
    ========================================================================== */
 
-.unscheduled-panel .left, .unscheduled-panel .right, .unscheduled-papers-panel .left, .unscheduled-papers-panel .right {
+.unscheduled-panel .left, .unscheduled-panel .right, .unscheduled-papers-panel .left, .unscheduled-papers-panel .right, .unscheduled-chairs-panel .left, .unscheduled-chairs-panel .right {
     height: 95px;
     cursor: default;
     opacity: 0.3;
     float: left;
 }
 
-.unscheduled-panel .left, .unscheduled-papers-panel .left { 
+.unscheduled-panel .left, .unscheduled-papers-panel .left, .unscheduled-chairs-panel .left { 
     width: 0; 
     height: 0; 
     border-top: 47px solid transparent;
@@ -435,7 +448,7 @@ body.loading .modal {
     border-right: 20px solid #bbbbbb;    
 }
 
-.unscheduled-panel .right, .unscheduled-papers-panel .right {
+.unscheduled-panel .right, .unscheduled-papers-panel .right, .unscheduled-chairs-panel .right {
     width: 0; 
     height: 0; 
     border-top: 47px solid transparent;
@@ -443,7 +456,7 @@ body.loading .modal {
     border-left: 20px solid #bbbbbb;
 }
 
-.unscheduled-wrapper, .unscheduled-papers-wrapper {
+.unscheduled-wrapper, .unscheduled-papers-wrapper, .unscheduled-chairs-wrapper {
     float: left;
     /*width: 95%;*/
     width: 80%;
@@ -454,14 +467,14 @@ body.loading .modal {
     margin: 0 10px 15px 10px;
 }
 
-#unscheduled, #unscheduled-papers {
+#unscheduled, #unscheduled-papers, #unscheduled-chairs {
     /* table-layout: fixed; */
     border-collapse: separate;
     border-spacing: 10px 5px;
     /*padding-bottom:20px;*/
 }
 
-#unscheduled .slot, #unscheduled-papers .slot-paper {    
+#unscheduled .slot, #unscheduled-papers .slot-paper, #unscheduled-chairs .slot-chair {    
     border: solid 1px #dddddd;
     margin-left: 5px;
     margin-right: 5px;
@@ -483,7 +496,28 @@ body.loading .modal {
 
 
 /* ==========================================================================
-    Interface misc
+    Chair display inside popover
+   ========================================================================== */
+.chair-display {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom:thick solid #888888;
+    /*padding-left: 5px;
+    padding-right: 7px;*/
+}
+
+.chair-display button {
+    margin-top: -5px;
+    float: right;
+}
+
+.chair-display:hover { 
+    outline: 1px solid #333333;
+}
+
+/* ==========================================================================
+    List of submissions inside popover
    ========================================================================== */
 
 .list-submissions {
@@ -555,7 +589,7 @@ body.loading .modal {
 }
 
 /* submission info */
-.list-submissions .swap-total-full {
+.list-submissions .swap-total-full, .chair .swap-total-full {
     font-size: 12px;
     margin: 5px 5px 5px 0;
 }
@@ -624,6 +658,7 @@ body.loading .modal {
     padding: 10px;
     line-height: 12px;
     background: #F2D9BB;
+    color: #000000;
 }
 
 .conflict-netcount-added, .conflict-netcount-removed {
@@ -733,11 +768,15 @@ body.loading .modal {
 }
 
 [class*="cell-conflict-good"]{
-    background-color: #3a87ad; /*#36B84F;    */
+    background-color: #3a87ad;
 }
 
 .cell-preference{
-    background-color: #3a87ad; /*#36B84F;    */
+    background-color: #3a87ad;  /*#36B84F;    */
+}
+
+[class*="cell-preference-good"]{
+    background-color: #3a87ad;
 }
 
 .cell-persona{

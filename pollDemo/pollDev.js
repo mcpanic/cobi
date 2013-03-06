@@ -4,6 +4,7 @@ var unscheduledSubmissions = null; // the unscheduled papers/submissions
 var scheduleSlots = null; // which slots are locked
 var transactions = []; // transaction records
 var sessions = null;
+var chairs = null;
 
 $(document).ready(function() {
     loadSchedule();
@@ -23,6 +24,7 @@ function loadSchedule(){
 	    scheduleSlots = m['slots'];
 	    transactions = m['transactions'];
 	    sessions = m['sessions'];
+	    chairs = m['chairs'];
 	    displaySchedule();
 	    keepRefreshing(); // polls and displays changes as they are made
 	},
@@ -45,9 +47,15 @@ function displaySchedule(){
 		    $('#debug').append(day + ", " + time + ", " + room + ": empty.<br/>");
  		}
 		for(var s in schedule[day][time][room]){
-		    $('#debug').append(day + ", " + time + ", " + room + ", " + s + ", " + schedule[day][time][room][s]['title'] +": ");
+		    $('#debug').append(day + ", " + time + ", " + room + ", " + s + ", " + schedule[day][time][room][s]['title'] + " ");
+		    if(schedule[day][time][room][s]['chairs'] != ""){
+			$('#debug').append("[" + chairs[schedule[day][time][room][s]['chairs']].givenName + " " + chairs[schedule[day][time][room][s]['chairs']].familyName + ", " + 
+					   chairs[schedule[day][time][room][s]['chairs']].authorId + "]: ");
+		    }else{
+			$('#debug').append("[no chair assigned]: ");
+		    }
 		    $('#debug').append(schedule[day][time][room][s]['submissions'] + '<br/>');
-
+		    
 		}}}}
     
     // demonstrating how to traverse the unscheduled data
@@ -59,6 +67,13 @@ function displaySchedule(){
     $('#debug').append('<br/>Unscheduled submissions:<br/>');
     for(var item in unscheduledSubmissions){
 	$('#debug').append(item + "<br/>");
+    }
+    // demonstrating how to traverse the unscheduled chairs data
+    $('#debug').append('<br/>Unscheduled submissions:<br/>');
+    for(var c in chairs){
+	if(chairs[c].id == ""){
+	    $('#debug').append(chairs[c].authorId + ": " + chairs[c].givenName + " " + chairs[c].familyName + "<br/>");
+	}
     }
 
     // demonstrating how to traverse the scheduleSlots to see what's locked
@@ -104,6 +119,7 @@ var keepRefreshing = function(){
 				var serverTransactions = m['transactions'];
 				var serverUnscheduledSubmissions = m['unscheduledSubmissions'];
 				var serverSessions = m['sessions'];
+				var serverChairs = m['chairs'];
 				console.log("database unlocked: " + m['dbLocked']);
 				var changes = detectChanges(serverSchedule, 
 							    serverUnscheduled,
@@ -116,7 +132,8 @@ var keepRefreshing = function(){
 					    serverUnscheduledSubmissions,
 					    serverSlots, 
 					    serverTransactions,
-					    serverSessions);
+					    serverSessions,
+					    serverChairs);
 				handleChangesInView(changes);
 			    }
 			    poll((function(){
@@ -204,7 +221,7 @@ function handleChangesInView(changes){
 }
 
 // Updates current data with latest from the server
-function makeChanges(serverSchedule, serverUnscheduled, serverUnscheduledSubmissions, serverSlots, serverTransactions, serverSessions){
+function makeChanges(serverSchedule, serverUnscheduled, serverUnscheduledSubmissions, serverSlots, serverTransactions, serverSessions, serverChairs){
     // add new transactions
     for(var i = 0; i < serverTransactions.length; i++){
 	transactions.push(serverTransactions[i]);
@@ -215,6 +232,7 @@ function makeChanges(serverSchedule, serverUnscheduled, serverUnscheduledSubmiss
     unscheduledSubmissions = serverUnscheduledSubmissions;
     scheduleSlots = serverSlots;
     sessions = serverSessions;
+    chairs = serverChairs;
 }
 
 // Look for where the changes have been made
@@ -240,7 +258,12 @@ function detectChanges(serverSchedule, serverUnscheduled, serverUnscheduledSubmi
 					serverSchedule[day][time][room][s]['submissions'])){
 			    sessionChange.push({'session': s, 'date': day, 'time': time, 'room': room});
 			}
+			if(!(schedule[day][time][room][s]['chairs'] ==
+			     serverSchedule[day][time][room][s]['chairs'])){
+			    sessionChange.push({'session': s, 'date': day, 'time': time, 'room': room});
+			}
 		    }
+		    
 		}
 	    }
 	}

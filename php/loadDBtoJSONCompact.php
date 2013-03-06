@@ -48,6 +48,15 @@ while ($row = $sessionUnscheduledTable->fetch_assoc()) {
     $unscheduled[$row['id']] = $row; 
 }
 
+// Get chairs
+$chairsQ = "select authorId from sessionChairs";
+$chairsTable = mysqli_query($mysqli, $chairsQ);
+echo mysqli_error($mysqli);
+$chairs = array();
+while ($row = $chairsTable->fetch_assoc()){
+  $chairs[$row['authorId']] = $row;
+}
+
 // Get unscheduled sessions
 $entityQ = "select * from entity where session='null'"; 
 $entityUnscheduledTable = mysqli_query($mysqli, $entityQ);
@@ -101,7 +110,8 @@ $output = array('schedule' => $schedule,
 		'unscheduled' => (object)$unscheduled,
 		'unscheduledSubmissions' => (object)$unscheduledSubmissions,
 		'slots' => $slots,
-		'transactions' => $transactions);
+		'transactions' => $transactions,
+		'chairs' => $chairs);
 
 echo json_encode($output);
 

@@ -84,7 +84,6 @@ function DB(){
 var db = new DB();
 
 DB.prototype.addTransaction = function(t){
-//    console.log("adding transaction... " + JSON.stringify(t));
     $.ajax({
  	async: true,
 	type: 'POST',
@@ -92,7 +91,7 @@ DB.prototype.addTransaction = function(t){
 		lastKnownTransaction: Transact.lastRecordedTransaction()},
 	url: "./php/changeSchedule.php",
 	success: function(m){		
-	//    console.log("returned transaction... " + JSON.stringify(m));
+	    
 	    if(m['transaction'].id != null){
 		// add server transactions 
 		// (TODO: assuming no rollback needed)

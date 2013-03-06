@@ -57,9 +57,18 @@ while ($row = $entityUnscheduledTable->fetch_assoc()) {
 }
 
 // Get the session table with submissions only
-$sessionQ = "select id,title,submissions from session"; 
+$sessionQ = "select id,title,submissions,chairs from session"; 
 $sessionTable = mysqli_query($mysqli, $sessionQ);
 echo mysqli_error($mysqli);
+
+// Get the chairs table 
+$chairQ = "select authorId, id, givenName, middleInitial, familyName from sessionChairs";
+$chairTable = mysqli_query($mysqli, $chairQ);
+echo mysqli_error($mysqli);
+
+while ($row = $chairTable->fetch_assoc()){
+  $chairs[$row['authorId']] = $row;
+}
 
 while ($row = $sessionTable->fetch_assoc()) {
   $subKeys = explode(",", trim($row['submissions']));
@@ -100,6 +109,7 @@ $output = array('sessions' => $sessions,
 		'unscheduled' => (object)$unscheduled,
 		'unscheduledSubmissions' => (object)$unscheduledSubmissions,
 		'slots' => $slots,
+		'chairs' => $chairs,
 		'transactions' => $transactions,
 		'dbLocked' => getLockStatus($mysqli));
 

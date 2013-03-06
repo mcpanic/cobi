@@ -2,12 +2,14 @@ var allRooms = null;
 var allSessions = null;
 var allSubmissions = null;
 var allAuthors = null;
+var allChairs = null;
 var authorConflictsAmongSessions = {};
 var personaConflictsAmongSessions = {};
 var conflictsByTime = null;
 var conflictsBySession = null;
 var unscheduled = null;
 var unscheduledSubmissions = null;
+var unscheduledChairs = null;
 var schedule = null;
 var frontEndOnly = false;
 var scheduleSlots = null;
@@ -92,13 +94,34 @@ var DataOps = function() {
     }
     
     function handleTransaction(t){
-	console.log(t);
 	switch (t.type) {
    	case 'lock': 
 	    lockSlot(t.data.date, t.data.time, t.data.room);
 	    break;
 	case 'unlock':
 	    unlockSlot(t.data.date, t.data.time, t.data.room);
+	    break;
+	case 'unscheduleChair':
+	    unscheduleChair(allSessions[t.data.id], allChairs[t.data.chairId]);
+	    break;
+	case 'scheduleChair':
+	    scheduleChair(allSessions[t.data.id], allChairs[t.data.chairId]);
+	    break;
+	case 'moveChair':
+	    moveChair(allSessions[t.data.s1id], 
+		      allChairs[t.data.chairId],
+		      allSessions[t.data.s2id]);
+	    break;
+	case 'swapChair':
+	    swapChair(allSessions[t.data.s1id],
+		      allChairs[t.data.chair1Id],
+		      allSessions[t.data.s2id],
+		      allChairs[t.data.chair2Id]);
+	    break;
+	case 'swapWithUnscheduledChair':
+	    swapWithUnscheduledChair(allSessions[t.data.s1id],
+				     allChairs[t.data.chair1Id],
+				     allChairs[t.data.chair2Id]);
 	    break;
 	case 'editSessionTitle':
 	    editSessionTitle(allSessions[t.data.id], t.data.title);
@@ -236,6 +259,40 @@ var DataOps = function() {
 	schedule[date][time][room][s.id]['time'] = time;
 	schedule[date][time][room][s.id]['room'] = room;
 	// todo doesn't deal with endTime
+    }
+    function unscheduleChair(s,c){
+	c.id = '';
+	unscheduledChairs[c.authorId] = c;
+	s.chairs = '';
+    }
+    function scheduleChair(s,c){
+	c.id = s.id;
+	s.chairs = c.authorId;
+	delete unscheduledChairs[c.authorId];
+    }
+    function moveChair(s1, c1, s2){
+	s1.chairs = '';
+	c1.id = s2.id;
+	s2.chairs = c1.authorId;
+    }
+    
+    function swapChair(s1, c1, s2, c2){
+	console.log(s1, c1, s2, c2);
+	s1.chairs = c2.authorId;
+	s2.chairs = c1.authorId;
+	c1.id = s2.id;
+	c2.id = s1.id;
+    }
+
+    function swapWithUnscheduledChair(s1, c1, c2){
+	console.log(s1);
+	console.log(c1);
+	console.log(c2);
+	unscheduledChairs[c1.authorId] = c1;
+	delete unscheduledChairs[c2.authorId];
+	c1.id = '';
+	c2.id = s1.id;
+	s1.chairs = c2.authorId;
     }
     
     function editSessionTitle(s, t){
@@ -735,6 +792,100 @@ function unlockSlot(date, time, room){
     Transact.addTransaction(t);		
 }
 
+/////////////// CHAIR FUNCTIONALITY //////////////
+
+// unscheduleChair(allSessions['s202'], allChairs[allSessions['s202'].chairs]);
+function unscheduleChair(s, c){
+    var td = { 'id': s.id,
+	       'chairId': c.authorId
+	     };
+    var tp = { 'id': s.id,
+	       'chairId': c.authorId
+	     };
+    var t = new TransactionData(userData.id,
+				'unscheduleChair',
+				td,
+				'scheduleChair',
+				tp);
+    Transact.addTransaction(t);
+}
+
+// scheduleChair(allSessions['s202'], unscheduledChairs['auth1104'])
+function scheduleChair(s, c){
+    var td = { 'id': s.id,
+	       'chairId': c.authorId
+	     };
+    var tp = { 'id': s.id,
+	       'chairId': c.authorId
+	     };
+    var t = new TransactionData(userData.id,
+				'scheduleChair',
+				td,
+				'unscheduleChair',
+				tp);
+    Transact.addTransaction(t);
+}
+
+// moveChair(allSessions['s202'], allChairs[allSessions['s202'].chairs], allSessions['s230'])
+function moveChair(s1, c1, s2){
+    var td = { 's1id': s1.id,
+	       'chairId': c1.authorId,
+	       's2id' :s2.id
+	     };
+    var tp = { 's1id': s2.id,
+	       'chairId': c1.authorId,
+	       's2id' : s1.id
+	     };
+    var t = new TransactionData(userData.id,
+				'moveChair',
+				td,
+				'moveChair',
+				tp);
+    Transact.addTransaction(t);
+}
+
+// swapChair(allSessions['s202'], allChairs[allSessions['s202'].chairs], allSessions['s199'], allChairs[allSessions['s199'].chairs]);
+function swapChair(s1, c1, s2, c2){
+    var td = { 's1id': s1.id,
+	       'chair1Id': c1.authorId,
+	       's2id' :s2.id,
+	       'chair2Id': c2.authorId,
+	     };
+    var tp = { 's1id': s1.id,
+	       'chair1Id': c2.authorId,
+	       's2id' : s2.id,
+	       'chair2Id': c1.authorId,
+	     };
+    
+    var t = new TransactionData(userData.id,
+				'swapChair',
+				td,
+				'swapChair',
+				tp);
+    Transact.addTransaction(t);
+	    
+}
+
+function swapWithUnscheduledChair(s1, c1, c2){
+    var td = { 's1id': s1.id,
+	       'chair1Id': c1.authorId,
+	       'chair2Id': c2.authorId,
+	     };
+    var tp = { 's1id': s1.id,
+	       'chair1Id': c2.authorId,
+	       'chair2Id': c1.authorId,
+	     };
+    var t = new TransactionData(userData.id,
+				'swapWithUnscheduledChair',
+				td,
+				'swapWithUnscheduledChair',
+				tp);
+    Transact.addTransaction(t);
+}
+
+//////////////// END CHAIR FUNCTIONALITY /////////
+
+
 // changing the session title
 function editSessionTitle(s, t){
 //    console.log(editSessionTitle, s.id, t);
@@ -1077,6 +1228,12 @@ function initAfterScheduleLoads(m){
     unscheduledSubmissions = m['unscheduledSubmissions'];
     scheduleSlots = m['slots'];
     transactions = m['transactions'];
+    allChairs = m['chairs'];
+    unscheduledChairs = {};
+    for(var i in allChairs){
+	if(allChairs[i].id == '')
+	    unscheduledChairs[i] = allChairs[i];
+    }
     allRooms = getAllRooms();
     allSessions = getAllSessions();
     allSubmissions = getAllSubmissions();
@@ -1639,6 +1796,15 @@ function proposeSlot(s) {
 	}
     }
     return moveValue;
+}
+
+function proposeChairSessionAndSwap(c){
+    return CCOps.proposeChairSessionAndSwap(c);
+}
+
+function proposeChairForSession(s){
+    // return recommendations of which chairs may be good for this session
+    return CCOps.proposeChairForSession(s);
 }
 
 function proposeSlotAndSwap(s){
@@ -2254,6 +2420,11 @@ function slot(date, time, room, session){
 function sessionPaper(session, paper){
     this.session = session;
     this.paper = paper;
+}
+
+function sessionChair(session, chair){
+    this.session = session;
+    this.chair = chair;
 }
 
 function conflictObject(entities, type, conflict, description){

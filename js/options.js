@@ -1,4 +1,8 @@
 
+    var Features = {
+        chair: true
+    }
+
     var sessionTypeList = ["paper", "casestudy", "panel", "course", "SIG", "altchi", "special", "bof", "unavailable"];
 
     var typeDisplayList = {
@@ -15,7 +19,12 @@
     	schedulePaper: "scheduled paper",
     	swapPapers: "swapped papers",
     	movePaper: "moved paper",
-    	swapWithUnscheduledPaper: "swapped with unscheduled paper"
+    	swapWithUnscheduledPaper: "swapped with unscheduled paper",
+        unscheduleChair: "unscheduled chair",
+        scheduleChair: "scheduled chair",
+        swapChair: "swapped chairs",
+        moveChair: "moved chair",
+        swapWithUnscheduledChair: "swapped with unscheduled chair"        
     }
 
     var dateList = {
@@ -64,14 +73,16 @@
     var authorRoleList = ["presenter", "backup presenter"];
 
     var optionsList = [
-    {"id": "conflicts", "label": "Conflicts"}, 
-    {"id": "preferences", "label": "Preferences"}, 
+    {"id": "conflicts", "label": "Conflict"}, 
+    {"id": "preferences", "label": "Preference"}, 
+    {"id": "chair-conflict", "label": "Session Chair Conflict"}, 
+    {"id": "chair-name", "label": "Session Chair Names"}, 
     {"id": "session-type", "label": "Session Type"}, 
     //{"id": "popularity", "label": "Popularity"}, 
     {"id": "num-papers", "label": "Number of Papers"}, 
     {"id": "duration", "label": "Duration"}, 
-    {"id": "awards", "label": "Awards"}, 
-    {"id": "honorable-mentions", "label": "Honorable Mentions"}
+    {"id": "awards", "label": "Best Paper"}, 
+    {"id": "honorable-mentions", "label": "Honorable Mention"}
     /*{"id": "persona", "label": "Tracks"} */
     ];
 

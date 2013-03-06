@@ -33,7 +33,9 @@ var Polling = function() {
         // console.log("transactionUpdate", t);
         //type: event type, uid: user who made the change, data: object
         var isInterrupted = handleTransaction(t);
-        if (t.type != "schedulePaper" && t.type != "swapPapers" && t.type != "movePaper" && t.type != "swapWithUnscheduledPaper"){
+        // Due to delayed handling, for the delayed ones do not call this here. 
+        if (t.type != "schedulePaper" && t.type != "swapPapers" && t.type != "movePaper" && t.type != "swapWithUnscheduledPaper"
+            && t.type != "scheduleChair" && t.type != "swapChair" && t.type != "moveChair" && t.type != "swapWithUnscheduledChair"){
             Statusbar.addStatus(t); 
             Sidebar.addHistory(t);   
             if (isInterrupted)
@@ -68,6 +70,8 @@ var Polling = function() {
             isInterrupted = handlePollingMove(t, isMyChange);
         } else if (t.type == "swapWithUnscheduled"){
             isInterrupted = handlePollingSwapWithUnscheduled(t, isMyChange);
+
+
         } else if (t.type == "reorderPapers"){
             isInterrupted = handlePollingReorderPapers(t, isMyChange);
         } else if (t.type == "unschedulePaper"){
@@ -82,6 +86,19 @@ var Polling = function() {
             isInterrupted = handlePollingSwapWithUnscheduledPaper(t, isMyChange);
         } else if (t.type == "editSessionTitle"){
             isInterrupted = handleEditSessionTitle(t, isMyChange);
+
+
+        } else if (t.type == "unscheduleChair"){
+            isInterrupted = handlePollingUnscheduleChair(t, isMyChange);
+        } else if (t.type == "scheduleChair"){
+            isInterrupted = handlePollingScheduleChair(t, isMyChange);
+        } else if (t.type == "swapChair"){ 
+            isInterrupted = handlePollingSwapChair(t, isMyChange);
+        } else if (t.type == "moveChair"){
+            isInterrupted = handlePollingMoveChair(t, isMyChange);
+        } else if (t.type == "swapWithUnscheduledChair"){
+            isInterrupted = handlePollingSwapWithUnscheduledChair(t, isMyChange);            
+
         } else 
             console.log("unsupported transaction detected");
         return isInterrupted;
@@ -96,12 +113,12 @@ var Polling = function() {
             // the backend conflicts update
             getAllConflicts();
             // the frontend conflicts update: the row view of conflicts.
-            Conflicts.updateConflicts(true, true, true); // only sidebar
+            Conflicts.updateConflicts(true, true, "conflict"); // only sidebar
         } else {
             // the backend conflicts update
             getAllConflicts();
             // the frontend conflicts update: the row view of conflicts.
-            Conflicts.updateConflicts(true, false, true); // only sidebar
+            Conflicts.updateConflicts(true, false, "conflict"); // only sidebar
 
         }
     }
@@ -561,6 +578,156 @@ var Polling = function() {
         return isInterrupted;  
     }
 
+
+/******************************
+ * Chair level operations
+ ******************************/
+
+    function handlePollingUnscheduleChair(t, isMyChange){
+        var isInterrupted = false;    
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (t.data.id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+            if (selectedID == -1 && isEqualCell($cell, $(".move-src-selected").first())) // IMPOSSIBLE. me: empty, server: scheduled
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+
+        ChairVisualOps.unschedule(allChairs[t.data.chairId]);
+        highlight(isMyChange, findCellByID(t.data.id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $("#" + t.data.chairId), getUsernameByUID(t.uid));
+
+        postPollingMove(isMyChange);  
+        if (isMyChange) // shouldn't do MoveMode.destroy() because it's the user's own change.
+            ; //MoveMode.destroy();
+        if (isInterrupted) // current selection affected by the server change
+            MoveMode.destroy();      
+   
+        return isInterrupted;       
+    }
+
+    function handlePollingScheduleChair(t, isMyChange){
+        var isInterrupted = false;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            // console.log(selectedID, $(".move-src-selected").first().attr("id"), t.data.pid, $(".move-src-selected").first().attr("id")==t.data.pid, $(".move-src-selected").first().attr("id").length, t.data.pid.length);
+            if (t.data.id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+            if (selectedID == "" && $(".move-src-selected").first().attr("id") == t.data.chairId)  // me: unscheduled paper, server: empty
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+
+        ChairVisualOps.scheduleUnscheduled(allChairs[t.data.chairId]);
+        
+        highlight(isMyChange, findCellByID(t.data.id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $(".popover-inner #" + t.data.chairId), getUsernameByUID(t.uid));
+
+        setTimeout(function (){
+            postPollingMove(isMyChange);  
+            if (isMyChange)
+                MoveMode.destroy();
+            if (isInterrupted)
+                MoveMode.destroy();
+            delayedTransactionUpdate(t, isInterrupted);
+        }, 2300); 
+        return isInterrupted;            
+    }
+
+    function handlePollingSwapChair(t, isMyChange){
+        var isInterrupted = false;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());
+            if (t.data.s1id == selectedID || t.data.s2id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+
+        ChairVisualOps.swap(allChairs[t.data.chair1Id], allChairs[t.data.chair2Id]);  
+
+        highlight(isMyChange, findCellByID(t.data.s1id), getUsernameByUID(t.uid));
+        highlight(isMyChange, findCellByID(t.data.s2id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $(".popover-inner #" + t.data.chair1Id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $(".popover-inner #" + t.data.chair2Id), getUsernameByUID(t.uid));
+        setTimeout(function (){
+            postPollingMove(isMyChange);  
+            if (isMyChange)
+                MoveMode.destroy();
+            if (isInterrupted)
+                MoveMode.destroy();
+            delayedTransactionUpdate(t, isInterrupted);
+        }, 2300);
+          
+        return isInterrupted;                          
+    }
+
+    function handlePollingMoveChair(t, isMyChange){
+        var isInterrupted = false;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());          
+            if (t.data.s1id == selectedID || t.data.s2id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+
+        ChairVisualOps.swapWithEmpty(allChairs[t.data.chairId]); 
+
+        highlight(isMyChange, findCellByID(t.data.s1id), getUsernameByUID(t.uid));
+        highlight(isMyChange, findCellByID(t.data.s2id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $(".popover-inner #" + t.data.chairId), getUsernameByUID(t.uid));
+
+        setTimeout(function (){
+            postPollingMove(isMyChange);  
+            if (isMyChange)
+                MoveMode.destroy();
+            if (isInterrupted)
+                MoveMode.destroy();
+            delayedTransactionUpdate(t, isInterrupted);
+        }, 2300);
+          
+        return isInterrupted;  
+    }
+
+    function handlePollingSwapWithUnscheduledChair(t, isMyChange){
+        var isInterrupted = false;
+
+        var selectedID = -1;
+        if ($(".move-src-selected").first().length != 0){
+            selectedID = getID($(".move-src-selected").first());         
+            if (t.data.s1id == selectedID) // me: scheduled, server: scheduled
+                isInterrupted = true;
+            if (selectedID == "" && ($(".move-src-selected").first().attr("id") == t.data.chair1Id || $(".move-src-selected").first().attr("id") == t.data.chair2Id))  // me: unscheduled paper, server: empty
+                isInterrupted = true;
+        }
+        isInterrupted = isInterrupted && !isMyChange && MoveMode.isOn;
+
+        // the order is reversed from the paper-level equivalent
+        ChairVisualOps.swapWithUnscheduled(allChairs[t.data.chair2Id], allChairs[t.data.chair1Id]); 
+
+        highlight(isMyChange, findCellByID(t.data.s1id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $(".popover-inner #" + t.data.chair2Id), getUsernameByUID(t.uid));
+        highlight(isMyChange, $("#" + t.data.chair1Id), getUsernameByUID(t.uid));
+
+        setTimeout(function (){
+            postPollingMove(isMyChange);  
+            if (isMyChange)
+                MoveMode.destroy();
+            if (isInterrupted)
+                MoveMode.destroy();
+            delayedTransactionUpdate(t, isInterrupted);
+        }, 2300);
+
+        return isInterrupted;  
+    }
     return {
         initialize: initialize,
         transactionUpdate: transactionUpdate,

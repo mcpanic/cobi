@@ -6,7 +6,15 @@ function isTransactionMyChange(t) {
 
 // transaction type: session or paper level?
 function isTransactionSessionLevel(t){
-  return t.type.indexOf("Paper") === -1;
+  return t.type.indexOf("Paper") === -1 && t.type.indexOf("Chair") === -1;
+}
+
+function isTransactionPaperLevel(t){
+  return t.type.indexOf("Paper") !== -1;
+}
+
+function isTransactionChairLevel(t){
+  return t.type.indexOf("Chair") !== -1;
 }
 
 function getUsernameByUID(uid){
@@ -17,9 +25,9 @@ function getUsernameByUID(uid){
 }
 
 function getCellLinkByID(id){
-	var title = allSessions[id].title;
-	title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 
- 	return $("<a/>").attr("href", "#").attr("data-session-id", id).addClass("session-link").html(title);
+    var title = allSessions[id].title;
+    title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 
+    return $("<a/>").attr("href", "#").attr("data-session-id", id).addClass("session-link").html(title);
 }
 
 function getPaperCellLinkByID(id, paperId){
@@ -32,6 +40,21 @@ function getPaperCellLinkByID(id, paperId){
 		title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 		
 	}
 	var $cell = $("<a/>").attr("href", "#").attr("data-submission-id", paperId).addClass("submission-link").html(title);
+	if (typeof id !== "undefined")
+		$cell.attr("data-session-id", id);
+	return $cell;
+}
+
+function getChairCellLinkByID(id, chairId){
+	var name;
+	if (chairId != ""){
+		name = displayChairName(allChairs[chairId], false);
+		name = (name.length > 30) ? (name.substring(0, 30) + "...") : name; 
+	} else {
+		name = allSessions[id].title;
+		name = (name.length > 30) ? (name.substring(0, 30) + "...") : name; 		
+	}
+	var $cell = $("<a/>").attr("href", "#").attr("data-chair-id", chairId).addClass("chair-link").html(name);
 	if (typeof id !== "undefined")
 		$cell.attr("data-session-id", id);
 	return $cell;
@@ -100,6 +123,12 @@ function getSessionDuration(session){
     return count;
 }
 
+function displayChairName(chair, includePrefix){
+	var name = includePrefix ? "Chair: " : "";
+	if (typeof chair === "undefined" || chair == null || typeof chair.familyName === "undefined" || typeof chair.givenName === "undefined")
+		return name + "N/A";
+	return name + chair.authorId + " " + chair.givenName + " " + chair.familyName;
+}
 
 function shortenDate(date){
 	/*

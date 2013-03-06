@@ -18,6 +18,28 @@ var Sidebar = function() {
           $(".toggle-options").last().trigger("click");
      }
 
+
+     // Add event handlers to each sidebar item
+     function bindEvents(){
+          $("#list-constraints").on("click", "li.constraint-entry a", clickConstraintsHandler); 
+          $("#list-constraints").on("click", ".sublist-header a", clickConstraintHeaderHandler);         
+          $("#list-preferences").on("click", "li a", clickPreferencesHandler);
+          $("#list-view-options").on("click", "li a", clickViewOptionsHandler);
+          $("#list-session-types").on("click", "li a", clickSessionTypesHandler);
+          $("#list-session-types").on("click", ".myCheckbox", clickCheckboxSessionTypesHandler);           
+          $("#list-personas").on("click", "li a", clickPersonasHandler);
+          $("#list-personas").on("click", ".myCheckbox", clickCheckboxPersonasHandler); 
+          $("#list-communities").on("click", "li a", clickCommunitiesHandler);
+          $("#list-communities").on("click", ".myCheckbox", clickCheckboxCommunitiesHandler);          
+          $(".sidebar-fixed").on("click", ".toggle", clickToggle);
+          $(".sidebar-fixed").on("click", ".toggle-options", clickHeaderHandler);
+
+          // $(document).on("addHistory", addHistoryHandler);
+          // $(document).on("updateHistoryAccepted", updateHistoryHandler);
+          // $(document).on("updateHistoryFailed", updateHistoryHandler);
+     }
+
+
      // Display counts for each community and persona
      function addCount(){
           var sessionTypeCount = {};
@@ -68,25 +90,10 @@ var Sidebar = function() {
           });          
      }
 
-     // Add event handlers to each sidebar item
-     function bindEvents(){
-          $("#list-constraints").on("click", "li.constraint-entry a", clickConstraintsHandler); 
-          $("#list-constraints").on("click", ".sublist-header a", clickConstraintHeaderHandler);         
-          $("#list-preferences").on("click", "li a", clickPreferencesHandler);
-          $("#list-view-options").on("click", "li a", clickViewOptionsHandler);
-          $("#list-session-types").on("click", "li a", clickSessionTypesHandler);
-          $("#list-session-types").on("click", ".myCheckbox", clickCheckboxSessionTypesHandler);           
-          $("#list-personas").on("click", "li a", clickPersonasHandler);
-          $("#list-personas").on("click", ".myCheckbox", clickCheckboxPersonasHandler); 
-          $("#list-communities").on("click", "li a", clickCommunitiesHandler);
-          $("#list-communities").on("click", ".myCheckbox", clickCheckboxCommunitiesHandler);          
-          $(".sidebar-fixed").on("click", ".toggle", clickToggle);
-          $(".sidebar-fixed").on("click", ".toggle-options", clickHeaderHandler);
 
-          // $(document).on("addHistory", addHistoryHandler);
-          // $(document).on("updateHistoryAccepted", updateHistoryHandler);
-          // $(document).on("updateHistoryFailed", updateHistoryHandler);
-     }
+/******************************
+ * History Display
+ ******************************/
 
      function addHistory(t){
           // console.log("HISTORY", t);
@@ -95,10 +102,14 @@ var Sidebar = function() {
           if ($("#list-history").hasClass("in"))
                $("#list-history").css("height", "auto");
           
-          if (isTransactionSessionLevel(t))
-               displaySessionHistory(t);
-          else 
-               displayPaperHistory(t);
+        if (isTransactionSessionLevel(t))
+            displaySessionHistory(t);
+        else if (isTransactionPaperLevel(t))
+            displayPaperHistory(t);
+        else if (isTransactionChairLevel(t))
+            displayChairHistory(t);
+        else
+            console.log("addStatus error");
 
           var count = $("#history-count").html();
           $("#history-count").html(parseInt(count)+1);
@@ -121,41 +132,6 @@ var Sidebar = function() {
                     $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-remove");
           }
      }
-
-
-     // function updateHistoryHandler(event, t){
-     //      // find the matching localHash
-     //      var $item;
-     //      $("#list-history li").each(function(index, item){
-     //           // console.log($(item).attr("data-local-hash"), t.localHash);
-     //           if (typeof $(item).attr("data-local-hash") !== "undefined" && $(item).attr("data-local-hash") == t.localHash){
-     //                $item = $(item);
-     //           }
-     //      });
-          
-     //      if (typeof $item !== "undefined"){
-     //           if (event.type == "updateHistoryAccepted")
-     //                $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-ok");
-     //           else if (event.type == "updateHistoryFailed")
-     //                $item.find(".status").removeClass("icon-exclamation-sign").addClass("icon-remove");
-     //      }
-     // }
-
-     // function addHistoryHandler(event, t){
-     //      console.log("HISTORY", t);
-     //      // hack that fixes the bug where when history is open with 0 items, prepend doesn't work because height is automatically set to 0px.
-     //      // so force height to be auto when collapsed
-     //      if ($("#list-history").hasClass("in"))
-     //           $("#list-history").css("height", "auto");
-          
-     //      if (isTransactionSessionLevel(t))
-     //           displaySessionHistory(t);
-     //      else 
-     //           displayPaperHistory(t);
-
-     //      var count = $("#history-count").html();
-     //      $("#history-count").html(parseInt(count)+1);
-     // }
 
      function displaySessionHistory(t){
           var $link, $link2, $li;
@@ -215,19 +191,36 @@ var Sidebar = function() {
           $("#list-history").prepend($li);
      }
 
-     function clickHeaderHandler(){
-          //console.log("here", $(this).find("span.toggle-icon"));
-          if ($(this).find("span.toggle-icon").hasClass("icon-chevron-right"))
-               $(this).find("span.toggle-icon").removeClass("icon-chevron-right").addClass("icon-chevron-down");
-          else
-               $(this).find("span.toggle-icon").removeClass("icon-chevron-down").addClass("icon-chevron-right");
+     function displayChairHistory(t){
+          var $link, $link2, $li;
+          var $statusLabel = isTransactionMyChange(t) ? $("<span/>").addClass("status icon-exclamation-sign") : $("<span/>").addClass("status icon-ok");
+          var user = isTransactionMyChange(t) ? "You" : getUsernameByUID(t.uid);
+          $li = $("<li/>").attr("data-local-hash", t.localHash).append($statusLabel).append(user + " ").append($("<strong/>").wrapInner(typeDisplayList[t.type])).append(": ");
+
+          if (t.type == "swapChair"){
+               $link = getChairCellLinkByID(t.data.s1id, t.data.chair2Id);
+               $link2 = getChairCellLinkByID(t.data.s2id, t.data.chair1Id);
+               $li = $li.append($link).append(" and ").append($link2); 
+          } else if (t.type == "swapWithUnscheduledChair"){
+               $link = getChairCellLinkByID(undefined, t.data.chair1Id);
+               $link2 = getChairCellLinkByID(t.data.s1id, t.data.chair2Id);
+               $li = $li.append($link).append(" and ").append($link2); 
+          } else if (t.type == "unscheduleChair") {
+               $link = getChairCellLinkByID(undefined, t.data.chairId);
+               $link2 = getCellLinkByID(t.data.id);
+               $li = $li.append($link).append(" from ").append($link2); 
+          } else if (t.type == "scheduleChair") {
+               $link = getChairCellLinkByID(t.data.id, t.data.chairId);
+               $li = $li.append($link);
+          } else if (t.type == "moveChair") {
+               $link = getChairCellLinkByID(t.data.s2id, t.data.chairId);
+               $link2 = getCellLinkByID(t.data.s1id);
+               $li = $li.append($link).append(" from ").append($link2); 
+          } 
+
+          $("#list-history").prepend($li);
      }
 
-     function clickToggle(){
-          $("#list-" + $(this).attr("id").substring(7)).toggle();
-          var text = $(this).text() == "show" ? "hide" : "show";
-          $(this).text(text);
-     }
 
      // Return any active options for a given sidebar menu
      // Menu: constraints / view-options / personas
@@ -256,6 +249,25 @@ var Sidebar = function() {
           $("#list-constraints li.constraint-entry").each(function(index, constraint){
                Conflicts.updateConstraintBackground($(constraint).attr("data-type"), toggle);         
           });          
+     }
+
+
+/******************************
+ * Click Handlers
+ ******************************/
+
+      function clickHeaderHandler(){
+          //console.log("here", $(this).find("span.toggle-icon"));
+          if ($(this).find("span.toggle-icon").hasClass("icon-chevron-right"))
+               $(this).find("span.toggle-icon").removeClass("icon-chevron-right").addClass("icon-chevron-down");
+          else
+               $(this).find("span.toggle-icon").removeClass("icon-chevron-down").addClass("icon-chevron-right");
+     }
+
+     function clickToggle(){
+          $("#list-" + $(this).attr("id").substring(7)).toggle();
+          var text = $(this).text() == "show" ? "hide" : "show";
+          $(this).text(text);
      }
 
      // Turn or off all sub constraint under this header
@@ -418,7 +430,7 @@ var Sidebar = function() {
                               $(item).find(".display").html($(item).find(".conflicts").html());
                          });
                     } else
-                         Conflicts.updateConflicts(true, true, true);
+                         Conflicts.updateConflicts(true, true, "conflict");
                break;   
                case "preferences":
                     if (MoveMode.isOn){
@@ -426,8 +438,30 @@ var Sidebar = function() {
                               $(item).find(".display").html($(item).find(".conflicts").html());
                          });
                     } else
-                         Conflicts.updateConflicts(true, true, false);
-               break;                               
+                         Conflicts.updateConflicts(true, true, "preference");
+               break;   
+               case "chair-conflict":
+                    if (MoveMode.isOn){
+                         $(".slot:not('.unavailable')").each(function(index, item){
+                              // TODO: filter using only chair conflicts
+                              $(item).find(".display").html($(item).find(".conflicts").html());
+                         });
+                    } else
+                         Conflicts.updateConflicts(true, true, "chair");
+               break;   
+
+               case "chair-name":
+                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+                         var id = $(item).attr("id").substr(8);
+                         var chair = allSessions[id].chairs;
+                         var $chair = $("<span/>").addClass("chair");
+                         if (chair == "")
+                              $chair.addClass("chair-not-available").html("N/A");
+                         else
+                              $chair.addClass("chair-available").html(displayChairName(allChairs[chair], false));
+                         $(item).find(".display").html($chair);                              
+                    });
+               break;                                              
                case "popularity":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);
@@ -665,6 +699,10 @@ var Sidebar = function() {
          return false;
      }
 
+
+/******************************
+ * Default Displays
+ ******************************/
      // Display the constraints list
 	function displayConstraints(){
      	$.each(Conflicts.constraintsList, function(index, constraint){
@@ -735,16 +773,6 @@ var Sidebar = function() {
 
      // Display the communities list
      function displayCommunities(){
-          //var color_index = 0;
-	 // HQ: minor changes here;
-//           var commList = [];
-//           for (id in allSessions){
-//                if (allSessions[id].coreCommunities.length > 0)
-//                     $.each(allSessions[id].coreCommunities, function(i,v){
-//                          commList.push(v);
-//                     });
-//           }
-//           commList = $.unique(commList);
           $.each(communityList, function(index, community){
                var item = document.createElement("li");
                $(item).attr("data-type", community).html("<input type='checkbox' class='myCheckbox'> <a href='#'>" 
@@ -752,8 +780,6 @@ var Sidebar = function() {
                     + " (<span class='count'></span>)"
                     + "</a>");
                $("#list-communities").append($(item));              
-               //$(item).find("span.palette").css("background-color", color_palette_1[5]);
-               //color_index++;
           });
      }
 

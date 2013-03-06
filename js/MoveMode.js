@@ -2,16 +2,20 @@ var MoveMode = function() {
     var isOn = false;
     var type = "";
     var paperId = "";
+    var chairId = "";
     var swapValues = [];
 
     // Initialize the view mode 
-    function initialize(moveType, pid){
-        //console.log("PaperID", pid, pid == "");
+    function initialize(moveType, subId){
+        //console.log("PaperID", subId, subId == "");
         // If already on, do not register multiple events
         if (!MoveMode.isOn){
             MoveMode.isOn = true;
             type = moveType;
-            paperId = pid;
+            if (moveType.indexOf("paper") !== -1)
+                paperId = subId;
+            else if (moveType.indexOf("chair") !== -1)
+                chairId = subId;
             MoveMode.swapValues = [];
             ViewMode.destroy();
             $(".main").addClass("move-mode");
@@ -26,6 +30,8 @@ var MoveMode = function() {
     function bindEvents(){
         $("body").on("click", ".slot", slotClickHandler);
         $("body").on("click", ".slot-paper", paperSlotClickHandler);
+        if (Features.chair)
+            $("body").on("click", ".slot-chair", chairSlotClickHandler);
     }
 
     function getSwapValueBySession(session){
@@ -60,6 +66,22 @@ var MoveMode = function() {
         return selected;
     }
 
+    function getSwapValueByChair(session, chair){
+        var selected = null;
+        if (chair != null && typeof chair.authorId !== "undefined"){
+            $.each(MoveMode.swapValues, function(index, v){
+                if (v.target.chair == chair.authorId)
+                    selected = v;
+            });            
+        } else { // empty chair. session still exists.
+            $.each(MoveMode.swapValues, function(index, v){
+                if (v.target.session == session.id && v.target.chair == null)
+                    selected = v;
+            });
+        }
+        return selected;
+    }
+
     function getCancelButtonHTML(){
         return "  <button class='btn move-cancel-button'>Cancel Move</button>";
     }
@@ -68,7 +90,6 @@ var MoveMode = function() {
         // detect if the currently selected item is selected again.
         //var $selection = $(this).hasClass("unscheduled")? $("#unscheduled .move-dst-selected"): $("#program .move-dst-selected");
         //var $otherSelection = $(this).hasClass("unscheduled")? $("#program .selected"): $("#unscheduled .selected");
-
 
         // only one popover at a time? this allows multiple selections possible
         //$selection.removeClass("move-dst-selected").popover("hide");
@@ -110,8 +131,10 @@ var MoveMode = function() {
                 if ($(this).hasClass("move-src-selected")) {
                     // console.log("slotClickHandler: move-src-selected");                   
                     html += "<div class='alert alert-info'><strong>Select another session to schedule this session.</strong></div>" + getCancelButtonHTML();
-                    if (id !== -1)
+                    if (id !== -1){
+                        html += getChairList("move", session, type);
                         html += getSubmissionList("move", session, type);
+                    }
                 } else if (type == "scheduled" || type == "unscheduled" || type == "empty"){
                     if ($(this).hasClass("scheduled")){
                         html += getSessionDetail("move", "scheduled", session, type);
@@ -129,6 +152,16 @@ var MoveMode = function() {
                         html += getSessionDetail("paperMove", "unscheduled", session, type);
                     } else if ($(this).hasClass("empty")) {
                         html += getSessionDetail("paperMove", "empty", new slot($(this).attr("data-date"), $(this).attr("data-time"), $(this).attr("data-room"), null), type);
+                    } else {
+                        console.log("impossible");
+                    }
+                } else if (type == "chair-scheduled" || type == "chair-unscheduled" || type == "chair-empty"){
+                    if ($(this).hasClass("scheduled")){
+                        html += getSessionDetail("chairMove", "scheduled", session, type);
+                    } else if ($(this).hasClass("unscheduled")){
+                        html += getSessionDetail("chairMove", "unscheduled", session, type);
+                    } else if ($(this).hasClass("empty")) {
+                        html += getSessionDetail("chairMove", "empty", new slot($(this).attr("data-date"), $(this).attr("data-time"), $(this).attr("data-room"), null), type);
                     } else {
                         console.log("impossible");
                     }
@@ -185,7 +218,7 @@ var MoveMode = function() {
                 // console.log($(this));
                 if ($(this).hasClass("move-src-selected")) {
                     // console.log("paperSlotClickHandler: move-src-selected");                   
-                    html += "<strong>Select another session to schedule this session.</strong><br>" + getCancelButtonHTML();
+                    html += "<strong>Select another session to schedule this submission.</strong><br>" + getCancelButtonHTML();
                     if (id !== -1)
                         html += getSubmissionDetail("move", "unscheduled", submission, type);
 
@@ -212,6 +245,64 @@ var MoveMode = function() {
         $(this).popover("show");          
     }
 
+
+     // Event handler for clicking an individual chair (only in the unscheduled panel)
+    function chairSlotClickHandler(){
+        // console.log("MM.paperSlotClickHandler");
+        var $selection = $(".move-dst-selected");
+        $(".move-dst-selected").removeClass("move-dst-selected").popover("hide");   
+        // console.log("slotClick", $selection[0] == $(this)[0], $(this).hasClass("unavailable"), typeof $(this).attr("data-proposed-swap-paper") === "undefined");
+        // if reselected, do nothing.
+        if ($selection[0] == $(this)[0])
+           return;
+        // do nothing for unavailable slots
+        if ($(this).hasClass("unavailable"))
+           return;
+        // if not proposed, do nothing. But only when myself is not selected again.
+        //if (!$(this).hasClass("move-src-selected") && !$(this).hasClass("proposed-swap"))
+        if (!$(this).hasClass("move-src-selected") && typeof $(this).attr("data-proposed-swap-chair") === "undefined")
+            return;
+
+        var id = $(this).attr("data-chair-id");
+        var chair = allChairs[id];
+
+        $(this).addClass("move-dst-selected");
+        $(this).popover({
+          html:true,
+          placement: "bottom",
+          trigger: "manual",
+           title:function(){
+                return "<strong>" + displayChairName(chair, false) + "</strong>"
+                    + "<a class='close popover-close' data-dismiss='clickover' href='#''>&times;</a>";     
+           },
+           content:function(){
+                var html = "";
+                if ($(this).hasClass("move-src-selected")) {                
+                    html += "<strong>Select another session to schedule this chair.</strong><br>" + getCancelButtonHTML();
+                    if (id !== -1)
+                        html += getChairDetail("move", "unscheduled", chair, type);
+
+                } else if ($(this).find(".title").hasClass("locked")) {             
+                    html +=  "<strong>This is a locked session. Unlock to change the schedule.</strong><br>" + getCancelButtonHTML();
+                    if (id !== -1)
+                        html += getChairDetail("move", "unscheduled", chair, type);
+
+                } else if ($(this).hasClass("empty")){
+                    console.log("impossible");
+                } else if ($(this).hasClass("unscheduled")){
+                    // console.log("chairSlotClickHandler: unscheduled");   
+                    html += getChairDetail("chairMove", "unscheduled", chair, type, null);
+                } else if ($(this).hasClass("scheduled")) {
+                    console.log("impossible");
+                } else
+                    console.log("impossible");
+                return html;
+           }
+        });
+        $(this).popover("show");          
+    }
+
+
     // Handle a propose (swap, unschedule, schedule) request
     function runPropose(){
         var $session = $(".selected").first();
@@ -220,7 +311,6 @@ var MoveMode = function() {
         var recommendedScheduledList = [];
         var numSpecialRecommended = 2; // we want to ensure at most 2 empty and unscheduled recommendations out of 5.
         var numScheduledRecommended = 5; // we want to ensure at most 5 empty and unscheduled recommendations out of 5.
-        var numRecommended = 5; // total number of recommendations
 
         // var swapValues; 
         if (type === "scheduled") {
@@ -241,6 +331,15 @@ var MoveMode = function() {
         } else if (type === "paper-empty") {
             var tempArray = proposePaperForSession(allSessions[id]);
             MoveMode.swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);
+        } else if (type === "chair-scheduled") {
+            var tempArray = proposeChairSessionAndSwap(allChairs[chairId]);
+            MoveMode.swapValues = tempArray.sessionValue.concat(tempArray.swapValue);
+        } else if (type === "chair-unscheduled") {
+            var tempArray = proposeChairSessionAndSwap(allChairs[chairId]);
+            MoveMode.swapValues = tempArray.sessionValue.concat(tempArray.swapValue);            
+        } else if (type === "chair-empty") {
+            var tempArray = proposeChairForSession(allSessions[id]);
+            MoveMode.swapValues = tempArray.scheduleValue.concat(tempArray.unscheduleValue);            
         } else {
             console.log("ERROR: type unknown");
             return;
@@ -260,7 +359,11 @@ var MoveMode = function() {
         var $cell = null;
         for(var i = 0; i < MoveMode.swapValues.length; i++){    
             // if (MoveMode.swapValues[i].target.session == "s210")
-                // console.log("SWAP", MoveMode.swapValues[i].target.session, MoveMode.swapValues[i]);   
+            // console.log("SWAP", MoveMode.swapValues[i]);   
+            var session = MoveMode.swapValues[i].target.session;
+            var submission = MoveMode.swapValues[i].target.paper; 
+            var chair = MoveMode.swapValues[i].target.chair; 
+
             // empty session candidate
             if (MoveMode.swapValues[i].target.session === null){
                 if (typeof MoveMode.swapValues[i].target.date !== "undefined" && typeof MoveMode.swapValues[i].target.time !== "undefined" && typeof MoveMode.swapValues[i].target.room !== "undefined"){
@@ -271,7 +374,6 @@ var MoveMode = function() {
                         numSpecialRecommended--;
                     }
                 }
-                var submission = MoveMode.swapValues[i].target.paper;   
                 // Paper-level unscheduled candidate exists: session null, submission id
                 if (typeof submission !== "undefined") {     
                     $cell = $("#"+submission);
@@ -282,10 +384,19 @@ var MoveMode = function() {
                     }
                     // console.log("runPropose: unscheduled");   
                 }   
+
+                // Chair-level unscheduled candidate exists: session null, chair id
+                if (typeof chair !== "undefined") {     
+                    $cell = $("#"+chair);
+                    $("#"+chair).attr("data-proposed-swap-chair", "true").addClass("proposed-swap");
+                    if (numSpecialRecommended > 0){
+                        recommendedSpecialList.push($("#"+chair));
+                        numSpecialRecommended--;
+                    }
+                    // console.log("runPropose: unscheduled");   
+                }                   
             // non-empty session candidate
             } else {
-                var session = MoveMode.swapValues[i].target.session;
-                var submission = MoveMode.swapValues[i].target.paper;
                 $cell = findCellByID(MoveMode.swapValues[i].target.session);
                 $cell.addClass("proposed-swap"); //.data("title", allSessions[MoveMode.swapValues[i].target.session].title);
                 if ($cell.hasClass("unscheduled")) {
@@ -306,6 +417,15 @@ var MoveMode = function() {
                     curList += "," + submission;
                     $cell.attr("data-proposed-swap-paper", curList);                                       
                 }
+
+                // Chair-level empty or scheduled candidate exists
+                if (typeof chair !== "undefined") {                    
+                    // store currently inserted chair-level proposals. Only 1 per session allowed, so no need to keep a list
+                    if (chair == null)
+                        $cell.attr("data-proposed-swap-chair", "null");
+                    else                                       
+                        $cell.attr("data-proposed-swap-chair", chair);                                       
+                }                
             }
             //console.log(MoveMode.swapValues[i]);
             Conflicts.displayMovePreviewConflicts(MoveMode.swapValues[i], $cell.find(".conflicts"));
@@ -316,31 +436,17 @@ var MoveMode = function() {
 
         // Mark the current selection, which is the source session
         $session.addClass("move-src-selected");
-        // Move Mode
-        if (type.indexOf("paper") === -1) {
-            var numAssigned = 0;
-            $(document).trigger("addMoveStatus", [id]);
-            // specials (unscheduled, empty) first because they have the priority
-            $.each(recommendedSpecialList, function(index, rec) {
-                if (numAssigned < numRecommended) {
-                    if (type == "scheduled" && $(rec).hasClass("empty")){ // for move (target is empty), we don't recommend empty sessions
 
-                    } else {
-                        $(rec).addClass("recommended");
-                        numAssigned++;    
-                    }
-                }                
-            });  
-            // scheduled sessions until numRecommended is met        
-            $.each(recommendedScheduledList, function(index, rec) {
-                if (numAssigned < numRecommended) {
-                    $(rec).addClass("recommended");
-                    numAssigned++;
-                }                
-            });
-        // Paper Move Mode
-        } else {
-            var numAssigned = 0;
+        highlightRecommended(type, id, recommendedScheduledList, recommendedSpecialList);
+    }
+
+
+    // Highlight top recommended cells
+    function highlightRecommended(type, id, recommendedScheduledList, recommendedSpecialList){
+        var numRecommended = 5; // total number of recommendations
+        var numAssigned = 0;
+        // Paper Move
+        if (type.indexOf("paper") !== -1) {
             $(document).trigger("addPaperMoveStatus", [id, paperId]);
             // specials (unscheduled, empty) first because they have the priority
             $.each(recommendedSpecialList, function(index, rec) {
@@ -361,8 +467,52 @@ var MoveMode = function() {
                     numAssigned++;
                 }                
             });            
-        }
+
+        // Chair Move
+        } else if (type.indexOf("chair") !== -1) {
+            $(document).trigger("addChairMoveStatus", [id, chairId]);
+            // specials (unscheduled, empty) first because they have the priority
+            $.each(recommendedSpecialList, function(index, rec) {
+                if (numAssigned < numRecommended) {
+                    if (type == "chair-scheduled" || type == "chair-unscheduled"){ 
+
+                    } else {
+                        $(rec).addClass("recommended");
+                        numAssigned++;    
+                    }
+                }                
+            });  
+            // scheduled sessions until numRecommended is met        
+            $.each(recommendedScheduledList, function(index, rec) {
+                if (numAssigned < numRecommended) {
+                    $(rec).addClass("recommended");
+                    numAssigned++;
+                }                
+            });
+        // Session Move
+        } else {
+            $(document).trigger("addMoveStatus", [id]);
+            // specials (unscheduled, empty) first because they have the priority
+            $.each(recommendedSpecialList, function(index, rec) {
+                if (numAssigned < numRecommended) {
+                    if (type == "scheduled" && $(rec).hasClass("empty")){ // for move (target is empty), we don't recommend empty sessions
+
+                    } else {
+                        $(rec).addClass("recommended");
+                        numAssigned++;    
+                    }
+                }                
+            });  
+            // scheduled sessions until numRecommended is met        
+            $.each(recommendedScheduledList, function(index, rec) {
+                if (numAssigned < numRecommended) {
+                    $(rec).addClass("recommended");
+                    numAssigned++;
+                }                
+            });
+        }        
     }
+
 
 /******************************
  * Session level operations
@@ -475,7 +625,7 @@ var MoveMode = function() {
         } else {
             return;
         }
-        console.log(allSubmissions[unscheduledId], allSessions[allSubmissions[scheduledId].session], allSubmissions[scheduledId]);
+        // console.log(allSubmissions[unscheduledId], allSessions[allSubmissions[scheduledId].session], allSubmissions[scheduledId]);
         // the backend swap with unscheduled
         swapWithUnscheduledPaper(allSubmissions[unscheduledId], allSessions[allSubmissions[scheduledId].session], allSubmissions[scheduledId]);
     });
@@ -518,6 +668,78 @@ var MoveMode = function() {
 
     });
 
+
+/******************************
+ * Chair level operations
+ ******************************/
+
+    $("body").on("click", ".popover .button-chair-swap", function(){  
+        $(this).click(false);     // avoiding multiple clicks                    
+        var srcId = chairId;
+        var dstId = $(this).parent().attr("data-chair-id");
+
+        // the backend swap
+        swapChair(allSessions[allChairs[srcId].id], allChairs[srcId], allSessions[allChairs[dstId].id], allChairs[dstId]);            
+    }); 
+
+    $("body").on("click", ".popover .button-chair-swap-with-unscheduled", function(){  
+        $(this).click(false);     // avoiding multiple clicks            
+        var scheduledId = -1;
+        var unscheduledId = -1;
+
+        // src: unscheduled, dst: scheduled
+        if ($(".move-src-selected").first().hasClass("unscheduled")) {
+            unscheduledId = chairId;
+            scheduledId = $(this).parent().attr("data-chair-id");
+        // src: scheduled, dst: unscheduled [NOT SUPPORTED]
+        } else {
+            return;
+        }
+        // console.log(allSubmissions[unscheduledId], allSessions[allSubmissions[scheduledId].id], allSubmissions[scheduledId]);
+        // the backend swap with unscheduled
+        swapWithUnscheduledChair(allSessions[allChairs[scheduledId].id], allChairs[scheduledId], allChairs[unscheduledId]);
+    });
+
+    $("body").on("click", ".popover .button-chair-move", function(){  
+        $(this).click(false);     // avoiding multiple clicks            
+        var scheduledId = -1;
+        var emptySessionId = -1;   // empty slot into which the session is going
+        // src: scheduled, dst: empty
+        if (chairId != "") {   
+            scheduledId = chairId;
+            emptySessionId = getID($(".move-dst-selected").first());
+        // src: empty, dst: scheduled
+        } else { 
+            scheduledId = $(this).parent().attr("data-chair-id");
+            emptySessionId = getID($(".move-src-selected").first());
+        }     
+
+        // the backend move
+        moveChair(allSessions[allChairs[scheduledId].id], allChairs[scheduledId], allSessions[emptySessionId]);
+    });
+
+    $("body").on("click", ".popover .button-chair-schedule", function(){  
+        $(this).click(false);     // avoiding multiple clicks               
+        var emptySessionId = -1;
+        var unscheduledChairId = -1;
+
+        // src: unscheduled, dst: empty
+        if (chairId != "") {   
+            unscheduledChairId = chairId;
+            emptySessionId = getID($(".move-dst-selected").first());
+
+        // src: empty, dst: unscheduled
+        } else { 
+            unscheduledChairId = $(".move-dst-selected").first().attr("id");
+            emptySessionId = getID($(".move-src-selected").first());
+        }
+        // the backend scheduling
+        scheduleChair(allSessions[emptySessionId], allChairs[unscheduledChairId]);
+
+    });
+
+
+
     // clicking the 'cancel swap' link while swap in progress.
     // should return to the clean state with no selection and proposals.
     $("body").on("click", ".move-cancel-button", function(){
@@ -529,7 +751,6 @@ var MoveMode = function() {
     // Reset any change created in this view mode
     function destroy(){
         MoveMode.isOn = false;
-        type = "";
         // TOOD: check all the other things the swapping mode has created and reset/undo them.
         
         $("#unscheduled-papers .slot-paper").removeAttr("data-proposed-swap-paper").find(".conflicts").html("");
@@ -549,9 +770,16 @@ var MoveMode = function() {
         $(".slot").popover("destroy");  
         $(".slot-paper").popover("destroy");  
 
+        if (Features.chair){
+            $("#unscheduled-chairs .slot-chair").removeAttr("data-proposed-swap-chair").find(".conflicts").html("");
+            $(".proposed-swap-chair").removeClass("proposed-swap-chair");  
+            $("body").off("click", ".slot-chair", chairSlotClickHandler);  
+            $(".slot-chair").popover("destroy"); 
+        }
         // Everything is done, so now go back to ViewMode.
         $(".main").removeClass("move-mode");
-        ViewMode.initialize();
+        ViewMode.initialize(type);
+        type = "";        
     }
 
     return {
@@ -560,7 +788,8 @@ var MoveMode = function() {
         initialize: initialize,
         getCancelButtonHTML: getCancelButtonHTML,
         getSwapValueBySession: getSwapValueBySession,
-        getSwapValueBySubmission: getSwapValueBySubmission, 
+        getSwapValueBySubmission: getSwapValueBySubmission,
+        getSwapValueByChair: getSwapValueByChair, 
         destroy: destroy
     };
 }();     
