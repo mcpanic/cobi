@@ -1896,7 +1896,7 @@ var CCOps = function(){
 		var conflictsCausedByCandidateAtOffending = []; // moving chair into session;
 		var s2row = computeChairConflictsWithRowAtTimeSlot(allChairs[c], session.date, session.time);
 		var s2inner = computeChairInnerConflicts(session, allChairs[c]);
-		conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(s2row['sum']);
+		conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(extractAllButFromRow(s2row, session));//s2row['sum']);
 		conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(s2inner);
 		var cc = {conflictsCausedByItem: [],
 			  conflictsCausedByCandidate: conflictsCausedByCandidate,
