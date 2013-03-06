@@ -127,7 +127,7 @@ function displayChairName(chair, includePrefix){
 	var name = includePrefix ? "Chair: " : "";
 	if (typeof chair === "undefined" || chair == null || typeof chair.familyName === "undefined" || typeof chair.givenName === "undefined")
 		return name + "N/A";
-	return name + chair.authorId + " " + chair.givenName + " " + chair.familyName;
+	return name  + chair.givenName + " " + chair.familyName;
 }
 
 function shortenDate(date){
