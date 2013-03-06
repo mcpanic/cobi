@@ -1887,6 +1887,7 @@ var CCOps = function(){
 	
 	// Target Chair Is Unscheduled
 	for(var c in unscheduledChairs){
+	  
 	    var space = new sessionChair(null, c);
 	    if(session.id in unscheduled){ // no change
 		var cc = emptyProtoPropose();
@@ -1895,8 +1896,9 @@ var CCOps = function(){
 		var conflictsCausedByCandidate = [];
 		var conflictsCausedByCandidateAtOffending = []; // moving chair into session;
 		var s2row = computeChairConflictsWithRowAtTimeSlot(allChairs[c], session.date, session.time);
+		    
 		var s2inner = computeChairInnerConflicts(session, allChairs[c]);
-		conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(extractAllButFromRow(s2row, session));//s2row['sum']);
+		conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(extractAllButFromRow(s2row, session.id));//s2row['sum']);
 		conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(s2inner);
 		var cc = {conflictsCausedByItem: [],
 			  conflictsCausedByCandidate: conflictsCausedByCandidate,
@@ -1918,7 +1920,7 @@ var CCOps = function(){
 		    var conflictsCausedByCandidateAtOffending = []; // moving chair into session;
 		    var s2row = computeChairConflictsWithRowAtTimeSlot(allChairs[c], session.date, session.time);
 		    var s2inner = computeChairInnerConflicts(session, allChairs[c]);
-		    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(s2row['sum']);
+		    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(extractAllButFromRow(s2row, session.id));//s2row['sum']);
 		    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(s2inner);
 		    var cc = {conflictsCausedByItem: [],
 			      conflictsCausedByCandidate: conflictsCausedByCandidate,
