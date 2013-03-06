@@ -249,7 +249,6 @@ var MoveMode = function() {
      // Event handler for clicking an individual chair (only in the unscheduled panel)
     function chairSlotClickHandler(){
         // console.log("MM.paperSlotClickHandler");
-        console.log("hello1");
         var $selection = $(".move-dst-selected");
         $(".move-dst-selected").removeClass("move-dst-selected").popover("hide");   
         // console.log("slotClick", $selection[0] == $(this)[0], $(this).hasClass("unavailable"), typeof $(this).attr("data-proposed-swap-paper") === "undefined");
@@ -291,7 +290,7 @@ var MoveMode = function() {
                 } else if ($(this).hasClass("empty")){
                     console.log("impossible");
                 } else if ($(this).hasClass("unscheduled")){
-                    console.log("chairSlotClickHandler: unscheduled");   
+                    // console.log("chairSlotClickHandler: unscheduled");   
                     html += getChairDetail("chairMove", "unscheduled", chair, type, null);
                 } else if ($(this).hasClass("scheduled")) {
                     console.log("impossible");

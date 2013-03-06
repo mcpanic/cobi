@@ -162,7 +162,6 @@ var ViewMode = function() {
             subId = $(this).parent().attr("id");
         else if (event.data.type == "chair-scheduled" || event.data.type == "chair-unscheduled")
             subId = $(this).parent().attr("data-chair-id");
-        console.log("subId", event.data.type, subId);
         // Don't need the actual target information because .selected detects this.
         MoveMode.initialize(event.data.type, subId);
     }

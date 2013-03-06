@@ -27,7 +27,6 @@ var ChairVisualOps = function() {
 	}
 
 	function _addChairToUnscheduled(s){
-        console.log(s); 
         var cell = getChairCell("unscheduled", s);
         $("#unscheduled-chairs tr").append($(cell));
 	}
@@ -48,7 +47,6 @@ var ChairVisualOps = function() {
     function swap(scheduled1, scheduled2){
         var $s1 = $(".popover-inner [data-chair-id='" + scheduled1.authorId + "']");
         var $s2 = $(".popover-inner [data-chair-id='" + scheduled2.authorId + "']");
-        console.log($s1.length > 0, $s2.length > 0);
         if ($s1.length > 0 && $s2.length > 0) {
             _swapNodes($s1[0], $s2[0]);
         } else if ($s1.length > 0) {

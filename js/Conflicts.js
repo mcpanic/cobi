@@ -858,7 +858,6 @@ var Conflicts = function() {
                 var id = $(item).attr("id").substr(8);
                 $.each(conflictsBySession[id], function(index, constraint){
                     if (constraint.type == selectedConstraint && toggle){
-                        console.log(constraint.type, selectedConstraint, id, toggle, $(item), className);
                         $(item).addClass(className);
                     } else if (constraint.type == selectedConstraint && !toggle){
                         $(item).removeClass(className);

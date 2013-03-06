@@ -26,7 +26,6 @@ function getUsernameByUID(uid){
 
 function getCellLinkByID(id){
     var title = allSessions[id].title;
-    console.log(title);
     title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 
     return $("<a/>").attr("href", "#").attr("data-session-id", id).addClass("session-link").html(title);
 }
