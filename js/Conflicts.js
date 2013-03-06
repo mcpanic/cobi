@@ -863,7 +863,7 @@ var Conflicts = function() {
                         $(item).removeClass(className);
                     }
                });
-          });
+          }); 
      }
 
      // Refresh conflicts information display.
