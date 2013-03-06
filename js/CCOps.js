@@ -1945,7 +1945,7 @@ var CCOps = function(){
 					  conflictsCausedByOffending: [],
 					  conflictsCausedByCandidateAtOffending: []};
 				scheduleValue.push(createChairSwapDetails(cc, space));
-			    }else if(!(time == session.time && room == session.room)){
+			    }else if(!(time == session.time && date == session.date)){
 				// Case: source in different row
 				var conflictsCausedByCandidateAtOffending = []; // moving chair into session;
 				var s2row = computeChairConflictsWithRowAtTimeSlot(allChairs[c], session.date, session.time);
@@ -1958,7 +1958,7 @@ var CCOps = function(){
 					  conflictsCausedByOffending: [],
 					  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
 				scheduleValue.push(createChairSwapDetails(cc, space));
-			    }else if(time == session.time && room == session.room){
+			    }else if(time == session.time && date == session.date){
 				var conflictsCausedByCandidate = extractInnerChairConflicts(s);
 				conflictsCausedByCandidate = conflictsCausedByCandidate.concat(extractChairInSessionConflicts(s, session));
 				var conflictsCausedByCandidateAtOffending = computeChairInnerConflicts(session, allChairs[c]);
