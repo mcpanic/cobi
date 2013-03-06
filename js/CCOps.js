@@ -3213,7 +3213,7 @@ var CCOps = function(){
     function updateAllConstraintEntities(affectedSessions){
 	// array of session ids
 	for(var i in CCOps.allConstraints){
-	    if(!(CCOps.allConstraints[i].type in protoConstraints)){
+	    if(!(CCOps.allConstraints[i].type in protoConstraints) && !(CCOps.allConstraints[i].type in chairConstraints)){
 		
 	    
 	    updateConstraintEntities(affectedSessions, CCOps.allConstraints[i]);
