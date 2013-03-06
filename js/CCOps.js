@@ -332,8 +332,9 @@ var CCOps = function(){
 		    return abbrItem(name, 'author-msg') + " is chairing but is interested in " + formatTitle(allSubmissions[e2].title, s2, e2) + ".";
 		}else{
 		    var name = allChairs[e1].givenName + " " + allChairs[e1].familyName;
-		    return abbrItem(name, 'author-msg') +  " is chairing " + formatTitle(allSessions[s1].title, s1, null) + " but is interested in " + 
-			formatTitle(allSubmissions[e2].title, s2, e2) + ".";
+		    return abbrItem(name, 'author-msg') + " is chairing but is interested in " + formatTitle(allSubmissions[e2].title, s2, e2) + ".";
+//		    return abbrItem(name, 'author-msg') +  " is chairing " + formatTitle(allSessions[s1].title, s1, null) + " but is interested in " + 
+	//		formatTitle(allSubmissions[e2].title, s2, e2) + ".";
 		
 		}
 	    }
