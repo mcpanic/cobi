@@ -251,6 +251,11 @@ var Sidebar = function() {
           });          
      }
 
+     function _toggleAllPreferences(toggle){
+          $("#list-preferences li.preference-entry").each(function(index, preference){
+               Conflicts.updatePreferenceBackground($(preference).attr("data-type"), toggle);         
+          });          
+     }
 
 /******************************
  * Click Handlers
@@ -275,12 +280,15 @@ var Sidebar = function() {
           var $this = $(this);
           var toggle = true;
           // _resetSidebarSelections();
+          _toggleAllCheckboxes($("#list-preferences"), false);
           _toggleAllCheckboxes($("#list-session-types"), false);
           _toggleAllCheckboxes($("#list-personas"), false);
           _toggleAllCheckboxes($("#list-communities"), false);
+          // $(".slot.cell-preference").removeClass("cell-preference");
           $(".slot.cell-session-type").removeClass("cell-session-type");
           $(".slot.cell-persona").removeClass("cell-persona");
-          $(".slot.cell-community").removeClass("cell-community");   
+          $(".slot.cell-community").removeClass("cell-community");  
+          _toggleAllPreferences(false); 
           
           // Turn off everything
           if ($(this).parent().hasClass("view-option-active"))
@@ -317,10 +325,11 @@ var Sidebar = function() {
           _toggleAllCheckboxes($("#list-session-types"), false);
           _toggleAllCheckboxes($("#list-personas"), false);
           _toggleAllCheckboxes($("#list-communities"), false);
-          $(".slot.cell-preference").removeClass("cell-preference");
+          // $(".slot.cell-preference").removeClass("cell-preference");
           $(".slot.cell-session-type").removeClass("cell-session-type");
           $(".slot.cell-persona").removeClass("cell-persona");
           $(".slot.cell-community").removeClass("cell-community");   
+          _toggleAllPreferences(false);
           
           // turn off everything not in the same severity
           var mySeverity = "";
@@ -369,7 +378,7 @@ var Sidebar = function() {
           var $this = $(this);
           var toggle = true;
           // _resetSidebarSelections();
-          _toggleAllCheckboxes($("#list-conflicts"), false);
+          _toggleAllCheckboxes($("#list-constraints"), false);
           _toggleAllCheckboxes($("#list-session-types"), false);
           _toggleAllCheckboxes($("#list-personas"), false);
           _toggleAllCheckboxes($("#list-communities"), false);
@@ -556,11 +565,12 @@ var Sidebar = function() {
           // _toggleAllCheckboxes($("#list-session-types"), false);
           _toggleAllCheckboxes($("#list-personas"), false);
           _toggleAllCheckboxes($("#list-communities"), false);
-          $(".slot.cell-preference").removeClass("cell-preference");
+          // $(".slot.cell-preference").removeClass("cell-preference");
           // $(".slot.cell-session-type").removeClass("cell-session-type");
           $(".slot.cell-persona").removeClass("cell-persona");
           $(".slot.cell-community").removeClass("cell-community");   
           _toggleAllConflicts(false);
+          _toggleAllPreferences(false);
 
           if ($this.parent().hasClass("view-option-active")) {
                $this.parent().removeClass("view-option-active");
@@ -609,6 +619,7 @@ var Sidebar = function() {
           // $(".slot.cell-persona").removeClass("cell-persona");
           $(".slot.cell-community").removeClass("cell-community");   
           _toggleAllConflicts(false);        
+          _toggleAllPreferences(false);
 
           if ($this.parent().hasClass("view-option-active")) {
                $this.parent().removeClass("view-option-active");
@@ -665,6 +676,7 @@ var Sidebar = function() {
           // $(".slot.cell-community").removeClass("cell-community");   
           
           _toggleAllConflicts(false);
+          _toggleAllPreferences(false);
 
           if ($this.parent().hasClass("view-option-active")) {
                $this.parent().removeClass("view-option-active");
