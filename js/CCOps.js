@@ -109,11 +109,13 @@ var CCOps = function(){
 	'chairNotok': -1,
 	'chairGreat': 1,
 	'chairInAnother' : -1,
-	'chairInterested':-1
+	'chairInterested':-1,
+	'chairInOwn' : -1
     }
     var chairSelfConstraints = {
 	'chairGreat' : null,
-	'chairNotok' : null
+	'chairNotok' : null,
+	'chairInOwn' : null
     }
 
     var protoConstraints = {
@@ -325,6 +327,16 @@ var CCOps = function(){
 			formatTitle(allSessions[s2].title, s2, null) + ".";
 		}
 	    }
+	}else if(type =='chairInOwn'){
+	    ret = function(s1, s2){
+		if(s1 == null || s1 == 'null' || s1 == ""){
+		    var name = allChairs[e1].givenName + " " + allChairs[e1].familyName;
+		    return abbrItem(name, 'author-msg') + " is chairing but has a paper in " + 	formatTitle(allSessions[s2].title, s2, null) + ".";
+		}else{
+		    var name = allChairs[e1].givenName + " " + allChairs[e1].familyName;
+		    return abbrItem(name, 'author-msg') + " is chairing but has a paper in " + 	formatTitle(allSessions[s2].title, s2, null) + ".";
+		}
+	    }
 	}else if(type == 'chairInterested'){
 	    ret = function(s1, s2){
 		if(s1 == null || s1 == 'null' || s1 == ""){
@@ -429,7 +441,28 @@ var CCOps = function(){
 										(a.date == b.date) &&
 										(a.room != b.room));
 								   })]);
+
+	var chairauthorinownconstraint = new EntityFilterPairConstraint("chairInOwn", 
+								   "chairs with papers in their own sessions", 
+								   function (sessionA, violationA, sessionB, violationB){
+								       return sessionA.submissions[violationA.submission].authors[violationA.author].firstName + " " + 
+									   sessionA.submissions[violationA.submission].authors[violationA.author].lastName + 
+									   " is a chair that is in '" + 
+									   sessionA.title + "'.";
+								   },
+								   -100,
+								   "because chairs should only have to be at one place at any given time",
+								   [new Rule('author', function(x){ return true})],
+								   [new Rule('author', function(x){ return true})],
+								   [new Rule('author', function(a, b){ return a.chairs == b.authorId }),
+								    new Rule('session', function(a, b) { return a.id != b.id})], 
+								   [new Rule('session', function(a, b){ // assume paths, check not opposing sessions
+								       return !((a.time == b.time) &&
+										(a.date == b.date) &&
+										(a.room == b.room));
+								   })]);
 	CCOps.allConstraints.push(chairauthorconstraint);	
+	CCOps.allConstraints.push(chairauthorinownconstraint);	
 	
 	for(var i in allChairs){
 	    for(var j in allSubmissions){
@@ -988,6 +1021,9 @@ var CCOps = function(){
 				    
 				    // session chair great, notok
 				    if(allSessions[s1].chairs != ""){
+					// session chair author
+					cs = cs.concat(checkChairSubSesConstraint(chairAuthorMat, allSessions[s1], allChairs[allSessions[s1].chairs], 'chairInOwn'));
+					
 					var chairng = checkChairSesConstraint(chairNotokMat, allSessions[s1], allChairs[allSessions[s1].chairs], 'chairNotok');
 					if(chairng != null) cs.push(chairng);
 					var chairg = checkChairSesConstraint(chairFitMat, allSessions[s1], allChairs[allSessions[s1].chairs], 'chairGreat');
@@ -1221,7 +1257,7 @@ var CCOps = function(){
     }
     
     function computeChairInnerConflicts(s, c){
-	var conflicts = [];
+	var conflicts = checkChairSubSesConstraint(chairAuthorMat, s, c, 'chairInOwn');
 	var chairng = checkChairSesConstraint(chairNotokMat, s, c, 'chairNotok');
 	if(chairng != null) conflicts.push(chairng);
 	var chairg = checkChairSesConstraint(chairFitMat, s, c, 'chairGreat');
