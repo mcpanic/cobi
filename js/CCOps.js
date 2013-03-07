@@ -1904,6 +1904,23 @@ var CCOps = function(){
 		}
 		
 	    }
+	    
+	    for(var c2 in unscheduledChairs){
+		var s2row = computeChairConflictsWithRowAtTimeSlot(allChairs[c2],
+								   allSessions[c.id].date,
+								   allSessions[c.id].time)
+		conflictsCausedByCandidateAtOffending = extractAllButFromRow(s2row, c.id);
+		conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(computeChairInnerConflicts(allSessions[c.id], allChairs[c2]));		
+		space = new sessionChair(null, c2);
+		
+		var conflictsCausedByOffending = [];
+		
+		var cc = {conflictsCausedByItem: conflictsCausedByItem,
+			  conflictsCausedByCandidate: [],
+			  conflictsCausedByOffending: [],
+			  conflictsCausedByCandidateAtOffending: conflictsCausedByCandidateAtOffending};
+		swapValue.push(createChairSwapDetails(cc, space));
+	    }
 	}
 	
 	return {swapValue: swapValue,
