@@ -845,8 +845,12 @@
                 $(element).append(Conflicts.displayMoveModeChairFullConflicts(MoveMode.getSwapValueByChair(session, chair)));
 
             } else if (type == "unscheduled"){
-                console.log("No return");
-
+                console.log("Now supported");
+                $(element).addClass("alert alert-info chair-display chair");
+                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));     
+                if (!isLocked)                
+                    $("<button/>").addClass("btn btn-mini button-chair-swap-with-unscheduled").html("Swap with this chair").appendTo($(element));  
+                $(element).append(Conflicts.displayMoveModeChairFullConflicts(MoveMode.getSwapValueByChair(session, chair)));
             } else if (type == "empty"){
                 $(element).addClass("alert alert-info chair-display chair");
                 $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));    

@@ -693,7 +693,8 @@ var MoveMode = function() {
             scheduledId = $(this).parent().attr("data-chair-id");
         // src: scheduled, dst: unscheduled [NOT SUPPORTED]
         } else {
-            return;
+            scheduledId = chairId;
+            unscheduledId = $(this).parent().attr("data-chair-id");
         }
         // console.log(allSubmissions[unscheduledId], allSessions[allSubmissions[scheduledId].id], allSubmissions[scheduledId]);
         // the backend swap with unscheduled
