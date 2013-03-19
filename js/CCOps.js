@@ -522,7 +522,9 @@ var CCOps = function(){
 	}
 	for(var s in sessions){
 	    for(var i in allChairs){
-		sessions[s].push({'chair':i, 'score':allChairs[i].affinity[s]});
+		if(s in allChairs[i].affinity){
+		    sessions[s].push({'chair':i, 'score':allChairs[i].affinity[s]});
+		}
 	    }
 	}
 	for(var s in sessions){
