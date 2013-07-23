@@ -37,7 +37,7 @@ Setup
 +---------------+--------------+------+-----+---------+-------+ 
 
 Run
-- open p1.html
+- open p1.html?uid=[userId], where userId is from users table
 
 
 ==============================
