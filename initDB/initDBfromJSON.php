@@ -261,28 +261,28 @@ foreach ($sessions as $session) {
 /*   } */
 /* } */
 
-// duplicate the tables into initial tqables
-/* $query = "CREATE TABLE initial_schedule LIKE schedule"; */
-/* mysqli_query($mysqli, $query); */
-/* echo  mysqli_error($mysqli); */
+// duplicate the tables into initial tables
+ $query = "CREATE TABLE initial_schedule LIKE schedule"; 
+ mysqli_query($mysqli, $query); 
+ echo  mysqli_error($mysqli); 
 
 $query = "INSERT initial_schedule SELECT * FROM schedule";
 mysqli_query($mysqli, $query);
 echo mysqli_error($mysqli);
 
-// duplicate the tables into initial tqables
-/* $query = "CREATE TABLE initial_session LIKE session"; */
-/* mysqli_query($mysqli, $query); */
-/* echo  mysqli_error($mysqli); */
+// duplicate the tables into initial tables
+$query = "CREATE TABLE initial_session LIKE session"; 
+ mysqli_query($mysqli, $query);
+ echo  mysqli_error($mysqli); 
 
 $query = "INSERT initial_session SELECT * FROM session";
 mysqli_query($mysqli, $query);
 echo mysqli_error($mysqli);
 
-/* // duplicate the tables into initial tqables */
-/* $query = "CREATE TABLE initial_entity LIKE entity"; */
-/* mysqli_query($mysqli, $query); */
-/* echo  mysqli_error($mysqli); */
+ // duplicate the tables into initial tables 
+ $query = "CREATE TABLE initial_entity LIKE entity"; 
+ mysqli_query($mysqli, $query); 
+ echo  mysqli_error($mysqli); 
 
 $query = "INSERT initial_entity SELECT * FROM entity";
 mysqli_query($mysqli, $query);

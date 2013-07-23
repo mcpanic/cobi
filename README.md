@@ -10,5 +10,10 @@ Directory structure
 - pollDemo: API providing live feed of current schedule state
 - settings: Database settings
 
+
 To run from scratch
+- Environment: we set up 2 DBs, for dev/production respectively. Which gets created/used is determined by settings/settings.php
+- Setup: run "php initDB/createDb.php" to create user, transactions, schedule, session, author, and entity tables (authorsourcing data and sessionChairs handled manually at the moment).
 - 
+
+mysql --host=mysql.csail.mit.edu --user=cobi --password=su4Biha cobiDev
