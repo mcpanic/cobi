@@ -1243,12 +1243,12 @@ function initAfterScheduleLoads(m){
     
     // TODO: deal with personas
     //attachPersonas();  // loads personas from a file into schedule JSON
-    
-//    initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
+  //    initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
 //    initializePersonaConflictsAmongSessions(); // this can be loaded from a file
-    
-//    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
+  //    if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
 //	console.log("relying on CCOps initialize");
+
+
     CCOps.initialize();
     //    }
     getAllConflicts();

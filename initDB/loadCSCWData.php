@@ -8,10 +8,10 @@ if(count($argv) != 2 or $argv[1] != 'pineapple'){
   exit(1);
 }
 
-AUTHORFILE = "authors.json";
-ENTITYFILE = "entities.json";
-SESSIONFILE = "sessions.json";
-SCHEDULEFILE = "schedule.json";
+define("AUTHORFILE", "authors.json");
+define("ENTITYFILE", "entities.json");
+define("SESSIONFILE", "sessions.json");
+define("SCHEDULEFILE", "schedule.json");
 
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
@@ -57,26 +57,26 @@ function clearTables($mysqli){
 	 echo mysqli_error($mysqli);
 }
 
-
-
 function createAuthorTable($mysqli) {
 	 // Create author table
 	 $authorFile = file_get_contents(AUTHORFILE);
 	 $authorData = json_decode($authorFile, true);
 	 foreach ($authorData as $author) {
-	 	$authorId = mysqli_real_escape_string($author["authorId"]);
-		$type = mysqli_real_escape_string($author["type"]);
-		$id = mysqli_real_escape_string($author["id"]);
+	   $authorId = mysqli_real_escape_string($mysqli, $author["authorId"]);
+	   $type = mysqli_real_escape_string($mysqli, $author["type"]);
+	   $id = mysqli_real_escape_string($mysqli, $author["id"]);
 		$rank = $author["rank"];
-		$givenName = mysqli_real_escape_string($author["givenName"]);
-		$middleInitial = mysqli_real_escape_string($author["middleInitial"]);
-		$familyName = mysqli_real_escape_string($author["familyName"]);
-		$email = mysqli_real_escape_string($author["email"]);
-		$role = mysqli_real_escape_string($author["role"]);
-		$primary = mysqli_real_escape_string($author["authorId"]);
-		$secondary = mysqli_real_escape_string($author["secondary"]);
-
+		$givenName = mysqli_real_escape_string($mysqli, $author["givenName"]);
+		$middleInitial = mysqli_real_escape_string($mysqli, $author["middleInitial"]);
+		$familyName = mysqli_real_escape_string($mysqli, $author["familyName"]);
+		$email = mysqli_real_escape_string($mysqli, $author["email"]);
+		$venue = mysqli_real_escape_string($mysqli, $author["venue"]);
+		$role = mysqli_real_escape_string($mysqli, $author["role"]);
+		$primary =  mysqli_real_escape_string($mysqli, json_encode($author['primary']));
+		$secondary = mysqli_real_escape_string($mysqli, json_encode($author['secondary']));
+		
 		$aquery = "INSERT INTO authors (authorId, type, id, venue, rank, givenName, middleInitial, familyName, email, role, primaryAff, secondaryAff) VALUES ('$authorId', '$type', '$id', '$venue', $rank, '$givenName', '$middleInitial', '$familyName', '$email', '$role', '$primary', '$secondary')";
+
 		mysqli_query($mysqli, $aquery);
 		echo  mysqli_error($mysqli);
 
@@ -110,13 +110,13 @@ function createEntityTable($mysqli) {
                 $contactLastName = mysqli_real_escape_string($mysqli, $sub['contactLastName']);
 		$coreCommunities = mysqli_real_escape_string($mysqli, json_encode($sub['communities']));
 		$featuredCommunities = mysqli_real_escape_string($mysqli, json_encode(array()));
-		$keywords            = mysqli_real_escape_string($mysqli, json_encode(sub['authorKeywords'])            );
+		$keywords            = mysqli_real_escape_string($mysqli, json_encode($sub['keywords']));       
                 $programNumber       = "";
                 $session             = "";
-		$title               = mysqli_real_escape_string($mysqli, sub['title']               );
+		$title               = mysqli_real_escape_string($mysqli, $sub['title']               );
 		$type                = mysqli_real_escape_string($mysqli, $sub['venue']              );
 	        $subtype             = mysqli_real_escape_string($mysqli, $sub['subtype']            );
-                $equery = "INSERT INTO entity (id, abstract, acmLink, authors, bestPaperAward, bestPaperNominee, cAndB, contactEmail, contactFirstName, contactLastName, coreCommunities, featuredCommunities, keywords, programNumber, session, title, type, subtype) VALUES ('$eid', '$abstract', '$acmLink', '$authors', '$bestPaperAward', '$bestPaperNominee', '$cAndB', '$contactEmail', '$contactFirstName', '$contactLastName', '$coreCommunities', '$featuredCommunities', '$keywords', '$programNumber', '$session', '$title', '$type', '$subtype')";
+                $equery = "INSERT INTO entity (id, abstract, acmLink, authors, bestPaperAward, bestPaperNominee, cAndB, contactEmail, contactFirstName, contactLastName, coreCommunities, featuredCommunities, keywords, programNumber, session, title, type, subtype) VALUES ('$id', '$abstract', '$acmLink', '$authors', '$bestPaperAward', '$bestPaperNominee', '$cAndB', '$contactEmail', '$contactFirstName', '$contactLastName', '$coreCommunities', '$featuredCommunities', '$keywords', '$programNumber', '$session', '$title', '$type', '$subtype')";
 		  
 	        mysqli_query($mysqli, $equery);
                 echo  mysqli_error($mysqli);
@@ -144,7 +144,7 @@ function createSessionTable($mysqli) {
 	   $venue = mysqli_real_escape_string($mysqli, $session["venue"]);
 	   $scheduled = mysqli_real_escape_string($mysqli, $session["scheduled"]);
 
-   	   $squery = "INSERT INTO session (id, date, time, chairAffiliations, chairs, coreCommunities, featuredCommunities, personas, hasAward, hasHonorableMention, notes, room, submissions, title, venue, scheduled) VALUES ('$sid', '$sdate', '$stime', '$chairAffiliations', '$chairs', '$coreCommunities', '$featuredCommunities', '$personas', '$hasAward', '$hasHonorableMention', '$notes', '$sroom', '$submissionKeys', '$title', '$venue', '$scheduled')";
+   	   $squery = "INSERT INTO session (id, date, time, chairAffiliations, chairs, coreCommunities, featuredCommunities, personas, hasAward, hasHonorableMention, notes, room, submissions, title, venue, scheduled) VALUES ('$id', '$date', 'stime', '$chairAffiliations', '$chairs', '$coreCommunities', '$featuredCommunities', '$personas', '$hasAward', '$hasHonorableMention', '$notes', '$room', '$submissionKeys', '$title', '$venue', '$scheduled')";
 	   mysqli_query($mysqli, $squery);
 	   echo  mysqli_error($mysqli);
 	 }	 
@@ -160,10 +160,11 @@ function createScheduleTable($mysqli){
              $time = $slot['time'];
              $room = $slot['room'];
 	     $id = $slot['sessionId'];
-	 }	 	
-	 $query = "INSERT INTO schedule (date, time, room, id, locked, slotId) VALUES ('$date', '$time', '$room', '$id', 0, '$slotId')"; 
-	 mysqli_query($mysqli, $query); 
-	 echo  mysqli_error($mysqli);  
+
+	     $query = "INSERT INTO schedule (date, time, room, id, locked, slotId) VALUES ('$date', '$time', '$room', '$id', 0, '$slotId')"; 
+	     mysqli_query($mysqli, $query); 
+	     echo  mysqli_error($mysqli);  
+	 }
 }
 
 function makeInitialTables($mysqli){
