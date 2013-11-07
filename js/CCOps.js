@@ -632,10 +632,16 @@ var CCOps = function(){
 		
 		    for(var k in results){
 			var pair = [submission, results[k]].sort();
-			if(pair[0] in fitconstraints[pair[1]]){
+			if((pair[1] in fitconstraints) &&
+			   (pair[0] in fitconstraints[pair[1]])){
 			    fitconstraints[pair[1]][pair[0]].push(j);
 			}else{
-			    fitconstraints[pair[1]][pair[0]] = [j];
+			    if(pair[1] in fitconstraints){
+				fitconstraints[pair[1]][pair[0]] = [j];
+			    }else{
+				fitconstraints[pair[1]] = {};
+				fitconstraints[pair[1]][pair[0]] = [j];
+			    }
 			}
 		    }
 		}
@@ -649,14 +655,20 @@ var CCOps = function(){
 		
 		for(var j = 0; j < interestedList.length - 1; j++){
 		    for(var k = j+1; k < interestedList.length; k++){
-			if(interestedList[k] in interestedconstraints[interestedList[j]]){
+			if((interestedList[j] in interestedconstraints) &&
+			   (interestedList[k] in interestedconstraints[interestedList[j]])){
 			    interestedconstraints[interestedList[j]][interestedList[k]] += 1;
 			}else{
-			    interestedconstraints[interestedList[j]][interestedList[k]] = 1;
+			    if(interestedList[j] in interestedconstraints) {
+				interestedconstraints[interestedList[j]][interestedList[k]] = 1;
+			    }else{
+				interestedconstraints[interestedList[j]] = {};	
+				interestedconstraints[interestedList[j]][interestedList[k]] = 1;
+			    }
 			}
  		    }
  		}
-	
+		
 		var relevantList = CCOps.authorsourcingData[submission][auth][i]['relevant'];
 		if(relevantList == ""){
 		    relevantList = [];
@@ -666,10 +678,16 @@ var CCOps = function(){
 		}
 		for(var j = 0; j < relevantList.length; j++){
 		    var pair = [submission, relevantList[j]].sort();
-		    if(pair[0] in interestedconstraints[pair[1]]){
+		    if((pair[1] in interestedconstraints) && 
+		       (pair[0] in interestedconstraints[pair[1]])){
 			interestedconstraints[pair[1]][pair[0]] += 1;
 		    }else{
-			interestedconstraints[pair[1]][pair[0]] = 1;
+			if(pair[1] in interestedconstraints){
+			    interestedconstraints[pair[1]][pair[0]] = 1;
+			}else{
+			    interestedconstraints[pair[1]] = {};
+			    interestedconstraints[pair[1]][pair[0]] = 1;
+			}
 		    }
 		}
 	    }
@@ -801,7 +819,7 @@ var CCOps = function(){
 	generateAuthorsourcingConstraints();
 	generatePersonaConstraints();
 	generateAuthorConstraints();
-	generateChairConstraints();
+//	generateChairConstraints();
     }
 
     // session level conflict

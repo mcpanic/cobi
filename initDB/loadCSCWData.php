@@ -112,7 +112,7 @@ function createEntityTable($mysqli) {
 		$featuredCommunities = mysqli_real_escape_string($mysqli, json_encode(array()));
 		$keywords            = mysqli_real_escape_string($mysqli, json_encode($sub['keywords']));       
                 $programNumber       = "";
-                $session             = "";
+                $session             = mysqli_real_escape_string($mysqli, $sub['session']);
 		$title               = mysqli_real_escape_string($mysqli, $sub['title']               );
 		$type                = mysqli_real_escape_string($mysqli, $sub['venue']              );
 	        $subtype             = mysqli_real_escape_string($mysqli, $sub['subtype']            );
@@ -132,10 +132,10 @@ function createSessionTable($mysqli) {
 	   $time = mysqli_real_escape_string($mysqli, $session["time"]);
 	   $room = mysqli_real_escape_string($mysqli, $session["room"]);
 	   $chairAffiliations = "";
-	   $chairs = mysqli_real_escape_string($mysqli, json_encode(array()));
+	   $chairs = "";
    	   $coreCommunities = mysqli_real_escape_string($mysqli, json_encode($session['communities']));
 	   $featuredCommunities = mysqli_real_escape_string($mysqli, json_encode(array()));
-	   $personas = "";
+	   $personas = mysqli_real_escape_string($mysqli, $session["persona"]);
 	   $hasAward = 0;     
 	   $hasHonorableMention = 0;
 	   $notes = "";

@@ -1,5 +1,6 @@
 var csv = require("csv");
 var fs = require('fs');
+var newAuth = 100000;
 
 // TODO: add other authors to TOCHI paper
 // TODO where are personas?
@@ -58,6 +59,44 @@ function loadFrenzyData(data) {
 // output session file
 // output schedule file
 
+var personaList = ["B2B / information systems",
+		   "Collaboration architectures",
+		   "Collaborative information retrieval",
+		   "Collaborative software development",
+		   "Collaborative visualization",
+		   "Community analysis and support, virtual or physical",
+		   "Computer-Mediated Communication",
+		   "Concurrency control",
+		   "Cross-cultural Systems or Studies",
+		   "Crowdsourcing",
+		   "Development Tools / Toolkits / Programming Environments",
+		   "Distributed/virtual teams",
+		   "E-Learning and Education",
+		   "Empirical Methods, Qualitative",
+		   "Empirical Methods, Quantitative",
+		   "Entertainment/games",
+		   "Home/family/intimacy support",
+		   "Legal/historical/philosophical aspects",
+		   "Location-based and context-aware computing",
+		   "Machine Learning and Data Mining",
+		   "Medical and health support",
+		   "Mobile and embedded devices",
+		   "Organization/office/workplace support",
+		   "Other domain-specific support",
+		   "Participatory Design / Cooperative Design",
+		   "Privacy/access control/trust",
+		   "Recommender and Filtering Systems",
+		   "Social Computing and Social Navigation",
+		   "Social Networking Site Design and Use",
+		   "Social network analysis",
+		   "Studies of Wikipedia/Web",
+		   "Tabletop and Large Wall Displays",
+		   "Telepresence/video/desktop conferencing",
+		   "User experience/interaction design",
+		   "Virtual Worlds/Avatars/Proxies",
+		   "Workflow management"];
+
+
 function createSessionData(data){
     var sessions = [];
     for(var i in data){
@@ -65,12 +104,20 @@ function createSessionData(data){
        
 	var sessionData = data[i];
 	var submissions = sessionData['members'];
+	var allLabels = getLabelsForSubs(sessionData, submissions);
+	var personaLabels = [];
+	for(var j = 0; j < allLabels.length; j++){
+	    if(personaList.indexOf(allLabels[j]) != -1)
+		personaLabels.push(allLabels[j]);
+	}
+
 	var session = {
 	    "id" : sessionData['id'],
 	    "date" : "",
 	    "time" : "",
 	    "room" : "",
-	    "communities" : getLabelsForSubs(sessionData, submissions),
+	    "communities" : allLabels.getUnique(),
+	    "persona" : mode(personaLabels),
 	    "submissions" : sessionData['members'].join(),
 	    "title" : sessionData['label'],
 	    "venue" : "paper",
@@ -79,6 +126,28 @@ function createSessionData(data){
 	sessions.push(session);
     }
     return sessions;
+}
+
+function mode(array)
+{
+    if(array.length == 0)
+	return null;
+    var modeMap = {};
+    var maxEl = array[0], maxCount = 1;
+    for(var i = 0; i < array.length; i++)
+    {
+	var el = array[i];
+	if(modeMap[el] == null)
+	    modeMap[el] = 1;
+	else
+	    modeMap[el]++;
+	if(modeMap[el] > maxCount)
+	{
+	    maxEl = el;
+	    maxCount = modeMap[el];
+	}
+    }
+    return maxEl;
 }
 
 function createScheduleData(){
@@ -139,9 +208,50 @@ function createAuthors(sub){
     for (var i = 1; i <= numAuthors; i++){    
 	// create record for this author of this submission	
 	var author = {
-	    "authorId" : "auth" + sub["Author ID " + i],
+	    "authorId" : "auth" + createAuth(sub["Author ID " + i]),
 	    "type" : "author",
 	    "id" : sub["ID"],
+	    "venue" : "paper",
+	    "rank" : i,
+	    "givenName" : sub["Author given first name " + i],
+	    "middleInitial" : sub["Author middle initial or name " + i],
+	    "familyName" : sub["Author last/family name " + i]	,
+	    "email" : sub["Valid email address " + i],
+	    "role" : "",
+	    "primary" : { 
+		"dept" : sub["Primary Affiliation (no labs or depts names in this field) " + i + " - Department/School/Lab"],
+		"institution" : sub["Primary Affiliation (no labs or depts names in this field) " + i + " - Institution"],
+		    "city" : sub["Primary Affiliation (no labs or depts names in this field) " + i + " - City"],
+		"country" : sub["Primary Affiliation (no labs or depts names in this field) " + i + " - Country"] 
+	    },
+	    "secondary" :  { 
+		
+		"dept" : sub["Secondary Affiliation (optional) (no labs or depts names in this field) " + i + " - Department/School/Lab"],
+		
+		"institution" : sub["Secondary Affiliation (optional) (no labs or depts names in this field) " + i + " - Institution"],
+		"city" : sub["Secondary Affiliation (optional) (no labs or depts names in this field) " + i + " - City"],
+		"country" : sub["Secondary Affiliation (optional) (no labs or depts names in this field) " + i + " - Country"]
+	    }
+	}
+	authors.push(author);
+    }
+    return authors;
+}
+
+function createAuth(id){
+    if(id != "") return id;
+    newAuth+=1;
+    return newAuth;
+}
+
+function createEntityAuthors(sub){
+    var authors = [];
+    var numAuthors = sub["Author list"].split(",").length;
+    for (var i = 1; i <= numAuthors; i++){    
+	// create record for this author of this submission	
+	var author = {
+	    "id" : "auth" + createAuth(sub["Author ID " + i]),
+	    "type" : "author",
 	    "venue" : "paper",
 	    "rank" : i,
 	    "givenName" : sub["Author given first name " + i],
@@ -187,7 +297,7 @@ function createEntityData(data, sessionData){
 		"title" : sub["Title"],
 		"abstract" : sub["Abstract"],
 		"acmLink" : "",
-		"authors" : createAuthors(sub), 
+		"authors" : createEntityAuthors(sub), 
 		"cbStatement" : "",
 		"contactEmail" : sub["Contact Email"],
 		"contactFirstName" : sub["Contact given name"],
@@ -214,6 +324,20 @@ function getLabels(sessionData, id){
     return labelArray;
 }
 
+
+Array.prototype.getUnique = function(){
+    var u = {}, a = [];
+    for(var i = 0, l = this.length; i < l; ++i){
+	if(u.hasOwnProperty(this[i])) {
+            continue;
+	}
+	a.push(this[i]);
+	u[this[i]] = 1;
+    }
+    return a;
+}
+
+
 function getLabelsForSubs(sessionData, ids){
     var labelArray = [];
     for(var i = 0; i < ids.length; i++){
@@ -226,9 +350,14 @@ function getLabelsForSubs(sessionData, ids){
 
 function getSession(sessionData, id){
     var sessionName = Frenzyrawdata["items"][id]["session"];
+    console.log(sessionName);
+
     if(sessionName in sessionData){
+	console.log(sessionData[sessionName]['id']);
+
 	return sessionData[sessionName]['id'];
     }else{
+	console.log("Missing: " + sessionName);
 	return "";
     }
 }
