@@ -1,5 +1,5 @@
 <?php
-$PRODUCTION = false;
+$PRODUCTION = true;
 
 if($PRODUCTION){
   define("COBI_MYSQL_SERVER", "mysql.csail.mit.edu");
