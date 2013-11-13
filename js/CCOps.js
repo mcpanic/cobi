@@ -819,7 +819,7 @@ var CCOps = function(){
 	generateAuthorsourcingConstraints();
 	generatePersonaConstraints();
 	generateAuthorConstraints();
-//	generateChairConstraints();
+	generateChairConstraints();
     }
 
     // session level conflict
@@ -1768,9 +1768,13 @@ var CCOps = function(){
 			if(schedule[date][time][room][s].chairs == ""){// empty chair
 			    var conflictsCausedByCandidate = [];
 			    var conflictsCausedByCandidateAtOffending = [];
-			    var conflictsCausedByOffending = conflictsWithRow[date][time]["sum"];// handle this case
+//			    var conflictsCausedByOffending = conflictsWithRow[date][time]["sum"];// handle this case
+			    var conflictsCausedByOffending = extractAllButFromRow(conflictsWithRow[date][time], s);
+
 			    conflictsCausedByOffending = conflictsCausedByOffending.concat(computeChairInnerConflicts(allSessions[s], c));
 			    var space = new sessionChair(s, null);
+
+	
 			    var cc = {conflictsCausedByItem: conflictsCausedByItem,
 				      conflictsCausedByCandidate: conflictsCausedByCandidate,
 				      conflictsCausedByOffending: conflictsCausedByOffending,
@@ -1861,6 +1865,7 @@ var CCOps = function(){
 		
 		var conflictsCausedByOffending = [];
 		
+
 		var cc = {conflictsCausedByItem: conflictsCausedByItem,
 			  conflictsCausedByCandidate: [],
 			  conflictsCausedByOffending: [],
@@ -1868,7 +1873,7 @@ var CCOps = function(){
 		swapValue.push(createChairSwapDetails(cc, space));
 	    }
 	}
-	
+
 	return {swapValue: swapValue,
 		sessionValue: sessionValue};
     }
