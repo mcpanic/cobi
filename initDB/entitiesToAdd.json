@@ -58,6 +58,7 @@
                 "rank": 1,
                 "givenName": "Jana",
                 "familyName": "Diesner",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -105,6 +106,7 @@
                 "rank": 1,
                 "givenName": "Brian",
                 "familyName": "Keegan",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -139,6 +141,7 @@
                 "rank": 1,
                 "givenName": "Hanna",
                 "familyName": "Wallach",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -151,7 +154,7 @@
         "keywords": "",
         "venue": "panel",
         "subtype": "panel",
-        "session": "",
+        "session": "null",
         "communities": []
     },
     {
@@ -167,6 +170,7 @@
                 "rank": 1,
                 "givenName": "Ingrid",
                 "familyName": "Erickson",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -178,6 +182,7 @@
                 "rank": 1,
                 "givenName": "Laura",
                 "familyName": "Forlano",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -212,6 +217,7 @@
                 "rank": 1,
                 "givenName": "Beth",
                 "familyName": "Kolko",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -247,7 +253,7 @@
         "keywords": "",
         "venue": "panel",
         "subtype": "panel",
-        "session": "",
+        "session": "null",
         "communities": []
     },
     {
@@ -299,6 +305,7 @@
                 "rank": 1,
                 "givenName": "John",
                 "familyName": "Tang",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -310,6 +317,7 @@
                 "rank": 1,
                 "givenName": "Tessa",
                 "familyName": "Lau",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -321,6 +329,7 @@
                 "rank": 1,
                 "givenName": "Susan",
                 "familyName": "Herring",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -333,7 +342,7 @@
         "keywords": "",
         "venue": "panel",
         "subtype": "panel",
-        "session": "",
+        "session": "null",
         "communities": []
     },
     {
@@ -349,6 +358,7 @@
                 "rank": 1,
                 "givenName": "Susan",
                 "familyName": "Wyche",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -383,6 +393,7 @@
                 "rank": 1,
                 "givenName": "Nimmi",
                 "familyName": "Rangaswamy",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -394,6 +405,7 @@
                 "rank": 1,
                 "givenName": "Anicia",
                 "familyName": "Peters",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -418,6 +430,7 @@
                 "rank": 1,
                 "givenName": "Judd",
                 "familyName": "Antin",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -430,7 +443,7 @@
         "keywords": "",
         "venue": "panel",
         "subtype": "panel",
-        "session": "",
+        "session": "null",
         "communities": []
     },
     {
@@ -446,6 +459,7 @@
                 "rank": 1,
                 "givenName": "Ingrid",
                 "familyName": "Erickson",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -470,6 +484,7 @@
                 "rank": 1,
                 "givenName": "Sean",
                 "familyName": "Goggins",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -504,6 +519,7 @@
                 "rank": 1,
                 "givenName": "Steve",
                 "familyName": "Sawyer",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -515,6 +531,7 @@
                 "rank": 1,
                 "givenName": "Kalpana",
                 "familyName": "Shankar",
+                "email": "",
                 "role": "",
                 "primary": {},
                 "secondary": {}
@@ -550,7 +567,7 @@
         "keywords": "",
         "venue": "panel",
         "subtype": "panel",
-        "session": "",
+        "session": "null",
         "communities": []
     }
 ]

@@ -32,7 +32,7 @@ function createEntityTable($mysqli) {
 		$featuredCommunities = mysqli_real_escape_string($mysqli, json_encode(array()));
 		$keywords            = mysqli_real_escape_string($mysqli, json_encode($sub['keywords']));       
                 $programNumber       = "";
-                $session             = mysqli_real_escape_string($mysqli, $sub['session']);
+                $session             = mysqli_real_escape_string($mysqli, $sub['session']);       
 		$title               = mysqli_real_escape_string($mysqli, $sub['title']               );
 		$type                = mysqli_real_escape_string($mysqli, $sub['venue']              );
 	        $subtype             = mysqli_real_escape_string($mysqli, $sub['subtype']            );

@@ -102,7 +102,7 @@ function createEntityData(data){
 	    "keywords" : "",
 	    "venue" : ent.Type,
 	    "subtype" : ent.Type,
-	    "session" : "",
+	    "session" : "null",
 	    "communities" : []
 	}
 	typeMatch[ent.Type].start += 1; 
@@ -156,7 +156,7 @@ function lookUpAuthor(author, PCS){
 		    "givenName": matches[0].given_name,
 		    "middleInitial": matches[0].middle_initial,
 		    "familyName": matches[0].family_name,
-		    "email": matches[0].email1,
+		    "email": "", 
 		    "role": "",
 		    "primary": {},
 		    "secondary": {},
