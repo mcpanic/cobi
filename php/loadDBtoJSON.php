@@ -80,6 +80,7 @@ while ($row = $entityTable->fetch_assoc()) {
 	}
       }
       
+      print $author;
       $authorData = array(
 			  "affiliations" => array(array("country"=> "", "name" => $inst)),
 			  "email" => $author['email'],
