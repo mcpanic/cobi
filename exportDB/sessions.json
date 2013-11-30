@@ -1,0 +1,1313 @@
+sessions={
+    "s100": {
+        "s_title": "Blinding me with Science",
+        "room": "GB910",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw602",
+            "cscw566",
+            "cscw663"
+        ],
+        "personas": "Organization/office/workplace support",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": [
+            "Scientific work",
+            "Social Computing and Social Navigation",
+            "Virtual Worlds/Avatars/Proxies",
+            "citizen science",
+            "Corporate Research",
+            "Mobile and embedded devices",
+            "Organization/office/workplace support",
+            "Other domain-specific support",
+            "User experience/interaction design",
+            "work practices",
+            "Distributed/virtual teams",
+            "Empirical Methods, Qualitative",
+            "Temporal patterns of work",
+            "Community analysis and support, virtual or physical",
+            "Machine Learning and Data Mining",
+            "infoviz"
+        ]
+    },
+    "s101": {
+        "s_title": "Building on Others",
+        "room": "GB6",
+        "time": "9:00-10:15",
+        "submissions": [
+            "cscw293",
+            "cscw634",
+            "cscw495"
+        ],
+        "personas": "Community analysis and support, virtual or physical",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": [
+            "Building on others",
+            "Collaborative information retrieval",
+            "Social Computing and Social Navigation",
+            "consumer applications",
+            "search process",
+            "Community analysis and support, virtual or physical",
+            "Computer-Mediated Communication",
+            "Social network analysis",
+            "remix",
+            "Empirical Methods, Qualitative",
+            "Legal/historical/philosophical aspects",
+            "copyright law"
+        ]
+    },
+    "s102": {
+        "s_title": "Civic Participation",
+        "room": "GB910",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw145",
+            "cscw586",
+            "cscw268"
+        ],
+        "personas": "Community analysis and support, virtual or physical",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": [
+            "Crowdsourcing",
+            "Mobile and embedded devices",
+            "Participation motivations",
+            "citizen science",
+            "participatory sensing",
+            "Community analysis and support, virtual or physical",
+            "Computer-Mediated Communication",
+            "Corporate Research",
+            "civic participation",
+            "email",
+            "Volunteer work",
+            "e-government",
+            "Tabletop and Large Wall Displays",
+            "User experience/interaction design"
+        ]
+    },
+    "s103": {
+        "s_title": "Collaborative Search and Sharing",
+        "room": "GB6",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw443",
+            "cscw191",
+            "cscw352"
+        ],
+        "personas": "Collaborative information retrieval",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Collaborative information retrieval",
+            "Distributed/virtual teams",
+            "Other domain-specific support",
+            "User experience/interaction design",
+            "search process",
+            "Computer-Mediated Communication"
+        ]
+    },
+    "s104": {
+        "s_title": "Collaborative Software Development",
+        "room": "GB910",
+        "time": "9:00-10:15",
+        "submissions": [
+            "cscw147",
+            "cscw608",
+            "cscw211"
+        ],
+        "personas": "Collaborative software development",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": [
+            "Collaborative software development",
+            "Crowds to Make Sense of Data",
+            "Distributed/virtual teams",
+            "Matchmaking",
+            "Cross-cultural Systems or Studies",
+            "Development Tools / Toolkits / Programming Environments",
+            "Security",
+            "Computer-Mediated Communication",
+            "Organization/office/workplace support",
+            "coordination"
+        ]
+    },
+    "s105": {
+        "s_title": "Concurrency Control",
+        "room": "GB910",
+        "time": "9:00-10:15",
+        "submissions": [
+            "cscw234",
+            "cscw239",
+            "cscw135"
+        ],
+        "personas": "Concurrency control",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Concurrency control",
+            "systems",
+            "math",
+            "Systems"
+        ]
+    },
+    "s106": {
+        "s_title": "Craft, Repair, and DIY",
+        "room": "GB910",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw178",
+            "cscw526",
+            "cscw492"
+        ],
+        "personas": "User experience/interaction design",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": [
+            "Corporate Research",
+            "Craft and repair",
+            "Development Tools / Toolkits / Programming Environments",
+            "Software development",
+            "User experience/interaction design",
+            "Workplace Study",
+            "Appropriation",
+            "Organization/office/workplace support",
+            "work practices",
+            "Cross-cultural Systems or Studies",
+            "International tech infrastructure",
+            "Other domain-specific support"
+        ]
+    },
+    "s107": {
+        "s_title": "Crowdfunding: \"Show me the Money!\"",
+        "room": "GB34",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw432",
+            "cscw339",
+            "cscw588"
+        ],
+        "personas": "Crowdsourcing",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": [
+            "Crowdfunding",
+            "Crowdsourcing",
+            "Social Computing and Social Navigation",
+            "Studies of Wikipedia/Web",
+            "Computer-Mediated Communication",
+            "persuasion",
+            "Community analysis and support, virtual or physical",
+            "volunteer work",
+            "Crowd Worker Perspective",
+            "Participation motivations"
+        ]
+    },
+    "s108": {
+        "s_title": "Crowdsourcing Complexity",
+        "room": "GB34",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw105",
+            "cscw597",
+            "cscw626"
+        ],
+        "personas": "Crowdsourcing",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": [
+            "Crowdsourcing",
+            "User experience/interaction design",
+            "design",
+            "paid crowdsourcing",
+            "Crowd Assessment",
+            "Crowds and Education",
+            "Newcomer enculturation/learning",
+            "Organizational Processes",
+            "Social Computing and Social Navigation",
+            "it's crowded in here",
+            "Crowds To Make Sense of Data",
+            "Collaboration architectures",
+            "Collaborative information retrieval",
+            "Focusing the Crowd",
+            "Scientific work",
+            "worker bees"
+        ]
+    },
+    "s109": {
+        "s_title": "Family",
+        "room": "GB78",
+        "time": "9:00-10:15",
+        "submissions": [
+            "cscw668",
+            "cscw559",
+            "cscw374"
+        ],
+        "personas": "Community analysis and support, virtual or physical",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Reading",
+            "User experience/interaction design",
+            "home",
+            "Community analysis and support, virtual or physical",
+            "Corporate Research",
+            "Privacy/access control/trust",
+            "Social Networking Site Design and Use",
+            "tourism",
+            "traveling",
+            "worker bees",
+            "Conflict",
+            "Crowdsourcing",
+            "Family on Social Networks",
+            "Coordination",
+            "Home/family/intimacy support",
+            "Sustainability"
+        ]
+    },
+    "s110": {
+        "s_title": "Filter Bubbles & News",
+        "room": "GB12",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw576",
+            "cscw252",
+            "cscw222"
+        ],
+        "personas": "Social Networking Site Design and Use",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": [
+            "bubble",
+            "Social Networking Site Design and Use",
+            "Social network analysis",
+            "twitter",
+            "Other domain-specific support",
+            "news"
+        ]
+    },
+    "s111": {
+        "s_title": "Friendsourcing",
+        "room": "GB12",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw609",
+            "cscw599",
+            "cscw550"
+        ],
+        "personas": "Computer-Mediated Communication",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": [
+            "Asking in Social Networks",
+            "Computer-Mediated Communication",
+            "Family on Social Networks",
+            "Q&A",
+            "friendsourcing",
+            "social search",
+            "youth",
+            "Corporate Research",
+            "Entertaining Presenter",
+            "Facebook",
+            "Social Computing and Social Navigation",
+            "Social Networking Site Design and Use",
+            "Asking on Social Media",
+            "Crowdsourcing",
+            "Other domain-specific support",
+            "consumer applications",
+            "shopping"
+        ]
+    },
+    "s112": {
+        "s_title": "Gaming",
+        "room": "Dover AB",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw356",
+            "cscw190",
+            "cscw620"
+        ],
+        "personas": "Entertainment/games",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": [
+            "Computer-Mediated Communication",
+            "Entertainment/games",
+            "Location-based and context-aware computing",
+            "mobile location system",
+            "storytelling",
+            "User experience/interaction design",
+            "Virtual Worlds/Avatars/Proxies",
+            "Concurrency control",
+            "Community analysis and support, virtual or physical"
+        ]
+    },
+    "s113": {
+        "s_title": "Geographic Distance",
+        "room": "GB910",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw493",
+            "cscw622",
+            "cscw128"
+        ],
+        "personas": "Cross-cultural Systems or Studies",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": [
+            "Corporate Research",
+            "Crowdfunding",
+            "Crowdsourcing",
+            "Organization/office/workplace support",
+            "Social Computing and Social Navigation",
+            "distance",
+            "social media in the entreprise",
+            "Computer-Mediated Communication",
+            "Cross-cultural Systems or Studies",
+            "Marginalized communities",
+            "Self-disclosure and identity",
+            "Social Networking Site Design and Use",
+            "geosocial networking",
+            "Social network analysis",
+            "bubbles",
+            "twitter"
+        ]
+    },
+    "s114": {
+        "s_title": "Group Dynamics",
+        "room": "Dover AB",
+        "time": "9:00-10:15",
+        "submissions": [
+            "cscw233",
+            "cscw327",
+            "cscw637"
+        ],
+        "personas": "Distributed/virtual teams",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Computer-Mediated Communication",
+            "Distributed/virtual teams",
+            "Matchmaking",
+            "Organization/office/workplace support",
+            "linguistic style in social media",
+            "Tabletop and Large Wall Displays",
+            "Community analysis and support, virtual or physical",
+            "Studies of Wikipedia/Web",
+            "Wikipedia",
+            "Collaboration architectures",
+            "Virtual Worlds/Avatars/Proxies"
+        ]
+    },
+    "s115": {
+        "s_title": "ICT4D",
+        "room": "GB78",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw482",
+            "cscw204",
+            "cscw241"
+        ],
+        "personas": "Other domain-specific support",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Cross-cultural Systems or Studies",
+            "India",
+            "Infrastructure",
+            "International tech infrastructure",
+            "Other domain-specific support",
+            "Organization/office/workplace support",
+            "values",
+            "User experience/interaction design"
+        ]
+    },
+    "s116": {
+        "s_title": "Leadership",
+        "room": "GB910",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw305",
+            "cscw395",
+            "cscw254"
+        ],
+        "personas": "Social Computing and Social Navigation",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Community analysis and support, virtual or physical",
+            "Corporate Research",
+            "Distributed/virtual teams",
+            "Facebook",
+            "Social Computing and Social Navigation",
+            "leaders",
+            "Computer-Mediated Communication",
+            "Social network analysis",
+            "office",
+            "Crowdsourcing",
+            "creativity"
+        ]
+    },
+    "s117": {
+        "s_title": "Locations and Maps",
+        "room": "GB910",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw584",
+            "cscw161",
+            "cscw474"
+        ],
+        "personas": "Location-based and context-aware computing",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Location, Location, Location",
+            "Location-based and context-aware computing",
+            "Machine Learning and Data Mining",
+            "Privacy/access control/trust",
+            "Social network analysis",
+            "Stalking",
+            "distance",
+            "Crowdsourcing",
+            "place",
+            "Community analysis and support, virtual or physical",
+            "Corporate Research",
+            "Crowdsourcing beauty",
+            "Social Computing and Social Navigation",
+            "urban computing",
+            "Participation motivations",
+            "User experience/interaction design"
+        ]
+    },
+    "s118": {
+        "s_title": "MOOCs",
+        "room": "GB6",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw391",
+            "cscw348",
+            "tochi100"
+        ],
+        "personas": "E-Learning and Education",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": [
+            "Corporate Research",
+            "Crowdsourcing",
+            "E-Learning and Education",
+            "MOOCs",
+            "Community analysis and support, virtual or physical",
+            "Online education",
+            "Peer assessment",
+            "design"
+        ]
+    },
+    "s119": {
+        "s_title": "Parents and Children",
+        "room": "GB78",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw100",
+            "cscw499",
+            "cscw389"
+        ],
+        "personas": "Social Computing and Social Navigation",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": [
+            "Corporate Research",
+            "Family on Social Networks",
+            "Social Computing and Social Navigation",
+            "Social Networking Site Design and Use",
+            "mothers",
+            "online support groups",
+            "Computer-Mediated Communication",
+            "Privacy/access control/trust",
+            "That's the problem with the kids today",
+            "youth",
+            "Home/family/intimacy support",
+            "Medical and health support",
+            "Mobile and embedded devices",
+            "accessibility",
+            "assistive mobile technologies",
+            "special needs",
+            "Entertainment/games",
+            "Other domain-specific support",
+            "User experience/interaction design"
+        ]
+    },
+    "s120": {
+        "s_title": "Personal Health Management",
+        "room": "GB78",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw295",
+            "cscw240",
+            "cscw221"
+        ],
+        "personas": "Medical and health support",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": [
+            "Community analysis and support, virtual or physical",
+            "Medical and health support",
+            "Organization/office/workplace support",
+            "online support groups",
+            "Big life events",
+            "Computer-Mediated Communication",
+            "Corporate Research",
+            "Home/family/intimacy support",
+            "Older adults",
+            "Thanatology",
+            "Depression",
+            "Facebook",
+            "Family on Social Networks",
+            "Machine Learning and Data Mining",
+            "Social Computing and Social Navigation",
+            "Social network analysis",
+            "depression",
+            "emotion",
+            "Marginalized communities",
+            "youth"
+        ]
+    },
+    "s121": {
+        "s_title": "Q&A",
+        "room": "Dover AB",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw636",
+            "cscw354",
+            "cscw488"
+        ],
+        "personas": "Community analysis and support, virtual or physical",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": [
+            "Community analysis and support, virtual or physical",
+            "Expertise Location",
+            "Newcomer enculturation/learning",
+            "Q&A",
+            "Asking in Social Networks",
+            "Corporate Research",
+            "Social Computing and Social Navigation",
+            "friendsourcing",
+            "search process",
+            "social search",
+            "Collaborative software development",
+            "Crowdsourcing",
+            "Empirical Methods, Qualitative",
+            "open source software",
+            "Computer-Mediated Communication",
+            "Distributed/virtual teams",
+            "Problem Solving in Online Communities",
+            "coordination",
+            "math"
+        ]
+    },
+    "s122": {
+        "s_title": "Reflective Research",
+        "room": "GB6",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw530",
+            "cscw411",
+            "cscw229"
+        ],
+        "personas": "Organization/office/workplace support",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Collaboration architectures",
+            "Community analysis and support, virtual or physical",
+            "Infrastructure",
+            "Organization/office/workplace support",
+            "Legal/historical/philosophical aspects",
+            "Location-based and context-aware computing",
+            "Policy",
+            "Privacy/access control/trust",
+            "Social Computing and Social Navigation",
+            "Virtual Worlds/Avatars/Proxies",
+            "gesture"
+        ]
+    },
+    "s123": {
+        "s_title": "Romance",
+        "room": "GB12",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw285",
+            "cscw624",
+            "cscw455"
+        ],
+        "personas": "Machine Learning and Data Mining",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Corporate Research",
+            "Facebook",
+            "Family on Social Networks",
+            "Machine Learning and Data Mining",
+            "Social network analysis",
+            "social network characteristics",
+            "CMC and relationships",
+            "Computer-Mediated Communication",
+            "Social Networking Site Design and Use",
+            "distance",
+            "romance",
+            "Big life events",
+            "Home/family/intimacy support",
+            "My big fat social media wedding",
+            "Offline events",
+            "Parties & cocktail hour",
+            "Social Media Offline"
+        ]
+    },
+    "s124": {
+        "s_title": "Social Media & Politics",
+        "room": "GB12",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw430",
+            "cscw108",
+            "cscw598"
+        ],
+        "personas": "Social Computing and Social Navigation",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": [
+            "Computer-Mediated Communication",
+            "Politics/Social Media",
+            "Social Computing and Social Navigation",
+            "Social Networking Site Design and Use",
+            "Crowds to Make Sense of Data",
+            "Crowdsourcing",
+            "Entertaining Presenter",
+            "Other domain-specific support",
+            "civic participation",
+            "twitter"
+        ]
+    },
+    "s125": {
+        "s_title": "Social Media in the Enterprise",
+        "room": "GB6",
+        "time": "9:00-10:15",
+        "submissions": [
+            "cscw358",
+            "cscw308",
+            "cscw473"
+        ],
+        "personas": "Organization/office/workplace support",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Computer-Mediated Communication",
+            "Enterprise social media",
+            "Social Networking Site Design and Use",
+            "social network characteristics",
+            "social networks in the organization",
+            "Corporate Research",
+            "Organization/office/workplace support",
+            "Social Computing and Social Navigation",
+            "enterprise",
+            "social media in the entreprise",
+            "trust",
+            "Social Signals",
+            "Stalking",
+            "social networks in the organizaition"
+        ]
+    },
+    "s126": {
+        "s_title": "Social Media: Online and Off",
+        "room": "GB34",
+        "time": "9:00-10:15",
+        "submissions": [
+            "cscw119",
+            "cscw299",
+            "cscw399"
+        ],
+        "personas": "Computer-Mediated Communication",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Computer-Mediated Communication",
+            "Parties & cocktail hour",
+            "Social Media Offline",
+            "Social Networking Site Design and Use",
+            "persuasion",
+            "Facebook",
+            "Self-disclosure and identity",
+            "Machine Learning and Data Mining",
+            "Social network analysis",
+            "Privacy/access control/trust"
+        ]
+    },
+    "s127": {
+        "s_title": "Supporting Communities",
+        "room": "GB78",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw494",
+            "cscw369",
+            "cscw310"
+        ],
+        "personas": "Community analysis and support, virtual or physical",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Community analysis and support, virtual or physical",
+            "Location-based and context-aware computing",
+            "Mobile and embedded devices",
+            "User experience/interaction design",
+            "community computing",
+            "mobile location system",
+            "Corporate Research",
+            "Organization/office/workplace support",
+            "Social Computing and Social Navigation",
+            "Computer-Mediated Communication",
+            "Social network analysis",
+            "Sustainability",
+            "urban informatics",
+            "values",
+            "Social Networking Site Design and Use",
+            "communities of practice",
+            "creativity",
+            "design",
+            "learning",
+            "reputation",
+            "Entertainment/games",
+            "instant messaging",
+            "social media"
+        ]
+    },
+    "s128": {
+        "s_title": "Telepresence",
+        "room": "GB78",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw244",
+            "cscw253",
+            "cscw142"
+        ],
+        "personas": "Telepresence/video/desktop conferencing",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": [
+            "Computer-Mediated Communication",
+            "Emotion",
+            "Telepresence/video/desktop conferencing",
+            "Participatory Design / Cooperative Design",
+            "User experience/interaction design",
+            "creativity",
+            "Collaboration architectures",
+            "Systems",
+            "Virtual Worlds/Avatars/Proxies",
+            "Empirical Methods, Quantitative",
+            "gesture"
+        ]
+    },
+    "s129": {
+        "s_title": "The Office",
+        "room": "GB78",
+        "time": "9:00-10:15",
+        "submissions": [
+            "cscw527",
+            "cscw277",
+            "cscw409"
+        ],
+        "personas": "Organization/office/workplace support",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": [
+            "Mobile and embedded devices",
+            "Organization/office/workplace support",
+            "User experience/interaction design",
+            "Workflow management",
+            "trust",
+            "worker bees",
+            "Corporate Research",
+            "Cross-cultural Systems or Studies",
+            "Sensors and collaboration",
+            "Interruption analysis",
+            "Visualizing Perforance",
+            "Computer-Mediated Communication",
+            "Emotion",
+            "Facebook",
+            "Social Media Offline",
+            "Workplace interactions",
+            "email"
+        ]
+    },
+    "s130": {
+        "s_title": "Performing Crowd Work",
+        "room": "GB34",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw365",
+            "cscw440",
+            "cscw647"
+        ],
+        "personas": "Crowdsourcing",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": [
+            "Asking in Social Networks",
+            "Community analysis and support, virtual or physical",
+            "Crowdsourcing",
+            "Participation motivations",
+            "worker bees",
+            "Computer-Mediated Communication",
+            "Participatory Design / Cooperative Design",
+            "paid crowdsourcing",
+            "Corporate Research",
+            "Distributed/virtual teams",
+            "Privacy/access control/trust",
+            "Crowd Worker Perspective"
+        ]
+    },
+    "s131": {
+        "s_title": "Values & Social Norms",
+        "room": "GB12",
+        "time": "9:00-10:15",
+        "submissions": [
+            "cscw130",
+            "cscw648",
+            "cscw227"
+        ],
+        "personas": "Social Computing and Social Navigation",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Corporate Research",
+            "Social Computing and Social Navigation",
+            "values",
+            "Community analysis and support, virtual or physical",
+            "Cross-cultural Systems or Studies",
+            "Language study",
+            "Social network analysis",
+            "linguistic style in social media",
+            "social media",
+            "Other domain-specific support",
+            "Sustainability",
+            "consumer applications",
+            "home",
+            "persuasion"
+        ]
+    },
+    "s132": {
+        "s_title": "Crowds in Crises",
+        "room": "GB34",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw243",
+            "cscw471",
+            "cscw579"
+        ],
+        "personas": "Other domain-specific support",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [
+            "Collaboration architectures",
+            "Community analysis and support, virtual or physical",
+            "Computer-Mediated Communication",
+            "Crowdsourcing",
+            "Distributed/virtual teams",
+            "Other domain-specific support",
+            "Workflow management",
+            "citizen science",
+            "community computing",
+            "Sustainability",
+            "Crisis Management and response",
+            "Disaster response",
+            "Facebook",
+            "Social Computing and Social Navigation",
+            "Emergency management",
+            "Empirical Methods, Qualitative",
+            "User experience/interaction design"
+        ]
+    },
+    "s133": {
+        "s_title": "Work in Hospitals",
+        "room": "GB78",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw210",
+            "cscw290",
+            "cscw315"
+        ],
+        "personas": "Medical and health support",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": [
+            "Distributed/virtual teams",
+            "Medical and health support",
+            "trust",
+            "Organization/office/workplace support",
+            "ER",
+            "Privacy/access control/trust",
+            "Social Computing and Social Navigation",
+            "coordination",
+            "electronic medical records",
+            "new institutionalism",
+            "policy implication"
+        ]
+    },
+    "s200": {
+        "s_title": "Shopping and Collecting",
+        "room": "GB34",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw462",
+            "cscw558",
+            "cscw355"
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": []
+    },
+    "s201": {
+        "s_title": "Volunteering and Doing Good",
+        "room": "GB34",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw188",
+            "cscw487",
+            "cscw228"
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": []
+    },
+    "s202": {
+        "s_title": "Mobilizing for Action",
+        "room": "GB12",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw431",
+            "cscw654",
+            "cscw248"
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": []
+    },
+    "s203": {
+        "s_title": "Mobile Apps for Enhancing Connectedness",
+        "room": "Dover AB",
+        "time": "9:00-10:15",
+        "submissions": [
+            "cscw438",
+            "cscw274",
+            "cscw535"
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": []
+    },
+    "s204": {
+        "s_title": "Distributed Teams",
+        "room": "Dover AB",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw596",
+            "cscw537",
+            "cscw333"
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": []
+    },
+    "s205": {
+        "s_title": "Social Technologies and Well-Being",
+        "room": "GB12",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw547",
+            "cscw413",
+            "cscw302"
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": []
+    },
+    "s206": {
+        "s_title": "Multiple Dimensions and Displays",
+        "room": "GB6",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw390",
+            "cscw490",
+            "cscw625"
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": []
+    },
+    "s207": {
+        "s_title": "Identifying Opportunities for Collaboration",
+        "room": "GB34",
+        "time": "9:00-10:15",
+        "submissions": [
+            "cscw384",
+            "cscw542",
+            "cscw209"
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": []
+    },
+    "s208": {
+        "s_title": "Technology and Information Workers",
+        "room": "Dover AB",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw387",
+            "cscw570",
+            "cscw590"
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": []
+    },
+    "s209": {
+        "s_title": "Promoting Participation and Engagement",
+        "room": "Dover AB",
+        "time": "14:00-15:15",
+        "submissions": [
+            "cscw629",
+            "cscw548",
+            "cscw317"
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": []
+    },
+    "s210": {
+        "s_title": "Building Communities and Relationships",
+        "room": "Dover AB",
+        "time": "10:45-12:00",
+        "submissions": [
+            "cscw223",
+            "cscw486",
+            "cscw517"
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": []
+    },
+    "s211": {
+        "s_title": "Video Track Session<br>",
+        "room": "GB910",
+        "time": "15:45-17:00",
+        "submissions": [
+            ""
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": []
+    },
+    "s212": {
+        "s_title": "Demos",
+        "room": "GB78",
+        "time": "15:45-17:00",
+        "submissions": [
+            ""
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": []
+    },
+    "s213": {
+        "s_title": "Posters 1",
+        "room": "GB12",
+        "time": "15:45-17:00",
+        "submissions": [
+            ""
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": []
+    },
+    "s214": {
+        "s_title": "Posters 2",
+        "room": "GB34",
+        "time": "15:45-17:00",
+        "submissions": [
+            ""
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": []
+    },
+    "s215": {
+        "s_title": "Poster 3",
+        "room": "Dover AB",
+        "time": "15:45-17:00",
+        "submissions": [
+            ""
+        ],
+        "personas": "",
+        "venue": "paper",
+        "day": "Monday, Feb 17th",
+        "s_tags": []
+    },
+    "s216": {
+        "s_title": "Poster & Demo Reception",
+        "room": "GB56",
+        "time": "17:00-19:00",
+        "submissions": [
+            ""
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Monday, Feb 17th",
+        "s_tags": []
+    },
+    "s217": {
+        "s_title": "Computational Social Science: CSCW in the Social Media Era",
+        "room": "GB5",
+        "time": "14:00-15:15",
+        "submissions": [
+            "pan100"
+        ],
+        "personas": "",
+        "venue": "panel",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": []
+    },
+    "s218": {
+        "s_title": "Making Cultures: Building Things &amp; Building Communities",
+        "room": "GB5",
+        "time": "14:00-15:15",
+        "submissions": [
+            "pan101"
+        ],
+        "personas": "",
+        "venue": "panel",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": []
+    },
+    "s219": {
+        "s_title": "Lifestyle Teleworks Speak Out!",
+        "room": "GB5",
+        "time": "9:00-10:15",
+        "submissions": [
+            "pan102"
+        ],
+        "personas": "",
+        "venue": "panel",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": []
+    },
+    "s2110": {
+        "s_title": "Facebook in the Developing World: The Myths and Realities Underlying a Socially Networked World",
+        "room": "GB5",
+        "time": "10:45-12:00",
+        "submissions": [
+            "pan103"
+        ],
+        "personas": "",
+        "venue": "panel",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": []
+    },
+    "s2111": {
+        "s_title": "The Ethos and Pragmatics of Data Sharing",
+        "room": "GB5",
+        "time": "9:00-10:15",
+        "submissions": [
+            "pan104"
+        ],
+        "personas": "",
+        "venue": "panel",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": []
+    },
+    "s220": {
+        "s_title": "Intro &amp; Plenary",
+        "room": "GB56",
+        "time": "8:45-10:15",
+        "submissions": [
+            ""
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Monday, Feb 17th",
+        "s_tags": []
+    },
+    "s221": {
+        "s_title": "Lasting Impact",
+        "room": "GB56",
+        "time": "15:45-16:45",
+        "submissions": [
+            ""
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": []
+    },
+    "s222": {
+        "s_title": "Townhall",
+        "room": "GB56",
+        "time": "16:45-17:45",
+        "submissions": [
+            ""
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": []
+    },
+    "s223": {
+        "s_title": "Museum",
+        "room": "GB56",
+        "time": "18:00-19:00",
+        "submissions": [
+            ""
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": []
+    },
+    "s224": {
+        "s_title": "Reception",
+        "room": "GB56",
+        "time": "19:00-22:00",
+        "submissions": [
+            ""
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": []
+    },
+    "s225": {
+        "s_title": "Closing &amp; Plenary",
+        "room": "GB56",
+        "time": "15:45-17:15",
+        "submissions": [
+            ""
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Wednesday, Feb 19th",
+        "s_tags": []
+    }
+}

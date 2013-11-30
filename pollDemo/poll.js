@@ -15,7 +15,7 @@ function loadSchedule(){
     $.ajax({
 	async: true,
 	type: 'POST',
-	url: "http://people.csail.mit.edu/hqz/cobi/pollDemo/loadSchedule.php",
+	url: "http://people.csail.mit.edu/hqz/cobiCSCW/pollDemo/loadSchedule.php",
 	data: {lastId: 0},
 	success: function(m){
 	    schedule = m['schedule'];
@@ -52,7 +52,7 @@ function displaySchedule(){
 			$('#debug').append("[" + chairs[schedule[day][time][room][s]['chairs']].givenName + " " + chairs[schedule[day][time][room][s]['chairs']].familyName + ", " + 
 					   chairs[schedule[day][time][room][s]['chairs']].authorId + "]: ");
 		    }else{
-			$('#debug').append("[no chair assigned]: ");
+//			$('#debug').append("[no chair assigned]: ");
 		    }
 		    $('#debug').append(schedule[day][time][room][s]['submissions'] + '<br/>');
 		    
@@ -107,7 +107,7 @@ var keepRefreshing = function(){
     (function poll(e){
 	console.log("polling with " + e.transactionId);
 	setTimeout(function(){
-	    $.ajax({    url: "http://people.csail.mit.edu/hqz/cobi/pollDemo/loadSchedule.php",
+	    $.ajax({    url: "http://people.csail.mit.edu/hqz/cobiCSCW/pollDemo/loadSchedule.php",
 			type: 'POST',
 			data: {lastId: e.transactionId},   
 			success: function(m){
@@ -120,6 +120,7 @@ var keepRefreshing = function(){
 				var serverUnscheduledSubmissions = m['unscheduledSubmissions'];
 				var serverSessions = m['sessions'];
 				var serverChairs = m['chairs'];
+
 				console.log("database unlocked: " + m['dbLocked']);
 				var changes = detectChanges(serverSchedule, 
 							    serverUnscheduled,

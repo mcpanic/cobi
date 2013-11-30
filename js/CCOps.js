@@ -819,7 +819,7 @@ var CCOps = function(){
 	generateAuthorsourcingConstraints();
 	generatePersonaConstraints();
 	generateAuthorConstraints();
-//	generateChairConstraints();
+	generateChairConstraints();
     }
 
     // session level conflict

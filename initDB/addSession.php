@@ -10,7 +10,8 @@ if(count($argv) != 3 or $argv[1] != 'pineapple'){
 
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 $empty = mysqli_real_escape_string($mysqli, json_encode(array()));
+$venue = 'special';
 
-$squery = "INSERT INTO session (id, date, time, chairAffiliations, chairs, coreCommunities, featuredCommunities, personas, hasAward, hasHonorableMention, notes, room, submissions, title, venue, scheduled) VALUES ('$argv[2]', '', '', '', '$empty', '$empty', '$empty', '', 0, 0, '', '', '', 'unused session', 'paper', 0)";
+$squery = "INSERT INTO session (id, date, time, chairAffiliations, chairs, coreCommunities, featuredCommunities, personas, hasAward, hasHonorableMention, notes, room, submissions, title, venue, scheduled) VALUES ('$argv[2]', '', '', '', '', '$empty', '$empty', '', 0, 0, '', '', '', 'unused session', '$venue', 0)";
 mysqli_query($mysqli, $squery);
 echo  mysqli_error($mysqli);
