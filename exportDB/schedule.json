@@ -4,100 +4,88 @@ schedule=[
         "day": "Monday",
         "slots": [
             {
-                "slot_id": "Monday, Feb 17th 8:45-10:15",
+                "slot_id": "Monday__Feb_17th_8_45_10_15",
                 "time": "8:45-10:15",
+                "slot_class": "morning1",
                 "sessions": [
                     {
-                        "session": "s220",
-                        "room": "GB56"
+                        "session": "s220"
                     }
                 ]
             },
             {
-                "slot_id": "Monday, Feb 17th 10:45-12:00",
+                "slot_id": "Monday__Feb_17th_10_45_12_00",
                 "time": "10:45-12:00",
+                "slot_class": "morning2",
                 "sessions": [
                     {
-                        "session": "s111",
-                        "room": "GB12"
+                        "session": "s111"
                     },
                     {
-                        "session": "s107",
-                        "room": "GB34"
+                        "session": "s107"
                     },
                     {
-                        "session": "s128",
-                        "room": "GB78"
+                        "session": "s128"
                     },
                     {
-                        "session": "s100",
-                        "room": "GB910"
+                        "session": "s100"
                     },
                     {
-                        "session": "s210",
-                        "room": "Dover AB"
+                        "session": "s210"
                     }
                 ]
             },
             {
-                "slot_id": "Monday, Feb 17th 14:00-15:15",
+                "slot_id": "Monday__Feb_17th_14_00_15_15",
                 "time": "14:00-15:15",
+                "slot_class": "afternoon1",
                 "sessions": [
                     {
-                        "session": "s110",
-                        "room": "GB12"
+                        "session": "s110"
                     },
                     {
-                        "session": "s130",
-                        "room": "GB34"
+                        "session": "s130"
                     },
                     {
-                        "session": "s133",
-                        "room": "GB78"
+                        "session": "s133"
                     },
                     {
-                        "session": "s106",
-                        "room": "GB910"
+                        "session": "s106"
                     },
                     {
-                        "session": "s121",
-                        "room": "Dover AB"
+                        "session": "s121"
                     }
                 ]
             },
             {
-                "slot_id": "Monday, Feb 17th 15:45-17:00",
+                "slot_id": "Monday__Feb_17th_15_45_17_00",
                 "time": "15:45-17:00",
+                "slot_class": "afternoon2",
                 "sessions": [
                     {
-                        "session": "s213",
-                        "room": "GB12"
+                        "session": "s213"
                     },
                     {
-                        "session": "s214",
-                        "room": "GB34"
+                        "session": "s214"
                     },
                     {
-                        "session": "s212",
-                        "room": "GB78"
+                        "session": "s212"
                     },
                     {
-                        "session": "s211",
-                        "room": "GB910"
+                        "session": "s211"
                     },
                     {
-                        "session": "s215",
-                        "room": "Dover AB"
+                        "session": "s215"
                     }
                 ]
             },
             {
-                "slot_id": "Monday, Feb 17th 17:00-19:00",
+                "slot_id": "Monday__Feb_17th_17_00_19_00",
                 "time": "17:00-19:00",
+                "slot_class": "afternoon3",
                 "sessions": [
                     {
-                        "session": "s216",
-                        "room": "GB56"
+                        "session": "s216"
                     }
                 ]
             }
@@ -108,140 +96,123 @@ schedule=[
         "day": "Tuesday",
         "slots": [
             {
-                "slot_id": "Tuesday, Feb 18th 9:00-10:15",
+                "slot_id": "Tuesday__Feb_18th_9_00_10_15",
                 "time": "9:00-10:15",
+                "slot_class": "morning1",
                 "sessions": [
                     {
-                        "session": "s219",
-                        "room": "GB5"
+                        "session": "s219"
                     },
                     {
-                        "session": "s125",
-                        "room": "GB6"
+                        "session": "s125"
                     },
                     {
-                        "session": "s131",
-                        "room": "GB12"
+                        "session": "s131"
                     },
                     {
-                        "session": "s126",
-                        "room": "GB34"
+                        "session": "s126"
                     },
                     {
-                        "session": "s109",
-                        "room": "GB78"
+                        "session": "s109"
                     },
                     {
-                        "session": "s105",
-                        "room": "GB910"
+                        "session": "s105"
                     },
                     {
-                        "session": "s114",
-                        "room": "Dover AB"
+                        "session": "s114"
                     }
                 ]
             },
             {
-                "slot_id": "Tuesday, Feb 18th 10:45-12:00",
+                "slot_id": "Tuesday__Feb_18th_10_45_12_00",
                 "time": "10:45-12:00",
+                "slot_class": "morning2",
                 "sessions": [
                     {
-                        "session": "s122",
-                        "room": "GB6"
+                        "session": "s122"
                     },
                     {
-                        "session": "s205",
-                        "room": "GB12"
+                        "session": "s205"
                     },
                     {
-                        "session": "s200",
-                        "room": "GB34"
+                        "session": "s200"
                     },
                     {
-                        "session": "s115",
-                        "room": "GB78"
+                        "session": "s115"
                     },
                     {
-                        "session": "s116",
-                        "room": "GB910"
+                        "session": "s116"
                     },
                     {
-                        "session": "s208",
-                        "room": "Dover AB"
+                        "session": "s208"
                     }
                 ]
             },
             {
-                "slot_id": "Tuesday, Feb 18th 14:00-15:15",
+                "slot_id": "Tuesday__Feb_18th_14_00_15_15",
                 "time": "14:00-15:15",
+                "slot_class": "afternoon1",
                 "sessions": [
                     {
-                        "session": "s217",
-                        "room": "GB5"
+                        "session": "s217"
                     },
                     {
-                        "session": "s103",
-                        "room": "GB6"
+                        "session": "s103"
                     },
                     {
-                        "session": "s123",
-                        "room": "GB12"
+                        "session": "s123"
                     },
                     {
-                        "session": "s132",
-                        "room": "GB34"
+                        "session": "s132"
                     },
                     {
-                        "session": "s127",
-                        "room": "GB78"
+                        "session": "s127"
                     },
                     {
-                        "session": "s117",
-                        "room": "GB910"
+                        "session": "s117"
                     },
                     {
-                        "session": "s209",
-                        "room": "Dover AB"
+                        "session": "s209"
                     }
                 ]
             },
             {
-                "slot_id": "Tuesday, Feb 18th 15:45-16:45",
+                "slot_id": "Tuesday__Feb_18th_15_45_16_45",
                 "time": "15:45-16:45",
+                "slot_class": "afternoon2",
                 "sessions": [
                     {
-                        "session": "s221",
-                        "room": "GB56"
+                        "session": "s221"
                     }
                 ]
             },
             {
-                "slot_id": "Tuesday, Feb 18th 16:45-17:45",
+                "slot_id": "Tuesday__Feb_18th_16_45_17_45",
                 "time": "16:45-17:45",
+                "slot_class": "afternoon3",
                 "sessions": [
                     {
-                        "session": "s222",
-                        "room": "GB56"
+                        "session": "s222"
                     }
                 ]
             },
             {
-                "slot_id": "Tuesday, Feb 18th 18:00-19:00",
+                "slot_id": "Tuesday__Feb_18th_18_00_19_00",
                 "time": "18:00-19:00",
+                "slot_class": "evening1",
                 "sessions": [
                     {
-                        "session": "s223",
-                        "room": "GB56"
+                        "session": "s223"
                     }
                 ]
             },
             {
-                "slot_id": "Tuesday, Feb 18th 19:00-22:00",
+                "slot_id": "Tuesday__Feb_18th_19_00_22_00",
                 "time": "19:00-22:00",
+                "slot_class": "evening2",
                 "sessions": [
                     {
-                        "session": "s224",
-                        "room": "GB56"
+                        "session": "s224"
                     }
                 ]
             }
@@ -252,110 +223,93 @@ schedule=[
         "day": "Wednesday",
         "slots": [
             {
-                "slot_id": "Wednesday, Feb 19th 9:00-10:15",
+                "slot_id": "Wednesday__Feb_19th_9_00_10_15",
                 "time": "9:00-10:15",
+                "slot_class": "morning1",
                 "sessions": [
                     {
-                        "session": "s2111",
-                        "room": "GB5"
+                        "session": "s2111"
                     },
                     {
-                        "session": "s101",
-                        "room": "GB6"
+                        "session": "s101"
                     },
                     {
-                        "session": "s207",
-                        "room": "GB34"
+                        "session": "s207"
                     },
                     {
-                        "session": "s129",
-                        "room": "GB78"
+                        "session": "s129"
                     },
                     {
-                        "session": "s104",
-                        "room": "GB910"
+                        "session": "s104"
                     },
                     {
-                        "session": "s203",
-                        "room": "Dover AB"
+                        "session": "s203"
                     }
                 ]
             },
             {
-                "slot_id": "Wednesday, Feb 19th 10:45-12:00",
+                "slot_id": "Wednesday__Feb_19th_10_45_12_00",
                 "time": "10:45-12:00",
+                "slot_class": "morning2",
                 "sessions": [
                     {
-                        "session": "s2110",
-                        "room": "GB5"
+                        "session": "s2110"
                     },
                     {
-                        "session": "s118",
-                        "room": "GB6"
+                        "session": "s118"
                     },
                     {
-                        "session": "s202",
-                        "room": "GB12"
+                        "session": "s202"
                     },
                     {
-                        "session": "s201",
-                        "room": "GB34"
+                        "session": "s201"
                     },
                     {
-                        "session": "s119",
-                        "room": "GB78"
+                        "session": "s119"
                     },
                     {
-                        "session": "s102",
-                        "room": "GB910"
+                        "session": "s102"
                     },
                     {
-                        "session": "s112",
-                        "room": "Dover AB"
+                        "session": "s112"
                     }
                 ]
             },
             {
-                "slot_id": "Wednesday, Feb 19th 14:00-15:15",
+                "slot_id": "Wednesday__Feb_19th_14_00_15_15",
                 "time": "14:00-15:15",
+                "slot_class": "afternoon1",
                 "sessions": [
                     {
-                        "session": "s218",
-                        "room": "GB5"
+                        "session": "s218"
                     },
                     {
-                        "session": "s206",
-                        "room": "GB6"
+                        "session": "s206"
                     },
                     {
-                        "session": "s124",
-                        "room": "GB12"
+                        "session": "s124"
                     },
                     {
-                        "session": "s108",
-                        "room": "GB34"
+                        "session": "s108"
                     },
                     {
-                        "session": "s120",
-                        "room": "GB78"
+                        "session": "s120"
                     },
                     {
-                        "session": "s113",
-                        "room": "GB910"
+                        "session": "s113"
                     },
                     {
-                        "session": "s204",
-                        "room": "Dover AB"
+                        "session": "s204"
                     }
                 ]
             },
             {
-                "slot_id": "Wednesday, Feb 19th 15:45-17:15",
+                "slot_id": "Wednesday__Feb_19th_15_45_17_15",
                 "time": "15:45-17:15",
+                "slot_class": "afternoon2",
                 "sessions": [
                     {
-                        "session": "s225",
-                        "room": "GB56"
+                        "session": "s225"
                     }
                 ]
             }

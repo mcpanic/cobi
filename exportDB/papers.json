@@ -5,9 +5,13 @@ entities={
         "keywords": "Corporate Research, Family on Social Networks, Social Computing and Social Navigation, Social Networking Site Design and Use, mothers, online support groups",
         "authors": [
             {
-                "name": "Meredith R Morris"
+                "name": "Meredith Ringel Morris"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw105": {
         "title": "Voyant: Generating Structured Feedback on Visual Designs Using a Crowd of Non-Experts",
@@ -23,7 +27,11 @@ entities={
             {
                 "name": "Brian Bailey"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw108": {
         "title": "Social Media Supporting Political Deliberation Across Multiple Public Spheres: Towards Depolarization",
@@ -42,7 +50,11 @@ entities={
             {
                 "name": "Misa Maruyama"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw119": {
         "title": "De-Virtualizing Social Events: Understanding the Gap between Online and Offline Participation for Event Invitations",
@@ -58,7 +70,11 @@ entities={
             {
                 "name": "Chien Wen Yuan"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw128": {
         "title": "Inferring the Origin Locations of Tweets with Quantitative Confidence",
@@ -74,10 +90,14 @@ entities={
             {
                 "name": "Sara Y Del Valle"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw130": {
-        "title": "Understanding Individualsï¿½ï¿½ï¿½ Personal Values from Social Media Word Use",
+        "title": "Understanding Individuals' Personal Values from Social Media Word Use",
         "abstract": "The theory of values posits that each person has a set of values, or desirable and trans-situational goals, that motivate their actions. The Basic Human Values, a motivational construct that captures people's values, have been shown to influence a wide range of human behaviors. In this work, we analyze people's values and their word use on Reddit, an online social news sharing community. Through conducting surveys and analyzing text contributions of 799 Reddit users, we identify and interpret categories of words that are indicative of user's value-orientations. Using the same data, we further report a preliminary exploration on word-based prediction of Basic Human Values.",
         "keywords": "Corporate Research, Social Computing and Social Navigation, values",
         "authors": [
@@ -93,7 +113,11 @@ entities={
             {
                 "name": "Jeffrey Nichols"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw135": {
         "title": "A Partial Replication Approach for Anywhere Anytime Mobile Commenting",
@@ -118,20 +142,28 @@ entities={
             {
                 "name": "Ning Gu"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw142": {
-        "title": "How Social Cues Shape Task Coordination and Communication",
+        "title": "How Social Cues Regulate Task Coordination and Communication",
         "abstract": "To design computer-supported collaborative work (CSCW) systems that effectively support remote collaboration, designers need a better understanding of how people collaborate face-to-face and the mechanisms that they use to coordinate their actions. While research in CSCW has studied how specific social cues might facilitate collaboration in specific tasks, such as the role of gestures in video instruction, how a range of communicative cues might facilitate activities across many collaborative settings is unknown. In this paper, we model the predictive relationships between facial, gestural, and vocal cues and collaborative outcomes in three different tasks, drawing conclusions on how each cue might contribute to these outcomes in a given task and how such relationships generalize across tasks. The results highlight differences in how collaborators use gaze, the importance of shared context for some tasks, and how different gestures (particularly deictic gestures) facilitate collaborative outcomes. Our findings offer key theoretical and design insights.",
         "keywords": "Computer-Mediated Communication, Empirical Methods, Quantitative, Telepresence/video/desktop conferencing, gesture",
         "authors": [
             {
-                "name": "Allison Saupp��"
+                "name": "Allison Sauppé"
             },
             {
                 "name": "Bilge Mutlu"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw145": {
         "title": "Giving is Caring: Understanding Donation Behavior through Email",
@@ -142,7 +174,7 @@ entities={
                 "name": "Yelena Mejova"
             },
             {
-                "name": "Venkata R Garimella"
+                "name": "Venkata RK Garimella"
             },
             {
                 "name": "Ingmar Weber"
@@ -150,10 +182,14 @@ entities={
             {
                 "name": "Michael C Dougal"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw147": {
-        "title": "ï¿½ï¿½ï¿½Figure Out How to Code with the Hands of Othersï¿½ï¿½ï¿½: Recognizing Cultural Blind Spots in Global Software Development",
+        "title": "\"Figure Out How to Code with the Hands of Others\": Recognizing Cultural Blind Spots in Global Software Development",
         "abstract": "We report on an ethnographic study of an outsourcing global software development (GSD) setup between an Indian IT vendor and an IT development division of a Danish bank. We investigate how the local IT development work is shaped by the global setup in GSD and argue that the bank had cultural blind spots toward the changes in Denmark. Three critical issues were neglected due to the cultural blind spots: 1) increased number of interruptions, 2) lack of translucence of remote colleagues' work, and 3) the re-definition of boundaries between work and articulation work. The implications of these findings include considerations for how to organize GSD practices and prepare the organizational changes that occur when moving from a co-located software development organization to an inter-organizational geographically distributed organization. Also our findings open up discussions about the professional identity of IT developers within GSD, which includes extending the qualifications for IT developers.",
         "keywords": "Collaborative software development, Cross-cultural Systems or Studies, Distributed/virtual teams",
         "authors": [
@@ -164,9 +200,13 @@ entities={
                 "name": "Pernille Bjorn"
             },
             {
-                "name": "Lise M Petersen"
+                "name": "Lise Moller Petersen"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw161": {
         "title": "Aesthetic Capital: What Makes London Look Beautiful, Quiet, and Happy?",
@@ -177,15 +217,19 @@ entities={
                 "name": "Daniele Quercia"
             },
             {
-                "name": "Neil K O'Hare"
+                "name": "Neil Keith O'Hare"
             },
             {
                 "name": "Henriette Cramer"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw178": {
-        "title": "ï¿½ï¿½ï¿½Itï¿½ï¿½ï¿½s in your Spinal Cord, itï¿½ï¿½ï¿½s in your Fingertipsï¿½ï¿½ï¿½: Practices of Tools and Craft in Building Software",
+        "title": "\"It's in your spinal cord, it's in your fingertips\": Practices of tools and craft in building software",
         "abstract": "Drawing on interviews with 12 software engineers, we investigate the relationship between developers and the tools they use to build code through the lens of craft. We analyze different conceptualizations of craft in accounts of software development, including craft as a process of building, craft as materiality, and craft as a community of practice. By working through the different facets of craft as elicited in the specific context of software development, we investigate tensions of perceiving coding work as, on the one hand, highly rational, and on the other, deeply personal and embodied. In working through these tensions of code as abstract and concrete, cerebral and intuitive, we note implications for craft, both as a theory relevant to computer human interaction, and for paradigms of education in computer science.",
         "keywords": "Corporate Research, Craft and repair, Development Tools / Toolkits / Programming Environments, Software development, User experience/interaction design, Workplace Study",
         "authors": [
@@ -195,10 +239,14 @@ entities={
             {
                 "name": "Tim Regan"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw188": {
-        "title": "Competing or Aiming to be Average? Normification as a Means of Engaging Digital Volunteers",
+        "title": "Competing or Aiming to be Average? Normification as a means of engaging digital volunteers",
         "abstract": "Engagement, motivation and active contribution by digital volunteers are key requirements for crowdsourcing and citizen science projects. Many systems use competitive elements, for example point scoring and leaderboards, to achieve these ends. However, while competition may motivate some people, it can have a neutral or demotivating effect on others. In this paper we explore theories of personal and social norms and investigate normification as an alternative approach to engagement, to be used alongside or instead of competitive strategies. We provide a systematic review of existing crowdsourcing and citizen science literature and categorise the ways that theories of norms have been incorporated to date. We then present qualitative interview data from a pro-environmental crowdsourcing study, Close the Door, which reveals normalising attitudes in certain participants. We assess how this links with competitive behaviour and participant performance. Based on our findings and analysis of norm theories, we consider the implications for designers wishing to use normification as an engagement strategy in crowdsourcing and citizen science systems.",
         "keywords": "Crowdsourcing, Other domain-specific support, Sustainability",
         "authors": [
@@ -211,7 +259,11 @@ entities={
             {
                 "name": "David Coyle"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw190": {
         "title": "The Effects of Consistency Maintenance Methods on Player Experience and Performance in Networked Games",
@@ -230,7 +282,11 @@ entities={
             {
                 "name": "Michelle Brown"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw191": {
         "title": "Collaborative Web Search in Context: A Study of Tool Use in Everyday Tasks",
@@ -243,10 +299,14 @@ entities={
             {
                 "name": "Stephen J Payne"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw204": {
-        "title": "Making IT ï¿½ï¿½ï¿½Pay a Bit Betterï¿½ï¿½ï¿½- Design Challenges for Micro Rural Enterprise",
+        "title": "Making IT \"Pay a Bit Better\"- Design Challenges for Micro Rural Enterprise",
         "abstract": "This paper reports on a field study of small market in Wales undertaken as part of broader research project aimed at developing IT solutions to support rural enterprise. The project is predicated on the assumption that the primary challenge facing rural enterprise is that of scale and that IT solutions could and should add value by enabling growth. The study suggests that many rural enterprises are micro in character, that they are not driven by the need to grow, and that value is and can be added in different ways that reflect the social values oriented to and employed by micro businesses and their consumers. The paper elaborates vernacular understandings of supply chains and their coordination, along with business and consumer motivations to consider alternative possibilities for design that place emphasis on making micro rural enterprise 'pay a bit better' rather than scaling it up.",
         "keywords": "Organization/office/workplace support, Other domain-specific support, values",
         "authors": [
@@ -256,7 +316,11 @@ entities={
             {
                 "name": "Alan Chamberlain"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw209": {
         "title": "Supporting Group Interactions in Museum Visiting",
@@ -278,7 +342,11 @@ entities={
             {
                 "name": "Stuart Reeves"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw210": {
         "title": "How Physicians \" Achieve Overview\": A Case-based Study in a Hospital Ward",
@@ -291,7 +359,11 @@ entities={
             {
                 "name": "Lotte Groth Jensen"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw211": {
         "title": "Articulation Spaces: Bridging the Gap between Formal and Informal Coordination",
@@ -310,7 +382,11 @@ entities={
             {
                 "name": "Volker Wulf"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw221": {
         "title": "Life Transitions and Online Health Communities:  Reflecting on Adoption, Use, and Disengagement",
@@ -329,7 +405,11 @@ entities={
             {
                 "name": "Osman H Ahmed"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw222": {
         "title": "Characterizing the Life Cycle of Online News Stories Using Social Media Reactions",
@@ -343,12 +423,16 @@ entities={
                 "name": "Mohammed El-Haddad"
             },
             {
-                "name": "J�_rgen Pfeffer"
+                "name": "Jürgen Pfeffer"
             },
             {
                 "name": "Matt Stempeck"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw223": {
         "title": "Ethnography of Scaling, Or, How to a fit a national research infrastructure in the room",
@@ -358,7 +442,11 @@ entities={
             {
                 "name": "David Ribes"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw227": {
         "title": "How to See Values in Social Computing: Methods for Studying Values Dimensions",
@@ -374,10 +462,14 @@ entities={
             {
                 "name": "Kenneth R. Fleischmann"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw228": {
-        "title": "Understanding Factors of Successful Engagement around Energy Consumption between and Among Households",
+        "title": "Understanding factors of successful engagement around energy consumption between and among households",
         "abstract": "An increasing number of researchers are using social engagement techniques such as neighborhood comparison and competition to encourage energy conservation, yet community reception and experience with such systems have not been well studied. We also find that researchers have not thoroughly investigated how different households use these systems and how their uses differ from one another. We explore these questions in a 4-10 month field deployment of a social-energy monitoring application across 15 households, in two distinct locations. We contribute results that describe conditions under which these techniques were effective and ineffective. Our results imply that understanding factors such as a building, or community's layout, context knowledge of community members, accountability and adherence to social norms, trust, and length of residence are key for future design of social-energy applications. ",
         "keywords": "Other domain-specific support, Social Computing and Social Navigation, Sustainability, consumer applications, home, persuasion",
         "authors": [
@@ -387,7 +479,11 @@ entities={
             {
                 "name": "Jennifer Mankoff"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw229": {
         "title": "Can Plans and Situated Actions be Replicated?",
@@ -397,7 +493,11 @@ entities={
             {
                 "name": "John Rooksby"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw233": {
         "title": "Monitoring Email to Indicate Project Team Performance and Mutual Attraction",
@@ -413,7 +513,11 @@ entities={
             {
                 "name": "Lionel P Robert"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw234": {
         "title": "Achieving Convergence in Operational Transformation: Conditions, Mechanisms and Systems",
@@ -429,10 +533,14 @@ entities={
             {
                 "name": "Mo Li"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw239": {
-        "title": "Exhaustive Search of Puzzles in Operational Transformation",
+        "title": "Exhaustive and Efficient Search of Puzzles in Operational Transformation",
         "abstract": "Operational Transformation (OT) is a collaboration-enabling technology and has been a technical research topic in CSCW in over two decades. One main challenge in OT research is detecting and resolving puzzles - subtle and characteristic scenarios in which an OT system may fail. After many years of extensive search and research, various intricate puzzles have been detected and resolved. However, it remains open whether all puzzles have been discovered. To solve this issue, we set out to devise a system of verification frameworks and a software tool, that are independent of specific OT algorithms and able to exhaustively cover all possible transformation cases in which puzzles (if any) will manifest themselves. With the support of these tools, we verified OT correctness and concluded: all puzzles, under basic data and operation models and established transformation properties, have been discovered and resolved. These results are significant as they resolved a number of long-standing OT mysteries and contributed to the advancement of OT fundamental knowledge and technological innovation. ",
         "keywords": "Concurrency control, math",
         "authors": [
@@ -445,7 +553,11 @@ entities={
             {
                 "name": "Agustina Agustina"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw240": {
         "title": "Craving, Creating, and Constructing Comfort: Insights and Opportunities for Technology in Hospice",
@@ -453,18 +565,22 @@ entities={
         "keywords": "Big life events, Computer-Mediated Communication, Corporate Research, Home/family/intimacy support, Medical and health support, Older adults, Thanatology",
         "authors": [
             {
-                "name": "Robert D Ferguson"
+                "name": "Robert Douglas Ferguson"
             },
             {
                 "name": "Michael Massimi"
             },
             {
-                "name": "Emily A Crist"
+                "name": "Emily Anne Crist"
             },
             {
-                "name": "Karyn A Moffatt"
+                "name": "Karyn Anne Moffatt"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 1,
+        "bestPaperNominee": 0
     },
     "cscw241": {
         "title": "Enriching the Distressing Reality: Social Media Use by Chinese Migrant Workers",
@@ -478,12 +594,16 @@ entities={
                 "name": "Alexander Boden"
             },
             {
-                "name": "David W Randall"
+                "name": "David William Randall"
             },
             {
                 "name": "Volker Wulf"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw243": {
         "title": "Digital Mobilization in Disaster Response: The Work & Self-Organization of On-Line Pet Advocates in Response to Hurricane Sandy",
@@ -491,15 +611,19 @@ entities={
         "keywords": "Computer-Mediated Communication, Crisis Management and response, Disaster response, Facebook, Social Computing and Social Navigation",
         "authors": [
             {
-                "name": "Joanne I White"
+                "name": "Joanne I. White"
             },
             {
                 "name": "Leysia Palen"
             },
             {
-                "name": "Kenneth M Anderson"
+                "name": "Kenneth M. Anderson"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw244": {
         "title": "Towards a Questionnaire for Measuring Affective Benefits and Costs of Communication Technologies",
@@ -515,7 +639,11 @@ entities={
             {
                 "name": "Gregory D Abowd"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 1,
+        "bestPaperNominee": 0
     },
     "cscw248": {
         "title": "Catalyst: Using Activation Thresholds to Trigger Collective Action",
@@ -528,7 +656,11 @@ entities={
             {
                 "name": "Michael Bernstein"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw252": {
         "title": "Deep Twitter Diving: Exploring Topical Groups in Microblogs at Scale",
@@ -554,9 +686,13 @@ entities={
                 "name": "Niloy Ganguly"
             },
             {
-                "name": "Krishna P Gummadi"
+                "name": "Krishna P. Gummadi"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw253": {
         "title": "Smart Face: Enhancing Creativity During Video Conferences using Real-time Facial Deformation",
@@ -581,7 +717,11 @@ entities={
             {
                 "name": "Michitaka Hirose"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw254": {
         "title": "Ensemble: Exploring Complementary Strengths of Leaders and Crowds in Creative Collaboration",
@@ -597,10 +737,14 @@ entities={
             {
                 "name": "Michael S Bernstein"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw268": {
-        "title": "MyPosition: Sparking Civic Discourse by a Public Interactive Poll Visualization",
+        "title": "MyPosition: The Impact of an Interactive Poll Visualization on Public Civic Participation",
         "abstract": "We present the design and evaluation of MyPosition, a public display in the form of a large projection, featuring an interactive poll visualization. MyPosition aims at facilitating the deliberation and comparison of individual opinions on locally relevant topics in an opportunistic and engaging way. We evaluated MyPosition in an in-the-wild study and demonstrated that the public and engaging nature of the installation was effective in enticing participation and discussion. We found that (i) the increased identifiability of voters positively impacted the engagement with and the social debate around the installation, however lowered the actual voting rate; (ii) people submitted their personal opinion instead of playing around with the interactive features; and (iii) the display led to considerable discussion as well as nudging among people, in particular in zones beyond the interaction area in front of the screen.   ",
         "keywords": "Tabletop and Large Wall Displays, User experience/interaction design, civic participation",
         "authors": [
@@ -614,12 +758,16 @@ entities={
                 "name": "Andrew Vande Moere"
             },
             {
-                "name": "J�_rg M�_ller"
+                "name": "Jörg Müller"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw274": {
-        "title": "Enhancing Community Awareness of and Participation in Local Heritage with an Mobile Application",
+        "title": "Enhancing Community Awareness and Participation to  Local Heritage with an Mobile Application",
         "abstract": "One goal of local communities is to create and reinforce community identity by connecting residents to their local heritage. Technologies have enabled and facilitated the creation and consumption of digitized history content provided by official history institutions as well as individuals. Although much research has been conducted to understand technical and social aspects of digital cultural heritage, little empirical research has investigated how people perceive, experience, and interact with community content that is socially generated and tied to locations, particularly with respect to building community heritage. To address this, we developed a mobile application called LSC (anonymized) and conducted a user study with 34 participants. The study results indicate that meaningful historic places evoked special attention from the participants, and that those who have lived in the community longer tended to contribute more to the community heritage effort. Participants utilized social features as a way of learning local history, reflecting personal experiences and stories, and co-creating rich layers of local history information from their perspectives. ",
         "keywords": "Community analysis and support, virtual or physical, Location-based and context-aware computing, Mobile and embedded devices, User experience/interaction design, community computing, mobile location system",
         "authors": [
@@ -635,10 +783,14 @@ entities={
             {
                 "name": "John M Carroll"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw277": {
-        "title": "Tracking Serendipitous Interactions: How Individual Cultures Shape the Office",
+        "title": "Tracking serendipitous interactions: How individual cultures shape the office",
         "abstract": "In many creative work environments, serendipitous interactions between members of different groups may lead to enhanced productivity, collaboration and knowledge dissemination. Two factors that may have an influence on such interactions are cultural differences between individuals in highly multicultural workplaces, and the layout and physical spaces of the workplace itself. In this work, we investigate how these two factors may facilitate or hinder inter-group interactions in the workplace. We analyze traces collected using wearable electronic badges to capture face-to-face interactions and mobility patterns of employees in a research laboratory in the UK. We observe that those who interact with people of different roles tend to come from collectivist cultures that value relationships and where people tend to be comfortable with social hierarchies, and that some locations in particular are more likely to host serendipitous interactions, knowledge that could be used by organizations to enhance communication and productivity.",
         "keywords": "Corporate Research, Cross-cultural Systems or Studies, Organization/office/workplace support, Sensors and collaboration",
         "authors": [
@@ -657,10 +809,14 @@ entities={
             {
                 "name": "Cecilia Mascolo"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw285": {
-        "title": "Romantic Partnerships and the Dispersion of Social Ties: A Network Analysis of Relationship Status on Facebook",
+        "title": "Network Neighborhoods, Romantic Relationships, and the Dispersion of Social Ties",
         "abstract": "A crucial task in the analysis of on-line social-networking systems is to identify important people --- those linked by strong social ties --- within an individual's network neighborhood, Here we investigate this question for a particular category of strong ties, those involving spouses or romantic partners. We organize our analysis around a basic question: given all the connections among a person's friends, can you recognize his or her romantic partner from the network structure alone? Using data from a large sample of Facebook users, we find this task can be accomplished with high accuracy, but doing so requires the development of a new measure of tie strength that we term `dispersion' --- the extent to which two people's mutual friends are not themselves well-connected. The results offer methods for identifying particular types of structurally significant people in on-line applications, and suggest a potential expansion of existing theories of tie strength. ",
         "keywords": "Corporate Research, Facebook, Family on Social Networks, Machine Learning and Data Mining, Social network analysis, social network characteristics",
         "authors": [
@@ -670,7 +826,11 @@ entities={
             {
                 "name": "Jon Kleinberg"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 1,
+        "bestPaperNominee": 0
     },
     "cscw290": {
         "title": "Privacy Practices in Collaborative Environments: A Study of Emergency Department Staff",
@@ -678,15 +838,19 @@ entities={
         "keywords": "ER, Medical and health support, Privacy/access control/trust",
         "authors": [
             {
-                "name": "Alison R Murphy"
+                "name": "Alison R. Murphy"
             },
             {
-                "name": "Madhu C Reddy"
+                "name": "Madhu C. Reddy"
             },
             {
                 "name": "Heng Xu"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw293": {
         "title": "Standing on the Schemas of Giants: Socially Augmented Information Foraging",
@@ -705,7 +869,11 @@ entities={
             {
                 "name": "Michael Bove"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw295": {
         "title": "Cancer Navigation: Opportunities and Challenges for Facilitating the Breast Cancer Journey",
@@ -721,10 +889,14 @@ entities={
             {
                 "name": "Elizabeth D Mynatt"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw299": {
-        "title": "Awkward Encounters of an ï¿½ï¿½ï¿½Otherï¿½ï¿½ï¿½ Kind:  Collective Self-Presentation and Face Threat on Facebook",
+        "title": "Awkward Encounters of an \"Other\" Kind:  Collective Self-Presentation and Face Threat on Facebook",
         "abstract": "While we tend to think of self-presentation as a process executed by the self, reputation management on social network sites, like Facebook, is increasingly viewed as a collective endeavor. The information users share about one another can have significant impacts on impression formation, and at times this other-generated content may be face threatening, or challenging to one's desired self-presentation. However, we know little about the nature of these other-generated face threats and the ways that people perceive them. Using an online survey of 150 Facebook users, we report on what these users consider to be other-generated face threats and how they feel after experiencing them. Results suggest that many face threats result from other Facebook users neglecting or misunderstanding a target's audience and/or self-presentation goals, as well as a target's fear of creating an unwanted association with another Facebook user. Experience of these threats is affected by both individual and situational attributes. We also report on a new unique measure capturing Facebook skills.",
         "keywords": "Computer-Mediated Communication, Facebook, Self-disclosure and identity, Social Media Offline, Social Networking Site Design and Use",
         "authors": [
@@ -741,12 +913,16 @@ entities={
                 "name": "Jeff T Hancock"
             },
             {
-                "name": "Madeline E Smith"
+                "name": "Madeline E. Smith"
             },
             {
                 "name": "Lindsay Reynolds"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw302": {
         "title": "Books as a Social Technology",
@@ -759,7 +935,11 @@ entities={
             {
                 "name": "Tom A Rodden"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw305": {
         "title": "The role of founders in building online groups",
@@ -772,10 +952,14 @@ entities={
             {
                 "name": "Andrew T Fiore"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw308": {
-        "title": "Understanding Employee Social Media Chatter with Enterprise Social Pulse",
+        "title": "Understanding Workforce Chatter with Enterprise Social Pulse",
         "abstract": "Social media has the potential to augment traditional surveys in understanding the opinions and sentiment of employees. In this paper, we introduce Enterprise Social Pulse (ESP) - a tool designed to support analysts whose job involves understanding employee chatter. ESP aggregates and analyzes data from internal and external social media sources while respecting employee privacy. It surfaces the data through a user interface that supports organic results and keyword search, data segmentation and filtering, and several analytics and visualization features. An evaluation of ESP was conducted with 19 Human Resources professionals. Results from a survey and interviews with participants revealed the value and willingness to use ESP, but also surfaced challenges around deploying an employee social media listening solution in an organization.",
         "keywords": "Corporate Research, Organization/office/workplace support, Social Computing and Social Navigation, Social Signals, enterprise",
         "authors": [
@@ -818,7 +1002,11 @@ entities={
             {
                 "name": "Jonathan Ferrar"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw310": {
         "title": "From Rookie to All-Star: Professional Development in a Graphic Design Social Networking Site",
@@ -831,10 +1019,14 @@ entities={
             {
                 "name": "Laura Dabbish"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw315": {
-        "title": "Institutional Logics of the EMR and the Problem of ï¿½ï¿½ï¿½Perfectï¿½ï¿½ï¿½ but Inaccurate Accounts",
+        "title": "Institutional Logics of the EMR and the Problem of 'Perfect' but Inaccurate Accounts",
         "abstract": "EMR promise to simultaneously enhance coordination and provide transparency and accountability in work process. In this paper we use empirical data to explore how this promise plays out in the everyday tasks of clinicians. Building on CSCW literature that suggests that the accounting functions of EMR are impinging on coordination of work, we draw on new institutionalism to outline how certain institutional logics around safety are shaping experiences of EMR in-situ. We suggest that institutionalized logics of U.S. healthcare are embedded in the EMR design itself, structuring how \"safety\" is achieved and evaluated. Using over one year of ethnographic research in an obstetrical unit, we find that the institutional logics of \"safety\" embedded in the EMR create negative organizational outcomes, undermining coordination and necessitating inaccurate accounts of work. We provide design implications to address these issues in the current institutional environment and envision how systems might be designed to promote alternate logics of safety that are social, dynamic, and cast humans as expert agents.",
         "keywords": "Medical and health support, Organization/office/workplace support, Social Computing and Social Navigation, coordination, electronic medical records, new institutionalism, policy implication",
         "authors": [
@@ -844,7 +1036,11 @@ entities={
             {
                 "name": "Melissa Mazmanian"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw317": {
         "title": "Crowd Synthesis: Extracting Categories and Clusters from Complex Data",
@@ -852,7 +1048,7 @@ entities={
         "keywords": "Crowds To Make Sense of Data, Crowdsourcing",
         "authors": [
             {
-                "name": "Paul Andr��"
+                "name": "Paul André"
             },
             {
                 "name": "Aniket Kittur"
@@ -860,7 +1056,11 @@ entities={
             {
                 "name": "Steven P Dow"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw327": {
         "title": "Editing Beyond Articles: Diversity & Dynamics of Teamwork in Open Collaborations",
@@ -879,10 +1079,14 @@ entities={
             {
                 "name": "Mark Zachry"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw333": {
-        "title": "Sounds of Silence: Exploring Contributions to Conversations, Non-Responses and the Impact of Mediating Technologies in Triple Space",
+        "title": "Sounds of Silence: Exploring Contributions to Conversa-tions, Non-Responses and the Impact of Mediating Tech-nologies in Triple Space",
         "abstract": "We investigate collocated triads as they play a collaborative, problem-solving game using distributed technology on laptops. We examine how different triads attain and maintain mutual understanding in triple-space-when working on a hard problem, with communicating technologies and face-to-face interaction. We present qualitative and quantitative evidence that demonstrates the descriptive adequacy of a model of triadic interaction in triple space. We use that model to argue that the notion of good-enoughness is not a group attribute, but rather tied to each dyadic pair. This intellectual framework allows us to examine how non-response operates within these triple-space interactions when interaction is supported by different media.   The results related to non-response raise the possibility that different media may result in subtle changes influences on the balance of participant goals. ",
         "keywords": "Computer-Mediated Communication",
         "authors": [
@@ -892,7 +1096,11 @@ entities={
             {
                 "name": "Deborah Tatar"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw339": {
         "title": "The Language that Gets People to Give: Phrases that Predict Success on Kickstarter",
@@ -905,7 +1113,11 @@ entities={
             {
                 "name": "Eric Gilbert"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw348": {
         "title": "Should Your MOOC Forum Use a Reputation System?",
@@ -919,12 +1131,16 @@ entities={
                 "name": "Armando Fox"
             },
             {
-                "name": "Marti A Hearst"
+                "name": "Marti A. Hearst"
             },
             {
-                "name": "Bj�_rn Hartmann"
+                "name": "Björn Hartmann"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw352": {
         "title": "Modeling Search Processes using Hidden States in Collaborative Exploratory Web Search",
@@ -940,10 +1156,14 @@ entities={
             {
                 "name": "Daqing He"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw354": {
-        "title": "How Social Q\\\\&A Sites are Changing Knowledge Sharing in Open Source Software Communities",
+        "title": "How Social Q&A Sites are Changing Knowledge Sharing in Open Source Software Communities",
         "abstract": "Mailing lists have been the preferred means for coordinating development and user support activities in open source software development. With the emergence and popularity growth of social Q&A platforms such as StackExchange, this is beginning to change. Such platforms offer different socio-technical incentives to their participants than mailing lists do, e.g., rich web environments to store and manage content collaboratively, or a place to showcase their expertise more visibly to potential recruiters. However, one of the fundamental differences between StackExchange and mailing lists is gamification, i.e., participants compete to obtain reputation points and badges. Using a case study of R, a popular data analysis software, we investigate how mailing list participation has evolved since the launch of StackExchange. We found that mailing list experts are migrating to StackExchange, and their behavior is influenced by gamification: participants active on both are more active and provide faster answers on StackExchange than on the mailing list, suggesting they are motivated by the game.",
         "keywords": "Collaborative software development, Crowdsourcing, Empirical Methods, Qualitative, Q&A, open source software",
         "authors": [
@@ -959,7 +1179,11 @@ entities={
             {
                 "name": "Vladimir Filkov"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw355": {
         "title": "Specialization, Homophily, and Gender in a Social Curation Site: Findings from Pinterest",
@@ -978,7 +1202,11 @@ entities={
             {
                 "name": "Loren G Terveen"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw356": {
         "title": "How Players Value their Characters in World of Warcraft",
@@ -997,7 +1225,11 @@ entities={
             {
                 "name": "Max Birk"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw358": {
         "title": "Most Liked, Fewest Friends:  Patterns of Enterprise Social Media Use",
@@ -1016,7 +1248,11 @@ entities={
             {
                 "name": "Michal Jacovi"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw365": {
         "title": "Being A Turker",
@@ -1035,7 +1271,11 @@ entities={
             {
                 "name": "Neha Gupta"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw369": {
         "title": "Think Globally, Act Locally: A Case Study of a Free Food Sharing Community and Social Networking",
@@ -1052,9 +1292,13 @@ entities={
                 "name": "Ozge Subasi"
             },
             {
-                "name": "Florian G�_ldenpfennig"
+                "name": "Florian Güldenpfennig"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw374": {
         "title": "Account Sharing in the Context of Networked Hospitality Exchange",
@@ -1062,15 +1306,19 @@ entities={
         "keywords": "Community analysis and support, virtual or physical, Corporate Research, Privacy/access control/trust, Social Networking Site Design and Use, home, tourism, traveling, worker bees",
         "authors": [
             {
-                "name": "Airi M Lampinen"
+                "name": "Airi M I Lampinen"
             },
             {
-                "name": "Airi M Lampinen"
+                "name": "Airi M I Lampinen"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw384": {
-        "title": "Unsupervised Classification and Visualization of Unstructured Text for the Support of Interdisciplinary Collaboration",
+        "title": "Document Classification and Visualization for the Support of Interdisciplinary Collaboration",
         "abstract": "We present a computer supported tool for cooperative work in interdisciplinary fields, which we applied to and tested within the area of astrobiology. Our document classification and visualization system is fully automated and data driven, based on unsupervised machine learning algorithms that make minimal assumptions about the data, and network visualization tools. It can extract information about collaborations from unstructured databases with no meta-data. A new feature selection algorithm was created that gives an indication how many words should be used in word-count based cluster analysis. We used our method to analyze a body of publications that were produced by researchers from NASA's Astrobiology Institute. Our analysis shows the utility of our method by revealing structure that can aid the planning of collaborative research. We presented this analysis as a cultural probe, and recorded reactions from researchers that clearly indicated the success of our method in aiding interdisciplinary research by helping scientists from different disciplines to work together.",
         "keywords": "Community analysis and support, virtual or physical, Machine Learning and Data Mining, infoviz",
         "authors": [
@@ -1083,7 +1331,11 @@ entities={
             {
                 "name": "Susanne Still"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw387": {
         "title": "The Perception of Others: Inferring Reputation from Social Media in the Enterprise",
@@ -1105,10 +1357,14 @@ entities={
             {
                 "name": "Netta Aizenbud-Reshef"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw389": {
-        "title": "TalkBetter: Family-driven Mobile Intervention Care for Children with Language Delay",
+        "title": "Exploring Family-driven Socio-interactive Care for Children with Language Delay: A Smartphone-supported In-situ Intervention Approach",
         "abstract": "Language delay is a developmental problem of children who do not acquire language as expected for their chronological ages. Without timely intervention, language delay can act as a lifelong risk factor, which includes a learning disorder, a social skill deficit, and a low socioeconomic status. Speech-language pathologists have highlighted that effective parent participation in everyday parent-child conversation is important to treat children's language delay. For effective roles, however, parents need to alter their own lifelong-established conversation habits, requiring extensive period of conscious effort and staying alert. In this paper, we present new opportunities for mobile and social computing to reinforce everyday parent-child conversation with therapeutic implications for children with language delays. Specifically, we propose TalkBetter, a mobile in-situ intervention service to help parents in daily parent-child conversations through real-time meta-linguistic analysis of ongoing conversations. Through extensive field studies with speech-language pathologists and parents, we report the multilateral motivations and implications of TalkBetter. We present our development of TalkBetter prototype and report its performance evaluation.",
         "keywords": "Home/family/intimacy support, Medical and health support, Mobile and embedded devices, accessibility, assistive mobile technologies, special needs, youth",
         "authors": [
@@ -1136,7 +1392,11 @@ entities={
             {
                 "name": "Junehwa Song"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 1,
+        "bestPaperNominee": 0
     },
     "cscw390": {
         "title": "Quick and Dirty: Streamlined 3D Scanning in Archaeology",
@@ -1153,7 +1413,7 @@ entities={
                 "name": "Angeliki Chrysanthi"
             },
             {
-                "name": "Mark T Marshall"
+                "name": "Mark T. Marshall"
             },
             {
                 "name": "Peter D Bennett"
@@ -1167,7 +1427,11 @@ entities={
             {
                 "name": "Mike Fraser"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw391": {
         "title": "VidWiki: Enabling the Crowd to Improve the Legibility of Online Educational Videos",
@@ -1189,7 +1453,11 @@ entities={
             {
                 "name": "William Thies"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw395": {
         "title": "The Communication Patterns of Technical Leaders:  Impact on Product Development Team Performance",
@@ -1202,10 +1470,14 @@ entities={
             {
                 "name": "Marcelo Cataldo"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw399": {
-        "title": "\"You Can't Block People Offline\": Examining How Facebook's Affordances Shape the Disclosure Process",
+        "title": "\"You can't block people offline\": Examining how Facebook's affordances shape users' disclosure process",
         "abstract": "Guided by the underlying question of how--if at all--the self-disclosure process varies online, the present study explores the self-disclosure practices of 26 American graduate students on Facebook through in-depth interviews. Building on work by Derlega and Grzelak [13] on self-disclosure goals and focusing on the affordances of the site, findings reveal both commonalities with and extensions to existing communication research on self-disclosure, as users see both benefits and drawbacks to the high visibility and persistence of content shared through the site. Furthermore, users employed a wide spectrum of strategies to help them achieve their disclosure goals while decreasing perceived risks associated with making disclosures in a public forum. Importantly, these strategies generally sought to recreate the offline boundaries removed by the technical structure of the site and allow users to engage in a more strategic disclosure process with their network. ",
         "keywords": "Computer-Mediated Communication, Facebook, Privacy/access control/trust, Self-disclosure and identity, Social Media Offline, Social Networking Site Design and Use",
         "authors": [
@@ -1215,7 +1487,11 @@ entities={
             {
                 "name": "Jinyoung Kim"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw409": {
         "title": "Capturing the Mood: Facebook and Face-to-Face  Encounters in the Workplace",
@@ -1229,12 +1505,16 @@ entities={
                 "name": "Shamsi T Iqbal"
             },
             {
-                "name": "Mary P Czerwinski"
+                "name": "Mary P. Czerwinski"
             },
             {
                 "name": "Paul Johns"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw411": {
         "title": "The Policy Knot: Re-integrating Policy, Practice and Design in CSCW Studies of Social Computing",
@@ -1250,10 +1530,14 @@ entities={
             {
                 "name": "Sandy Payette"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw413": {
-        "title": "Characterizing and Predicting Postpartum Depression from Shared Facebook Data",
+        "title": "Characterizing and Predicting Postpartum Depression from Facebook Data",
         "abstract": "The birth of a child is a milestone in the life of parents. We leverage Facebook data shared voluntarily by 165 new mothers as streams of evidence for characterizing their postnatal experiences. We consider multiple measures including activity, social capital, emotion, and linguistic style in participants' Facebook data in pre- and postnatal periods. Our study includes detecting and predicting onset of post-partum depression (PPD). The work complements recent work on detecting and predicting significant postpartum changes in behavior, language, and affect from Twitter data. In contrast to prior studies, we gain access to ground truth on postpartum experiences via self-reports and a common psychometric instrument used to evaluate PPD. We develop a series of statistical models to predict from data available before childbirth a mother's likelihood of PPD. We corroborate our quantitative findings through interviews with a sample of the participants. We find that increased social isolation and lowered availability of social capital as manifested on Facebook, are the best predictors of PPD in mothers.",
         "keywords": "Corporate Research, Depression, Facebook, Family on Social Networks, Machine Learning and Data Mining, Social Computing and Social Navigation, Social network analysis, depression, emotion",
         "authors": [
@@ -1269,7 +1553,11 @@ entities={
             {
                 "name": "Aaron Hoff"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw430": {
         "title": "Managing Political Differences in Social Media",
@@ -1285,7 +1573,11 @@ entities={
             {
                 "name": "Eric Gilbert"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw431": {
         "title": "Integrating On-demand Fact-checking with Public Dialogue",
@@ -1307,7 +1599,11 @@ entities={
             {
                 "name": "Brian Gill"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw432": {
         "title": "Coordinating Donors on Crowdfunding Websites",
@@ -1320,7 +1616,11 @@ entities={
             {
                 "name": "Jacob Solomon"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw438": {
         "title": "Everyday Dwelling with WhatsApp",
@@ -1342,7 +1642,11 @@ entities={
             {
                 "name": "Jessica Morris"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw440": {
         "title": "The Motivations and Experiences of the On-Demand Mobile Workforce",
@@ -1364,7 +1668,11 @@ entities={
             {
                 "name": "Janne Lindqvist"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw443": {
         "title": "Teammate Inaccuracy Blindness: When Information Sharing Tools Hinder Collaborative Analysis",
@@ -1380,10 +1688,14 @@ entities={
             {
                 "name": "Sara Kiesler"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw455": {
-        "title": "\"Real, but Glossy\" ï¿½ï¿½ï¿½ Technology and the Practical Pursuit of Magic in Modern Weddings",
+        "title": "\"Real, but Glossy\" - Technology and the Practical Pursuit of Magic in Modern Weddings",
         "abstract": "Planning a wedding is arguably one of the most complicated collaborative tasks people ever undertake. Despite the commonplace use of technologies in \"wedding work,\" little research has looked at this from an HCI perspective. Based on an interview study, we illustrate how technology is used to deliver the sought-after fantasy and a practical, yet entertaining, affair. We identify four ways that technology helps people do this: (a) by allowing much of the practical planning work to become \"invisible;\" (b) by easing navigation through the delicate rules of family configurations made manifest in the guest list; (c) by helping create a spectacle-like event that adroitly balances excess and realism; and (d) by documenting the wedding in ways that allows re-experiencing the magic after the event. The paper concludes by discussing the implications of this pursuit on social graphs, place, and photography, contributing to the literature on technology and major life events.",
         "keywords": "Big life events, Home/family/intimacy support, My big fat social media wedding, Offline events, Parties & cocktail hour, Social Media Offline",
         "authors": [
@@ -1396,7 +1708,11 @@ entities={
             {
                 "name": "Abigail J Sellen"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw462": {
         "title": "Framing the Conversation: The Role of Facebook Conversations in Shopping for Eyeglasses",
@@ -1407,7 +1723,7 @@ entities={
                 "name": "Karim Said"
             },
             {
-                "name": "Michele A Burton"
+                "name": "Michele Annmarie Burton"
             },
             {
                 "name": "Amy Hurst"
@@ -1415,7 +1731,11 @@ entities={
             {
                 "name": "Shaun K Kane"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw471": {
         "title": "Collaboration Surrounding Beacon Use During Companion Avalanche Rescue",
@@ -1434,10 +1754,14 @@ entities={
             {
                 "name": "Ron Wakkary"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw473": {
-        "title": "Creepy but Inevitable? The Evolution of Social Networking",
+        "title": "Creepy but Inevitable? Evolution of Social Networking",
         "abstract": "The fifth year of a cross-sectional trend study of social networking in a large organization yielded surprises that led to a large-scale interview study. With experience, people found ways to address early challenges, but new concerns have arisen. As social networking companies more visibly embraced the search engine revenue model, behavior tracking and targeted advertising, expressions of concern by users shifted from boundary regulation or context collapse to the ways information is used. At present, the benefits of use seem to outweigh drawbacks.",
         "keywords": "Social Networking Site Design and Use, Stalking, enterprise, social networks in the organizaition",
         "authors": [
@@ -1450,7 +1774,11 @@ entities={
             {
                 "name": "Jonathan Grudin"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw474": {
         "title": "Leveraging the Contributory Potential of User Feedback",
@@ -1463,10 +1791,14 @@ entities={
             {
                 "name": "Loren G Terveen"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw482": {
-        "title": "The Role of Data in Aligning the ï¿½ï¿½ï¿½Unique Identityï¿½ï¿½ï¿½ Infrastructure in India",
+        "title": "The Role of Data in Aligning the 'Unique Identity' Infrastructure in India",
         "abstract": "We present findings from a qualitative field study of a national e-infrastructure project currently underway in India. We study how this large and complex infrastructure for issuing unique biometric-based identification numbers to the 1.2 billion residents of India was aligned across various stakeholders engaged in the project. We find that the focus on 'data' kept the entire infrastructure together and working. However, this narrow focus also made the design team view the people applying for IDs as numbers whose management could be standardized. In reality, the infrastructure encountered people with differing experiences and expectations of state-issued IDs, expectations that had to be managed by agents on the ground. With our focus on the nation state as a site for studying e-infrastructure, we extend the domains in which CSCW research takes place and contribute to the theory of infrastructure building in a context where state-citizen relations are at stake.",
         "keywords": "Cross-cultural Systems or Studies, India, Infrastructure, International tech infrastructure, Other domain-specific support",
         "authors": [
@@ -1476,31 +1808,39 @@ entities={
             {
                 "name": "Janaki Srinivasan"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw486": {
-        "title": "Building loyalty to online communities through bond and identity-based attachment to sub-groups",
+        "title": "Attachment to work groups increases loyalty on Mechanical Turk: Exploring bond- versus identity-based pathways to attachment formation",
         "abstract": "Researchers and theorists have proposed that feelings of attachment to subgroups within a larger online community or site can increase users' loyalty to the site. They have identified two types of attachment to these groups, with distinct causes and consequences. With bond-based attachment, people feel connections to other group members, while with identity-based attachment they feel connections to the group as a whole. In two experiments we show that these feelings of attachment to subgroups do increase commitment to the larger community.  Communication with other people in a subgroup but not simple awareness of them increases attachment to the larger community. By varying how the communication is structured, between dyads or with all group members simultaneously, the experiments show that bond and identity-based attachment have different causes. But the experiments show no evidence that bond and identity attachment have different consequences. We consider both theoretical and methodological reasons why the consequences of bond-based and identity-based attachment are so similar.",
         "keywords": "Community analysis and support, virtual or physical, Computer-Mediated Communication, Crowdsourcing, Participatory Design / Cooperative Design, paid crowdsourcing",
         "authors": [
             {
-                "name": "Yla R Tausczik"
+                "name": "Yla R. Tausczik"
             },
             {
-                "name": "Laura A Dabbish"
+                "name": "Laura A. Dabbish"
             },
             {
                 "name": "Robert E Kraut"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw487": {
-        "title": "Capturing Quality: Retaining Provenance for Curated Volunteer Monitoring Data",
+        "title": "Capturing Quality: Retaining provenance for curated volunteer monitoring data",
         "abstract": "The \"real world\" nature of field-based citizen science involves unique data management challenges that distinguish it from projects that involve only Internet-mediated activities. In particular, many data contribution and review practices are often accomplished \"offline\" via paper or general-purpose software like Excel. This can lead to integration challenges when attempting to implement project-specific ICT with full revision and provenance tracking. In this work, we explore some of the current challenges and opportunities in implementing ICT for managing citizen science data. Our two main contributions are: a general outline of the workflow tasks common to field-based data collection, and a novel data model for preserving provenance metadata that allows for ongoing data exchange between disparate technical systems and participant skill levels. We conclude with applications for other domains, such as professional monitoring and crisis informatics, as well as directions for future research.",
         "keywords": "Collaboration architectures, Community analysis and support, virtual or physical, Computer-Mediated Communication, Crowdsourcing, Distributed/virtual teams, Other domain-specific support, Workflow management, citizen science, community computing",
         "authors": [
             {
-                "name": "S. A Sheppard"
+                "name": "S. Andrew Sheppard"
             },
             {
                 "name": "Andrea Wiggins"
@@ -1508,7 +1848,11 @@ entities={
             {
                 "name": "Loren Terveen"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw488": {
         "title": "Collaborative Problem Solving: A Study of MathOverflow",
@@ -1516,7 +1860,7 @@ entities={
         "keywords": "Community analysis and support, virtual or physical, Computer-Mediated Communication, Crowdsourcing, Distributed/virtual teams, Problem Solving in Online Communities, coordination, math",
         "authors": [
             {
-                "name": "Yla R Tausczik"
+                "name": "Yla R. Tausczik"
             },
             {
                 "name": "Aniket Kittur"
@@ -1524,10 +1868,14 @@ entities={
             {
                 "name": "Robert E Kraut"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw490": {
-        "title": "Support for Deictic Pointing in CVEs: Still Fragmented after All These Years?",
+        "title": "Support for Deictic Pointing in CVEs: Still Fragmented After All These Years?",
         "abstract": "Pointing gestures - particularly deictic references - are ubiquitous in face-to-face communication. However, deictic pointing can be much more difficult in collaborative virtual environments (CVEs) than in everyday life - in some of the earliest CVE studies, researchers found that 'fragmented interactions' greatly complicated communication. In the fifteen years since these studies appeared, the technologies used in CVEs have improved substantially. What these advances mean for the problems of fragmentation and deictic gesture, however, is unclear. We conducted an observational study of deictic pointing in a CVE with techniques that may reduce fragmentation: extra-wide and third-person views, precise control over an avatar's pointing arm, and visual enhancements such as object highlighting and laser pointing. Our study shows that although pointing has come a long way, problems of fragmentation still occur, and that visual and view enhancements can cause new problems for collaboration, even as they solve others. Surprisingly, the visibility of preparatory actions of a gesture remained important, even when augmented pointing techniques were used.",
         "keywords": "Virtual Worlds/Avatars/Proxies, gesture",
         "authors": [
@@ -1537,10 +1885,14 @@ entities={
             {
                 "name": "Carl Gutwin"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw492": {
-        "title": "Designing for Repair?  Infrastructures and Materialities of Breakdown",
+        "title": "Planned Obsolescence or Designed Reparability? Infrastructures and Materialities of Breakdown",
         "abstract": "This paper explores issues that come up in practices of breakage and repair through two projects: the \"XO\" laptops of One Laptop Per Child in Paraguay and public sites of facilitated repair in California, USA. Collectively drawing on 15 months of ethnographic fieldwork, 156 interviews, and archival research, we find that breakdown and repair are not processes that designers can effectively script ahead of time; instead, they emerge in everyday practice. These practices are shaped by material, infrastructural, gendered, political, and socioeconomic factors - such as manufacturing limitations, access to repair parts and expertise, and environmental convictions - which designers often did not, and in fact may not have been able to, anticipate. We call the material realities and practices of repair negotiated endurance, which is illustrated by four themes from our findings: the cultural emergence of breakdown, collaborative definitions of worth, the fraught nature of collaborative expertise, and the gendered stakes of repair.",
         "keywords": "Appropriation, Craft and repair, Cross-cultural Systems or Studies, International tech infrastructure, Other domain-specific support, User experience/interaction design",
         "authors": [
@@ -1550,7 +1902,11 @@ entities={
             {
                 "name": "Morgan Ames"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw493": {
         "title": "City, Self, Network: Transnational Migrants and Online Identity Work",
@@ -1566,7 +1922,11 @@ entities={
             {
                 "name": "danah m boyd"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw494": {
         "title": "Beyond End User Content to Collaborative Knowledge Mapping: Interrelations Among Community Social Tools",
@@ -1585,10 +1945,14 @@ entities={
             {
                 "name": "Barton Smith"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw495": {
-        "title": "Remixersï¿½ï¿½ï¿½ Understandings of Fair Use Online",
+        "title": "Remixers' Understandings of Fair Use Online",
         "abstract": "How do online content creators make decisions about copyright law? In the course of day-to-day online activities, Internet users are forced to make subtle judgments about one of the most confusing and nuanced areas of law, copyright and fair use. In this study, we conducted semi-structured interviews with eleven content creators who participate in remix and fan creation activities online, to try to probe their legal understandings and attitudes. We found that social norms that emerge among these content creators do not always track to what the law actually says, but are often guided more by ethical concerns. Our participants showed surprisingly similar patterns of understandings and confusions, impacting technology use and interaction online.",
         "keywords": "Community analysis and support, virtual or physical, Empirical Methods, Qualitative, Legal/historical/philosophical aspects, copyright law, remix",
         "authors": [
@@ -1598,10 +1962,14 @@ entities={
             {
                 "name": "Amy S Bruckman"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw499": {
-        "title": "Adolescent Online Safety: The ï¿½ï¿½ï¿½Moralï¿½ï¿½ï¿½ of the Story",
+        "title": "Adolescent Online Safety: The \"Moral\" of the Story",
         "abstract": "Adolescence is characterized by heightened risk-taking and independence from parents; these tendencies seem to be magnified by the opportunities afforded through online interactions. Drawing on Kohlberg's Cognitive Moral Development (CMD) theory, we conduct a qualitative study of 12 parent-adolescent dyads that examines the interplay between parenting behaviors and adolescent moral development. We show an association between adolescent moral judgment and online behavior, and we illustrate how parenting style and mediation strategies influence the teen's moral growth and decision making about online behaviors. We also note that parental mediation strategies are moderated by parents' digital literacy: reduced digital literacy is associated with more restrictive or indulgent strategies; while more digitally competent parents are more likely to monitor and mediate their teen's behaviors as they engage online. We also found that experience, not restriction, facilitates the teen's moral growth.",
         "keywords": "Computer-Mediated Communication, Family on Social Networks, Privacy/access control/trust, Social Computing and Social Navigation, That's the problem with the kids today, youth",
         "authors": [
@@ -1617,7 +1985,11 @@ entities={
             {
                 "name": "John M Carroll"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw517": {
         "title": "Enabling Relationship Building in Tabletop-supported Advisory Settings",
@@ -1636,7 +2008,11 @@ entities={
             {
                 "name": "Gerhard Schwabe"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw526": {
         "title": "Cultivating Practice & Shepherding Technology Use: Supporting Appropriation Among Unanticipated Users",
@@ -1646,7 +2022,11 @@ entities={
             {
                 "name": "Pablo-Alejandro Quinones"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw527": {
         "title": "Trustworthy By Design",
@@ -1674,17 +2054,25 @@ entities={
             {
                 "name": "John Walden"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw530": {
-        "title": "The Kernel of a Research Infrastructure",
+        "title": "A kernel theory of research infrastructure",
         "abstract": "Infrastructure makes it easier, faster or possible for investigators to study new objects of research. It does so by making available stable resources and services such as data, collaboration tools, sites of sample collection, or calibrated instruments. This paper offers the concept of the kernel of a research infrastructure as a new unit of analysis for investigating the enabling capacities of infrastructure. The kernel is the core resources and services an infrastructure makes available (called the cache), as well as the work, techniques and technologies that go into sustaining that availability (called addressing). By inspecting and comparing the kernel of two long-term scientific enterprises, this paper demonstrates how focusing on the kernel can help explain key qualities of research infrastructure such as flexibility and persistence in the face of dramatic changes to the objects, methods and practice of science.",
         "keywords": "Collaboration architectures, Community analysis and support, virtual or physical, Infrastructure, Organization/office/workplace support",
         "authors": [
             {
                 "name": "David Ribes"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw535": {
         "title": "GEMS: The Design and Evaluation of a Location-Based Storytelling Game",
@@ -1697,7 +2085,11 @@ entities={
             {
                 "name": "Carman Neustaedter"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw537": {
         "title": "How Beliefs about the Presence of Machine Translation Impact Multilingual Collaborations",
@@ -1714,9 +2106,13 @@ entities={
                 "name": "Dan Cosley"
             },
             {
-                "name": "Susan R Fussell"
+                "name": "Susan R. Fussell"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw542": {
         "title": "Pair Research: Matching People for Collaboration, Learning, and Productivity",
@@ -1724,7 +2120,7 @@ entities={
         "keywords": "Collaborative software development, Crowds to Make Sense of Data, Distributed/virtual teams, Matchmaking",
         "authors": [
             {
-                "name": "Robert C Miller"
+                "name": "Robert C. Miller"
             },
             {
                 "name": "Haoqi Zhang"
@@ -1735,7 +2131,11 @@ entities={
             {
                 "name": "Elizabeth Gerber"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw547": {
         "title": "Social Structure and Depression in TrevorSpace",
@@ -1755,12 +2155,16 @@ entities={
                 "name": "Megan C Lytle"
             },
             {
-                "name": "Vincent M Silenzio"
+                "name": "Vincent MB Silenzio"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw548": {
-        "title": "Motivating Contribution in a Participatory Sensing System via Quid-Pro-Quo",
+        "title": "Investigating a Quid-Pro-Quo Approach to Motivating Contribution in a Participatory Sensing System",
         "abstract": "Participatory sensing systems (PSS) require frequent injection of information that has a short shelf-life. The use of crowds to gather information for PSS is therefore particularly challenging. In this study, we explore the impact of two policies on user contributions. A quid-pro-quo policy exchanges contributions from users for access to critical information in the system. A request policy simply reminds the user that information is needed to make the system function well. Prior research has shown that in these policies are effective in non-PSS systems. During a large-scale experimental study within a publicly deployed, crowdsourced, transit information system, we analyzed these policies over a 10- month period. Our results confirmed that quid-pro-quo led to more contribution, but at a cost of faster departure from the study. Simply asking for contributions largely ineffective and was statistically indistinguishable to the control condition. Thus crowdsource system designers should consider imposing quid-pro-quo type policies for PSS that concentrate on fewer users, but makes them more productive.",
         "keywords": "Crowdsourcing, Mobile and embedded devices, Participation motivations, citizen science, participatory sensing",
         "authors": [
@@ -1776,7 +2180,11 @@ entities={
             {
                 "name": "Yun Huang"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw550": {
         "title": "To Search or to Ask: The Routing of Information Needs Between Traditional Search Engines and Social Networks",
@@ -1790,7 +2198,7 @@ entities={
                 "name": "Brent Hecht"
             },
             {
-                "name": "Meredith R Morris"
+                "name": "Meredith Ringel Morris"
             },
             {
                 "name": "Jaime Teevan"
@@ -1798,7 +2206,11 @@ entities={
             {
                 "name": "Darren Gergle"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw558": {
         "title": "Remote Shopping Advice: Enhancing In-Store Shopping with Social Technologies",
@@ -1806,7 +2218,7 @@ entities={
         "keywords": "Asking on Social Media, Corporate Research, Crowdsourcing, Other domain-specific support, Q&A, Social Computing and Social Navigation, consumer applications, friendsourcing, shopping",
         "authors": [
             {
-                "name": "Meredith R Morris"
+                "name": "Meredith Ringel Morris"
             },
             {
                 "name": "Kori Inkpen"
@@ -1814,10 +2226,14 @@ entities={
             {
                 "name": "Gina Venolia"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw559": {
-        "title": "ï¿½ï¿½ï¿½Our Life is the Farm and Farming is Our Lifeï¿½ï¿½ï¿½:  Home-Work Coordination in Organic Farm Families",
+        "title": "\"Our Life is the Farm and Farming is Our Life\":  Home-Work Coordination in Organic Farm Families",
         "abstract": "We present a qualitative study of 13 farm families who intentionally merge their home and work lives. This is in contrast to most of the families studied in CSCW, who are urban/suburban, white-collar and often dual-income, where the goal is to balance separate spheres of home and work. We analyze these farm families' coordination along three dimensions - space, time, and roles - and then contrast their experiences to what is known in CSCW about families who separate home and work. Through this, we reveal blind spots in CSCW's study of and support for family coordination, and suggest a new approach to building better tools to support such activities. We emphasize the importance of considering co-location rather than assuming geographic distribution across life sphere, the value of natural rhythms in understanding and supporting family life, and show how taking on simultaneous roles can be viewed as a life goal rather than a source of conflict.",
         "keywords": "Coordination, Home/family/intimacy support, Sustainability, home",
         "authors": [
@@ -1825,12 +2241,16 @@ entities={
                 "name": "Gilly Leshed"
             },
             {
-                "name": "Maria H��kansson"
+                "name": "Maria Håkansson"
             },
             {
                 "name": "Joseph 'Jofish' Kaye"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw566": {
         "title": "Study of Electronic Lab Notebook Design and Practices that Emerged in a Collaborative Scientific Environment",
@@ -1846,7 +2266,11 @@ entities={
             {
                 "name": "Rachel Jones"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw570": {
         "title": "Supporting Task Resumption Using Visual Feedback",
@@ -1865,7 +2289,11 @@ entities={
             {
                 "name": "Mark S Pfaff"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw576": {
         "title": "Can You Hear Me Now? Mitigating the Echo Chamber Effect by Source Position Indicators",
@@ -1878,7 +2306,11 @@ entities={
             {
                 "name": "Wai-Tat Fu"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw579": {
         "title": "Designing for the Deluge: Understanding & Supporting the Distributed, Collaborative Work of Crisis Volunteers",
@@ -1906,7 +2338,11 @@ entities={
             {
                 "name": "Kate Starbird"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw584": {
         "title": "Mind the Map: The Impact of Culture and Economic Affluence on Crowd-Mapping Behaviours",
@@ -1922,7 +2358,11 @@ entities={
             {
                 "name": "Licia Capra"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw586": {
         "title": "Civic action brokering platforms: Facilitating local engagement with ACTion Alexandria",
@@ -1944,7 +2384,11 @@ entities={
             {
                 "name": "Tracy Viselli"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw588": {
         "title": "Understanding the Role of Community in Crowdfunding Work",
@@ -1960,7 +2404,11 @@ entities={
             {
                 "name": "Elizabeth M Gerber"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw590": {
         "title": "Geographical and Organizational Distances in Enterprise Crowdfunding",
@@ -1979,7 +2427,11 @@ entities={
             {
                 "name": "John Wafer"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw596": {
         "title": "Exploring the social-technological gap in telesurgery: collaboration within distributed OR teams",
@@ -1990,12 +2442,16 @@ entities={
                 "name": "Pieter Duysburgh"
             },
             {
-                "name": "Shirley A Elprama"
+                "name": "Shirley A. Elprama"
             },
             {
                 "name": "An Jacobs"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw597": {
         "title": "Reviewing versus Doing: Learning and Performance in Crowd Assessment",
@@ -2014,7 +2470,11 @@ entities={
             {
                 "name": "Aniket Kittur"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw598": {
         "title": "Hybrid Media Consumption: How Tweeting During a Televised Political Debate Influences the Vote Decision",
@@ -2036,7 +2496,11 @@ entities={
             {
                 "name": "Heather A Faucett"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw599": {
         "title": "Help is on the Way: Patterns of Responses to Resource Requests on Facebook",
@@ -2055,7 +2519,11 @@ entities={
             {
                 "name": "Nicole Ellison"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw602": {
         "title": "Planet Hunters and Seafloor Explorers: Legitimate Peripheral Participation Through Practice Proxies in Online Citizen Science",
@@ -2066,18 +2534,22 @@ entities={
                 "name": "Gabriel Mugar"
             },
             {
-                "name": "Carsten ��sterlund"
+                "name": "Carsten Østerlund"
             },
             {
-                "name": "Katie D Hassman"
+                "name": "Katie DeVries Hassman"
             },
             {
                 "name": "Kevin Crowston"
             },
             {
-                "name": "Corey B Jackson"
+                "name": "Corey Brian Jackson"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw608": {
         "title": "Social Influences on Secure Development Tool Adoption: Why Security Tools Spread",
@@ -2093,7 +2565,11 @@ entities={
             {
                 "name": "Emerson Murphy-Hill"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw609": {
         "title": "What Do Teens Ask Their Online Social Networks? Social Search Practices among High School Students",
@@ -2110,12 +2586,16 @@ entities={
                 "name": "Rachel Magee"
             },
             {
-                "name": "Denise E Agosto"
+                "name": "Denise E. Agosto"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 1
     },
     "cscw620": {
-        "title": "The Identification of Deviance and its Impact on Retention in a Multiplayer Game",
+        "title": "The Impact of Deviance on Retention in a Multiplayer Game",
         "abstract": "Deviant behavior in online systems is a difficult problem to address. Consequences of deviance include driving off users and tarnishing the system's public image. We present an examination of these concepts in a popular online game, League of Legends. Using a large collection of game records and player-given feedback, we develop a metric, toxicity index, to identify deviant players. We then look at the effects of interacting with deviant players, including effects on retention. We find that toxic players have several significant predictive patterns, such as playing in more competitive game modes and playing with friends. We also show that toxic players drive away new players, but that experienced players are more resilient to deviant behavior. Based on our findings, we suggest methods to better identify and counteract the negative effects of deviance.",
         "keywords": "Community analysis and support, virtual or physical, Entertainment/games",
         "authors": [
@@ -2134,7 +2614,11 @@ entities={
             {
                 "name": "John Riedl"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw622": {
         "title": "Twitter ain't Without Frontiers: Economic, Social, and Cultural Boundaries in International Communication",
@@ -2142,7 +2626,7 @@ entities={
         "keywords": "Cross-cultural Systems or Studies, Social Computing and Social Navigation, Social network analysis, bubbles, distance, twitter",
         "authors": [
             {
-                "name": "Ruth Garc�_a-Gavilanes"
+                "name": "Ruth García-Gavilanes"
             },
             {
                 "name": "Yelena Mejova"
@@ -2150,7 +2634,11 @@ entities={
             {
                 "name": "Daniele Quercia"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw624": {
         "title": "Facebook Makes the Heart Grow Fonder: Relationship Maintenance Strategies Among Geographically Dispersed and Communication-Restricted Connections",
@@ -2160,7 +2648,11 @@ entities={
             {
                 "name": "Jessica Vitak"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw625": {
         "title": "Photoportals: Shared References in Space and Time",
@@ -2168,7 +2660,7 @@ entities={
         "keywords": "Collaboration architectures, Systems, Telepresence/video/desktop conferencing, User experience/interaction design, Virtual Worlds/Avatars/Proxies",
         "authors": [
             {
-                "name": "Andr�� Kunert"
+                "name": "André Kunert"
             },
             {
                 "name": "Alexander Kulik"
@@ -2179,7 +2671,11 @@ entities={
             {
                 "name": "Bernd Froehlich"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw626": {
         "title": "AskSheet:  Efficient Use of Web Workers to Support Decision Making",
@@ -2192,7 +2688,11 @@ entities={
             {
                 "name": "Benjamin B Bederson"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw629": {
         "title": "A Comparison of Social, Learning, and Financial  Strategies on Crowd Engagement and Output Quality",
@@ -2203,7 +2703,7 @@ entities={
                 "name": "Lixiu Yu"
             },
             {
-                "name": "Paul Andr��"
+                "name": "Paul André"
             },
             {
                 "name": "Aniket Kittur"
@@ -2211,10 +2711,14 @@ entities={
             {
                 "name": "Robert E Kraut"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw634": {
-        "title": "The Antecedents of Remix",
+        "title": "The antecedents of remix",
         "abstract": "Reuse of the works of others has become common practice on the Internet and has formed the basis for collaboration in some online communities. However, some works are reused much more frequently than others. In this article, we build a causal model that explains which factors are most salient in determining the likelihood that an author's work will be reused. Controlling for common factors, such as the work's popularity, we show that the probability of reuse depends on (a) the degree of derivativity of the work in question, (b) the specific ways in which it derives meaning from other works (intertextuality), (c) the audience's preferential attachment to authors of high fecundity, and (d) the author's social embededness in networks of reuse. We use trace data from an online community that was built for the purpose of demonstrating the ability of open sharing and reuse to spur collaboration and innovation in music. ",
         "keywords": "Building on others, Community analysis and support, virtual or physical, Computer-Mediated Communication, Social network analysis, remix",
         "authors": [
@@ -2230,7 +2734,11 @@ entities={
             {
                 "name": "Jianhui Huang"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw636": {
         "title": "Fast, Functional, and Fitting: Expert Response Dynamics and Response Quality in an Online Newcomer Help Forum",
@@ -2238,12 +2746,16 @@ entities={
         "keywords": "Community analysis and support, virtual or physical, Expertise Location, Newcomer enculturation/learning, Q&A",
         "authors": [
             {
-                "name": "Hon J Teo"
+                "name": "Hon Jie Teo"
             },
             {
                 "name": "Aditya Johri"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw637": {
         "title": "Designing the virtual self: How avatar customization and psychological connections influence group collaboration",
@@ -2254,9 +2766,13 @@ entities={
                 "name": "Rabindra A Ratan"
             },
             {
-                "name": "B��atrice S Hasler"
+                "name": "Béatrice S Hasler"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw647": {
         "title": "Information Extraction and Manipulation Threats in Crowd-Powered Systems",
@@ -2272,7 +2788,11 @@ entities={
             {
                 "name": "Ece Kamar"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw648": {
         "title": "Cursing in English on Twitter",
@@ -2289,9 +2809,13 @@ entities={
                 "name": "Krishnaprasad Thirunarayan"
             },
             {
-                "name": "Amit P Sheth"
+                "name": "Amit P. Sheth"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw654": {
         "title": "Tweet Acts: How Constituents Lobby Congress via Twitter",
@@ -2304,7 +2828,11 @@ entities={
             {
                 "name": "Andrew J Roback"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw663": {
         "title": "Reconciling Rhythms: Plans and Temporal Alignment in Collaborative Scientific Work",
@@ -2317,7 +2845,11 @@ entities={
             {
                 "name": "Steven J Jackson"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "cscw668": {
         "title": "Family Matters: Control and Conflict in Online Family History Production",
@@ -2330,7 +2862,11 @@ entities={
             {
                 "name": "Andrea Forte"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "paper",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "tochi100": {
         "title": "Peer and Self Assessment in Massive Online Classes",
@@ -2339,8 +2875,33 @@ entities={
         "authors": [
             {
                 "name": "Chinmay Kulkarni"
+            },
+            {
+                "name": "Koh Pang Wei"
+            },
+            {
+                "name": "Huy Le"
+            },
+            {
+                "name": "Daniel Chia"
+            },
+            {
+                "name": "Kathryn Papadopoulos"
+            },
+            {
+                "name": "Justin Cheng"
+            },
+            {
+                "name": "Daphne Koller"
+            },
+            {
+                "name": "Scott Klemmer"
             }
-        ]
+        ],
+        "type": "paper",
+        "subtype": "tochi",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "pan100": {
         "title": "Computational Social Science: CSCW in the Social Media Era",
@@ -2371,7 +2932,11 @@ entities={
             {
                 "name": "Hanna Wallach"
             }
-        ]
+        ],
+        "type": "panel",
+        "subtype": "panel",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "pan101": {
         "title": "Making Cultures: Building Things & Building Communities",
@@ -2393,7 +2958,11 @@ entities={
             {
                 "name": "Daniela K Rosner"
             }
-        ]
+        ],
+        "type": "panel",
+        "subtype": "panel",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "pan102": {
         "title": " Lifestyle Teleworkers Speak Out!",
@@ -2415,7 +2984,11 @@ entities={
             {
                 "name": "Susan Herring"
             }
-        ]
+        ],
+        "type": "panel",
+        "subtype": "panel",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "pan103": {
         "title": "Facebook in the Developing World: The Myths and Realities Underlying a Socially Networked World",
@@ -2440,7 +3013,11 @@ entities={
             {
                 "name": "Judd Antin"
             }
-        ]
+        ],
+        "type": "panel",
+        "subtype": "panel",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     },
     "pan104": {
         "title": "The Ethos and Pragmatics of Data Sharing",
@@ -2468,6 +3045,10 @@ entities={
             {
                 "name": "Katie Shilton"
             }
-        ]
+        ],
+        "type": "panel",
+        "subtype": "panel",
+        "bestPaperAward": 0,
+        "bestPaperNominee": 0
     }
 }

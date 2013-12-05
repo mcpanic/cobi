@@ -1,7 +1,6 @@
 sessions={
     "s100": {
         "s_title": "Blinding me with Science",
-        "room": "GB910",
         "time": "10:45-12:00",
         "submissions": [
             "cscw602",
@@ -28,11 +27,15 @@ sessions={
             "Community analysis and support, virtual or physical",
             "Machine Learning and Data Mining",
             "infoviz"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Jacki O'Neill"
     },
     "s101": {
         "s_title": "Building on Others",
-        "room": "GB6",
         "time": "9:00-10:15",
         "submissions": [
             "cscw293",
@@ -55,11 +58,15 @@ sessions={
             "Empirical Methods, Qualitative",
             "Legal/historical/philosophical aspects",
             "copyright law"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Steven Dow"
     },
     "s102": {
         "s_title": "Civic Participation",
-        "room": "GB910",
         "time": "10:45-12:00",
         "submissions": [
             "cscw145",
@@ -84,11 +91,15 @@ sessions={
             "e-government",
             "Tabletop and Large Wall Displays",
             "User experience/interaction design"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Andres Monroy-Hernandez"
     },
     "s103": {
         "s_title": "Collaborative Search and Sharing",
-        "room": "GB6",
         "time": "14:00-15:15",
         "submissions": [
             "cscw443",
@@ -105,11 +116,15 @@ sessions={
             "User experience/interaction design",
             "search process",
             "Computer-Mediated Communication"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Ed Chi"
     },
     "s104": {
         "s_title": "Collaborative Software Development",
-        "room": "GB910",
         "time": "9:00-10:15",
         "submissions": [
             "cscw147",
@@ -130,11 +145,15 @@ sessions={
             "Computer-Mediated Communication",
             "Organization/office/workplace support",
             "coordination"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Jim Herbsleb"
     },
     "s105": {
         "s_title": "Concurrency Control",
-        "room": "GB910",
         "time": "9:00-10:15",
         "submissions": [
             "cscw234",
@@ -149,11 +168,15 @@ sessions={
             "systems",
             "math",
             "Systems"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Sameer Patil"
     },
     "s106": {
         "s_title": "Craft, Repair, and DIY",
-        "room": "GB910",
         "time": "14:00-15:15",
         "submissions": [
             "cscw178",
@@ -176,11 +199,15 @@ sessions={
             "Cross-cultural Systems or Studies",
             "International tech infrastructure",
             "Other domain-specific support"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Volker Wulf"
     },
     "s107": {
         "s_title": "Crowdfunding: \"Show me the Money!\"",
-        "room": "GB34",
         "time": "10:45-12:00",
         "submissions": [
             "cscw432",
@@ -201,11 +228,15 @@ sessions={
             "volunteer work",
             "Crowd Worker Perspective",
             "Participation motivations"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Michael Bernstein"
     },
     "s108": {
         "s_title": "Crowdsourcing Complexity",
-        "room": "GB34",
         "time": "14:00-15:15",
         "submissions": [
             "cscw105",
@@ -232,11 +263,15 @@ sessions={
             "Focusing the Crowd",
             "Scientific work",
             "worker bees"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Karrie Karahalios"
     },
     "s109": {
         "s_title": "Family",
-        "room": "GB78",
         "time": "9:00-10:15",
         "submissions": [
             "cscw668",
@@ -263,11 +298,15 @@ sessions={
             "Coordination",
             "Home/family/intimacy support",
             "Sustainability"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "A.J. Brush"
     },
     "s110": {
         "s_title": "Filter Bubbles & News",
-        "room": "GB12",
         "time": "14:00-15:15",
         "submissions": [
             "cscw576",
@@ -284,11 +323,15 @@ sessions={
             "twitter",
             "Other domain-specific support",
             "news"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Kate Starbird"
     },
     "s111": {
         "s_title": "Friendsourcing",
-        "room": "GB12",
         "time": "10:45-12:00",
         "submissions": [
             "cscw609",
@@ -316,11 +359,15 @@ sessions={
             "Other domain-specific support",
             "consumer applications",
             "shopping"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Sharoda Paul"
     },
     "s112": {
         "s_title": "Gaming",
-        "room": "Dover AB",
         "time": "10:45-12:00",
         "submissions": [
             "cscw356",
@@ -340,11 +387,15 @@ sessions={
             "Virtual Worlds/Avatars/Proxies",
             "Concurrency control",
             "Community analysis and support, virtual or physical"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Jacob Biehl"
     },
     "s113": {
         "s_title": "Geographic Distance",
-        "room": "GB910",
         "time": "14:00-15:15",
         "submissions": [
             "cscw493",
@@ -371,11 +422,15 @@ sessions={
             "Social network analysis",
             "bubbles",
             "twitter"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Andrea Forte"
     },
     "s114": {
         "s_title": "Group Dynamics",
-        "room": "Dover AB",
         "time": "9:00-10:15",
         "submissions": [
             "cscw233",
@@ -397,11 +452,15 @@ sessions={
             "Wikipedia",
             "Collaboration architectures",
             "Virtual Worlds/Avatars/Proxies"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Les Nelson"
     },
     "s115": {
         "s_title": "ICT4D",
-        "room": "GB78",
         "time": "10:45-12:00",
         "submissions": [
             "cscw482",
@@ -420,11 +479,15 @@ sessions={
             "Organization/office/workplace support",
             "values",
             "User experience/interaction design"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Susan Wyche"
     },
     "s116": {
         "s_title": "Leadership",
-        "room": "GB910",
         "time": "10:45-12:00",
         "submissions": [
             "cscw305",
@@ -446,11 +509,15 @@ sessions={
             "office",
             "Crowdsourcing",
             "creativity"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Gilly Leshed"
     },
     "s117": {
         "s_title": "Locations and Maps",
-        "room": "GB910",
         "time": "14:00-15:15",
         "submissions": [
             "cscw584",
@@ -477,11 +544,15 @@ sessions={
             "urban computing",
             "Participation motivations",
             "User experience/interaction design"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Louise Barkhuus"
     },
     "s118": {
         "s_title": "MOOCs",
-        "room": "GB6",
         "time": "10:45-12:00",
         "submissions": [
             "cscw391",
@@ -500,15 +571,19 @@ sessions={
             "Online education",
             "Peer assessment",
             "design"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Anne Marie Piper"
     },
     "s119": {
         "s_title": "Parents and Children",
-        "room": "GB78",
         "time": "10:45-12:00",
         "submissions": [
-            "cscw100",
             "cscw499",
+            "cscw100",
             "cscw389"
         ],
         "personas": "Social Computing and Social Navigation",
@@ -534,11 +609,15 @@ sessions={
             "Entertainment/games",
             "Other domain-specific support",
             "User experience/interaction design"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 1,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Svetlana Yarosh"
     },
     "s120": {
         "s_title": "Personal Health Management",
-        "room": "GB78",
         "time": "14:00-15:15",
         "submissions": [
             "cscw295",
@@ -569,11 +648,15 @@ sessions={
             "emotion",
             "Marginalized communities",
             "youth"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 1,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Helena Mentis"
     },
     "s121": {
         "s_title": "Q&A",
-        "room": "Dover AB",
         "time": "14:00-15:15",
         "submissions": [
             "cscw636",
@@ -603,11 +686,15 @@ sessions={
             "Problem Solving in Online Communities",
             "coordination",
             "math"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "David McDonald"
     },
     "s122": {
         "s_title": "Reflective Research",
-        "room": "GB6",
         "time": "10:45-12:00",
         "submissions": [
             "cscw530",
@@ -629,11 +716,15 @@ sessions={
             "Social Computing and Social Navigation",
             "Virtual Worlds/Avatars/Proxies",
             "gesture"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Steve Sawyer"
     },
     "s123": {
         "s_title": "Romance",
-        "room": "GB12",
         "time": "14:00-15:15",
         "submissions": [
             "cscw285",
@@ -661,11 +752,15 @@ sessions={
             "Offline events",
             "Parties & cocktail hour",
             "Social Media Offline"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 1,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Vanessa Evers"
     },
     "s124": {
         "s_title": "Social Media & Politics",
-        "room": "GB12",
         "time": "14:00-15:15",
         "submissions": [
             "cscw430",
@@ -686,11 +781,15 @@ sessions={
             "Other domain-specific support",
             "civic participation",
             "twitter"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "m.c. schraefel"
     },
     "s125": {
         "s_title": "Social Media in the Enterprise",
-        "room": "GB6",
         "time": "9:00-10:15",
         "submissions": [
             "cscw358",
@@ -715,11 +814,15 @@ sessions={
             "Social Signals",
             "Stalking",
             "social networks in the organizaition"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Jennifer Thom"
     },
     "s126": {
         "s_title": "Social Media: Online and Off",
-        "room": "GB34",
         "time": "9:00-10:15",
         "submissions": [
             "cscw119",
@@ -740,11 +843,15 @@ sessions={
             "Machine Learning and Data Mining",
             "Social network analysis",
             "Privacy/access control/trust"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Jeffrey Bigham"
     },
     "s127": {
         "s_title": "Supporting Communities",
-        "room": "GB78",
         "time": "14:00-15:15",
         "submissions": [
             "cscw494",
@@ -778,11 +885,15 @@ sessions={
             "Entertainment/games",
             "instant messaging",
             "social media"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Wendy Kellogg"
     },
     "s128": {
         "s_title": "Telepresence",
-        "room": "GB78",
         "time": "10:45-12:00",
         "submissions": [
             "cscw244",
@@ -804,11 +915,15 @@ sessions={
             "Virtual Worlds/Avatars/Proxies",
             "Empirical Methods, Quantitative",
             "gesture"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 1,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Gina Venolia"
     },
     "s129": {
         "s_title": "The Office",
-        "room": "GB78",
         "time": "9:00-10:15",
         "submissions": [
             "cscw527",
@@ -836,11 +951,15 @@ sessions={
             "Social Media Offline",
             "Workplace interactions",
             "email"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Melissa Mazmanian"
     },
     "s130": {
         "s_title": "Performing Crowd Work",
-        "room": "GB34",
         "time": "14:00-15:15",
         "submissions": [
             "cscw365",
@@ -863,11 +982,15 @@ sessions={
             "Distributed/virtual teams",
             "Privacy/access control/trust",
             "Crowd Worker Perspective"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Dan Cosley"
     },
     "s131": {
         "s_title": "Values & Social Norms",
-        "room": "GB12",
         "time": "9:00-10:15",
         "submissions": [
             "cscw130",
@@ -892,11 +1015,15 @@ sessions={
             "consumer applications",
             "home",
             "persuasion"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Ingrid Erickson"
     },
     "s132": {
         "s_title": "Crowds in Crises",
-        "room": "GB34",
         "time": "14:00-15:15",
         "submissions": [
             "cscw243",
@@ -924,11 +1051,15 @@ sessions={
             "Emergency management",
             "Empirical Methods, Qualitative",
             "User experience/interaction design"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Edward Cutrell"
     },
     "s133": {
         "s_title": "Work in Hospitals",
-        "room": "GB78",
         "time": "14:00-15:15",
         "submissions": [
             "cscw210",
@@ -950,11 +1081,15 @@ sessions={
             "electronic medical records",
             "new institutionalism",
             "policy implication"
-        ]
+        ],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Aleksandra Sarcevic"
     },
     "s200": {
         "s_title": "Shopping and Collecting",
-        "room": "GB34",
         "time": "10:45-12:00",
         "submissions": [
             "cscw462",
@@ -964,11 +1099,15 @@ sessions={
         "personas": "",
         "venue": "paper",
         "day": "Tuesday, Feb 18th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Moira Burke"
     },
     "s201": {
         "s_title": "Volunteering and Doing Good",
-        "room": "GB34",
         "time": "10:45-12:00",
         "submissions": [
             "cscw188",
@@ -978,11 +1117,15 @@ sessions={
         "personas": "",
         "venue": "paper",
         "day": "Wednesday, Feb 19th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Aniket Kittur"
     },
     "s202": {
         "s_title": "Mobilizing for Action",
-        "room": "GB12",
         "time": "10:45-12:00",
         "submissions": [
             "cscw431",
@@ -992,11 +1135,15 @@ sessions={
         "personas": "",
         "venue": "paper",
         "day": "Wednesday, Feb 19th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Ido Guy"
     },
     "s203": {
         "s_title": "Mobile Apps for Enhancing Connectedness",
-        "room": "Dover AB",
         "time": "9:00-10:15",
         "submissions": [
             "cscw438",
@@ -1006,11 +1153,15 @@ sessions={
         "personas": "",
         "venue": "paper",
         "day": "Wednesday, Feb 19th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Paul Aoki"
     },
     "s204": {
         "s_title": "Distributed Teams",
-        "room": "Dover AB",
         "time": "14:00-15:15",
         "submissions": [
             "cscw596",
@@ -1020,11 +1171,15 @@ sessions={
         "personas": "",
         "venue": "paper",
         "day": "Wednesday, Feb 19th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Mary Beth Rosson"
     },
     "s205": {
         "s_title": "Social Technologies and Well-Being",
-        "room": "GB12",
         "time": "10:45-12:00",
         "submissions": [
             "cscw547",
@@ -1034,11 +1189,15 @@ sessions={
         "personas": "",
         "venue": "paper",
         "day": "Tuesday, Feb 18th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Michael Massimi"
     },
     "s206": {
         "s_title": "Multiple Dimensions and Displays",
-        "room": "GB6",
         "time": "14:00-15:15",
         "submissions": [
             "cscw390",
@@ -1048,11 +1207,15 @@ sessions={
         "personas": "",
         "venue": "paper",
         "day": "Wednesday, Feb 19th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Joseph Konstan"
     },
     "s207": {
         "s_title": "Identifying Opportunities for Collaboration",
-        "room": "GB34",
         "time": "9:00-10:15",
         "submissions": [
             "cscw384",
@@ -1062,11 +1225,15 @@ sessions={
         "personas": "",
         "venue": "paper",
         "day": "Wednesday, Feb 19th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Jeremy Birnholtz"
     },
     "s208": {
         "s_title": "Technology and Information Workers",
-        "room": "Dover AB",
         "time": "10:45-12:00",
         "submissions": [
             "cscw387",
@@ -1076,11 +1243,15 @@ sessions={
         "personas": "",
         "venue": "paper",
         "day": "Tuesday, Feb 18th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Morten Fjeld"
     },
     "s209": {
         "s_title": "Promoting Participation and Engagement",
-        "room": "Dover AB",
         "time": "14:00-15:15",
         "submissions": [
             "cscw629",
@@ -1090,11 +1261,15 @@ sessions={
         "personas": "",
         "venue": "paper",
         "day": "Tuesday, Feb 18th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "paper",
+        "chair": "Mark Handel"
     },
     "s210": {
         "s_title": "Building Communities and Relationships",
-        "room": "Dover AB",
         "time": "10:45-12:00",
         "submissions": [
             "cscw223",
@@ -1104,83 +1279,99 @@ sessions={
         "personas": "",
         "venue": "paper",
         "day": "Monday, Feb 17th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "paper",
+        "hasAward": 0,
+        "hasHonorableMention": 1,
+        "subtype": "paper",
+        "chair": "Daniel Wigdor"
     },
     "s211": {
-        "s_title": "Video Track Session<br>",
-        "room": "GB910",
+        "s_title": "Video Track Session",
         "time": "15:45-17:00",
-        "submissions": [
-            ""
-        ],
-        "personas": "",
-        "venue": "paper",
-        "day": "Monday, Feb 17th",
-        "s_tags": []
-    },
-    "s212": {
-        "s_title": "Demos",
-        "room": "GB78",
-        "time": "15:45-17:00",
-        "submissions": [
-            ""
-        ],
-        "personas": "",
-        "venue": "paper",
-        "day": "Monday, Feb 17th",
-        "s_tags": []
-    },
-    "s213": {
-        "s_title": "Posters 1",
-        "room": "GB12",
-        "time": "15:45-17:00",
-        "submissions": [
-            ""
-        ],
-        "personas": "",
-        "venue": "paper",
-        "day": "Monday, Feb 17th",
-        "s_tags": []
-    },
-    "s214": {
-        "s_title": "Posters 2",
-        "room": "GB34",
-        "time": "15:45-17:00",
-        "submissions": [
-            ""
-        ],
-        "personas": "",
-        "venue": "paper",
-        "day": "Monday, Feb 17th",
-        "s_tags": []
-    },
-    "s215": {
-        "s_title": "Poster 3",
-        "room": "Dover AB",
-        "time": "15:45-17:00",
-        "submissions": [
-            ""
-        ],
-        "personas": "",
-        "venue": "paper",
-        "day": "Monday, Feb 17th",
-        "s_tags": []
-    },
-    "s216": {
-        "s_title": "Poster & Demo Reception",
-        "room": "GB56",
-        "time": "17:00-19:00",
-        "submissions": [
-            ""
-        ],
+        "submissions": [],
         "personas": "",
         "venue": "special",
         "day": "Monday, Feb 17th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "special",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
+    },
+    "s212": {
+        "s_title": "Demos",
+        "time": "15:45-17:00",
+        "submissions": [],
+        "personas": "",
+        "venue": "special",
+        "day": "Monday, Feb 17th",
+        "s_tags": [],
+        "type": "special",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
+    },
+    "s213": {
+        "s_title": "Posters 1",
+        "time": "15:45-17:00",
+        "submissions": [],
+        "personas": "",
+        "venue": "special",
+        "day": "Monday, Feb 17th",
+        "s_tags": [],
+        "type": "special",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
+    },
+    "s214": {
+        "s_title": "Posters 2",
+        "time": "15:45-17:00",
+        "submissions": [],
+        "personas": "",
+        "venue": "special",
+        "day": "Monday, Feb 17th",
+        "s_tags": [],
+        "type": "special",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
+    },
+    "s215": {
+        "s_title": "Posters",
+        "time": "15:45-17:00",
+        "submissions": [],
+        "personas": "",
+        "venue": "special",
+        "day": "Monday, Feb 17th",
+        "s_tags": [],
+        "type": "special",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
+    },
+    "s216": {
+        "s_title": "Poster & Demo Reception",
+        "time": "17:00-19:00",
+        "submissions": [],
+        "personas": "",
+        "venue": "special",
+        "day": "Monday, Feb 17th",
+        "s_tags": [],
+        "type": "special",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
     },
     "s217": {
         "s_title": "Computational Social Science: CSCW in the Social Media Era",
-        "room": "GB5",
         "time": "14:00-15:15",
         "submissions": [
             "pan100"
@@ -1188,11 +1379,15 @@ sessions={
         "personas": "",
         "venue": "panel",
         "day": "Tuesday, Feb 18th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "panel",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "panel",
+        "chair": ""
     },
     "s218": {
         "s_title": "Making Cultures: Building Things &amp; Building Communities",
-        "room": "GB5",
         "time": "14:00-15:15",
         "submissions": [
             "pan101"
@@ -1200,11 +1395,15 @@ sessions={
         "personas": "",
         "venue": "panel",
         "day": "Wednesday, Feb 19th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "panel",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "panel",
+        "chair": ""
     },
     "s219": {
         "s_title": "Lifestyle Teleworks Speak Out!",
-        "room": "GB5",
         "time": "9:00-10:15",
         "submissions": [
             "pan102"
@@ -1212,11 +1411,15 @@ sessions={
         "personas": "",
         "venue": "panel",
         "day": "Tuesday, Feb 18th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "panel",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "panel",
+        "chair": ""
     },
     "s2110": {
         "s_title": "Facebook in the Developing World: The Myths and Realities Underlying a Socially Networked World",
-        "room": "GB5",
         "time": "10:45-12:00",
         "submissions": [
             "pan103"
@@ -1224,11 +1427,15 @@ sessions={
         "personas": "",
         "venue": "panel",
         "day": "Wednesday, Feb 19th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "panel",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "panel",
+        "chair": ""
     },
     "s2111": {
         "s_title": "The Ethos and Pragmatics of Data Sharing",
-        "room": "GB5",
         "time": "9:00-10:15",
         "submissions": [
             "pan104"
@@ -1236,78 +1443,95 @@ sessions={
         "personas": "",
         "venue": "panel",
         "day": "Wednesday, Feb 19th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "panel",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "panel",
+        "chair": ""
     },
     "s220": {
-        "s_title": "Intro &amp; Plenary",
-        "room": "GB56",
+        "s_title": "Welcome and Opening Plenary: Mary Flanagan",
         "time": "8:45-10:15",
-        "submissions": [
-            ""
-        ],
+        "submissions": [],
         "personas": "",
         "venue": "special",
         "day": "Monday, Feb 17th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "special",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
     },
     "s221": {
         "s_title": "Lasting Impact",
-        "room": "GB56",
         "time": "15:45-16:45",
-        "submissions": [
-            ""
-        ],
+        "submissions": [],
         "personas": "",
         "venue": "special",
         "day": "Tuesday, Feb 18th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "special",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
     },
     "s222": {
         "s_title": "Townhall",
-        "room": "GB56",
         "time": "16:45-17:45",
-        "submissions": [
-            ""
-        ],
+        "submissions": [],
         "personas": "",
         "venue": "special",
         "day": "Tuesday, Feb 18th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "special",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
     },
     "s223": {
         "s_title": "Museum",
-        "room": "GB56",
         "time": "18:00-19:00",
-        "submissions": [
-            ""
-        ],
+        "submissions": [],
         "personas": "",
         "venue": "special",
         "day": "Tuesday, Feb 18th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "special",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
     },
     "s224": {
         "s_title": "Reception",
-        "room": "GB56",
         "time": "19:00-22:00",
-        "submissions": [
-            ""
-        ],
+        "submissions": [],
         "personas": "",
         "venue": "special",
         "day": "Tuesday, Feb 18th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "special",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
     },
     "s225": {
-        "s_title": "Closing &amp; Plenary",
-        "room": "GB56",
+        "s_title": "Closing Plenary: Patrick Meier",
         "time": "15:45-17:15",
-        "submissions": [
-            ""
-        ],
+        "submissions": [],
         "personas": "",
         "venue": "special",
         "day": "Wednesday, Feb 19th",
-        "s_tags": []
+        "s_tags": [],
+        "type": "special",
+        "hasAward": 0,
+        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
     }
 }
