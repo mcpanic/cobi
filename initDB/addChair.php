@@ -13,8 +13,6 @@ $authorId = mysqli_real_escape_string($mysqli, $argv[2]);
 $id = mysqli_real_escape_string($mysqli, $argv[3]);
 $affinity = mysqli_real_escape_string($mysqli, json_encode(array(), JSON_FORCE_OBJECT));
 
-
-
 $squery = "insert into sessionChairs (authorId, type, id, venue, rank, givenName, middleInitial, familyName, email, role, primaryAff, secondaryAff) select * from authors where authorId='$authorId' limit 1";
 mysqli_query($mysqli, $squery);
 echo mysqli_error($mysqli);
