@@ -1,4 +1,4 @@
-var csv = require("csv");
+B1;2cvar csv = require("csv");
 var fs = require('fs');
 var newAuth = 100000;
 
@@ -41,7 +41,7 @@ function loadSubmissions(){
     parser.from(PCSINPUT);
     parser.on("end", function(){
 	    if(CREATEAUTHORFILE){
-		var authors = createAuthorData(PCSdata);
+		var authors = createAuthorData(PCSdata, VENUE);
 		fs.writeFile(AUTHORFILE, JSON.stringify(authors, null, 4), function(err) {});
 	    }
 	    if(CREATEENTITYFILE){
@@ -203,7 +203,7 @@ function createScheduleData(){
     return schedule;
 }
 
-function createAuthors(sub){
+function createAuthors(sub, venue){
     var authors = [];
     var numAuthors = sub["Author list"].split(",").length;
     for (var i = 1; i <= numAuthors; i++){    
@@ -214,10 +214,10 @@ function createAuthors(sub){
 	    "id" : sub["ID"],
 	    "venue" : "paper",
 	    "rank" : i,
-	    "givenName" : sub["Author given first name " + i],
-	    "middleInitial" : sub["Author middle initial or name " + i],
-	    "familyName" : sub["Author last/family name " + i]	,
-	    "email" : sub["Valid email address " + i],
+	    "givenName" : ((venue == 'TOCHI') ? sub["Given name " + i] : sub["Author given first name " + i]),	
+	    "middleInitial" : ((venue == "TOCHI") ? sub["Middle initial " + i] : sub["Author middle initial or name " + i]),
+	    "familyName" : ((venue == "TOCHI") ? sub["Family name " + i] : sub["Author last/family name " + i]),
+	    "email" : ((venue == "TOCHI") ? sub["Email " + i] : sub["Valid email address " + i]),
 	    "role" : "",
 	    "primary" : { 
 		"dept" : sub["Primary Affiliation " + i + " - Department/School/Lab"],
@@ -256,9 +256,9 @@ function createEntityAuthors(sub, venue){
 	    "venue" : venue,
 	    "rank" : i,
 	    "givenName" : ((venue == 'TOCHI') ? sub["Given name " + i] : sub["Author given first name " + i]),	
-   	    "middleInitial" : ((venue == "TOCHI") ? "" : sub["Middle initial or name " + i]),
+   	    "middleInitial" : ((venue == "TOCHI") ? sub["Middle initial " + i] : sub["Middle initial or name " + i]),
 	    "familyName" : ((venue == "TOCHI") ? sub["Family name " + i] : sub["Author last/family name " + i]),
-	    "email" : ((venue == "TOCHI") ? sub["Email address " + i] : sub["Valid email address " + i]),
+	    "email" : ((venue == "TOCHI") ? sub["Email " + i] : sub["Valid email address " + i]),
 	    "primary" : { 
 		"dept" : sub["Primary Affiliation " + i + " - Department/School/Lab"],
 		"institution" : sub["Primary Affiliation " + i + " - Institution"],
@@ -277,11 +277,11 @@ function createEntityAuthors(sub, venue){
     return authors;
 }
 
-function createAuthorData(data){
+function createAuthorData(data, venue){
     var authors = [];
     for(var s = 0; s < data.length; s++){ // for each submission
 	var sub = data[s];
-	authors = authors.concat(createAuthors(sub));
+	authors = authors.concat(createAuthors(sub, venue));
     }
     return authors;
 }
@@ -291,20 +291,20 @@ function createEntityData(data, sessionData, venue){
     for(var s = 0; s < data.length; s++){ // for each submission
 	var sub = data[s]; 
 	var submission = {
-		"id" : sub["ID"],
-		"title" : sub["Title"],
-		"abstract" : sub["Abstract"],
-		"acmLink" : "",
-		"authors" : createEntityAuthors(sub), 
-		"cbStatement" : sub["Contribution & Benefit Statement (Mandatory Field)"],
-		"contactEmail" : sub["Contact Email"],
-		"contactFirstName" : sub["Contact given name"],
-		"contactLastName" : sub["Contact family name"],
-		"keywords" : sub["Author Keywords"],
-		"venue" : venue,
-		"subtype" : sub["Paper or Note"],
-		"session" : getSession(sessionData, sub["ID"]),
-		"communities" : getLabels(sessionData, sub["ID"])
+	    "id" : sub["ID"],
+	    "title" : sub["Title"],
+	    "abstract" : sub["Abstract"],
+	    "acmLink" : "",
+	    "authors" : createEntityAuthors(sub, venue), 
+	    "cbStatement" : sub["Contribution & Benefit Statement (Mandatory Field)"],
+	    "contactEmail" : sub["Contact Email"],
+	    "contactFirstName" : sub["Contact given name"],
+	    "contactLastName" : sub["Contact family name"],
+	    "keywords" : sub["Author Keywords"],
+	    "venue" : venue,
+	    "subtype" : sub["Paper or Note"],
+	    "session" : getSession(sessionData, sub["ID"]),
+	    "communities" : getLabels(sessionData, sub["ID"])
 	}
 	submissions.push(submission);
     }
