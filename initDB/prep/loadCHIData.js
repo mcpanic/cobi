@@ -169,7 +169,7 @@ function mode(array)
 function createScheduleData(){
     var schedule = [];
     var rooms = ["718A","718B","701A","701B","801A","801B","803AB","716A","716B","714AB","717AB","802AB","715A","715B","713AB","707","709","711","Plenary"];
-    var slots = [{"date":"Monday", "time": "9:00-10:20"},
+    var slots = [//{"date":"Monday", "time": "9:00-10:20"},
 		 {"date":"Monday", "time": "11:00-12:20"},
 		 {"date":"Monday", "time": "14:00-15:20"},
 		 {"date":"Monday", "time": "16:00-17:20"},
@@ -184,7 +184,8 @@ function createScheduleData(){
 		 {"date":"Thursday", "time": "9:00-10:20"},
 		 {"date":"Thursday", "time": "11:00-12:20"},
 		 {"date":"Thursday", "time": "14:00-15:20"},
-		 {"date":"Thursday", "time": "16:00-17:20"}];
+		 //{"date":"Thursday", "time": "16:00-17:20"}
+    ];
     
     var slotId = 100; 
     for(var i = 0; i < rooms.length; i++){

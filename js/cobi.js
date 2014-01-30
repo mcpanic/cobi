@@ -41,27 +41,27 @@ var roomCapacity = [ // TODO update
 
 var desiredRoomOrder = ["718A","718B","701A","701B","801A","801B","803AB","716A","716B","714AB","717AB","802AB","715A","715B","713AB","707","709","711","Plenary"];
 
-var personaList = ["3D",
-		   "Art",
-		   "CSCW",
-		   "Design",
-		   "Games",
-		   "HCI4D",
-		   "Health",
-		   "Making",
-		   "Methods",
-		   "People",
-		   "Science",
-		   "Security",
-		   "Social",
-		   "Systems",
-		   "Touch",
-		   "Transportation",
-		   "UBI",
-		   "UIST",
-		   "Viz",
-		   "Web"
-		   ];
+var personaList = [
+    'HCI4D',
+    'Games',
+    'UIST',
+    'Health',
+    'Making',
+    'Social',
+    'Methods and Models',
+    'Touch',
+    'People',
+    'Viz',
+    'Security',
+    'CSCW',
+    'Design',
+    'Displays',
+    'UBI',
+    'Systems',
+    'Art',
+    '3D',
+    'Transportation',
+    'Web'];
     
 var fullpersonaList = personaList;
 
