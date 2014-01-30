@@ -1,0 +1,608 @@
+[
+    {
+        "id": "case115",
+        "title": "Measuring Product “Coolness” -- Developing a Measurement Instrument",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth39471",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Carol",
+                "familyName": "Farnsworth",
+                "email": "carol.farnsworth@sap.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth31489",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Karen",
+                "familyName": "Holtzblatt",
+                "email": "karen@incontextdesign.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth17508",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Shantanu",
+                "familyName": "Pai",
+                "email": "shanritz@gmail.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth16923",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Theo",
+                "familyName": "Held",
+                "email": "theo.held@sap.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39472",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Sally",
+                "familyName": "Lawler Kennedy",
+                "email": "sally.lawler.kennedy@sap.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39473",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Eli",
+                "familyName": "Wylen",
+                "email": "eli.wylen@incontextdesign.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth31582",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 7,
+                "givenName": "Pallavi",
+                "familyName": "Kutty",
+                "email": "pallavi.kutty@sap.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth31048",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 8,
+                "givenName": "Kelley",
+                "familyName": "Wagg",
+                "email": "kelley.wagg@incontextdesign.com",
+                "primary": {},
+                "secondary": {}
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "shelley@incontextdesign.com",
+        "contactFirstName": "Shelley",
+        "contactLastName": "Wood",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case118",
+        "title": "Quick and Participatory: Adopting Users' Design to Improve Mobile App",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth39719",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Kate Sangwon",
+                "familyName": "Lee",
+                "email": "kate@navercorp.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39715",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Sun",
+                "familyName": "Lee",
+                "email": "sun.lee@navercorp.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39716",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Hyojung",
+                "familyName": "Kim",
+                "email": "kihozip@navercorp.com",
+                "primary": {},
+                "secondary": {}
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "snowwon@gmail.com",
+        "contactFirstName": "Kate Sangwon",
+        "contactLastName": "Lee",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case138",
+        "title": "GREYBOX Scheduling:  Designing a Joint Cognitive System  for Sustainable Manufacturing",
+        "abstract": "The aims of this work were to investigate how decision making in production planning happens, to understand how energy efficiency could be included as a manufacturing goal and to design a decision support system that integrates into current work practices. This case study describes the research, design and development this system. An interactive visualisation provides an interface to a flexible optimisation engine and allows experts to interpret, amend and augment system inputs and outputs without the need for programming knowledge. This approach supports collaboration between automated and human agents, working as a joint cognitive system. ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth39544",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Connor",
+                "familyName": "Upton",
+                "email": "connor.upton@intel.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39770",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Fergus",
+                "familyName": "Quilligan",
+                "email": "fergus.quilligan@intel.com",
+                "primary": {},
+                "secondary": {}
+            }
+        ],
+        "cbStatement": "This presentation describes the research, design and development of a software tool for energy efficient scheduling in an industrial environment. The system couples an optimization engine with an interactive visualization. ",
+        "contactEmail": "connor.upton@gmail.com",
+        "contactFirstName": "Connor",
+        "contactLastName": "Upton",
+        "keywords": "Joint Cognitive Systems; Decision Support; Visualisation; Optimisation; Design ",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case147",
+        "title": "Tactics for HCI Design Interventions with Nonprofit Organizations",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth18768",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Vicki",
+                "familyName": "Moulder",
+                "email": "vmoulder@sfu.ca",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth19133",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Lorna",
+                "familyName": "Boschman",
+                "email": "lorna.boschman@gmail.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth3350",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Ron",
+                "familyName": "Wakkary",
+                "email": "rwakkary@sfu.ca",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth8702",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "William",
+                "familyName": "Odom",
+                "email": "wodom@cs.cmu.edu",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth12782",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Stacey",
+                "familyName": "Kuznetsov",
+                "email": "stace@cs.cmu.edu",
+                "primary": {},
+                "secondary": {}
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "vmoulder@sfu.ca",
+        "contactFirstName": "Vicki",
+        "contactLastName": "Moulder",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case150",
+        "title": "User-Centered Design for More Efficient Drill Rig Control System",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth39733",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Katri",
+                "familyName": "Koli",
+                "email": "katri.koli@leadin.fi",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth14054",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Tuula",
+                "familyName": "Kärkkäinen",
+                "email": "tuula.karkkainen@gmail.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth11817",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Jaakko",
+                "familyName": "Lehikoinen",
+                "email": "jaakko.t.lehikoinen@nokia.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39747",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Tuomo",
+                "familyName": "Pirinen",
+                "email": "tuomo.pirinen@sandvik.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39748",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Sami",
+                "familyName": "Hanski",
+                "email": "sami.hanski@sandvik.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39749",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Juha",
+                "familyName": "Lassila",
+                "email": "juha.lassila@sandvik.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39750",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 7,
+                "givenName": "Mikko",
+                "familyName": "Loimusalo",
+                "email": "mikko.loimusalo@sandvik.com",
+                "primary": {},
+                "secondary": {}
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "katri.koli@leadin.fi",
+        "contactFirstName": "Katri",
+        "contactLastName": "Koli",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case163",
+        "title": "Redefinition of Requirements in the Design and Development of the Project Mapocci: from Digital Art to HCI Research",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth24287",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Lilia",
+                "familyName": "Villafuerte",
+                "email": "lilia@villafuerte.info",
+                "primary": {},
+                "secondary": {}
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "lilia@villafuerte.info",
+        "contactFirstName": "Lilia",
+        "contactLastName": "Villafuerte",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case170",
+        "title": "Influence of Cultural, Organizational, and Automation Factors on Test Pilots’ Trust Development on Auto-GCAS",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth39991",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Kolina",
+                "familyName": "Koltai",
+                "email": "kolina.koltai.31@my.csun.edu",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39990",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Nhut",
+                "familyName": "Ho",
+                "email": "nhut.ho.51@csun.edu",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39915",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "David",
+                "familyName": "Niedober",
+                "email": "david.niedober.788@my.csun.edu",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth40151",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Gina",
+                "familyName": "Masequesmay",
+                "email": "gina.masequesmay@csun.edu",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth40152",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Mark",
+                "familyName": "Skoog",
+                "email": "mark.a.skoog@nasa.gov",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth40153",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Artemio",
+                "familyName": "Cacanindin",
+                "email": "artemio.cacanindin@us.af.mil",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth40154",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 7,
+                "givenName": "Walter",
+                "familyName": "Johnson",
+                "email": "walter.johnson@nasa.gov",
+                "primary": {},
+                "secondary": {}
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "david.niedober.788@my.csun.edu",
+        "contactFirstName": "David",
+        "contactLastName": "Niedober",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case173",
+        "title": "Using Micro Surveys for Agile User  Research",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth16346",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Victoria",
+                "familyName": "Schwanda Sosik",
+                "email": "sosik@cs.cornell.edu",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth38860",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Elie",
+                "familyName": "Bursztein",
+                "email": "elieb@google.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth2938",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Sunny",
+                "familyName": "Consolvo",
+                "email": "sconsolvo@google.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth9100",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "David",
+                "familyName": "Huffaker",
+                "email": "huffaker@google.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth13241",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Gueorgi",
+                "familyName": "Kossinets",
+                "email": "gkossinets@gmail.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39962",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Kerwell",
+                "familyName": "Liao",
+                "email": "kerwell@google.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth39963",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 7,
+                "givenName": "Paul",
+                "familyName": "McDonald",
+                "email": "pmcdonald@google.com",
+                "primary": {},
+                "secondary": {}
+            },
+            {
+                "id": "auth31522",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 8,
+                "givenName": "Aaron",
+                "familyName": "Sedley",
+                "email": "asedley@google.com",
+                "primary": {},
+                "secondary": {}
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "davetown101@gmail.com",
+        "contactFirstName": "David",
+        "contactLastName": "Huffaker",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case176",
+        "title": "Challenges At The Bottom Of The Pyramid:  An Ethnographic Study of South African Mobile Users",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth11429",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Susan",
+                "familyName": "Dray",
+                "email": "susan.dray@dray.com",
+                "primary": {},
+                "secondary": {}
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "",
+        "contactFirstName": "",
+        "contactLastName": "",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    }
+]

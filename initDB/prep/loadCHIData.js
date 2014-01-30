@@ -1,39 +1,39 @@
 var csv = require("csv");
 var fs = require('fs');
 var newAuth = 100000;
-var assignments = require('./assignments');
+var assignments = require('./input/assignments');
 
 // INPUT
-var FRENZYINPUT = "./data-final.json";
+var FRENZYINPUT = "./input/data-final.json";
 var IGNORELIST = ['to132'];
 
-var CREATEAUTHORFILE = false;//true;
-var CREATEENTITYFILE = false;//true;
+var CREATEAUTHORFILE = true;
+var CREATEENTITYFILE = true;
 var CREATESESSIONFILE = true;
 var CREATESCHEDULEFILE = true;
 var SESSIONSTART = 100;
 
 var PCSINPUT = "";
-var VENUE = "paper";
+//var VENUE = "paper";
 //var VENUE = "TOCHI";
 //var VENUE = "casestudy";
-//var VENUE = "SIG";
+var VENUE = "SIG";
 //var VENUE = "course";
 
 if(VENUE == "paper"){
-    PCSINPUT = "Papers-listOfFinalSubmissions.csv";
+    PCSINPUT = "./input/Papers-listOfFinalSubmissions.csv";
 }else if(VENUE == "TOCHI"){
-    PCSINPUT = "TOCHI-listOfFinalSubmissions.csv";
+    PCSINPUT = "./input/TOCHI-listOfFinalSubmissions.csv";
 }else if(VENUE == "casestudy"){
-    PCSINPUT = "CaseStudy-listOfFinalSubmissions.csv";
+    PCSINPUT = "./input/CaseStudy-listOfFinalSubmissions.csv";
 }else if(VENUE == "course"){
-    PCSINPUT = "Courses-listOfFinalSubmissions.csv";
+    PCSINPUT = "./input/Courses-listOfFinalSubmissions.csv";
 }else if(VENUE == "SIG"){
-    PCSINPUT = "SIGs-listOfFinalSubmissions.csv";
+    PCSINPUT = "./input/SIGs-listOfFinalSubmissions.csv";
 }
 var AUTHORFILE = VENUE + "-authors.json";
 var ENTITYFILE = VENUE + "-entities.json";
-var SESSIONFILE = "sessions.json";
+var SESSIONFILE = VENUE + "-sessions.json";
 var SCHEDULEFILE = "schedule.json";
 
 var roomAssignments = loadAssignments(assignments);
@@ -41,7 +41,7 @@ var roomAssignments = loadAssignments(assignments);
 // LOAD DATA
 var PCSdata = []; // assume loaded CSV of submission data
 var Frenzyrawdata = require(FRENZYINPUT); // assume Frenzy format json without "data = " part
-Frenzydata = loadFrenzyData(Frenzyrawdata); //console.log(Frenzydata);
+var Frenzydata = loadFrenzyData(Frenzyrawdata); //console.log(Frenzydata);
 loadSubmissions();
 
 function loadAssignments(as){
@@ -119,19 +119,23 @@ function loadSubmissions(){
     parser.on("end", function(){
 	    if(CREATEAUTHORFILE){
 		var authors = createAuthorData(PCSdata, VENUE);
-		fs.writeFile(AUTHORFILE, JSON.stringify(authors, null, 4), function(err) {});
+		fs.writeFile("output/" + AUTHORFILE, JSON.stringify(authors, null, 4), function(err) {});
+		console.log(VENUE , "....author file created.");
 	    }
 	    if(CREATEENTITYFILE){
 		var entities = createEntityData(PCSdata, Frenzydata, VENUE);
-		fs.writeFile(ENTITYFILE, JSON.stringify(entities, null, 4), function(err) {});
+		fs.writeFile("output/" + ENTITYFILE, JSON.stringify(entities, null, 4), function(err) {});
+		console.log(VENUE , "....entity file created.");
 	    }
 	    if(CREATESESSIONFILE){
-		var sessions = createSessionData(Frenzydata);
-		fs.writeFile(SESSIONFILE, JSON.stringify(sessions, null, 4), function(err) {});
+		var sessions = createSessionData(PCSdata, Frenzydata);
+		fs.writeFile("output/" + SESSIONFILE, JSON.stringify(sessions, null, 4), function(err) {});
+		console.log(VENUE , "....session file created.");
 	    }
 	    if(CREATESCHEDULEFILE){
 		var schedule = createScheduleData();
-		fs.writeFile(SCHEDULEFILE, JSON.stringify(schedule, null, 4), function(err) {});
+		fs.writeFile("output/" + SCHEDULEFILE, JSON.stringify(schedule, null, 4), function(err) {});
+		console.log(VENUE , "....schedule file created.");
 	    }
 	});
 }
@@ -214,16 +218,69 @@ function createPaperSessionData(data){
 	    "submissions" : sessionData['members'].join(),
 	    "title" : title,
 	    "venue" : VENUE,
-	    "scheduled" : 0
+	    "scheduled" : ((info.date == "") ? 0 : 1)
 	}
 	sessions.push(session);
     }
     return sessions;
 }
 
-function createSessionData(data){
+function createEmptySession(id,title,scheduled){
+    return {
+	"id" :  id,
+	"date" : "",
+	"time" : "",
+	"room" : ""	,   
+	"communities" : [],
+	"persona" : "",
+	"submissions" : "",
+	"title" : title,
+	"venue" : VENUE,
+	"scheduled" : scheduled
+    }
+}
+
+function createCaseStudySessionData(PCSdata){
+    var sessions = [];
+    var numCSsessions = 3;
+    for(var i = 1; i <= 3; i++){
+	sessions.push(createEmptySession("s-case-" + i, "Case Study Session " + i, 0));
+    }
+    return sessions;
+}
+
+function createSIGSessionData(PCSdata){
+    var sessions = [];
+    for(var i = 0; i < PCSdata.length; i++){
+	var sub = PCSdata[i];
+	var info = sessionLookup("s-" + sub['ID']);
+	var session = {
+	    "id" : "s-" + sub["ID"], 
+	    "date" : info.date,
+	    "time" : info.time,
+	    "room" : info.room,
+	    "communities" : [],
+	    "persona" : "",
+	    "submissions" : "",
+	    "title" : ((sub["Title"].indexOf("[NOT SUBMITTED]") == 0) ?
+		       sub["Title"].substring(16) : sub["Title"]),
+	    "venue" : VENUE,
+	    "scheduled" : ((info.date == "") ? 0 : 1)
+	}
+	sessions.push(session);
+    }
+    return sessions;
+}
+		
+function createSessionData(PCSdata, data){
     if(VENUE == "paper" || VENUE == "TOCHI")
 	return createPaperSessionData(data)
+
+    if(VENUE == "casestudy")
+	return createCaseStudySessionData(PCSdata)
+    
+    if(VENUE == "SIG")
+	return createSIGSessionData(PCSdata)
 }
 
 function mode(array)
@@ -468,7 +525,7 @@ function getSession(sessionData, id){
     }
 
     var sessionName = Frenzyrawdata["items"][id]["session"];
-    console.log(sessionName);
+//    console.log(sessionName);
     
     if(sessionName in sessionData){
 //	console.log(sessionData[sessionName]['id']);
