@@ -5,6 +5,7 @@ var personas = {};
 
 
 for (var i in data){
+
     if(i.indexOf(": ") != -1){
 	personas[i.split(":")[0]] = true;
     }

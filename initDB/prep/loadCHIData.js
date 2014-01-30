@@ -1,33 +1,110 @@
 var csv = require("csv");
 var fs = require('fs');
 var newAuth = 100000;
+var assignments = require('./assignments');
 
 // INPUT
 var FRENZYINPUT = "./data-final.json";
-//var PCSINPUT = "Papers-listOfFinalSubmissions.csv";
-// var PCSINPUT = "CaseStudy-listOfFinalSubmissions.csv";
-// var PCSINPUT = "Courses-listOfFinalSubmissions.csv";
-// var PCSINPUT = "SIGs-listOfFinalSubmissions.csv";
-var PCSINPUT = "TOCHI-listOfFinalSubmissions.csv";
-var VENUE = "TOCHI";
-//var VENUE = "paper";
 var IGNORELIST = ['to132'];
 
-var AUTHORFILE = "authors.json";
-var ENTITYFILE = "entities.json";
+var CREATEAUTHORFILE = false;//true;
+var CREATEENTITYFILE = false;//true;
+var CREATESESSIONFILE = true;
+var CREATESCHEDULEFILE = true;
+var SESSIONSTART = 100;
+
+var PCSINPUT = "";
+var VENUE = "paper";
+//var VENUE = "TOCHI";
+//var VENUE = "casestudy";
+//var VENUE = "SIG";
+//var VENUE = "course";
+
+if(VENUE == "paper"){
+    PCSINPUT = "Papers-listOfFinalSubmissions.csv";
+}else if(VENUE == "TOCHI"){
+    PCSINPUT = "TOCHI-listOfFinalSubmissions.csv";
+}else if(VENUE == "casestudy"){
+    PCSINPUT = "CaseStudy-listOfFinalSubmissions.csv";
+}else if(VENUE == "course"){
+    PCSINPUT = "Courses-listOfFinalSubmissions.csv";
+}else if(VENUE == "SIG"){
+    PCSINPUT = "SIGs-listOfFinalSubmissions.csv";
+}
+var AUTHORFILE = VENUE + "-authors.json";
+var ENTITYFILE = VENUE + "-entities.json";
 var SESSIONFILE = "sessions.json";
 var SCHEDULEFILE = "schedule.json";
-var CREATEAUTHORFILE = false;
-var CREATEENTITYFILE = true;
-var CREATESESSIONFILE = false;
-var CREATESCHEDULEFILE = false;
-var SESSIONSTART = 100;
+
+var roomAssignments = loadAssignments(assignments);
 
 // LOAD DATA
 var PCSdata = []; // assume loaded CSV of submission data
 var Frenzyrawdata = require(FRENZYINPUT); // assume Frenzy format json without "data = " part
 Frenzydata = loadFrenzyData(Frenzyrawdata); //console.log(Frenzydata);
 loadSubmissions();
+
+function loadAssignments(as){
+    var records = [];
+    // courses
+    for(var i = 0; i < as.courses.length; i++){
+	var cd = as.courses[i].split(",");
+	var date = cd[0];
+	var time = cd[1];
+	for(var j = 2; j < cd.length; j++){
+	    if(cd[j].indexOf("XXX") == -1){
+		var room = as.courseRooms[j-2];
+		var sessionId = "s-" + cd[j];
+		records.push({
+		    "id": sessionId,
+		    "date": date,
+		    "time": time, 
+		    "room": room,
+		});
+	    }
+	}
+    }
+    
+    // SIGs
+    for(var i = 0; i < as.sigs.length; i++){
+	var cd = as.sigs[i].split(",");
+	var date = cd[0];
+	var time = cd[1];
+	for(var j = 2; j < cd.length; j++){
+	    if(cd[j].indexOf("XXX") == -1){
+		var room = as.sigRooms[j-2];
+		var sessionId = "s-" + cd[j];
+		records.push({
+		    "id": sessionId,
+		    "date": date,
+		    "time": time, 
+		    "room": room,
+		});
+	    }
+	}
+    }
+
+    // papers
+    for(var i = 0; i < as.papers.length; i++){
+	var cd = as.papers[i].split(",");
+	var date = cd[0];
+	var time = cd[1];
+	for(var j = 2; j < cd.length; j++){
+	    if(cd[j].indexOf("XXX") == -1){
+		var room = as.paperRooms[j-2];
+		var sessionId = cd[j];
+		records.push({
+		    "id": sessionId,
+		    "date": date,
+		    "time": time, 
+		    "room": room,
+		});
+	    }
+	}
+    }
+    return records;
+}
+
 
 function loadSubmissions(){
     var parser = csv();
@@ -111,11 +188,11 @@ var communityList = ['SC_Applications-B',
 		     'SC_TOCHI',
 		     'SC_Usability'];
 
-function createSessionData(data){
+function createPaperSessionData(data){
     var sessions = [];
+
+    // Papers and TOCHI sessions...
     for(var i in data){
-	// for each session
-       
 	var sessionData = data[i];
 	var submissions = sessionData['members'];
 	var allLabels = getLabelsForSubs(sessionData, submissions);
@@ -126,22 +203,27 @@ function createSessionData(data){
 	    persona = parts[0];
 	    title = parts[1];
 	}
-
+	var info = sessionLookup(sessionData['id']);
 	var session = {
 	    "id" : sessionData['id'],
-	    "date" : "",
-	    "time" : "",
-	    "room" : "",
+	    "date" : info.date,
+	    "time" : info.time,
+	    "room" : info.room,
 	    "communities" : allLabels.getUnique(),
 	    "persona" : persona,
 	    "submissions" : sessionData['members'].join(),
 	    "title" : title,
-	    "venue" : "paper",
+	    "venue" : VENUE,
 	    "scheduled" : 0
 	}
 	sessions.push(session);
     }
     return sessions;
+}
+
+function createSessionData(data){
+    if(VENUE == "paper" || VENUE == "TOCHI")
+	return createPaperSessionData(data)
 }
 
 function mode(array)
@@ -169,6 +251,7 @@ function mode(array)
 function createScheduleData(){
     var schedule = [];
     var rooms = ["718A","718B","701A","701B","801A","801B","803AB","716A","716B","714AB","717AB","802AB","715A","715B","713AB","707","709","711","Plenary"];
+
     var slots = [//{"date":"Monday", "time": "9:00-10:20"},
 		 {"date":"Monday", "time": "11:00-12:20"},
 		 {"date":"Monday", "time": "14:00-15:20"},
@@ -195,13 +278,41 @@ function createScheduleData(){
 		"date" : slots[j].date,
 		"time" : slots[j].time,
 		"room" : rooms[i],
-		"sessionId" : ""
+		"sessionId" : assignmentLookup(slots[j].date, slots[j].time, rooms[i])
 	    };
 	    slotId+=1;
 	    schedule.push(slot);
 	}
     }
     return schedule;
+}
+
+function sessionLookup(id){
+    var results = roomAssignments.filter(function(x){return x.id == id});
+    if(results.length == 1){
+	return results[0];
+    }
+    return {
+	"date": "",
+	"time": "",
+	"room": ""
+    }
+}
+
+function assignmentLookup(date, time, room){
+    var results = roomAssignments.filter(function(x) 
+			   { return (x.date == date && 
+				     x.time == time && 
+				     x.room == room)});
+    if(results.length > 1){
+	console.log("multiple results in same room???");
+	console.log(date , time , room)
+	return ""
+    }
+    if(results.length == 1){
+	return results[0].id;
+    }
+    return "";
 }
 
 function createAuthors(sub, venue){
@@ -213,10 +324,10 @@ function createAuthors(sub, venue){
 	    "authorId" : "auth" + createAuth(sub["Author ID " + i]),
 	    "type" : "author",
 	    "id" : sub["ID"],
-	    "venue" : "paper",
+	    "venue" : venue,
 	    "rank" : i,
 	    "givenName" : ((venue == 'TOCHI') ? sub["Given name " + i] : sub["Author given first name " + i]),	
-	    "middleInitial" : ((venue == "TOCHI") ? sub["Middle initial " + i] : sub["Author middle initial or name " + i]),
+	    "middleInitial" : ((venue == "TOCHI") ? sub["Middle initial " + i] : sub["Middle initial or name " + i]),
 	    "familyName" : ((venue == "TOCHI") ? sub["Family name " + i] : sub["Author last/family name " + i]),
 	    "email" : ((venue == "TOCHI") ? sub["Email " + i] : sub["Valid email address " + i]),
 	    "role" : "",
@@ -315,6 +426,8 @@ function createEntityData(data, sessionData, venue){
 
 function getLabels(sessionData, id){
     var labelArray = [];
+    if(!(id in Frenzyrawdata["items"])) return labelArray;
+
     var labels = Frenzyrawdata["items"][id]["labels"];
     for(var l in labels){
 	if(labels[l].checked){
@@ -349,12 +462,16 @@ function getLabelsForSubs(sessionData, ids){
 
 
 function getSession(sessionData, id){
+    if(!(id in Frenzyrawdata["items"])){
+	console.log("Missing: " + id);
+	return "";
+    }
+
     var sessionName = Frenzyrawdata["items"][id]["session"];
     console.log(sessionName);
-
+    
     if(sessionName in sessionData){
-	console.log(sessionData[sessionName]['id']);
-
+//	console.log(sessionData[sessionName]['id']);
 	return sessionData[sessionName]['id'];
     }else{
 	console.log("Missing: " + sessionName);
