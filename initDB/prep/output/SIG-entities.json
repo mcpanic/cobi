@@ -33,7 +33,7 @@
         "contactLastName": "Wood",
         "keywords": "User-centered design; user studies; user research analysis and representation; requirements gathering and specifications",
         "venue": "SIG",
-        "session": "",
+        "session": "s-sig103",
         "communities": []
     },
     {
@@ -136,7 +136,7 @@
         "contactLastName": "Howes",
         "keywords": "science; theory; modeling; scientific method; empirical method; experiments; data; evidence; analysis; behavioral sciences; interaction science",
         "venue": "SIG",
-        "session": "",
+        "session": "s-sig105",
         "communities": []
     },
     {
@@ -206,7 +206,7 @@
         "contactLastName": "Mueller",
         "keywords": "Sports; exercise; exertion interface ",
         "venue": "SIG",
-        "session": "",
+        "session": "s-sig107",
         "communities": []
     },
     {
@@ -309,7 +309,7 @@
         "contactLastName": "England",
         "keywords": "Digital Art; Performance Art; Interaction; Interdisciplinary; Collaboration; Curation",
         "venue": "SIG",
-        "session": "",
+        "session": "s-sig108",
         "communities": []
     },
     {
@@ -346,7 +346,7 @@
         "contactLastName": "Rosenbaum",
         "keywords": "Information design; user assistance; documentation usability; information development; information usability; documentation standards; usability testing; product development",
         "venue": "SIG",
-        "session": "",
+        "session": "s-sig109",
         "communities": []
     },
     {
@@ -438,7 +438,7 @@
         "contactLastName": "Peters",
         "keywords": "Community collaboration; HCI4D; International Development; ICTD, UCD4ID; Community Centered Design; Participatory Design; HCD4D",
         "venue": "SIG",
-        "session": "",
+        "session": "s-sig110",
         "communities": []
     },
     {
@@ -486,7 +486,7 @@
         "contactLastName": "Chinthammit",
         "keywords": "Food Product; Decision-making tool; Agriculture; Interaction Design",
         "venue": "SIG",
-        "session": "",
+        "session": "s-sig111",
         "communities": []
     },
     {
@@ -545,7 +545,7 @@
         "contactLastName": "Read",
         "keywords": "Child Computer Interaction; Research Networks; Research Themes; Community Building",
         "venue": "SIG",
-        "session": "",
+        "session": "s-sig112",
         "communities": []
     },
     {
@@ -582,7 +582,7 @@
         "contactLastName": "Wakkary",
         "keywords": "Magazine; interactions; publications; SIGCHI community",
         "venue": "SIG",
-        "session": "",
+        "session": "s-sig114",
         "communities": []
     },
     {
@@ -652,7 +652,7 @@
         "contactLastName": "Nacke",
         "keywords": "Video Games; Entertainment; HCI; Games; Play; Gamification; CHI PLAY; Player",
         "venue": "SIG",
-        "session": "",
+        "session": "s-sig117",
         "communities": []
     },
     {
@@ -755,7 +755,7 @@
         "contactLastName": "Clawson",
         "keywords": "Text entry; augmentative and alternative communication; accessibility; internationalization",
         "venue": "SIG",
-        "session": "",
+        "session": "s-sig118",
         "communities": []
     },
     {
@@ -792,7 +792,7 @@
         "contactLastName": "Rohn",
         "keywords": "User Experience; Management; Organizations; Design; Research; Practice; Method; Technique; Agile; Innovation; Lean",
         "venue": "SIG",
-        "session": "",
+        "session": "s-sig119",
         "communities": []
     }
 ]

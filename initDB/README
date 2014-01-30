@@ -2,3 +2,7 @@ Requirements
 ------------
 - CSV files from each venue
 - Authorsourcing CSV files
+
+
+1. php createDb.php
+2. php loadCHIData.php pineapple

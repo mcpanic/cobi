@@ -17,8 +17,8 @@ var PCSINPUT = "";
 //var VENUE = "paper";
 //var VENUE = "TOCHI";
 //var VENUE = "casestudy";
-var VENUE = "SIG";
-//var VENUE = "course";
+//var VENUE = "SIG";
+var VENUE = "course";
 
 if(VENUE == "paper"){
     PCSINPUT = "./input/Papers-listOfFinalSubmissions.csv";
@@ -261,7 +261,7 @@ function createSIGSessionData(PCSdata){
 	    "room" : info.room,
 	    "communities" : [],
 	    "persona" : "",
-	    "submissions" : "",
+	    "submissions" : sub["ID"],
 	    "title" : ((sub["Title"].indexOf("[NOT SUBMITTED]") == 0) ?
 		       sub["Title"].substring(16) : sub["Title"]),
 	    "venue" : VENUE,
@@ -271,7 +271,36 @@ function createSIGSessionData(PCSdata){
     }
     return sessions;
 }
-		
+
+function createCourseSessionData(PCSdata){
+    var sessions = [];
+    for(var i = 0; i < PCSdata.length; i++){
+	var sub = PCSdata[i];
+	var matches = roomAssignments.filter(function(x) {
+	    return (x.id.indexOf('s-' + sub['ID']) == 0)});
+	
+	for(var j = 0; j < matches.length; j++){
+	    var info = matches[j];
+	    var session = {
+		"id" : info.id,
+		"date" : info.date,
+		"time" : info.time,
+		"room" : info.room,
+		"communities" : [],
+		"persona" : "",
+		"submissions" : sub["ID"],
+		"title" : ((sub["Title"].indexOf("[NOT SUBMITTED]") == 0) ?
+			   (sub["Title"].substring(16) + " (" + (j+1) + "/" + matches.length +")") :
+			   (sub["Title"] + " (" + (j+1) + "/" + matches.length +")")),
+		"venue" : VENUE,
+		"scheduled" : ((info.date == "") ? 0 : 1)
+	    }
+	    sessions.push(session);
+	}
+    }
+    return sessions;
+}
+
 function createSessionData(PCSdata, data){
     if(VENUE == "paper" || VENUE == "TOCHI")
 	return createPaperSessionData(data)
@@ -281,6 +310,9 @@ function createSessionData(PCSdata, data){
     
     if(VENUE == "SIG")
 	return createSIGSessionData(PCSdata)
+    
+    if(VENUE == "course")
+	return createCourseSessionData(PCSdata)
 }
 
 function mode(array)
@@ -519,6 +551,19 @@ function getLabelsForSubs(sessionData, ids){
 
 
 function getSession(sessionData, id){
+    if(VENUE == "SIG"){
+	var matches = roomAssignments.filter(function(x) {
+	    return (x.id.indexOf('s-' + id) == 0)});
+	if(matches.length > 0) return matches[0].id;
+	else return ""
+    }
+    if(VENUE == "course"){
+	var matches = roomAssignments.filter(function(x) {
+	    return (x.id.indexOf('s-' + id) == 0)});
+	if(matches.length > 0) return matches[0].id;
+	else return ""
+    }
+
     if(!(id in Frenzyrawdata["items"])){
 	console.log("Missing: " + id);
 	return "";

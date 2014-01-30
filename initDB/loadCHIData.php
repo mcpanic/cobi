@@ -9,8 +9,7 @@ if(count($argv) != 2 or $argv[1] != 'pineapple'){
 }
 
 define("AUTHORFILE", "authors.json");
-define("PAPER_ENTITYFILE", "entities-papers.json");
-define("TOCHI_ENTITYFILE", "entities-tochi.json");
+define("ENTITYFILE", "entities.json");
 define("SESSIONFILE", "sessions.json");
 define("SCHEDULEFILE", "schedule.json");
 
@@ -18,8 +17,7 @@ $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASS
 
 clearTables($mysqli);
 createAuthorTable($mysqli);
-createEntityTable($mysqli, PAPER_ENTITYFILE);
-createEntityTable($mysqli, TOCHI_ENTITYFILE);
+createEntityTable($mysqli);
 createSessionTable($mysqli);
 createScheduleTable($mysqli);
 makeInitialTables($mysqli);
@@ -100,8 +98,8 @@ function createAuthorTable($mysqli) {
 	 return $authorHash;
 }		      
 
-function createEntityTable($mysqli, $file) {
-	 $entityFile = file_get_contents($file);
+function createEntityTable($mysqli) {
+	 $entityFile = file_get_contents(ENTITYFILE);
 	 $entityData = json_decode($entityFile, true);
 	 foreach ($entityData as $sub) {
 	 	$id = mysqli_real_escape_string($mysqli, $sub["id"]);

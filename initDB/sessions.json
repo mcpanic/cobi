@@ -1,9 +1,825 @@
 [
     {
-        "id": "s100",
+        "id": "s-case-1",
         "date": "",
         "time": "",
         "room": "",
+        "communities": [],
+        "persona": "",
+        "submissions": "",
+        "title": "Case Study Session 1",
+        "venue": "casestudy",
+        "scheduled": 0
+    },
+    {
+        "id": "s-case-2",
+        "date": "",
+        "time": "",
+        "room": "",
+        "communities": [],
+        "persona": "",
+        "submissions": "",
+        "title": "Case Study Session 2",
+        "venue": "casestudy",
+        "scheduled": 0
+    },
+    {
+        "id": "s-case-3",
+        "date": "",
+        "time": "",
+        "room": "",
+        "communities": [],
+        "persona": "",
+        "submissions": "",
+        "title": "Case Study Session 3",
+        "venue": "casestudy",
+        "scheduled": 0
+    },
+    {
+        "id": "s-crs100-1",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs100",
+        "title": "Introduction to Human-Computer Interaction (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs100-2",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs100",
+        "title": "Introduction to Human-Computer Interaction (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs101-1",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "709",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs101",
+        "title": "Methods of Design Synthesis – Moving from Data to Innovation (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs101-2",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "709",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs101",
+        "title": "Methods of Design Synthesis – Moving from Data to Innovation (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs102-1",
+        "date": "Tuesday",
+        "time": "14:00-15:20",
+        "room": "709",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs102",
+        "title": "Conceptual Models: Core to Good Design (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs102-2",
+        "date": "Tuesday",
+        "time": "16:00-17:20",
+        "room": "709",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs102",
+        "title": "Conceptual Models: Core to Good Design (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs105-1",
+        "date": "Tuesday",
+        "time": "9:00-10:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs105",
+        "title": "Card Sorting for Navigation Design (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs105-2",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs105",
+        "title": "Card Sorting for Navigation Design (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs106-1",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs106",
+        "title": "Agile User Experience and UCD (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs106-2",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs106",
+        "title": "Agile User Experience and UCD (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs108-1",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs108",
+        "title": "HTML5 Game Development (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs108-2",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs108",
+        "title": "HTML5 Game Development (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs111-1",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs111",
+        "title": "Empirical Research Methods for Human-Computer Interaction (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs111-2",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs111",
+        "title": "Empirical Research Methods for Human-Computer Interaction (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs113-1",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "709",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs113",
+        "title": "Introduction to Designing and Building Musical Interfaces (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs113-2",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "709",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs113",
+        "title": "Introduction to Designing and Building Musical Interfaces (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs115-1",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs115",
+        "title": "Make This! Introduction to Electronics Prototyping Using Arduino (1/4)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs115-2",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs115",
+        "title": "Make This! Introduction to Electronics Prototyping Using Arduino (2/4)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs115R-1",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "709",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs115",
+        "title": "Make This! Introduction to Electronics Prototyping Using Arduino (3/4)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs115R-2",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "709",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs115",
+        "title": "Make This! Introduction to Electronics Prototyping Using Arduino (4/4)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs116-1",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs116",
+        "title": "Hands-on Sketching Course (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs116-2",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs116",
+        "title": "Hands-on Sketching Course (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs121-1",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs121",
+        "title": "Including Children in Technology Design Processes: Techniques and Practices (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs121-2",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs121",
+        "title": "Including Children in Technology Design Processes: Techniques and Practices (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs122-1",
+        "date": "Tuesday",
+        "time": "9:00-10:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs122",
+        "title": "Multimodal Detection of Affective States: A Roadmap from Brain-Computer Interfaces, Face-Based Emotion Recognition, Eye Tracking Systems and Other Sensors (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs122-2",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs122",
+        "title": "Multimodal Detection of Affective States: A Roadmap from Brain-Computer Interfaces, Face-Based Emotion Recognition, Eye Tracking Systems and Other Sensors (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs123-1",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs123",
+        "title": "Interaction Design for Online Video and Television (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs123-2",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs123",
+        "title": "Interaction Design for Online Video and Television (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs124",
+        "date": "Monday",
+        "time": "11:00-12:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs124",
+        "title": "Designing Unbiased Surveys for HCI Research (1/1)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs129-1",
+        "date": "Tuesday",
+        "time": "9:00-10:20",
+        "room": "709",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs129",
+        "title": "Improving the User Interface for People with Disabilities (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs129-2",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "709",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs129",
+        "title": "Improving the User Interface for People with Disabilities (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs136",
+        "date": "Thursday",
+        "time": "14:00-15:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs136",
+        "title": "A Crash Course in Modern Geography for HCI Researchers and Practitioners (1/1)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs137-1",
+        "date": "Tuesday",
+        "time": "14:00-15:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs137",
+        "title": "Computer Vision in interaction and UX (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs137-2",
+        "date": "Tuesday",
+        "time": "16:00-17:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs137",
+        "title": "Computer Vision in interaction and UX (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs138-1",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs138",
+        "title": "Speech-based Interaction: Myths, Challenges, and Opportunities (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs138-2",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs138",
+        "title": "Speech-based Interaction: Myths, Challenges, and Opportunities (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs142",
+        "date": "Thursday",
+        "time": "14:00-15:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs142",
+        "title": "How You Could Benefit from Using ISO Standards (1/1)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs143-1",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs143",
+        "title": "HCI Meets Data Mining: Principles and Tools for Big Data Analytics (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs143-2",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs143",
+        "title": "HCI Meets Data Mining: Principles and Tools for Big Data Analytics (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs144-1",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs144",
+        "title": "The Glass Class: Designing Wearable Interfaces (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs144-2",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "802AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs144",
+        "title": "The Glass Class: Designing Wearable Interfaces (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs146",
+        "date": "Thursday",
+        "time": "14:00-15:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs146",
+        "title": "Evaluating Children’s Interactive Products (1/1)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs147-1",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "709",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs147",
+        "title": "Rapid Design Labs—A Tool to Turbocharge Design-Led Innovation (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs147-2",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "709",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs147",
+        "title": "Rapid Design Labs—A Tool to Turbocharge Design-Led Innovation (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs149-1",
+        "date": "Tuesday",
+        "time": "14:00-15:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs149",
+        "title": "Online A/B Tests & Experiments: A Practical But Scientifically Informed Introduction (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs149-2",
+        "date": "Tuesday",
+        "time": "16:00-17:20",
+        "room": "711",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs149",
+        "title": "Online A/B Tests & Experiments: A Practical But Scientifically Informed Introduction (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs153-1",
+        "date": "Tuesday",
+        "time": "14:00-15:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs153",
+        "title": "Mobile HCI (1/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs153-2",
+        "date": "Tuesday",
+        "time": "16:00-17:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs153",
+        "title": "Mobile HCI (2/2)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs156",
+        "date": "Monday",
+        "time": "11:00-12:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs156",
+        "title": "Sampling & Synthesis: The Two Sides of Experience Sketching (1/1)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs157",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs157",
+        "title": "Reflections on Design (1/1)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs158",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs158",
+        "title": "Designing for Seniors (1/1)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs160",
+        "date": "Tuesday",
+        "time": "9:00-10:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs160",
+        "title": "The Body in Design (1/1)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-crs161",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "713AB",
+        "communities": [],
+        "persona": "",
+        "submissions": "crs161",
+        "title": "How social media design reshapes society (1/1)",
+        "venue": "course",
+        "scheduled": 1
+    },
+    {
+        "id": "s-sig103",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "715A",
+        "communities": [],
+        "persona": "",
+        "submissions": "sig103",
+        "title": "Communicating User Research in Order to Drive Design and Product Decisions",
+        "venue": "SIG",
+        "scheduled": 1
+    },
+    {
+        "id": "s-sig105",
+        "date": "Tuesday",
+        "time": "14:00-15:20",
+        "room": "715A",
+        "communities": [],
+        "persona": "",
+        "submissions": "sig105",
+        "title": "Interaction Science SIG: Overcoming Challenges",
+        "venue": "SIG",
+        "scheduled": 1
+    },
+    {
+        "id": "s-sig107",
+        "date": "Tuesday",
+        "time": "16:00-17:20",
+        "room": "715A",
+        "communities": [],
+        "persona": "",
+        "submissions": "sig107",
+        "title": "Jogging with Technology: Interaction Design Supporting Sport Activities",
+        "venue": "SIG",
+        "scheduled": 1
+    },
+    {
+        "id": "s-sig108",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "715A",
+        "communities": [],
+        "persona": "",
+        "submissions": "sig108",
+        "title": "Art And Interaction SIG: Cataloging The Digital Arts",
+        "venue": "SIG",
+        "scheduled": 1
+    },
+    {
+        "id": "s-sig109",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "715A",
+        "communities": [],
+        "persona": "",
+        "submissions": "sig109",
+        "title": "Current Issues in Assessing and Improving Information Usability",
+        "venue": "SIG",
+        "scheduled": 1
+    },
+    {
+        "id": "s-sig110",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "715A",
+        "communities": [],
+        "persona": "",
+        "submissions": "sig110",
+        "title": "Community Centered Collaborative HCI Design / Research in Developing Countries",
+        "venue": "SIG",
+        "scheduled": 1
+    },
+    {
+        "id": "s-sig111",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "715A",
+        "communities": [],
+        "persona": "",
+        "submissions": "sig111",
+        "title": "HCI in Food Product Innovation",
+        "venue": "SIG",
+        "scheduled": 1
+    },
+    {
+        "id": "s-sig112",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "715A",
+        "communities": [],
+        "persona": "",
+        "submissions": "sig112",
+        "title": "Child Computer Interaction SIG: Towards Sustainable Thinking and Being",
+        "venue": "SIG",
+        "scheduled": 1
+    },
+    {
+        "id": "s-sig114",
+        "date": "Thursday",
+        "time": "14:00-15:20",
+        "room": "715A",
+        "communities": [],
+        "persona": "",
+        "submissions": "sig114",
+        "title": "Interactions Magazine",
+        "venue": "SIG",
+        "scheduled": 1
+    },
+    {
+        "id": "s-sig117",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "715A",
+        "communities": [],
+        "persona": "",
+        "submissions": "sig117",
+        "title": "Games and Entertainment Community SIG: Reaching beyond CHI",
+        "venue": "SIG",
+        "scheduled": 1
+    },
+    {
+        "id": "s-sig118",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "715A",
+        "communities": [],
+        "persona": "",
+        "submissions": "sig118",
+        "title": "The Usability of Text Entry Systems Now and in the Future",
+        "venue": "SIG",
+        "scheduled": 1
+    },
+    {
+        "id": "s-sig119",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "715A",
+        "communities": [],
+        "persona": "",
+        "submissions": "sig119",
+        "title": "Managing UX Teams",
+        "venue": "SIG",
+        "scheduled": 1
+    },
+    {
+        "id": "s100",
+        "date": "Monday",
+        "time": "11:00-12:20",
+        "room": "801B",
         "communities": [
             "tools for learning",
             "Video Content / Communications",
@@ -25,13 +841,13 @@
         "submissions": "pn1623,pn1414,pn1203,pn216,pn223",
         "title": "Lost and Found in Translation",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s101",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "11:00-12:20",
+        "room": "718B",
         "communities": [
             "Exertion games",
             "dance/movement",
@@ -57,13 +873,13 @@
         "submissions": "pn1626,pn1183,pn122,pn1709",
         "title": "Exergame Design",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s102",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "11:00-12:20",
+        "room": "718A",
         "communities": [
             "Touch Input",
             "Smartwatches",
@@ -85,13 +901,13 @@
         "submissions": "pn1628,pn142,pn1007,pn372,pn1488",
         "title": "Small Devices",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s103",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "718A",
         "communities": [
             "Funny",
             "interactive furniture",
@@ -116,13 +932,13 @@
         "submissions": "pn2150,pn2041,pn1186,pn313,pn385",
         "title": "Shape-Changers",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s104",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "11:00-12:20",
+        "room": "716B",
         "communities": [
             "Empirical Methods, Quantitative",
             "College students",
@@ -147,13 +963,13 @@
         "submissions": "pn2153,pn1188,pn1514,pn490",
         "title": "Stress",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s105",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "14:00-15:20",
+        "room": "718B",
         "communities": [
             "3d printing",
             "Fabrication",
@@ -182,13 +998,13 @@
         "submissions": "pn2029,pn297,pn1034,pn1911",
         "title": "3D printing",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s106",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "16:00-17:20",
+        "room": "701A",
         "communities": [
             "social computing",
             "Research on Pinterest",
@@ -219,13 +1035,13 @@
         "submissions": "pn1710,pn2159,pn1763,pn1806",
         "title": "Social Media Applied",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s107",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "801A",
         "communities": [
             "search",
             "information foraging",
@@ -256,13 +1072,13 @@
         "submissions": "pn626,pn1982,pn951,pn405,pn718",
         "title": "The Eyes Have It",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s108",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "716B",
         "communities": [
             "3D Interaction and Graphics",
             "ludic engagement",
@@ -291,13 +1107,13 @@
         "submissions": "pn444,pn1896,pn2074,to111",
         "title": "Network of care",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s109",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "718A",
         "communities": [
             "Keyboards",
             "Gestural Interaction",
@@ -318,13 +1134,13 @@
         "submissions": "pn2157,pn2454,pn138,pn428",
         "title": "novel keyboards",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s110",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "718B",
         "communities": [
             "Input and Interaction Technologies",
             "User Studies",
@@ -345,13 +1161,13 @@
         "submissions": "pn464,pn425,pn1865,pn525",
         "title": "Touch-me Mobile Interaction",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s111",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "11:00-12:20",
+        "room": "717AB",
         "communities": [
             "gestures",
             "Kinecting People",
@@ -385,13 +1201,13 @@
         "submissions": "pn601,pn1099,pn111,pn139,pn420",
         "title": "Kinecting People",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s112",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "801B",
         "communities": [
             "community structures",
             "crowd innovation",
@@ -429,13 +1245,13 @@
         "submissions": "pn602,pn2193,pn1032,pn2276",
         "title": "Shopping and Economy",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s113",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "718B",
         "communities": [
             "Multitouchy Feely",
             "mid-air",
@@ -466,13 +1282,13 @@
         "submissions": "pn1092,pn756,pn988,pn2372",
         "title": "Touch",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s114",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "11:00-12:20",
+        "room": "701A",
         "communities": [
             "Aesthetics",
             "Multidisciplinary Design / Interdisciplinary Design",
@@ -498,13 +1314,13 @@
         "submissions": "pn1095,pn555,pn701,pn2490",
         "title": "Visual Aesthetics",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s115",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "717AB",
         "communities": [
             "usable privacy and security",
             "Graphical Passwords",
@@ -534,13 +1350,13 @@
         "submissions": "pn1097,pn1399,pn2090,pn2227,pn757",
         "title": "Passwords",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s116",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "9:00-10:20",
+        "room": "718A",
         "communities": [
             "Touch Input",
             "Performance Metrics",
@@ -559,13 +1375,13 @@
         "submissions": "pn264,pn2449,pn2432,pn755",
         "title": "Pointing",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s117",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "14:00-15:20",
+        "room": "717AB",
         "communities": [
             "micro work tasks",
             "Smartphones",
@@ -588,13 +1404,13 @@
         "submissions": "pn263,pn150,pn1103,to137",
         "title": "Crowdsourcing",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s118",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "14:00-15:20",
+        "room": "701A",
         "communities": [
             "information overload",
             "Handheld Devices and Mobile Computing",
@@ -623,13 +1439,13 @@
         "submissions": "pn116,pn1760,pn1413,to129,pn431",
         "title": "Information in Use",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s119",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "718B",
         "communities": [
             "Handheld Devices and Mobile Computing",
             "Empirical Methods, Quantitative",
@@ -659,13 +1475,13 @@
         "submissions": "pn113,pn426,pn2117,pn896,pn343",
         "title": "Multitouchy Feely",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s120",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "801B",
         "communities": [
             "HCI and personal finance",
             "money",
@@ -692,13 +1508,13 @@
         "submissions": "pn119,pn2134,pn186,pn671",
         "title": "Finances",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s121",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "701B",
         "communities": [
             "Design Methods (Design Rationale, Claims Analysis, Scenarios, Storyboards)",
             "Theater",
@@ -733,13 +1549,13 @@
         "submissions": "pn118,pn2220,pn1442,pn758",
         "title": "Research through Design",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s122",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "718A",
         "communities": [
             "Gestural interaction",
             "SC_Usability",
@@ -774,13 +1590,13 @@
         "submissions": "pn965,pn1756,pn1225,pn1727,pn1936",
         "title": "On the surface",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s123",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "9:00-10:20",
+        "room": "801B",
         "communities": [
             "Smartphones",
             "Handheld Devices and Mobile Computing",
@@ -806,13 +1622,13 @@
         "submissions": "pn286,pn1014,pn1454,pn1281",
         "title": "Emergency Response",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s124",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "16:00-17:20",
+        "room": "718B",
         "communities": [
             "Organizational Culture / Organizational Planning",
             "making practices",
@@ -843,13 +1659,13 @@
         "submissions": "pn967,pn1682,pn643,pn2011",
         "title": "how things don't work",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s125",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "718B",
         "communities": [
             "Augmented Reality and Tangible UI",
             "User Interface Design",
@@ -874,13 +1690,13 @@
         "submissions": "pn288,pn589,pn736,pn222",
         "title": "Head-Worn Displays (UIST)",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s126",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "716B",
         "communities": [
             "theory-driven design",
             "behavior change",
@@ -904,13 +1720,13 @@
         "submissions": "pn761,pn121,pn2317,pn2274",
         "title": "Persuade Me",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s127",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "16:00-17:20",
+        "room": "717AB",
         "communities": [
             "crowdsourcing",
             "Agents and Intelligent Systems",
@@ -941,13 +1757,13 @@
         "submissions": "pn1161,pn810,to107,pn526",
         "title": "interactions in the crowd",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s128",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "801B",
         "communities": [
             "MOOCs",
             "SC_Applications-W",
@@ -964,13 +1780,13 @@
         "submissions": "pn1362,pn1182,pn1817,pn2200",
         "title": "Learning and Education",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s129",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "11:00-12:20",
+        "room": "801A",
         "communities": [
             "Input and Interaction Technologies",
             "User Interface Design",
@@ -995,13 +1811,13 @@
         "submissions": "pn1360,pn276,pn1193,pn1586",
         "title": "Audio Interaction",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s130",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "14:00-15:20",
+        "room": "718A",
         "communities": [
             "gestures",
             "Input and Interaction Technologies",
@@ -1025,13 +1841,13 @@
         "submissions": "pn847,pn1425,pn549,pn2216",
         "title": "Gesture-based interaction",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s131",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "701A",
         "communities": [
             "Visualization",
             "Information Visualization",
@@ -1060,13 +1876,13 @@
         "submissions": "pn845,pn2027,pn1015,pn1783,to128,to126",
         "title": "Studying Visualization",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s132",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "718B",
         "communities": [
             "Visualization",
             "User Studies",
@@ -1096,13 +1912,13 @@
         "submissions": "pn1942,pn2084,pn1987,pn791",
         "title": "Fun N Play",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s133",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "14:00-15:20",
+        "room": "801B",
         "communities": [
             "Concept Design",
             "Handheld Devices and Mobile Computing",
@@ -1121,13 +1937,13 @@
         "submissions": "pn1949,to104,to117,to133",
         "title": "Sustainability and Everyday Practices",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s134",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "714AB",
         "communities": [
             "Visualization",
             "Debugging",
@@ -1144,13 +1960,13 @@
         "submissions": "pn2447,pn271,pn2103,pn664",
         "title": "Development Tools",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s135",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "701A",
         "communities": [
             "Visual System Design / Visual Design",
             "Information Visualization",
@@ -1168,13 +1984,13 @@
         "submissions": "pn2442,pn1337,pn1316,pn966",
         "title": "Visual System Design",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s136",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "714AB",
         "communities": [
             "End-user Programming",
             "Computer vision",
@@ -1201,13 +2017,13 @@
         "submissions": "pn2441,pn1020,pn224,pn884",
         "title": "Tutorials",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s137",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "701B",
         "communities": [
             "design in publics",
             "Science and Technology Studies",
@@ -1244,13 +2060,13 @@
         "submissions": "pn2140,pn581,pn1667,pn999",
         "title": "Critical Design",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s138",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "9:00-10:20",
+        "room": "716B",
         "communities": [
             "Tablet application",
             "Health Care",
@@ -1279,13 +2095,13 @@
         "submissions": "pn2020,pn1377,pn639,pn686,pn2284",
         "title": "Health and Everyday Life",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s139",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "16:00-17:20",
+        "room": "718A",
         "communities": [
             "3D Interaction and Graphics",
             "Pen and Tactile Input",
@@ -1313,13 +2129,13 @@
         "submissions": "pn2022,pn1651,pn1473,pn898",
         "title": "Gesture Entry",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s140",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "11:00-12:20",
+        "room": "714AB",
         "communities": [
             "E-Learning and Education",
             "BCI",
@@ -1349,13 +2165,13 @@
         "submissions": "pn2031,pn443,to102,pn1820",
         "title": "Narratives and Storytelling",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s141",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "717AB",
         "communities": [
             "E-Learning and Education",
             "Creativity Support Tools",
@@ -1381,13 +2197,13 @@
         "submissions": "pn1421,pn1503,pn2235,pn2343,pn2208",
         "title": "Crowds and Creativity",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s142",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "14:00-15:20",
+        "room": "714AB",
         "communities": [
             "Visualization",
             "3D Interaction and Graphics",
@@ -1414,13 +2230,13 @@
         "submissions": "pn1423,pn330,pn1513,pn147,pn1262",
         "title": "3D modeling",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s143",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "801A",
         "communities": [
             "Handheld Devices and Mobile Computing",
             "Ubiquitous Computing / Smart Environments",
@@ -1452,13 +2268,13 @@
         "submissions": "pn1426,pn1237,to134,pn1055,pn876",
         "title": "Activity Recognition",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s144",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "14:00-15:20",
+        "room": "718A",
         "communities": [
             "hackerspace culture",
             "make",
@@ -1495,13 +2311,13 @@
         "submissions": "pn1428,pn1081,pn2327,pn1904,pn529",
         "title": "Hacking",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s145",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "714AB",
         "communities": [
             "recommender systems",
             "decision support system",
@@ -1525,13 +2341,13 @@
         "submissions": "pn1398,pn1485,pn650,pn171",
         "title": "Machines Interactively Learning",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s146",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "714AB",
         "communities": [
             "arts",
             "Design practice",
@@ -1555,13 +2371,13 @@
         "submissions": "pn614,pn2451,pn1992,pn228",
         "title": "Image and Animation Authoring",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s147",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "718B",
         "communities": [
             "design in publics",
             "Remote Presence",
@@ -1594,13 +2410,13 @@
         "submissions": "pn279,to105,pn166,pn1269",
         "title": "Interactive Whitebaords and Public Displays",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s148",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "801A",
         "communities": [
             "User and Cognitive models",
             "Analysis Methods (e.g. Task/Interaction Modeling)",
@@ -1625,13 +2441,13 @@
         "submissions": "pn272,pn2119,pn2105,pn1916,pn2394",
         "title": "User Model 2",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s149",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "714AB",
         "communities": [
             "Input and Interaction Technologies",
             "Computer Supported Cooperative Work (CSCW)",
@@ -1648,13 +2464,13 @@
         "submissions": "pn104,pn1200,pn1336,pn205",
         "title": "Multi-Device User Interfaces",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s150",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "801A",
         "communities": [
             "replication",
             "Usability Research",
@@ -1683,13 +2499,13 @@
         "submissions": "pn292,pn1417,pn838,pn164",
         "title": "new HCI paradigms",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s151",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "716B",
         "communities": [
             "Motivation",
             "Exergames",
@@ -1714,13 +2530,13 @@
         "submissions": "pn1171,pn1736,pn2003,pn2487",
         "title": "HCI for Rehabilitation",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s152",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "714AB",
         "communities": [
             "Camera-based UIs",
             "Presentation tool",
@@ -1745,13 +2561,13 @@
         "submissions": "pn1179,pn1773,pn2303,pn1587",
         "title": "Presentations",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s153",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "16:00-17:20",
+        "room": "801B",
         "communities": [
             "Multilingual communication",
             "Annotation",
@@ -1776,13 +2592,13 @@
         "submissions": "pn1375,pn1347,pn1354,pn1867,pn248",
         "title": "Multilingual Communication",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s154",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "718B",
         "communities": [
             "Handheld Devices and Mobile Computing",
             "Ubiquitous Computing / Smart Environments",
@@ -1802,13 +2618,13 @@
         "submissions": "pn1372,pn654,pn2168,pn672",
         "title": "Novel Mobile Displays (UIST)",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s155",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "701B",
         "communities": [
             "Augmented Reality and Tangible UI",
             "Augmented Reality and Projection",
@@ -1849,13 +2665,13 @@
         "submissions": "pn621,pn2420,pn1796,pn2203,pn1850,pn250",
         "title": "Transportation and Wayfinding",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s156",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "801A",
         "communities": [
             "Ubiquitous Computing / Smart Environments",
             "Empirical Methods, Quantitative",
@@ -1875,13 +2691,13 @@
         "submissions": "pn2522,pn1192,pn155,pn2244",
         "title": "Smart Homes",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s157",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "717AB",
         "communities": [
             "usable privacy and security",
             "Smartphones",
@@ -1915,13 +2731,13 @@
         "submissions": "pn2525,pn1776,pn2463,pn2112",
         "title": "Privacy",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s158",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "801B",
         "communities": [
             "social media",
             "local communities",
@@ -1948,13 +2764,13 @@
         "submissions": "pn1954,pn2401,pn558,to112",
         "title": "City Communities",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s159",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "701A",
         "communities": [
             "Video Content / Communications",
             "Multimedia UIs",
@@ -1984,13 +2800,13 @@
         "submissions": "pn1958,pn1199,pn532,pn1333,pn883",
         "title": "Connecting over Video",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s160",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "14:00-15:20",
+        "room": "718B",
         "communities": [
             "Input and Interaction Technologies",
             "deformable interfaces",
@@ -2017,13 +2833,13 @@
         "submissions": "pn1883,pn1983,pn1222,pn389",
         "title": "Displays (UIST)",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s161",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "717AB",
         "communities": [
             "intertextuality",
             "Office and Workplace",
@@ -2046,13 +2862,13 @@
         "submissions": "pn1881,pn2225,pn514,pn340",
         "title": "Document and Intertextuality",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s162",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "718B",
         "communities": [
             "gaming",
             "Agents and Intelligent Systems",
@@ -2089,13 +2905,13 @@
         "submissions": "pn2046,pn1518,pn799,pn683,pn1901",
         "title": "Games",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s163",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "701B",
         "communities": [
             "Design Methods (Design Rationale, Claims Analysis, Scenarios, Storyboards)",
             "Design patterns",
@@ -2126,13 +2942,13 @@
         "submissions": "pn2048,pn1642,pn1268,pn2129",
         "title": "Design Theory",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s164",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "701A",
         "communities": [
             "Virtual Community / Community Computing",
             "Empirical Methods, Quantitative",
@@ -2161,13 +2977,13 @@
         "submissions": "pn1410,pn1341,pn2095,pn1918",
         "title": "Online Communities",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s165",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "14:00-15:20",
+        "room": "717AB",
         "communities": [
             "Death",
             "Caring for people",
@@ -2203,13 +3019,13 @@
         "submissions": "pn590,pn2094,pn785,pn255,pn2380",
         "title": "Personal Information",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s166",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "714AB",
         "communities": [
             "ludic engagement",
             "Guided experiences",
@@ -2229,13 +3045,13 @@
         "submissions": "pn1569,pn1704,pn395,pn1632",
         "title": "Museum Experience",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s167",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "16:00-17:20",
+        "room": "714AB",
         "communities": [
             "Augmented Reality and Tangible UI",
             "Augmented Reality",
@@ -2259,13 +3075,13 @@
         "submissions": "pn916,pn1758,pn734,pn977",
         "title": "The third dimension",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s168",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "701A",
         "communities": [
             "Social Systems",
             "Office and Workplace",
@@ -2293,13 +3109,13 @@
         "submissions": "pn1343,pn1236,pn1255,pn1490,pn691",
         "title": "Do Ask Do Tell",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s169",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "14:00-15:20",
+        "room": "701B",
         "communities": [
             "Handheld Devices and Mobile Computing",
             "Automotive",
@@ -2333,13 +3149,13 @@
         "submissions": "pn1969,to131,pn648,pn233",
         "title": "Driving Me Mental",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s170",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "718A",
         "communities": [
             "Input and Interaction Technologies",
             "Text Entry",
@@ -2360,13 +3176,13 @@
         "submissions": "pn2464,to118,to135,pn404,pn1700",
         "title": "Text Entry and Evaluation",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s171",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "14:00-15:20",
+        "room": "716B",
         "communities": [
             "Body",
             "Health Care",
@@ -2396,13 +3212,13 @@
         "submissions": "pn2293,pn1475,pn887,pn677",
         "title": "HealthyCHI",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s172",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "717AB",
         "communities": [
             "social computing",
             "Handheld Devices and Mobile Computing",
@@ -2431,13 +3247,13 @@
         "submissions": "pn2294,pn2424,pn1470,pn1123",
         "title": "Coordination & Collaboration",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s173",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "801A",
         "communities": [
             "Touch Input",
             "Inference",
@@ -2474,13 +3290,13 @@
         "submissions": "pn583,pn750,pn1057,pn1293,pn2560",
         "title": "User Model 1",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s174",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "801A",
         "communities": [
             "Design Methods (Design Rationale, Claims Analysis, Scenarios, Storyboards)",
             "Human-Robot Interaction",
@@ -2510,13 +3326,13 @@
         "submissions": "pn586,pn1227,pn1252,pn2358,pn1722",
         "title": "Human-Robot Interaction",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s175",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "9:00-10:20",
+        "room": "714AB",
         "communities": [
             "arts",
             "Empirical Methods, Quantitative",
@@ -2550,13 +3366,13 @@
         "submissions": "pn1579,pn547,pn541,pn1452,pn534",
         "title": "Performance 2",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s176",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "801A",
         "communities": [
             "End-user Programming",
             "Web 2.0",
@@ -2581,13 +3397,13 @@
         "submissions": "pn455,to120,pn1670,pn1071",
         "title": "Web",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s177",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "16:00-17:20",
+        "room": "716B",
         "communities": [
             "Cross-cultural studies",
             "SC_Applications-V",
@@ -2613,13 +3429,13 @@
         "submissions": "pn906,to113,pn2016,pn704",
         "title": "Older Adults",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s178",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "801B",
         "communities": [
             "social capital",
             "Social and Legal issues",
@@ -2654,13 +3470,13 @@
         "submissions": "pn905,pn1978,pn1325,pn2226",
         "title": "CHI for Social Development",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s179",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "701A",
         "communities": [
             "Interaction Design",
             "User Experience Design / Experience Design",
@@ -2689,13 +3505,13 @@
         "submissions": "pn1190,pn1238,pn941,pn2054",
         "title": "Computer Mediated Romance",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s180",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "717AB",
         "communities": [
             "interruption",
             "productivity",
@@ -2728,13 +3544,13 @@
         "submissions": "pn1351,pn806,pn641,pn1282",
         "title": "Interruptions and Distractions",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s181",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "714AB",
         "communities": [
             "search",
             "User Studies",
@@ -2763,13 +3579,13 @@
         "submissions": "pn2128,pn361,pn239,pn400",
         "title": "Desktop Search and History",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s182",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "9:00-10:20",
+        "room": "716B",
         "communities": [
             "aggregating social network data",
             "Health Care",
@@ -2795,13 +3611,13 @@
         "submissions": "pn1009,pn802,pn1036,pn1814",
         "title": "Social Media and Health",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s183",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "14:00-15:20",
+        "room": "717AB",
         "communities": [
             "Empirical Methods, Quantitative",
             "World Wide Web and Hypermedia",
@@ -2828,13 +3644,13 @@
         "submissions": "pn1976,pn1811,pn191,pn1724,pn2005",
         "title": "Security",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s184",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "801B",
         "communities": [
             "Value-Sensitive Design",
             "Social and Legal issues",
@@ -2863,13 +3679,13 @@
         "submissions": "pn169,pn399,pn2489,pn2160",
         "title": "doing the right thing - ethics",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s185",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "9:00-10:20",
+        "room": "718B",
         "communities": [
             "E-Learning and Education",
             "gamification",
@@ -2895,13 +3711,13 @@
         "submissions": "pn2472,pn1750,pn2330,pn1120",
         "title": "Education Games",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s186",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Monday",
+        "time": "16:00-17:20",
+        "room": "717AB",
         "communities": [
             "Economics & HCI",
             "Organizational Culture / Organizational Planning",
@@ -2938,13 +3754,13 @@
         "submissions": "pn2266,pn219,pn180,pn345",
         "title": "constant connectivity",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s187",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "9:00-10:20",
+        "room": "701A",
         "communities": [
             "Time-series Data",
             "Dynamic Visualization",
@@ -2961,13 +3777,13 @@
         "submissions": "pn337,pn2242,pn1472,pn1447",
         "title": "Novel Visual Elements",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s188",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "801B",
         "communities": [
             "Animation",
             "Children",
@@ -2998,13 +3814,13 @@
         "submissions": "pn1745,pn2406,pn950,pn2328",
         "title": "Engage & Educate Children",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s189",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "9:00-10:20",
+        "room": "717AB",
         "communities": [
             "User Interface Design",
             "User and Cognitive models",
@@ -3040,13 +3856,13 @@
         "submissions": "pn1742,pn1675,pn1110,pn897",
         "title": "Location Location Location",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s190",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "718B",
         "communities": [
             "gaming",
             "Tactile and Haptic UIs",
@@ -3079,13 +3895,13 @@
         "submissions": "pn2277,pn1521,pn737,pn775",
         "title": "Exergames",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s191",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "701B",
         "communities": [
             "Design Methods (Design Rationale, Claims Analysis, Scenarios, Storyboards)",
             "diversity",
@@ -3120,13 +3936,13 @@
         "submissions": "pn1517,pn2368,pn866,pn2399",
         "title": "Participatory Design",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s192",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "14:00-15:20",
+        "room": "714AB",
         "communities": [
             "Third-party software add-on development",
             "Software Engineering",
@@ -3152,13 +3968,13 @@
         "submissions": "pn2096,pn198,pn189,pn435",
         "title": "GUIs",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s193",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "718A",
         "communities": [
             "Tactile and Haptic UIs",
             "Camera-based UIs",
@@ -3185,13 +4001,13 @@
         "submissions": "pn495,pn730,pn438,pn235,pn521",
         "title": "Motion and Haptics",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s194",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "718A",
         "communities": [
             "Perception",
             "Design implications",
@@ -3225,13 +4041,13 @@
         "submissions": "pn320,pn319,pn728,pn419",
         "title": "sensible sensory",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s195",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "701A",
         "communities": [
             "bad reputation",
             "social computing issues",
@@ -3264,13 +4080,13 @@
         "submissions": "pn924,pn1242,pn1296,pn653,pn2488",
         "title": "Lonely, Sad and Awful",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s196",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "801B",
         "communities": [
             "social impact",
             "Twitter",
@@ -3301,13 +4117,13 @@
         "submissions": "pn1330,pn763,pn657,pn1915",
         "title": "PolitiCHI",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s197",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "701A",
         "communities": [
             "2D Graphical Interfaces",
             "Video Content / Communications",
@@ -3337,13 +4153,13 @@
         "submissions": "pn796,pn1558,pn692,pn2268,pn1872",
         "title": "Navigating Video",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s198",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "801A",
         "communities": [
             "Instagram",
             "Empirical Methods, Quantitative",
@@ -3379,13 +4195,13 @@
         "submissions": "pn2417,pn1525,pn1241,pn1295",
         "title": "Photo sharing",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s199",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "11:00-12:20",
+        "room": "716B",
         "communities": [
             "Pain",
             "Input and Interaction Technologies",
@@ -3413,13 +4229,13 @@
         "submissions": "pn1684,pn2115,pn1290,pn1845",
         "title": "Exergaming for healthcare",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s200",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "701A",
         "communities": [
             "China",
             "Empirical Methods, Qualitative",
@@ -3449,13 +4265,13 @@
         "submissions": "pn1549,pn687,pn190,pn2483",
         "title": "Connecting through Social Media",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s201",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "717AB",
         "communities": [
             "user experience",
             "mobile",
@@ -3484,13 +4300,13 @@
         "submissions": "to108,pn1257,pn1818,pn2175",
         "title": "Emotions and Mobiles",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s202",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "801B",
         "communities": [
             "Sustainability",
             "user experience",
@@ -3508,13 +4324,13 @@
         "submissions": "to106,to127,to110,to136",
         "title": "Sustainability Perspectives",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s203",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "14:00-15:20",
+        "room": "716B",
         "communities": [
             "health and behavior change",
             "Quantified Health",
@@ -3541,13 +4357,13 @@
         "submissions": "to101,pn2214,pn1446,pn493",
         "title": "Quantified Self",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s204",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "14:00-15:20",
+        "room": "801A",
         "communities": [
             "arts",
             "longitudinal field study",
@@ -3568,13 +4384,13 @@
         "submissions": "to103,to122,to123,to132",
         "title": "Turn to the Wild",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s205",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "14:00-15:20",
+        "room": "701A",
         "communities": [
             "citizen science",
             "User Studies",
@@ -3606,13 +4422,13 @@
         "submissions": "pn1646,pn576,pn1460,pn862",
         "title": "Social News",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s206",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "11:00-12:20",
+        "room": "714AB",
         "communities": [
             "Pro-Am",
             "Music",
@@ -3631,13 +4447,13 @@
         "submissions": "pn1834,pn2202,pn1275,pn1932",
         "title": "Performance",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s207",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "718A",
         "communities": [
             "constructivist",
             "arts",
@@ -3667,13 +4483,13 @@
         "submissions": "to114,pn371,pn794,pn241,pn2010",
         "title": "Tangibles",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s208",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "16:00-17:20",
+        "room": "716B",
         "communities": [
             "Design Methods (Design Rationale, Claims Analysis, Scenarios, Storyboards)",
             "Health Care",
@@ -3696,13 +4512,13 @@
         "submissions": "pn787,pn1821,pn1298,pn1859",
         "title": "Interfaces for Care and Support",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s209",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "718A",
         "communities": [
             "Touch Input",
             "Tactile and Haptic UIs",
@@ -3737,13 +4553,13 @@
         "submissions": "pn1635,pn1583,pn1046,pn386",
         "title": "Force Input",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s210",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "14:00-15:20",
+        "room": "801B",
         "communities": [
             "tie strength",
             "Social Network Sites",
@@ -3768,13 +4584,13 @@
         "submissions": "pn751,pn1800,pn1617,pn1732",
         "title": "Family 2.0",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s211",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "9:00-10:20",
+        "room": "716B",
         "communities": [
             "Input and Interaction Technologies",
             "tongue",
@@ -3794,13 +4610,13 @@
         "submissions": "pn208,pn1482,pn739,pn2001,pn714",
         "title": "Accessibility",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s212",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "716B",
         "communities": [
             "social media",
             "Computer-Mediated Communication",
@@ -3821,13 +4637,13 @@
         "submissions": "pn975,pn1264,pn245,pn1923",
         "title": "Older Adults 2",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s213",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "11:00-12:20",
+        "room": "718A",
         "communities": [
             "Input and Interaction Technologies",
             "EEG-based HCI",
@@ -3851,13 +4667,13 @@
         "submissions": "pn366,pn1471,pn183,pn673",
         "title": "Read My Mind",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s214",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "9:00-10:20",
+        "room": "801A",
         "communities": [
             "Empirical Methods, Quantitative",
             "Input and Interaction Technologies",
@@ -3883,6 +4699,6 @@
         "submissions": "pn983,pn505,pn1707,pn1448",
         "title": "Battery Life",
         "venue": "paper",
-        "scheduled": 0
+        "scheduled": 1
     }
 ]
