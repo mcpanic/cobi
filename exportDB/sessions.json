@@ -29,8 +29,6 @@ sessions={
             "infoviz"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Jacki O'Neill"
     },
@@ -60,8 +58,6 @@ sessions={
             "copyright law"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Steven Dow"
     },
@@ -93,8 +89,6 @@ sessions={
             "User experience/interaction design"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Andres Monroy-Hernandez"
     },
@@ -118,17 +112,15 @@ sessions={
             "Computer-Mediated Communication"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "Ed Chi"
+        "chair": "TBD"
     },
     "s104": {
         "s_title": "Collaborative Software Development",
         "time": "9:00-10:15",
         "submissions": [
-            "cscw147",
             "cscw608",
+            "cscw147",
             "cscw211"
         ],
         "personas": "Collaborative software development",
@@ -147,8 +139,6 @@ sessions={
             "coordination"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
         "chair": "Jim Herbsleb"
     },
@@ -170,10 +160,8 @@ sessions={
             "Systems"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "Sameer Patil"
+        "chair": "TBD"
     },
     "s106": {
         "s_title": "Craft, Repair, and DIY",
@@ -201,10 +189,8 @@ sessions={
             "Other domain-specific support"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "Volker Wulf"
+        "chair": "Dave Randell"
     },
     "s107": {
         "s_title": "Crowdfunding: \"Show me the Money!\"",
@@ -230,8 +216,6 @@ sessions={
             "Participation motivations"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
         "chair": "Michael Bernstein"
     },
@@ -265,8 +249,6 @@ sessions={
             "worker bees"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Karrie Karahalios"
     },
@@ -300,10 +282,8 @@ sessions={
             "Sustainability"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "A.J. Brush"
+        "chair": "Erika Poole"
     },
     "s110": {
         "s_title": "Filter Bubbles & News",
@@ -325,8 +305,6 @@ sessions={
             "news"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Kate Starbird"
     },
@@ -334,9 +312,9 @@ sessions={
         "s_title": "Friendsourcing",
         "time": "10:45-12:00",
         "submissions": [
-            "cscw609",
             "cscw599",
-            "cscw550"
+            "cscw550",
+            "cscw609"
         ],
         "personas": "Computer-Mediated Communication",
         "venue": "paper",
@@ -361,8 +339,6 @@ sessions={
             "shopping"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
         "chair": "Sharoda Paul"
     },
@@ -389,10 +365,8 @@ sessions={
             "Community analysis and support, virtual or physical"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "Jacob Biehl"
+        "chair": "TBD"
     },
     "s113": {
         "s_title": "Geographic Distance",
@@ -424,10 +398,8 @@ sessions={
             "twitter"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
-        "chair": "Andrea Forte"
+        "chair": "Pernille Bjorn"
     },
     "s114": {
         "s_title": "Group Dynamics",
@@ -454,17 +426,15 @@ sessions={
             "Virtual Worlds/Avatars/Proxies"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "Les Nelson"
+        "chair": "Ido Guy"
     },
     "s115": {
         "s_title": "ICT4D",
         "time": "10:45-12:00",
         "submissions": [
-            "cscw482",
             "cscw204",
+            "cscw482",
             "cscw241"
         ],
         "personas": "Other domain-specific support",
@@ -481,8 +451,6 @@ sessions={
             "User experience/interaction design"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
         "chair": "Susan Wyche"
     },
@@ -511,8 +479,6 @@ sessions={
             "creativity"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Gilly Leshed"
     },
@@ -546,10 +512,8 @@ sessions={
             "User experience/interaction design"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "Louise Barkhuus"
+        "chair": "TBD"
     },
     "s118": {
         "s_title": "MOOCs",
@@ -573,8 +537,6 @@ sessions={
             "design"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Anne Marie Piper"
     },
@@ -611,8 +573,6 @@ sessions={
             "User experience/interaction design"
         ],
         "type": "paper",
-        "hasAward": 1,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Svetlana Yarosh"
     },
@@ -650,8 +610,6 @@ sessions={
             "youth"
         ],
         "type": "paper",
-        "hasAward": 1,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Helena Mentis"
     },
@@ -688,8 +646,6 @@ sessions={
             "math"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "David McDonald"
     },
@@ -718,8 +674,6 @@ sessions={
             "gesture"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
         "chair": "Steve Sawyer"
     },
@@ -754,10 +708,8 @@ sessions={
             "Social Media Offline"
         ],
         "type": "paper",
-        "hasAward": 1,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "Vanessa Evers"
+        "chair": "TBD"
     },
     "s124": {
         "s_title": "Social Media & Politics",
@@ -783,18 +735,16 @@ sessions={
             "twitter"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "m.c. schraefel"
+        "chair": "Gloria Mark"
     },
     "s125": {
         "s_title": "Social Media in the Enterprise",
         "time": "9:00-10:15",
         "submissions": [
-            "cscw358",
+            "cscw473",
             "cscw308",
-            "cscw473"
+            "cscw358"
         ],
         "personas": "Organization/office/workplace support",
         "venue": "paper",
@@ -816,8 +766,6 @@ sessions={
             "social networks in the organizaition"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
         "chair": "Jennifer Thom"
     },
@@ -845,10 +793,8 @@ sessions={
             "Privacy/access control/trust"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
-        "chair": "Jeffrey Bigham"
+        "chair": "Andrea Forte"
     },
     "s127": {
         "s_title": "Supporting Communities",
@@ -887,17 +833,15 @@ sessions={
             "social media"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "Wendy Kellogg"
+        "chair": "TBD"
     },
     "s128": {
         "s_title": "Telepresence",
         "time": "10:45-12:00",
         "submissions": [
-            "cscw244",
             "cscw253",
+            "cscw244",
             "cscw142"
         ],
         "personas": "Telepresence/video/desktop conferencing",
@@ -917,8 +861,6 @@ sessions={
             "gesture"
         ],
         "type": "paper",
-        "hasAward": 1,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Gina Venolia"
     },
@@ -953,8 +895,6 @@ sessions={
             "email"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
         "chair": "Melissa Mazmanian"
     },
@@ -984,8 +924,6 @@ sessions={
             "Crowd Worker Perspective"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Dan Cosley"
     },
@@ -1017,8 +955,6 @@ sessions={
             "persuasion"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Ingrid Erickson"
     },
@@ -1053,10 +989,8 @@ sessions={
             "User experience/interaction design"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
-        "chair": "Edward Cutrell"
+        "chair": "TBD"
     },
     "s133": {
         "s_title": "Work in Hospitals",
@@ -1083,8 +1017,6 @@ sessions={
             "policy implication"
         ],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Aleksandra Sarcevic"
     },
@@ -1101,8 +1033,6 @@ sessions={
         "day": "Tuesday, Feb 18th",
         "s_tags": [],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Moira Burke"
     },
@@ -1119,8 +1049,6 @@ sessions={
         "day": "Wednesday, Feb 19th",
         "s_tags": [],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Aniket Kittur"
     },
@@ -1137,10 +1065,8 @@ sessions={
         "day": "Wednesday, Feb 19th",
         "s_tags": [],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
-        "chair": "Ido Guy"
+        "chair": "Carsten Osterlund"
     },
     "s203": {
         "s_title": "Mobile Apps for Enhancing Connectedness",
@@ -1155,10 +1081,8 @@ sessions={
         "day": "Wednesday, Feb 19th",
         "s_tags": [],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "Paul Aoki"
+        "chair": "TBD"
     },
     "s204": {
         "s_title": "Distributed Teams",
@@ -1173,10 +1097,8 @@ sessions={
         "day": "Wednesday, Feb 19th",
         "s_tags": [],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "Mary Beth Rosson"
+        "chair": "TBD"
     },
     "s205": {
         "s_title": "Social Technologies and Well-Being",
@@ -1191,8 +1113,6 @@ sessions={
         "day": "Tuesday, Feb 18th",
         "s_tags": [],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Michael Massimi"
     },
@@ -1209,10 +1129,8 @@ sessions={
         "day": "Wednesday, Feb 19th",
         "s_tags": [],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "Joseph Konstan"
+        "chair": "TBD"
     },
     "s207": {
         "s_title": "Identifying Opportunities for Collaboration",
@@ -1227,8 +1145,6 @@ sessions={
         "day": "Wednesday, Feb 19th",
         "s_tags": [],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
         "chair": "Jeremy Birnholtz"
     },
@@ -1245,10 +1161,8 @@ sessions={
         "day": "Tuesday, Feb 18th",
         "s_tags": [],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
-        "chair": "Morten Fjeld"
+        "chair": "TBD"
     },
     "s209": {
         "s_title": "Promoting Participation and Engagement",
@@ -1263,8 +1177,6 @@ sessions={
         "day": "Tuesday, Feb 18th",
         "s_tags": [],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "paper",
         "chair": "Mark Handel"
     },
@@ -1272,8 +1184,8 @@ sessions={
         "s_title": "Building Communities and Relationships",
         "time": "10:45-12:00",
         "submissions": [
-            "cscw223",
             "cscw486",
+            "cscw223",
             "cscw517"
         ],
         "personas": "",
@@ -1281,10 +1193,8 @@ sessions={
         "day": "Monday, Feb 17th",
         "s_tags": [],
         "type": "paper",
-        "hasAward": 0,
-        "hasHonorableMention": 1,
         "subtype": "paper",
-        "chair": "Daniel Wigdor"
+        "chair": "Vanessa Evars"
     },
     "s211": {
         "s_title": "Video Track Session",
@@ -1295,8 +1205,6 @@ sessions={
         "day": "Monday, Feb 17th",
         "s_tags": [],
         "type": "special",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "special",
         "chair": ""
     },
@@ -1309,8 +1217,6 @@ sessions={
         "day": "Monday, Feb 17th",
         "s_tags": [],
         "type": "special",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "special",
         "chair": ""
     },
@@ -1323,8 +1229,6 @@ sessions={
         "day": "Monday, Feb 17th",
         "s_tags": [],
         "type": "special",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "special",
         "chair": ""
     },
@@ -1337,8 +1241,6 @@ sessions={
         "day": "Monday, Feb 17th",
         "s_tags": [],
         "type": "special",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "special",
         "chair": ""
     },
@@ -1351,8 +1253,6 @@ sessions={
         "day": "Monday, Feb 17th",
         "s_tags": [],
         "type": "special",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "special",
         "chair": ""
     },
@@ -1365,8 +1265,6 @@ sessions={
         "day": "Monday, Feb 17th",
         "s_tags": [],
         "type": "special",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "special",
         "chair": ""
     },
@@ -1381,8 +1279,6 @@ sessions={
         "day": "Tuesday, Feb 18th",
         "s_tags": [],
         "type": "panel",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "panel",
         "chair": ""
     },
@@ -1397,8 +1293,6 @@ sessions={
         "day": "Wednesday, Feb 19th",
         "s_tags": [],
         "type": "panel",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "panel",
         "chair": ""
     },
@@ -1413,8 +1307,6 @@ sessions={
         "day": "Tuesday, Feb 18th",
         "s_tags": [],
         "type": "panel",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "panel",
         "chair": ""
     },
@@ -1429,8 +1321,6 @@ sessions={
         "day": "Wednesday, Feb 19th",
         "s_tags": [],
         "type": "panel",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "panel",
         "chair": ""
     },
@@ -1445,36 +1335,34 @@ sessions={
         "day": "Wednesday, Feb 19th",
         "s_tags": [],
         "type": "panel",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "panel",
         "chair": ""
     },
     "s220": {
         "s_title": "Welcome and Opening Plenary: Mary Flanagan",
         "time": "8:45-10:15",
-        "submissions": [],
+        "submissions": [
+            "opening"
+        ],
         "personas": "",
         "venue": "special",
         "day": "Monday, Feb 17th",
         "s_tags": [],
         "type": "special",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "special",
         "chair": ""
     },
     "s221": {
         "s_title": "Lasting Impact",
         "time": "15:45-16:45",
-        "submissions": [],
+        "submissions": [
+            "impact"
+        ],
         "personas": "",
         "venue": "special",
         "day": "Tuesday, Feb 18th",
         "s_tags": [],
         "type": "special",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "special",
         "chair": ""
     },
@@ -1487,8 +1375,6 @@ sessions={
         "day": "Tuesday, Feb 18th",
         "s_tags": [],
         "type": "special",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "special",
         "chair": ""
     },
@@ -1501,8 +1387,6 @@ sessions={
         "day": "Tuesday, Feb 18th",
         "s_tags": [],
         "type": "special",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "special",
         "chair": ""
     },
@@ -1515,22 +1399,228 @@ sessions={
         "day": "Tuesday, Feb 18th",
         "s_tags": [],
         "type": "special",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
         "subtype": "special",
         "chair": ""
     },
     "s225": {
         "s_title": "Closing Plenary: Patrick Meier",
         "time": "15:45-17:15",
-        "submissions": [],
+        "submissions": [
+            "closing"
+        ],
         "personas": "",
         "venue": "special",
         "day": "Wednesday, Feb 19th",
         "s_tags": [],
         "type": "special",
-        "hasAward": 0,
-        "hasHonorableMention": 0,
+        "subtype": "special",
+        "chair": ""
+    },
+    "W1": {
+        "s_title": "W1: Sharing, Re-use and Circulation of Resources in Cooperative Scientific Work",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Saturday, Feb 15th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W2": {
+        "s_title": "W2: Structures for Knowledge Co-creation Between Organisations and the Public",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Saturday, Feb 15th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W3": {
+        "s_title": "W3: Designing with Users for Domestic Environments: Methods - Challenges - Lessons Learned",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Saturday, Feb 15th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W4": {
+        "s_title": "W4: Cross-Cultural Studies of Collaborative Systems: Making Methodological Advances as a Community",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Saturday, Feb 15th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W5": {
+        "s_title": "W5: Designing Futures for Peer-to-Peer Learning @ CSCW",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Saturday, Feb 15th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W6": {
+        "s_title": "W6: Back to the Future of Organizational Work: Crowdsourcing and Digital Work Marketplaces",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Sunday, Feb 16th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W7": {
+        "s_title": "W7: Co-creating & Identity-making in CSCW: Revisiting Ethics in Design Research",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Sunday, Feb 16th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W8": {
+        "s_title": "W8: Quick and Dirty: Lightweight Methods for Heavyweight Research",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Sunday, Feb 16th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W9": {
+        "s_title": "W9: The Fourteenth International Workshop on Collaborative Editing Systems",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Sunday, Feb 16th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W10": {
+        "s_title": "W10: Collaboration and Coordination in the Context of Informal Care (CCCiC 2014)",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Saturday, Feb 15th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W11": {
+        "s_title": "W11: Global Software Development in a CSCW Perspective",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Sunday, Feb 16th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W12": {
+        "s_title": "W12: Feminism and Social Media Research",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Sunday, Feb 16th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W13": {
+        "s_title": "W13: Designing for Interactive Arts and Performance Collaboration",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Sunday, Feb 16th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "W14": {
+        "s_title": "W14: OCData Hackathon: Online Communities Data Hackathon",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Saturday, Feb 15th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "WD": {
+        "s_title": "Doctoral Colloquium",
+        "time": "all-day",
+        "submissions": [],
+        "personas": "",
+        "venue": "workshop",
+        "day": "Sunday, Feb 16th",
+        "s_tags": [],
+        "type": "workshop",
+        "subtype": "workshop",
+        "chair": ""
+    },
+    "next": {
+        "s_title": "CSCWhat's Next",
+        "time": "10:45-12:00",
+        "submissions": [
+            "next1",
+            "next2",
+            "next3"
+        ],
+        "personas": "",
+        "venue": "CSCWhat's Next",
+        "day": "Tuesday, Feb 18th",
+        "s_tags": [],
+        "type": "CSCWhat's Next",
+        "subtype": "CSCWhat's Next",
+        "chair": "Mark Handel, Susan Wyche"
+    },
+    "FB": {
+        "s_title": "Facebook Happy Hour",
+        "time": "20:00-22:00",
+        "submissions": [],
+        "personas": "",
+        "venue": "special",
+        "day": "Monday, Feb 17th",
+        "s_tags": [],
+        "type": "special",
         "subtype": "special",
         "chair": ""
     }

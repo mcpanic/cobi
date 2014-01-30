@@ -97,7 +97,7 @@ entities={
         "hm": true
     },
     "cscw130": {
-        "title": "Understanding Individuals' Personal Values from Social Media Word Use",
+        "title": "Understanding Individuals Personal Values from Social Media Word Use",
         "abstract": "The theory of values posits that each person has a set of values, or desirable and trans-situational goals, that motivate their actions. The Basic Human Values, a motivational construct that captures people's values, have been shown to influence a wide range of human behaviors. In this work, we analyze people's values and their word use on Reddit, an online social news sharing community. Through conducting surveys and analyzing text contributions of 799 Reddit users, we identify and interpret categories of words that are indicative of user's value-orientations. Using the same data, we further report a preliminary exploration on word-based prediction of Basic Human Values.",
         "keywords": "Corporate Research, Social Computing and Social Navigation, values",
         "authors": [
@@ -229,7 +229,7 @@ entities={
         "hm": false
     },
     "cscw178": {
-        "title": "It's in your Spinal Cord, it's in your Fingertips: Practices of Tools and Craft in Building Software",
+        "title": "Its in your Spinal Cord, its in your Fingertips: Practices of Tools and Craft in Building Software",
         "abstract": "Drawing on interviews with 12 software engineers, we investigate the relationship between developers and the tools they use to build code through the lens of craft. We analyze different conceptualizations of craft in accounts of software development, including craft as a process of building, craft as materiality, and craft as a community of practice. By working through the different facets of craft as elicited in the specific context of software development, we investigate tensions of perceiving coding work as, on the one hand, highly rational, and on the other, deeply personal and embodied. In working through these tensions of code as abstract and concrete, cerebral and intuitive, we note implications for craft, both as a theory relevant to computer human interaction, and for paradigms of education in computer science.",
         "keywords": "Corporate Research, Craft and repair, Development Tools / Toolkits / Programming Environments, Software development, User experience/interaction design, Workplace Study",
         "authors": [
@@ -306,7 +306,7 @@ entities={
         "hm": false
     },
     "cscw204": {
-        "title": "Making IT \"Pay a Bit Better\"- Design Challenges for Micro Rural Enterprise",
+        "title": "Making IT Pay a Bit Better- Design Challenges for Micro Rural Enterprise",
         "abstract": "This paper reports on a field study of small market in Wales undertaken as part of broader research project aimed at developing IT solutions to support rural enterprise. The project is predicated on the assumption that the primary challenge facing rural enterprise is that of scale and that IT solutions could and should add value by enabling growth. The study suggests that many rural enterprises are micro in character, that they are not driven by the need to grow, and that value is and can be added in different ways that reflect the social values oriented to and employed by micro businesses and their consumers. The paper elaborates vernacular understandings of supply chains and their coordination, along with business and consumer motivations to consider alternative possibilities for design that place emphasis on making micro rural enterprise 'pay a bit better' rather than scaling it up.",
         "keywords": "Organization/office/workplace support, Other domain-specific support, values",
         "authors": [
@@ -540,7 +540,7 @@ entities={
         "hm": false
     },
     "cscw239": {
-        "title": "Exhaustive and Efficient Search of Puzzles in Operational Transformation",
+        "title": "Exhaustive Search of Puzzles in Operational Transformation",
         "abstract": "Operational Transformation (OT) is a collaboration-enabling technology and has been a technical research topic in CSCW in over two decades. One main challenge in OT research is detecting and resolving puzzles - subtle and characteristic scenarios in which an OT system may fail. After many years of extensive search and research, various intricate puzzles have been detected and resolved. However, it remains open whether all puzzles have been discovered. To solve this issue, we set out to devise a system of verification frameworks and a software tool, that are independent of specific OT algorithms and able to exhaustively cover all possible transformation cases in which puzzles (if any) will manifest themselves. With the support of these tools, we verified OT correctness and concluded: all puzzles, under basic data and operation models and established transformation properties, have been discovered and resolved. These results are significant as they resolved a number of long-standing OT mysteries and contributed to the advancement of OT fundamental knowledge and technological innovation. ",
         "keywords": "Concurrency control, math",
         "authors": [
@@ -816,7 +816,7 @@ entities={
         "hm": false
     },
     "cscw285": {
-        "title": "Network Neighborhoods, Romantic Relationships, and the Dispersion of Social Ties",
+        "title": "Romantic Partnerships and the Dispersion of Social Ties: A Network Analysis of Relationship Status on Facebook",
         "abstract": "A crucial task in the analysis of on-line social-networking systems is to identify important people --- those linked by strong social ties --- within an individual's network neighborhood, Here we investigate this question for a particular category of strong ties, those involving spouses or romantic partners. We organize our analysis around a basic question: given all the connections among a person's friends, can you recognize his or her romantic partner from the network structure alone? Using data from a large sample of Facebook users, we find this task can be accomplished with high accuracy, but doing so requires the development of a new measure of tie strength that we term `dispersion' --- the extent to which two people's mutual friends are not themselves well-connected. The results offer methods for identifying particular types of structurally significant people in on-line applications, and suggest a potential expansion of existing theories of tie strength. ",
         "keywords": "Corporate Research, Facebook, Family on Social Networks, Machine Learning and Data Mining, Social network analysis, social network characteristics",
         "authors": [
@@ -896,7 +896,7 @@ entities={
         "hm": false
     },
     "cscw299": {
-        "title": "Awkward Encounters of an \"Other\" Kind:  Collective Self-Presentation and Face Threat on Facebook",
+        "title": "Awkward Encounters of an Other Kind:  Collective Self-Presentation and Face Threat on Facebook",
         "abstract": "While we tend to think of self-presentation as a process executed by the self, reputation management on social network sites, like Facebook, is increasingly viewed as a collective endeavor. The information users share about one another can have significant impacts on impression formation, and at times this other-generated content may be face threatening, or challenging to one's desired self-presentation. However, we know little about the nature of these other-generated face threats and the ways that people perceive them. Using an online survey of 150 Facebook users, we report on what these users consider to be other-generated face threats and how they feel after experiencing them. Results suggest that many face threats result from other Facebook users neglecting or misunderstanding a target's audience and/or self-presentation goals, as well as a target's fear of creating an unwanted association with another Facebook user. Experience of these threats is affected by both individual and situational attributes. We also report on a new unique measure capturing Facebook skills.",
         "keywords": "Computer-Mediated Communication, Facebook, Self-disclosure and identity, Social Media Offline, Social Networking Site Design and Use",
         "authors": [
@@ -959,7 +959,7 @@ entities={
         "hm": false
     },
     "cscw308": {
-        "title": "Understanding Workforce Chatter with Enterprise Social Pulse",
+        "title": "Understanding Employee Social Media Chatter with Enterprise Social Pulse",
         "abstract": "Social media has the potential to augment traditional surveys in understanding the opinions and sentiment of employees. In this paper, we introduce Enterprise Social Pulse (ESP) - a tool designed to support analysts whose job involves understanding employee chatter. ESP aggregates and analyzes data from internal and external social media sources while respecting employee privacy. It surfaces the data through a user interface that supports organic results and keyword search, data segmentation and filtering, and several analytics and visualization features. An evaluation of ESP was conducted with 19 Human Resources professionals. Results from a survey and interviews with participants revealed the value and willingness to use ESP, but also surfaced challenges around deploying an employee social media listening solution in an organization.",
         "keywords": "Corporate Research, Organization/office/workplace support, Social Computing and Social Navigation, Social Signals, enterprise",
         "authors": [
@@ -1026,7 +1026,7 @@ entities={
         "hm": false
     },
     "cscw315": {
-        "title": "Institutional Logics of the EMR and the Problem of 'Perfect' but Inaccurate Accounts",
+        "title": "Institutional Logics of the EMR and the Problem of Perfect but Inaccurate Accounts",
         "abstract": "EMR promise to simultaneously enhance coordination and provide transparency and accountability in work process. In this paper we use empirical data to explore how this promise plays out in the everyday tasks of clinicians. Building on CSCW literature that suggests that the accounting functions of EMR are impinging on coordination of work, we draw on new institutionalism to outline how certain institutional logics around safety are shaping experiences of EMR in-situ. We suggest that institutionalized logics of U.S. healthcare are embedded in the EMR design itself, structuring how \"safety\" is achieved and evaluated. Using over one year of ethnographic research in an obstetrical unit, we find that the institutional logics of \"safety\" embedded in the EMR create negative organizational outcomes, undermining coordination and necessitating inaccurate accounts of work. We provide design implications to address these issues in the current institutional environment and envision how systems might be designed to promote alternate logics of safety that are social, dynamic, and cast humans as expert agents.",
         "keywords": "Medical and health support, Organization/office/workplace support, Social Computing and Social Navigation, coordination, electronic medical records, new institutionalism, policy implication",
         "authors": [
@@ -1318,7 +1318,7 @@ entities={
         "hm": false
     },
     "cscw384": {
-        "title": "Document Classification and Visualization for the Support of Interdisciplinary Collaboration",
+        "title": "Unsupervised Classification and Visualization of Unstructured Text for the Support of Interdisciplinary Collaboration",
         "abstract": "We present a computer supported tool for cooperative work in interdisciplinary fields, which we applied to and tested within the area of astrobiology. Our document classification and visualization system is fully automated and data driven, based on unsupervised machine learning algorithms that make minimal assumptions about the data, and network visualization tools. It can extract information about collaborations from unstructured databases with no meta-data. A new feature selection algorithm was created that gives an indication how many words should be used in word-count based cluster analysis. We used our method to analyze a body of publications that were produced by researchers from NASA's Astrobiology Institute. Our analysis shows the utility of our method by revealing structure that can aid the planning of collaborative research. We presented this analysis as a cultural probe, and recorded reactions from researchers that clearly indicated the success of our method in aiding interdisciplinary research by helping scientists from different disciplines to work together.",
         "keywords": "Community analysis and support, virtual or physical, Machine Learning and Data Mining, infoviz",
         "authors": [
@@ -1364,7 +1364,7 @@ entities={
         "hm": false
     },
     "cscw389": {
-        "title": "Exploring Family-driven Socio-interactive Care for Children with Language Delay: A Smartphone-supported In-situ Intervention Approach",
+        "title": "TalkBetter: Family-driven Mobile Intervention Care for Children with Language Delay",
         "abstract": "Language delay is a developmental problem of children who do not acquire language as expected for their chronological ages. Without timely intervention, language delay can act as a lifelong risk factor, which includes a learning disorder, a social skill deficit, and a low socioeconomic status. Speech-language pathologists have highlighted that effective parent participation in everyday parent-child conversation is important to treat children's language delay. For effective roles, however, parents need to alter their own lifelong-established conversation habits, requiring extensive period of conscious effort and staying alert. In this paper, we present new opportunities for mobile and social computing to reinforce everyday parent-child conversation with therapeutic implications for children with language delays. Specifically, we propose TalkBetter, a mobile in-situ intervention service to help parents in daily parent-child conversations through real-time meta-linguistic analysis of ongoing conversations. Through extensive field studies with speech-language pathologists and parents, we report the multilateral motivations and implications of TalkBetter. We present our development of TalkBetter prototype and report its performance evaluation.",
         "keywords": "Home/family/intimacy support, Medical and health support, Mobile and embedded devices, accessibility, assistive mobile technologies, special needs, youth",
         "authors": [
@@ -1477,7 +1477,7 @@ entities={
         "hm": false
     },
     "cscw399": {
-        "title": "You Can't Block People Offline: Examining How Facebook's Affordances Shape the Disclosure Process",
+        "title": "\"You Cant Block People Offline\": Examining How Facebooks Affordances Shape the Disclosure Process",
         "abstract": "Guided by the underlying question of how--if at all--the self-disclosure process varies online, the present study explores the self-disclosure practices of 26 American graduate students on Facebook through in-depth interviews. Building on work by Derlega and Grzelak [13] on self-disclosure goals and focusing on the affordances of the site, findings reveal both commonalities with and extensions to existing communication research on self-disclosure, as users see both benefits and drawbacks to the high visibility and persistence of content shared through the site. Furthermore, users employed a wide spectrum of strategies to help them achieve their disclosure goals while decreasing perceived risks associated with making disclosures in a public forum. Importantly, these strategies generally sought to recreate the offline boundaries removed by the technical structure of the site and allow users to engage in a more strategic disclosure process with their network. ",
         "keywords": "Computer-Mediated Communication, Facebook, Privacy/access control/trust, Self-disclosure and identity, Social Media Offline, Social Networking Site Design and Use",
         "authors": [
@@ -1695,7 +1695,7 @@ entities={
         "hm": false
     },
     "cscw455": {
-        "title": "Real, but Glossy Technology and the Practical Pursuit of Magic in Modern Weddings",
+        "title": "\"Real, but Glossy\"  Technology and the Practical Pursuit of Magic in Modern Weddings",
         "abstract": "Planning a wedding is arguably one of the most complicated collaborative tasks people ever undertake. Despite the commonplace use of technologies in \"wedding work,\" little research has looked at this from an HCI perspective. Based on an interview study, we illustrate how technology is used to deliver the sought-after fantasy and a practical, yet entertaining, affair. We identify four ways that technology helps people do this: (a) by allowing much of the practical planning work to become \"invisible;\" (b) by easing navigation through the delicate rules of family configurations made manifest in the guest list; (c) by helping create a spectacle-like event that adroitly balances excess and realism; and (d) by documenting the wedding in ways that allows re-experiencing the magic after the event. The paper concludes by discussing the implications of this pursuit on social graphs, place, and photography, contributing to the literature on technology and major life events.",
         "keywords": "Big life events, Home/family/intimacy support, My big fat social media wedding, Offline events, Parties & cocktail hour, Social Media Offline",
         "authors": [
@@ -1798,7 +1798,7 @@ entities={
         "hm": false
     },
     "cscw482": {
-        "title": "The Role of Data in Aligning the 'Unique Identity' Infrastructure in India",
+        "title": "The Role of Data in Aligning the Unique Identity Infrastructure in India",
         "abstract": "We present findings from a qualitative field study of a national e-infrastructure project currently underway in India. We study how this large and complex infrastructure for issuing unique biometric-based identification numbers to the 1.2 billion residents of India was aligned across various stakeholders engaged in the project. We find that the focus on 'data' kept the entire infrastructure together and working. However, this narrow focus also made the design team view the people applying for IDs as numbers whose management could be standardized. In reality, the infrastructure encountered people with differing experiences and expectations of state-issued IDs, expectations that had to be managed by agents on the ground. With our focus on the nation state as a site for studying e-infrastructure, we extend the domains in which CSCW research takes place and contribute to the theory of infrastructure building in a context where state-citizen relations are at stake.",
         "keywords": "Cross-cultural Systems or Studies, India, Infrastructure, International tech infrastructure, Other domain-specific support",
         "authors": [
@@ -1815,7 +1815,7 @@ entities={
         "hm": false
     },
     "cscw486": {
-        "title": "Attachment to work groups increases loyalty on Mechanical Turk: Exploring bond- versus identity-based pathways to attachment formation",
+        "title": "Building Loyalty to Online Communities through Bond and Identity-based Attachment to Sub-groups",
         "abstract": "Researchers and theorists have proposed that feelings of attachment to subgroups within a larger online community or site can increase users' loyalty to the site. They have identified two types of attachment to these groups, with distinct causes and consequences. With bond-based attachment, people feel connections to other group members, while with identity-based attachment they feel connections to the group as a whole. In two experiments we show that these feelings of attachment to subgroups do increase commitment to the larger community.  Communication with other people in a subgroup but not simple awareness of them increases attachment to the larger community. By varying how the communication is structured, between dyads or with all group members simultaneously, the experiments show that bond and identity-based attachment have different causes. But the experiments show no evidence that bond and identity attachment have different consequences. We consider both theoretical and methodological reasons why the consequences of bond-based and identity-based attachment are so similar.",
         "keywords": "Community analysis and support, virtual or physical, Computer-Mediated Communication, Crowdsourcing, Participatory Design / Cooperative Design, paid crowdsourcing",
         "authors": [
@@ -1892,7 +1892,7 @@ entities={
         "hm": false
     },
     "cscw492": {
-        "title": "Planned Obsolescence or Designed Reparability? Infrastructures and Materialities of Breakdown",
+        "title": "Designing for Repair?  Infrastructures and Materialities of Breakdown",
         "abstract": "This paper explores issues that come up in practices of breakage and repair through two projects: the \"XO\" laptops of One Laptop Per Child in Paraguay and public sites of facilitated repair in California, USA. Collectively drawing on 15 months of ethnographic fieldwork, 156 interviews, and archival research, we find that breakdown and repair are not processes that designers can effectively script ahead of time; instead, they emerge in everyday practice. These practices are shaped by material, infrastructural, gendered, political, and socioeconomic factors - such as manufacturing limitations, access to repair parts and expertise, and environmental convictions - which designers often did not, and in fact may not have been able to, anticipate. We call the material realities and practices of repair negotiated endurance, which is illustrated by four themes from our findings: the cultural emergence of breakdown, collaborative definitions of worth, the fraught nature of collaborative expertise, and the gendered stakes of repair.",
         "keywords": "Appropriation, Craft and repair, Cross-cultural Systems or Studies, International tech infrastructure, Other domain-specific support, User experience/interaction design",
         "authors": [
@@ -1952,7 +1952,7 @@ entities={
         "hm": false
     },
     "cscw495": {
-        "title": "Remixers' Understandings of Fair Use Online",
+        "title": "Remixers Understandings of Fair Use Online",
         "abstract": "How do online content creators make decisions about copyright law? In the course of day-to-day online activities, Internet users are forced to make subtle judgments about one of the most confusing and nuanced areas of law, copyright and fair use. In this study, we conducted semi-structured interviews with eleven content creators who participate in remix and fan creation activities online, to try to probe their legal understandings and attitudes. We found that social norms that emerge among these content creators do not always track to what the law actually says, but are often guided more by ethical concerns. Our participants showed surprisingly similar patterns of understandings and confusions, impacting technology use and interaction online.",
         "keywords": "Community analysis and support, virtual or physical, Empirical Methods, Qualitative, Legal/historical/philosophical aspects, copyright law, remix",
         "authors": [
@@ -1969,7 +1969,7 @@ entities={
         "hm": false
     },
     "cscw499": {
-        "title": "Adolescent Online Safety: The \"Moral\" of the Story",
+        "title": "Adolescent Online Safety: The Moral of the Story",
         "abstract": "Adolescence is characterized by heightened risk-taking and independence from parents; these tendencies seem to be magnified by the opportunities afforded through online interactions. Drawing on Kohlberg's Cognitive Moral Development (CMD) theory, we conduct a qualitative study of 12 parent-adolescent dyads that examines the interplay between parenting behaviors and adolescent moral development. We show an association between adolescent moral judgment and online behavior, and we illustrate how parenting style and mediation strategies influence the teen's moral growth and decision making about online behaviors. We also note that parental mediation strategies are moderated by parents' digital literacy: reduced digital literacy is associated with more restrictive or indulgent strategies; while more digitally competent parents are more likely to monitor and mediate their teen's behaviors as they engage online. We also found that experience, not restriction, facilitates the teen's moral growth.",
         "keywords": "Computer-Mediated Communication, Family on Social Networks, Privacy/access control/trust, Social Computing and Social Navigation, That's the problem with the kids today, youth",
         "authors": [
@@ -2061,7 +2061,7 @@ entities={
         "hm": true
     },
     "cscw530": {
-        "title": "A Kernel of a Research Infrastructure",
+        "title": "The Kernel of a Research Infrastructure",
         "abstract": "Infrastructure makes it easier, faster or possible for investigators to study new objects of research. It does so by making available stable resources and services such as data, collaboration tools, sites of sample collection, or calibrated instruments. This paper offers the concept of the kernel of a research infrastructure as a new unit of analysis for investigating the enabling capacities of infrastructure. The kernel is the core resources and services an infrastructure makes available (called the cache), as well as the work, techniques and technologies that go into sustaining that availability (called addressing). By inspecting and comparing the kernel of two long-term scientific enterprises, this paper demonstrates how focusing on the kernel can help explain key qualities of research infrastructure such as flexibility and persistence in the face of dramatic changes to the objects, methods and practice of science.",
         "keywords": "Collaboration architectures, Community analysis and support, virtual or physical, Infrastructure, Organization/office/workplace support",
         "authors": [
@@ -2164,7 +2164,7 @@ entities={
         "hm": false
     },
     "cscw548": {
-        "title": "Investigating a Quid-Pro-Quo Approach to Motivating Contribution in a Participatory Sensing System",
+        "title": "Motivating Contribution in a Participatory Sensing System via Quid-Pro-Quo",
         "abstract": "Participatory sensing systems (PSS) require frequent injection of information that has a short shelf-life. The use of crowds to gather information for PSS is therefore particularly challenging. In this study, we explore the impact of two policies on user contributions. A quid-pro-quo policy exchanges contributions from users for access to critical information in the system. A request policy simply reminds the user that information is needed to make the system function well. Prior research has shown that in these policies are effective in non-PSS systems. During a large-scale experimental study within a publicly deployed, crowdsourced, transit information system, we analyzed these policies over a 10- month period. Our results confirmed that quid-pro-quo led to more contribution, but at a cost of faster departure from the study. Simply asking for contributions largely ineffective and was statistically indistinguishable to the control condition. Thus crowdsource system designers should consider imposing quid-pro-quo type policies for PSS that concentrate on fewer users, but makes them more productive.",
         "keywords": "Crowdsourcing, Mobile and embedded devices, Participation motivations, citizen science, participatory sensing",
         "authors": [
@@ -2595,7 +2595,7 @@ entities={
         "hm": true
     },
     "cscw620": {
-        "title": "The Impact of Deviance on Retention in a Multiplayer Game",
+        "title": "The Identification of Deviance and its Impact on Retention in a Multiplayer Game",
         "abstract": "Deviant behavior in online systems is a difficult problem to address. Consequences of deviance include driving off users and tarnishing the system's public image. We present an examination of these concepts in a popular online game, League of Legends. Using a large collection of game records and player-given feedback, we develop a metric, toxicity index, to identify deviant players. We then look at the effects of interacting with deviant players, including effects on retention. We find that toxic players have several significant predictive patterns, such as playing in more competitive game modes and playing with friends. We also show that toxic players drive away new players, but that experienced players are more resilient to deviant behavior. Based on our findings, we suggest methods to better identify and counteract the negative effects of deviance.",
         "keywords": "Community analysis and support, virtual or physical, Entertainment/games",
         "authors": [
@@ -2621,7 +2621,7 @@ entities={
         "hm": false
     },
     "cscw622": {
-        "title": "Twitter ain't Without Frontiers: Economic, Social, and Cultural Boundaries in International Communication",
+        "title": "Twitter aint Without Frontiers: Economic, Social, and Cultural Boundaries in International Communication",
         "abstract": "Has internet breached the barriers of geographic distance and brought about a global communication network? In this study we show that the international Twitter communication landscape is not only still largely predetermined by physical distance, but that it also depends on countries' social, economic, and cultural attributes. We describe a study of an international Twitter mention network of 13 million users across over 100 countries. We show that the Gravity Model, which hypothesizes that the flow between two areas is proportional to their masses (which we approximate using internet penetration) and inversely proportional to the distance between them, is correlated (r=0.68) with the international communication flow. Using this model, along with other social, economic, and cultural variables, we predict the communication volume at Adjusted R2 of 0.80, with trade, language and racial intolerance especially impacting communication. We discuss the implications of these barriers to communication in the frameworks of collaborative work, software design, and recommendation systems.",
         "keywords": "Cross-cultural Systems or Studies, Social Computing and Social Navigation, Social network analysis, bubbles, distance, twitter",
         "authors": [

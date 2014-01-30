@@ -1,0 +1,135 @@
+ID	Paper Final Title
+cscw100	Social Networking Site Use by Mothers of Young Children
+cscw108	Social Media Supporting Political Deliberation Across Multiple Public Spheres: Towards Depolarization
+cscw128	Inferring the Origin Locations of Tweets with Quantitative Confidence
+cscw130	Understanding Individuals' Personal Values from Social Media Word Use
+cscw142	How Social Cues Shape Task Coordination and Communication
+cscw145	Giving is Caring: Understanding Donation Behavior through Email
+cscw161	Aesthetic Capital: What Makes London Look Beautiful, Quiet, and Happy?
+cscw178	"It's in your Spinal Cord, it's in your Fingertips": Practices of Tools and Craft in Building Software
+cscw135	A Partial Replication Approach for Anywhere Anytime Mobile Commenting
+cscw188	Competing or Aiming to be Average? Normification as a Means of Engaging Digital Volunteers
+cscw190	The Effects of Consistency Maintenance Methods on Player Experience and Performance in Networked Games
+cscw204	Making IT "Pay a Bit Better"- Design Challenges for Micro Rural Enterprise
+cscw147	"Figure Out How to Code with the Hands of Others": Recognizing Cultural Blind Spots in Global Software Development
+cscw209	Supporting Group Interactions in Museum Visiting
+cscw210	How Physicians "Achieve Overview": A Case-based Study in a Hospital Ward
+cscw221	Life Transitions and Online Health Communities:  Reflecting on Adoption, Use, and Disengagement
+cscw222	Characterizing the Life Cycle of Online News Stories Using Social Media Reactions
+cscw227	How to See Values in Social Computing: Methods for Studying Values Dimensions
+cscw233	Monitoring Email to Indicate Project Team Performance and Mutual Attraction
+cscw239	Exhaustive Search of Puzzles in Operational Transformation
+cscw240	Craving, Creating, and Constructing Comfort: Insights and Opportunities for Technology in Hospice
+cscw243	Digital Mobilization in Disaster Response: The Work & Self-Organization of On-Line Pet Advocates in Response to Hurricane Sandy
+cscw244	Towards a Questionnaire for Measuring Affective Benefits and Costs of Communication Technologies
+cscw105	Voyant: Generating Structured Feedback on Visual Designs Using a Crowd of Non-Experts
+cscw234	Achieving Convergence in Operational Transformation: Conditions, Mechanisms and Systems
+cscw274	Enhancing Community Awareness of and Participation in Local Heritage with a Mobile Application
+cscw268	MyPosition: Sparking Civic Discourse by a Public Interactive Poll Visualization
+cscw285	Romantic Partnerships and the Dispersion of Social Ties: A Network Analysis of Relationship Status on Facebook
+cscw293	Standing on the Schemas of Giants: Socially Augmented Information Foraging
+cscw295	Cancer Navigation: Opportunities and Challenges for Facilitating the Breast Cancer Journey
+cscw302	Books as a Social Technology
+cscw211	Articulation Spaces: Bridging the Gap between Formal and Informal Coordination
+cscw305	The Role of Founders in Building Online Groups
+cscw308	Understanding Employee Social Media Chatter with Enterprise Social Pulse
+cscw315	Institutional Logics of the EMR and the Problem of 'Perfect' but Inaccurate Accounts
+cscw327	Editing Beyond Articles: Diversity & Dynamics of Teamwork in Open Collaborations
+cscw317	Crowd Synthesis: Extracting Categories and Clusters from Complex Data
+cscw333	Sounds of Silence: Exploring Contributions to Conversations, Non-Responses and the Impact of Mediating Technologies in Triple Space
+cscw339	The Language that Gets People to Give: Phrases that Predict Success on Kickstarter
+cscw254	Ensemble: Exploring Complementary Strengths of Leaders and Crowds in Creative Collaboration
+cscw248	Catalyst: Using Activation Thresholds to Trigger Collective Action
+cscw356	How Players Value their Characters in World of Warcraft
+cscw355	Specialization, Homophily, and Gender in a Social Curation Site: Findings from Pinterest
+cscw358	Most Liked, Fewest Friends:  Patterns of Enterprise Social Media Use
+cscw354	How Social Q&A Sites are Changing Knowledge Sharing in Open Source Software Communities
+cscw365	Being A Turker
+cscw374	Account Sharing in the Context of Networked Hospitality Exchange
+cscw384	Unsupervised Classification and Visualization of Unstructured Text for the Support of Interdisciplinary Collaboration
+cscw387	The Perception of Others: Inferring Reputation from Social Media in the Enterprise
+cscw389	TalkBetter: Family-driven Mobile Intervention Care for Children with Language Delay
+cscw390	Quick and Dirty: Streamlined 3D Scanning in Archaeology
+cscw391	VidWiki: Enabling the Crowd to Improve the Legibility of Online Educational Videos
+cscw395	The Communication Patterns of Technical Leaders:  Impact on Product Development Team Performance
+cscw399	"You Can't Block People Offline": Examining How Facebook's Affordances Shape the Disclosure Process
+cscw253	Smart Face: Enhancing Creativity During Video Conferences using Real-time Facial Deformation
+cscw409	Capturing the Mood: Facebook and Face-to-Face  Encounters in the Workplace
+cscw413	Characterizing and Predicting Postpartum Depression from Shared Facebook Data
+cscw241	Enriching the Distressing Reality: Social Media Use by Chinese Migrant Workers
+cscw430	Managing Political Differences in Social Media
+cscw431	Integrating On-demand Fact-checking with Public Dialogue
+cscw432	Coordinating Donors on Crowdfunding Websites
+cscw438	Everyday Dwelling with WhatsApp
+cscw440	The Motivations and Experiences of the On-Demand Mobile Workforce
+cscw228	Understanding Factors of Successful Engagement around Energy Consumption between and Among Households
+cscw455	"Real, but Glossy" – Technology and the Practical Pursuit of Magic in Modern Weddings
+cscw252	Deep Twitter Diving: Exploring Topical Groups in Microblogs at Scale
+cscw443	Teammate Inaccuracy Blindness: When Information Sharing Tools Hinder Collaborative Analysis
+cscw119	De-Virtualizing Social Events: Understanding the Gap between Online and Offline Participation for Event Invitations
+cscw474	Leveraging the Contributory Potential of User Feedback
+cscw482	The Role of Data in Aligning the 'Unique Identity' Infrastructure in India
+cscw473	Creepy but Inevitable? The Evolution of Social Networking
+cscw348	Should Your MOOC Forum Use a Reputation System?
+cscw487	Capturing Quality: Retaining Provenance for Curated Volunteer Monitoring Data
+cscw493	City, Self, Network: Transnational Migrants and Online Identity Work
+cscw490	Support for Deictic Pointing in CVEs: Still Fragmented after All These Years?
+cscw492	Designing for Repair?  Infrastructures and Materialities of Breakdown
+cscw499	Adolescent Online Safety: The "Moral" of the Story
+cscw369	Think Globally, Act Locally: A Case Study of a Free Food Sharing Community and Social Networking
+cscw277	Tracking Serendipitous Interactions: How Individual Cultures Shape the Office
+cscw495	Remixers' Understandings of Fair Use Online
+cscw223	Ethnography of Scaling, Or, How to a fit a national research infrastructure in the room
+cscw191	Collaborative Web Search in Context: A Study of Tool Use in Everyday Tasks
+cscw310	From Rookie to All-Star: Professional Development in a Graphic Design Social Networking Site
+cscw526	Cultivating Practice & Shepherding Technology Use: Supporting Appropriation Among Unanticipated Users
+cscw527	Trustworthy By Design
+cscw494	Beyond End User Content to Collaborative Knowledge Mapping: Interrelations Among Community Social Tools
+cscw542	Pair Research: Matching People for Collaboration, Learning, and Productivity
+cscw517	Enabling Relationship Building in Tabletop-supported Advisory Settings
+cscw535	GEMS: The Design and Evaluation of a Location-Based Storytelling Game
+cscw547	Social Structure and Depression in TrevorSpace
+cscw548	Motivating Contribution in a Participatory Sensing System via Quid-Pro-Quo
+cscw558	Remote Shopping Advice: Enhancing In-Store Shopping with Social Technologies
+cscw559	"Our Life is the Farm and Farming is Our Life":  Home-Work Coordination in Organic Farm Families
+cscw570	Supporting Task Resumption Using Visual Feedback
+cscw566	Study of Electronic Lab Notebook Design and Practices that Emerged in a Collaborative Scientific Environment
+cscw486	Building Loyalty to Online Communities through Bond and Identity-based Attachment to Sub-groups
+cscw584	Mind the Map: The Impact of Culture and Economic Affluence on Crowd-Mapping Behaviours
+cscw588	Understanding the Role of Community in Crowdfunding Work
+cscw586	Civic Action Brokering Platforms: Facilitating Local Engagement with ACTion Alexandria
+cscw590	Geographical and Organizational Distances in Enterprise Crowdfunding
+cscw597	Reviewing versus Doing: Learning and Performance in Crowd Assessment
+cscw599	Help is on the Way: Patterns of Responses to Resource Requests on Facebook
+cscw299	Awkward Encounters of an "Other" Kind:  Collective Self-Presentation and Face Threat on Facebook
+cscw608	Social Influences on Secure Development Tool Adoption: Why Security Tools Spread
+cscw609	What Do Teens Ask Their Online Social Networks? Social Search Practices among High School Students
+cscw598	Hybrid Media Consumption: How Tweeting During a Televised Political Debate Influences the Vote Decision
+cscw290	Privacy Practices in Collaborative Environments: A Study of Emergency Department Staff
+cscw576	Can You Hear Me Now? Mitigating the Echo Chamber Effect by Source Position Indicators
+cscw462	Framing the Conversation: The Role of Facebook Conversations in Shopping for Eyeglasses
+cscw622	Twitter ain't Without Frontiers: Economic, Social, and Cultural Boundaries in International Communication
+cscw596	Exploring the Social-technological Gap in Telesurgery: Collaboration within Distributed OR Teams
+cscw488	Collaborative Problem Solving: A Study of MathOverflow
+cscw229	Can Plans and Situated Actions be Replicated?
+cscw624	Facebook Makes the Heart Grow Fonder: Relationship Maintenance Strategies Among Geographically Dispersed and Communication-Restricted Connections
+cscw352	Modeling Search Processes using Hidden States in Collaborative Exploratory Web Search
+cscw620	The Identification of Deviance and its Impact on Retention in a Multiplayer Game
+cscw625	Photoportals: Shared References in Space and Time
+cscw471	Collaboration Surrounding Beacon Use During Companion Avalanche Rescue
+cscw629	A Comparison of Social, Learning, and Financial  Strategies on Crowd Engagement and Output Quality
+cscw636	Fast, Functional, and Fitting: Expert Response Dynamics and Response Quality in an Online Newcomer Help Forum
+cscw637	Designing the virtual self: How avatar customization and psychological connections influence group collaboration
+cscw537	How Beliefs about the Presence of Machine Translation Impact Multilingual Collaborations
+cscw602	Planet Hunters and Seafloor Explorers: Legitimate Peripheral Participation Through Practice Proxies in Online Citizen Science
+cscw634	The Antecedents of Remix
+cscw579	Designing for the Deluge: Understanding & Supporting the Distributed, Collaborative Work of Crisis Volunteers
+cscw411	The Policy Knot: Re-integrating Policy, Practice and Design in CSCW Studies of Social Computing
+cscw647	Information Extraction and Manipulation Threats in Crowd-Powered Systems
+cscw648	Cursing in English on Twitter
+cscw530	The Kernel of a Research Infrastructure
+cscw663	Reconciling Rhythms: Plans and Temporal Alignment in Collaborative Scientific Work
+cscw654	Tweet Acts: How Constituents Lobby Congress via Twitter
+cscw626	AskSheet: Efficient Human Computation for Decision Making with Spreadsheets
+cscw550	To Search or to Ask: The Routing of Information Needs Between Traditional Search Engines and Social Networks
+cscw668	Family Matters: Control and Conflict in Online Family History Production

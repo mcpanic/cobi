@@ -1,5 +1,76 @@
 schedule=[
     {
+        "date": "Saturday, Feb 15th",
+        "day": "Saturday",
+        "slots": [
+            {
+                "slot_id": "Saturday__Feb_15th_all_day",
+                "time": "all-day",
+                "slot_class": "all-day",
+                "sessions": [
+                    {
+                        "session": "W1"
+                    },
+                    {
+                        "session": "W2"
+                    },
+                    {
+                        "session": "W3"
+                    },
+                    {
+                        "session": "W4"
+                    },
+                    {
+                        "session": "W5"
+                    },
+                    {
+                        "session": "W10"
+                    },
+                    {
+                        "session": "W14"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "date": "Sunday, Feb 16th",
+        "day": "Sunday",
+        "slots": [
+            {
+                "slot_id": "Sunday__Feb_16th_all_day",
+                "time": "all-day",
+                "slot_class": "all-day",
+                "sessions": [
+                    {
+                        "session": "W6"
+                    },
+                    {
+                        "session": "W7"
+                    },
+                    {
+                        "session": "W8"
+                    },
+                    {
+                        "session": "W9"
+                    },
+                    {
+                        "session": "W11"
+                    },
+                    {
+                        "session": "W12"
+                    },
+                    {
+                        "session": "W13"
+                    },
+                    {
+                        "session": "WD"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "date": "Monday, Feb 17th",
         "day": "Monday",
         "slots": [
@@ -88,6 +159,16 @@ schedule=[
                         "session": "s216"
                     }
                 ]
+            },
+            {
+                "slot_id": "Monday__Feb_17th_20_00_22_00",
+                "time": "20:00-22:00",
+                "slot_class": "evening2",
+                "sessions": [
+                    {
+                        "session": "FB"
+                    }
+                ]
             }
         ]
     },
@@ -128,6 +209,9 @@ schedule=[
                 "time": "10:45-12:00",
                 "slot_class": "morning2",
                 "sessions": [
+                    {
+                        "session": "next"
+                    },
                     {
                         "session": "s122"
                     },
