@@ -1,4 +1,4 @@
-B1;2cvar csv = require("csv");
+var csv = require("csv");
 var fs = require('fs');
 var newAuth = 100000;
 
@@ -75,27 +75,27 @@ function loadFrenzyData(data) {
     return sessions;
 }
 
-var personaList = ["3D",
-		   "Art",
-		   "CSCW",
-		   "Design",
-		   "Games",
-		   "HCI4D",
-		   "Health",
-		   "Making",
-		   "Methods",
-		   "People",
-		   "Science",
-		   "Security",
-		   "Social",
-		   "Systems",
-		   "Touch",
-		   "Transportation",
-		   "UBI",
-		   "UIST",
-		   "Viz",
-		   "Web"
-		   ];
+var personaList = [
+    'HCI4D',
+    'Games',
+    'UIST',
+    'Health',
+    'Making',
+    'Social',
+    'Methods and Models',
+    'Touch',
+    'People',
+    'Viz',
+    'Security',
+    'CSCW',
+    'Design',
+    'Displays',
+    'UBI',
+    'Systems',
+    'Art',
+    '3D',
+    'Transportation',
+    'Web'];
     
 var communityList = ['SC_Applications-B',
 		     'SC_Applications-V',
@@ -292,7 +292,8 @@ function createEntityData(data, sessionData, venue){
 	var sub = data[s]; 
 	var submission = {
 	    "id" : sub["ID"],
-	    "title" : sub["Title"],
+	    "title" : ((sub["Title"].indexOf("[NOT SUBMITTED]") == 0) ?
+		       sub["Title"].substring(16) : sub["Title"]),
 	    "abstract" : sub["Abstract"],
 	    "acmLink" : "",
 	    "authors" : createEntityAuthors(sub, venue), 
