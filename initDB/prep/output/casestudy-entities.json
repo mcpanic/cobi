@@ -13,8 +13,18 @@
                 "givenName": "Carol",
                 "familyName": "Farnsworth",
                 "email": "carol.farnsworth@sap.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP Labs, LLC",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth31489",
@@ -24,8 +34,18 @@
                 "givenName": "Karen",
                 "familyName": "Holtzblatt",
                 "email": "karen@incontextdesign.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "InContext Design",
+                    "city": "Concord",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth17508",
@@ -35,8 +55,18 @@
                 "givenName": "Shantanu",
                 "familyName": "Pai",
                 "email": "shanritz@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP Labs, LLC",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth16923",
@@ -46,8 +76,18 @@
                 "givenName": "Theo",
                 "familyName": "Held",
                 "email": "theo.held@sap.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP AG",
+                    "city": "Walldorf",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39472",
@@ -57,8 +97,18 @@
                 "givenName": "Sally",
                 "familyName": "Lawler Kennedy",
                 "email": "sally.lawler.kennedy@sap.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP Labs, LLC",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39473",
@@ -68,8 +118,18 @@
                 "givenName": "Eli",
                 "familyName": "Wylen",
                 "email": "eli.wylen@incontextdesign.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "InContext Design",
+                    "city": "Concord",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth31582",
@@ -79,8 +139,18 @@
                 "givenName": "Pallavi",
                 "familyName": "Kutty",
                 "email": "pallavi.kutty@sap.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth31048",
@@ -90,8 +160,18 @@
                 "givenName": "Kelley",
                 "familyName": "Wagg",
                 "email": "kelley.wagg@incontextdesign.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "InContext Design",
+                    "city": "Concord",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -117,8 +197,18 @@
                 "givenName": "Kate Sangwon",
                 "familyName": "Lee",
                 "email": "kate@navercorp.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "UX Department",
+                    "institution": "Naver Corp.",
+                    "city": "Seongnam-si",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39715",
@@ -128,8 +218,18 @@
                 "givenName": "Sun",
                 "familyName": "Lee",
                 "email": "sun.lee@navercorp.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "UX Department",
+                    "institution": "Naver Corp.",
+                    "city": "Seongnam-si",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39716",
@@ -139,8 +239,18 @@
                 "givenName": "Hyojung",
                 "familyName": "Kim",
                 "email": "kihozip@navercorp.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "UX Department",
+                    "institution": "Naver Corp.",
+                    "city": "Seongnam-si",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -166,8 +276,18 @@
                 "givenName": "Connor",
                 "familyName": "Upton",
                 "email": "connor.upton@intel.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Cloud Services Lab",
+                    "institution": "Intel Labs Europe",
+                    "city": "Leixlip",
+                    "country": "Ireland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39770",
@@ -177,8 +297,18 @@
                 "givenName": "Fergus",
                 "familyName": "Quilligan",
                 "email": "fergus.quilligan@intel.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Irish Centre for Manufacturing Research",
+                    "institution": "Intel",
+                    "city": "Leixlip",
+                    "country": "Ireland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This presentation describes the research, design and development of a software tool for energy efficient scheduling in an industrial environment. The system couples an optimization engine with an interactive visualization. ",
@@ -204,8 +334,18 @@
                 "givenName": "Vicki",
                 "familyName": "Moulder",
                 "email": "vmoulder@sfu.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Simon Fraser University",
+                    "city": "Surrey",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth19133",
@@ -215,8 +355,18 @@
                 "givenName": "Lorna",
                 "familyName": "Boschman",
                 "email": "lorna.boschman@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of British Columbia",
+                    "city": "Vancouver",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth3350",
@@ -226,8 +376,18 @@
                 "givenName": "Ron",
                 "familyName": "Wakkary",
                 "email": "rwakkary@sfu.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Simon Fraser University",
+                    "city": "Surrey ",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth8702",
@@ -237,8 +397,18 @@
                 "givenName": "William",
                 "familyName": "Odom",
                 "email": "wodom@cs.cmu.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Carnegie Mellon University",
+                    "city": "Pittsburgh",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth12782",
@@ -248,8 +418,18 @@
                 "givenName": "Stacey",
                 "familyName": "Kuznetsov",
                 "email": "stace@cs.cmu.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Carnegie Mellon University",
+                    "city": "Pittsburgh",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -275,8 +455,18 @@
                 "givenName": "Katri",
                 "familyName": "Koli",
                 "email": "katri.koli@leadin.fi",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Leadin Inc.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth14054",
@@ -286,8 +476,18 @@
                 "givenName": "Tuula",
                 "familyName": "Kärkkäinen",
                 "email": "tuula.karkkainen@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Leadin Inc.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth11817",
@@ -297,8 +497,18 @@
                 "givenName": "Jaakko",
                 "familyName": "Lehikoinen",
                 "email": "jaakko.t.lehikoinen@nokia.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Leadin Inc.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39747",
@@ -308,8 +518,18 @@
                 "givenName": "Tuomo",
                 "familyName": "Pirinen",
                 "email": "tuomo.pirinen@sandvik.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Sandvik Corp.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39748",
@@ -319,8 +539,18 @@
                 "givenName": "Sami",
                 "familyName": "Hanski",
                 "email": "sami.hanski@sandvik.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Sandvik Corp.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39749",
@@ -330,8 +560,18 @@
                 "givenName": "Juha",
                 "familyName": "Lassila",
                 "email": "juha.lassila@sandvik.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Sandvik Corp.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39750",
@@ -341,8 +581,18 @@
                 "givenName": "Mikko",
                 "familyName": "Loimusalo",
                 "email": "mikko.loimusalo@sandvik.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Sandvik Corp.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -368,8 +618,18 @@
                 "givenName": "Lilia",
                 "familyName": "Villafuerte",
                 "email": "lilia@villafuerte.info",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "LABoral Art and Industrial Production Center",
+                    "city": "Gijón",
+                    "country": "Spain"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -395,8 +655,18 @@
                 "givenName": "Kolina",
                 "familyName": "Koltai",
                 "email": "kolina.koltai.31@my.csun.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Systems Engineering Research Laboratory",
+                    "institution": "California State University, Northridge",
+                    "city": "Northridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39990",
@@ -406,8 +676,18 @@
                 "givenName": "Nhut",
                 "familyName": "Ho",
                 "email": "nhut.ho.51@csun.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Systems Engineering Research Laboratory",
+                    "institution": "California State University, Northridge",
+                    "city": "Northridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39915",
@@ -417,8 +697,18 @@
                 "givenName": "David",
                 "familyName": "Niedober",
                 "email": "david.niedober.788@my.csun.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Systems Engineering Research Laboratory",
+                    "institution": "California State University, Northridge",
+                    "city": "Northridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth40151",
@@ -428,8 +718,18 @@
                 "givenName": "Gina",
                 "familyName": "Masequesmay",
                 "email": "gina.masequesmay@csun.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Systems Engineering Research Laboratory",
+                    "institution": "California State University, Northridge",
+                    "city": "Northridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth40152",
@@ -439,8 +739,18 @@
                 "givenName": "Mark",
                 "familyName": "Skoog",
                 "email": "mark.a.skoog@nasa.gov",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "NASA Dryden Flight Research Center, CA",
+                    "institution": "NASA",
+                    "city": "Edwards AFB",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth40153",
@@ -450,8 +760,18 @@
                 "givenName": "Artemio",
                 "familyName": "Cacanindin",
                 "email": "artemio.cacanindin@us.af.mil",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Air Force Flight Test Center, Edwards AFB, CA",
+                    "institution": "United States Air Force",
+                    "city": "Edwards AFB",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth40154",
@@ -461,8 +781,18 @@
                 "givenName": "Walter",
                 "familyName": "Johnson",
                 "email": "walter.johnson@nasa.gov",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "NASA Ames Research Center, CA",
+                    "institution": "NASA",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -488,8 +818,18 @@
                 "givenName": "Victoria",
                 "familyName": "Schwanda Sosik",
                 "email": "sosik@cs.cornell.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Cornell University",
+                    "city": "Ithaca",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth38860",
@@ -499,8 +839,18 @@
                 "givenName": "Elie",
                 "familyName": "Bursztein",
                 "email": "elieb@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth2938",
@@ -510,8 +860,18 @@
                 "givenName": "Sunny",
                 "familyName": "Consolvo",
                 "email": "sconsolvo@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth9100",
@@ -521,8 +881,18 @@
                 "givenName": "David",
                 "familyName": "Huffaker",
                 "email": "huffaker@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth13241",
@@ -532,8 +902,18 @@
                 "givenName": "Gueorgi",
                 "familyName": "Kossinets",
                 "email": "gkossinets@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39962",
@@ -543,8 +923,18 @@
                 "givenName": "Kerwell",
                 "familyName": "Liao",
                 "email": "kerwell@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39963",
@@ -554,8 +944,18 @@
                 "givenName": "Paul",
                 "familyName": "McDonald",
                 "email": "pmcdonald@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth31522",
@@ -565,8 +965,18 @@
                 "givenName": "Aaron",
                 "familyName": "Sedley",
                 "email": "asedley@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -592,8 +1002,18 @@
                 "givenName": "Susan",
                 "familyName": "Dray",
                 "email": "susan.dray@dray.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Dray & Associates, Inc.",
+                    "city": "Oakland",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",

@@ -9,8 +9,18 @@
         "familyName": "Farnsworth",
         "email": "carol.farnsworth@sap.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "SAP Labs, LLC",
+            "city": "Palo Alto",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth31489",
@@ -22,8 +32,18 @@
         "familyName": "Holtzblatt",
         "email": "karen@incontextdesign.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "InContext Design",
+            "city": "Concord",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth17508",
@@ -35,8 +55,18 @@
         "familyName": "Pai",
         "email": "shanritz@gmail.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "SAP Labs, LLC",
+            "city": "Palo Alto",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth16923",
@@ -48,8 +78,18 @@
         "familyName": "Held",
         "email": "theo.held@sap.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "SAP AG",
+            "city": "Walldorf",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39472",
@@ -61,8 +101,18 @@
         "familyName": "Lawler Kennedy",
         "email": "sally.lawler.kennedy@sap.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "SAP Labs, LLC",
+            "city": "Palo Alto",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39473",
@@ -74,8 +124,18 @@
         "familyName": "Wylen",
         "email": "eli.wylen@incontextdesign.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "InContext Design",
+            "city": "Concord",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth31582",
@@ -87,8 +147,18 @@
         "familyName": "Kutty",
         "email": "pallavi.kutty@sap.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "SAP",
+            "city": "Palo Alto",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth31048",
@@ -100,8 +170,18 @@
         "familyName": "Wagg",
         "email": "kelley.wagg@incontextdesign.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "InContext Design",
+            "city": "Concord",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39719",
@@ -113,8 +193,18 @@
         "familyName": "Lee",
         "email": "kate@navercorp.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "UX Department",
+            "institution": "Naver Corp.",
+            "city": "Seongnam-si",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39715",
@@ -126,8 +216,18 @@
         "familyName": "Lee",
         "email": "sun.lee@navercorp.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "UX Department",
+            "institution": "Naver Corp.",
+            "city": "Seongnam-si",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39716",
@@ -139,8 +239,18 @@
         "familyName": "Kim",
         "email": "kihozip@navercorp.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "UX Department",
+            "institution": "Naver Corp.",
+            "city": "Seongnam-si",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39544",
@@ -152,8 +262,18 @@
         "familyName": "Upton",
         "email": "connor.upton@intel.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Cloud Services Lab",
+            "institution": "Intel Labs Europe",
+            "city": "Leixlip",
+            "country": "Ireland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39770",
@@ -165,8 +285,18 @@
         "familyName": "Quilligan",
         "email": "fergus.quilligan@intel.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Irish Centre for Manufacturing Research",
+            "institution": "Intel",
+            "city": "Leixlip",
+            "country": "Ireland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth18768",
@@ -178,8 +308,18 @@
         "familyName": "Moulder",
         "email": "vmoulder@sfu.ca",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Simon Fraser University",
+            "city": "Surrey",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth19133",
@@ -191,8 +331,18 @@
         "familyName": "Boschman",
         "email": "lorna.boschman@gmail.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of British Columbia",
+            "city": "Vancouver",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth3350",
@@ -204,8 +354,18 @@
         "familyName": "Wakkary",
         "email": "rwakkary@sfu.ca",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Simon Fraser University",
+            "city": "Surrey ",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth8702",
@@ -217,8 +377,18 @@
         "familyName": "Odom",
         "email": "wodom@cs.cmu.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Carnegie Mellon University",
+            "city": "Pittsburgh",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth12782",
@@ -230,8 +400,18 @@
         "familyName": "Kuznetsov",
         "email": "stace@cs.cmu.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Carnegie Mellon University",
+            "city": "Pittsburgh",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39733",
@@ -243,8 +423,18 @@
         "familyName": "Koli",
         "email": "katri.koli@leadin.fi",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Leadin Inc.",
+            "city": "Tampere",
+            "country": "Finland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth14054",
@@ -256,8 +446,18 @@
         "familyName": "Kärkkäinen",
         "email": "tuula.karkkainen@gmail.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Leadin Inc.",
+            "city": "Tampere",
+            "country": "Finland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth11817",
@@ -269,8 +469,18 @@
         "familyName": "Lehikoinen",
         "email": "jaakko.t.lehikoinen@nokia.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Leadin Inc.",
+            "city": "Tampere",
+            "country": "Finland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39747",
@@ -282,8 +492,18 @@
         "familyName": "Pirinen",
         "email": "tuomo.pirinen@sandvik.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Sandvik Corp.",
+            "city": "Tampere",
+            "country": "Finland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39748",
@@ -295,8 +515,18 @@
         "familyName": "Hanski",
         "email": "sami.hanski@sandvik.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Sandvik Corp.",
+            "city": "Tampere",
+            "country": "Finland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39749",
@@ -308,8 +538,18 @@
         "familyName": "Lassila",
         "email": "juha.lassila@sandvik.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Sandvik Corp.",
+            "city": "Tampere",
+            "country": "Finland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39750",
@@ -321,8 +561,18 @@
         "familyName": "Loimusalo",
         "email": "mikko.loimusalo@sandvik.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Sandvik Corp.",
+            "city": "Tampere",
+            "country": "Finland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth24287",
@@ -334,8 +584,18 @@
         "familyName": "Villafuerte",
         "email": "lilia@villafuerte.info",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "LABoral Art and Industrial Production Center",
+            "city": "Gijón",
+            "country": "Spain"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39991",
@@ -347,8 +607,18 @@
         "familyName": "Koltai",
         "email": "kolina.koltai.31@my.csun.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Systems Engineering Research Laboratory",
+            "institution": "California State University, Northridge",
+            "city": "Northridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39990",
@@ -360,8 +630,18 @@
         "familyName": "Ho",
         "email": "nhut.ho.51@csun.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Systems Engineering Research Laboratory",
+            "institution": "California State University, Northridge",
+            "city": "Northridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39915",
@@ -373,8 +653,18 @@
         "familyName": "Niedober",
         "email": "david.niedober.788@my.csun.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Systems Engineering Research Laboratory",
+            "institution": "California State University, Northridge",
+            "city": "Northridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth40151",
@@ -386,8 +676,18 @@
         "familyName": "Masequesmay",
         "email": "gina.masequesmay@csun.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Systems Engineering Research Laboratory",
+            "institution": "California State University, Northridge",
+            "city": "Northridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth40152",
@@ -399,8 +699,18 @@
         "familyName": "Skoog",
         "email": "mark.a.skoog@nasa.gov",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "NASA Dryden Flight Research Center, CA",
+            "institution": "NASA",
+            "city": "Edwards AFB",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth40153",
@@ -412,8 +722,18 @@
         "familyName": "Cacanindin",
         "email": "artemio.cacanindin@us.af.mil",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Air Force Flight Test Center, Edwards AFB, CA",
+            "institution": "United States Air Force",
+            "city": "Edwards AFB",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth40154",
@@ -425,8 +745,18 @@
         "familyName": "Johnson",
         "email": "walter.johnson@nasa.gov",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "NASA Ames Research Center, CA",
+            "institution": "NASA",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth16346",
@@ -438,8 +768,18 @@
         "familyName": "Schwanda Sosik",
         "email": "sosik@cs.cornell.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Cornell University",
+            "city": "Ithaca",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth38860",
@@ -451,8 +791,18 @@
         "familyName": "Bursztein",
         "email": "elieb@google.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth2938",
@@ -464,8 +814,18 @@
         "familyName": "Consolvo",
         "email": "sconsolvo@google.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Google",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth9100",
@@ -477,8 +837,18 @@
         "familyName": "Huffaker",
         "email": "huffaker@google.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "Mountain View",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth13241",
@@ -490,8 +860,18 @@
         "familyName": "Kossinets",
         "email": "gkossinets@gmail.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39962",
@@ -503,8 +883,18 @@
         "familyName": "Liao",
         "email": "kerwell@google.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39963",
@@ -516,8 +906,18 @@
         "familyName": "McDonald",
         "email": "pmcdonald@google.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth31522",
@@ -529,8 +929,18 @@
         "familyName": "Sedley",
         "email": "asedley@google.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth11429",
@@ -542,7 +952,17 @@
         "familyName": "Dray",
         "email": "susan.dray@dray.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Dray & Associates, Inc.",
+            "city": "Oakland",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     }
 ]

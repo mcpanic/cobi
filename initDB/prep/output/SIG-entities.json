@@ -13,8 +13,18 @@
                 "givenName": "Karen",
                 "familyName": "Holtzblatt",
                 "email": "karen@incontextdesign.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "InContext Design",
+                    "city": "Concord",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39395",
@@ -24,8 +34,18 @@
                 "givenName": "Shoshana",
                 "familyName": "Holtzblatt",
                 "email": "shoshanah@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "New York",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "shelley@incontextdesign.com",
@@ -50,8 +70,18 @@
                 "givenName": "Andrew",
                 "familyName": "Howes",
                 "email": "howesa@mac.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Birmingham",
+                    "city": "Birmingham",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth19044",
@@ -61,8 +91,18 @@
                 "givenName": "Benjamin",
                 "familyName": "Cowan",
                 "email": "b.r.cowan@cs.bham.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Birmingham",
+                    "city": "Birmingham",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth14962",
@@ -72,8 +112,18 @@
                 "givenName": "Christian",
                 "familyName": "Janssen",
                 "email": "cjanssen@ski.org",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Smith-Kettlewell Eye Research Institute",
+                    "city": "San Francisco",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth7532",
@@ -83,8 +133,18 @@
                 "givenName": "Anna",
                 "familyName": "Cox",
                 "email": "anna.cox@ucl.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University College London",
+                    "city": "London",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth1407",
@@ -94,8 +154,18 @@
                 "givenName": "Paul",
                 "familyName": "Cairns",
                 "email": "paul.cairns@york.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Dept of Computer Science",
+                    "institution": "University of York",
+                    "city": "York",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth3622",
@@ -105,8 +175,18 @@
                 "givenName": "Anthony",
                 "familyName": "Hornof",
                 "email": "hornof@cs.uoregon.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Dept. of Computer Science and Information Science",
+                    "institution": "University of Oregon",
+                    "city": "Eugene",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth6389",
@@ -116,8 +196,18 @@
                 "givenName": "Stephen",
                 "familyName": "Payne",
                 "email": "s.j.payne@bath.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Bath",
+                    "city": "Bath",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth6244",
@@ -127,8 +217,18 @@
                 "givenName": "Peter",
                 "familyName": "Pirolli",
                 "email": "pirolli@parc.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Palo Alto Research Center (PARC)",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "howesa@mac.com",
@@ -153,8 +253,18 @@
                 "givenName": "Florian",
                 "familyName": "Mueller",
                 "email": "floyd@floydmueller.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Exertion Games Lab",
+                    "institution": "RMIT University",
+                    "city": "Melbourne",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth7924",
@@ -164,8 +274,18 @@
                 "givenName": "Joe",
                 "familyName": "Marshall",
                 "email": "joe.marshall@nottingham.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Mixed Reality Lab",
+                    "institution": "The University of Nottingham",
+                    "city": "Nottingham",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth10580",
@@ -175,8 +295,18 @@
                 "givenName": "Rohit",
                 "familyName": "Khot",
                 "email": "rohit.a.khot@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Exertion games lab",
+                    "institution": "RMIT University",
+                    "city": "Melbourne",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth4751",
@@ -186,8 +316,18 @@
                 "givenName": "Stina",
                 "familyName": "Nylander",
                 "email": "stny@sics.se",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Mobile Life @ SICS",
+                    "city": "Kista",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth6222",
@@ -197,8 +337,18 @@
                 "givenName": "Jakob",
                 "familyName": "Tholander",
                 "email": "jakobth@dsv.su.se",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Mobile Life",
+                    "institution": "Stockholm University",
+                    "city": "Stockholm",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "floyd@floydmueller.com",
@@ -223,8 +373,18 @@
                 "givenName": "David",
                 "familyName": "England",
                 "email": "d.england@ljmu.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Liverpool John Moores University",
+                    "city": "Liverpool",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth27015",
@@ -234,8 +394,18 @@
                 "givenName": "Jocelyn",
                 "familyName": "Spence",
                 "email": "j.spence@surrey.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Digital World Research Centre, School of Arts",
+                    "institution": "University of Surrey",
+                    "city": "Guildford",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth3848",
@@ -245,8 +415,18 @@
                 "givenName": "Celine",
                 "familyName": "Latulipe",
                 "email": "clatulip@uncc.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of North Carolina at Charlotte",
+                    "city": "Charlotte",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth1938",
@@ -256,8 +436,18 @@
                 "givenName": "ernest",
                 "familyName": "edmonds",
                 "email": "ernest@ernestedmonds.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Technology, Sydney",
+                    "city": "Sydney",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth5214",
@@ -267,8 +457,18 @@
                 "givenName": "Linda",
                 "familyName": "Candy",
                 "email": "linda@lindacandy.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Technology, Sydney",
+                    "city": "Sydney",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth3338",
@@ -278,8 +478,18 @@
                 "givenName": "Thecla",
                 "familyName": "Schiphorst",
                 "email": "thecla@sfu.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "School of Interactive Arts and Technology ",
+                    "institution": "Simon Fraser University",
+                    "city": "Vancouver",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39653",
@@ -289,8 +499,18 @@
                 "givenName": "Nick",
                 "familyName": "Bryan-Kinns",
                 "email": "nick.bryan-kinns@eecs.qmul.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Centre for Digital Music",
+                    "institution": "Queen Mary, University of London",
+                    "city": "London",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39762",
@@ -300,8 +520,18 @@
                 "givenName": "Kirk",
                 "familyName": "Woolford",
                 "email": "k.woolford@surrey.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Digital World Research Centre",
+                    "institution": "University of Surrey",
+                    "city": "Guildford",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "d.england@ljmu.ac.uk",
@@ -326,8 +556,18 @@
                 "givenName": "Stephanie",
                 "familyName": "Rosenbaum",
                 "email": "stephanie@teced.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "TecEd, Inc.",
+                    "city": "Ann Arbor",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth9124",
@@ -337,8 +577,18 @@
                 "givenName": "Judith",
                 "familyName": "Ramey",
                 "email": "jramey@u.washington.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "stephanie@teced.com",
@@ -363,8 +613,18 @@
                 "givenName": "Anicia",
                 "familyName": "Peters",
                 "email": "anpeters@iastate.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Iowa State University",
+                    "city": "Ames",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "Polytechnic of Namibia",
+                    "city": "Windhoek",
+                    "country": "Namibia"
+                }
             },
             {
                 "id": "auth23673",
@@ -374,8 +634,18 @@
                 "givenName": "Heike",
                 "familyName": "Winschiers-Theophilus",
                 "email": "heikewinschiers@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Polytechnic of Namibia",
+                    "city": "Windhoek",
+                    "country": "Namibia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth11529",
@@ -385,8 +655,18 @@
                 "givenName": "Nicola",
                 "familyName": "Bidwell",
                 "email": "nic.bidwell@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Department of Informatics",
+                    "institution": "University of Pretoria",
+                    "city": "Pretoria",
+                    "country": "South Africa"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth13531",
@@ -396,8 +676,18 @@
                 "givenName": "Arun",
                 "familyName": "Kumar",
                 "email": "kkarun@in.ibm.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "IBM Research India",
+                    "city": "New Delhi",
+                    "country": "India"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth14169",
@@ -407,8 +697,18 @@
                 "givenName": "Daniel",
                 "familyName": "Ochieng",
                 "email": "dorwa@uonbi.ac.ke",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Nairobi",
+                    "city": "Nairobi",
+                    "country": "Kenya"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39904",
@@ -418,8 +718,18 @@
                 "givenName": "Fatoumata",
                 "familyName": "Camara",
                 "email": "fcamara@objetdirect.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Objet Direct – Groupe VISEO",
+                    "city": "Grenoble",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth11429",
@@ -429,8 +739,18 @@
                 "givenName": "Susan",
                 "familyName": "Dray",
                 "email": "susan.dray@dray.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Dray & Associates, Inc.",
+                    "city": "Oakland",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "anpeters@iastate.edu",
@@ -455,8 +775,18 @@
                 "givenName": "Winyu",
                 "familyName": "Chinthammit",
                 "email": "wchinthammit@acm.org",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "HIT Lab Australia",
+                    "institution": "University of Tasmania",
+                    "city": "Launceston",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth2365",
@@ -466,8 +796,18 @@
                 "givenName": "Henry Been-Lirn",
                 "familyName": "Duh",
                 "email": "duhbl@acm.org",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Human Interface Technology Lab Australia",
+                    "institution": "University of Tasmania",
+                    "city": "Tasmania",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth2011",
@@ -477,8 +817,18 @@
                 "givenName": "Jun",
                 "familyName": "Rekimoto",
                 "email": "rekimoto@acm.org",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Tokyo / Sony CSL",
+                    "city": "Meguro-ku",
+                    "country": "Japan"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "winyu.chinthammit@utas.edu.au",
@@ -503,8 +853,18 @@
                 "givenName": "Janet",
                 "familyName": "Read",
                 "email": "jcread@uclan.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Central Lancashire",
+                    "city": "Preston",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth1924",
@@ -514,8 +874,18 @@
                 "givenName": "Juan Pablo",
                 "familyName": "Hourcade",
                 "email": "juanpablo-hourcade@uiowa.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Iowa",
+                    "city": "Iowa City",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth1348",
@@ -525,8 +895,18 @@
                 "givenName": "Panos",
                 "familyName": "Markopoulos",
                 "email": "P.Markopoulos@tue.nl",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Eindhoven University of Technology",
+                    "city": "Eindhoven",
+                    "country": "The Netherlands"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth24491",
@@ -536,8 +916,18 @@
                 "givenName": "Ole",
                 "familyName": "Iversen",
                 "email": "oiversen@cs.au.dk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Aarhus University",
+                    "city": "Aarhus",
+                    "country": "Denmark"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "jcread@uclan.ac.uk",
@@ -562,8 +952,18 @@
                 "givenName": "Ron",
                 "familyName": "Wakkary",
                 "email": "rwakkary@sfu.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Simon Fraser University",
+                    "city": "Surrey ",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth5985",
@@ -573,8 +973,18 @@
                 "givenName": "Erik",
                 "familyName": "Stolterman",
                 "email": "estolter@indiana.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Indiana University Bloomington",
+                    "city": "Bloomington",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "rwakkary@sfu.ca",
@@ -599,8 +1009,18 @@
                 "givenName": "Lennart",
                 "familyName": "Nacke",
                 "email": "Lennart.Nacke@acm.org",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Games and Media Entertainment Research Laboratory",
+                    "institution": "University of Ontario Institute of Technology",
+                    "city": "Oshawa",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth18112",
@@ -610,8 +1030,18 @@
                 "givenName": "Pejman",
                 "familyName": "Mirza-Babaei",
                 "email": "pejman.m@acm.org",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Games and Media Entertainment Research Laboratory",
+                    "institution": "University of Ontario Institute of Technology",
+                    "city": "Oshawa",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth3154",
@@ -621,8 +1051,18 @@
                 "givenName": "Magy",
                 "familyName": "Seif El-Nasr",
                 "email": "magy@northeastern.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Northeastern University",
+                    "city": "Boston",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth3427",
@@ -632,8 +1072,18 @@
                 "givenName": "Heather",
                 "familyName": "Desurvire",
                 "email": "Heather3d@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "User Behavioristics Research, Inc.",
+                    "city": "Los Angeles",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth40753",
@@ -643,8 +1093,18 @@
                 "givenName": "Regina",
                 "familyName": "Bernhaupt",
                 "email": "Regina.Bernhaupt@irit.fr",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "IRIT, University Paul Sabatier, Toulouse III",
+                    "city": "Toulouse",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "Lennart.Nacke@acm.org",
@@ -669,8 +1129,18 @@
                 "givenName": "James",
                 "familyName": "Clawson",
                 "email": "jamer@cc.gatech.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth1374",
@@ -680,8 +1150,18 @@
                 "givenName": "Stephen",
                 "familyName": "Brewster",
                 "email": "stephen.brewster@glasgow.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "School of Computing Science",
+                    "institution": "University of Glasgow",
+                    "city": "Glasgow",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth9541",
@@ -691,8 +1171,18 @@
                 "givenName": "Mark",
                 "familyName": "Dunlop",
                 "email": "mark.dunlop@strath.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Computer and Information Sciences",
+                    "institution": "University of Strathclyde",
+                    "city": "Glasgow",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth3496",
@@ -702,8 +1192,18 @@
                 "givenName": "Per Ola",
                 "familyName": "Kristensson",
                 "email": "kristensson@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "School of Computer Science",
+                    "institution": "University of St Andrews",
+                    "city": "St Andrews",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth1262",
@@ -713,8 +1213,18 @@
                 "givenName": "Poika",
                 "familyName": "Isokoski",
                 "email": "poika.isokoski@uta.fi",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Tampere",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth2881",
@@ -724,8 +1234,18 @@
                 "givenName": "Antti",
                 "familyName": "Oulasvirta",
                 "email": "antti.oulasvirta@mpii.de",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Max Planck Institute for Informatics",
+                    "city": "Saarbruecken",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth9760",
@@ -735,8 +1255,18 @@
                 "givenName": "Keith",
                 "familyName": "Vertanen",
                 "email": "kvertanen@mtech.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Montana Tech",
+                    "city": "Butte",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth19192",
@@ -746,8 +1276,18 @@
                 "givenName": "Annalu",
                 "familyName": "Waller",
                 "email": "awaller@dundee.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "School of Computing",
+                    "institution": "University of Dundee",
+                    "city": "Dundee",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "jamer@cc.gatech.edu",
@@ -772,8 +1312,18 @@
                 "givenName": "Janice",
                 "familyName": "Rohn",
                 "email": "janicerohn@yahoo.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Velocify",
+                    "city": "El Segundo",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth14979",
@@ -783,8 +1333,18 @@
                 "givenName": "Carola",
                 "familyName": "Thompson",
                 "email": "carolafthompson@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "zSpace",
+                    "city": "Sunnyvale",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "janicerohn@yahoo.com",

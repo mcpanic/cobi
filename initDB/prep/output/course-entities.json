@@ -13,8 +13,18 @@
                 "givenName": "Jonathan",
                 "familyName": "Lazar",
                 "email": "jlazar@towson.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Towson University",
+                    "city": "Towson",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Gives newcomers background in the field of HCI to make their conference experience more meaningful. Provides a framework to understand how the various topics are related to research and practice.",
@@ -39,8 +49,18 @@
                 "givenName": "Jon",
                 "familyName": "Kolko",
                 "email": "jkolko@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Austin Center for Design",
+                    "city": "Austin",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Provides an overview of the design synthesis process (moving from research to insight, and from insight to design idea), and offers training in specific methods for managing ambiguity \\ ",
@@ -65,8 +85,18 @@
                 "givenName": "Jeff",
                 "familyName": "Johnson",
                 "email": "jeffjohnson@uiwizards.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "UI Wizards, Inc",
+                    "city": "San Francisco",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "Wiser Usability, Inc.",
+                    "city": "Cupertino",
+                    "country": "United States"
+                }
             }
         ],
         "cbStatement": "Explains the benefits of designing a task-focused conceptual model (CM) of an application before designing its UI, and how to create CMs.  Provides hands-on experience designing a CM. \\ ",
@@ -91,8 +121,18 @@
                 "givenName": "William",
                 "familyName": "Hudson",
                 "email": "william.hudson@syntagm.co.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Syntagm Ltd",
+                    "city": "Abingdon",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course covers the theory and practice of card sorting with a particular focus on navigation design. It includes a paper-based card sort activity. Online methods are also discussed.",
@@ -117,8 +157,18 @@
                 "givenName": "William",
                 "familyName": "Hudson",
                 "email": "william.hudson@syntagm.co.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Syntagm Ltd",
+                    "city": "Abingdon",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This half-day course shows how to integrate User-Centered Design with Agile methods to create great user experiences. It takes an 'emotionally intelligent' approach to engaging all team members in UCD.",
@@ -143,8 +193,18 @@
                 "givenName": "Parker",
                 "familyName": "Jim",
                 "email": "jparker@ucalgary.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Digital Media Lab, Art Department",
+                    "institution": "University of Calgary",
+                    "city": "Calgary",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This will give those unfamiliar with the inner workings of computer games a basic understanding of their design and function. It will illustrate many interaction mechanisms useful to the user experience. ",
@@ -169,8 +229,18 @@
                 "givenName": "Scott",
                 "familyName": "MacKenzie",
                 "email": "mack@cse.yorku.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "York University",
+                    "city": "Toronto",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth5947",
@@ -180,8 +250,18 @@
                 "givenName": "Steven",
                 "familyName": "Castellucci",
                 "email": "stevenc@cse.yorku.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "York University",
+                    "city": "Toronto",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course delivers an A-to-Z tutorial on conducting an empirical experiment (aka user study) in human-computer interaction and writing a CHI paper. \\ ",
@@ -206,8 +286,18 @@
                 "givenName": "Michael",
                 "familyName": "Lyons",
                 "email": "michael.lyons@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Ritsumeikan University",
+                    "city": "Kyoto",
+                    "country": "Japan"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth34980",
@@ -217,8 +307,18 @@
                 "givenName": "Axel",
                 "familyName": "Mulder",
                 "email": "Axel@infusionsystems.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Infusion Systems Ltd.",
+                    "city": "Montreal",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "School of Music",
+                    "institution": "McGill University",
+                    "city": "Montreal",
+                    "country": "Canada"
+                }
             },
             {
                 "id": "auth1763",
@@ -228,8 +328,18 @@
                 "givenName": "Sidney",
                 "familyName": "Fels",
                 "email": "ssfels@ece.ubc.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of British Columbia",
+                    "city": "Vancouver",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This theory + hands-on course provides attendees with a practical overview of recent advances in musical interface research and a chance to prototype a new interface for musical expression.",
@@ -254,8 +364,18 @@
                 "givenName": "David",
                 "familyName": "Sirkin",
                 "email": "sirkin@cdr.stanford.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Stanford University",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth1438",
@@ -265,8 +385,18 @@
                 "givenName": "Wendy",
                 "familyName": "Ju",
                 "email": "wendyju@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Stanford University",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Course is a hands-on introduction to interactive electronics prototyping for people with a variety of backgrounds, including those with no prior experience in electronics. ",
@@ -291,8 +421,18 @@
                 "givenName": "Stephanie",
                 "familyName": "Foehrenbach",
                 "email": "stephaniefoehrenbach@googlemail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "PUR",
+                    "institution": "Zühlke Engineering AG",
+                    "city": "Schlieren",
+                    "country": "Switzerland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Sketching as a technique to quickly draw ideas is used to explore and communicate ideas. This course introduces basic sketching techniques and a visual language, which participants can immediately apply. ",
@@ -317,8 +457,18 @@
                 "givenName": "Allison",
                 "familyName": "Druin",
                 "email": "allisond@umiacs.umd.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth4981",
@@ -328,8 +478,18 @@
                 "givenName": "Jerry",
                 "familyName": "Fails",
                 "email": "failsj@mail.montclair.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Montclair State University",
+                    "city": "Montclair",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth9212",
@@ -339,8 +499,18 @@
                 "givenName": "Mona Leigh",
                 "familyName": "Guha",
                 "email": "mona@cs.umd.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "HCIL",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course will cover technology co-design methods involving children; covering background, practical techniques, roles of adults and children, and practical issues relating to an intergenerational design team.",
@@ -365,8 +535,18 @@
                 "givenName": "Javier",
                 "familyName": "Gonzalez-Sanchez",
                 "email": "javiergs@asu.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Arizona State University",
+                    "city": "Tempe",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth24093",
@@ -376,8 +556,18 @@
                 "givenName": "Maria Elena",
                 "familyName": "Chavez-Echeagaray",
                 "email": "helenchavez@asu.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Arizona State University",
+                    "city": "Tempe",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth36798",
@@ -387,8 +577,18 @@
                 "givenName": "Robert",
                 "familyName": "Atkinson",
                 "email": "robert.atkinson@asu.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Arizona State University",
+                    "city": "Tempe",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course presents devices and explores methodologies for multimodal detection of affective states, as well as a discussion about presenter’s experiences using them both in learning and gaming scenarios.",
@@ -413,8 +613,18 @@
                 "givenName": "David",
                 "familyName": "Geerts",
                 "email": "david.geerts@soc.kuleuven.be",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "KU Leuven - University of Leuven",
+                    "city": "Leuven",
+                    "country": "Belgium"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "IBBT",
+                    "city": "Ghent",
+                    "country": "Belgium"
+                }
             },
             {
                 "id": "auth4740",
@@ -424,8 +634,18 @@
                 "givenName": "Pablo",
                 "familyName": "Cesar",
                 "email": "p.s.cesar@cwi.nl",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "CWI (Centrum voor Wiskunde en Informatica)",
+                    "city": "Amsterdam",
+                    "country": "The Netherlands"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Will teach attendees how to design and evaluate interaction with online video and television. Provides attendees a pragmatic toolset, including techniques and guidelines, which can be directly applied in practice.",
@@ -450,8 +670,18 @@
                 "givenName": "Hendrik",
                 "familyName": "Müller",
                 "email": "hendrik82@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Sydney",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth31522",
@@ -461,8 +691,18 @@
                 "givenName": "Aaron",
                 "familyName": "Sedley",
                 "email": "asedley@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth34953",
@@ -472,8 +712,18 @@
                 "givenName": "Elizabeth",
                 "familyName": "Ferrall-Nunge",
                 "email": "enunge@twitter.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Twitter, Inc.",
+                    "city": "San Francisco",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "To enable the creation of unbiased surveys, this course demonstrates questionnaire design biases and pitfalls, provides best practices for minimizing these, and reviews different uses of surveys within HCI.",
@@ -498,8 +748,18 @@
                 "givenName": "Terrill",
                 "familyName": "Thompson",
                 "email": "tft@uw.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Accessible Technology Services, UW-IT",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course will explore the state of the art in computer user interfaces for people with disabilities, including techniques for minimizing accessibility barriers and possible solutions when current models fail.",
@@ -524,8 +784,18 @@
                 "givenName": "Brent",
                 "familyName": "Hecht",
                 "email": "bhecht@cs.umn.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Computer Science and Engineering",
+                    "institution": "University of Minnesota",
+                    "city": "Minneapolis",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth9487",
@@ -535,8 +805,18 @@
                 "givenName": "David",
                 "familyName": "Shamma",
                 "email": "aymans@acm.org",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Yahoo! Research",
+                    "city": "San Francisco",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Participants should expect to leave the course with a high-level understanding of methods for properly analyzing geographic data and reporting results, the context necessary to better understand the geography literature, and resources for further engaging with geography research and best practices. \\ ",
@@ -561,8 +841,18 @@
                 "givenName": "Jim",
                 "familyName": "Parker",
                 "email": "parker@minkhollow.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Digital Media Laboratory",
+                    "institution": "Uiniversity of Calgary",
+                    "city": "Calgary",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "Minkhollow Media Ltd",
+                    "city": "Cochrane",
+                    "country": "Canada"
+                }
             }
         ],
         "cbStatement": "This course will give attendees a clear view of images: how they are constructed/captured, what influences image quality, and what can be done to enhance and extract data from them.  \\ ",
@@ -587,8 +877,18 @@
                 "givenName": "Cosmin",
                 "familyName": "Munteanu",
                 "email": "cosmin.munteanu@nrc-cnrc.gc.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "National Research Council Canada",
+                    "city": "Fredericton",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "University of Toronto",
+                    "city": "Toronto",
+                    "country": "Canada"
+                }
             },
             {
                 "id": "auth8487",
@@ -598,8 +898,18 @@
                 "givenName": "Gerald",
                 "familyName": "Penn",
                 "email": "gpenn@cs.toronto.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Toronto",
+                    "city": "Toronto",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Learn how speech recognition and synthesis works, what are its limitations and usability challenges, how can it enhance interaction paradigms, and what is the current research and commercial state-of-the-art.",
@@ -624,8 +934,18 @@
                 "givenName": "Nigel",
                 "familyName": "Bevan",
                 "email": "nigel@nigelbevan.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Professional Usability Services",
+                    "city": "London",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "How international standards can provide a sound basis for educational and training, can provide authority for design and development, and are a rich source of guidance and reference material.   \\ ",
@@ -650,8 +970,18 @@
                 "givenName": "Duen Horng (Polo)",
                 "familyName": "Chau",
                 "email": "polo@gatech.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "College of Computing",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Learn key data mining concepts and tools, and how to integrate them with HCI methods for big data analytics, through non-technical introduction and case studies, and technical examples.",
@@ -676,8 +1006,18 @@
                 "givenName": "Mark",
                 "familyName": "Billinghurst",
                 "email": "mark.billinghurst@canterbury.ac.nz",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "HIT Lab NZ",
+                    "institution": "University of Canterbury",
+                    "city": "Christchurch",
+                    "country": "New Zealand"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth16439",
@@ -687,8 +1027,18 @@
                 "givenName": "Hayes",
                 "familyName": "Raffle",
                 "email": "hraffle@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Attendees will learn to design interfaces for wearable computers like Google Glass through user-centered design principles. They will gain the knowledge to develop prototypes and conduct research on wearable platforms. \\ ",
@@ -713,8 +1063,18 @@
                 "givenName": "Janet",
                 "familyName": "Read",
                 "email": "jcread@uclan.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Central Lancashire",
+                    "city": "Preston",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth1348",
@@ -724,8 +1084,18 @@
                 "givenName": "Panos",
                 "familyName": "Markopoulos",
                 "email": "P.Markopoulos@tue.nl",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Eindhoven University of Technology",
+                    "city": "Eindhoven",
+                    "country": "The Netherlands"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course is an introduction to the exciting area of evaluation of interactive products for children.  The focus is on empowering developers and researchers to do more robust, more appropriate and more suitable evaluations with children \\ ",
@@ -750,8 +1120,18 @@
                 "givenName": "Jim",
                 "familyName": "Nieters",
                 "email": "jnieters@mac.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Consumer Travel",
+                    "institution": "Hewlett Packard",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth14979",
@@ -761,8 +1141,18 @@
                 "givenName": "Carola",
                 "familyName": "Fellenz Thompson",
                 "email": "carolafthompson@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "User Experience",
+                    "institution": "zSpace",
+                    "city": "Sunnyvale",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "\"Attendees learn how to lead workshops that foster ideation, collaboration, trust, and free expression. These workshops enable intensive brainstorming, purposeful play, design, user testing, and rapid prototyping.\" \\ ",
@@ -787,8 +1177,18 @@
                 "givenName": "Joseph",
                 "familyName": "Williams",
                 "email": "josephjaywilliams@stanford.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Office of the Vice Provost of Online Learning",
+                    "institution": "Stanford University",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39984",
@@ -798,8 +1198,18 @@
                 "givenName": "Betsy",
                 "familyName": "Williams",
                 "email": "betsyw@stanford.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Graduate School of Education",
+                    "institution": "Stanford University",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Applies proven methodologies for randomized experiments to online contexts. Introduces steps for designing meaningful experiments, optimizing contrasts between cases, and avoiding common misunderstandings. Walks through examples with Amazon Mechanical Turk.",
@@ -824,8 +1234,18 @@
                 "givenName": "Niels",
                 "familyName": "Henze",
                 "email": "niels.henze@vis.uni-stuttgart.de",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Stuttgart",
+                    "city": "Stuttgart",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth9778",
@@ -835,8 +1255,18 @@
                 "givenName": "Enrico",
                 "familyName": "Rukzio",
                 "email": "enrico.rukzio@uni-ulm.de",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Ulm University",
+                    "city": "Ulm",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course provides an overview about the state-of-the-art in mobile HCI. It will enable attendees to apply research methods and design guidelines to build effective, efficient and pleasurable mobile interactions.",
@@ -861,8 +1291,18 @@
                 "givenName": "WIlliam",
                 "familyName": "Buxton",
                 "email": "bill.buxton@microsoft.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Microsoft Research",
+                    "city": "Redmond",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "We explore two aspects of sketching experience and their relationship:  constructivist approaches, where we synthesize the sketch, the other, where we take a page from Duchamp’s Readymades, and sample the world for (often) non-obvious technologies that serve as the sketch.  eBay emerges as a potent a sketching tool as a pencil or foam core.  ",
@@ -887,8 +1327,18 @@
                 "givenName": "Don",
                 "familyName": "Norman",
                 "email": "don@jnd.org",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Northwestern, KAIST, Nielsen Norman Group",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Reflections on design and HCI: strengths and weaknesses of research versus practice, HCI versus traditional design.  An initial presentation moving to interaction led by audience questions and contributions.",
@@ -913,8 +1363,18 @@
                 "givenName": "Ronald",
                 "familyName": "Baecker",
                 "email": "rmb@kmdi.toronto.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Toronto",
+                    "city": "Toronto ",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Demographic trends and user diversity afford exciting design opportunities and challenges. We shall present two frameworks for envisioning solutions, and illustrate with landmark achievements, promising approaches, and open problems.",
@@ -939,8 +1399,18 @@
                 "givenName": "Toni",
                 "familyName": "Robertson",
                 "email": "Toni.Robertson@uts.edu.au",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Technology, Sydney",
+                    "city": "Sydney",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course revisits feminist theory to examine the ethical and pragmatic motivations for prioritising the active human body in technology design.",
@@ -965,8 +1435,18 @@
                 "givenName": "Judith",
                 "familyName": "Donath",
                 "email": "judith@media.mit.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Berkman Center",
+                    "institution": "Harvard University",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Social media interfaces embody assumptions about importance and desirability. Through analysis of several sites and a design exercise, this course explores how our perception of people, and culture, is being reshaped.",

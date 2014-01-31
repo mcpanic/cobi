@@ -1,5 +1,1361 @@
 [
     {
+        "id": "sig103",
+        "title": "Communicating User Research in Order to Drive Design and Product Decisions",
+        "abstract": "As the industry evolved from engineering-centered design to user-centered design, organizations created new roles. These user experience (UX) roles are charged with conducting user studies, synthesizing data collected, and communicating findings to product managers, engineers, and UI designers. \\  \\ While it’s generally accepted that user research should be performed, the challenge now is for UX professionals to represent and communicate what we find in ways that are valued and consumable by product teams.  \\ How can we get what we know into stakeholders’ minds so it drives their design thinking? How can we make it compelling so they think about the user data when they are designing? How can we represent the data so that it facilitates ideation?  \\  \\ This SIG creates a forum for people with real-world experience and challenges to discuss their best practices—and missteps—for communicating user research. It does not cover the “how to” details for gathering it. ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth31489",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Karen",
+                "familyName": "Holtzblatt",
+                "email": "karen@incontextdesign.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "InContext Design",
+                    "city": "Concord",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39395",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Shoshana",
+                "familyName": "Holtzblatt",
+                "email": "shoshanah@google.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "New York",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "shelley@incontextdesign.com",
+        "contactFirstName": "Shelley",
+        "contactLastName": "Wood",
+        "keywords": "User-centered design; user studies; user research analysis and representation; requirements gathering and specifications",
+        "venue": "SIG",
+        "session": "s-sig103",
+        "communities": []
+    },
+    {
+        "id": "sig105",
+        "title": "Interaction Science SIG: Overcoming Challenges",
+        "abstract": "Over the past 30 years science has played a key role in shaping and \\ advancing research in Human-Computer Interaction. Informed in part by \\ methods, theories and findings from the behavioral sciences and from \\ computer science,  scientific contributions to HCI have provided \\ explanations of how and why people interact through and with \\ technology. We argue that the contribution of science to HCI could be \\ enhanced if key challenges are met. During a SIG meeting we will discuss the \\ challenges and potential responses and set an agenda for \\ the coming years. \\ ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth1133",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Andrew",
+                "familyName": "Howes",
+                "email": "howesa@mac.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Birmingham",
+                    "city": "Birmingham",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth19044",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Benjamin",
+                "familyName": "Cowan",
+                "email": "b.r.cowan@cs.bham.ac.uk",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Birmingham",
+                    "city": "Birmingham",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth14962",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 3,
+                "givenName": "Christian",
+                "familyName": "Janssen",
+                "email": "cjanssen@ski.org",
+                "primary": {
+                    "dept": "",
+                    "institution": "Smith-Kettlewell Eye Research Institute",
+                    "city": "San Francisco",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth7532",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 4,
+                "givenName": "Anna",
+                "familyName": "Cox",
+                "email": "anna.cox@ucl.ac.uk",
+                "primary": {
+                    "dept": "",
+                    "institution": "University College London",
+                    "city": "London",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth1407",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 5,
+                "givenName": "Paul",
+                "familyName": "Cairns",
+                "email": "paul.cairns@york.ac.uk",
+                "primary": {
+                    "dept": "Dept of Computer Science",
+                    "institution": "University of York",
+                    "city": "York",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth3622",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 6,
+                "givenName": "Anthony",
+                "familyName": "Hornof",
+                "email": "hornof@cs.uoregon.edu",
+                "primary": {
+                    "dept": "Dept. of Computer Science and Information Science",
+                    "institution": "University of Oregon",
+                    "city": "Eugene",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth6389",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 7,
+                "givenName": "Stephen",
+                "familyName": "Payne",
+                "email": "s.j.payne@bath.ac.uk",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Bath",
+                    "city": "Bath",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth6244",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 8,
+                "givenName": "Peter",
+                "familyName": "Pirolli",
+                "email": "pirolli@parc.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Palo Alto Research Center (PARC)",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "howesa@mac.com",
+        "contactFirstName": "Andrew",
+        "contactLastName": "Howes",
+        "keywords": "science; theory; modeling; scientific method; empirical method; experiments; data; evidence; analysis; behavioral sciences; interaction science",
+        "venue": "SIG",
+        "session": "s-sig105",
+        "communities": []
+    },
+    {
+        "id": "sig107",
+        "title": "Jogging with Technology: Interaction Design Supporting Sport Activities",
+        "abstract": "There has been a significant increase of interactive technologies to support sports activities. Examples are heart rate monitors for cyclists, jogging apps on mobile phones and GPS sports watches for extreme sports. Despite consumer popularity, there is little knowledge about how they should be designed in order to support the exertion activity. Based on CHI’13’s success of conducting a special interest group outdoors, we propose jogging with technology to discuss sports-support interactive systems and investigate what future opportunities and challenges exist.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth2060",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Florian",
+                "familyName": "Mueller",
+                "email": "floyd@floydmueller.com",
+                "primary": {
+                    "dept": "Exertion Games Lab",
+                    "institution": "RMIT University",
+                    "city": "Melbourne",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth7924",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Joe",
+                "familyName": "Marshall",
+                "email": "joe.marshall@nottingham.ac.uk",
+                "primary": {
+                    "dept": "Mixed Reality Lab",
+                    "institution": "The University of Nottingham",
+                    "city": "Nottingham",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth10580",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 3,
+                "givenName": "Rohit",
+                "familyName": "Khot",
+                "email": "rohit.a.khot@gmail.com",
+                "primary": {
+                    "dept": "Exertion games lab",
+                    "institution": "RMIT University",
+                    "city": "Melbourne",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth4751",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 4,
+                "givenName": "Stina",
+                "familyName": "Nylander",
+                "email": "stny@sics.se",
+                "primary": {
+                    "dept": "",
+                    "institution": "Mobile Life @ SICS",
+                    "city": "Kista",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth6222",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 5,
+                "givenName": "Jakob",
+                "familyName": "Tholander",
+                "email": "jakobth@dsv.su.se",
+                "primary": {
+                    "dept": "Mobile Life",
+                    "institution": "Stockholm University",
+                    "city": "Stockholm",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "floyd@floydmueller.com",
+        "contactFirstName": "Florian",
+        "contactLastName": "Mueller",
+        "keywords": "Sports; exercise; exertion interface ",
+        "venue": "SIG",
+        "session": "s-sig107",
+        "communities": []
+    },
+    {
+        "id": "sig108",
+        "title": "Art And Interaction SIG: Cataloging The Digital Arts",
+        "abstract": "Over the last three years the Digital Arts community of CHI has established itself and is a Spotlight for CHI2014. The focus for CHI2014 is the development of a Catalog for the Digital Arts that we hope will lead on to an Art Gallery as a future CHI conference event. This SIG will be preceded by a workshop “Curating the Digital” that will have as its outcome a research-informed design of the Catalog. The purpose of the SIG will be to open the Catalog design to wider audience participation and discussion, and invite the CHI community to support the development of the Catalog.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth1240",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "David",
+                "familyName": "England",
+                "email": "d.england@ljmu.ac.uk",
+                "primary": {
+                    "dept": "",
+                    "institution": "Liverpool John Moores University",
+                    "city": "Liverpool",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth27015",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Jocelyn",
+                "familyName": "Spence",
+                "email": "j.spence@surrey.ac.uk",
+                "primary": {
+                    "dept": "Digital World Research Centre, School of Arts",
+                    "institution": "University of Surrey",
+                    "city": "Guildford",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth3848",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 3,
+                "givenName": "Celine",
+                "familyName": "Latulipe",
+                "email": "clatulip@uncc.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of North Carolina at Charlotte",
+                    "city": "Charlotte",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth1938",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 4,
+                "givenName": "ernest",
+                "familyName": "edmonds",
+                "email": "ernest@ernestedmonds.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Technology, Sydney",
+                    "city": "Sydney",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth5214",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 5,
+                "givenName": "Linda",
+                "familyName": "Candy",
+                "email": "linda@lindacandy.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Technology, Sydney",
+                    "city": "Sydney",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth3338",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 6,
+                "givenName": "Thecla",
+                "familyName": "Schiphorst",
+                "email": "thecla@sfu.ca",
+                "primary": {
+                    "dept": "School of Interactive Arts and Technology ",
+                    "institution": "Simon Fraser University",
+                    "city": "Vancouver",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39653",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 7,
+                "givenName": "Nick",
+                "familyName": "Bryan-Kinns",
+                "email": "nick.bryan-kinns@eecs.qmul.ac.uk",
+                "primary": {
+                    "dept": "Centre for Digital Music",
+                    "institution": "Queen Mary, University of London",
+                    "city": "London",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39762",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 8,
+                "givenName": "Kirk",
+                "familyName": "Woolford",
+                "email": "k.woolford@surrey.ac.uk",
+                "primary": {
+                    "dept": "Digital World Research Centre",
+                    "institution": "University of Surrey",
+                    "city": "Guildford",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "d.england@ljmu.ac.uk",
+        "contactFirstName": "David",
+        "contactLastName": "England",
+        "keywords": "Digital Art; Performance Art; Interaction; Interdisciplinary; Collaboration; Curation",
+        "venue": "SIG",
+        "session": "s-sig108",
+        "communities": []
+    },
+    {
+        "id": "sig109",
+        "title": "Current Issues in Assessing and Improving Information Usability",
+        "abstract": "The usability of information is vital to successful websites, products, and services. Managers and developers often recognize the role of information or content in overall product usability, but miss opportunities to improve information usability as part of the product-development effort. This meeting is an annual forum on human factors of information design, in which we discuss issues selected by the group from the facilitators’ list of topics, augmented by attendees’ suggestions.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth1518",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Stephanie",
+                "familyName": "Rosenbaum",
+                "email": "stephanie@teced.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "TecEd, Inc.",
+                    "city": "Ann Arbor",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth9124",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Judith",
+                "familyName": "Ramey",
+                "email": "jramey@u.washington.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "stephanie@teced.com",
+        "contactFirstName": "Stephanie",
+        "contactLastName": "Rosenbaum",
+        "keywords": "Information design; user assistance; documentation usability; information development; information usability; documentation standards; usability testing; product development",
+        "venue": "SIG",
+        "session": "s-sig109",
+        "communities": []
+    },
+    {
+        "id": "sig110",
+        "title": "Community Centered Collaborative HCI Design / Research in Developing Countries",
+        "abstract": "We are proposing a SIG as an extended forum to build a sustainable network and resource repository for practitioners and researchers engaged in community centered collaborative design in developing countries. In structured discussions and an open cross-cultural dialogue, we attempt to build a practical and theoretical foundation based on success and failure stories, challenges and systematic approaches to such HCI. We will explore specific themes around time, trust and values, expectation management and transferability/ sustainability of localized projects. We intend to explore how to document and transform lessons learned into systematic approaches to be deployed in different contexts.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth16276",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Anicia",
+                "familyName": "Peters",
+                "email": "anpeters@iastate.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "Iowa State University",
+                    "city": "Ames",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "Polytechnic of Namibia",
+                    "city": "Windhoek",
+                    "country": "Namibia"
+                }
+            },
+            {
+                "id": "auth23673",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Heike",
+                "familyName": "Winschiers-Theophilus",
+                "email": "heikewinschiers@gmail.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Polytechnic of Namibia",
+                    "city": "Windhoek",
+                    "country": "Namibia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth11529",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 3,
+                "givenName": "Nicola",
+                "familyName": "Bidwell",
+                "email": "nic.bidwell@gmail.com",
+                "primary": {
+                    "dept": "Department of Informatics",
+                    "institution": "University of Pretoria",
+                    "city": "Pretoria",
+                    "country": "South Africa"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth13531",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 4,
+                "givenName": "Arun",
+                "familyName": "Kumar",
+                "email": "kkarun@in.ibm.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "IBM Research India",
+                    "city": "New Delhi",
+                    "country": "India"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth14169",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 5,
+                "givenName": "Daniel",
+                "familyName": "Ochieng",
+                "email": "dorwa@uonbi.ac.ke",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Nairobi",
+                    "city": "Nairobi",
+                    "country": "Kenya"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39904",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 6,
+                "givenName": "Fatoumata",
+                "familyName": "Camara",
+                "email": "fcamara@objetdirect.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Objet Direct – Groupe VISEO",
+                    "city": "Grenoble",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth11429",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 7,
+                "givenName": "Susan",
+                "familyName": "Dray",
+                "email": "susan.dray@dray.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Dray & Associates, Inc.",
+                    "city": "Oakland",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "anpeters@iastate.edu",
+        "contactFirstName": "Anicia",
+        "contactLastName": "Peters",
+        "keywords": "Community collaboration; HCI4D; International Development; ICTD, UCD4ID; Community Centered Design; Participatory Design; HCD4D",
+        "venue": "SIG",
+        "session": "s-sig110",
+        "communities": []
+    },
+    {
+        "id": "sig111",
+        "title": "HCI in Food Product Innovation",
+        "abstract": "Food is essential to the survival of the world population. There are several processes in order to make food available to consumers: for example, production, transportation, and consumption. Since the global demand of food is always on the rise, there is a need to improve the efficiency in all the processes in food industries. For example, the food production industries are often not equipped with the right decision-making tools to allow farmers to properly deal with important factors such as environmental changes. On the other hand, tools are not difficult to create but can be very challenging to be successfully adopted by the professionals, especially when the tools require them to change their normal work practices. In this SIG, we will discuss how HCI can improve food product industries with suitable information for each food process.        \\ ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth41925",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Winyu",
+                "familyName": "Chinthammit",
+                "email": "wchinthammit@acm.org",
+                "primary": {
+                    "dept": "HIT Lab Australia",
+                    "institution": "University of Tasmania",
+                    "city": "Launceston",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth2365",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Henry Been-Lirn",
+                "familyName": "Duh",
+                "email": "duhbl@acm.org",
+                "primary": {
+                    "dept": "Human Interface Technology Lab Australia",
+                    "institution": "University of Tasmania",
+                    "city": "Tasmania",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth2011",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 3,
+                "givenName": "Jun",
+                "familyName": "Rekimoto",
+                "email": "rekimoto@acm.org",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Tokyo / Sony CSL",
+                    "city": "Meguro-ku",
+                    "country": "Japan"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "winyu.chinthammit@utas.edu.au",
+        "contactFirstName": "Winyu",
+        "contactLastName": "Chinthammit",
+        "keywords": "Food Product; Decision-making tool; Agriculture; Interaction Design",
+        "venue": "SIG",
+        "session": "s-sig111",
+        "communities": []
+    },
+    {
+        "id": "sig112",
+        "title": "Child Computer Interaction SIG: Towards Sustainable Thinking and Being",
+        "abstract": "The discipline of Child Computer Interaction (CCI) has been steadily growing and it is now firmly established as a community in its own right, having the annual IDC (Interaction and Design for Children) conference and its own journal and also enjoying its role as a highly recognisable and vibrant contributor to the ACM CHI conference.  Having recently been given status as an IFIP (International Federation for Information Processing) TC13 working group, the community now needs to make plans around its academic themes and its coherence as a developing academic community.  \\ The CCI SIG at CHI aims to use a mixture of facilitated creative thinking and a world café approach to bring the community together to tackle these two key challenges.  The CCI SIG will be the natural meeting place for members of this community at CHI and will disseminate its discussion to the CCI and CHI communities through the production of visual and interactive materials at the CHI conference. \\ ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth2823",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Janet",
+                "familyName": "Read",
+                "email": "jcread@uclan.ac.uk",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Central Lancashire",
+                    "city": "Preston",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth1924",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Juan Pablo",
+                "familyName": "Hourcade",
+                "email": "juanpablo-hourcade@uiowa.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Iowa",
+                    "city": "Iowa City",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth1348",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 3,
+                "givenName": "Panos",
+                "familyName": "Markopoulos",
+                "email": "P.Markopoulos@tue.nl",
+                "primary": {
+                    "dept": "",
+                    "institution": "Eindhoven University of Technology",
+                    "city": "Eindhoven",
+                    "country": "The Netherlands"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth24491",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 4,
+                "givenName": "Ole",
+                "familyName": "Iversen",
+                "email": "oiversen@cs.au.dk",
+                "primary": {
+                    "dept": "",
+                    "institution": "Aarhus University",
+                    "city": "Aarhus",
+                    "country": "Denmark"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "jcread@uclan.ac.uk",
+        "contactFirstName": "Janet",
+        "contactLastName": "Read",
+        "keywords": "Child Computer Interaction; Research Networks; Research Themes; Community Building",
+        "venue": "SIG",
+        "session": "s-sig112",
+        "communities": []
+    },
+    {
+        "id": "sig114",
+        "title": "Interactions Magazine",
+        "abstract": "In this SIG meeting we invite attendees of CHI to join us to provide input, feedback, and discuss the ACM interactions magazine. ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth3350",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Ron",
+                "familyName": "Wakkary",
+                "email": "rwakkary@sfu.ca",
+                "primary": {
+                    "dept": "",
+                    "institution": "Simon Fraser University",
+                    "city": "Surrey ",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth5985",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Erik",
+                "familyName": "Stolterman",
+                "email": "estolter@indiana.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "Indiana University Bloomington",
+                    "city": "Bloomington",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "rwakkary@sfu.ca",
+        "contactFirstName": "Ron",
+        "contactLastName": "Wakkary",
+        "keywords": "Magazine; interactions; publications; SIGCHI community",
+        "venue": "SIG",
+        "session": "s-sig114",
+        "communities": []
+    },
+    {
+        "id": "sig117",
+        "title": "Games and Entertainment Community SIG: Reaching beyond CHI",
+        "abstract": "Games and Entertainment have become important areas of research within the field of Human-Computer Interaction. The community has grown dramatically in the past years. During the previous CHI conference, there were a growing number of game-oriented submissions demonstrating the increased importance of the field. In 2014, the successful Student Games Competition and the Games User Research workshop (in its third iteration) continue to tie together students, researchers and practitioners. Games and Entertainment is one of the five research areas that have been selected as Spotlights in CHI 2014. Given the increase in quantity and variety of submissions, and the involvement and engagement of practitioners within the community, it is important for the community to have this SIG as a forum.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth10385",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Lennart",
+                "familyName": "Nacke",
+                "email": "Lennart.Nacke@acm.org",
+                "primary": {
+                    "dept": "Games and Media Entertainment Research Laboratory",
+                    "institution": "University of Ontario Institute of Technology",
+                    "city": "Oshawa",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth18112",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Pejman",
+                "familyName": "Mirza-Babaei",
+                "email": "pejman.m@acm.org",
+                "primary": {
+                    "dept": "Games and Media Entertainment Research Laboratory",
+                    "institution": "University of Ontario Institute of Technology",
+                    "city": "Oshawa",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth3154",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 3,
+                "givenName": "Magy",
+                "familyName": "Seif El-Nasr",
+                "email": "magy@northeastern.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "Northeastern University",
+                    "city": "Boston",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth3427",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 4,
+                "givenName": "Heather",
+                "familyName": "Desurvire",
+                "email": "Heather3d@gmail.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "User Behavioristics Research, Inc.",
+                    "city": "Los Angeles",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40753",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 5,
+                "givenName": "Regina",
+                "familyName": "Bernhaupt",
+                "email": "Regina.Bernhaupt@irit.fr",
+                "primary": {
+                    "dept": "",
+                    "institution": "IRIT, University Paul Sabatier, Toulouse III",
+                    "city": "Toulouse",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "Lennart.Nacke@acm.org",
+        "contactFirstName": "Lennart",
+        "contactLastName": "Nacke",
+        "keywords": "Video Games; Entertainment; HCI; Games; Play; Gamification; CHI PLAY; Player",
+        "venue": "SIG",
+        "session": "s-sig117",
+        "communities": []
+    },
+    {
+        "id": "sig118",
+        "title": "The Usability of Text Entry Systems Now and in the Future",
+        "abstract": "Text entry is an active and growing research domain. Our SIG serves three purposes. First, to strengthen the text entry community by bringing text entry researchers working in the human-computer interaction, natural language processing and augmentative and alternative communication communities together in one room. Second, to promote CHI as a natural and compelling focal point for all kinds of text entry research. Third, to follow-up on and broaden the discussions that emerged from two previous text entry workshops held at CHI [3, 4] by engaging in dialog to identify obstacles for success and formalizing procedures for measuring progress in the field of text entry. \\ ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth8436",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "James",
+                "familyName": "Clawson",
+                "email": "jamer@cc.gatech.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth1374",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Stephen",
+                "familyName": "Brewster",
+                "email": "stephen.brewster@glasgow.ac.uk",
+                "primary": {
+                    "dept": "School of Computing Science",
+                    "institution": "University of Glasgow",
+                    "city": "Glasgow",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth9541",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 3,
+                "givenName": "Mark",
+                "familyName": "Dunlop",
+                "email": "mark.dunlop@strath.ac.uk",
+                "primary": {
+                    "dept": "Computer and Information Sciences",
+                    "institution": "University of Strathclyde",
+                    "city": "Glasgow",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth3496",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 4,
+                "givenName": "Per Ola",
+                "familyName": "Kristensson",
+                "email": "kristensson@gmail.com",
+                "primary": {
+                    "dept": "School of Computer Science",
+                    "institution": "University of St Andrews",
+                    "city": "St Andrews",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth1262",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 5,
+                "givenName": "Poika",
+                "familyName": "Isokoski",
+                "email": "poika.isokoski@uta.fi",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Tampere",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth2881",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 6,
+                "givenName": "Antti",
+                "familyName": "Oulasvirta",
+                "email": "antti.oulasvirta@mpii.de",
+                "primary": {
+                    "dept": "",
+                    "institution": "Max Planck Institute for Informatics",
+                    "city": "Saarbruecken",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth9760",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 7,
+                "givenName": "Keith",
+                "familyName": "Vertanen",
+                "email": "kvertanen@mtech.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "Montana Tech",
+                    "city": "Butte",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth19192",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 8,
+                "givenName": "Annalu",
+                "familyName": "Waller",
+                "email": "awaller@dundee.ac.uk",
+                "primary": {
+                    "dept": "School of Computing",
+                    "institution": "University of Dundee",
+                    "city": "Dundee",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "jamer@cc.gatech.edu",
+        "contactFirstName": "James",
+        "contactLastName": "Clawson",
+        "keywords": "Text entry; augmentative and alternative communication; accessibility; internationalization",
+        "venue": "SIG",
+        "session": "s-sig118",
+        "communities": []
+    },
+    {
+        "id": "sig119",
+        "title": "Managing UX Teams",
+        "abstract": "This SIG will serve multiple purposes:  as a forum to share the results from previous CHI management panels, workshops and current trends, and also as a forum for the management community to discuss topics of interest.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth13615",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Janice",
+                "familyName": "Rohn",
+                "email": "janicerohn@yahoo.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Velocify",
+                    "city": "El Segundo",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth14979",
+                "type": "author",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Carola",
+                "familyName": "Thompson",
+                "email": "carolafthompson@gmail.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "zSpace",
+                    "city": "Sunnyvale",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "janicerohn@yahoo.com",
+        "contactFirstName": "Janice",
+        "contactLastName": "Rohn",
+        "keywords": "User Experience; Management; Organizations; Design; Research; Practice; Method; Technique; Agile; Innovation; Lean",
+        "venue": "SIG",
+        "session": "s-sig119",
+        "communities": []
+    },
+    {
         "id": "case115",
         "title": "Measuring Product “Coolness” -- Developing a Measurement Instrument",
         "abstract": "",
@@ -13,8 +1369,18 @@
                 "givenName": "Carol",
                 "familyName": "Farnsworth",
                 "email": "carol.farnsworth@sap.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP Labs, LLC",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth31489",
@@ -24,8 +1390,18 @@
                 "givenName": "Karen",
                 "familyName": "Holtzblatt",
                 "email": "karen@incontextdesign.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "InContext Design",
+                    "city": "Concord",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth17508",
@@ -35,8 +1411,18 @@
                 "givenName": "Shantanu",
                 "familyName": "Pai",
                 "email": "shanritz@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP Labs, LLC",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth16923",
@@ -46,8 +1432,18 @@
                 "givenName": "Theo",
                 "familyName": "Held",
                 "email": "theo.held@sap.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP AG",
+                    "city": "Walldorf",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39472",
@@ -57,8 +1453,18 @@
                 "givenName": "Sally",
                 "familyName": "Lawler Kennedy",
                 "email": "sally.lawler.kennedy@sap.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP Labs, LLC",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39473",
@@ -68,8 +1474,18 @@
                 "givenName": "Eli",
                 "familyName": "Wylen",
                 "email": "eli.wylen@incontextdesign.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "InContext Design",
+                    "city": "Concord",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth31582",
@@ -79,8 +1495,18 @@
                 "givenName": "Pallavi",
                 "familyName": "Kutty",
                 "email": "pallavi.kutty@sap.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth31048",
@@ -90,8 +1516,18 @@
                 "givenName": "Kelley",
                 "familyName": "Wagg",
                 "email": "kelley.wagg@incontextdesign.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "InContext Design",
+                    "city": "Concord",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -117,8 +1553,18 @@
                 "givenName": "Kate Sangwon",
                 "familyName": "Lee",
                 "email": "kate@navercorp.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "UX Department",
+                    "institution": "Naver Corp.",
+                    "city": "Seongnam-si",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39715",
@@ -128,8 +1574,18 @@
                 "givenName": "Sun",
                 "familyName": "Lee",
                 "email": "sun.lee@navercorp.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "UX Department",
+                    "institution": "Naver Corp.",
+                    "city": "Seongnam-si",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39716",
@@ -139,8 +1595,18 @@
                 "givenName": "Hyojung",
                 "familyName": "Kim",
                 "email": "kihozip@navercorp.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "UX Department",
+                    "institution": "Naver Corp.",
+                    "city": "Seongnam-si",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -166,8 +1632,18 @@
                 "givenName": "Connor",
                 "familyName": "Upton",
                 "email": "connor.upton@intel.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Cloud Services Lab",
+                    "institution": "Intel Labs Europe",
+                    "city": "Leixlip",
+                    "country": "Ireland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39770",
@@ -177,8 +1653,18 @@
                 "givenName": "Fergus",
                 "familyName": "Quilligan",
                 "email": "fergus.quilligan@intel.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Irish Centre for Manufacturing Research",
+                    "institution": "Intel",
+                    "city": "Leixlip",
+                    "country": "Ireland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This presentation describes the research, design and development of a software tool for energy efficient scheduling in an industrial environment. The system couples an optimization engine with an interactive visualization. ",
@@ -204,8 +1690,18 @@
                 "givenName": "Vicki",
                 "familyName": "Moulder",
                 "email": "vmoulder@sfu.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Simon Fraser University",
+                    "city": "Surrey",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth19133",
@@ -215,8 +1711,18 @@
                 "givenName": "Lorna",
                 "familyName": "Boschman",
                 "email": "lorna.boschman@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of British Columbia",
+                    "city": "Vancouver",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth3350",
@@ -226,8 +1732,18 @@
                 "givenName": "Ron",
                 "familyName": "Wakkary",
                 "email": "rwakkary@sfu.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Simon Fraser University",
+                    "city": "Surrey ",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth8702",
@@ -237,8 +1753,18 @@
                 "givenName": "William",
                 "familyName": "Odom",
                 "email": "wodom@cs.cmu.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Carnegie Mellon University",
+                    "city": "Pittsburgh",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth12782",
@@ -248,8 +1774,18 @@
                 "givenName": "Stacey",
                 "familyName": "Kuznetsov",
                 "email": "stace@cs.cmu.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Carnegie Mellon University",
+                    "city": "Pittsburgh",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -275,8 +1811,18 @@
                 "givenName": "Katri",
                 "familyName": "Koli",
                 "email": "katri.koli@leadin.fi",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Leadin Inc.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth14054",
@@ -286,8 +1832,18 @@
                 "givenName": "Tuula",
                 "familyName": "Kärkkäinen",
                 "email": "tuula.karkkainen@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Leadin Inc.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth11817",
@@ -297,8 +1853,18 @@
                 "givenName": "Jaakko",
                 "familyName": "Lehikoinen",
                 "email": "jaakko.t.lehikoinen@nokia.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Leadin Inc.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39747",
@@ -308,8 +1874,18 @@
                 "givenName": "Tuomo",
                 "familyName": "Pirinen",
                 "email": "tuomo.pirinen@sandvik.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Sandvik Corp.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39748",
@@ -319,8 +1895,18 @@
                 "givenName": "Sami",
                 "familyName": "Hanski",
                 "email": "sami.hanski@sandvik.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Sandvik Corp.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39749",
@@ -330,8 +1916,18 @@
                 "givenName": "Juha",
                 "familyName": "Lassila",
                 "email": "juha.lassila@sandvik.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Sandvik Corp.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39750",
@@ -341,8 +1937,18 @@
                 "givenName": "Mikko",
                 "familyName": "Loimusalo",
                 "email": "mikko.loimusalo@sandvik.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Sandvik Corp.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -368,8 +1974,18 @@
                 "givenName": "Lilia",
                 "familyName": "Villafuerte",
                 "email": "lilia@villafuerte.info",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "LABoral Art and Industrial Production Center",
+                    "city": "Gijón",
+                    "country": "Spain"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -395,8 +2011,18 @@
                 "givenName": "Kolina",
                 "familyName": "Koltai",
                 "email": "kolina.koltai.31@my.csun.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Systems Engineering Research Laboratory",
+                    "institution": "California State University, Northridge",
+                    "city": "Northridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39990",
@@ -406,8 +2032,18 @@
                 "givenName": "Nhut",
                 "familyName": "Ho",
                 "email": "nhut.ho.51@csun.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Systems Engineering Research Laboratory",
+                    "institution": "California State University, Northridge",
+                    "city": "Northridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39915",
@@ -417,8 +2053,18 @@
                 "givenName": "David",
                 "familyName": "Niedober",
                 "email": "david.niedober.788@my.csun.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Systems Engineering Research Laboratory",
+                    "institution": "California State University, Northridge",
+                    "city": "Northridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth40151",
@@ -428,8 +2074,18 @@
                 "givenName": "Gina",
                 "familyName": "Masequesmay",
                 "email": "gina.masequesmay@csun.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Systems Engineering Research Laboratory",
+                    "institution": "California State University, Northridge",
+                    "city": "Northridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth40152",
@@ -439,8 +2095,18 @@
                 "givenName": "Mark",
                 "familyName": "Skoog",
                 "email": "mark.a.skoog@nasa.gov",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "NASA Dryden Flight Research Center, CA",
+                    "institution": "NASA",
+                    "city": "Edwards AFB",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth40153",
@@ -450,8 +2116,18 @@
                 "givenName": "Artemio",
                 "familyName": "Cacanindin",
                 "email": "artemio.cacanindin@us.af.mil",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Air Force Flight Test Center, Edwards AFB, CA",
+                    "institution": "United States Air Force",
+                    "city": "Edwards AFB",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth40154",
@@ -461,8 +2137,18 @@
                 "givenName": "Walter",
                 "familyName": "Johnson",
                 "email": "walter.johnson@nasa.gov",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "NASA Ames Research Center, CA",
+                    "institution": "NASA",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -488,8 +2174,18 @@
                 "givenName": "Victoria",
                 "familyName": "Schwanda Sosik",
                 "email": "sosik@cs.cornell.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Cornell University",
+                    "city": "Ithaca",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth38860",
@@ -499,8 +2195,18 @@
                 "givenName": "Elie",
                 "familyName": "Bursztein",
                 "email": "elieb@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth2938",
@@ -510,8 +2216,18 @@
                 "givenName": "Sunny",
                 "familyName": "Consolvo",
                 "email": "sconsolvo@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth9100",
@@ -521,8 +2237,18 @@
                 "givenName": "David",
                 "familyName": "Huffaker",
                 "email": "huffaker@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth13241",
@@ -532,8 +2258,18 @@
                 "givenName": "Gueorgi",
                 "familyName": "Kossinets",
                 "email": "gkossinets@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39962",
@@ -543,8 +2279,18 @@
                 "givenName": "Kerwell",
                 "familyName": "Liao",
                 "email": "kerwell@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39963",
@@ -554,8 +2300,18 @@
                 "givenName": "Paul",
                 "familyName": "McDonald",
                 "email": "pmcdonald@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth31522",
@@ -565,8 +2321,18 @@
                 "givenName": "Aaron",
                 "familyName": "Sedley",
                 "email": "asedley@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -592,8 +2358,18 @@
                 "givenName": "Susan",
                 "familyName": "Dray",
                 "email": "susan.dray@dray.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Dray & Associates, Inc.",
+                    "city": "Oakland",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "",
@@ -619,8 +2395,18 @@
                 "givenName": "Jonathan",
                 "familyName": "Lazar",
                 "email": "jlazar@towson.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Towson University",
+                    "city": "Towson",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Gives newcomers background in the field of HCI to make their conference experience more meaningful. Provides a framework to understand how the various topics are related to research and practice.",
@@ -645,8 +2431,18 @@
                 "givenName": "Jon",
                 "familyName": "Kolko",
                 "email": "jkolko@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Austin Center for Design",
+                    "city": "Austin",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Provides an overview of the design synthesis process (moving from research to insight, and from insight to design idea), and offers training in specific methods for managing ambiguity \\ ",
@@ -671,8 +2467,18 @@
                 "givenName": "Jeff",
                 "familyName": "Johnson",
                 "email": "jeffjohnson@uiwizards.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "UI Wizards, Inc",
+                    "city": "San Francisco",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "Wiser Usability, Inc.",
+                    "city": "Cupertino",
+                    "country": "United States"
+                }
             }
         ],
         "cbStatement": "Explains the benefits of designing a task-focused conceptual model (CM) of an application before designing its UI, and how to create CMs.  Provides hands-on experience designing a CM. \\ ",
@@ -697,8 +2503,18 @@
                 "givenName": "William",
                 "familyName": "Hudson",
                 "email": "william.hudson@syntagm.co.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Syntagm Ltd",
+                    "city": "Abingdon",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course covers the theory and practice of card sorting with a particular focus on navigation design. It includes a paper-based card sort activity. Online methods are also discussed.",
@@ -723,8 +2539,18 @@
                 "givenName": "William",
                 "familyName": "Hudson",
                 "email": "william.hudson@syntagm.co.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Syntagm Ltd",
+                    "city": "Abingdon",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This half-day course shows how to integrate User-Centered Design with Agile methods to create great user experiences. It takes an 'emotionally intelligent' approach to engaging all team members in UCD.",
@@ -749,8 +2575,18 @@
                 "givenName": "Parker",
                 "familyName": "Jim",
                 "email": "jparker@ucalgary.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Digital Media Lab, Art Department",
+                    "institution": "University of Calgary",
+                    "city": "Calgary",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This will give those unfamiliar with the inner workings of computer games a basic understanding of their design and function. It will illustrate many interaction mechanisms useful to the user experience. ",
@@ -775,8 +2611,18 @@
                 "givenName": "Scott",
                 "familyName": "MacKenzie",
                 "email": "mack@cse.yorku.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "York University",
+                    "city": "Toronto",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth5947",
@@ -786,8 +2632,18 @@
                 "givenName": "Steven",
                 "familyName": "Castellucci",
                 "email": "stevenc@cse.yorku.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "York University",
+                    "city": "Toronto",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course delivers an A-to-Z tutorial on conducting an empirical experiment (aka user study) in human-computer interaction and writing a CHI paper. \\ ",
@@ -812,8 +2668,18 @@
                 "givenName": "Michael",
                 "familyName": "Lyons",
                 "email": "michael.lyons@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Ritsumeikan University",
+                    "city": "Kyoto",
+                    "country": "Japan"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth34980",
@@ -823,8 +2689,18 @@
                 "givenName": "Axel",
                 "familyName": "Mulder",
                 "email": "Axel@infusionsystems.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Infusion Systems Ltd.",
+                    "city": "Montreal",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "School of Music",
+                    "institution": "McGill University",
+                    "city": "Montreal",
+                    "country": "Canada"
+                }
             },
             {
                 "id": "auth1763",
@@ -834,8 +2710,18 @@
                 "givenName": "Sidney",
                 "familyName": "Fels",
                 "email": "ssfels@ece.ubc.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of British Columbia",
+                    "city": "Vancouver",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This theory + hands-on course provides attendees with a practical overview of recent advances in musical interface research and a chance to prototype a new interface for musical expression.",
@@ -860,8 +2746,18 @@
                 "givenName": "David",
                 "familyName": "Sirkin",
                 "email": "sirkin@cdr.stanford.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Stanford University",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth1438",
@@ -871,8 +2767,18 @@
                 "givenName": "Wendy",
                 "familyName": "Ju",
                 "email": "wendyju@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Stanford University",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Course is a hands-on introduction to interactive electronics prototyping for people with a variety of backgrounds, including those with no prior experience in electronics. ",
@@ -897,8 +2803,18 @@
                 "givenName": "Stephanie",
                 "familyName": "Foehrenbach",
                 "email": "stephaniefoehrenbach@googlemail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "PUR",
+                    "institution": "Zühlke Engineering AG",
+                    "city": "Schlieren",
+                    "country": "Switzerland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Sketching as a technique to quickly draw ideas is used to explore and communicate ideas. This course introduces basic sketching techniques and a visual language, which participants can immediately apply. ",
@@ -923,8 +2839,18 @@
                 "givenName": "Allison",
                 "familyName": "Druin",
                 "email": "allisond@umiacs.umd.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth4981",
@@ -934,8 +2860,18 @@
                 "givenName": "Jerry",
                 "familyName": "Fails",
                 "email": "failsj@mail.montclair.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Montclair State University",
+                    "city": "Montclair",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth9212",
@@ -945,8 +2881,18 @@
                 "givenName": "Mona Leigh",
                 "familyName": "Guha",
                 "email": "mona@cs.umd.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "HCIL",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course will cover technology co-design methods involving children; covering background, practical techniques, roles of adults and children, and practical issues relating to an intergenerational design team.",
@@ -971,8 +2917,18 @@
                 "givenName": "Javier",
                 "familyName": "Gonzalez-Sanchez",
                 "email": "javiergs@asu.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Arizona State University",
+                    "city": "Tempe",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth24093",
@@ -982,8 +2938,18 @@
                 "givenName": "Maria Elena",
                 "familyName": "Chavez-Echeagaray",
                 "email": "helenchavez@asu.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Arizona State University",
+                    "city": "Tempe",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth36798",
@@ -993,8 +2959,18 @@
                 "givenName": "Robert",
                 "familyName": "Atkinson",
                 "email": "robert.atkinson@asu.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Arizona State University",
+                    "city": "Tempe",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course presents devices and explores methodologies for multimodal detection of affective states, as well as a discussion about presenter’s experiences using them both in learning and gaming scenarios.",
@@ -1019,8 +2995,18 @@
                 "givenName": "David",
                 "familyName": "Geerts",
                 "email": "david.geerts@soc.kuleuven.be",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "KU Leuven - University of Leuven",
+                    "city": "Leuven",
+                    "country": "Belgium"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "IBBT",
+                    "city": "Ghent",
+                    "country": "Belgium"
+                }
             },
             {
                 "id": "auth4740",
@@ -1030,8 +3016,18 @@
                 "givenName": "Pablo",
                 "familyName": "Cesar",
                 "email": "p.s.cesar@cwi.nl",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "CWI (Centrum voor Wiskunde en Informatica)",
+                    "city": "Amsterdam",
+                    "country": "The Netherlands"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Will teach attendees how to design and evaluate interaction with online video and television. Provides attendees a pragmatic toolset, including techniques and guidelines, which can be directly applied in practice.",
@@ -1056,8 +3052,18 @@
                 "givenName": "Hendrik",
                 "familyName": "Müller",
                 "email": "hendrik82@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Sydney",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth31522",
@@ -1067,8 +3073,18 @@
                 "givenName": "Aaron",
                 "familyName": "Sedley",
                 "email": "asedley@google.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth34953",
@@ -1078,8 +3094,18 @@
                 "givenName": "Elizabeth",
                 "familyName": "Ferrall-Nunge",
                 "email": "enunge@twitter.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Twitter, Inc.",
+                    "city": "San Francisco",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "To enable the creation of unbiased surveys, this course demonstrates questionnaire design biases and pitfalls, provides best practices for minimizing these, and reviews different uses of surveys within HCI.",
@@ -1104,8 +3130,18 @@
                 "givenName": "Terrill",
                 "familyName": "Thompson",
                 "email": "tft@uw.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Accessible Technology Services, UW-IT",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course will explore the state of the art in computer user interfaces for people with disabilities, including techniques for minimizing accessibility barriers and possible solutions when current models fail.",
@@ -1130,8 +3166,18 @@
                 "givenName": "Brent",
                 "familyName": "Hecht",
                 "email": "bhecht@cs.umn.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Computer Science and Engineering",
+                    "institution": "University of Minnesota",
+                    "city": "Minneapolis",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth9487",
@@ -1141,8 +3187,18 @@
                 "givenName": "David",
                 "familyName": "Shamma",
                 "email": "aymans@acm.org",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Yahoo! Research",
+                    "city": "San Francisco",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Participants should expect to leave the course with a high-level understanding of methods for properly analyzing geographic data and reporting results, the context necessary to better understand the geography literature, and resources for further engaging with geography research and best practices. \\ ",
@@ -1167,8 +3223,18 @@
                 "givenName": "Jim",
                 "familyName": "Parker",
                 "email": "parker@minkhollow.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Digital Media Laboratory",
+                    "institution": "Uiniversity of Calgary",
+                    "city": "Calgary",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "Minkhollow Media Ltd",
+                    "city": "Cochrane",
+                    "country": "Canada"
+                }
             }
         ],
         "cbStatement": "This course will give attendees a clear view of images: how they are constructed/captured, what influences image quality, and what can be done to enhance and extract data from them.  \\ ",
@@ -1193,8 +3259,18 @@
                 "givenName": "Cosmin",
                 "familyName": "Munteanu",
                 "email": "cosmin.munteanu@nrc-cnrc.gc.ca",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "National Research Council Canada",
+                    "city": "Fredericton",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "University of Toronto",
+                    "city": "Toronto",
+                    "country": "Canada"
+                }
             },
             {
                 "id": "auth8487",
@@ -1204,8 +3280,18 @@
                 "givenName": "Gerald",
                 "familyName": "Penn",
                 "email": "gpenn@cs.toronto.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Toronto",
+                    "city": "Toronto",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Learn how speech recognition and synthesis works, what are its limitations and usability challenges, how can it enhance interaction paradigms, and what is the current research and commercial state-of-the-art.",
@@ -1230,8 +3316,18 @@
                 "givenName": "Nigel",
                 "familyName": "Bevan",
                 "email": "nigel@nigelbevan.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Professional Usability Services",
+                    "city": "London",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "How international standards can provide a sound basis for educational and training, can provide authority for design and development, and are a rich source of guidance and reference material.   \\ ",
@@ -1256,8 +3352,18 @@
                 "givenName": "Duen Horng (Polo)",
                 "familyName": "Chau",
                 "email": "polo@gatech.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "College of Computing",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Learn key data mining concepts and tools, and how to integrate them with HCI methods for big data analytics, through non-technical introduction and case studies, and technical examples.",
@@ -1282,8 +3388,18 @@
                 "givenName": "Mark",
                 "familyName": "Billinghurst",
                 "email": "mark.billinghurst@canterbury.ac.nz",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "HIT Lab NZ",
+                    "institution": "University of Canterbury",
+                    "city": "Christchurch",
+                    "country": "New Zealand"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth16439",
@@ -1293,8 +3409,18 @@
                 "givenName": "Hayes",
                 "familyName": "Raffle",
                 "email": "hraffle@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Attendees will learn to design interfaces for wearable computers like Google Glass through user-centered design principles. They will gain the knowledge to develop prototypes and conduct research on wearable platforms. \\ ",
@@ -1319,8 +3445,18 @@
                 "givenName": "Janet",
                 "familyName": "Read",
                 "email": "jcread@uclan.ac.uk",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Central Lancashire",
+                    "city": "Preston",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth1348",
@@ -1330,8 +3466,18 @@
                 "givenName": "Panos",
                 "familyName": "Markopoulos",
                 "email": "P.Markopoulos@tue.nl",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Eindhoven University of Technology",
+                    "city": "Eindhoven",
+                    "country": "The Netherlands"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course is an introduction to the exciting area of evaluation of interactive products for children.  The focus is on empowering developers and researchers to do more robust, more appropriate and more suitable evaluations with children \\ ",
@@ -1356,8 +3502,18 @@
                 "givenName": "Jim",
                 "familyName": "Nieters",
                 "email": "jnieters@mac.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Consumer Travel",
+                    "institution": "Hewlett Packard",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth14979",
@@ -1367,8 +3523,18 @@
                 "givenName": "Carola",
                 "familyName": "Fellenz Thompson",
                 "email": "carolafthompson@gmail.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "User Experience",
+                    "institution": "zSpace",
+                    "city": "Sunnyvale",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "\"Attendees learn how to lead workshops that foster ideation, collaboration, trust, and free expression. These workshops enable intensive brainstorming, purposeful play, design, user testing, and rapid prototyping.\" \\ ",
@@ -1393,8 +3559,18 @@
                 "givenName": "Joseph",
                 "familyName": "Williams",
                 "email": "josephjaywilliams@stanford.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Office of the Vice Provost of Online Learning",
+                    "institution": "Stanford University",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth39984",
@@ -1404,8 +3580,18 @@
                 "givenName": "Betsy",
                 "familyName": "Williams",
                 "email": "betsyw@stanford.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Graduate School of Education",
+                    "institution": "Stanford University",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Applies proven methodologies for randomized experiments to online contexts. Introduces steps for designing meaningful experiments, optimizing contrasts between cases, and avoiding common misunderstandings. Walks through examples with Amazon Mechanical Turk.",
@@ -1430,8 +3616,18 @@
                 "givenName": "Niels",
                 "familyName": "Henze",
                 "email": "niels.henze@vis.uni-stuttgart.de",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Stuttgart",
+                    "city": "Stuttgart",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             },
             {
                 "id": "auth9778",
@@ -1441,8 +3637,18 @@
                 "givenName": "Enrico",
                 "familyName": "Rukzio",
                 "email": "enrico.rukzio@uni-ulm.de",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Ulm University",
+                    "city": "Ulm",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course provides an overview about the state-of-the-art in mobile HCI. It will enable attendees to apply research methods and design guidelines to build effective, efficient and pleasurable mobile interactions.",
@@ -1467,8 +3673,18 @@
                 "givenName": "WIlliam",
                 "familyName": "Buxton",
                 "email": "bill.buxton@microsoft.com",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Microsoft Research",
+                    "city": "Redmond",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "We explore two aspects of sketching experience and their relationship:  constructivist approaches, where we synthesize the sketch, the other, where we take a page from Duchamp’s Readymades, and sample the world for (often) non-obvious technologies that serve as the sketch.  eBay emerges as a potent a sketching tool as a pencil or foam core.  ",
@@ -1493,8 +3709,18 @@
                 "givenName": "Don",
                 "familyName": "Norman",
                 "email": "don@jnd.org",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "Northwestern, KAIST, Nielsen Norman Group",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Reflections on design and HCI: strengths and weaknesses of research versus practice, HCI versus traditional design.  An initial presentation moving to interaction led by audience questions and contributions.",
@@ -1519,8 +3745,18 @@
                 "givenName": "Ronald",
                 "familyName": "Baecker",
                 "email": "rmb@kmdi.toronto.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Toronto",
+                    "city": "Toronto ",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Demographic trends and user diversity afford exciting design opportunities and challenges. We shall present two frameworks for envisioning solutions, and illustrate with landmark achievements, promising approaches, and open problems.",
@@ -1545,8 +3781,18 @@
                 "givenName": "Toni",
                 "familyName": "Robertson",
                 "email": "Toni.Robertson@uts.edu.au",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Technology, Sydney",
+                    "city": "Sydney",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course revisits feminist theory to examine the ethical and pragmatic motivations for prioritising the active human body in technology design.",
@@ -1571,8 +3817,18 @@
                 "givenName": "Judith",
                 "familyName": "Donath",
                 "email": "judith@media.mit.edu",
-                "primary": {},
-                "secondary": {}
+                "primary": {
+                    "dept": "Berkman Center",
+                    "institution": "Harvard University",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Social media interfaces embody assumptions about importance and desirability. Through analysis of several sites and a design exercise, this course explores how our perception of people, and culture, is being reshaped.",
@@ -1581,802 +3837,6 @@
         "contactLastName": "Donath",
         "venue": "course",
         "session": "s-crs161",
-        "communities": []
-    },
-    {
-        "id": "sig103",
-        "title": "Communicating User Research in Order to Drive Design and Product Decisions",
-        "abstract": "As the industry evolved from engineering-centered design to user-centered design, organizations created new roles. These user experience (UX) roles are charged with conducting user studies, synthesizing data collected, and communicating findings to product managers, engineers, and UI designers. \\  \\ While it’s generally accepted that user research should be performed, the challenge now is for UX professionals to represent and communicate what we find in ways that are valued and consumable by product teams.  \\ How can we get what we know into stakeholders’ minds so it drives their design thinking? How can we make it compelling so they think about the user data when they are designing? How can we represent the data so that it facilitates ideation?  \\  \\ This SIG creates a forum for people with real-world experience and challenges to discuss their best practices—and missteps—for communicating user research. It does not cover the “how to” details for gathering it. ",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth31489",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 1,
-                "givenName": "Karen",
-                "familyName": "Holtzblatt",
-                "email": "karen@incontextdesign.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth39395",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 2,
-                "givenName": "Shoshana",
-                "familyName": "Holtzblatt",
-                "email": "shoshanah@google.com",
-                "primary": {},
-                "secondary": {}
-            }
-        ],
-        "contactEmail": "shelley@incontextdesign.com",
-        "contactFirstName": "Shelley",
-        "contactLastName": "Wood",
-        "keywords": "User-centered design; user studies; user research analysis and representation; requirements gathering and specifications",
-        "venue": "SIG",
-        "session": "s-sig103",
-        "communities": []
-    },
-    {
-        "id": "sig105",
-        "title": "Interaction Science SIG: Overcoming Challenges",
-        "abstract": "Over the past 30 years science has played a key role in shaping and \\ advancing research in Human-Computer Interaction. Informed in part by \\ methods, theories and findings from the behavioral sciences and from \\ computer science,  scientific contributions to HCI have provided \\ explanations of how and why people interact through and with \\ technology. We argue that the contribution of science to HCI could be \\ enhanced if key challenges are met. During a SIG meeting we will discuss the \\ challenges and potential responses and set an agenda for \\ the coming years. \\ ",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth1133",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 1,
-                "givenName": "Andrew",
-                "familyName": "Howes",
-                "email": "howesa@mac.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth19044",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 2,
-                "givenName": "Benjamin",
-                "familyName": "Cowan",
-                "email": "b.r.cowan@cs.bham.ac.uk",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth14962",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 3,
-                "givenName": "Christian",
-                "familyName": "Janssen",
-                "email": "cjanssen@ski.org",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth7532",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 4,
-                "givenName": "Anna",
-                "familyName": "Cox",
-                "email": "anna.cox@ucl.ac.uk",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth1407",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 5,
-                "givenName": "Paul",
-                "familyName": "Cairns",
-                "email": "paul.cairns@york.ac.uk",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth3622",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 6,
-                "givenName": "Anthony",
-                "familyName": "Hornof",
-                "email": "hornof@cs.uoregon.edu",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth6389",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 7,
-                "givenName": "Stephen",
-                "familyName": "Payne",
-                "email": "s.j.payne@bath.ac.uk",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth6244",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 8,
-                "givenName": "Peter",
-                "familyName": "Pirolli",
-                "email": "pirolli@parc.com",
-                "primary": {},
-                "secondary": {}
-            }
-        ],
-        "contactEmail": "howesa@mac.com",
-        "contactFirstName": "Andrew",
-        "contactLastName": "Howes",
-        "keywords": "science; theory; modeling; scientific method; empirical method; experiments; data; evidence; analysis; behavioral sciences; interaction science",
-        "venue": "SIG",
-        "session": "s-sig105",
-        "communities": []
-    },
-    {
-        "id": "sig107",
-        "title": "Jogging with Technology: Interaction Design Supporting Sport Activities",
-        "abstract": "There has been a significant increase of interactive technologies to support sports activities. Examples are heart rate monitors for cyclists, jogging apps on mobile phones and GPS sports watches for extreme sports. Despite consumer popularity, there is little knowledge about how they should be designed in order to support the exertion activity. Based on CHI’13’s success of conducting a special interest group outdoors, we propose jogging with technology to discuss sports-support interactive systems and investigate what future opportunities and challenges exist.",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth2060",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 1,
-                "givenName": "Florian",
-                "familyName": "Mueller",
-                "email": "floyd@floydmueller.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth7924",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 2,
-                "givenName": "Joe",
-                "familyName": "Marshall",
-                "email": "joe.marshall@nottingham.ac.uk",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth10580",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 3,
-                "givenName": "Rohit",
-                "familyName": "Khot",
-                "email": "rohit.a.khot@gmail.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth4751",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 4,
-                "givenName": "Stina",
-                "familyName": "Nylander",
-                "email": "stny@sics.se",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth6222",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 5,
-                "givenName": "Jakob",
-                "familyName": "Tholander",
-                "email": "jakobth@dsv.su.se",
-                "primary": {},
-                "secondary": {}
-            }
-        ],
-        "contactEmail": "floyd@floydmueller.com",
-        "contactFirstName": "Florian",
-        "contactLastName": "Mueller",
-        "keywords": "Sports; exercise; exertion interface ",
-        "venue": "SIG",
-        "session": "s-sig107",
-        "communities": []
-    },
-    {
-        "id": "sig108",
-        "title": "Art And Interaction SIG: Cataloging The Digital Arts",
-        "abstract": "Over the last three years the Digital Arts community of CHI has established itself and is a Spotlight for CHI2014. The focus for CHI2014 is the development of a Catalog for the Digital Arts that we hope will lead on to an Art Gallery as a future CHI conference event. This SIG will be preceded by a workshop “Curating the Digital” that will have as its outcome a research-informed design of the Catalog. The purpose of the SIG will be to open the Catalog design to wider audience participation and discussion, and invite the CHI community to support the development of the Catalog.",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth1240",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 1,
-                "givenName": "David",
-                "familyName": "England",
-                "email": "d.england@ljmu.ac.uk",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth27015",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 2,
-                "givenName": "Jocelyn",
-                "familyName": "Spence",
-                "email": "j.spence@surrey.ac.uk",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth3848",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 3,
-                "givenName": "Celine",
-                "familyName": "Latulipe",
-                "email": "clatulip@uncc.edu",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth1938",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 4,
-                "givenName": "ernest",
-                "familyName": "edmonds",
-                "email": "ernest@ernestedmonds.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth5214",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 5,
-                "givenName": "Linda",
-                "familyName": "Candy",
-                "email": "linda@lindacandy.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth3338",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 6,
-                "givenName": "Thecla",
-                "familyName": "Schiphorst",
-                "email": "thecla@sfu.ca",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth39653",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 7,
-                "givenName": "Nick",
-                "familyName": "Bryan-Kinns",
-                "email": "nick.bryan-kinns@eecs.qmul.ac.uk",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth39762",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 8,
-                "givenName": "Kirk",
-                "familyName": "Woolford",
-                "email": "k.woolford@surrey.ac.uk",
-                "primary": {},
-                "secondary": {}
-            }
-        ],
-        "contactEmail": "d.england@ljmu.ac.uk",
-        "contactFirstName": "David",
-        "contactLastName": "England",
-        "keywords": "Digital Art; Performance Art; Interaction; Interdisciplinary; Collaboration; Curation",
-        "venue": "SIG",
-        "session": "s-sig108",
-        "communities": []
-    },
-    {
-        "id": "sig109",
-        "title": "Current Issues in Assessing and Improving Information Usability",
-        "abstract": "The usability of information is vital to successful websites, products, and services. Managers and developers often recognize the role of information or content in overall product usability, but miss opportunities to improve information usability as part of the product-development effort. This meeting is an annual forum on human factors of information design, in which we discuss issues selected by the group from the facilitators’ list of topics, augmented by attendees’ suggestions.",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth1518",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 1,
-                "givenName": "Stephanie",
-                "familyName": "Rosenbaum",
-                "email": "stephanie@teced.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth9124",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 2,
-                "givenName": "Judith",
-                "familyName": "Ramey",
-                "email": "jramey@u.washington.edu",
-                "primary": {},
-                "secondary": {}
-            }
-        ],
-        "contactEmail": "stephanie@teced.com",
-        "contactFirstName": "Stephanie",
-        "contactLastName": "Rosenbaum",
-        "keywords": "Information design; user assistance; documentation usability; information development; information usability; documentation standards; usability testing; product development",
-        "venue": "SIG",
-        "session": "s-sig109",
-        "communities": []
-    },
-    {
-        "id": "sig110",
-        "title": "Community Centered Collaborative HCI Design / Research in Developing Countries",
-        "abstract": "We are proposing a SIG as an extended forum to build a sustainable network and resource repository for practitioners and researchers engaged in community centered collaborative design in developing countries. In structured discussions and an open cross-cultural dialogue, we attempt to build a practical and theoretical foundation based on success and failure stories, challenges and systematic approaches to such HCI. We will explore specific themes around time, trust and values, expectation management and transferability/ sustainability of localized projects. We intend to explore how to document and transform lessons learned into systematic approaches to be deployed in different contexts.",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth16276",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 1,
-                "givenName": "Anicia",
-                "familyName": "Peters",
-                "email": "anpeters@iastate.edu",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth23673",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 2,
-                "givenName": "Heike",
-                "familyName": "Winschiers-Theophilus",
-                "email": "heikewinschiers@gmail.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth11529",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 3,
-                "givenName": "Nicola",
-                "familyName": "Bidwell",
-                "email": "nic.bidwell@gmail.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth13531",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 4,
-                "givenName": "Arun",
-                "familyName": "Kumar",
-                "email": "kkarun@in.ibm.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth14169",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 5,
-                "givenName": "Daniel",
-                "familyName": "Ochieng",
-                "email": "dorwa@uonbi.ac.ke",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth39904",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 6,
-                "givenName": "Fatoumata",
-                "familyName": "Camara",
-                "email": "fcamara@objetdirect.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth11429",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 7,
-                "givenName": "Susan",
-                "familyName": "Dray",
-                "email": "susan.dray@dray.com",
-                "primary": {},
-                "secondary": {}
-            }
-        ],
-        "contactEmail": "anpeters@iastate.edu",
-        "contactFirstName": "Anicia",
-        "contactLastName": "Peters",
-        "keywords": "Community collaboration; HCI4D; International Development; ICTD, UCD4ID; Community Centered Design; Participatory Design; HCD4D",
-        "venue": "SIG",
-        "session": "s-sig110",
-        "communities": []
-    },
-    {
-        "id": "sig111",
-        "title": "HCI in Food Product Innovation",
-        "abstract": "Food is essential to the survival of the world population. There are several processes in order to make food available to consumers: for example, production, transportation, and consumption. Since the global demand of food is always on the rise, there is a need to improve the efficiency in all the processes in food industries. For example, the food production industries are often not equipped with the right decision-making tools to allow farmers to properly deal with important factors such as environmental changes. On the other hand, tools are not difficult to create but can be very challenging to be successfully adopted by the professionals, especially when the tools require them to change their normal work practices. In this SIG, we will discuss how HCI can improve food product industries with suitable information for each food process.        \\ ",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth41925",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 1,
-                "givenName": "Winyu",
-                "familyName": "Chinthammit",
-                "email": "wchinthammit@acm.org",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth2365",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 2,
-                "givenName": "Henry Been-Lirn",
-                "familyName": "Duh",
-                "email": "duhbl@acm.org",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth2011",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 3,
-                "givenName": "Jun",
-                "familyName": "Rekimoto",
-                "email": "rekimoto@acm.org",
-                "primary": {},
-                "secondary": {}
-            }
-        ],
-        "contactEmail": "winyu.chinthammit@utas.edu.au",
-        "contactFirstName": "Winyu",
-        "contactLastName": "Chinthammit",
-        "keywords": "Food Product; Decision-making tool; Agriculture; Interaction Design",
-        "venue": "SIG",
-        "session": "s-sig111",
-        "communities": []
-    },
-    {
-        "id": "sig112",
-        "title": "Child Computer Interaction SIG: Towards Sustainable Thinking and Being",
-        "abstract": "The discipline of Child Computer Interaction (CCI) has been steadily growing and it is now firmly established as a community in its own right, having the annual IDC (Interaction and Design for Children) conference and its own journal and also enjoying its role as a highly recognisable and vibrant contributor to the ACM CHI conference.  Having recently been given status as an IFIP (International Federation for Information Processing) TC13 working group, the community now needs to make plans around its academic themes and its coherence as a developing academic community.  \\ The CCI SIG at CHI aims to use a mixture of facilitated creative thinking and a world café approach to bring the community together to tackle these two key challenges.  The CCI SIG will be the natural meeting place for members of this community at CHI and will disseminate its discussion to the CCI and CHI communities through the production of visual and interactive materials at the CHI conference. \\ ",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth2823",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 1,
-                "givenName": "Janet",
-                "familyName": "Read",
-                "email": "jcread@uclan.ac.uk",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth1924",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 2,
-                "givenName": "Juan Pablo",
-                "familyName": "Hourcade",
-                "email": "juanpablo-hourcade@uiowa.edu",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth1348",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 3,
-                "givenName": "Panos",
-                "familyName": "Markopoulos",
-                "email": "P.Markopoulos@tue.nl",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth24491",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 4,
-                "givenName": "Ole",
-                "familyName": "Iversen",
-                "email": "oiversen@cs.au.dk",
-                "primary": {},
-                "secondary": {}
-            }
-        ],
-        "contactEmail": "jcread@uclan.ac.uk",
-        "contactFirstName": "Janet",
-        "contactLastName": "Read",
-        "keywords": "Child Computer Interaction; Research Networks; Research Themes; Community Building",
-        "venue": "SIG",
-        "session": "s-sig112",
-        "communities": []
-    },
-    {
-        "id": "sig114",
-        "title": "Interactions Magazine",
-        "abstract": "In this SIG meeting we invite attendees of CHI to join us to provide input, feedback, and discuss the ACM interactions magazine. ",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth3350",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 1,
-                "givenName": "Ron",
-                "familyName": "Wakkary",
-                "email": "rwakkary@sfu.ca",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth5985",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 2,
-                "givenName": "Erik",
-                "familyName": "Stolterman",
-                "email": "estolter@indiana.edu",
-                "primary": {},
-                "secondary": {}
-            }
-        ],
-        "contactEmail": "rwakkary@sfu.ca",
-        "contactFirstName": "Ron",
-        "contactLastName": "Wakkary",
-        "keywords": "Magazine; interactions; publications; SIGCHI community",
-        "venue": "SIG",
-        "session": "s-sig114",
-        "communities": []
-    },
-    {
-        "id": "sig117",
-        "title": "Games and Entertainment Community SIG: Reaching beyond CHI",
-        "abstract": "Games and Entertainment have become important areas of research within the field of Human-Computer Interaction. The community has grown dramatically in the past years. During the previous CHI conference, there were a growing number of game-oriented submissions demonstrating the increased importance of the field. In 2014, the successful Student Games Competition and the Games User Research workshop (in its third iteration) continue to tie together students, researchers and practitioners. Games and Entertainment is one of the five research areas that have been selected as Spotlights in CHI 2014. Given the increase in quantity and variety of submissions, and the involvement and engagement of practitioners within the community, it is important for the community to have this SIG as a forum.",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth10385",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 1,
-                "givenName": "Lennart",
-                "familyName": "Nacke",
-                "email": "Lennart.Nacke@acm.org",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth18112",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 2,
-                "givenName": "Pejman",
-                "familyName": "Mirza-Babaei",
-                "email": "pejman.m@acm.org",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth3154",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 3,
-                "givenName": "Magy",
-                "familyName": "Seif El-Nasr",
-                "email": "magy@northeastern.edu",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth3427",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 4,
-                "givenName": "Heather",
-                "familyName": "Desurvire",
-                "email": "Heather3d@gmail.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth40753",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 5,
-                "givenName": "Regina",
-                "familyName": "Bernhaupt",
-                "email": "Regina.Bernhaupt@irit.fr",
-                "primary": {},
-                "secondary": {}
-            }
-        ],
-        "contactEmail": "Lennart.Nacke@acm.org",
-        "contactFirstName": "Lennart",
-        "contactLastName": "Nacke",
-        "keywords": "Video Games; Entertainment; HCI; Games; Play; Gamification; CHI PLAY; Player",
-        "venue": "SIG",
-        "session": "s-sig117",
-        "communities": []
-    },
-    {
-        "id": "sig118",
-        "title": "The Usability of Text Entry Systems Now and in the Future",
-        "abstract": "Text entry is an active and growing research domain. Our SIG serves three purposes. First, to strengthen the text entry community by bringing text entry researchers working in the human-computer interaction, natural language processing and augmentative and alternative communication communities together in one room. Second, to promote CHI as a natural and compelling focal point for all kinds of text entry research. Third, to follow-up on and broaden the discussions that emerged from two previous text entry workshops held at CHI [3, 4] by engaging in dialog to identify obstacles for success and formalizing procedures for measuring progress in the field of text entry. \\ ",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth8436",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 1,
-                "givenName": "James",
-                "familyName": "Clawson",
-                "email": "jamer@cc.gatech.edu",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth1374",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 2,
-                "givenName": "Stephen",
-                "familyName": "Brewster",
-                "email": "stephen.brewster@glasgow.ac.uk",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth9541",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 3,
-                "givenName": "Mark",
-                "familyName": "Dunlop",
-                "email": "mark.dunlop@strath.ac.uk",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth3496",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 4,
-                "givenName": "Per Ola",
-                "familyName": "Kristensson",
-                "email": "kristensson@gmail.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth1262",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 5,
-                "givenName": "Poika",
-                "familyName": "Isokoski",
-                "email": "poika.isokoski@uta.fi",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth2881",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 6,
-                "givenName": "Antti",
-                "familyName": "Oulasvirta",
-                "email": "antti.oulasvirta@mpii.de",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth9760",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 7,
-                "givenName": "Keith",
-                "familyName": "Vertanen",
-                "email": "kvertanen@mtech.edu",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth19192",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 8,
-                "givenName": "Annalu",
-                "familyName": "Waller",
-                "email": "awaller@dundee.ac.uk",
-                "primary": {},
-                "secondary": {}
-            }
-        ],
-        "contactEmail": "jamer@cc.gatech.edu",
-        "contactFirstName": "James",
-        "contactLastName": "Clawson",
-        "keywords": "Text entry; augmentative and alternative communication; accessibility; internationalization",
-        "venue": "SIG",
-        "session": "s-sig118",
-        "communities": []
-    },
-    {
-        "id": "sig119",
-        "title": "Managing UX Teams",
-        "abstract": "This SIG will serve multiple purposes:  as a forum to share the results from previous CHI management panels, workshops and current trends, and also as a forum for the management community to discuss topics of interest.",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth13615",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 1,
-                "givenName": "Janice",
-                "familyName": "Rohn",
-                "email": "janicerohn@yahoo.com",
-                "primary": {},
-                "secondary": {}
-            },
-            {
-                "id": "auth14979",
-                "type": "author",
-                "venue": "SIG",
-                "rank": 2,
-                "givenName": "Carola",
-                "familyName": "Thompson",
-                "email": "carolafthompson@gmail.com",
-                "primary": {},
-                "secondary": {}
-            }
-        ],
-        "contactEmail": "janicerohn@yahoo.com",
-        "contactFirstName": "Janice",
-        "contactLastName": "Rohn",
-        "keywords": "User Experience; Management; Organizations; Design; Research; Practice; Method; Technique; Agile; Innovation; Lean",
-        "venue": "SIG",
-        "session": "s-sig119",
         "communities": []
     },
     {

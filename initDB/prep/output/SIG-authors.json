@@ -9,8 +9,18 @@
         "familyName": "Holtzblatt",
         "email": "karen@incontextdesign.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "InContext Design",
+            "city": "Concord",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39395",
@@ -22,8 +32,18 @@
         "familyName": "Holtzblatt",
         "email": "shoshanah@google.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "New York",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth1133",
@@ -35,8 +55,18 @@
         "familyName": "Howes",
         "email": "howesa@mac.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of Birmingham",
+            "city": "Birmingham",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth19044",
@@ -48,8 +78,18 @@
         "familyName": "Cowan",
         "email": "b.r.cowan@cs.bham.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of Birmingham",
+            "city": "Birmingham",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth14962",
@@ -61,8 +101,18 @@
         "familyName": "Janssen",
         "email": "cjanssen@ski.org",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Smith-Kettlewell Eye Research Institute",
+            "city": "San Francisco",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth7532",
@@ -74,8 +124,18 @@
         "familyName": "Cox",
         "email": "anna.cox@ucl.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University College London",
+            "city": "London",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth1407",
@@ -87,8 +147,18 @@
         "familyName": "Cairns",
         "email": "paul.cairns@york.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Dept of Computer Science",
+            "institution": "University of York",
+            "city": "York",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth3622",
@@ -100,8 +170,18 @@
         "familyName": "Hornof",
         "email": "hornof@cs.uoregon.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Dept. of Computer Science and Information Science",
+            "institution": "University of Oregon",
+            "city": "Eugene",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth6389",
@@ -113,8 +193,18 @@
         "familyName": "Payne",
         "email": "s.j.payne@bath.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of Bath",
+            "city": "Bath",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth6244",
@@ -126,8 +216,18 @@
         "familyName": "Pirolli",
         "email": "pirolli@parc.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Palo Alto Research Center (PARC)",
+            "city": "Palo Alto",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth2060",
@@ -139,8 +239,18 @@
         "familyName": "Mueller",
         "email": "floyd@floydmueller.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Exertion Games Lab",
+            "institution": "RMIT University",
+            "city": "Melbourne",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth7924",
@@ -152,8 +262,18 @@
         "familyName": "Marshall",
         "email": "joe.marshall@nottingham.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Mixed Reality Lab",
+            "institution": "The University of Nottingham",
+            "city": "Nottingham",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth10580",
@@ -165,8 +285,18 @@
         "familyName": "Khot",
         "email": "rohit.a.khot@gmail.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Exertion games lab",
+            "institution": "RMIT University",
+            "city": "Melbourne",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth4751",
@@ -178,8 +308,18 @@
         "familyName": "Nylander",
         "email": "stny@sics.se",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Mobile Life @ SICS",
+            "city": "Kista",
+            "country": "Sweden"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth6222",
@@ -191,8 +331,18 @@
         "familyName": "Tholander",
         "email": "jakobth@dsv.su.se",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Mobile Life",
+            "institution": "Stockholm University",
+            "city": "Stockholm",
+            "country": "Sweden"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth1240",
@@ -204,8 +354,18 @@
         "familyName": "England",
         "email": "d.england@ljmu.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Liverpool John Moores University",
+            "city": "Liverpool",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth27015",
@@ -217,8 +377,18 @@
         "familyName": "Spence",
         "email": "j.spence@surrey.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Digital World Research Centre, School of Arts",
+            "institution": "University of Surrey",
+            "city": "Guildford",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth3848",
@@ -230,8 +400,18 @@
         "familyName": "Latulipe",
         "email": "clatulip@uncc.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of North Carolina at Charlotte",
+            "city": "Charlotte",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth1938",
@@ -243,8 +423,18 @@
         "familyName": "edmonds",
         "email": "ernest@ernestedmonds.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of Technology, Sydney",
+            "city": "Sydney",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth5214",
@@ -256,8 +446,18 @@
         "familyName": "Candy",
         "email": "linda@lindacandy.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of Technology, Sydney",
+            "city": "Sydney",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth3338",
@@ -269,8 +469,18 @@
         "familyName": "Schiphorst",
         "email": "thecla@sfu.ca",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "School of Interactive Arts and Technology ",
+            "institution": "Simon Fraser University",
+            "city": "Vancouver",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39653",
@@ -282,8 +492,18 @@
         "familyName": "Bryan-Kinns",
         "email": "nick.bryan-kinns@eecs.qmul.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Centre for Digital Music",
+            "institution": "Queen Mary, University of London",
+            "city": "London",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39762",
@@ -295,8 +515,18 @@
         "familyName": "Woolford",
         "email": "k.woolford@surrey.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Digital World Research Centre",
+            "institution": "University of Surrey",
+            "city": "Guildford",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth1518",
@@ -308,8 +538,18 @@
         "familyName": "Rosenbaum",
         "email": "stephanie@teced.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "TecEd, Inc.",
+            "city": "Ann Arbor",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth9124",
@@ -321,8 +561,18 @@
         "familyName": "Ramey",
         "email": "jramey@u.washington.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth16276",
@@ -334,8 +584,18 @@
         "familyName": "Peters",
         "email": "anpeters@iastate.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Iowa State University",
+            "city": "Ames",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "Polytechnic of Namibia",
+            "city": "Windhoek",
+            "country": "Namibia"
+        }
     },
     {
         "authorId": "auth23673",
@@ -347,8 +607,18 @@
         "familyName": "Winschiers-Theophilus",
         "email": "heikewinschiers@gmail.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Polytechnic of Namibia",
+            "city": "Windhoek",
+            "country": "Namibia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth11529",
@@ -360,8 +630,18 @@
         "familyName": "Bidwell",
         "email": "nic.bidwell@gmail.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Department of Informatics",
+            "institution": "University of Pretoria",
+            "city": "Pretoria",
+            "country": "South Africa"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth13531",
@@ -373,8 +653,18 @@
         "familyName": "Kumar",
         "email": "kkarun@in.ibm.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "IBM Research India",
+            "city": "New Delhi",
+            "country": "India"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth14169",
@@ -386,8 +676,18 @@
         "familyName": "Ochieng",
         "email": "dorwa@uonbi.ac.ke",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of Nairobi",
+            "city": "Nairobi",
+            "country": "Kenya"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth39904",
@@ -399,8 +699,18 @@
         "familyName": "Camara",
         "email": "fcamara@objetdirect.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Objet Direct – Groupe VISEO",
+            "city": "Grenoble",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth11429",
@@ -412,8 +722,18 @@
         "familyName": "Dray",
         "email": "susan.dray@dray.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Dray & Associates, Inc.",
+            "city": "Oakland",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth41925",
@@ -425,8 +745,18 @@
         "familyName": "Chinthammit",
         "email": "wchinthammit@acm.org",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "HIT Lab Australia",
+            "institution": "University of Tasmania",
+            "city": "Launceston",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth2365",
@@ -438,8 +768,18 @@
         "familyName": "Duh",
         "email": "duhbl@acm.org",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Human Interface Technology Lab Australia",
+            "institution": "University of Tasmania",
+            "city": "Tasmania",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth2011",
@@ -451,8 +791,18 @@
         "familyName": "Rekimoto",
         "email": "rekimoto@acm.org",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of Tokyo / Sony CSL",
+            "city": "Meguro-ku",
+            "country": "Japan"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth2823",
@@ -464,8 +814,18 @@
         "familyName": "Read",
         "email": "jcread@uclan.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of Central Lancashire",
+            "city": "Preston",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth1924",
@@ -477,8 +837,18 @@
         "familyName": "Hourcade",
         "email": "juanpablo-hourcade@uiowa.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of Iowa",
+            "city": "Iowa City",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth1348",
@@ -490,8 +860,18 @@
         "familyName": "Markopoulos",
         "email": "P.Markopoulos@tue.nl",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Eindhoven University of Technology",
+            "city": "Eindhoven",
+            "country": "The Netherlands"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth24491",
@@ -503,8 +883,18 @@
         "familyName": "Iversen",
         "email": "oiversen@cs.au.dk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Aarhus University",
+            "city": "Aarhus",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth3350",
@@ -516,8 +906,18 @@
         "familyName": "Wakkary",
         "email": "rwakkary@sfu.ca",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Simon Fraser University",
+            "city": "Surrey ",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth5985",
@@ -529,8 +929,18 @@
         "familyName": "Stolterman",
         "email": "estolter@indiana.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Indiana University Bloomington",
+            "city": "Bloomington",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth10385",
@@ -542,8 +952,18 @@
         "familyName": "Nacke",
         "email": "Lennart.Nacke@acm.org",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Games and Media Entertainment Research Laboratory",
+            "institution": "University of Ontario Institute of Technology",
+            "city": "Oshawa",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth18112",
@@ -555,8 +975,18 @@
         "familyName": "Mirza-Babaei",
         "email": "pejman.m@acm.org",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Games and Media Entertainment Research Laboratory",
+            "institution": "University of Ontario Institute of Technology",
+            "city": "Oshawa",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth3154",
@@ -568,8 +998,18 @@
         "familyName": "Seif El-Nasr",
         "email": "magy@northeastern.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Northeastern University",
+            "city": "Boston",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth3427",
@@ -581,8 +1021,18 @@
         "familyName": "Desurvire",
         "email": "Heather3d@gmail.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "User Behavioristics Research, Inc.",
+            "city": "Los Angeles",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth40753",
@@ -594,8 +1044,18 @@
         "familyName": "Bernhaupt",
         "email": "Regina.Bernhaupt@irit.fr",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "IRIT, University Paul Sabatier, Toulouse III",
+            "city": "Toulouse",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth8436",
@@ -607,8 +1067,18 @@
         "familyName": "Clawson",
         "email": "jamer@cc.gatech.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth1374",
@@ -620,8 +1090,18 @@
         "familyName": "Brewster",
         "email": "stephen.brewster@glasgow.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "School of Computing Science",
+            "institution": "University of Glasgow",
+            "city": "Glasgow",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth9541",
@@ -633,8 +1113,18 @@
         "familyName": "Dunlop",
         "email": "mark.dunlop@strath.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "Computer and Information Sciences",
+            "institution": "University of Strathclyde",
+            "city": "Glasgow",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth3496",
@@ -646,8 +1136,18 @@
         "familyName": "Kristensson",
         "email": "kristensson@gmail.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "School of Computer Science",
+            "institution": "University of St Andrews",
+            "city": "St Andrews",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth1262",
@@ -659,8 +1159,18 @@
         "familyName": "Isokoski",
         "email": "poika.isokoski@uta.fi",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "University of Tampere",
+            "city": "Tampere",
+            "country": "Finland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth2881",
@@ -672,8 +1182,18 @@
         "familyName": "Oulasvirta",
         "email": "antti.oulasvirta@mpii.de",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Max Planck Institute for Informatics",
+            "city": "Saarbruecken",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth9760",
@@ -685,8 +1205,18 @@
         "familyName": "Vertanen",
         "email": "kvertanen@mtech.edu",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Montana Tech",
+            "city": "Butte",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth19192",
@@ -698,8 +1228,18 @@
         "familyName": "Waller",
         "email": "awaller@dundee.ac.uk",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "School of Computing",
+            "institution": "University of Dundee",
+            "city": "Dundee",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth13615",
@@ -711,8 +1251,18 @@
         "familyName": "Rohn",
         "email": "janicerohn@yahoo.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "Velocify",
+            "city": "El Segundo",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     },
     {
         "authorId": "auth14979",
@@ -724,7 +1274,17 @@
         "familyName": "Thompson",
         "email": "carolafthompson@gmail.com",
         "role": "",
-        "primary": {},
-        "secondary": {}
+        "primary": {
+            "dept": "",
+            "institution": "zSpace",
+            "city": "Sunnyvale",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     }
 ]

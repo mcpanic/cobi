@@ -421,18 +421,24 @@ function createAuthors(sub, venue){
 	    "email" : ((venue == "TOCHI") ? sub["Email " + i] : sub["Valid email address " + i]),
 	    "role" : "",
 	    "primary" : { 
-		"dept" : sub["Primary Affiliation " + i + " - Department/School/Lab"],
-		"institution" : sub["Primary Affiliation " + i + " - Institution"],
-		    "city" : sub["Primary Affiliation " + i + " - City"],
-		"country" : sub["Primary Affiliation " + i + " - Country"] 
+		"dept" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Primary Affiliation (no labs or depts names in this field) " + i + " - Department/School/Lab"] 
+			  : sub["Primary Affiliation " + i + " - Department/School/Lab"]),
+		"institution" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Primary Affiliation (no labs or depts names in this field) " + i + " - Institution"] 
+				 : sub["Primary Affiliation " + i + " - Institution"]),
+		"city" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Primary Affiliation (no labs or depts names in this field) " + i + " - City"] 
+				 : sub["Primary Affiliation " + i + " - City"]),
+		"country" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Primary Affiliation (no labs or depts names in this field) " + i + " - Country"] 
+				 : sub["Primary Affiliation " + i + " - Country"]),
 	    },
 	    "secondary" :  { 
-		
-		"dept" : sub["Secondary Affiliation (optional) " + i + " - Department/School/Lab"],
-		
-		"institution" : sub["Secondary Affiliation (optional) " + i + " - Institution"],
-		"city" : sub["Secondary Affiliation (optional) " + i + " - City"],
-		"country" : sub["Secondary Affiliation (optional) " + i + " - Country"]
+		"dept" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Secondary Affiliation (optional) (no labs or depts names in this field) " + i + " - Department/School/Lab"] 
+			  : sub["Secondary Affiliation (optional) " + i + " - Department/School/Lab"]),
+		"institution" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Secondary Affiliation (optional) (no labs or depts names in this field) " + i + " - Institution"] 
+				 : sub["Secondary Affiliation (optional) " + i + " - Institution"]),
+		"city" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Secondary Affiliation (optional) (no labs or depts names in this field) " + i + " - City"] 
+				 : sub["Secondary Affiliation (optional) " + i + " - City"]),
+		"country" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Secondary Affiliation (optional) (no labs or depts names in this field) " + i + " - Country"] 
+			     : sub["Secondary Affiliation (optional) " + i + " - Country"])
 	    }
 	}
 	authors.push(author);
@@ -461,17 +467,37 @@ function createEntityAuthors(sub, venue){
 	    "familyName" : ((venue == "TOCHI") ? sub["Family name " + i] : sub["Author last/family name " + i]),
 	    "email" : ((venue == "TOCHI") ? sub["Email " + i] : sub["Valid email address " + i]),
 	    "primary" : { 
-		"dept" : sub["Primary Affiliation " + i + " - Department/School/Lab"],
-		"institution" : sub["Primary Affiliation " + i + " - Institution"],
-		"city" : sub["Primary Affiliation " + i + " - City"],
-		"country" : sub["Primary Affiliation " + i + " - Country"] 
+		"dept" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Primary Affiliation (no labs or depts names in this field) " + i + " - Department/School/Lab"] 
+			  : sub["Primary Affiliation " + i + " - Department/School/Lab"]),
+		"institution" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Primary Affiliation (no labs or depts names in this field) " + i + " - Institution"] 
+				 : sub["Primary Affiliation " + i + " - Institution"]),
+		"city" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Primary Affiliation (no labs or depts names in this field) " + i + " - City"] 
+			  : sub["Primary Affiliation " + i + " - City"]),
+		"country" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Primary Affiliation (no labs or depts names in this field) " + i + " - Country"] 
+				 : sub["Primary Affiliation " + i + " - Country"]),
 	    },
-	    "secondary" :  { 		
-		"dept" : sub["Secondary Affiliation (optional) " + i + " - Department/School/Lab"],
-		"institution" : sub["Secondary Affiliation (optional) " + i + " - Institution"],
-		"city" : sub["Secondary Affiliation (optional) " + i + " - City"],
-		"country" : sub["Secondary Affiliation (optional) " + i + " - Country"]
+	    "secondary" :  { 
+		"dept" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Secondary Affiliation (optional) (no labs or depts names in this field) " + i + " - Department/School/Lab"] 
+			  : sub["Secondary Affiliation (optional) " + i + " - Department/School/Lab"]),
+		"institution" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Secondary Affiliation (optional) (no labs or depts names in this field) " + i + " - Institution"] 
+				 : sub["Secondary Affiliation (optional) " + i + " - Institution"]),
+		"city" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Secondary Affiliation (optional) (no labs or depts names in this field) " + i + " - City"] 
+			  : sub["Secondary Affiliation (optional) " + i + " - City"]),
+		"country" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course') ? sub["Secondary Affiliation (optional) (no labs or depts names in this field) " + i + " - Country"] 
+			     : sub["Secondary Affiliation (optional) " + i + " - Country"])
 	    }
+	    // "primary" : { 
+	    // 	"dept" : sub["Primary Affiliation " + i + " - Department/School/Lab"],
+	    // 	"institution" : sub["Primary Affiliation " + i + " - Institution"],
+	    // 	"city" : sub["Primary Affiliation " + i + " - City"],
+	    // 	"country" : sub["Primary Affiliation " + i + " - Country"] 
+	    // },
+	    // "secondary" :  { 		
+	    // 	"dept" : sub["Secondary Affiliation (optional) " + i + " - Department/School/Lab"],
+	    // 	"institution" : sub["Secondary Affiliation (optional) " + i + " - Institution"],
+	    // 	"city" : sub["Secondary Affiliation (optional) " + i + " - City"],
+	    // 	"country" : sub["Secondary Affiliation (optional) " + i + " - Country"]
+	    // }
 	}
 	authors.push(author);
     }
