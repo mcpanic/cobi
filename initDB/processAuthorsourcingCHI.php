@@ -38,12 +38,13 @@ function startsWith($haystack, $needle)
 }
 
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
-
 $contents = file_get_contents($argv[1]);
+
 
 $query = "select authorId, id, givenName, middleInitial, familyName from authors";
 $authorTable = mysqli_query($mysqli, $query);
 echo mysqli_error($mysqli);
+
 while ($row = $authorTable->fetch_assoc()) {
   $paperAuthor[$row['id']][$row['authorId']] = $row['givenName'] . " " . $row['familyName'];
 }
@@ -57,13 +58,14 @@ foreach ($lines as $lin){
   if(!startsWith($lin, '2014')){
     continue;
   }
-
+  
   $pattern = '/(,)(?=(?:[^"]|"[^"]*")*$)/';
   $replacement = ';';
   $lin = preg_replace($pattern, $replacement, $lin);
   $line = explode(";", $lin);
   $name = $line[3];
   $name = trim($name, '\"');
+  $name = str_replace('\n', ' ', $name);
   if(strpos($name, ',')){
     $name = explode(",", $name);
     $name = $name[0];
@@ -72,10 +74,13 @@ foreach ($lines as $lin){
   $bestAuthorMatch = checkAuthor($name, $paperId, $paperAuthor);
   $matchedAuthorId = "";
   $matchedAuthorName = "";
+
   if($bestAuthorMatch['score'] <= 10){
     $matchedAuthorId = mysqli_real_escape_string($mysqli, $bestAuthorMatch['id']);
     $matchedAuthorName = mysqli_real_escape_string($mysqli, $bestAuthorMatch['name']);
   }
+  //  echo $bestAuthorMatch['name'] . "==>" . $name . "\n";
+
   $enteredName = mysqli_real_escape_string($mysqli, $line[3]);
   $paperId = mysqli_real_escape_string($mysqli, $line[4]);
   $options = mysqli_real_escape_string($mysqli, trim($line[6], '"'));
@@ -95,7 +100,7 @@ foreach ($lines as $lin){
   }
   
   $query = "insert into authorsourcing (authorId, name, enteredName, id, options, great, ok, notsure, notok, relevant, interested, options1120, more1, more2, special13, special46) values ('$matchedAuthorId', '$matchedAuthorName', '$enteredName', '$paperId', '$options', '$great', '$ok', '$notsure', '$notok', '$relevant', '$interested', '$options1120', '$more1', '$more2', '$special13', '$special46')";
+  
   mysqli_query($mysqli, $query);
   echo mysqli_error($mysqli);
 }
-  

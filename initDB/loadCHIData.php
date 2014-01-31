@@ -123,6 +123,9 @@ function createEntityTable($mysqli) {
 		}
                 $programNumber       = "";
                 $session             = mysqli_real_escape_string($mysqli, $sub['session']);
+		if($sub['session'] == ""){
+		  $session = "null";
+		}
 		$title               = mysqli_real_escape_string($mysqli, $sub['title']               );
 		$type                = mysqli_real_escape_string($mysqli, $sub['venue']              );
 	        $subtype             = "";
@@ -158,7 +161,7 @@ function createSessionTable($mysqli) {
 	   $venue = mysqli_real_escape_string($mysqli, $session["venue"]);
 	   $scheduled = mysqli_real_escape_string($mysqli, $session["scheduled"]);
 
-   	   $squery = "INSERT INTO session (id, date, time, chairAffiliations, chairs, coreCommunities, featuredCommunities, personas, hasAward, hasHonorableMention, notes, room, submissions, title, venue, scheduled) VALUES ('$id', '$date', 'stime', '$chairAffiliations', '$chairs', '$coreCommunities', '$featuredCommunities', '$personas', '$hasAward', '$hasHonorableMention', '$notes', '$room', '$submissionKeys', '$title', '$venue', '$scheduled')";
+   	   $squery = "INSERT INTO session (id, date, time, chairAffiliations, chairs, coreCommunities, featuredCommunities, personas, hasAward, hasHonorableMention, notes, room, submissions, title, venue, scheduled) VALUES ('$id', '$date', '$time', '$chairAffiliations', '$chairs', '$coreCommunities', '$featuredCommunities', '$personas', '$hasAward', '$hasHonorableMention', '$notes', '$room', '$submissionKeys', '$title', '$venue', '$scheduled')";
 	   mysqli_query($mysqli, $squery);
 	   echo  mysqli_error($mysqli);
 	 }	 
