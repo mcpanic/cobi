@@ -75,6 +75,7 @@
     var optionsList = [
     {"id": "conflicts", "label": "Conflict"}, 
     {"id": "preferences", "label": "Preference"}, 
+    {"id": "c_and_p", "label": "Conf + Pref"}, 
     {"id": "chair-conflict", "label": "Session Chair Conflict"}, 
     {"id": "chair-name", "label": "Session Chair Names"}, 
     {"id": "session-type", "label": "Session Type"}, 
@@ -82,8 +83,8 @@
     {"id": "num-papers", "label": "Number of Papers"}, 
     {"id": "duration", "label": "Duration"}, 
     {"id": "awards", "label": "Best Paper"}, 
-    {"id": "honorable-mentions", "label": "Honorable Mention"}
-    /*{"id": "persona", "label": "Tracks"} */
+    {"id": "honorable-mentions", "label": "Honorable Mention"},
+    {"id": "persona", "label": "Persona"} 
     ];
 
 var constraints_list = [

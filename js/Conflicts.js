@@ -7,6 +7,7 @@ var Conflicts = function() {
     var preferencesList = [];
     var constraintsSeverityList = ["high", "medium"];  // excluding "good"
     var preferencesSeverityList = ["good"]; 
+    var confPrefSeverityList = ["high", "medium", "good"]; 
     var chairSeverityList = ["high", "medium", "good"]; 
 	// Initialize the sidebar with a default view 
 	function initialize(){
@@ -103,11 +104,13 @@ var Conflicts = function() {
             list = Conflicts.preferencesSeverityList;
           else if(mode == "chair")
             list = Conflicts.chairSeverityList;
-
+          else if (mode == "c+p")
+            list = Conflicts.confPrefSeverityList;
+        console.log(list);
           element.html("");
           $.each(list, function(index, severity){
             var filteredArray = []; 
-            if (mode == "conflict" || mode == "preference")
+            if (mode == "conflict" || mode == "preference" || mode == "c+p")
                 filteredArray = conflicts.filter(function(x){return getSeverityByType(x.type)==severity});
             else if (mode == "chair")
                 filteredArray = conflicts.filter(function(x){return (getSeverityByType(x.type)==severity) && (x.type in CCOps.chairConstraints) });
@@ -118,8 +121,11 @@ var Conflicts = function() {
                 for (i=0; i<filteredArray.length; i++) {
                      html += "<span class='conflict-display'></span>";
                 }
-                var $palette = $(html).addClass("cell-conflict-" + severity)
+                var $palette = $(html).addClass("cell-conflict-" + severity);
 
+                // line change for the c+p mode
+                if (mode == "c+p" && severity == "good")
+                    element.append("<br/>");
                 element.append(filteredArray.length).append($palette);
                 var palette_title = "";
                 if (severity == "good")
@@ -907,6 +913,8 @@ var Conflicts = function() {
                     displayConflicts(conflictsBySession[id], $(this).find(".display"), mode);
                 else if (isSlotOn && mode == "chair")
                     displayConflicts(conflictsBySession[id], $(this).find(".display"), mode);
+                else if (isSlotOn && mode == "c+p")
+                    displayConflicts(conflictsBySession[id], $(this).find(".display"), mode);
                 // var conflicts_array = conflictsBySession[id].map(function(co) {return co.type});          
                 //     // for each constraint, count and add a modal dialog with descriptions
                 //     $.each(Conflicts.constraintsList, function(index, item){
@@ -993,6 +1001,7 @@ var Conflicts = function() {
         preferencesList: preferencesList,
         constraintsSeverityList: constraintsSeverityList,
         preferencesSeverityList: preferencesSeverityList,   
+        confPrefSeverityList: confPrefSeverityList,
         chairSeverityList: chairSeverityList,
         clearConflictDisplay: clearConflictDisplay,
         // displayConflicts: displayConflicts,

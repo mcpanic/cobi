@@ -448,7 +448,15 @@ var Sidebar = function() {
                          });
                     } else
                          Conflicts.updateConflicts(true, true, "preference");
-               break;   
+               break;  
+               case "c_and_p":
+                    if (MoveMode.isOn){
+                         $(".slot:not('.unavailable')").each(function(index, item){
+                              $(item).find(".display").html($(item).find(".conflicts").html());
+                         });
+                    } else
+                         Conflicts.updateConflicts(true, true, "c+p");
+               break;  
                case "chair-conflict":
                     if (MoveMode.isOn){
                          $(".slot:not('.unavailable')").each(function(index, item){
@@ -542,7 +550,8 @@ var Sidebar = function() {
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);
                          var session = allSessions[id];
-                         $(item).find(".display").html(keys(session.personas).map(function(x) {return personaHash[x]}));
+                         // $(item).find(".display").html(keys(session.personas).map(function(x) {return personaHash[x]}));
+                         $(item).find(".display").html(session.personas);
                     });
                break;
                default:
