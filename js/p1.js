@@ -1178,7 +1178,7 @@
           $(header).addClass("header-row").append(firstcell); //.append(secondcell);
           for(var i = 0; i < orderedRooms.length; i++){
                var cell = document.createElement('td');
-               $(cell).addClass("cell header-cell").append("<div>" + orderedRooms[i] + "</div>");
+               $(cell).addClass("cell header-cell").append("<div>" + orderedRooms[i] + "<br/>(" + roomCapacity[orderedRooms[i]] + ")</div>");
                $(header).append(cell);
           }
           $("#program").append(header);       

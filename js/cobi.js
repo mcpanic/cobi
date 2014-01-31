@@ -17,27 +17,46 @@ var userData = new userInfo(null, "Anon", null, "rookie");
 var allUsers = {};
 var transactions = [];
 var localTransactions = [];
-var roomCapacity = [ // TODO update
-    {   "Blue": "Amphitheater, 862p"},
-    {   "Bordeaux": "Amphitheater, 650p"},
-    {   "252B": "Theater, 220p"},
-    {   "352AB": "Theater, 380p"},
-    {   "Havane": "Amphitheater, 373p"},
-    {   "241": "Theater, 220p"},
-    {   "342A": "Theater, 220p"},
-    {   "251": "Theater, 220p"},
-    {   "351": "Theater, 220p"},
-    {   "242AB": "Theater, 280p"},
-    {   "242A": "Theater, ??p"},
-    {   "242B": "Theater, ??p"},
-    {   "243": "Classroom, 60p"},
-    {   "253": "Classroom, 60p"},
-    {   "343": "Classroom, 60p"},
-    {   "252A": "Theater, 120p"},
-    {   "361": "Conference, 24p"},
-    {   "362/363": "Conference, 32p"},
-    {   "221/221M": "Conference, 64p"}
-];
+var roomCapacity = {
+	"718A": "650",
+	"718B": "650",
+	"701A": "420",
+	"701B": "420",
+	"801A": "350",
+	"801B": "350",
+	"803AB": "320",
+	"716A": "220",
+	"716B": "220",
+	"714AB": "450",
+	"717AB": "325",
+	"802AB": "150",
+	"715A": "130",
+	"715B": "130",
+	"713AB": "325",
+	"707": "120",
+	"709": "120",
+	"711": "120",
+	"Plenary": ""
+    // {   "Blue": "Amphitheater, 862p"},
+    // {   "Bordeaux": "Amphitheater, 650p"},
+    // {   "252B": "Theater, 220p"},
+    // {   "352AB": "Theater, 380p"},
+    // {   "Havane": "Amphitheater, 373p"},
+    // {   "241": "Theater, 220p"},
+    // {   "342A": "Theater, 220p"},
+    // {   "251": "Theater, 220p"},
+    // {   "351": "Theater, 220p"},
+    // {   "242AB": "Theater, 280p"},
+    // {   "242A": "Theater, ??p"},
+    // {   "242B": "Theater, ??p"},
+    // {   "243": "Classroom, 60p"},
+    // {   "253": "Classroom, 60p"},
+    // {   "343": "Classroom, 60p"},
+    // {   "252A": "Theater, 120p"},
+    // {   "361": "Conference, 24p"},
+    // {   "362/363": "Conference, 32p"},
+    // {   "221/221M": "Conference, 64p"}
+};
 
 var desiredRoomOrder = ["718A","718B","701A","701B","801A","801B","803AB","716A","716B","714AB","717AB","802AB","715A","715B","713AB","707","709","711","Plenary"];
 
