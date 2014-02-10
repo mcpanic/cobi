@@ -1,4 +1,52 @@
 // ignore anything with XX
+var altchiRooms = ["717AB"];
+var altchis = [
+    "Monday,11:00-12:20,alt1",
+    "Monday,14:00-15:20,alt2",
+    "Tuesday,9:00-10:20,alt3",
+    "Tuesday,11:00-12:20,alt4",
+    "Wednesday,9:00-10:20,alt5",
+    "Thursday,9:00-10:20,alt6"
+];
+
+var altchiAssigns = {
+    "alt1":{"title":"Understanding Interactions",
+	    "submissions":"alt121,alt105,alt155,alt163"},
+    "alt2":{"title":"Ways of Knowing in HCI",
+	    "submissions":"alt104,alt112,alt174,alt188"},
+    "alt3":{"title":"Ways of Creating in HCI",
+	    "submissions":"alt101,alt133,alt145,alt170"},
+    "alt4":{"title":"Limits and Futures",
+	    "submissions":"alt107,alt119,alt172,alt168"},
+    "alt5":{"title":"Intimate Interfaces",
+	    "submissions":"alt153,alt156,alt179,alt146"},
+    "alt6":{"title":"Navel Gazing",
+	    "submissions":"alt109,alt143,alt191,alt116"}
+};
+
+var panelRooms = ["716A"];
+var panels = [
+    "Monday,11:00-12:20,panel1",
+    "Monday,14:00-15:20,panel2",
+    "Monday,16:00-17:20,panel3",
+    "Tuesday,14:00-15:20,panel8",
+    "Wednesday,9:00-10:20,panel4",
+    "Wednesday,11:00-12:20,panel5",
+    "Wednesday,14:00-15:20,panel6",
+    "Wednesday,16:00-17:20,panel7",
+];
+
+var panelAssigns = {
+    "panel1": {"submissions":"pan102"},
+    "panel2": {"submissions":"pan103"},
+    "panel3": {"submissions":"pan106"},
+    "panel4": {"submissions":"pan107"},
+    "panel5": {"submissions":"pan108"},
+    "panel6": {"submissions":"pan110"},
+    "panel7": {"submissions":"pan114"},
+    "panel8": {"submissions":"pan118"},
+}
+
 var courseRooms = ["802AB", "713AB", "709", "711"];
 var courses = [
 	       "Monday,11:00-12:20,XXX,crs156,XXX,crs124",
@@ -65,6 +113,12 @@ var papers = [
 
 
 module.exports = {
+    altchiRooms : altchiRooms,
+    altchis : altchis,
+    altchiAssigns: altchiAssigns,
+    panelRooms : panelRooms,
+    panels: panels,
+    panelAssigns: panelAssigns,
     courseRooms : courseRooms,
     courses : courses,
     sigRooms : sigRooms,
