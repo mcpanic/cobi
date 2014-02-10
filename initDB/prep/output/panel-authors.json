@@ -1,0 +1,945 @@
+[
+    {
+        "authorId": "auth31489",
+        "type": "author",
+        "id": "pan102",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Karen",
+        "familyName": "Holtzblatt",
+        "email": "karen@incontextdesign.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "InContext Design",
+            "city": "Concord",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14090",
+        "type": "author",
+        "id": "pan102",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Janaki",
+        "familyName": "Kumar",
+        "email": "janaki.kumar@sap.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "SAP Labs",
+            "city": "Palo Alto",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth16185",
+        "type": "author",
+        "id": "pan102",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "David",
+        "familyName": "Rondeau",
+        "email": "david.rondeau@incontextdesign.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "InContext Design",
+            "city": "Concord",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1917",
+        "type": "author",
+        "id": "pan102",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "John",
+        "familyName": "Zimmerman",
+        "email": "johnz@cs.cmu.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Carnegie Mellon University",
+            "city": "Pittsburgh",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1960",
+        "type": "author",
+        "id": "pan103",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Helena",
+        "familyName": "Mentis",
+        "email": "mentis@umbc.edu",
+        "role": "",
+        "primary": {
+            "dept": "Department of Information Systems",
+            "institution": "University of Maryland, Baltimore County",
+            "city": "Baltimore",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth3543",
+        "type": "author",
+        "id": "pan103",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Kristina",
+        "familyName": "Höök",
+        "email": "kia@sics.se",
+        "role": "",
+        "primary": {
+            "dept": "Mobile Life @ KTH",
+            "institution": "KTH - Royal Institute of Technology",
+            "city": "Stockholm",
+            "country": "Sweden"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2060",
+        "type": "author",
+        "id": "pan103",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Florian",
+        "familyName": "Mueller",
+        "email": "floyd@floydmueller.com",
+        "role": "",
+        "primary": {
+            "dept": "Exertion Games Lab",
+            "institution": "RMIT University",
+            "city": "Melbourne",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1461",
+        "type": "author",
+        "id": "pan103",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Katherine",
+        "familyName": "Isbister",
+        "email": "isbister@poly.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Polytechnic Institute of New York University",
+            "city": "Brooklyn",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth22640",
+        "type": "author",
+        "id": "pan103",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "George Poonkhin",
+        "familyName": "Khut",
+        "email": "georgekhut@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Interaction Design and Human Practice Lab, University of Technology Sydney",
+            "city": "Sydney",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth12108",
+        "type": "author",
+        "id": "pan103",
+        "venue": "panel",
+        "rank": 6,
+        "givenName": "Toni",
+        "familyName": "Robertson",
+        "email": "toni@it.uts.edu.au",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Technology, Sydney",
+            "city": "Sydney",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1924",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Juan Pablo",
+        "familyName": "Hourcade",
+        "email": "juanpablo-hourcade@uiowa.edu",
+        "role": "",
+        "primary": {
+            "dept": "Department of Computer Science",
+            "institution": "University of Iowa",
+            "city": "Iowa City",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41118",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Ann",
+        "familyName": "Cavoukian",
+        "email": "info@ipc.on.ca",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Office of the Information and Privacy Commissioner of Ontario",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41119",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Ronald",
+        "familyName": "Deibert",
+        "email": "r.deibert@utoronto.ca",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Toronto",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1992",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Lorrie",
+        "familyName": "Cranor",
+        "email": "lorrie@cs.cmu.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Carnegie Mellon University",
+            "city": "Pittsburgh",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41120",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Ian",
+        "familyName": "Goldberg",
+        "email": "iang@cs.uwaterloo.ca",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Waterloo",
+            "city": "Waterloo",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth3375",
+        "type": "author",
+        "id": "pan107",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Matthew",
+        "familyName": "Kam",
+        "email": "me@matthewkam.org",
+        "role": "",
+        "primary": {
+            "dept": "International Development Program",
+            "institution": "American Institutes for Research",
+            "city": "Washington",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth12942",
+        "type": "author",
+        "id": "pan107",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Anupam",
+        "familyName": "Jain",
+        "email": "anupamjain@in.ibm.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM Research Lab",
+            "city": "New Delhi",
+            "country": "India"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14513",
+        "type": "author",
+        "id": "pan107",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Michael",
+        "familyName": "Best",
+        "email": "mikeb@cc.gatech.edu",
+        "role": "",
+        "primary": {
+            "dept": "Sam Nunn School of International Affairs and School of Interactive Computing",
+            "institution": "Georgia Tech",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7739",
+        "type": "author",
+        "id": "pan107",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Elizabeth",
+        "familyName": "Gerber",
+        "email": "egerber@northwestern.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Northwestern University",
+            "city": "Evanston",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41254",
+        "type": "author",
+        "id": "pan107",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Rowena",
+        "familyName": "Luk",
+        "email": "rluk@dimagi.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Dimagi Inc.",
+            "city": "Boston",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7080",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Jeffrey",
+        "familyName": "Bardzell",
+        "email": "jbardzel@indiana.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Indiana University Bloomington",
+            "city": "Bloomington",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7081",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Shaowen",
+        "familyName": "Bardzell",
+        "email": "selu@indiana.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Indiana University Bloomington",
+            "city": "Bloomington",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9429",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Silvia",
+        "familyName": "Lindtner",
+        "email": "silvia.lindtner@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9749",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Daniela",
+        "familyName": "Rosner",
+        "email": "dkrosner@uw.edu",
+        "role": "",
+        "primary": {
+            "dept": "Human Centered Design & Engineering",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6095",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Morgan",
+        "familyName": "Ames",
+        "email": "morganya@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Intel Science and Technology Center",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14505",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 6,
+        "givenName": "David",
+        "familyName": "Mellis",
+        "email": "mellis@media.mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Massachusetts Institute of Technology",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth31163",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 7,
+        "givenName": "Matt",
+        "familyName": "Ratto",
+        "email": "matt.ratto@utoronto.ca",
+        "role": "",
+        "primary": {
+            "dept": "Faculty of Information",
+            "institution": "University of Toronto",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth17138",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 8,
+        "givenName": "Joshua",
+        "familyName": "Tanenbaum",
+        "email": "joshuat@sfu.ca",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Simon Fraser University",
+            "city": "Surrey",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7739",
+        "type": "author",
+        "id": "pan110",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Elizabeth",
+        "familyName": "Gerber",
+        "email": "egerber@northwestern.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Northwestern University",
+            "city": "Evanston",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1047",
+        "type": "author",
+        "id": "pan110",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Michael",
+        "familyName": "Muller",
+        "email": "michael_muller@us.ibm.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM T.J. Watson Research",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6817",
+        "type": "author",
+        "id": "pan110",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Rick",
+        "familyName": "Wash",
+        "email": "wash@msu.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Michigan State University",
+            "city": "East Lansing",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9206",
+        "type": "author",
+        "id": "pan114",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Svetlena",
+        "familyName": "Taneva",
+        "email": "svetlena@humanfactors.ca",
+        "role": "",
+        "primary": {
+            "dept": "Healthcare Human Factors",
+            "institution": "University Health Network",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41580",
+        "type": "author",
+        "id": "pan114",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Waxberg",
+        "familyName": "Sara",
+        "email": "sara.waxberg@philips.com",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "Philips Healthcare",
+            "city": "Andover",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41581",
+        "type": "author",
+        "id": "pan114",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Goss",
+        "familyName": "Julian",
+        "email": "jgoss@faculty.ocadu.ca",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "Ontario College of Arts and Design ",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41585",
+        "type": "author",
+        "id": "pan114",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Rossos",
+        "familyName": "Peter",
+        "email": "Peter.Rossos@uhn.ca",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "University Health Network",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41586",
+        "type": "author",
+        "id": "pan114",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Nicholas",
+        "familyName": "Emily",
+        "email": "emily.nicholas@patientsassociation.ca",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "Patients Canada",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41582",
+        "type": "author",
+        "id": "pan114",
+        "venue": "panel",
+        "rank": 6,
+        "givenName": "Cafazzo",
+        "familyName": "Joseph",
+        "email": "joe@humanfactors.ca",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "Healthcare Human Factors",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4587",
+        "type": "author",
+        "id": "pan118",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Michelle",
+        "familyName": "Zhou",
+        "email": "mzhou@us.ibm.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM Research - Almaden",
+            "city": "San Jose",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2720",
+        "type": "author",
+        "id": "pan118",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Jeffrey",
+        "familyName": "Nichols",
+        "email": "jwnichols@us.ibm.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM Research",
+            "city": "San Josè",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6176",
+        "type": "author",
+        "id": "pan118",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Jennifer",
+        "familyName": "Golbeck",
+        "email": "golbeck@cs.umd.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth18083",
+        "type": "author",
+        "id": "pan118",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "James",
+        "familyName": "Pennebaker",
+        "email": "pennebaker@mail.utexas.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "The University of Texas at Austin",
+            "city": "Austin",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    }
+]
