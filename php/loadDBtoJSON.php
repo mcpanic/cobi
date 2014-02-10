@@ -80,9 +80,13 @@ while ($row = $entityTable->fetch_assoc()) {
 	}
       }
       
+      $email = "";
+      if(array_key_exists('email', $author)){
+	$email = $author['email'];
+      }
       $authorData = array(
 			  "affiliations" => array(array("country"=> "", "name" => $inst)),
-			  "email" => $author['email'],
+			  "email" => $email,
 			  "firstName" => $author['givenName'],
 			  "lastName" => $author['familyName'],
 			  "middleName" => "",
