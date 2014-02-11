@@ -93,6 +93,7 @@ var CCOps = function(){
     var authorsourcingData = null;
     var authorsourcingAuthor = null;
     var authorsourcingInterestedCounts = null;
+    var conferInterestedCounts = null;
     var scoreThreshold = 10;
     var goodThreshold = 9;
     var fitMat = {}; // paper to paper fit
@@ -836,6 +837,19 @@ var CCOps = function(){
 		}
     }
 
+     function generateConferCounts(){
+        CCOps.conferInterestedCounts = {};
+        var i, j, likes;
+        for (i=0; i<conferData.data.length; i++){
+            likes = conferData.data[i].likes;
+            // console.log(likes);
+            for (j=0; j<likes.length; j++){
+                if (!(likes[j] in CCOps.conferInterestedCounts)) 
+                    CCOps.conferInterestedCounts[likes[j]] = 0;
+                CCOps.conferInterestedCounts[likes[j]] += 1;
+            }
+        }
+     }
 
     function initialize(){
 	loadAuthorsourcingData();
@@ -844,6 +858,7 @@ var CCOps = function(){
 	generateAuthorConstraints();
 	generateChairConstraints();
 	generateAuthorsourcingCounts();
+	generateConferCounts();
     }
 
     // session level conflict
@@ -3590,6 +3605,7 @@ var CCOps = function(){
 	    authorsourcingData: authorsourcingData,
 	    authorsourcingAuthor: authorsourcingAuthor,
 	    authorsourcingInterestedCounts: authorsourcingInterestedCounts,
+	    conferInterestedCounts: conferInterestedCounts,
 	    generateAuthorsourcingConstraints: 	    generateAuthorsourcingConstraints,
 	    generatePersonaConstraints:	    generatePersonaConstraints,
 	    generateAuthorConstraints: generateAuthorConstraints,

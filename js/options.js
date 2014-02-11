@@ -86,6 +86,7 @@
         {"id": "honorable-mentions", "label": "Honorable Mention"},
         {"id": "persona", "label": "Persona"},
         {"id": "author-interests", "label": "Authorsourcing Interests"}, 
+        {"id": "confer-interests", "label": "Confer Interests"}
     ];
 
 var constraints_list = [
