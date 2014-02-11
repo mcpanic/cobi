@@ -1787,10 +1787,10 @@ sessions={
         "time": "14:00-15:20",
         "submissions": [
             "pn1097",
-            "pn1399",
-            "pn2090",
             "pn2227",
-            "pn757"
+            "pn757",
+            "pn1399",
+            "pn2090"
         ],
         "personas": "Security",
         "venue": "paper",
@@ -2806,10 +2806,10 @@ sessions={
         "room": "714AB",
         "time": "16:00-17:20",
         "submissions": [
-            "pn2031",
             "pn443",
             "to102",
             "pn1820",
+            "pn2031",
             "pn1099"
         ],
         "personas": "Art",
@@ -3420,10 +3420,10 @@ sessions={
         "time": "11:00-12:20",
         "submissions": [
             "pn2420",
-            "pn1796",
-            "pn2203",
             "pn288",
-            "pn1110"
+            "pn1110",
+            "pn1796",
+            "pn2203"
         ],
         "personas": "Transportation",
         "venue": "paper",
@@ -3598,10 +3598,10 @@ sessions={
         "room": "701A",
         "time": "9:00-10:20",
         "submissions": [
-            "pn1958",
             "pn1199",
             "pn532",
             "pn1333",
+            "pn1958",
             "pn883"
         ],
         "personas": "Social",
@@ -3863,8 +3863,8 @@ sessions={
         "submissions": [
             "pn785",
             "pn2399",
-            "pn2094",
             "pn897",
+            "pn2094",
             "pn2488"
         ],
         "personas": "People",
@@ -3913,9 +3913,9 @@ sessions={
         "time": "16:00-17:20",
         "submissions": [
             "pn1569",
-            "pn1704",
             "pn395",
             "pn1632",
+            "pn1704",
             "pn250"
         ],
         "personas": "Art",
@@ -3986,9 +3986,9 @@ sessions={
         "time": "14:00-15:20",
         "submissions": [
             "pn1343",
-            "pn1236",
             "pn1255",
             "pn1490",
+            "pn1236",
             "pn691"
         ],
         "personas": "Social",
@@ -4199,9 +4199,9 @@ sessions={
         "time": "11:00-12:20",
         "submissions": [
             "pn750",
-            "pn626",
             "pn1982",
             "pn2105",
+            "pn626",
             "pn272"
         ],
         "personas": "Methods and Models",
@@ -4251,10 +4251,10 @@ sessions={
         "time": "11:00-12:20",
         "submissions": [
             "pn586",
-            "pn1227",
             "pn1252",
-            "pn2358",
-            "pn1722"
+            "pn1722",
+            "pn1227",
+            "pn2358"
         ],
         "personas": "",
         "venue": "paper",
@@ -4297,9 +4297,9 @@ sessions={
         "submissions": [
             "pn1579",
             "pn547",
+            "pn1275",
             "pn541",
-            "pn1452",
-            "pn1275"
+            "pn1452"
         ],
         "personas": "Art",
         "venue": "paper",
@@ -4647,10 +4647,10 @@ sessions={
         "time": "11:00-12:20",
         "submissions": [
             "pn1976",
-            "pn1811",
             "pn191",
-            "pn1724",
-            "pn2005"
+            "pn2005",
+            "pn1811",
+            "pn1724"
         ],
         "personas": "Security",
         "venue": "paper",
@@ -4854,10 +4854,10 @@ sessions={
         "time": "14:00-15:20",
         "submissions": [
             "pn1745",
-            "pn2406",
             "pn950",
-            "pn431",
-            "pn1354"
+            "pn1354",
+            "pn2406",
+            "pn431"
         ],
         "personas": "HCI4D",
         "venue": "paper",
@@ -4900,9 +4900,9 @@ sessions={
         "time": "9:00-10:20",
         "submissions": [
             "pn2380",
+            "pn2417",
             "pn1525",
             "pn1763",
-            "pn2417",
             "pn255",
             "pn1242"
         ],
@@ -5265,10 +5265,10 @@ sessions={
         "time": "11:00-12:20",
         "submissions": [
             "pn796",
-            "pn1558",
-            "pn692",
             "pn2268",
-            "pn1872"
+            "pn1872",
+            "pn1558",
+            "pn692"
         ],
         "personas": "",
         "venue": "paper",

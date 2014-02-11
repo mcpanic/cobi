@@ -13,7 +13,7 @@ var connection = mysql.createConnection({
 });
 
 connection.connect();
-//connection.query("set names 'utf8'", function(err, rows, fields){ if(err) throw err;});
+connection.query("set names 'utf8'", function(err, rows, fields){ if(err) throw err;});
 
 connection.query('SELECT * from session', function(err, rows, fields) {
     if (err) throw err;
@@ -62,8 +62,13 @@ function getTitle(ent){
     return ent['title'];
 }
 
+function getType(ent){
+    return ent['type'];
+}
+
 function getSubtype(ent){
-    return ent['subtype'];
+    if(ent['type'] == 'paper') return ent['subtype']
+    return ent['type'];
 }
 
 function writeEntities(entities){
@@ -75,7 +80,7 @@ function writeEntities(entities){
 	    "abstract" : getAbstract(ent),
 	    "keywords" : JSON.parse(ent['coreCommunities']).join(", "),
 	    "authors" : getAuthors(ent),
-	    "type": ent.subtype,
+	    "type": getType(ent),
 	    "subtype": getSubtype(ent),
 	    "award": ent.bestPaperAward==1,
 	    "hm": ent.bestPaperNominee==1

@@ -233,7 +233,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Joshua",
-                "middleInitial": "",
+                "middleInitial": "M",
                 "familyName": "Hailpern",
                 "email": "joshua@hailpern.com",
                 "primary": {
@@ -365,7 +365,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Peter",
-                "middleInitial": "",
+                "middleInitial": "C",
                 "familyName": "Wright",
                 "email": "p.c.wright@ncl.ac.uk",
                 "primary": {
@@ -480,7 +480,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Andrew",
-                "middleInitial": "",
+                "middleInitial": "F",
                 "familyName": "Monk",
                 "email": "A.Monk@psych.york.ac.uk",
                 "primary": {
@@ -528,7 +528,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Kathrin",
-                "middleInitial": "",
+                "middleInitial": "Maria",
                 "familyName": "Gerling",
                 "email": "kathrin.gerling@usask.ca",
                 "primary": {
@@ -550,7 +550,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Regan",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Mandryk",
                 "email": "regan@cs.usask.ca",
                 "primary": {
@@ -572,7 +572,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Max",
-                "middleInitial": "",
+                "middleInitial": "Valentin",
                 "familyName": "Birk",
                 "email": "max.birk@usask.ca",
                 "primary": {
@@ -727,7 +727,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Max",
-                "middleInitial": "",
+                "middleInitial": "Valentin",
                 "familyName": "Birk",
                 "email": "max.birk@usask.ca",
                 "primary": {
@@ -1063,7 +1063,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Daniel",
-                "middleInitial": "",
+                "middleInitial": "J",
                 "familyName": "Wigdor",
                 "email": "daniel@dgp.toronto.edu",
                 "primary": {
@@ -1133,7 +1133,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Neel",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Joshi",
                 "email": "neel@microsoft.com",
                 "primary": {
@@ -1225,7 +1225,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Clifton",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Forlines",
                 "email": "forlines@alumni.cmu.edu",
                 "primary": {
@@ -1235,10 +1235,10 @@
                     "country": "United States"
                 },
                 "secondary": {
-                    "dept": "create",
-                    "institution": "University of Toronto",
-                    "city": "Toronto",
-                    "country": "Canada"
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 }
             },
             {
@@ -1492,7 +1492,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Jorge",
-                "middleInitial": "",
+                "middleInitial": "André",
                 "familyName": "Goncalves",
                 "email": "jgoncalv@ee.oulu.fi",
                 "primary": {
@@ -1514,7 +1514,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Denzil",
-                "middleInitial": "",
+                "middleInitial": "S.T.",
                 "familyName": "Ferreira",
                 "email": "denzil.ferreira@ee.oulu.fi",
                 "primary": {
@@ -1558,7 +1558,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Simo",
-                "middleInitial": "",
+                "middleInitial": "Johannes",
                 "familyName": "Hosio",
                 "email": "simo.hosio@ee.oulu.fi",
                 "primary": {
@@ -1739,7 +1739,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Lynn",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Dombrowski",
                 "email": "ldombrow@uci.edu",
                 "primary": {
@@ -1963,7 +1963,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Nuria",
-                "middleInitial": "",
+                "middleInitial": "m",
                 "familyName": "Oliver",
                 "email": "nuriao@tid.es",
                 "primary": {
@@ -2008,7 +2008,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Matthew",
-                "middleInitial": "",
+                "middleInitial": "F",
                 "familyName": "Pike",
                 "email": "psxmp8@nottingham.ac.uk",
                 "primary": {
@@ -2074,7 +2074,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Sarah",
-                "middleInitial": "",
+                "middleInitial": "C",
                 "familyName": "Sharples",
                 "email": "sarah.sharples@nottingham.ac.uk",
                 "primary": {
@@ -2211,7 +2211,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "David",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Shamma",
                 "email": "aymans@acm.org",
                 "primary": {
@@ -2344,7 +2344,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Jared",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Cechanowicz",
                 "email": "jcechanowicz@gmail.com",
                 "primary": {
@@ -2391,7 +2391,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Rosanna Yuen-Yan",
-                "middleInitial": "",
+                "middleInitial": "Yuen-Yan",
                 "familyName": "Chan",
                 "email": "yychan@ie.cuhk.edu.hk",
                 "primary": {
@@ -2596,7 +2596,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Morgan",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Dixon",
                 "email": "mdixon@cs.washington.edu",
                 "primary": {
@@ -2640,7 +2640,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "James",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Fogarty",
                 "email": "jfogarty@cs.washington.edu",
                 "primary": {
@@ -3042,7 +3042,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Barrett",
-                "middleInitial": "",
+                "middleInitial": "M",
                 "familyName": "Ens",
                 "email": "bens@cs.umanitoba.ca",
                 "primary": {
@@ -3064,7 +3064,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Pourang",
-                "middleInitial": "",
+                "middleInitial": "P",
                 "familyName": "Irani",
                 "email": "irani@cs.umanitoba.ca",
                 "primary": {
@@ -3243,7 +3243,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Phu",
-                "middleInitial": "",
+                "middleInitial": "Tran",
                 "familyName": "Nguyen",
                 "email": "phun@mit.edu",
                 "primary": {
@@ -3534,7 +3534,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Stephen",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Brewster",
                 "email": "stephen.brewster@glasgow.ac.uk",
                 "primary": {
@@ -3626,7 +3626,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Charles",
-                "middleInitial": "",
+                "middleInitial": "Claudius",
                 "familyName": "Marais",
                 "email": "cmarais@microsoft.com",
                 "primary": {
@@ -3739,7 +3739,7 @@
                 "givenName": "Mathieu",
                 "middleInitial": "",
                 "familyName": "Nancel",
-                "email": "mathieu.nancel@canterbury.ac.nz",
+                "email": "mathieu@nancel.net",
                 "primary": {
                     "dept": "Computer Science and Software Engineering",
                     "institution": "University of Canterbury",
@@ -3886,7 +3886,7 @@
     {
         "id": "pn245",
         "title": "What's on Your Mind? Investigating Recommendations for Inclusive Social Networking and Older Adults",
-        "abstract": "Social networking sites (SNSs) are becoming increasingly popular as a method for social interaction. While research has reported benefits associated with components of SNS usage, a digital divide has emerged between younger and older users. SNSs can be useful for communicating with family members and helping one feel digitally included; however, there is a wide range of reasons why many older adults choose not to use this kind of technology. We present a series of user studies investigating the barriers and challenges that SNSs can present to older users. These user studies led to the derivation of user recommendations to mitigate these barriers. The recommendations were then evaluated within a comparative evaluation which involved 25 older adults completing tasks on two interface versions of a simulation SNS. We present the recommendations and the methods of their creation and evaluation. Implications for developers of SNSs are discussed.",
+        "abstract": "Social networking sites (SNSs) are becoming increasingly popular as a method for social interaction. While research has reported benefits associated with components of SNS usage, a digital divide has emerged between younger and older users. SNSs can be useful for communicating with family members and helping one feel digitally included; however, there are a wide range of reasons why many older adults choose not to use this kind of technology. We present a series of user studies investigating the barriers and challenges that SNSs can present to older users. These user studies led to the derivation of user recommendations to mitigate these barriers. The recommendations were then evaluated within a comparative evaluation which involved 25 older adults completing tasks on two interface versions of a simulation SNS. We present the recommendations and the methods of their creation and evaluation. Implications for developers of SNSs are discussed.",
         "acmLink": "",
         "authors": [
             {
@@ -3899,7 +3899,7 @@
                 "familyName": "Norval",
                 "email": "chrisnorval@computing.dundee.ac.uk",
                 "primary": {
-                    "dept": "",
+                    "dept": "School of Computing",
                     "institution": "University of Dundee",
                     "city": "Dundee",
                     "country": "United Kingdom"
@@ -3917,11 +3917,11 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "John",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Arnott",
                 "email": "jarnott@computing.dundee.ac.uk",
                 "primary": {
-                    "dept": "",
+                    "dept": "School of Computing",
                     "institution": "University of Dundee",
                     "city": "Dundee",
                     "country": "United Kingdom"
@@ -3939,7 +3939,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Vicki",
-                "middleInitial": "",
+                "middleInitial": "L.",
                 "familyName": "Hanson",
                 "email": "vlh@acm.org",
                 "primary": {
@@ -3949,10 +3949,10 @@
                     "country": "United States"
                 },
                 "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "School of Computing",
+                    "institution": "University of Dundee",
+                    "city": "Dundee",
+                    "country": "United Kingdom"
                 }
             }
         ],
@@ -4004,7 +4004,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Jennifer",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Pearson",
                 "email": "bagelobagel@gmail.com",
                 "primary": {
@@ -4093,7 +4093,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Jennifer",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Pearson",
                 "email": "csjen@swan.ac.uk",
                 "primary": {
@@ -4205,7 +4205,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Jalal",
-                "middleInitial": "",
+                "middleInitial": "U",
                 "familyName": "Mahmud",
                 "email": "jumahmud@us.ibm.com",
                 "primary": {
@@ -4362,7 +4362,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Michael",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Bernstein",
                 "email": "msb@cs.stanford.edu",
                 "primary": {
@@ -4566,7 +4566,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Joel",
-                "middleInitial": "",
+                "middleInitial": "R.",
                 "familyName": "Brandt",
                 "email": "joel.brandt@adobe.com",
                 "primary": {
@@ -4873,7 +4873,7 @@
     {
         "id": "pn286",
         "title": "Help Beacons: Design and Evaluation of an Ad-Hoc Lightweight S.O.S. System for Smartphones",
-        "abstract": "We present the design and evaluation of a lightweight mobile S.O.S. system that facilitates ad-hoc communication between first responders and victims in emergency situations. Our approach leverages established protocols and standards in unforeseen ways to provide a platform supporting the creation of short-lived communication links. The system comprises two mobile applications: one victim application that allows the broadcasting of distress signals by a novel use of Wi-Fi SSIDs; and a responder application that allows first responders to discover and trace the people broadcasting the signals. The main difference of our system with other platforms enabling communication in crisis situations is that our system is independent from existing network infrastructure and runs on off-the-shelf, commercially available smartphones. We describe the results of our evaluation process in the context of both a design evaluation during a real-world emergency response exercise and of two user workshops in preparation for an upcoming large-scale exercise.",
+        "abstract": "1. Al-Akkad, A., et al. Reconstructing normality: The use of infrastructure leftovers in crisis situations as inspiration for the design of resilient technology. Proc. OzCHI'13, ACM Press (2013), 457-466. \\ 2. Android Issue 30880: Wi-Fi Direct API for connection acceptance. http://bit.ly/ZTbwLM \\ 3. Bambuser. http://bambuser.com/ \\ 4. Battlemesh mailing list Still no ad-hoc in Android 4.0 \"Ice Cream Sandwich\"? http://bit.ly/Z0pVDA \\ 5. Camps-Mur, D., Garcia-Saavedra, A., and Serrano, P. Device-to-device communications with Wi-Fi Direct: overview and experimentation. IEEE Wireless Communications 20, 3 (2013), 96-104. \\ 6. Conti, G. Guest Editor's Introduction. CACM 49, 6 (2006), 32-36. \\ 7. Convertino, G., et al. Supporting common ground and awareness in emergency management planning: A design research project. ACM TOCHI 18, 4 (2011), 134. \\ 8. Edwards, W.K., et al. The challenges of user-centered design and evaluation for infrastructure. Proc. CHI 2003, ACM Press (2003), 297-304. \\ 9. Federal Emergency Management Agency (FEMA) FEMA App, USA.gov http://1.usa.gov/P8V5sf \\ 10. HackHut Emergency S.O.S. Beacon. http://bit.ly/X2PEvE \\ 11. Hossmann, T., et al. Twitter in disaster mode: Opportunistic Communication and Distribution of Sensor Data in Emergencies. Proc. ExtremeCom 2011, ACM Press (2011), 1-6. \\ 12. Jones, C. Android Solidifies Smartphone Market Share, Forbes.com, 2013. http://onforb.es/X3u5wt \\ 13. Krishnamoorthy, S. and Agrawala, A. Context-aware, technology enabled social contribution for public safety using M-Urgency. Proc. MobileHCI 2012, ACM Press (2012), 123-132. \\ 14. Lien, Y.N., Li-Cheng, C., and Chih-Chieh, H. A Multihop Walkie-Talkie-Like Emergency Communication System for Catastrophic Natural Disasters. Proc. ICPPW 2010, (2010), 527-532. \\ 15. Lukowicz, P., Baker, M.G., and Paradiso, J. Guest Editors' Introduction: Hostile Environments. IEEE Pervasive Computing 9, 4 (2010), 13-15. \\ 16. Martin-Campillo, A., et al. Using Haggle to create an electronic triage tag. Proc. MobiOpp Workshop 2010, ACM Press (2010), 167-170. \\ 17. Network Working Group RFC 3748 - Extensible Authentication Protocol (EAP), 2004. http://tools.ietf.org/html/rfc3748 \\ 18. NowForce Inc. http://www.nowforce.com/ \\ 19. Open Garden Inc. http://opengarden.com/ \\ 20. Palen, L. and Liu, S.B. Citizen communications in crisis: anticipating a future of ICT-supported public participation. Proc. CHI 2007, ACM Press (2007), 727736. \\ 21. Ramirez, L., et al. Landmarke: an ad hoc deployable ubicomp infrastructure to support indoor navigation of firefighters. PUC 16, 8 (2012), 1025-1038. \\ 22. SafeCity Get live information from the society. http://www.safecity.nl/english/ \\ 23. Shanshan, L., et al. Device discovery and connection establishment approach using Ad-Hoc Wi-Fi for opportunistic networks. Proc. PERCOM 2011 Workshops, (2011), 461-466. \\ 24. Shklovski, I., Palen, L., and Sutton, J. Finding community through information and communication technology in disaster response. Proc. CSCW 2008, ACM Press (2008), 127-136. \\ 25. Simpson, P.V. Internet savvy Swedes launch 'Angry note 2.0'. The Local (Swedish News). http://bit.ly/bGnhsM \\ 26. Starbird, K. and Stamberger, J. Tweak the Tweet: Leveraging Microblogging Proliferation with a Prescriptive Syntax to Support Citizen Reporting. Proc. ISCRAM 2010, ISCRAM Press. \\ 27. Starbird, K. and Palen, L. \"Voluntweeters\": selforganizing by digital volunteers in times of crisis. Proc. CHI 2011, ACM Press (2011), 1071-1080. \\ 28. Su, J., et al. Haggle: seamless networking for mobile applications. Proc. UbiComp 2007, Springer Press (2007), 391-408. \\ 29. Toups, Z.O., et al. Zero-fidelity simulation of fire emergency response: improving team coordination learning. Proc. CHI 2011, ACM Press (2011), 19591968. \\ 30. Trifunovic, S., et al. WiFi-Opp: ad-hoc-less opportunistic networking. Proc. CHANTS 2011, ACM Press (2011), 37-42. \\ 31. Turoff, M. Past and future emergency response information systems. CACM 45, 4 (2002), 29-32. \\ 32. Ushahidi Ushahidi Crowdmap. http://www.ushahidi.com/ \\ 33. Wong, M.P., A; Clement, A. Reading Service Set Identifiers (SSIDs): Marking and Locating for Public and Private Wireless Spaces. Proc. AOIR'07, (2007). \\ 34. Yau, N. Political allegiance via wireless network SSIDs, mapped, FlowingData. http://bit.ly/LulXy2 \\ 35. Yu, H. The power of thumbs: the politics of SMS in urban China. Graduate Journal of Asia-Pacific Studies 2, 2 (2004), 30-43. \\ ",
         "acmLink": "",
         "authors": [
             {
@@ -4928,7 +4928,7 @@
                 "givenName": "Alexander",
                 "middleInitial": "",
                 "familyName": "Boden",
-                "email": "alexander.boden@uni-siegen.de",
+                "email": "alexander.boden@fit.fraunhofer.de",
                 "primary": {
                     "dept": "",
                     "institution": "Fraunhofer Institute for Applied Information Technology (FIT)",
@@ -4936,48 +4936,48 @@
                     "country": "Germany"
                 },
                 "secondary": {
-                    "dept": "",
-                    "institution": "University of Siegen",
-                    "city": "Siegen",
-                    "country": "Germany"
+                    "dept": "University of Siegen, Siegen, NRW, Germany",
+                    "institution": "40841",
+                    "city": "Dave",
+                    "country": "Randall"
                 }
             },
             {
-                "id": "auth40841",
+                "id": "authdave.randall@uni-siegen.de",
                 "type": "author",
                 "venue": "paper",
                 "rank": 4,
-                "givenName": "Dave",
-                "middleInitial": "",
-                "familyName": "Randall",
-                "email": "dave.randall@uni-siegen.de",
+                "givenName": "",
+                "middleInitial": "University of Siegen",
+                "familyName": "Siegen",
+                "email": "NRW",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of Siegen",
-                    "city": "Siegen",
-                    "country": "Germany"
-                },
-                "secondary": {
-                    "dept": "",
+                    "dept": "Germany",
                     "institution": "",
                     "city": "",
                     "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "30349",
+                    "city": "Andreas",
+                    "country": "Zimmermann"
                 }
             },
             {
-                "id": "auth30349",
+                "id": "authandreas.zimmermann@fit.fraunhofer.de",
                 "type": "author",
                 "venue": "paper",
                 "rank": 5,
-                "givenName": "Andreas",
-                "middleInitial": "",
-                "familyName": "Zimmermann",
-                "email": "andreas.zimmermann@fit.fraunhofer.de",
+                "givenName": "",
+                "middleInitial": "Fraunhofer Institute for Applied Information Technology (FIT)",
+                "familyName": "Sankt Augustin",
+                "email": "",
                 "primary": {
-                    "dept": "",
-                    "institution": "Fraunhofer Institute for Applied Information Technology (FIT)",
-                    "city": "Sankt Augustin",
-                    "country": "Germany"
+                    "dept": "Germany",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -4987,13 +4987,13 @@
                 }
             }
         ],
-        "cbStatement": "The design and evaluation of a lightweight mobile S.O.S. system that facilitates ad-hoc communication between first responders and victims in the face of disruptions of network infrastructure. ",
+        "cbStatement": "Alexander Boden",
         "contactEmail": "amro.al-akkad@fit.fraunhofer.de",
         "contactFirstName": "Amro",
         "contactLastName": "Al-Akkad",
-        "keywords": "Mobile computing; Ad-hoc communication; Emergency response; Smartphones",
+        "keywords": "",
         "venue": "paper",
-        "subtype": "Paper",
+        "subtype": "Mobile computing; Ad-hoc communication; Emergency response; Smartphones",
         "session": "s123",
         "communities": [
             "Smartphones",
@@ -5208,7 +5208,7 @@
     {
         "id": "pn292",
         "title": "Is Once Enough? On the Extent and Content of Replications in Human-Computer Interaction",
-        "abstract": "A replication is an attempt to confirm an earlier study's findings. It is often claimed that research in Human-Computer Interaction (HCI) contains too few replications. To investigate this claim we examined four publication outlets (891 papers) and found 3% attempting replication of an earlier result. The replications typically confirmed earlier findings, but treated replication as a confirm/not-confirm decision, rarely analyzing effect sizes or comparing in depth to the replicated paper. When asked, most authors agreed that their studies were replications, but rarely planned them as such. Many non-replication studies could have corroborated earlier work if they had analyzed data differently or used minimal effort to collect extra data. We discuss what these results mean to HCI, including how reporting of studies could be improved and how conferences/journals may change author instructions to get more replications. ",
+        "abstract": "1.\tAppert, C., Chapuis, O., and Pietriga, E. High-precision magnification lenses. In Proc. CHI (2010), 273–282. \\ 2.\tBegley, C.G. and Ellis, L.M. Drug development: Raise standards for preclinical cancer research. Nature 483, 7391 (2012), 531–533. \\ 3.\tCasiez, G. and Vogel, D. The effect of spring stiffness and control gain with an elastic rate control pointing device. In Proc. CHI, (2008), 1709–1718. \\ 4.\tChapuis, O., Labrune, J.-B., and Pietriga, E. DynaSpot: speed-dependent area cursor. In Proc. CHI (2009), 1391–1400. \\ 5.\tChen, N.Y., Guimbretière, F., and Löckenhoff, C.E. Relative role of merging and two-handed operation on command selection speed. International Journal of Human-Computer Studies 66, 10 (2008), 729–740. \\ 6.\tD’Mello, S.K., Graesser, A., and King, B. Toward Spoken Human–Computer Tutorial Dialogues. Human–Computer Interaction 25, 4 (2010), 289–323. \\ 7.\tEgan, D.E., Remde, J.R., Gomez, L.M., Landauer, T.K., Eberhardt, J., and Lochbaum, C.C. Formative design evaluation of superbook. ACM Transactions on Information Systems (TOIS) 7, 1 (1989), 30–57. \\ 8.\tEvanschitzky, H., Baumgarth, C., Hubbard, R., and Armstrong, J.S. Replication research’s disturbing trend. Journal of Business Research 60, 4 (2007), 411–415. \\ 9.\tFindlater, L. and McGrenere, J. Impact of screen size on performance, awareness, and user satisfaction with adaptive graphical user interfaces. In Proc. CHI (2008), 1247–1256. \\ 10.\tForlines, C. and Balakrishnan, R. Evaluating tactile feedback and direct vs. indirect stylus input in pointing and crossing selection tasks. In Proc. CHI, (2008), 1563–1572. \\ 11.\tGreenberg, S. and Buxton, B. Usability evaluation considered harmful (some of the time). In Proc. CHI (2008), 111–120. \\ 12.\tGrimes, D., Tan, D.S., Hudson, S.E., Shenoy, P., and Rao, R.P. Feasibility and pragmatics of classifying working memory load with an electroencephalograph. In Proc. CHI, (2008), 835–844. \\ 13.\tHartmann, J., De Angeli, A., and Sutcliffe, A. Framing the user experience: information biases on website quality judgement. In Proc. CHI (2008), 855–864. \\ 14.\tHeer, J. and Bostock, M. Crowdsourcing graphical perception: using mechanical turk to assess visualization design. In Proc. CHI (2010), 203–212. \\ 15.\tHendrick, C. Replications, strict replications, and conceptual replications: Are they important? Journal of Social Behavior & Personality, (1990). \\ 16.\tHoggan, E., Brewster, S.A., and Johnston, J. Investigating the effectiveness of tactile feedback for mobile touchscreens. In Proc. CHI (2008), 1573–1582. \\ 17.\tHornbæk, K. Some Whys and Hows of Experiments in Human–Computer Interaction. Foundations and Trends in Human–Computer Interaction 5, 4 (2013), 299–373. \\ 18.\tHuizenga, J.R. Cold fusion: The scientific fiasco of the century (1992). \\ 19.\tHunter, J.E. and Schmidt, F.L. Methods of meta-analysis. Sage, 2004. \\ 20.\tIoannidis, J.P. Why most published research findings are false. PLoS medicine 2, 8 (2005), e124. \\ 21.\tJasny, B.R., Chin, G., Chong, L., and Vignieri, S. Again, and again, and again…. Science 334, 6060 (2011), 1225–1225. \\ 22.\tJohn, B. Avoiding “It’s JUST a Replication”, RepliCHI 2013 Workshop. \\ 23.\tJones, K.S., Derby, P.L., and Schmidlin, E.A. An investigation of the prevalence of replication research in human factors. Human Factors, 52, 5 (2010), 586–595. \\ 24.\tKaplan, A. The Conduct of Inquiry: methodology for behavioral science. Chandler, San Francisco, CA, 1964. \\ 25.\tKarlson, A.K. and Bederson, B.B. One-handed touchscreen input for legacy applications. In Proc. CHI (2008), 1399–1408. \\ 26.\tKelly, C.W., Chase, L.J., and Tucker, R.K. Replication in experimental communication research: An analysis. Human Communication Research 5, 4 (1979), 338–342. \\ 27.\tLallemand, C., Koenig, V., and Gronier, G. Replicating an International Survey on User Experience: Challenges, Successes and Limitations. RepliCHI 2013 Workshop. \\ 28.\tLandis, J.R. and Koch, G.G. The measurement of observer agreement for categorical data. Biometrics, (1977), 159–174. \\ 29.\tLee, E.-J. Flattery may get computers somewhere, sometimes: The moderating role of output modality, computer gender, and user gender. International Journal of Human-Computer Studies 66, 11 (2008), 789–800. \\ 30.\tLee, E.-J. I like you, but I won’t listen to you: Effects of rationality on affective and behavioral responses to computers that flatter. International Journal of Human-Computer Studies 67, 8 (2009), 628–638. \\ 31.\tMakel, M.C., Plucker, J.A., and Hegarty, B. Replications in Psychology Research How Often Do They Really Occur? Perspectives on Psychological Science 7, 6 (2012), 537–542. \\ 32.\tMarshall, C. and Rossman, G. B.. Designing qualitative research, Sage (1999). \\ 33.\tMartin, B. and Isokoski, P. EdgeWrite with integrated corner sequence help. In Proc. CHI (2008), 583–592. \\ 34.\tMcGrath, J.E. Methodology matters: Doing research in the behavioral and social sciences, in Human-computer interaction (1995), Morgan Kaufmann, 152-169.  \\ 35.\tMoffatt, K. and McGrenere, J. Steadied-bubbles: combining techniques to address pen-based pointing errors for younger and older adults. In Proc. CHI (2010), 1125–1134. \\ 36.\tMorris, D., Ringel Morris, M., and Venolia, G. SearchBar: a search-centric web history for task resumption and information re-finding. In Proc. CHI (2008), 1207–1216. \\ 37.\tMoscovich, T. and Hughes, J.F. Indirect mappings of multi-touch input using one and two hands. In Proc. CHI (2008), 1275–1284. \\ 38.\tNacenta, M.A., Mandryk, R.L., and Gutwin, C. Targeting across displayless space. In Proc. CHI (2008), 777–786. \\ 39.\tNeuliep, J.W. and Crandall, R. Everyone was wrong: There are lots of replications out there. Journal of Social Behavior & Personality, (1993). \\ 40.\tNewman, W. A preliminary analysis of the products of HCI research, using pro forma abstracts. In Proc. CHI (1994), 278–284. \\ 41.\tOlwal, A., Feiner, S., and Heyman, S. Rubbing and tapping for precise and rapid selection on touch-screen displays. In Proc. CHI (2008), 295–304. \\ 42.\tPietriga, E. and Appert, C. Sigma lenses: focus-context transitions combining space, time and translucence. In Proc. CHI (2008), 1343–1352. \\ 43.\tReaves, M.L., Sinha, S., Rabinowitz, J.D., Kruglyak, L., and Redfield, R.J. Absence of detectable arsenate in DNA from arsenate-grown GFAJ-1 cells. Science 337, 6093 (2012), 470–473. \\ 44.\tRosenthal, R. and Rosnow, R. Essentials of behavioural research. McGraw-Hill (1991). \\ 45.\tRosenthal, R. Replication in behavioral research. Journal of Social Behavior & Personality, 5, 1990, 1-30. \\ 46.\tSterling, T.D. Publication decisions and their possible effects on inferences drawn from tests of significance—or vice versa. Journal of the American statistical association 54, 285 (1959), 30–34. \\ 47.\tTakayama, L. and Nass, C. Driver safety and information from afar: An experimental driving simulator study of wireless vs. in-car information services. International Journal of Human-Computer Studies 66, 3 (2008), 173–184. \\ 48.\tTsang, E.W. and Kwan, K.-M. Replication and theory development in organizational science. Academy of Management Review 24, 4 (1999), 759–780. \\ 49.\tTuddenham, P., Kirk, D., and Izadi, S. Graspables revisited. In Proc. CHI (2010), 2223–2232. \\ 50.\tVogel, D. and Baudisch, P. Shift: a technique for operating pen-based interfaces using touch. In Proc. CHI (2007), 657–666. \\ 51.\tWilson, M.L., Mackay, W., Chi, E., Bernstein, M., Russell, D., and Thimbleby, H. RepliCHI-CHI should be replicating and validating results more. In Extended Abstracts of CHI (2011), 463–466. \\ 52.\tYatani, K., Partridge, K., Bern, M., and Newman, M.W. Escape: a target selection technique using visually-cued gestures. In Proc. CHI (2008), 285–294. \\ 53.\tZhai, S., Conversy, S., Beaudouin-Lafon, M., and Guiard, Y. Human on-line response to target expansion. In Proc. CHI (2003), 177–184. \\ ",
         "acmLink": "",
         "authors": [
             {
@@ -5221,76 +5221,76 @@
                 "familyName": "Hornbæk",
                 "email": "kash@diku.dk",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of Copenhagen",
-                    "city": "Copenhagen",
-                    "country": "Denmark"
-                },
-                "secondary": {
-                    "dept": "",
+                    "dept": "University of Copenhagen, Copenhagen, Denmark",
                     "institution": "",
                     "city": "",
                     "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "37230",
+                    "city": "Søren",
+                    "country": "Sander"
                 }
             },
             {
-                "id": "auth37230",
+                "id": "auths.s.sander@mail.dk",
                 "type": "author",
                 "venue": "paper",
                 "rank": 2,
-                "givenName": "Søren",
-                "middleInitial": "S",
-                "familyName": "Sander",
-                "email": "s.s.sander@mail.dk",
+                "givenName": "",
+                "middleInitial": "University of Copenhagen",
+                "familyName": "Copenhagen",
+                "email": "",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of Copenhagen",
-                    "city": "Copenhagen",
-                    "country": "Denmark"
-                },
-                "secondary": {
-                    "dept": "",
+                    "dept": "Denmark",
                     "institution": "",
                     "city": "",
                     "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "13349",
+                    "city": "Javier",
+                    "country": "Bargas-Avila"
                 }
             },
             {
-                "id": "auth13349",
+                "id": "authbargas@google.com",
                 "type": "author",
                 "venue": "paper",
                 "rank": 3,
-                "givenName": "Javier",
-                "middleInitial": "",
-                "familyName": "Bargas-Avila",
-                "email": "bargas@google.com",
+                "givenName": "",
+                "middleInitial": "Google, Inc.",
+                "familyName": "Zurich",
+                "email": "ZH",
                 "primary": {
-                    "dept": "",
-                    "institution": "Google, Inc.",
-                    "city": "Zurich",
-                    "country": "Switzerland"
-                },
-                "secondary": {
-                    "dept": "",
+                    "dept": "Switzerland",
                     "institution": "",
                     "city": "",
                     "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "26067",
+                    "city": "Jakob",
+                    "country": "Grue Simonsen"
                 }
             },
             {
-                "id": "auth26067",
+                "id": "authsimonsen@diku.dk",
                 "type": "author",
                 "venue": "paper",
                 "rank": 4,
-                "givenName": "Jakob",
-                "middleInitial": "",
-                "familyName": "Grue Simonsen",
-                "email": "simonsen@diku.dk",
+                "givenName": "",
+                "middleInitial": "University of Copenhagen",
+                "familyName": "Copenhagen",
+                "email": "",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of Copenhagen",
-                    "city": "Copenhagen",
-                    "country": "Denmark"
+                    "dept": "Denmark",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -5300,13 +5300,13 @@
                 }
             }
         ],
-        "cbStatement": "We examine 891 HCI papers and find that 3% attempt to replicate an earlier result. We discuss how to improve replication rates and the reporting of empirical studies in HCI.",
+        "cbStatement": "Javier Bargas-Avila",
         "contactEmail": "",
         "contactFirstName": "",
         "contactLastName": "",
-        "keywords": "Replications",
+        "keywords": "",
         "venue": "paper",
-        "subtype": "Paper",
+        "subtype": "Replications",
         "session": "s150",
         "communities": [
             "replication",
@@ -5487,10 +5487,10 @@
                 "familyName": "Reed",
                 "email": "rr0743@my.bristol.ac.uk",
                 "primary": {
-                    "dept": "create",
-                    "institution": "University of Bristol",
-                    "city": "Bristol",
-                    "country": "United Kingdom"
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -5723,7 +5723,7 @@
     {
         "id": "pn320",
         "title": "Opportunities for Odor: Experiences with Smell and Implications for Technology",
-        "abstract": "Technologies for capturing and generating smell are emerging, and our ability to engineer such technologies and use them in HCI is rapidly developing. Our understanding of how these technologies match the experiences with smell that people have or want to have is surprisingly limited. We therefore investigated the experience of smell and the emotions that accompany it. We collected stories from 439 participants who described personally memorable smell experiences in an online questionnaire. Based on the stories we developed 10 categories of smell experience. We explored the implications of the categories for smell-enhanced technology design by (a) probing participants to envision technologies that match their smell story and (b) having HCI researchers brainstorm technologies using the categories as design stimuli. We discuss how our findings can benefit research on personal memories, momentary and first time experiences, and wellbeing.",
+        "abstract": "1.\tAlaoui-Ismaïli, O., Robin, O., Rada, H., Dittmar, A., Vernet-Maury, E. Basic Emotions Evoked by Odorants: Comparison Between Autonomic Responses and Self-Evaluation. Physiology & Beh. 62, 4 (1997), 713–720. \\ 2.\tBakalar, N. Sensory science: Partners in flavour. Nature 486, 7403 (2012), S4–S5. \\ 3.\tBaumeister, R.F., Newman, L.S. How Stories Make Sense of Personal Experiences: Motives that Shape Autobiographical Narratives. Personality and Social Psychology Bulletin 20, 6 (1994), 676–690. \\ 4.\tBodnar, A., Corbett, R., Nekrasovski, D. AROMA: ambient awareness through olfaction in a messaging application. Proc. ICMI, (2004), 183–190. \\ 5.\tBrewster, S., McGookin, D., Miller, C. Olfoto: designing a smell-based interaction. Proc. CHI (2006), 653–662. \\ 6.\tBruner, J. Life as narrative. Social Research: An International Quarterly 71, 3 (2004), 691–710. \\ 7.\tChrea, C., Grandjean, D., Delplanque, S., Cayeux, I., Le Calvé, B., Aymard, L., Velazco, MI., Sander, D., Scherer, KR. Mapping the Semantic Space for the Subjective Experience of Emotional Responses to Odors. Chem. Senses 34, 1 (2009), 49–62. \\ 8.\tEhrlichman, H., Bastone, L. The use of odour in the study of emotion. In S. Van and G.H. Dodd, (Eds.), Fragrance: The psychology and biology of perfume. Elsevier, (1992), 143–159. \\ 9.\tEmsenhuber, B. Scent Marketing: Making Olfactory Advertising Pervasive. In J. Müller, F. Alt and D. Michelis (Eds.), Pervasive Advertising. Springer, (2011), 343–360. \\ 10.\tErickson, T. Design as storytelling. Interactions 3, 4 (1996), 30–35. \\ 11.\tFaste, H., Rachmel, N., Essary, R., Sheehan, E. Brainstorm, Chainstorm, Cheatstorm, Tweetstorm: new ideation strategies for distributed HCI design. Proc. CHI (2013), 1343–1352. \\ 12.\tFleiss, J.L., Levin, B., Paik, M.C. Statistical Methods for Rates and Proportions. John Wiley & Sons, (2013). \\ 13.\tGhinea, G., Ademoye, O. The sweet smell of success: Enhancing multimedia applications with olfaction. TOMCCAP 8, 1 (2012), 2. \\ 14.\tHassenzahl, M. Experience Design: Technology for All the Right Reasons. Syn. Lect. on HCI 3, 1 (2010), 1–95. \\ 15.\tHerz, R.S., Engen, T. Odor memory: review and analysis. Psy. Bulletin & Review. 3, 3 (1996), 300–313. \\ 16.\tJonsson, F., Verhagen, H. Senses working overtime: on sensuous experiences and public computer game play. Proc. ACE (2011), 56:1–56:8. \\ 17.\tKaye, J. “Jofish.” Making Scents: aromatic output for HCI. Interactions 11, 1 (2004), 48–61. \\ 18.\tKazakos, K., Howard, S., Vetere, F. Revisiting the relationship between reunion and technology-mediated separation in periodically transitioning families. Proc. CSCW (2013), 1157–1168. \\ 19.\tLoumakis, F., Stumpf, S., Grayson, D. This image smells good: effects of image information scent in search engine results pages. CIKM (2011), 475–484. \\ 20.\tMason, W., Suri, S. Conducting behavioral research on Amazon’s Mechanical Turk. Behavior Research Methods 44, 1 (2012), 1–23. \\ 21.\tMassimi, M., Moncur, W., Odom, W., Banks, R., Kirk, D. Memento mori: technology design for the end of life. Proc. CHI EA (2012), 2759–2762. \\ 22.\tMatsukura, H., Yoneda, T., Ishida, H. Smelling Screen: Development and Evaluation of an Olfactory Display System for Presenting a Virtual Odor Source. IEEE TVCG 19, 4 (2013), 606–615. \\ 23.\tPetitmengin, C. Describing one’s subjective experience in the second person: An interview method for the science of consciousness. Phenomenology and the Cognitive Sciences 5, 3-4 (2006), 229–269. \\ 24.\tRanasinghe, N., Karunanayaka, K., Cheok, A.D., Fernando, O.N.N., Nii, H., Gopalakrishnakone, P. Digital taste and smell communication. Proc. BodyNets, (2011), 78–84. \\ 25.\tSaldana, J. The Coding Manual for Qualitative Researchers. SAGE (2012). \\ 26.\tScherer, K.R. Appraisal considered as a process of multilevel sequential checking. Appraisal processes in emotion: Theory, methods, research 92, (2001), 120. \\ 27.\tScherer, K.R. What are emotions? And how can they be measured? Social Science Inf. 44, 4 (2005), 695–729. \\ 28.\tSeligman, M.E.P., Csikszentmihalyi, M. Positive psychology: An intro. Am. Psy. 55, 1(2000), 5–14. \\ 29.\tSeo, H.-S., Guarneros, M., Hudson, R., et al. Attitudes toward Olfaction: A Cross-regional Study. Chem. Senses 36, 2 (2011), 177–187. \\ 30.\tSuddendorf, T., Corballis, M.C. The evolution of foresight: What is mental time travel, and is it unique to humans? Beh. & Brain Sciences 30, 3 (2007), 299–313. \\ 31.\tTuch, A.N., Trusell, R., Hornbæk, K. Analyzing users’ narratives to understand experience with interactive products. Proc. CHI (2013), 2079–2088. \\ 32.\tWallace, J., Wright, P.C., McCarthy, J., Green, D.P., Thomas, J., Olivier, P. A design-led inquiry into personhood in dementia. Proc. CHI (2013), 2617–2626. \\ 33.\tWillander, J., Larsson, M. Smell your way back to childhood: Autobiographical odor memory. Psy. Bulletin & Review 13, 2 (2006), 240–244. \\ 34.\tWright, P., McCarthy, J. Experience-Centered Design: Designers, Users, and Communities in Dialogue. Syn. Lect. on HCI 3, 1 (2010), 1–123. \\ 35.\tWyszynski, B., Yamanaka, T., Nakamoto, T. Recording and reproducing citrus flavors using odor recorder. Sensors&Actuators B: Chemical 106, 1(2005), 388–393.",
         "acmLink": "",
         "authors": [
             {
@@ -5780,10 +5780,10 @@
                 "familyName": "Hornbaek",
                 "email": "kash@diku.dk",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of Copenhagen",
-                    "city": "Copenhagen",
-                    "country": "Denmark"
+                    "dept": "University of Copenhagen, Copenhagen, Denmark",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -5793,13 +5793,13 @@
                 }
             }
         ],
-        "cbStatement": "This work guides smell enhanced technology design, not only giving a categorization of the role of smell in experiences, but also extracting the qualities of smell across 439 smell stories.",
+        "cbStatement": "Alexandre Tuch",
         "contactEmail": "obristmarianna@gmail.com",
         "contactFirstName": "Marianna",
         "contactLastName": "Obrist",
-        "keywords": "Smell; smell experiences; odor; olfaction; user experience; smell-enhanced technology; narratives; smell stories; crowdsourcing; design brainstorming; designing for smell. ",
+        "keywords": "",
         "venue": "paper",
-        "subtype": "Paper",
+        "subtype": "Smell; smell experiences; odor; olfaction; user experience; smell-enhanced technology; narratives; smell stories; crowdsourcing; design brainstorming; designing for smell. ",
         "session": "s194",
         "communities": [
             "Perception",
@@ -5893,7 +5893,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Ryan",
-                "middleInitial": "",
+                "middleInitial": "M",
                 "familyName": "Schmidt",
                 "email": "rms@dgp.toronto.edu",
                 "primary": {
@@ -6157,7 +6157,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Michael",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Bernstein",
                 "email": "msb@cs.stanford.edu",
                 "primary": {
@@ -6568,7 +6568,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Chi Thanh",
-                "middleInitial": "",
+                "middleInitial": "Thanh",
                 "familyName": "Vi",
                 "email": "chi.vi@bristol.ac.uk",
                 "primary": {
@@ -7048,7 +7048,7 @@
     {
         "id": "pn385",
         "title": "Is my Phone Alive? A Large-Scale Study of Shape Change in Handheld Devices Using Videos",
-        "abstract": "Shape-changing handheld devices are emerging as research prototypes, but it is unclear how users perceive them and which experiences they engender. The little data we have on user experience is from single prototypes, only covering a small part of the possibilities in shape change. We produce 51 videos of a shape-changing handheld device by systematically varying seven parameters of shape change. In a crowd-sourced study, 187 participants watched the videos and described their experiences using rating scales and free text. We find significant and large differences among parameters of shape change. Shapes that have previously been used for notifications were rated the least urgent; the degree of shape change was found to impact experience more than type of shape change. The experience of shape change was surprisingly complex: hedonic quality were inversely related to urgency, and some shapes were perceived as ugly, yet useful. We discuss how to advance models of shape change and improve research on the experience of shape change.",
+        "abstract": "1. J. Alexander, J. Kildal, K. Hornbæk, V. Aaltonen, A. Lucero, and S. Subramanian. Interaction with deformable displays. In Proc. of MobileHCI ’12, pages 237–240, New York, NY, USA, 2012. ACM. \\ 2. J. Alexander, A. Lucero, and S. Subramanian. Tilt displays: designing display surfaces with multi-axis tilting and actuation. In Proc. of MobileHCI ’12, pages 161–170, New York, NY, USA, 2012. ACM. \\ 3. J. A. Bargas-Avila and K. Hornbæk. Old wine in new bottles or novel challenges: a critical analysis of empirical studies of user experience. In Proc. of CHI ’11, pages 2689–2698. ACM, 2011. \\ 4. C. Bartneck, D. Kuli´c, E. Croft, and S. Zoghbi. Measurement instruments for the anthropomorphism, animacy, likeability, perceived intelligence, and perceived safety of robots. Int. Journal of Social Robotics, 1(1):71–81, 2009. \\ 5. M. M. Bradley and P. J. Lang. Measuring emotion: the self-assessment manikin and the semantic differential. Journal of behavior therapy and experimental psychiatry, 25(1):49–59, 1994. \\ 6. M. Coelho and P. Maes. Shutters: a permeable surface for environmental control and communication. In Proc. of ITS ’09, pages 13–18, New York, NY, USA, 2009. ACM. \\ 7. M. Coelho and J. Zigelbaum. Shape-changing interfaces. Personal Ubiquitous Comput., 15(2):161–173, Feb. 2011. \\ 8. J. Dawson, O. Schneider, J. Ferstay, D. Toker, J. Link, S. Haddad, and K. MacLean. It’s alive! exploring the design space of a gesturing phone. In Proc. of GI ’13, New York, NY, USA, 2013. ACM. \\ 9. A. Girouard, R. Vertegaal, and I. Poupyrev. Special issue: Organic user interfaces. Interacting with Computers, 25(2):115–116, 2013. \\ 10. A. Gomes, A. Nesbitt, and R. Vertegaal. Morephone: a study of actuated shape deformations for ﬂexible thin-ﬁlm smartphone notiﬁcations. In Proc. of CHI ’13, pages 583–592, New York, NY, USA, 2013. ACM. \\ 11. M. Hassenzahl. The interplay of beauty, goodness, and usability in interactive products. Hum.-Comput. Interact., 19(4):319–349, Dec. 2008. \\ 12. M. Hassenzahl, M. Burmester, and F. Koller. Attrakdiff: Ein fragebogen zur messung wahrgenommener hedonischer und pragmatischer qualit¨at. In Mensch & Computer 2003, pages 187–196. Springer, 2003. \\ 13. J. Heer and M. Bostock. Crowdsourcing graphical perception: using mechanical turk to assess visualization design. In Proc. of CHI ’10, pages 203–212. ACM, 2010. \\ 14. F. Heider and M.-A. Simmel. An experimental study of apparent behaviour. American Journal of Psychology, 57:243–259, 1944. \\ 15. F. Hemmert, S. Hamann, M. L¨owe, J. Zeipelt, and G. Joost. Shape-changing mobiles: tapering in two-dimensional deformational displays in mobile phones. In Proc. of CHI EA ’10, pages 3075–3080, New York, NY, USA, 2010. ACM. \\ 16. F. Hemmert, G. Joost, A. Kn¨orig, and R. Wettach. Dynamic knobs: shape change as a means of interaction on a mobile phone. In Proc. of CHI EA ’08, pages 2309–2314, New York, NY, USA, 2008. ACM. \\ 17. F. Hemmert, M. L¨owe, A. Wohlauf, and G. Joost. Animate mobiles: Proxemically reactive posture actuation as a means of relational interaction with mobile phones. In Proc. of TEI ’13, New York, NY, USA, 2013. ACM. \\ 18. M. Iacoboni, I. Molnar-Szakacs, V. Gallese, G. Buccino, J. C. Mazziotta, and G. Rizzolatti. Grasping the intentions of others with one’s own mirror neuron system. PLoS biology, 3(3):e79, 2005. \\ 19. H. Iwata, H. Yano, F. Nakaizumi, and R. Kawamura. Project feelex: adding haptic surface to graphics. In Proc. of SIGGRAPH ’01, pages 469–476, New York, NY, USA, 2001. ACM. \\ 20. W. Ju and L. Takayama. Approachability: How people interpret automatic door movement as gesture. International Journal of Design, 3(2):1–10, 2009. \\ 21. J. Kildal, S. Paasovaara, and V. Aaltonen. Kinetic device: designing interactions with a deformable mobile interface. In Proc. of CHI EA ’12, pages 1871–1876, New York, NY, USA, 2012. ACM. \\ 22. H. Kim and W. Lee. Shade pixel. In ACM SIGGRAPH 2008 posters, SIGGRAPH ’08, pages 34:1–34:1, New York, NY, USA, 2008. ACM. \\ 23. S. Kim, H. Kim, B. Lee, T.-J. Nam, and W. Lee. Inﬂatable mouse: volume-adjustable mouse with air-pressure-sensitive input and haptic feedback. In Proc. of CHI ’08, pages 211–224, New York, NY, USA, 2008. ACM. \\ 24. S. Komarov, K. Reinecke, and K. Z. Gajos. Crowdsourcing performance evaluations of user interfaces. In Proc. of CHI ’13, pages 207–216, New York, NY, USA, 2013. ACM. \\ 25. B. Lahey, A. Girouard, W. Burleson, and R. Vertegaal. Paperphone: understanding the use of bend gestures in mobile devices with ﬂexible electronic paper displays. In Proc. of CHI ’11, pages 1303–1312, New York, NY, USA, 2011. ACM. \\ 26. D. Leithinger and H. Ishii. Relief: a scalable actuated shape display. In Proc. of TEI ’10, pages 221–222, New York, NY, USA, 2010. ACM. \\ 27. Y.-k. Lim, S.-S. Lee, and K.-y. Lee. Interactivity attributes: a new way of thinking and describing interactivity. In Proc. of CHI ’09, pages 105–108, New York, NY, USA, 2009. ACM. \\ 28. W. E. Mackay, A. V. Ratzer, and P. Janecek. Video artifacts for design: bridging the gap between abstraction and detail. In Proc. of DIS ’00, pages 72–82, New York, NY, USA, 2000. ACM. \\ 29. C. Mancini, Y. Rogers, A. K. Bandara, T. Coe, L. Jedrzejczyk, A. N. Joinson, B. A. Price, K. Thomas, and B. Nuseibeh. Contravision: exploring users’ reactions to futuristic technology. In Proc. of CHI ’10, pages 153–162, New York, NY, USA, 2010. ACM. \\ 30. A. Parkes and H. Ishii. Kinetic sketchup: motion prototyping in the tangible design process. In Proc. of TEI ’09, pages 367–372, New York, NY, USA, 2009. ACM. \\ 31. M. K. Rasmussen, E. W. Pedersen, M. G. Petersen, and K. Hornbæk. Shape-changing interfaces: a review of the design space and open research questions. In Proc. of CHI ’12, pages 735–744, New York, NY, USA, 2012. ACM. \\ 32. A. Roudaut, A. Karnik, M. L¨ochtefeld, and S. Subramanian. Morphees: toward high ”shape resolution” in self-actuated ﬂexible mobile devices. In Proc. of CHI ’13, pages 593–602, New York, NY, USA, 2013. ACM. \\ 33. J. A. Russell. A circumplex model of affect. Journal of Personality and Social Psychology, 39(6):1161–1178, Dec. 1980. \\ 34. C. Schwesig, I. Poupyrev, and E. Mori. Gummi: a bendable computer. In Proc. of CHI ’04, pages 263–270, New York, NY, USA, 2004. ACM. \\ 35. J. Togler, F. Hemmert, and R. Wettach. Living interfaces: the thrifty faucet. In Proc. of TEI ’09, pages 43–44, New York, NY, USA, 2009. ACM. \\ ",
         "acmLink": "",
         "authors": [
             {
@@ -7057,7 +7057,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Esben Warming",
-                "middleInitial": "",
+                "middleInitial": "W.",
                 "familyName": "Pedersen",
                 "email": "esbenwp@diku.dk",
                 "primary": {
@@ -7105,10 +7105,10 @@
                 "familyName": "Hornbæk",
                 "email": "kash@diku.dk",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of Copenhagen",
-                    "city": "Copenhagen",
-                    "country": "Denmark"
+                    "dept": "University of Copenhagen, Copenhagen, Denmark",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -7118,13 +7118,13 @@
                 }
             }
         ],
-        "cbStatement": "We investigate how different shape changes affect the user experience using 51 videos of an animated smartphone that changes its shape.",
+        "cbStatement": "Kasper Hornbæk",
         "contactEmail": "esbenwp@diku.dk",
         "contactFirstName": "Esben",
         "contactLastName": "Pedersen",
-        "keywords": "Shape-changing Interfaces; Shape Displays; Organic User Interfaces; Actuated Interfaces",
+        "keywords": "pn0385-file3.mp4",
         "venue": "paper",
-        "subtype": "Paper",
+        "subtype": "Shape-changing Interfaces; Shape Displays; Organic User Interfaces; Actuated Interfaces",
         "session": "s103",
         "communities": [
             "Handheld Devices and Mobile Computing",
@@ -7144,7 +7144,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Esben Warming",
-                "middleInitial": "",
+                "middleInitial": "W.",
                 "familyName": "Pedersen",
                 "email": "esbenwp@diku.dk",
                 "primary": {
@@ -7306,7 +7306,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Wendy",
-                "middleInitial": "",
+                "middleInitial": "E.",
                 "familyName": "Mackay",
                 "email": "mackay@lri.fr",
                 "primary": {
@@ -7398,7 +7398,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Jan",
-                "middleInitial": "",
+                "middleInitial": "O",
                 "familyName": "Borchers",
                 "email": "borchers@cs.rwth-aachen.de",
                 "primary": {
@@ -7816,7 +7816,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Tina",
-                "middleInitial": "",
+                "middleInitial": "Caroline",
                 "familyName": "Walber",
                 "email": "walber@uni-koblenz.de",
                 "primary": {
@@ -8325,7 +8325,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Stuart",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Taylor",
                 "email": "stuart@microsoft.com",
                 "primary": {
@@ -8747,7 +8747,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Stephen",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Brewster",
                 "email": "stephen.brewster@glasgow.ac.uk",
                 "primary": {
@@ -9033,7 +9033,7 @@
                 "venue": "paper",
                 "rank": 12,
                 "givenName": "Peter",
-                "middleInitial": "",
+                "middleInitial": "C",
                 "familyName": "Wright",
                 "email": "p.c.wright@newcastle.ac.uk",
                 "primary": {
@@ -9149,7 +9149,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Edward",
-                "middleInitial": "",
+                "middleInitial": "O",
                 "familyName": "Benson",
                 "email": "eob@csail.mit.edu",
                 "primary": {
@@ -9236,7 +9236,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Michelle",
-                "middleInitial": "",
+                "middleInitial": "Kathryn",
                 "familyName": "Annett",
                 "email": "mkannett@ualberta.ca",
                 "primary": {
@@ -9522,7 +9522,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Matthew",
-                "middleInitial": "",
+                "middleInitial": "Chalmers",
                 "familyName": "Chalmers",
                 "email": "matthew@dcs.gla.ac.uk",
                 "primary": {
@@ -9636,7 +9636,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Poika",
-                "middleInitial": "",
+                "middleInitial": "M",
                 "familyName": "Isokoski",
                 "email": "poika.isokoski@uta.fi",
                 "primary": {
@@ -9658,7 +9658,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Päivi",
-                "middleInitial": "",
+                "middleInitial": "H",
                 "familyName": "Majaranta",
                 "email": "paivi.majaranta@uta.fi",
                 "primary": {
@@ -9991,7 +9991,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Jason",
-                "middleInitial": "",
+                "middleInitial": "I",
                 "familyName": "Hong",
                 "email": "jasonh@cs.cmu.edu",
                 "primary": {
@@ -10038,7 +10038,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Khai",
-                "middleInitial": "",
+                "middleInitial": "N",
                 "familyName": "Truong",
                 "email": "khai@cs.toronto.edu",
                 "primary": {
@@ -10082,7 +10082,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Daniel",
-                "middleInitial": "",
+                "middleInitial": "J",
                 "familyName": "Wigdor",
                 "email": "daniel@dgp.toronto.edu",
                 "primary": {
@@ -10396,7 +10396,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Leila",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Takayama",
                 "email": "takayama@gmail.com",
                 "primary": {
@@ -10546,10 +10546,32 @@
                 }
             },
             {
-                "id": "auth29991",
+                "id": "auth42305",
                 "type": "author",
                 "venue": "paper",
                 "rank": 2,
+                "givenName": "Andrew",
+                "middleInitial": "",
+                "familyName": "Sorensen",
+                "email": "a.sorensen@qut.edu.au",
+                "primary": {
+                    "dept": "Computer Science",
+                    "institution": "QUT",
+                    "city": "Brisbane",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth29991",
+                "type": "author",
+                "venue": "paper",
+                "rank": 3,
                 "givenName": "Michael",
                 "middleInitial": "",
                 "familyName": "Martin",
@@ -10571,9 +10593,9 @@
                 "id": "auth9632",
                 "type": "author",
                 "venue": "paper",
-                "rank": 3,
+                "rank": 4,
                 "givenName": "Henry",
-                "middleInitial": "",
+                "middleInitial": "J",
                 "familyName": "Gardner",
                 "email": "Henry.Gardner@anu.edu.au",
                 "primary": {
@@ -10864,7 +10886,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Krzysztof",
-                "middleInitial": "",
+                "middleInitial": "Z.",
                 "familyName": "Gajos",
                 "email": "kgajos@eecs.harvard.edu",
                 "primary": {
@@ -11454,7 +11476,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Scott",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Hudson",
                 "email": "scott.hudson@cs.cmu.edu",
                 "primary": {
@@ -11595,7 +11617,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Barrett",
-                "middleInitial": "",
+                "middleInitial": "M",
                 "familyName": "Ens",
                 "email": "bens@cs.umanitoba.ca",
                 "primary": {
@@ -11639,7 +11661,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Pourang",
-                "middleInitial": "",
+                "middleInitial": "P",
                 "familyName": "Irani",
                 "email": "irani@cs.umanitoba.ca",
                 "primary": {
@@ -11708,7 +11730,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Lynn",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Dombrowski",
                 "email": "ldombrow@uci.edu",
                 "primary": {
@@ -11889,7 +11911,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Victoria",
-                "middleInitial": "",
+                "middleInitial": "M E",
                 "familyName": "Bellotti",
                 "email": "bellotti@parc.com",
                 "primary": {
@@ -11977,7 +11999,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Lisa",
-                "middleInitial": "",
+                "middleInitial": "Renery",
                 "familyName": "Handalian",
                 "email": "LHandalian@CCA.edu",
                 "primary": {
@@ -12389,7 +12411,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Christopher",
-                "middleInitial": "",
+                "middleInitial": "D. S.",
                 "familyName": "Power",
                 "email": "christopher.power@york.ac.uk",
                 "primary": {
@@ -12503,7 +12525,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Duncan",
-                "middleInitial": "",
+                "middleInitial": "P",
                 "familyName": "Brumby",
                 "email": "Brumby@cs.ucl.ac.uk",
                 "primary": {
@@ -12574,7 +12596,7 @@
                 "givenName": "Florian",
                 "middleInitial": "",
                 "familyName": "Schaub",
-                "email": "florian.schaub@uni-ulm.de",
+                "email": "fschaub@cs.cmu.edu",
                 "primary": {
                     "dept": "",
                     "institution": "Ulm University",
@@ -12616,7 +12638,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Frank",
-                "middleInitial": "",
+                "middleInitial": "D",
                 "familyName": "Honold",
                 "email": "frank.honold@uni-ulm.de",
                 "primary": {
@@ -12729,7 +12751,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Erin",
-                "middleInitial": "",
+                "middleInitial": "Treacy",
                 "familyName": "Solovey",
                 "email": "erin@cs.drexel.edu",
                 "primary": {
@@ -12773,7 +12795,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Enrique",
-                "middleInitial": "",
+                "middleInitial": "Abdon",
                 "familyName": "Abdon Garcia Perez",
                 "email": "engarpe@mit.edu",
                 "primary": {
@@ -13003,7 +13025,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Frank",
-                "middleInitial": "",
+                "middleInitial": "R",
                 "familyName": "Bentley",
                 "email": "bentley79@gmail.com",
                 "primary": {
@@ -13206,7 +13228,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Thomas",
-                "middleInitial": "",
+                "middleInitial": "H.",
                 "familyName": "Park",
                 "email": "tp352@drexel.edu",
                 "primary": {
@@ -13373,7 +13395,7 @@
     {
         "id": "pn672",
         "title": "SurfacePhone: A Mobile Projection Device for Single- and Multiuser Everywhere Tabletop Interaction",
-        "abstract": "In this paper we present SurfacePhone; a novel configuration of a projector phone which aligns the projector to project onto a physical surface to allow tabletop-like interaction in a mobile setup. The projection is created behind the upright standing phone and is touch and gesture-enabled. Multiple projections can be merged to create shared spaces for multi-user collaboration. We investigate this new setup, starting with the concept that we evaluated with a concept prototype. Furthermore we present our technical prototype, a phone case with \\ integrated projector that is fully mobile, open sourced, and allows for the aforementioned \\ interaction. We discuss its technical requirements and evaluate the accuracy of interaction in a second user study. We conclude with design guidelines.",
+        "abstract": "To maintain a mobile form factor, the screen real estate of a mobile device canIn this paper we present SurfacePhone; a novel configuration of a projector phone which aligns the projector to project onto a physical surface to allow tabletop-like interaction in a mobile setup. The projection is created behind the upright standing phone and is touch and gesture-enabled. Multiple projections can be merged to create shared spaces for multi-user collaboration. We investigate this new setup, starting with the concept that we evaluated with a concept prototype. Furthermore we present our technical prototype, a mobile phone case with integrated projector that allows for the aforementioned interaction. We discuss its technical requirements and evaluate the accuracy of interaction in a second user study. We conclude with lessons learned and design guidelines.",
         "acmLink": "",
         "authors": [
             {
@@ -13487,7 +13509,7 @@
                 }
             }
         ],
-        "cbStatement": "We present a novel projector phone where the phone projects a second display on the table behind it. From two user evaluations with two prototypes we follow and present design guidelines.",
+        "cbStatement": "We present a novel phone concept where the phone projects a second display on the table behind it. From two user studies with two prototypes we conclude insights and guidelines.",
         "contactEmail": "christian.winkler@uni-ulm.de",
         "contactFirstName": "Christian",
         "contactLastName": "Winkler",
@@ -13917,7 +13939,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Ann",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Blandford",
                 "email": "a.blandford@ucl.ac.uk",
                 "primary": {
@@ -14593,7 +14615,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Geoffrey",
-                "middleInitial": "",
+                "middleInitial": "C",
                 "familyName": "Tien",
                 "email": "gtien@sfu.ca",
                 "primary": {
@@ -14726,7 +14748,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Peter",
-                "middleInitial": "",
+                "middleInitial": "D",
                 "familyName": "Bennett",
                 "email": "peter.bennett@bris.ac.uk",
                 "primary": {
@@ -14770,7 +14792,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Vlad",
-                "middleInitial": "",
+                "middleInitial": "Stefan",
                 "familyName": "Otrocol",
                 "email": "vo0592@my.bristol.ac.uk",
                 "primary": {
@@ -15018,7 +15040,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Simone",
-                "middleInitial": "",
+                "middleInitial": "Ivan",
                 "familyName": "Conte",
                 "email": "sic2@st-andrews.ac.uk",
                 "primary": {
@@ -15193,7 +15215,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Hans",
-                "middleInitial": "",
+                "middleInitial": "W",
                 "familyName": "Gellersen",
                 "email": "hwg@comp.lancs.ac.uk",
                 "primary": {
@@ -15395,7 +15417,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Roisin",
-                "middleInitial": "",
+                "middleInitial": "C",
                 "familyName": "McNaney",
                 "email": "r.mcnaney@newcastle.ac.uk",
                 "primary": {
@@ -15616,7 +15638,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Duncan",
-                "middleInitial": "",
+                "middleInitial": "P",
                 "familyName": "Brumby",
                 "email": "Brumby@cs.ucl.ac.uk",
                 "primary": {
@@ -15710,7 +15732,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Robert",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Kraut",
                 "email": "robert.kraut@cmu.edu",
                 "primary": {
@@ -15798,7 +15820,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Rynson",
-                "middleInitial": "",
+                "middleInitial": "W.H.",
                 "familyName": "Lau",
                 "email": "rynson.lau@cityu.edu.hk",
                 "primary": {
@@ -15889,7 +15911,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Rynson",
-                "middleInitial": "",
+                "middleInitial": "W.H.",
                 "familyName": "Lau",
                 "email": "rynson.lau@cityu.edu.hk",
                 "primary": {
@@ -16023,7 +16045,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Bernhard",
-                "middleInitial": "",
+                "middleInitial": "Ewald",
                 "familyName": "Slawik",
                 "email": "bernhard.slawik@ifi.lmu.de",
                 "primary": {
@@ -16115,7 +16137,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Mark",
-                "middleInitial": "",
+                "middleInitial": "A.",
                 "familyName": "Blythe",
                 "email": "mark.blythe@northumbria.ac.uk",
                 "primary": {
@@ -16276,7 +16298,7 @@
                 "venue": "paper",
                 "rank": 6,
                 "givenName": "Ann",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Blandford",
                 "email": "a.blandford@ucl.ac.uk",
                 "primary": {
@@ -16389,7 +16411,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Peter",
-                "middleInitial": "",
+                "middleInitial": "C",
                 "familyName": "Wright",
                 "email": "p.c.wright@newcastle.ac.uk",
                 "primary": {
@@ -16694,7 +16716,7 @@
                 "familyName": "Matthews",
                 "email": "mark.matthews@cornell.edu",
                 "primary": {
-                    "dept": "Department of Information Science",
+                    "dept": "Information Science",
                     "institution": "Cornell University",
                     "city": "Ithaca",
                     "country": "United States"
@@ -16716,7 +16738,7 @@
                 "familyName": "Gay",
                 "email": "gkg1@cornell.edu",
                 "primary": {
-                    "dept": "Information Science Department",
+                    "dept": "Information Science",
                     "institution": "Cornell University",
                     "city": "Ithaca",
                     "country": "United States"
@@ -16824,7 +16846,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Cuong",
-                "middleInitial": "",
+                "middleInitial": "Hong",
                 "familyName": "Trinh",
                 "email": "thcuong@ntu.edu.sg",
                 "primary": {
@@ -17096,7 +17118,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Abir",
-                "middleInitial": "",
+                "middleInitial": "M",
                 "familyName": "Al-Hajri",
                 "email": "abira@ece.ubc.ca",
                 "primary": {
@@ -17162,7 +17184,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Sidney",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Fels",
                 "email": "ssfels@ece.ubc.ca",
                 "primary": {
@@ -17648,7 +17670,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Basak",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Alper",
                 "email": "basakalper@gmail.com",
                 "primary": {
@@ -17736,7 +17758,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Gustavo",
-                "middleInitial": "",
+                "middleInitial": "Alberto",
                 "familyName": "Rovelo Ruiz",
                 "email": "grovelo@dsic.upv.es",
                 "primary": {
@@ -17867,7 +17889,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Andrew",
-                "middleInitial": "",
+                "middleInitial": "Thomas",
                 "familyName": "Garbett",
                 "email": "a.garbett@newcastle.ac.uk",
                 "primary": {
@@ -18113,7 +18135,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "T. Scott",
-                "middleInitial": "",
+                "middleInitial": "Scott",
                 "familyName": "Saponas",
                 "email": "ssaponas@microsoft.com",
                 "primary": {
@@ -18227,7 +18249,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Kody",
-                "middleInitial": "",
+                "middleInitial": "R",
                 "familyName": "Dillman",
                 "email": "kody.dillman@ucalgary.ca",
                 "primary": {
@@ -18404,7 +18426,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Michael",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Terry",
                 "email": "mterry@cs.uwaterloo.ca",
                 "primary": {
@@ -18426,7 +18448,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "David",
-                "middleInitial": "",
+                "middleInitial": "T",
                 "familyName": "Cormack",
                 "email": "umcorma2@cc.umanitoba.ca",
                 "primary": {
@@ -18470,7 +18492,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Deana",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Brown",
                 "email": "deana.brown@gatech.edu",
                 "primary": {
@@ -18613,10 +18635,10 @@
                 "familyName": "Islam Aumi",
                 "email": "tanvir@uw.edu",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of Washington",
-                    "city": "Seattle",
-                    "country": "United States"
+                    "dept": "University of Washington, Seattle, Washington, United States",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -19589,7 +19611,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Nivan",
-                "middleInitial": "",
+                "middleInitial": "R",
                 "familyName": "Ferreira",
                 "email": "nferre01@students.poly.edu",
                 "primary": {
@@ -19698,7 +19720,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Garnet",
-                "middleInitial": "",
+                "middleInitial": "D",
                 "familyName": "Hertz",
                 "email": "garnethertz@gmail.com",
                 "primary": {
@@ -19901,7 +19923,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Klaus",
-                "middleInitial": "",
+                "middleInitial": "H.",
                 "familyName": "Hinrichs",
                 "email": "khh@uni-muenster.de",
                 "primary": {
@@ -19968,7 +19990,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "François",
-                "middleInitial": "",
+                "middleInitial": "V",
                 "familyName": "Guimbretière",
                 "email": "francois@cs.cornell.edu",
                 "primary": {
@@ -20425,7 +20447,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Joshua",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Clark",
                 "email": "joshuaac@usc.edu",
                 "primary": {
@@ -21159,7 +21181,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Pearl",
-                "middleInitial": "",
+                "middleInitial": "H.Z.",
                 "familyName": "Pu",
                 "email": "pearl.pu@epfl.ch",
                 "primary": {
@@ -21455,10 +21477,10 @@
                 "familyName": "Villar",
                 "email": "nvillar@microsoft.com",
                 "primary": {
-                    "dept": "",
-                    "institution": "Microsoft Research",
-                    "city": "Cambridge",
-                    "country": "United Kingdom"
+                    "dept": "Microsoft Research, Cambridge, United Kingdom",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -21473,7 +21495,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Nicholas",
-                "middleInitial": "",
+                "middleInitial": "Y",
                 "familyName": "Chen",
                 "email": "nchen@microsoft.com",
                 "primary": {
@@ -21672,7 +21694,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Jan",
-                "middleInitial": "",
+                "middleInitial": "O",
                 "familyName": "Borchers",
                 "email": "borchers@cs.rwth-aachen.de",
                 "primary": {
@@ -21810,7 +21832,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Vincent",
-                "middleInitial": "",
+                "middleInitial": "Joseph",
                 "familyName": "Lewandowski",
                 "email": "vlew@kth.se",
                 "primary": {
@@ -21970,7 +21992,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Erik",
-                "middleInitial": "",
+                "middleInitial": "N",
                 "familyName": "Geelhoed",
                 "email": "erik.geelhoed@falmouth.ac.uk",
                 "primary": {
@@ -21992,7 +22014,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Phil",
-                "middleInitial": "",
+                "middleInitial": "P",
                 "familyName": "Stenton",
                 "email": "phil.stenton@falmouth.ac.uk",
                 "primary": {
@@ -22437,7 +22459,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Robert",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Kraut",
                 "email": "robert.kraut@cmu.edu",
                 "primary": {
@@ -22733,7 +22755,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Alex",
-                "middleInitial": "",
+                "middleInitial": "C",
                 "familyName": "Kuhn",
                 "email": "kuhnalex@umich.edu",
                 "primary": {
@@ -23005,7 +23027,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Pablo",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Paredes",
                 "email": "paredes@eecs.berkeley.edu",
                 "primary": {
@@ -23049,7 +23071,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Mary",
-                "middleInitial": "",
+                "middleInitial": "P.",
                 "familyName": "Czerwinski",
                 "email": "marycz@microsoft.com",
                 "primary": {
@@ -23247,7 +23269,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Tom",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Rodden",
                 "email": "tar@Cs.Nott.AC.UK",
                 "primary": {
@@ -23338,7 +23360,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Georgios",
-                "middleInitial": "",
+                "middleInitial": "N.",
                 "familyName": "Marentakis",
                 "email": "marentakis@iem.at",
                 "primary": {
@@ -23521,7 +23543,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Daniel",
-                "middleInitial": "",
+                "middleInitial": "J",
                 "familyName": "Wigdor",
                 "email": "daniel@dgp.toronto.edu",
                 "primary": {
@@ -23679,7 +23701,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Alex",
-                "middleInitial": "",
+                "middleInitial": "M",
                 "familyName": "Grau",
                 "email": "alexgrau@gmail.com",
                 "primary": {
@@ -23880,7 +23902,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Nicholas",
-                "middleInitial": "",
+                "middleInitial": "Edward",
                 "familyName": "Gillian",
                 "email": "ngillian@media.mit.edu",
                 "primary": {
@@ -24306,7 +24328,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Lauren",
-                "middleInitial": "",
+                "middleInitial": "E.",
                 "familyName": "Scissors",
                 "email": "l-scissors@northwestern.edu",
                 "primary": {
@@ -24398,7 +24420,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "William",
-                "middleInitial": "",
+                "middleInitial": "T",
                 "familyName": "Odom",
                 "email": "wodom@cs.cmu.edu",
                 "primary": {
@@ -24464,7 +24486,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "David",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Kirk",
                 "email": "david.kirk@newcastle.ac.uk",
                 "primary": {
@@ -24530,7 +24552,7 @@
                 "venue": "paper",
                 "rank": 7,
                 "givenName": "Jodi",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Forlizzi",
                 "email": "forlizzi@cs.cmu.edu",
                 "primary": {
@@ -24648,7 +24670,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Ann",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Blandford",
                 "email": "a.blandford@ucl.ac.uk",
                 "primary": {
@@ -24695,7 +24717,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "André",
-                "middleInitial": "",
+                "middleInitial": "Tiago",
                 "familyName": "Pereira",
                 "email": "a.abelhopereira@gmail.com",
                 "primary": {
@@ -24874,7 +24896,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Joshua",
-                "middleInitial": "",
+                "middleInitial": "M",
                 "familyName": "Hailpern",
                 "email": "joshua@hailpern.com",
                 "primary": {
@@ -25097,7 +25119,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Kate",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Vaisutis",
                 "email": "kate@planofattack.com.au",
                 "primary": {
@@ -25257,10 +25279,10 @@
                 "familyName": "Greis",
                 "email": "greismm@studi.informatik.uni-stuttgart.de",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of Stuttgart",
-                    "city": "Stuttgart",
-                    "country": "Germany"
+                    "dept": "University of Stuttgart, Stuttgart, Germany",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -25363,7 +25385,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Jonna",
-                "middleInitial": "",
+                "middleInitial": "R",
                 "familyName": "Häkkilä",
                 "email": "jonna.hakkila@gmail.com",
                 "primary": {
@@ -26029,7 +26051,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Kathy",
-                "middleInitial": "",
+                "middleInitial": "K",
                 "familyName": "Baxter",
                 "email": "kathyb@google.com",
                 "primary": {
@@ -26141,7 +26163,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Jessica",
-                "middleInitial": "",
+                "middleInitial": "Annette",
                 "familyName": "Pater",
                 "email": "pater@gatech.edu",
                 "primary": {
@@ -26185,7 +26207,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Elizabeth",
-                "middleInitial": "",
+                "middleInitial": "D",
                 "familyName": "Mynatt",
                 "email": "mynatt@cc.gatech.edu",
                 "primary": {
@@ -26207,7 +26229,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Amy",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Bruckman",
                 "email": "asb@cc.gatech.edu",
                 "primary": {
@@ -26228,7 +26250,7 @@
         "contactEmail": "pater@gatech.edu",
         "contactFirstName": "Jessica",
         "contactLastName": "Pater",
-        "keywords": "online community, design, case study, third place",
+        "keywords": "online community; design; case study; third place",
         "venue": "paper",
         "subtype": "Note",
         "session": "s195",
@@ -26251,7 +26273,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Maia",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Jacobs",
                 "email": "mjacobs30@gatech.edu",
                 "primary": {
@@ -26295,7 +26317,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Elizabeth",
-                "middleInitial": "",
+                "middleInitial": "D",
                 "familyName": "Mynatt",
                 "email": "mynatt@cc.gatech.edu",
                 "primary": {
@@ -26384,7 +26406,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Daniel",
-                "middleInitial": "",
+                "middleInitial": "J",
                 "familyName": "Wigdor",
                 "email": "daniel@dgp.toronto.edu",
                 "primary": {
@@ -26419,7 +26441,7 @@
     {
         "id": "pn1325",
         "title": "Human Values in Curating a Human Rights Media Archive",
-        "abstract": "Cultural institutions, such as museums, often curate politically and ethically sensitive materials. Increasingly, Internet-enabled, digital technology intersects with these curatorial practices offering new opportunities for public and scholarly engagement. We report on a case study of human rights media archiving at a genocide memorial centre in Rwanda, motivated by interests in ICT support to memorialisation practices. Through an analysis of our discussions with staff about their work, we report on how accounts of the Rwandan Genocide are being captured and curated to support the centre’s humanitarian agenda and associated values. We identify transferable curatorial concerns for human rights media communication amongst scholarly networks and public audiences worldwide, elucidating interaction design challenges for supportive ICT and contributing to HCI discourses on value sensitive design and cultural engagement with sensitive materials. ",
+        "abstract": "Cultural institutions, such as museums, often curate politically and ethically sensitive materials. Increasingly, Internet-enabled, digital technology intersects with these curatorial practices offering new opportunities for public and scholarly engagement. We report on a case study of human rights media archiving at a genocide memorial centre in Rwanda, motivated by our interests in ICT support to memorialisation practices. Through an analysis of our discussions with staff about their work, we report on how accounts of the Rwandan Genocide are being captured and curated to support the centre’s humanitarian agenda and associated values. We identify transferable curatorial concerns for human rights media communication amongst scholarly networks and public audiences worldwide, elucidating interaction design challenges for supportive ICT and contributing to HCI discourses on Value Sensitive Design and cultural engagement with sensitive materials.",
         "acmLink": "",
         "authors": [
             {
@@ -26428,14 +26450,14 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Abigail",
-                "middleInitial": "",
+                "middleInitial": "C",
                 "familyName": "Durrant",
                 "email": "abigail.durrant@newcastle.ac.uk",
                 "primary": {
                     "dept": "Culture Lab",
                     "institution": "Newcastle University",
                     "city": "Newcastle Upon Tyne",
-                    "country": ""
+                    "country": "United Kingdom"
                 },
                 "secondary": {
                     "dept": "",
@@ -26701,7 +26723,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Tejinder",
-                "middleInitial": "",
+                "middleInitial": "K",
                 "familyName": "Judge",
                 "email": "tkjudge@gmail.com",
                 "primary": {
@@ -26769,7 +26791,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Daniel",
-                "middleInitial": "",
+                "middleInitial": "J",
                 "familyName": "Wigdor",
                 "email": "daniel@dgp.toronto.edu",
                 "primary": {
@@ -26836,7 +26858,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Michael",
-                "middleInitial": "",
+                "middleInitial": "A.",
                 "familyName": "Correll",
                 "email": "mcorrell@cs.wisc.edu",
                 "primary": {
@@ -26894,7 +26916,7 @@
     {
         "id": "pn1341",
         "title": "Goals and Perceived Success of Online Enterprise Communities: What Is Important to Leaders & Members?",
-        "abstract": "Online communities are successful only if they achieve their goals, but there has been little direct study of goals. We analyze novel data characterizing the goals of enterprise online communities, assessing the importance of goals for leaders, how goals influence member perceptions of community value, and how goals relate to success measures proposed in the literature. We find that most communities have multiple goals and common goals are learning, reuse of resources, collaboration, networking, influencing change, and innovation. Leaders and members agree that all of these goals are at least moderately important. However, leader and member perceptions of success on goals do not align with each other, or with commonly used behavioral success measures. We conclude that simple behavioral measures and leader perceptions are not good success metrics, and propose alternatives based on specific goals members and leaders judge most important.",
+        "abstract": "Online communities are successful only if they achieve their goals, but there has been little direct study of goals. We analyze novel data characterizing the goals of enterprise online communities, assessing the importance of goals for leaders, how goals influence member perceptions of community value, and how goals relate to success measures proposed in the literature. We find that most communities have multiple goals and common goals are learning, reuse of resources, collaboration, networking, influencing change, and innovation. Leaders and members agree that all of these goals are important, but their perceptions of success on goals do not align with each other, or with commonly used behavioral success measures. We conclude that simple behavioral measures and leader perceptions are not good success metrics, and propose alternatives based on specific goals members and leaders judge most important.",
         "acmLink": "",
         "authors": [
             {
@@ -26903,7 +26925,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Tara",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Matthews",
                 "email": "tlmatthe@us.ibm.com",
                 "primary": {
@@ -27308,7 +27330,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Mary",
-                "middleInitial": "",
+                "middleInitial": "P.",
                 "familyName": "Czerwinski",
                 "email": "marycz@microsoft.com",
                 "primary": {
@@ -27330,7 +27352,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Paul",
-                "middleInitial": "",
+                "middleInitial": "R",
                 "familyName": "Johns",
                 "email": "pauljoh@microsoft.com",
                 "primary": {
@@ -27491,7 +27513,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Celine",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Latulipe",
                 "email": "clatulip@uncc.edu",
                 "primary": {
@@ -28093,7 +28115,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Robert",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Kraut",
                 "email": "robert.kraut@cmu.edu",
                 "primary": {
@@ -28252,7 +28274,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Ari",
-                "middleInitial": "",
+                "middleInitial": "MJ",
                 "familyName": "Hautasaari",
                 "email": "ari.hautasaari@lab.ntt.co.jp",
                 "primary": {
@@ -28385,7 +28407,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Steven",
-                "middleInitial": "A",
+                "middleInitial": "",
                 "familyName": "Sloman",
                 "email": "steven_sloman@brown.edu",
                 "primary": {
@@ -28522,7 +28544,7 @@
         "contactEmail": "mirad@adobe.com",
         "contactFirstName": "Mira",
         "contactLastName": "Dontcheva",
-        "keywords": "Crowdsourcing;training;games.",
+        "keywords": "Crowdsourcing; training; games",
         "venue": "paper",
         "subtype": "Paper",
         "session": "s141",
@@ -28924,7 +28946,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Austin",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Toombs",
                 "email": "altoombs@indiana.edu",
                 "primary": {
@@ -29091,7 +29113,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Diana",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "MacLean",
                 "email": "malcdi@stanford.edu",
                 "primary": {
@@ -29181,7 +29203,7 @@
                 "type": "author",
                 "venue": "paper",
                 "rank": 2,
-                "givenName": "Yeaseul",
+                "givenName": "Yea-Seul",
                 "middleInitial": "",
                 "familyName": "Kim",
                 "email": "yeaseul1@uw.edu",
@@ -29406,7 +29428,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Henry",
-                "middleInitial": "",
+                "middleInitial": "J",
                 "familyName": "Gardner",
                 "email": "Henry.Gardner@anu.edu.au",
                 "primary": {
@@ -29478,7 +29500,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Amanda L.",
-                "middleInitial": "",
+                "middleInitial": "L.",
                 "familyName": "Hughes",
                 "email": "amanda.hughes@usu.edu",
                 "primary": {
@@ -29500,7 +29522,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Lise A.",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "St. Denis",
                 "email": "lise.st.denis@colorado.edu",
                 "primary": {
@@ -29544,7 +29566,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Kenneth M.",
-                "middleInitial": "",
+                "middleInitial": "M.",
                 "familyName": "Anderson",
                 "email": "kena@cs.colorado.edu",
                 "primary": {
@@ -29613,7 +29635,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Jessica",
-                "middleInitial": "",
+                "middleInitial": "R",
                 "familyName": "Hullman",
                 "email": "jhullman@umich.edu",
                 "primary": {
@@ -29838,7 +29860,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Daniel",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Afergan",
                 "email": "afergan@gmail.com",
                 "primary": {
@@ -30193,7 +30215,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Anirudha",
-                "middleInitial": "",
+                "middleInitial": "N",
                 "familyName": "Joshi",
                 "email": "anirudha@iitb.ac.in",
                 "primary": {
@@ -30504,7 +30526,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Patrick",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Carrington",
                 "email": "carpat1@umbc.edu",
                 "primary": {
@@ -30803,7 +30825,7 @@
     {
         "id": "pn1490",
         "title": "Expert Voices in Echo Chambers: Effects of Source Expertise Indicators on Exposure to Diverse Opinions",
-        "abstract": "We studied how a source expertise indicator impacted users’ information seeking behavior when using a system aggregating diverse opinions, and how it interacted with a source position indicator to shape users’ selectivity of information. We found that, for both attitude consistent and inconsistent information, the expertise indicator increased the selection of sources indicated to have high expertise and decreased that of low expertise. Moreover, when both source expertise and position indicators were present, users’ selective exposure tendency, i.e., preferential selection of attitude consistent sources over inconsistent ones, decreased among expert sources. Moreover, we found that the expertise indicator could serve the purpose of encouraging common ground seeking with different others by increasing the agreement with, and perceived expertise of inconsistent sources indicated to be experts. Design implications for moderating selective exposure by highlighting the utility of dissonant information were discussed.",
+        "abstract": "We studied how a source expertise indicator impacted users’ information seeking behavior when using a system aggregating diverse opinions, and how it interacted with a source position indicator to shape users’ selectivity of information. We found that, for both attitude consistent and inconsistent information, the expertise indicator increased the selection of sources indicated to have high expertise and decreased that of low expertise. Moreover, when both source expertise and position indicators were present, users’ selective exposure tendency, i.e., preferential selection of attitude consistent sources over inconsistent ones, decreased among expert sources. Moreover, we found that the expertise indicator could benefit encouraging common ground seeking with different others by increasing the agreement with, and perceived expertise of inconsistent sources indicated to be experts. Design implications for moderating selective exposure by highlighting the utility of dissonant information were discussed.",
         "acmLink": "",
         "authors": [
             {
@@ -31037,29 +31059,7 @@
                 "familyName": "Sun",
                 "email": "davidsun@cs.berkeley.edu",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of California, Berkeley",
-                    "city": "Berkeley",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth3490",
-                "type": "author",
-                "venue": "paper",
-                "rank": 2,
-                "givenName": "John",
-                "middleInitial": "",
-                "familyName": "Canny",
-                "email": "jfc@cs.berkeley.edu",
-                "primary": {
-                    "dept": "EECS Department",
+                    "dept": "EECS",
                     "institution": "University of California, Berkeley",
                     "city": "Berkeley",
                     "country": "United States"
@@ -31075,15 +31075,37 @@
                 "id": "auth20553",
                 "type": "author",
                 "venue": "paper",
-                "rank": 3,
+                "rank": 2,
                 "givenName": "Pablo",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Paredes",
                 "email": "paredes@eecs.berkeley.edu",
                 "primary": {
                     "dept": "",
                     "institution": "Electrical Engineering and Computer Science Department",
                     "city": "Berkeley ",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth3490",
+                "type": "author",
+                "venue": "paper",
+                "rank": 3,
+                "givenName": "John",
+                "middleInitial": "F",
+                "familyName": "Canny",
+                "email": "jfc@cs.berkeley.edu",
+                "primary": {
+                    "dept": "Berkeley Institute of Design",
+                    "institution": "University of California, Berkeley",
+                    "city": "Berkeley",
                     "country": "United States"
                 },
                 "secondary": {
@@ -31123,7 +31145,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Laura",
-                "middleInitial": "",
+                "middleInitial": "Jane",
                 "familyName": "Benton",
                 "email": "l.benton@ioe.ac.uk",
                 "primary": {
@@ -31258,7 +31280,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Elizabeth",
-                "middleInitial": "",
+                "middleInitial": "M",
                 "familyName": "Bonsignore",
                 "email": "ebonsign@umd.edu",
                 "primary": {
@@ -31324,7 +31346,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Derek",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Hansen",
                 "email": "dlhansen@byu.edu",
                 "primary": {
@@ -31335,9 +31357,9 @@
                 },
                 "secondary": {
                     "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "institution": "Brigham Young University",
+                    "city": "Provo",
+                    "country": "United States"
                 }
             },
             {
@@ -31345,7 +31367,7 @@
                 "type": "author",
                 "venue": "paper",
                 "rank": 5,
-                "givenName": "kari kraus",
+                "givenName": "kari",
                 "middleInitial": "",
                 "familyName": "kraus",
                 "email": "karimkraus@gmail.com",
@@ -31849,7 +31871,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Gary",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Burnett",
                 "email": "gary.burnett@nottingham.ac.uk",
                 "primary": {
@@ -32907,7 +32929,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Stephen",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Brewster",
                 "email": "stephen.brewster@glasgow.ac.uk",
                 "primary": {
@@ -33000,7 +33022,7 @@
                 "givenName": "Volker",
                 "middleInitial": "",
                 "familyName": "Wulf",
-                "email": "volker.wulf@fit.fraunhofer.de",
+                "email": "volker.wulf@uni-siegen.de",
                 "primary": {
                     "dept": "",
                     "institution": "University of Siegen",
@@ -33065,7 +33087,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Charlene",
-                "middleInitial": "",
+                "middleInitial": "I",
                 "familyName": "Jennett",
                 "email": "charlene.jennett@ucl.ac.uk",
                 "primary": {
@@ -33087,7 +33109,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Ann",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Blandford",
                 "email": "a.blandford@ucl.ac.uk",
                 "primary": {
@@ -33131,7 +33153,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Anna",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Cox",
                 "email": "anna.cox@ucl.ac.uk",
                 "primary": {
@@ -33199,7 +33221,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "James",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Fogarty",
                 "email": "jfogarty@cs.washington.edu",
                 "primary": {
@@ -33787,7 +33809,7 @@
                 "venue": "paper",
                 "rank": 7,
                 "givenName": "Nadia",
-                "middleInitial": "",
+                "middleInitial": "Berthouze",
                 "familyName": "Bianchi-Berthouze",
                 "email": "n.berthouze@ucl.ac.uk",
                 "primary": {
@@ -34236,7 +34258,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Martin",
-                "middleInitial": "",
+                "middleInitial": "R.",
                 "familyName": "Gibbs",
                 "email": "martinrg@unimelb.edu.au",
                 "primary": {
@@ -34556,9 +34578,9 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Kami",
-                "middleInitial": "",
+                "middleInitial": "E.",
                 "familyName": "Vaniea",
-                "email": "kami@vaniea.com",
+                "email": "vaniea@msu.edu",
                 "primary": {
                     "dept": "",
                     "institution": "Michigan State University",
@@ -36440,7 +36462,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Siân",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Lindley",
                 "email": "sianl@microsoft.com",
                 "primary": {
@@ -36664,7 +36686,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Tia",
-                "middleInitial": "",
+                "middleInitial": "R",
                 "familyName": "Shelley",
                 "email": "calitastic@gmail.com",
                 "primary": {
@@ -36686,7 +36708,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Leilah",
-                "middleInitial": "",
+                "middleInitial": "B.",
                 "familyName": "Lyons",
                 "email": "leilah@gmail.com",
                 "primary": {
@@ -37221,7 +37243,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Jon",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Froehlich",
                 "email": "jonf@cs.umd.edu",
                 "primary": {
@@ -37311,7 +37333,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "David",
-                "middleInitial": "",
+                "middleInitial": "William",
                 "familyName": "Randall",
                 "email": "D.Randall@mmu.ac.uk",
                 "primary": {
@@ -37799,7 +37821,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Dustin",
-                "middleInitial": "",
+                "middleInitial": "E.R.",
                 "familyName": "Freeman",
                 "email": "dustin@cs.toronto.edu",
                 "primary": {
@@ -37997,7 +38019,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Teemu",
-                "middleInitial": "",
+                "middleInitial": "T",
                 "familyName": "Ahmaniemi",
                 "email": "teemu.ahmaniemi@nokia.com",
                 "primary": {
@@ -38150,7 +38172,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "David",
-                "middleInitial": "",
+                "middleInitial": "William",
                 "familyName": "Randall",
                 "email": "daverandall2008@gmail.com",
                 "primary": {
@@ -38219,7 +38241,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Regan",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Mandryk",
                 "email": "regan@cs.usask.ca",
                 "primary": {
@@ -38472,7 +38494,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Lora",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Oehlberg",
                 "email": "lora.oehlberg@inria.fr",
                 "primary": {
@@ -38564,7 +38586,7 @@
                 "familyName": "Blair",
                 "email": "lb@comp.lancs.ac.uk",
                 "primary": {
-                    "dept": "",
+                    "dept": "School of Computing and Communications",
                     "institution": "Lancaster University",
                     "city": "Lancaster",
                     "country": "United Kingdom"
@@ -38671,7 +38693,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Stephen",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Brewster",
                 "email": "stephen.brewster@glasgow.ac.uk",
                 "primary": {
@@ -38693,7 +38715,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "John",
-                "middleInitial": "",
+                "middleInitial": "H",
                 "familyName": "Williamson",
                 "email": "jhw@dcs.gla.ac.uk",
                 "primary": {
@@ -38784,7 +38806,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Loren",
-                "middleInitial": "",
+                "middleInitial": "G",
                 "familyName": "Terveen",
                 "email": "terveen@cs.umn.edu",
                 "primary": {
@@ -38832,7 +38854,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Kate",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Vaisutis",
                 "email": "kate@planofattack.com.au",
                 "primary": {
@@ -39000,7 +39022,7 @@
     },
     {
         "id": "pn1932",
-        "title": "Long Tail TV revisited: From ordinary camera phone use to Pro-Am video production",
+        "title": "Long Tail TV Revisited: From Ordinary Camera Phone use to Pro-Am Video Production",
         "abstract": "Pro-Am live video producers broadcast events on a regular basis. They are here selected for an ethnographic study since their continuous content generation can teach us something of what it takes for amateurs, who currently struggle with mastering the video medium, to become proficient producers. We learn from media theory that Pro-Ams are distinguished from professionals in terms of inherent skills and identities, and have therefore focused on these characteristics. We add to this research by showing on-going challenges that the former face in their production, i.e. how their learning practices, such as learning through instructions, are situated and related to particular settings. Learning and development of skills were done as organizations, rather than as individuals. Furthermore, the recurrent nature of both events and broadcasts appears to be an important condition for establishing the terms needed to carry out a production, and to learn the skills of a producer. This understanding may explain in part why accounts in previous research, of single users struggling with the affordances of live video, point to such diffi¬culties in mastering the medium. The findings guide design to better support activities contiguous with the set-up of the production, rather than the broadcast per se. ",
         "acmLink": "",
         "authors": [
@@ -39142,7 +39164,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Daniel",
-                "middleInitial": "",
+                "middleInitial": "J",
                 "familyName": "Wigdor",
                 "email": "daniel@dgp.toronto.edu",
                 "primary": {
@@ -39368,7 +39390,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Christina",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Masden",
                 "email": "christinamasden@gatech.edu",
                 "primary": {
@@ -39412,7 +39434,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Rebecca",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Grinter",
                 "email": "beki@cc.gatech.edu",
                 "primary": {
@@ -39957,7 +39979,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "David",
-                "middleInitial": "",
+                "middleInitial": "E.",
                 "familyName": "Kieras",
                 "email": "kieras@umich.edu",
                 "primary": {
@@ -39979,7 +40001,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Anthony",
-                "middleInitial": "",
+                "middleInitial": "J.",
                 "familyName": "Hornof",
                 "email": "hornof@cs.uoregon.edu",
                 "primary": {
@@ -40272,7 +40294,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Niklas",
-                "middleInitial": "",
+                "middleInitial": "L. E.",
                 "familyName": "Elmqvist",
                 "email": "elm@purdue.edu",
                 "primary": {
@@ -40450,7 +40472,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Anthony",
-                "middleInitial": "",
+                "middleInitial": "D",
                 "familyName": "Whitehead",
                 "email": "anthony_whitehead@carleton.ca",
                 "primary": {
@@ -40630,7 +40652,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Stuart",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Taylor",
                 "email": "stuart@microsoft.com",
                 "primary": {
@@ -41444,7 +41466,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Chris",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "North",
                 "email": "north@cs.vt.edu",
                 "primary": {
@@ -41512,7 +41534,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Scott",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Hudson",
                 "email": "scott.hudson@cs.cmu.edu",
                 "primary": {
@@ -41992,7 +42014,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Joseph",
-                "middleInitial": "",
+                "middleInitial": "Matthew",
                 "familyName": "Mullenbach",
                 "email": "jmullenbach@gmail.com",
                 "primary": {
@@ -42329,7 +42351,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Klaus",
-                "middleInitial": "",
+                "middleInitial": "H.",
                 "familyName": "Hinrichs",
                 "email": "khh@uni-muenster.de",
                 "primary": {
@@ -42551,7 +42573,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Tara",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Matthews",
                 "email": "tlmatthe@us.ibm.com",
                 "primary": {
@@ -43331,7 +43353,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Siân",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Lindley",
                 "email": "sianl@microsoft.com",
                 "primary": {
@@ -44013,7 +44035,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Pamela",
-                "middleInitial": "",
+                "middleInitial": "J",
                 "familyName": "Wisniewski",
                 "email": "pam@pamspam.com",
                 "primary": {
@@ -44527,7 +44549,7 @@
         "contactEmail": "uclee@kaist.edu",
         "contactFirstName": "Uichin",
         "contactLastName": "Lee",
-        "keywords": "Smartphone Overuse, Measurement",
+        "keywords": "Smartphone Overuse; Measurement",
         "venue": "paper",
         "subtype": "Paper",
         "session": "s201",
@@ -44650,7 +44672,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Toni-Jan Keith",
-                "middleInitial": "",
+                "middleInitial": "Palma",
                 "familyName": "Monserrat",
                 "email": "tjmonsi@gmail.com",
                 "primary": {
@@ -46195,7 +46217,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Robert",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Kraut",
                 "email": "robert.kraut@cmu.edu",
                 "primary": {
@@ -46351,7 +46373,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Mark",
-                "middleInitial": "",
+                "middleInitial": "W.",
                 "familyName": "Newman",
                 "email": "mwnewman@umich.edu",
                 "primary": {
@@ -46373,7 +46395,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Jodi",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Forlizzi",
                 "email": "forlizzi@cs.cmu.edu",
                 "primary": {
@@ -46493,7 +46515,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Seth",
-                "middleInitial": "",
+                "middleInitial": "E",
                 "familyName": "Hunter",
                 "email": "hunters@mit.edu",
                 "primary": {
@@ -46559,7 +46581,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Kori",
-                "middleInitial": "",
+                "middleInitial": "M",
                 "familyName": "Inkpen",
                 "email": "kori@microsoft.com",
                 "primary": {
@@ -46670,7 +46692,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Gail",
-                "middleInitial": "",
+                "middleInitial": "C",
                 "familyName": "Murphy",
                 "email": "murphy@cs.ubc.ca",
                 "primary": {
@@ -46737,7 +46759,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Wolfgang",
-                "middleInitial": "",
+                "middleInitial": "H",
                 "familyName": "Reitberger",
                 "email": "wolfgang.reitberger@tuwien.ac.at",
                 "primary": {
@@ -46920,7 +46942,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "John",
-                "middleInitial": "",
+                "middleInitial": "R",
                 "familyName": "Porter",
                 "email": "jrporter@uw.edu",
                 "primary": {
@@ -46964,7 +46986,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Julie",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Kientz",
                 "email": "jkientz@uw.edu",
                 "primary": {
@@ -47052,7 +47074,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Steven",
-                "middleInitial": "",
+                "middleInitial": "D.",
                 "familyName": "Schwaitzberg",
                 "email": "sschwaitzberg@challiance.org",
                 "primary": {
@@ -47162,7 +47184,7 @@
                 "type": "author",
                 "venue": "paper",
                 "rank": 4,
-                "givenName": "Steve",
+                "givenName": "Stephen",
                 "middleInitial": "T",
                 "familyName": "Ricken",
                 "email": "steve.ricken@gmail.com",
@@ -47184,7 +47206,7 @@
                 "type": "author",
                 "venue": "paper",
                 "rank": 5,
-                "givenName": "Quentin (Gad)",
+                "givenName": "Quentin",
                 "middleInitial": "",
                 "familyName": "Jones",
                 "email": "quentin.jones@njit.edu",
@@ -47322,7 +47344,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Dana",
-                "middleInitial": "",
+                "middleInitial": "N",
                 "familyName": "Ruggiero",
                 "email": "d.ruggiero@bathspa.ac.uk",
                 "primary": {
@@ -47373,9 +47395,9 @@
                 "email": "jieqi@mit.edu",
                 "primary": {
                     "dept": "",
-                    "institution": "Massachusetts Institute of Technology",
+                    "institution": "MIT Media Lab",
                     "city": "Cambridge",
-                    "country": "United States"
+                    "country": "02139"
                 },
                 "secondary": {
                     "dept": "",
@@ -47394,7 +47416,7 @@
                 "familyName": "Buechley",
                 "email": "leah@media.mit.edu",
                 "primary": {
-                    "dept": "",
+                    "dept": "MIT Media Lab",
                     "institution": "Massachusetts Institute of Technology",
                     "city": "Cambridge",
                     "country": "United States"
@@ -47750,7 +47772,7 @@
                 "venue": "paper",
                 "rank": 5,
                 "givenName": "Niklas",
-                "middleInitial": "",
+                "middleInitial": "L. E.",
                 "familyName": "Elmqvist",
                 "email": "elm@purdue.edu",
                 "primary": {
@@ -47929,7 +47951,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Charlotte",
-                "middleInitial": "",
+                "middleInitial": "L",
                 "familyName": "Robinson",
                 "email": "charlotte.robinson@open.ac.uk",
                 "primary": {
@@ -48111,7 +48133,7 @@
         "contactEmail": "yuexingluo@gmail.com",
         "contactFirstName": "Yuexing",
         "contactLastName": "Luo",
-        "keywords": "Goal crossing; direct touch input; target pointing; direct stylus input; indirect stylus input",
+        "keywords": "Crossing; goal crossing; pointing; target selection; touch input; multi-touch; stylus input; pen input; Fitts; FFitts",
         "venue": "paper",
         "subtype": "Paper",
         "session": "s113",
@@ -48301,7 +48323,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Joshua",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Tan",
                 "email": "joshua.tan@ndsu.edu",
                 "primary": {
@@ -48482,7 +48504,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Justin",
-                "middleInitial": "",
+                "middleInitial": "B",
                 "familyName": "Cranshaw",
                 "email": "jcransh@cs.cmu.edu",
                 "primary": {
@@ -48660,7 +48682,7 @@
     {
         "id": "pn2417",
         "title": "Faces Engage Us: Photos with Faces Attract More Likes and Comments on Instagram",
-        "abstract": "Photos are becoming prominent means of communication online. Despite photos' pervasive presence in social media and online world, we know little about how people interact and engage with their content. Understanding how photo content might signify engagement, can impact both science and design, influencing \\ production and distribution. One common type of photo content that is shared on social media, is the photos of people.  \\ From studies of offline behavior, we know that human faces are powerful channels of non-verbal communication. In this paper, we study this behavioral phenomena online. We ask how \\ presence of a face, it's age and gender might impact social engagement on the \\ photo. We use a corpus of 1M Instagram images and organize our study around two \\ social engagement feedback factors, likes and comments. Our results show that photos with faces are 38% more likely to \\ receive likes and 32% more likely to receive comments, even after \\ controlling for social network reach and activity.  We find, however, \\ that the number of faces, their age and gender do not have an \\ effect. This work presents the first results on how photos with human faces relate to engagement on large scale image \\ sharing communities.  In addition to contributing to the research \\ around online user behavior, our findings offer a new line of future \\ work using visual analysis.",
+        "abstract": "Photos are becoming prominent means of communication online. Despite photos' pervasive presence in social media and online world, we know little about how people interact and engage with their content. Understanding how photo content might signify engagement, can impact both science and design, influencing \\ production and distribution. One common type of photo content that is shared on social media, is the photos of people.  \\ From studies of offline behavior, we know that human faces are powerful channels of non-verbal communication. In this paper, we study this behavioral phenomena online. We ask how \\ presence of a face, it's age and gender might impact social engagement on the \\ photo. We use a corpus of 1 million Instagram images and organize our study around two \\ social engagement feedback factors, likes and comments. Our results show that photos with faces are 38% more likely to \\ receive likes and 32% more likely to receive comments, even after \\ controlling for social network reach and activity.  We find, however, \\ that the number of faces, their age and gender do not have an \\ effect. This work presents the first results on how photos with human faces relate to engagement on large scale image \\ sharing communities.  In addition to contributing to the research \\ around online user behavior, our findings offer a new line of future \\ work using visual analysis.",
         "acmLink": "",
         "authors": [
             {
@@ -48691,7 +48713,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "David",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Shamma",
                 "email": "aymans@acm.org",
                 "primary": {
@@ -48734,7 +48756,7 @@
         "contactEmail": "saeideh@gatech.edu",
         "contactFirstName": "Saeideh",
         "contactLastName": "Bakhshi",
-        "keywords": "mobile, photos, Instagram, faces, detection, engagement",
+        "keywords": "mobile; photo; Instagram; faces; face detection; engagement; age; demographics; gender; content; image; social media; image sharing community",
         "venue": "paper",
         "subtype": "Paper",
         "session": "s198",
@@ -48829,7 +48851,7 @@
                 "venue": "paper",
                 "rank": 4,
                 "givenName": "Tracy",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Hammond",
                 "email": "hammond@cs.tamu.edu",
                 "primary": {
@@ -49304,7 +49326,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Joel",
-                "middleInitial": "",
+                "middleInitial": "R.",
                 "familyName": "Brandt",
                 "email": "joel.brandt@adobe.com",
                 "primary": {
@@ -49862,7 +49884,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Tom",
-                "middleInitial": "",
+                "middleInitial": "Yu",
                 "familyName": "Ouyang",
                 "email": "t.y.ouyang@gmail.com",
                 "primary": {
@@ -50041,7 +50063,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Lada",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Adamic",
                 "email": "ladamic@fb.com",
                 "primary": {
@@ -50671,7 +50693,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Irina",
-                "middleInitial": "",
+                "middleInitial": "A",
                 "familyName": "Shklovski",
                 "email": "irsh@itu.dk",
                 "primary": {
@@ -50736,7 +50758,7 @@
                 "type": "author",
                 "venue": "paper",
                 "rank": 4,
-                "givenName": "Höskuldur ",
+                "givenName": "Höskuldur",
                 "middleInitial": "",
                 "familyName": "Borgthorsson",
                 "email": "hoskborg@gmail.com",
@@ -50758,7 +50780,7 @@
         "contactEmail": "irsh@itu.dk",
         "contactFirstName": "Irina",
         "contactLastName": "Shklovski",
-        "keywords": "Mobile devices, data privacy, bodily integrity, learned helplessness",
+        "keywords": "Mobile devices; data privacy; bodily integrity; learned helplessness; creepiness",
         "venue": "paper",
         "subtype": "Paper",
         "session": "s157",
@@ -50787,19 +50809,19 @@
         "acmLink": "",
         "authors": [
             {
-                "id": "auth39251",
+                "id": "auth14794",
                 "type": "author",
                 "venue": "paper",
                 "rank": 1,
-                "givenName": "Greg",
-                "middleInitial": "",
+                "givenName": "J.",
+                "middleInitial": "Gregory",
                 "familyName": "Trafton",
-                "email": "trafton@mac.com",
+                "email": "greg.trafton@nrl.navy.mil",
                 "primary": {
-                    "dept": "AI Center",
-                    "institution": "Naval Research Laboratory",
-                    "city": "Washington",
-                    "country": "United States"
+                    "dept": "AI Center, Naval Research Laboratory, Washington, DC, United States",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -50814,7 +50836,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Raj",
-                "middleInitial": "",
+                "middleInitial": "M.",
                 "familyName": "Ratwani",
                 "email": "raj.ratwani@medicalhfe.org",
                 "primary": {

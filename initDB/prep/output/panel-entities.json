@@ -242,7 +242,7 @@
     {
         "id": "pan106",
         "title": "Electronic Privacy and Surveillance",
-        "abstract": "",
+        "abstract": "The confluence of big data, data analytics, and connected devices is facilitating electronic surveillance and compromising privacy in unprecedented ways. This panel brings together voices with a diverse set of experiences and interests to discuss electronic privacy and surveillance, and the contributions the human-computer interaction community can make in this arena. Topics will include the usability of privacy tools, how to design interactive technologies with privacy as a primary consideration while incorporating user-centered design practices, and how to manage the technical complexity involved in privacy tools while enabling users to make wise choices.",
         "acmLink": "",
         "authors": [
             {
@@ -354,7 +354,7 @@
         "contactEmail": "juanpablo-hourcade@uiowa.edu",
         "contactFirstName": "Juan Pablo",
         "contactLastName": "Hourcade",
-        "keywords": "",
+        "keywords": "Privacy; surveillance; spying; cryptography; usable privacy and security",
         "venue": "panel",
         "session": "s-panel3",
         "communities": []

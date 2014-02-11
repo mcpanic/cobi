@@ -2,7 +2,7 @@
     {
         "id": "case115",
         "title": "Measuring Product “Coolness” -- Developing a Measurement Instrument",
-        "abstract": "",
+        "abstract": "Cool products provide a leap in value and they increase a company’s market share. The widespread adoption of iOS and Android devices resulted in a radical change in the role of technology in people’s lives. And anecdotally people exclaimed about how “cool” their devices were; “I can’t go back” to what I had before and “I can’t stop talking about it—it’s so cool!” \\  \\ In 2010 InContext Design launched The Cool Project to understand the underlying principles which make a product “cool.” The research goal was to discover the core drivers of the cool user experience. This consumer research used qualitative research to identify seven core constructs associated with “coolness” that appeared independently of device or software or even technology product. In 2011 SAP became interested in developing a metric to measure “coolness” and in a joint research effort with InContext Design validated the constructs with business users and co-designed a cool metric. The final result is a repeatable process for measuring cool through a quick survey, the results of which provide implications to product teams on how to improve their products to increase “coolness”.  \\  \\ This case study outlines the process of using qualitative data to design a valid quantitative measure.  \\ ",
         "acmLink": "",
         "authors": [
             {
@@ -174,31 +174,31 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This case study outlines the process that used qualitative data to design a valid quantitative measure for what makes a product “cool”, providing implications on how to improve a product.",
         "contactEmail": "shelley@incontextdesign.com",
         "contactFirstName": "Shelley",
         "contactLastName": "Wood",
-        "keywords": "",
+        "keywords": "Cool; innovation; transformative design; measures; metrics; performance",
         "venue": "casestudy",
         "session": "",
         "communities": []
     },
     {
         "id": "case118",
-        "title": "Quick and Participatory: Adopting Users' Design to Improve Mobile App",
-        "abstract": "",
+        "title": "Quick and Participatory: Adopting Users' Designs to Improve a Mobile App",
+        "abstract": "When improving small area or minor functions in mobile app, user research is often skipped or dismissed. In our approach, we suggest a method which combines cafe study and participatory design to capture users’ needs quickly and clearly. We have conducted a 3-day user research with 44 participants in local cafes and asked them to make prototype UI of their ideal design. As a result of the research, we have found 3 patterns in users’ designs and developed prototyping with those concepts. We expect that this method would be useful when improving specific features with limited time and resources.",
         "acmLink": "",
         "authors": [
             {
-                "id": "auth39719",
+                "id": "auth42508",
                 "type": "author",
                 "venue": "casestudy",
                 "rank": 1,
                 "givenName": "Kate Sangwon",
                 "familyName": "Lee",
-                "email": "kate@navercorp.com",
+                "email": "kate.lee@navercorp.com",
                 "primary": {
-                    "dept": "UX Department",
+                    "dept": "Design Research Lab.",
                     "institution": "Naver Corp.",
                     "city": "Seongnam-si",
                     "country": "Korea, Republic of"
@@ -219,7 +219,7 @@
                 "familyName": "Lee",
                 "email": "sun.lee@navercorp.com",
                 "primary": {
-                    "dept": "UX Department",
+                    "dept": "Design Research Lab.",
                     "institution": "Naver Corp.",
                     "city": "Seongnam-si",
                     "country": "Korea, Republic of"
@@ -232,15 +232,15 @@
                 }
             },
             {
-                "id": "auth39716",
+                "id": "auth42509",
                 "type": "author",
                 "venue": "casestudy",
                 "rank": 3,
                 "givenName": "Hyojung",
                 "familyName": "Kim",
-                "email": "kihozip@navercorp.com",
+                "email": "kim.hyojung@navercorp.com",
                 "primary": {
-                    "dept": "UX Department",
+                    "dept": "Design Research Lab.",
                     "institution": "Naver Corp.",
                     "city": "Seongnam-si",
                     "country": "Korea, Republic of"
@@ -253,11 +253,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "We suggest a mobile UI prototyping and research method which combines cafe study and participatory design to capture users’ needs quickly and clearly.",
         "contactEmail": "snowwon@gmail.com",
         "contactFirstName": "Kate Sangwon",
         "contactLastName": "Lee",
-        "keywords": "",
+        "keywords": "Participatory design; Cafe study; User-centered design; User research method; Mobile app; Mobile UI",
         "venue": "casestudy",
         "session": "",
         "communities": []
@@ -322,8 +322,8 @@
     },
     {
         "id": "case147",
-        "title": "Tactics for HCI Design Interventions with Nonprofit Organizations",
-        "abstract": "",
+        "title": "HCI Interventions with Nonprofit Organizations: Tactics for Effective Collaboration",
+        "abstract": "Thirty HCI practitioners participated in a CHI 2011 workshop [7], intending to directly engage with the processes, goals, and challenges of six Vancouver area nonprofit organizations. Analysis of the workshop documentation allowed us to track instances of reciprocal interaction between stakeholders. Findings revealed that various design tactics were productive in enabling collaborators to improve their focus on addressing key challenges in the 2-day workshop. This case study contributes new knowledge – tactics to conduct and evaluate HCI Design Interventions with nonprofits, as well as helping to expand the emerging intersection of political computing and human-computer interaction.  ",
         "acmLink": "",
         "authors": [
             {
@@ -432,11 +432,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This case study presents design tactics for effective collaboration with Nonprofit Organizations. The authors discuss the use of video sequence analysis to track instances of reciprocal interaction between stakeholders.",
         "contactEmail": "vmoulder@sfu.ca",
         "contactFirstName": "Vicki",
         "contactLastName": "Moulder",
-        "keywords": "",
+        "keywords": "Community; Politics; Social Change; Design Intervention; Sustainability; Design Research ",
         "venue": "casestudy",
         "session": "",
         "communities": []
@@ -444,7 +444,7 @@
     {
         "id": "case150",
         "title": "User-Centered Design for More Efficient Drill Rig Control System",
-        "abstract": "",
+        "abstract": "This case study describes the methods and results from a user-centric research project developing new control system functionality for drill rigs. During the project we conducted contextual inquiries in an operative mine and structured usability tests with a drill rig simulator. As a result, an automatic control mode was developed to meet the rig operators’ needs and will be available in 2014.",
         "acmLink": "",
         "authors": [
             {
@@ -595,11 +595,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Developing a new user-friendly surface drill rig control system. Conducting contextual inquiries at an operative mine. Prototyping new functionality. Organizing structured usability tests with a drill rig simulator.",
         "contactEmail": "katri.koli@leadin.fi",
         "contactFirstName": "Katri",
         "contactLastName": "Koli",
-        "keywords": "",
+        "keywords": "User-Centered Design; Contextual Inquiry; Usability Testing; Product Development; Drill Rigs; Control System Functionality",
         "venue": "casestudy",
         "session": "",
         "communities": []
@@ -607,7 +607,7 @@
     {
         "id": "case163",
         "title": "Redefinition of Requirements in the Design and Development of the Project Mapocci: from Digital Art to HCI Research",
-        "abstract": "",
+        "abstract": "Mapocci is a robotic companion for children, created in the juncture of digital art and HCI practices. It was developed during an art residency program at Telefonica R+D. The dynamics of negotiation and collaboration with the R+D team transformed the objectives and methods of the art project. This case study shows this transformation process as well as the contribution that the digital art methods brought to the R+D team framework and vice versa in the HCI project.",
         "acmLink": "",
         "authors": [
             {
@@ -630,21 +630,42 @@
                     "city": "",
                     "country": ""
                 }
+            },
+            {
+                "id": "auth31606",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Laura",
+                "familyName": "Malinverni",
+                "email": "malinverni.laura@gmail.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Universitat Pompeu Fabra",
+                    "city": "Barcelona",
+                    "country": "Spain"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This case study presents the contributions that the digital art background brought to the R+D team in a HCI project and vice versa, during the development of Mapocci project. \\ ",
         "contactEmail": "lilia@villafuerte.info",
         "contactFirstName": "Lilia",
         "contactLastName": "Villafuerte",
-        "keywords": "",
+        "keywords": "Digital Art; Interdisciplinary research",
         "venue": "casestudy",
         "session": "",
         "communities": []
     },
     {
         "id": "case170",
-        "title": "Influence of Cultural, Organizational, and Automation Factors on Test Pilots’ Trust Development on Auto-GCAS",
-        "abstract": "",
+        "title": "An Extended Case Study Methodology for Investigating Influence of Cultural, Organizational, and Automation Factors on Human-Automation Trust",
+        "abstract": "This paper describes the utilization of an extended case methodology to reveal foundational lessons and best practices from real world perspectives about how cultural, organizational, and automation factors influence human-automation trust development. The Air Force Automatic Ground Collision Avoidance System (Auto-GCAS) was used as the context for this case study. The study employs an eclectic set of qualitative and quantitative methodologies including a literature review for secondary data on the history of Auto-GCAS, field observations, surveys, and interviews for primary data. This paper also discusses how our methodologies and methods were adapted to the limited access, and uniqueness of, the participant groups while taking advantage of emerging opportunities. We also discuss lessons learned about the required qualities of the research team, particularly those related to cultural and technical competence, political sensitivity, and trust relationship with participants. ",
         "acmLink": "",
         "authors": [
             {
@@ -690,13 +711,13 @@
                 }
             },
             {
-                "id": "auth39915",
+                "id": "auth40151",
                 "type": "author",
                 "venue": "casestudy",
                 "rank": 3,
-                "givenName": "David",
-                "familyName": "Niedober",
-                "email": "david.niedober.788@my.csun.edu",
+                "givenName": "Gina",
+                "familyName": "Masequesmay",
+                "email": "gina.masequesmay@csun.edu",
                 "primary": {
                     "dept": "Systems Engineering Research Laboratory",
                     "institution": "California State University, Northridge",
@@ -711,13 +732,13 @@
                 }
             },
             {
-                "id": "auth40151",
+                "id": "auth39915",
                 "type": "author",
                 "venue": "casestudy",
                 "rank": 4,
-                "givenName": "Gina",
-                "familyName": "Masequesmay",
-                "email": "gina.masequesmay@csun.edu",
+                "givenName": "David",
+                "familyName": "Niedober",
+                "email": "david.niedober.788@my.csun.edu",
                 "primary": {
                     "dept": "Systems Engineering Research Laboratory",
                     "institution": "California State University, Northridge",
@@ -753,17 +774,17 @@
                 }
             },
             {
-                "id": "auth40153",
+                "id": "auth40154",
                 "type": "author",
                 "venue": "casestudy",
                 "rank": 6,
-                "givenName": "Artemio",
-                "familyName": "Cacanindin",
-                "email": "artemio.cacanindin@us.af.mil",
+                "givenName": "Walter",
+                "familyName": "Johnson",
+                "email": "walter.johnson@nasa.gov",
                 "primary": {
-                    "dept": "Air Force Flight Test Center, Edwards AFB, CA",
-                    "institution": "United States Air Force",
-                    "city": "Edwards AFB",
+                    "dept": "",
+                    "institution": "NASA Ames Research Center",
+                    "city": "Mountain View",
                     "country": "United States"
                 },
                 "secondary": {
@@ -774,17 +795,38 @@
                 }
             },
             {
-                "id": "auth40154",
+                "id": "auth40153",
                 "type": "author",
                 "venue": "casestudy",
                 "rank": 7,
-                "givenName": "Walter",
-                "familyName": "Johnson",
-                "email": "walter.johnson@nasa.gov",
+                "givenName": "Artemio",
+                "familyName": "Cacanindin",
+                "email": "artemio.cacanindin@us.af.mil",
                 "primary": {
-                    "dept": "NASA Ames Research Center, CA",
-                    "institution": "NASA",
-                    "city": "Mountain View",
+                    "dept": "",
+                    "institution": "Air Force Flight Test Center",
+                    "city": "Edwards",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth42516",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 8,
+                "givenName": "Joseph",
+                "familyName": "Lyons",
+                "email": "joseph.lyons.6@us.af.mil",
+                "primary": {
+                    "dept": "Human Trust and Interaction Division",
+                    "institution": "Air Force Research Laboratory",
+                    "city": "Wright-Patterson AFB",
                     "country": "United States"
                 },
                 "secondary": {
@@ -795,23 +837,23 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Using an extended case study methodology, the project established a methodological foundation for conducting human-automation trust research focusing on culture, organization, an automation capability in military and political environment. ",
         "contactEmail": "david.niedober.788@my.csun.edu",
         "contactFirstName": "David",
         "contactLastName": "Niedober",
-        "keywords": "",
+        "keywords": "Trust; culture; organization; ground collision avoidance; extended case methodology; grounded theory; ethnography; politics; bureaucracy; automation",
         "venue": "casestudy",
         "session": "",
         "communities": []
     },
     {
         "id": "case173",
-        "title": "Using Micro Surveys for Agile User  Research",
-        "abstract": "",
+        "title": "Online Microsurveys for User Experience Research",
+        "abstract": "This case study presents a critical analysis of microsurveys as a method for conducting user experience research. We focus specifically on Google Consumer Surveys (GCS) and analyze a combination of log data and GCSs run by the authors to investigate how they are used, who the respondents are, and the quality of the data. We find that such microsurveys can be a great way to quickly and cheaply gather large amounts of survey data, but that there are pitfalls that user experience researchers should be aware of when using the method.",
         "acmLink": "",
         "authors": [
             {
-                "id": "auth16346",
+                "id": "auth42517",
                 "type": "author",
                 "venue": "casestudy",
                 "rank": 1,
@@ -819,7 +861,7 @@
                 "familyName": "Schwanda Sosik",
                 "email": "sosik@cs.cornell.edu",
                 "primary": {
-                    "dept": "",
+                    "dept": "Cornell University, Ithaca, New York, United States",
                     "institution": "Cornell University",
                     "city": "Ithaca",
                     "country": "United States"
@@ -862,7 +904,7 @@
                 "email": "sconsolvo@google.com",
                 "primary": {
                     "dept": "",
-                    "institution": "Google",
+                    "institution": "Google, Inc.",
                     "city": "Mountain View",
                     "country": "United States"
                 },
@@ -979,19 +1021,19 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This presentation shows how researchers can use microsurveys to gather insights on user behavior.",
         "contactEmail": "davetown101@gmail.com",
         "contactFirstName": "David",
         "contactLastName": "Huffaker",
-        "keywords": "",
+        "keywords": "microsurveys; survey methods; Google Consumer Survey; GCS",
         "venue": "casestudy",
         "session": "",
         "communities": []
     },
     {
         "id": "case176",
-        "title": "Challenges At The Bottom Of The Pyramid:  An Ethnographic Study of South African Mobile Users",
-        "abstract": "",
+        "title": "Challenges at the Bottom of the Pyramid:  An Ethnographic Study of South African Mobile Users",
+        "abstract": "In this case study, I present some of the challenges that are inherent in large, complex international ethnographic field research studies.  This case describes a study of people from the “bottom of the pyramid” in both urban and rural South Africa.  The team encountered some predictable and many unpredictable challenges.  This case study covers both what the challenges were and also how I addressed them.  ",
         "acmLink": "",
         "authors": [
             {
@@ -1016,11 +1058,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This case study presents how we solved some common yet challenging issues in international field research based on a study we conducted in urban and rural South Africa.",
         "contactEmail": "",
         "contactFirstName": "",
         "contactLastName": "",
-        "keywords": "",
+        "keywords": "Ethnography; International field research; South Africa: Urban and Rural; Challenges",
         "venue": "casestudy",
         "session": "",
         "communities": []

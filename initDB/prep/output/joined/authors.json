@@ -1472,17 +1472,17 @@
         }
     },
     {
-        "authorId": "auth39719",
+        "authorId": "auth42508",
         "type": "author",
         "id": "case118",
         "venue": "casestudy",
         "rank": 1,
         "givenName": "Kate Sangwon",
         "familyName": "Lee",
-        "email": "kate@navercorp.com",
+        "email": "kate.lee@navercorp.com",
         "role": "",
         "primary": {
-            "dept": "UX Department",
+            "dept": "Design Research Lab.",
             "institution": "Naver Corp.",
             "city": "Seongnam-si",
             "country": "Korea, Republic of"
@@ -1505,7 +1505,7 @@
         "email": "sun.lee@navercorp.com",
         "role": "",
         "primary": {
-            "dept": "UX Department",
+            "dept": "Design Research Lab.",
             "institution": "Naver Corp.",
             "city": "Seongnam-si",
             "country": "Korea, Republic of"
@@ -1518,17 +1518,17 @@
         }
     },
     {
-        "authorId": "auth39716",
+        "authorId": "auth42509",
         "type": "author",
         "id": "case118",
         "venue": "casestudy",
         "rank": 3,
         "givenName": "Hyojung",
         "familyName": "Kim",
-        "email": "kihozip@navercorp.com",
+        "email": "kim.hyojung@navercorp.com",
         "role": "",
         "primary": {
-            "dept": "UX Department",
+            "dept": "Design Research Lab.",
             "institution": "Naver Corp.",
             "city": "Seongnam-si",
             "country": "Korea, Republic of"
@@ -1886,6 +1886,29 @@
         }
     },
     {
+        "authorId": "auth31606",
+        "type": "author",
+        "id": "case163",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Laura",
+        "familyName": "Malinverni",
+        "email": "malinverni.laura@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Universitat Pompeu Fabra",
+            "city": "Barcelona",
+            "country": "Spain"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
         "authorId": "auth39991",
         "type": "author",
         "id": "case170",
@@ -1932,14 +1955,14 @@
         }
     },
     {
-        "authorId": "auth39915",
+        "authorId": "auth40151",
         "type": "author",
         "id": "case170",
         "venue": "casestudy",
         "rank": 3,
-        "givenName": "David",
-        "familyName": "Niedober",
-        "email": "david.niedober.788@my.csun.edu",
+        "givenName": "Gina",
+        "familyName": "Masequesmay",
+        "email": "gina.masequesmay@csun.edu",
         "role": "",
         "primary": {
             "dept": "Systems Engineering Research Laboratory",
@@ -1955,14 +1978,14 @@
         }
     },
     {
-        "authorId": "auth40151",
+        "authorId": "auth39915",
         "type": "author",
         "id": "case170",
         "venue": "casestudy",
         "rank": 4,
-        "givenName": "Gina",
-        "familyName": "Masequesmay",
-        "email": "gina.masequesmay@csun.edu",
+        "givenName": "David",
+        "familyName": "Niedober",
+        "email": "david.niedober.788@my.csun.edu",
         "role": "",
         "primary": {
             "dept": "Systems Engineering Research Laboratory",
@@ -2001,41 +2024,18 @@
         }
     },
     {
-        "authorId": "auth40153",
-        "type": "author",
-        "id": "case170",
-        "venue": "casestudy",
-        "rank": 6,
-        "givenName": "Artemio",
-        "familyName": "Cacanindin",
-        "email": "artemio.cacanindin@us.af.mil",
-        "role": "",
-        "primary": {
-            "dept": "Air Force Flight Test Center, Edwards AFB, CA",
-            "institution": "United States Air Force",
-            "city": "Edwards AFB",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
         "authorId": "auth40154",
         "type": "author",
         "id": "case170",
         "venue": "casestudy",
-        "rank": 7,
+        "rank": 6,
         "givenName": "Walter",
         "familyName": "Johnson",
         "email": "walter.johnson@nasa.gov",
         "role": "",
         "primary": {
-            "dept": "NASA Ames Research Center, CA",
-            "institution": "NASA",
+            "dept": "",
+            "institution": "NASA Ames Research Center",
             "city": "Mountain View",
             "country": "United States"
         },
@@ -2047,7 +2047,53 @@
         }
     },
     {
-        "authorId": "auth16346",
+        "authorId": "auth40153",
+        "type": "author",
+        "id": "case170",
+        "venue": "casestudy",
+        "rank": 7,
+        "givenName": "Artemio",
+        "familyName": "Cacanindin",
+        "email": "artemio.cacanindin@us.af.mil",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Air Force Flight Test Center",
+            "city": "Edwards",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth42516",
+        "type": "author",
+        "id": "case170",
+        "venue": "casestudy",
+        "rank": 8,
+        "givenName": "Joseph",
+        "familyName": "Lyons",
+        "email": "joseph.lyons.6@us.af.mil",
+        "role": "",
+        "primary": {
+            "dept": "Human Trust and Interaction Division",
+            "institution": "Air Force Research Laboratory",
+            "city": "Wright-Patterson AFB",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth42517",
         "type": "author",
         "id": "case173",
         "venue": "casestudy",
@@ -2057,7 +2103,7 @@
         "email": "sosik@cs.cornell.edu",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "Cornell University, Ithaca, New York, United States",
             "institution": "Cornell University",
             "city": "Ithaca",
             "country": "United States"
@@ -2104,7 +2150,7 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Google",
+            "institution": "Google, Inc.",
             "city": "Mountain View",
             "country": "United States"
         },
@@ -3277,7 +3323,7 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Northwestern, KAIST, Nielsen Norman Group",
+            "institution": "Nielsen Norman Group",
             "city": "Palo Alto",
             "country": "United States"
         },
@@ -3364,7 +3410,7 @@
         "venue": "TOCHI",
         "rank": 1,
         "givenName": "Frank",
-        "middleInitial": "",
+        "middleInitial": "R",
         "familyName": "Bentley",
         "email": "bentley79@gmail.com",
         "role": "",
@@ -3436,7 +3482,7 @@
         "venue": "TOCHI",
         "rank": 4,
         "givenName": "Laura",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Levy",
         "email": "Laura@imtc.gatech.edu",
         "role": "",
@@ -3484,7 +3530,7 @@
         "venue": "TOCHI",
         "rank": 6,
         "givenName": "Scott",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Robertson",
         "email": "scott@imtc.gatech.edu",
         "role": "",
@@ -3556,7 +3602,7 @@
         "venue": "TOCHI",
         "rank": 9,
         "givenName": "Jeffrey",
-        "middleInitial": "",
+        "middleInitial": "B",
         "familyName": "Wilson",
         "email": "jeff@imtc.gatech.edu",
         "role": "",
@@ -3580,7 +3626,7 @@
         "venue": "TOCHI",
         "rank": 1,
         "givenName": "Elizabeth",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Bonsignore",
         "email": "ebonsign@umd.edu",
         "role": "",
@@ -3604,7 +3650,7 @@
         "venue": "TOCHI",
         "rank": 2,
         "givenName": "Alexander",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Quinn",
         "email": "aq@cs.umd.edu",
         "role": "",
@@ -3652,7 +3698,7 @@
         "venue": "TOCHI",
         "rank": 4,
         "givenName": "Benjamin",
-        "middleInitial": "",
+        "middleInitial": "B",
         "familyName": "Bederson",
         "email": "bederson@cs.umd.edu",
         "role": "",
@@ -3844,7 +3890,7 @@
         "venue": "TOCHI",
         "rank": 8,
         "givenName": "Stefan",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Rennick-Egglestone",
         "email": "stefan.egglestone@nottingham.ac.uk",
         "role": "",
@@ -4036,7 +4082,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Keith",
-        "middleInitial": "",
+        "middleInitial": "W",
         "familyName": "Cheverst",
         "email": "kc@comp.lancs.ac.uk",
         "role": "",
@@ -4204,7 +4250,7 @@
         "venue": "TOCHI",
         "rank": 1,
         "givenName": "Liz",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Gerber",
         "email": "egerber@northwestern.edu",
         "role": "",
@@ -4228,7 +4274,7 @@
         "venue": "TOCHI",
         "rank": 2,
         "givenName": "Julie",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Hui",
         "email": "juliehui@u.northwestern.edu",
         "role": "",
@@ -4300,7 +4346,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Nuria",
-        "middleInitial": "",
+        "middleInitial": "m",
         "familyName": "Oliver",
         "email": "nuriao@tid.es",
         "role": "",
@@ -4396,7 +4442,7 @@
         "venue": "TOCHI",
         "rank": 4,
         "givenName": "Leah",
-        "middleInitial": "",
+        "middleInitial": "A.",
         "familyName": "Maestri",
         "email": "leahm@sfu.ca",
         "role": "",
@@ -4420,7 +4466,7 @@
         "venue": "TOCHI",
         "rank": 1,
         "givenName": "Reeva",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Lederman",
         "email": "reeva.lederman@unimelb.edu.au",
         "role": "",
@@ -4636,7 +4682,7 @@
         "venue": "TOCHI",
         "rank": 5,
         "givenName": "M",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Tshemese",
         "email": "nic.bidwell@gmail.com",
         "role": "",
@@ -4660,7 +4706,7 @@
         "venue": "TOCHI",
         "rank": 6,
         "givenName": "N",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Gaven",
         "email": "nic.bidwell@gmail.com",
         "role": "",
@@ -4684,7 +4730,7 @@
         "venue": "TOCHI",
         "rank": 7,
         "givenName": "S",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Ntlango",
         "email": "nic.bidwell@gmail.com",
         "role": "",
@@ -4732,7 +4778,7 @@
         "venue": "TOCHI",
         "rank": 9,
         "givenName": "Kristen",
-        "middleInitial": "",
+        "middleInitial": "A.",
         "familyName": "Eglinton",
         "email": "kristenali@gmail.com",
         "role": "",
@@ -4996,7 +5042,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Li",
-        "middleInitial": "",
+        "middleInitial": "S M",
         "familyName": "Jönsson",
         "email": "ljo@dkds.dk",
         "role": "",
@@ -5116,7 +5162,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Khai",
-        "middleInitial": "",
+        "middleInitial": "N",
         "familyName": "Truong",
         "email": "khai@cs.toronto.edu",
         "role": "",
@@ -5338,7 +5384,7 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "IBM Almaden Research Center",
+            "institution": "IBM Research",
             "city": "San Jose",
             "country": "United States"
         },
@@ -5476,7 +5522,7 @@
         "venue": "TOCHI",
         "rank": 4,
         "givenName": "Donald J.",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Patterson",
         "email": "djp3@ics.uci.edu",
         "role": "",
@@ -5620,7 +5666,7 @@
         "venue": "TOCHI",
         "rank": 4,
         "givenName": "Bruce",
-        "middleInitial": "",
+        "middleInitial": "H",
         "familyName": "Tsuji",
         "email": "bruce.tsuji@carleton.ca",
         "role": "",
@@ -5692,7 +5738,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Nuria",
-        "middleInitial": "",
+        "middleInitial": "m",
         "familyName": "Oliver",
         "email": "nuriao@tid.es",
         "role": "",
@@ -5836,7 +5882,7 @@
         "venue": "TOCHI",
         "rank": 2,
         "givenName": "Annelise",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "de Jong",
         "email": "annelise@tii.se",
         "role": "",
@@ -6292,7 +6338,7 @@
         "venue": "TOCHI",
         "rank": 6,
         "givenName": "Scott",
-        "middleInitial": "",
+        "middleInitial": "R",
         "familyName": "Klemmer",
         "email": "srk@ucsd.edu",
         "role": "",
@@ -6484,7 +6530,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Joshua",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Hailpern",
         "email": "joshua@hailpern.com",
         "role": "",
@@ -6604,7 +6650,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Peter",
-        "middleInitial": "",
+        "middleInitial": "C",
         "familyName": "Wright",
         "email": "p.c.wright@ncl.ac.uk",
         "role": "",
@@ -6700,7 +6746,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Andrew",
-        "middleInitial": "",
+        "middleInitial": "F",
         "familyName": "Monk",
         "email": "A.Monk@psych.york.ac.uk",
         "role": "",
@@ -6724,7 +6770,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Kathrin",
-        "middleInitial": "",
+        "middleInitial": "Maria",
         "familyName": "Gerling",
         "email": "kathrin.gerling@usask.ca",
         "role": "",
@@ -6748,7 +6794,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Regan",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Mandryk",
         "email": "regan@cs.usask.ca",
         "role": "",
@@ -6772,7 +6818,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Max",
-        "middleInitial": "",
+        "middleInitial": "Valentin",
         "familyName": "Birk",
         "email": "max.birk@usask.ca",
         "role": "",
@@ -6916,7 +6962,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Max",
-        "middleInitial": "",
+        "middleInitial": "Valentin",
         "familyName": "Birk",
         "email": "max.birk@usask.ca",
         "role": "",
@@ -7204,7 +7250,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Daniel",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Wigdor",
         "email": "daniel@dgp.toronto.edu",
         "role": "",
@@ -7252,7 +7298,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Neel",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Joshi",
         "email": "neel@microsoft.com",
         "role": "",
@@ -7324,7 +7370,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Clifton",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Forlines",
         "email": "forlines@alumni.cmu.edu",
         "role": "",
@@ -7335,10 +7381,10 @@
             "country": "United States"
         },
         "secondary": {
-            "dept": "create",
-            "institution": "University of Toronto",
-            "city": "Toronto",
-            "country": "Canada"
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
         }
     },
     {
@@ -7564,7 +7610,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Jorge",
-        "middleInitial": "",
+        "middleInitial": "André",
         "familyName": "Goncalves",
         "email": "jgoncalv@ee.oulu.fi",
         "role": "",
@@ -7588,7 +7634,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Denzil",
-        "middleInitial": "",
+        "middleInitial": "S.T.",
         "familyName": "Ferreira",
         "email": "denzil.ferreira@ee.oulu.fi",
         "role": "",
@@ -7636,7 +7682,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Simo",
-        "middleInitial": "",
+        "middleInitial": "Johannes",
         "familyName": "Hosio",
         "email": "simo.hosio@ee.oulu.fi",
         "role": "",
@@ -7780,7 +7826,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Lynn",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Dombrowski",
         "email": "ldombrow@uci.edu",
         "role": "",
@@ -7972,7 +8018,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Nuria",
-        "middleInitial": "",
+        "middleInitial": "m",
         "familyName": "Oliver",
         "email": "nuriao@tid.es",
         "role": "",
@@ -7996,7 +8042,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Matthew",
-        "middleInitial": "",
+        "middleInitial": "F",
         "familyName": "Pike",
         "email": "psxmp8@nottingham.ac.uk",
         "role": "",
@@ -8068,7 +8114,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Sarah",
-        "middleInitial": "",
+        "middleInitial": "C",
         "familyName": "Sharples",
         "email": "sarah.sharples@nottingham.ac.uk",
         "role": "",
@@ -8188,7 +8234,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "David",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Shamma",
         "email": "aymans@acm.org",
         "role": "",
@@ -8308,7 +8354,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Jared",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Cechanowicz",
         "email": "jcechanowicz@gmail.com",
         "role": "",
@@ -8332,7 +8378,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Rosanna Yuen-Yan",
-        "middleInitial": "",
+        "middleInitial": "Yuen-Yan",
         "familyName": "Chan",
         "email": "yychan@ie.cuhk.edu.hk",
         "role": "",
@@ -8500,7 +8546,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Morgan",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Dixon",
         "email": "mdixon@cs.washington.edu",
         "role": "",
@@ -8548,7 +8594,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "James",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Fogarty",
         "email": "jfogarty@cs.washington.edu",
         "role": "",
@@ -8860,7 +8906,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Barrett",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Ens",
         "email": "bens@cs.umanitoba.ca",
         "role": "",
@@ -8884,7 +8930,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Pourang",
-        "middleInitial": "",
+        "middleInitial": "P",
         "familyName": "Irani",
         "email": "irani@cs.umanitoba.ca",
         "role": "",
@@ -9028,7 +9074,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Phu",
-        "middleInitial": "",
+        "middleInitial": "Tran",
         "familyName": "Nguyen",
         "email": "phun@mit.edu",
         "role": "",
@@ -9292,7 +9338,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Stephen",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Brewster",
         "email": "stephen.brewster@glasgow.ac.uk",
         "role": "",
@@ -9364,7 +9410,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Charles",
-        "middleInitial": "",
+        "middleInitial": "Claudius",
         "familyName": "Marais",
         "email": "cmarais@microsoft.com",
         "role": "",
@@ -9462,7 +9508,7 @@
         "givenName": "Mathieu",
         "middleInitial": "",
         "familyName": "Nancel",
-        "email": "mathieu.nancel@canterbury.ac.nz",
+        "email": "mathieu@nancel.net",
         "role": "",
         "primary": {
             "dept": "Computer Science and Software Engineering",
@@ -9585,7 +9631,7 @@
         "email": "chrisnorval@computing.dundee.ac.uk",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "School of Computing",
             "institution": "University of Dundee",
             "city": "Dundee",
             "country": "United Kingdom"
@@ -9604,12 +9650,12 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "John",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Arnott",
         "email": "jarnott@computing.dundee.ac.uk",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "School of Computing",
             "institution": "University of Dundee",
             "city": "Dundee",
             "country": "United Kingdom"
@@ -9628,7 +9674,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Vicki",
-        "middleInitial": "",
+        "middleInitial": "L.",
         "familyName": "Hanson",
         "email": "vlh@acm.org",
         "role": "",
@@ -9639,10 +9685,10 @@
             "country": "United States"
         },
         "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "School of Computing",
+            "institution": "University of Dundee",
+            "city": "Dundee",
+            "country": "United Kingdom"
         }
     },
     {
@@ -9676,7 +9722,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Jennifer",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Pearson",
         "email": "bagelobagel@gmail.com",
         "role": "",
@@ -9748,7 +9794,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Jennifer",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Pearson",
         "email": "csjen@swan.ac.uk",
         "role": "",
@@ -9844,7 +9890,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Jalal",
-        "middleInitial": "",
+        "middleInitial": "U",
         "familyName": "Mahmud",
         "email": "jumahmud@us.ibm.com",
         "role": "",
@@ -9988,7 +10034,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Michael",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Bernstein",
         "email": "msb@cs.stanford.edu",
         "role": "",
@@ -10156,7 +10202,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Joel",
-        "middleInitial": "",
+        "middleInitial": "R.",
         "familyName": "Brandt",
         "email": "joel.brandt@adobe.com",
         "role": "",
@@ -10446,7 +10492,7 @@
         "givenName": "Alexander",
         "middleInitial": "",
         "familyName": "Boden",
-        "email": "alexander.boden@uni-siegen.de",
+        "email": "alexander.boden@fit.fraunhofer.de",
         "role": "",
         "primary": {
             "dept": "",
@@ -10455,52 +10501,52 @@
             "country": "Germany"
         },
         "secondary": {
-            "dept": "",
-            "institution": "University of Siegen",
-            "city": "Siegen",
-            "country": "Germany"
+            "dept": "University of Siegen, Siegen, NRW, Germany",
+            "institution": "40841",
+            "city": "Dave",
+            "country": "Randall"
         }
     },
     {
-        "authorId": "auth40841",
+        "authorId": "authdave.randall@uni-siegen.de",
         "type": "author",
         "id": "pn286",
         "venue": "paper",
         "rank": 4,
-        "givenName": "Dave",
-        "middleInitial": "",
-        "familyName": "Randall",
-        "email": "dave.randall@uni-siegen.de",
+        "givenName": "",
+        "middleInitial": "University of Siegen",
+        "familyName": "Siegen",
+        "email": "NRW",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Siegen",
-            "city": "Siegen",
-            "country": "Germany"
-        },
-        "secondary": {
-            "dept": "",
+            "dept": "Germany",
             "institution": "",
             "city": "",
             "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "30349",
+            "city": "Andreas",
+            "country": "Zimmermann"
         }
     },
     {
-        "authorId": "auth30349",
+        "authorId": "authandreas.zimmermann@fit.fraunhofer.de",
         "type": "author",
         "id": "pn286",
         "venue": "paper",
         "rank": 5,
-        "givenName": "Andreas",
-        "middleInitial": "",
-        "familyName": "Zimmermann",
-        "email": "andreas.zimmermann@fit.fraunhofer.de",
+        "givenName": "",
+        "middleInitial": "Fraunhofer Institute for Applied Information Technology (FIT)",
+        "familyName": "Sankt Augustin",
+        "email": "",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Fraunhofer Institute for Applied Information Technology (FIT)",
-            "city": "Sankt Augustin",
-            "country": "Germany"
+            "dept": "Germany",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -10713,82 +10759,82 @@
         "email": "kash@diku.dk",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Copenhagen",
-            "city": "Copenhagen",
-            "country": "Denmark"
-        },
-        "secondary": {
-            "dept": "",
+            "dept": "University of Copenhagen, Copenhagen, Denmark",
             "institution": "",
             "city": "",
             "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "37230",
+            "city": "Søren",
+            "country": "Sander"
         }
     },
     {
-        "authorId": "auth37230",
+        "authorId": "auths.s.sander@mail.dk",
         "type": "author",
         "id": "pn292",
         "venue": "paper",
         "rank": 2,
-        "givenName": "Søren",
-        "middleInitial": "S",
-        "familyName": "Sander",
-        "email": "s.s.sander@mail.dk",
+        "givenName": "",
+        "middleInitial": "University of Copenhagen",
+        "familyName": "Copenhagen",
+        "email": "",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Copenhagen",
-            "city": "Copenhagen",
-            "country": "Denmark"
-        },
-        "secondary": {
-            "dept": "",
+            "dept": "Denmark",
             "institution": "",
             "city": "",
             "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "13349",
+            "city": "Javier",
+            "country": "Bargas-Avila"
         }
     },
     {
-        "authorId": "auth13349",
+        "authorId": "authbargas@google.com",
         "type": "author",
         "id": "pn292",
         "venue": "paper",
         "rank": 3,
-        "givenName": "Javier",
-        "middleInitial": "",
-        "familyName": "Bargas-Avila",
-        "email": "bargas@google.com",
+        "givenName": "",
+        "middleInitial": "Google, Inc.",
+        "familyName": "Zurich",
+        "email": "ZH",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Zurich",
-            "country": "Switzerland"
-        },
-        "secondary": {
-            "dept": "",
+            "dept": "Switzerland",
             "institution": "",
             "city": "",
             "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "26067",
+            "city": "Jakob",
+            "country": "Grue Simonsen"
         }
     },
     {
-        "authorId": "auth26067",
+        "authorId": "authsimonsen@diku.dk",
         "type": "author",
         "id": "pn292",
         "venue": "paper",
         "rank": 4,
-        "givenName": "Jakob",
-        "middleInitial": "",
-        "familyName": "Grue Simonsen",
-        "email": "simonsen@diku.dk",
+        "givenName": "",
+        "middleInitial": "University of Copenhagen",
+        "familyName": "Copenhagen",
+        "email": "",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Copenhagen",
-            "city": "Copenhagen",
-            "country": "Denmark"
+            "dept": "Denmark",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -10953,10 +10999,10 @@
         "email": "rr0743@my.bristol.ac.uk",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "University of Bristol",
-            "city": "Bristol",
-            "country": "United Kingdom"
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -11217,10 +11263,10 @@
         "email": "kash@diku.dk",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Copenhagen",
-            "city": "Copenhagen",
-            "country": "Denmark"
+            "dept": "University of Copenhagen, Copenhagen, Denmark",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -11308,7 +11354,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Ryan",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Schmidt",
         "email": "rms@dgp.toronto.edu",
         "role": "",
@@ -11548,7 +11594,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Michael",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Bernstein",
         "email": "msb@cs.stanford.edu",
         "role": "",
@@ -11884,7 +11930,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Chi Thanh",
-        "middleInitial": "",
+        "middleInitial": "Thanh",
         "familyName": "Vi",
         "email": "chi.vi@bristol.ac.uk",
         "role": "",
@@ -12340,7 +12386,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Esben Warming",
-        "middleInitial": "",
+        "middleInitial": "W.",
         "familyName": "Pedersen",
         "email": "esbenwp@diku.dk",
         "role": "",
@@ -12393,10 +12439,10 @@
         "email": "kash@diku.dk",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Copenhagen",
-            "city": "Copenhagen",
-            "country": "Denmark"
+            "dept": "University of Copenhagen, Copenhagen, Denmark",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -12412,7 +12458,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Esben Warming",
-        "middleInitial": "",
+        "middleInitial": "W.",
         "familyName": "Pedersen",
         "email": "esbenwp@diku.dk",
         "role": "",
@@ -12556,7 +12602,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Wendy",
-        "middleInitial": "",
+        "middleInitial": "E.",
         "familyName": "Mackay",
         "email": "mackay@lri.fr",
         "role": "",
@@ -12628,7 +12674,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Jan",
-        "middleInitial": "",
+        "middleInitial": "O",
         "familyName": "Borchers",
         "email": "borchers@cs.rwth-aachen.de",
         "role": "",
@@ -12988,7 +13034,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Tina",
-        "middleInitial": "",
+        "middleInitial": "Caroline",
         "familyName": "Walber",
         "email": "walber@uni-koblenz.de",
         "role": "",
@@ -13396,7 +13442,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Stuart",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Taylor",
         "email": "stuart@microsoft.com",
         "role": "",
@@ -13780,7 +13826,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Stephen",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Brewster",
         "email": "stephen.brewster@glasgow.ac.uk",
         "role": "",
@@ -14068,7 +14114,7 @@
         "venue": "paper",
         "rank": 12,
         "givenName": "Peter",
-        "middleInitial": "",
+        "middleInitial": "C",
         "familyName": "Wright",
         "email": "p.c.wright@newcastle.ac.uk",
         "role": "",
@@ -14140,7 +14186,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Edward",
-        "middleInitial": "",
+        "middleInitial": "O",
         "familyName": "Benson",
         "email": "eob@csail.mit.edu",
         "role": "",
@@ -14212,7 +14258,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Michelle",
-        "middleInitial": "",
+        "middleInitial": "Kathryn",
         "familyName": "Annett",
         "email": "mkannett@ualberta.ca",
         "role": "",
@@ -14476,7 +14522,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Matthew",
-        "middleInitial": "",
+        "middleInitial": "Chalmers",
         "familyName": "Chalmers",
         "email": "matthew@dcs.gla.ac.uk",
         "role": "",
@@ -14572,7 +14618,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Poika",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Isokoski",
         "email": "poika.isokoski@uta.fi",
         "role": "",
@@ -14596,7 +14642,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Päivi",
-        "middleInitial": "",
+        "middleInitial": "H",
         "familyName": "Majaranta",
         "email": "paivi.majaranta@uta.fi",
         "role": "",
@@ -14884,7 +14930,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Jason",
-        "middleInitial": "",
+        "middleInitial": "I",
         "familyName": "Hong",
         "email": "jasonh@cs.cmu.edu",
         "role": "",
@@ -14908,7 +14954,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Khai",
-        "middleInitial": "",
+        "middleInitial": "N",
         "familyName": "Truong",
         "email": "khai@cs.toronto.edu",
         "role": "",
@@ -14956,7 +15002,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Daniel",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Wigdor",
         "email": "daniel@dgp.toronto.edu",
         "role": "",
@@ -15220,7 +15266,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Leila",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Takayama",
         "email": "takayama@gmail.com",
         "role": "",
@@ -15334,11 +15380,35 @@
         }
     },
     {
-        "authorId": "auth29991",
+        "authorId": "auth42305",
         "type": "author",
         "id": "pn541",
         "venue": "paper",
         "rank": 2,
+        "givenName": "Andrew",
+        "middleInitial": "",
+        "familyName": "Sorensen",
+        "email": "a.sorensen@qut.edu.au",
+        "role": "",
+        "primary": {
+            "dept": "Computer Science",
+            "institution": "QUT",
+            "city": "Brisbane",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth29991",
+        "type": "author",
+        "id": "pn541",
+        "venue": "paper",
+        "rank": 3,
         "givenName": "Michael",
         "middleInitial": "",
         "familyName": "Martin",
@@ -15362,9 +15432,9 @@
         "type": "author",
         "id": "pn541",
         "venue": "paper",
-        "rank": 3,
+        "rank": 4,
         "givenName": "Henry",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Gardner",
         "email": "Henry.Gardner@anu.edu.au",
         "role": "",
@@ -15604,7 +15674,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Krzysztof",
-        "middleInitial": "",
+        "middleInitial": "Z.",
         "familyName": "Gajos",
         "email": "kgajos@eecs.harvard.edu",
         "role": "",
@@ -16132,7 +16202,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Scott",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Hudson",
         "email": "scott.hudson@cs.cmu.edu",
         "role": "",
@@ -16228,7 +16298,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Barrett",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Ens",
         "email": "bens@cs.umanitoba.ca",
         "role": "",
@@ -16276,7 +16346,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Pourang",
-        "middleInitial": "",
+        "middleInitial": "P",
         "familyName": "Irani",
         "email": "irani@cs.umanitoba.ca",
         "role": "",
@@ -16324,7 +16394,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Lynn",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Dombrowski",
         "email": "ldombrow@uci.edu",
         "role": "",
@@ -16468,7 +16538,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Victoria",
-        "middleInitial": "",
+        "middleInitial": "M E",
         "familyName": "Bellotti",
         "email": "bellotti@parc.com",
         "role": "",
@@ -16564,7 +16634,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Lisa",
-        "middleInitial": "",
+        "middleInitial": "Renery",
         "familyName": "Handalian",
         "email": "LHandalian@CCA.edu",
         "role": "",
@@ -16900,7 +16970,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Christopher",
-        "middleInitial": "",
+        "middleInitial": "D. S.",
         "familyName": "Power",
         "email": "christopher.power@york.ac.uk",
         "role": "",
@@ -16996,7 +17066,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Duncan",
-        "middleInitial": "",
+        "middleInitial": "P",
         "familyName": "Brumby",
         "email": "Brumby@cs.ucl.ac.uk",
         "role": "",
@@ -17046,7 +17116,7 @@
         "givenName": "Florian",
         "middleInitial": "",
         "familyName": "Schaub",
-        "email": "florian.schaub@uni-ulm.de",
+        "email": "fschaub@cs.cmu.edu",
         "role": "",
         "primary": {
             "dept": "",
@@ -17092,7 +17162,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Frank",
-        "middleInitial": "",
+        "middleInitial": "D",
         "familyName": "Honold",
         "email": "frank.honold@uni-ulm.de",
         "role": "",
@@ -17188,7 +17258,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Erin",
-        "middleInitial": "",
+        "middleInitial": "Treacy",
         "familyName": "Solovey",
         "email": "erin@cs.drexel.edu",
         "role": "",
@@ -17236,7 +17306,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Enrique",
-        "middleInitial": "",
+        "middleInitial": "Abdon",
         "familyName": "Abdon Garcia Perez",
         "email": "engarpe@mit.edu",
         "role": "",
@@ -17428,7 +17498,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Frank",
-        "middleInitial": "",
+        "middleInitial": "R",
         "familyName": "Bentley",
         "email": "bentley79@gmail.com",
         "role": "",
@@ -17596,7 +17666,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Thomas",
-        "middleInitial": "",
+        "middleInitial": "H.",
         "familyName": "Park",
         "email": "tp352@drexel.edu",
         "role": "",
@@ -18196,7 +18266,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Ann",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Blandford",
         "email": "a.blandford@ucl.ac.uk",
         "role": "",
@@ -18748,7 +18818,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Geoffrey",
-        "middleInitial": "",
+        "middleInitial": "C",
         "familyName": "Tien",
         "email": "gtien@sfu.ca",
         "role": "",
@@ -18868,7 +18938,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Peter",
-        "middleInitial": "",
+        "middleInitial": "D",
         "familyName": "Bennett",
         "email": "peter.bennett@bris.ac.uk",
         "role": "",
@@ -18916,7 +18986,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Vlad",
-        "middleInitial": "",
+        "middleInitial": "Stefan",
         "familyName": "Otrocol",
         "email": "vo0592@my.bristol.ac.uk",
         "role": "",
@@ -19132,7 +19202,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Simone",
-        "middleInitial": "",
+        "middleInitial": "Ivan",
         "familyName": "Conte",
         "email": "sic2@st-andrews.ac.uk",
         "role": "",
@@ -19300,7 +19370,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Hans",
-        "middleInitial": "",
+        "middleInitial": "W",
         "familyName": "Gellersen",
         "email": "hwg@comp.lancs.ac.uk",
         "role": "",
@@ -19468,7 +19538,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Roisin",
-        "middleInitial": "",
+        "middleInitial": "C",
         "familyName": "McNaney",
         "email": "r.mcnaney@newcastle.ac.uk",
         "role": "",
@@ -19684,7 +19754,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Duncan",
-        "middleInitial": "",
+        "middleInitial": "P",
         "familyName": "Brumby",
         "email": "Brumby@cs.ucl.ac.uk",
         "role": "",
@@ -19756,7 +19826,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Robert",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Kraut",
         "email": "robert.kraut@cmu.edu",
         "role": "",
@@ -19828,7 +19898,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Rynson",
-        "middleInitial": "",
+        "middleInitial": "W.H.",
         "familyName": "Lau",
         "email": "rynson.lau@cityu.edu.hk",
         "role": "",
@@ -19900,7 +19970,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Rynson",
-        "middleInitial": "",
+        "middleInitial": "W.H.",
         "familyName": "Lau",
         "email": "rynson.lau@cityu.edu.hk",
         "role": "",
@@ -20020,7 +20090,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Bernhard",
-        "middleInitial": "",
+        "middleInitial": "Ewald",
         "familyName": "Slawik",
         "email": "bernhard.slawik@ifi.lmu.de",
         "role": "",
@@ -20092,7 +20162,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Mark",
-        "middleInitial": "",
+        "middleInitial": "A.",
         "familyName": "Blythe",
         "email": "mark.blythe@northumbria.ac.uk",
         "role": "",
@@ -20236,7 +20306,7 @@
         "venue": "paper",
         "rank": 6,
         "givenName": "Ann",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Blandford",
         "email": "a.blandford@ucl.ac.uk",
         "role": "",
@@ -20332,7 +20402,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Peter",
-        "middleInitial": "",
+        "middleInitial": "C",
         "familyName": "Wright",
         "email": "p.c.wright@newcastle.ac.uk",
         "role": "",
@@ -20577,7 +20647,7 @@
         "email": "mark.matthews@cornell.edu",
         "role": "",
         "primary": {
-            "dept": "Department of Information Science",
+            "dept": "Information Science",
             "institution": "Cornell University",
             "city": "Ithaca",
             "country": "United States"
@@ -20601,7 +20671,7 @@
         "email": "gkg1@cornell.edu",
         "role": "",
         "primary": {
-            "dept": "Information Science Department",
+            "dept": "Information Science",
             "institution": "Cornell University",
             "city": "Ithaca",
             "country": "United States"
@@ -20692,7 +20762,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Cuong",
-        "middleInitial": "",
+        "middleInitial": "Hong",
         "familyName": "Trinh",
         "email": "thcuong@ntu.edu.sg",
         "role": "",
@@ -20932,7 +21002,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Abir",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Al-Hajri",
         "email": "abira@ece.ubc.ca",
         "role": "",
@@ -21004,7 +21074,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Sidney",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Fels",
         "email": "ssfels@ece.ubc.ca",
         "role": "",
@@ -21364,7 +21434,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Basak",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Alper",
         "email": "basakalper@gmail.com",
         "role": "",
@@ -21436,7 +21506,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Gustavo",
-        "middleInitial": "",
+        "middleInitial": "Alberto",
         "familyName": "Rovelo Ruiz",
         "email": "grovelo@dsic.upv.es",
         "role": "",
@@ -21556,7 +21626,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Andrew",
-        "middleInitial": "",
+        "middleInitial": "Thomas",
         "familyName": "Garbett",
         "email": "a.garbett@newcastle.ac.uk",
         "role": "",
@@ -21772,7 +21842,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "T. Scott",
-        "middleInitial": "",
+        "middleInitial": "Scott",
         "familyName": "Saponas",
         "email": "ssaponas@microsoft.com",
         "role": "",
@@ -21868,7 +21938,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Kody",
-        "middleInitial": "",
+        "middleInitial": "R",
         "familyName": "Dillman",
         "email": "kody.dillman@ucalgary.ca",
         "role": "",
@@ -22036,7 +22106,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Michael",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Terry",
         "email": "mterry@cs.uwaterloo.ca",
         "role": "",
@@ -22060,7 +22130,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "David",
-        "middleInitial": "",
+        "middleInitial": "T",
         "familyName": "Cormack",
         "email": "umcorma2@cc.umanitoba.ca",
         "role": "",
@@ -22084,7 +22154,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Deana",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Brown",
         "email": "deana.brown@gatech.edu",
         "role": "",
@@ -22209,10 +22279,10 @@
         "email": "tanvir@uw.edu",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Washington",
-            "city": "Seattle",
-            "country": "United States"
+            "dept": "University of Washington, Seattle, Washington, United States",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -22996,7 +23066,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Nivan",
-        "middleInitial": "",
+        "middleInitial": "R",
         "familyName": "Ferreira",
         "email": "nferre01@students.poly.edu",
         "role": "",
@@ -23092,7 +23162,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Garnet",
-        "middleInitial": "",
+        "middleInitial": "D",
         "familyName": "Hertz",
         "email": "garnethertz@gmail.com",
         "role": "",
@@ -23260,7 +23330,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Klaus",
-        "middleInitial": "",
+        "middleInitial": "H.",
         "familyName": "Hinrichs",
         "email": "khh@uni-muenster.de",
         "role": "",
@@ -23308,7 +23378,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "François",
-        "middleInitial": "",
+        "middleInitial": "V",
         "familyName": "Guimbretière",
         "email": "francois@cs.cornell.edu",
         "role": "",
@@ -23668,7 +23738,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Joshua",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Clark",
         "email": "joshuaac@usc.edu",
         "role": "",
@@ -24292,7 +24362,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Pearl",
-        "middleInitial": "",
+        "middleInitial": "H.Z.",
         "familyName": "Pu",
         "email": "pearl.pu@epfl.ch",
         "role": "",
@@ -24537,10 +24607,10 @@
         "email": "nvillar@microsoft.com",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Microsoft Research",
-            "city": "Cambridge",
-            "country": "United Kingdom"
+            "dept": "Microsoft Research, Cambridge, United Kingdom",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -24556,7 +24626,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Nicholas",
-        "middleInitial": "",
+        "middleInitial": "Y",
         "familyName": "Chen",
         "email": "nchen@microsoft.com",
         "role": "",
@@ -24748,7 +24818,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Jan",
-        "middleInitial": "",
+        "middleInitial": "O",
         "familyName": "Borchers",
         "email": "borchers@cs.rwth-aachen.de",
         "role": "",
@@ -24868,7 +24938,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Vincent",
-        "middleInitial": "",
+        "middleInitial": "Joseph",
         "familyName": "Lewandowski",
         "email": "vlew@kth.se",
         "role": "",
@@ -24988,7 +25058,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Erik",
-        "middleInitial": "",
+        "middleInitial": "N",
         "familyName": "Geelhoed",
         "email": "erik.geelhoed@falmouth.ac.uk",
         "role": "",
@@ -25012,7 +25082,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Phil",
-        "middleInitial": "",
+        "middleInitial": "P",
         "familyName": "Stenton",
         "email": "phil.stenton@falmouth.ac.uk",
         "role": "",
@@ -25396,7 +25466,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Robert",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Kraut",
         "email": "robert.kraut@cmu.edu",
         "role": "",
@@ -25612,7 +25682,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Alex",
-        "middleInitial": "",
+        "middleInitial": "C",
         "familyName": "Kuhn",
         "email": "kuhnalex@umich.edu",
         "role": "",
@@ -25828,7 +25898,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Pablo",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Paredes",
         "email": "paredes@eecs.berkeley.edu",
         "role": "",
@@ -25876,7 +25946,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Mary",
-        "middleInitial": "",
+        "middleInitial": "P.",
         "familyName": "Czerwinski",
         "email": "marycz@microsoft.com",
         "role": "",
@@ -26044,7 +26114,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Tom",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Rodden",
         "email": "tar@Cs.Nott.AC.UK",
         "role": "",
@@ -26116,7 +26186,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Georgios",
-        "middleInitial": "",
+        "middleInitial": "N.",
         "familyName": "Marentakis",
         "email": "marentakis@iem.at",
         "role": "",
@@ -26260,7 +26330,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Daniel",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Wigdor",
         "email": "daniel@dgp.toronto.edu",
         "role": "",
@@ -26380,7 +26450,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Alex",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Grau",
         "email": "alexgrau@gmail.com",
         "role": "",
@@ -26572,7 +26642,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Nicholas",
-        "middleInitial": "",
+        "middleInitial": "Edward",
         "familyName": "Gillian",
         "email": "ngillian@media.mit.edu",
         "role": "",
@@ -26932,7 +27002,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Lauren",
-        "middleInitial": "",
+        "middleInitial": "E.",
         "familyName": "Scissors",
         "email": "l-scissors@northwestern.edu",
         "role": "",
@@ -27004,7 +27074,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "William",
-        "middleInitial": "",
+        "middleInitial": "T",
         "familyName": "Odom",
         "email": "wodom@cs.cmu.edu",
         "role": "",
@@ -27076,7 +27146,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "David",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Kirk",
         "email": "david.kirk@newcastle.ac.uk",
         "role": "",
@@ -27148,7 +27218,7 @@
         "venue": "paper",
         "rank": 7,
         "givenName": "Jodi",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Forlizzi",
         "email": "forlizzi@cs.cmu.edu",
         "role": "",
@@ -27244,7 +27314,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Ann",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Blandford",
         "email": "a.blandford@ucl.ac.uk",
         "role": "",
@@ -27268,7 +27338,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "André",
-        "middleInitial": "",
+        "middleInitial": "Tiago",
         "familyName": "Pereira",
         "email": "a.abelhopereira@gmail.com",
         "role": "",
@@ -27412,7 +27482,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Joshua",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Hailpern",
         "email": "joshua@hailpern.com",
         "role": "",
@@ -27604,7 +27674,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Kate",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Vaisutis",
         "email": "kate@planofattack.com.au",
         "role": "",
@@ -27729,10 +27799,10 @@
         "email": "greismm@studi.informatik.uni-stuttgart.de",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Stuttgart",
-            "city": "Stuttgart",
-            "country": "Germany"
+            "dept": "University of Stuttgart, Stuttgart, Germany",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -27820,7 +27890,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Jonna",
-        "middleInitial": "",
+        "middleInitial": "R",
         "familyName": "Häkkilä",
         "email": "jonna.hakkila@gmail.com",
         "role": "",
@@ -28420,7 +28490,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Kathy",
-        "middleInitial": "",
+        "middleInitial": "K",
         "familyName": "Baxter",
         "email": "kathyb@google.com",
         "role": "",
@@ -28516,7 +28586,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Jessica",
-        "middleInitial": "",
+        "middleInitial": "Annette",
         "familyName": "Pater",
         "email": "pater@gatech.edu",
         "role": "",
@@ -28564,7 +28634,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Elizabeth",
-        "middleInitial": "",
+        "middleInitial": "D",
         "familyName": "Mynatt",
         "email": "mynatt@cc.gatech.edu",
         "role": "",
@@ -28588,7 +28658,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Amy",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Bruckman",
         "email": "asb@cc.gatech.edu",
         "role": "",
@@ -28612,7 +28682,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Maia",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Jacobs",
         "email": "mjacobs30@gatech.edu",
         "role": "",
@@ -28660,7 +28730,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Elizabeth",
-        "middleInitial": "",
+        "middleInitial": "D",
         "familyName": "Mynatt",
         "email": "mynatt@cc.gatech.edu",
         "role": "",
@@ -28732,7 +28802,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Daniel",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Wigdor",
         "email": "daniel@dgp.toronto.edu",
         "role": "",
@@ -28756,7 +28826,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Abigail",
-        "middleInitial": "",
+        "middleInitial": "C",
         "familyName": "Durrant",
         "email": "abigail.durrant@newcastle.ac.uk",
         "role": "",
@@ -28764,7 +28834,7 @@
             "dept": "Culture Lab",
             "institution": "Newcastle University",
             "city": "Newcastle Upon Tyne",
-            "country": ""
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -28996,7 +29066,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Tejinder",
-        "middleInitial": "",
+        "middleInitial": "K",
         "familyName": "Judge",
         "email": "tkjudge@gmail.com",
         "role": "",
@@ -29044,7 +29114,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Daniel",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Wigdor",
         "email": "daniel@dgp.toronto.edu",
         "role": "",
@@ -29092,7 +29162,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Michael",
-        "middleInitial": "",
+        "middleInitial": "A.",
         "familyName": "Correll",
         "email": "mcorrell@cs.wisc.edu",
         "role": "",
@@ -29140,7 +29210,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Tara",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Matthews",
         "email": "tlmatthe@us.ibm.com",
         "role": "",
@@ -29500,7 +29570,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Mary",
-        "middleInitial": "",
+        "middleInitial": "P.",
         "familyName": "Czerwinski",
         "email": "marycz@microsoft.com",
         "role": "",
@@ -29524,7 +29594,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Paul",
-        "middleInitial": "",
+        "middleInitial": "R",
         "familyName": "Johns",
         "email": "pauljoh@microsoft.com",
         "role": "",
@@ -29644,7 +29714,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Celine",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Latulipe",
         "email": "clatulip@uncc.edu",
         "role": "",
@@ -30124,7 +30194,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Robert",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Kraut",
         "email": "robert.kraut@cmu.edu",
         "role": "",
@@ -30244,7 +30314,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Ari",
-        "middleInitial": "",
+        "middleInitial": "MJ",
         "familyName": "Hautasaari",
         "email": "ari.hautasaari@lab.ntt.co.jp",
         "role": "",
@@ -30364,7 +30434,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Steven",
-        "middleInitial": "A",
+        "middleInitial": "",
         "familyName": "Sloman",
         "email": "steven_sloman@brown.edu",
         "role": "",
@@ -30820,7 +30890,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Austin",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Toombs",
         "email": "altoombs@indiana.edu",
         "role": "",
@@ -30940,7 +31010,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Diana",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "MacLean",
         "email": "malcdi@stanford.edu",
         "role": "",
@@ -31011,7 +31081,7 @@
         "id": "pn1447",
         "venue": "paper",
         "rank": 2,
-        "givenName": "Yeaseul",
+        "givenName": "Yea-Seul",
         "middleInitial": "",
         "familyName": "Kim",
         "email": "yeaseul1@uw.edu",
@@ -31204,7 +31274,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Henry",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Gardner",
         "email": "Henry.Gardner@anu.edu.au",
         "role": "",
@@ -31252,7 +31322,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Amanda L.",
-        "middleInitial": "",
+        "middleInitial": "L.",
         "familyName": "Hughes",
         "email": "amanda.hughes@usu.edu",
         "role": "",
@@ -31276,7 +31346,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Lise A.",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "St. Denis",
         "email": "lise.st.denis@colorado.edu",
         "role": "",
@@ -31324,7 +31394,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Kenneth M.",
-        "middleInitial": "",
+        "middleInitial": "M.",
         "familyName": "Anderson",
         "email": "kena@cs.colorado.edu",
         "role": "",
@@ -31372,7 +31442,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Jessica",
-        "middleInitial": "",
+        "middleInitial": "R",
         "familyName": "Hullman",
         "email": "jhullman@umich.edu",
         "role": "",
@@ -31564,7 +31634,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Daniel",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Afergan",
         "email": "afergan@gmail.com",
         "role": "",
@@ -31876,7 +31946,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Anirudha",
-        "middleInitial": "",
+        "middleInitial": "N",
         "familyName": "Joshi",
         "email": "anirudha@iitb.ac.in",
         "role": "",
@@ -32188,7 +32258,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Patrick",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Carrington",
         "email": "carpat1@umbc.edu",
         "role": "",
@@ -32625,31 +32695,7 @@
         "email": "davidsun@cs.berkeley.edu",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of California, Berkeley",
-            "city": "Berkeley",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth3490",
-        "type": "author",
-        "id": "pn1514",
-        "venue": "paper",
-        "rank": 2,
-        "givenName": "John",
-        "middleInitial": "",
-        "familyName": "Canny",
-        "email": "jfc@cs.berkeley.edu",
-        "role": "",
-        "primary": {
-            "dept": "EECS Department",
+            "dept": "EECS",
             "institution": "University of California, Berkeley",
             "city": "Berkeley",
             "country": "United States"
@@ -32666,9 +32712,9 @@
         "type": "author",
         "id": "pn1514",
         "venue": "paper",
-        "rank": 3,
+        "rank": 2,
         "givenName": "Pablo",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Paredes",
         "email": "paredes@eecs.berkeley.edu",
         "role": "",
@@ -32686,13 +32732,37 @@
         }
     },
     {
+        "authorId": "auth3490",
+        "type": "author",
+        "id": "pn1514",
+        "venue": "paper",
+        "rank": 3,
+        "givenName": "John",
+        "middleInitial": "F",
+        "familyName": "Canny",
+        "email": "jfc@cs.berkeley.edu",
+        "role": "",
+        "primary": {
+            "dept": "Berkeley Institute of Design",
+            "institution": "University of California, Berkeley",
+            "city": "Berkeley",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
         "authorId": "auth16477",
         "type": "author",
         "id": "pn1517",
         "venue": "paper",
         "rank": 1,
         "givenName": "Laura",
-        "middleInitial": "",
+        "middleInitial": "Jane",
         "familyName": "Benton",
         "email": "l.benton@ioe.ac.uk",
         "role": "",
@@ -32812,7 +32882,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Elizabeth",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Bonsignore",
         "email": "ebonsign@umd.edu",
         "role": "",
@@ -32884,7 +32954,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Derek",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Hansen",
         "email": "dlhansen@byu.edu",
         "role": "",
@@ -32896,9 +32966,9 @@
         },
         "secondary": {
             "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Brigham Young University",
+            "city": "Provo",
+            "country": "United States"
         }
     },
     {
@@ -32907,7 +32977,7 @@
         "id": "pn1518",
         "venue": "paper",
         "rank": 5,
-        "givenName": "kari kraus",
+        "givenName": "kari",
         "middleInitial": "",
         "familyName": "kraus",
         "email": "karimkraus@gmail.com",
@@ -33316,7 +33386,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Gary",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Burnett",
         "email": "gary.burnett@nottingham.ac.uk",
         "role": "",
@@ -34204,7 +34274,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Stephen",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Brewster",
         "email": "stephen.brewster@glasgow.ac.uk",
         "role": "",
@@ -34278,7 +34348,7 @@
         "givenName": "Volker",
         "middleInitial": "",
         "familyName": "Wulf",
-        "email": "volker.wulf@fit.fraunhofer.de",
+        "email": "volker.wulf@uni-siegen.de",
         "role": "",
         "primary": {
             "dept": "",
@@ -34324,7 +34394,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Charlene",
-        "middleInitial": "",
+        "middleInitial": "I",
         "familyName": "Jennett",
         "email": "charlene.jennett@ucl.ac.uk",
         "role": "",
@@ -34348,7 +34418,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Ann",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Blandford",
         "email": "a.blandford@ucl.ac.uk",
         "role": "",
@@ -34396,7 +34466,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Anna",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Cox",
         "email": "anna.cox@ucl.ac.uk",
         "role": "",
@@ -34444,7 +34514,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "James",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Fogarty",
         "email": "jfogarty@cs.washington.edu",
         "role": "",
@@ -34948,7 +35018,7 @@
         "venue": "paper",
         "rank": 7,
         "givenName": "Nadia",
-        "middleInitial": "",
+        "middleInitial": "Berthouze",
         "familyName": "Bianchi-Berthouze",
         "email": "n.berthouze@ucl.ac.uk",
         "role": "",
@@ -35332,7 +35402,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Martin",
-        "middleInitial": "",
+        "middleInitial": "R.",
         "familyName": "Gibbs",
         "email": "martinrg@unimelb.edu.au",
         "role": "",
@@ -35596,9 +35666,9 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Kami",
-        "middleInitial": "",
+        "middleInitial": "E.",
         "familyName": "Vaniea",
-        "email": "kami@vaniea.com",
+        "email": "vaniea@msu.edu",
         "role": "",
         "primary": {
             "dept": "",
@@ -37228,7 +37298,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Siân",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Lindley",
         "email": "sianl@microsoft.com",
         "role": "",
@@ -37396,7 +37466,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Tia",
-        "middleInitial": "",
+        "middleInitial": "R",
         "familyName": "Shelley",
         "email": "calitastic@gmail.com",
         "role": "",
@@ -37420,7 +37490,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Leilah",
-        "middleInitial": "",
+        "middleInitial": "B.",
         "familyName": "Lyons",
         "email": "leilah@gmail.com",
         "role": "",
@@ -37876,7 +37946,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Jon",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Froehlich",
         "email": "jonf@cs.umd.edu",
         "role": "",
@@ -37948,7 +38018,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "David",
-        "middleInitial": "",
+        "middleInitial": "William",
         "familyName": "Randall",
         "email": "D.Randall@mmu.ac.uk",
         "role": "",
@@ -38380,7 +38450,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Dustin",
-        "middleInitial": "",
+        "middleInitial": "E.R.",
         "familyName": "Freeman",
         "email": "dustin@cs.toronto.edu",
         "role": "",
@@ -38548,7 +38618,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Teemu",
-        "middleInitial": "",
+        "middleInitial": "T",
         "familyName": "Ahmaniemi",
         "email": "teemu.ahmaniemi@nokia.com",
         "role": "",
@@ -38692,7 +38762,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "David",
-        "middleInitial": "",
+        "middleInitial": "William",
         "familyName": "Randall",
         "email": "daverandall2008@gmail.com",
         "role": "",
@@ -38740,7 +38810,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Regan",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Mandryk",
         "email": "regan@cs.usask.ca",
         "role": "",
@@ -38956,7 +39026,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Lora",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Oehlberg",
         "email": "lora.oehlberg@inria.fr",
         "role": "",
@@ -39033,7 +39103,7 @@
         "email": "lb@comp.lancs.ac.uk",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "School of Computing and Communications",
             "institution": "Lancaster University",
             "city": "Lancaster",
             "country": "United Kingdom"
@@ -39124,7 +39194,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Stephen",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Brewster",
         "email": "stephen.brewster@glasgow.ac.uk",
         "role": "",
@@ -39148,7 +39218,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "John",
-        "middleInitial": "",
+        "middleInitial": "H",
         "familyName": "Williamson",
         "email": "jhw@dcs.gla.ac.uk",
         "role": "",
@@ -39220,7 +39290,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Loren",
-        "middleInitial": "",
+        "middleInitial": "G",
         "familyName": "Terveen",
         "email": "terveen@cs.umn.edu",
         "role": "",
@@ -39244,7 +39314,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Kate",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Vaisutis",
         "email": "kate@planofattack.com.au",
         "role": "",
@@ -39532,7 +39602,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Daniel",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Wigdor",
         "email": "daniel@dgp.toronto.edu",
         "role": "",
@@ -39700,7 +39770,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Christina",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Masden",
         "email": "christinamasden@gatech.edu",
         "role": "",
@@ -39748,7 +39818,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Rebecca",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Grinter",
         "email": "beki@cc.gatech.edu",
         "role": "",
@@ -40204,7 +40274,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "David",
-        "middleInitial": "",
+        "middleInitial": "E.",
         "familyName": "Kieras",
         "email": "kieras@umich.edu",
         "role": "",
@@ -40228,7 +40298,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Anthony",
-        "middleInitial": "",
+        "middleInitial": "J.",
         "familyName": "Hornof",
         "email": "hornof@cs.uoregon.edu",
         "role": "",
@@ -40468,7 +40538,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Niklas",
-        "middleInitial": "",
+        "middleInitial": "L. E.",
         "familyName": "Elmqvist",
         "email": "elm@purdue.edu",
         "role": "",
@@ -40612,7 +40682,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Anthony",
-        "middleInitial": "",
+        "middleInitial": "D",
         "familyName": "Whitehead",
         "email": "anthony_whitehead@carleton.ca",
         "role": "",
@@ -40756,7 +40826,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Stuart",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Taylor",
         "email": "stuart@microsoft.com",
         "role": "",
@@ -41500,7 +41570,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Chris",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "North",
         "email": "north@cs.vt.edu",
         "role": "",
@@ -41548,7 +41618,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Scott",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Hudson",
         "email": "scott.hudson@cs.cmu.edu",
         "role": "",
@@ -41932,7 +42002,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Joseph",
-        "middleInitial": "",
+        "middleInitial": "Matthew",
         "familyName": "Mullenbach",
         "email": "jmullenbach@gmail.com",
         "role": "",
@@ -42220,7 +42290,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Klaus",
-        "middleInitial": "",
+        "middleInitial": "H.",
         "familyName": "Hinrichs",
         "email": "khh@uni-muenster.de",
         "role": "",
@@ -42412,7 +42482,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Tara",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Matthews",
         "email": "tlmatthe@us.ibm.com",
         "role": "",
@@ -43060,7 +43130,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Siân",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Lindley",
         "email": "sianl@microsoft.com",
         "role": "",
@@ -43612,7 +43682,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Pamela",
-        "middleInitial": "",
+        "middleInitial": "J",
         "familyName": "Wisniewski",
         "email": "pam@pamspam.com",
         "role": "",
@@ -44164,7 +44234,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Toni-Jan Keith",
-        "middleInitial": "",
+        "middleInitial": "Palma",
         "familyName": "Monserrat",
         "email": "tjmonsi@gmail.com",
         "role": "",
@@ -45580,7 +45650,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Robert",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Kraut",
         "email": "robert.kraut@cmu.edu",
         "role": "",
@@ -45700,7 +45770,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Mark",
-        "middleInitial": "",
+        "middleInitial": "W.",
         "familyName": "Newman",
         "email": "mwnewman@umich.edu",
         "role": "",
@@ -45724,7 +45794,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Jodi",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Forlizzi",
         "email": "forlizzi@cs.cmu.edu",
         "role": "",
@@ -45796,7 +45866,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Seth",
-        "middleInitial": "",
+        "middleInitial": "E",
         "familyName": "Hunter",
         "email": "hunters@mit.edu",
         "role": "",
@@ -45868,7 +45938,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Kori",
-        "middleInitial": "",
+        "middleInitial": "M",
         "familyName": "Inkpen",
         "email": "kori@microsoft.com",
         "role": "",
@@ -45964,7 +46034,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Gail",
-        "middleInitial": "",
+        "middleInitial": "C",
         "familyName": "Murphy",
         "email": "murphy@cs.ubc.ca",
         "role": "",
@@ -46012,7 +46082,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Wolfgang",
-        "middleInitial": "",
+        "middleInitial": "H",
         "familyName": "Reitberger",
         "email": "wolfgang.reitberger@tuwien.ac.at",
         "role": "",
@@ -46156,7 +46226,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "John",
-        "middleInitial": "",
+        "middleInitial": "R",
         "familyName": "Porter",
         "email": "jrporter@uw.edu",
         "role": "",
@@ -46204,7 +46274,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Julie",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Kientz",
         "email": "jkientz@uw.edu",
         "role": "",
@@ -46276,7 +46346,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Steven",
-        "middleInitial": "",
+        "middleInitial": "D.",
         "familyName": "Schwaitzberg",
         "email": "sschwaitzberg@challiance.org",
         "role": "",
@@ -46371,7 +46441,7 @@
         "id": "pn2294",
         "venue": "paper",
         "rank": 4,
-        "givenName": "Steve",
+        "givenName": "Stephen",
         "middleInitial": "T",
         "familyName": "Ricken",
         "email": "steve.ricken@gmail.com",
@@ -46395,7 +46465,7 @@
         "id": "pn2294",
         "venue": "paper",
         "rank": 5,
-        "givenName": "Quentin (Gad)",
+        "givenName": "Quentin",
         "middleInitial": "",
         "familyName": "Jones",
         "email": "quentin.jones@njit.edu",
@@ -46492,7 +46562,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Dana",
-        "middleInitial": "",
+        "middleInitial": "N",
         "familyName": "Ruggiero",
         "email": "d.ruggiero@bathspa.ac.uk",
         "role": "",
@@ -46522,9 +46592,9 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Massachusetts Institute of Technology",
+            "institution": "MIT Media Lab",
             "city": "Cambridge",
-            "country": "United States"
+            "country": "02139"
         },
         "secondary": {
             "dept": "",
@@ -46545,7 +46615,7 @@
         "email": "leah@media.mit.edu",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "MIT Media Lab",
             "institution": "Massachusetts Institute of Technology",
             "city": "Cambridge",
             "country": "United States"
@@ -46852,7 +46922,7 @@
         "venue": "paper",
         "rank": 5,
         "givenName": "Niklas",
-        "middleInitial": "",
+        "middleInitial": "L. E.",
         "familyName": "Elmqvist",
         "email": "elm@purdue.edu",
         "role": "",
@@ -46996,7 +47066,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Charlotte",
-        "middleInitial": "",
+        "middleInitial": "L",
         "familyName": "Robinson",
         "email": "charlotte.robinson@open.ac.uk",
         "role": "",
@@ -47284,7 +47354,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Joshua",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Tan",
         "email": "joshua.tan@ndsu.edu",
         "role": "",
@@ -47452,7 +47522,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Justin",
-        "middleInitial": "",
+        "middleInitial": "B",
         "familyName": "Cranshaw",
         "email": "jcransh@cs.cmu.edu",
         "role": "",
@@ -47620,7 +47690,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "David",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Shamma",
         "email": "aymans@acm.org",
         "role": "",
@@ -47740,7 +47810,7 @@
         "venue": "paper",
         "rank": 4,
         "givenName": "Tracy",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Hammond",
         "email": "hammond@cs.tamu.edu",
         "role": "",
@@ -48124,7 +48194,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Joel",
-        "middleInitial": "",
+        "middleInitial": "R.",
         "familyName": "Brandt",
         "email": "joel.brandt@adobe.com",
         "role": "",
@@ -48604,7 +48674,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Tom",
-        "middleInitial": "",
+        "middleInitial": "Yu",
         "familyName": "Ouyang",
         "email": "t.y.ouyang@gmail.com",
         "role": "",
@@ -48748,7 +48818,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Lada",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Adamic",
         "email": "ladamic@fb.com",
         "role": "",
@@ -49276,7 +49346,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Irina",
-        "middleInitial": "",
+        "middleInitial": "A",
         "familyName": "Shklovski",
         "email": "irsh@itu.dk",
         "role": "",
@@ -49347,7 +49417,7 @@
         "id": "pn2525",
         "venue": "paper",
         "rank": 4,
-        "givenName": "Höskuldur ",
+        "givenName": "Höskuldur",
         "middleInitial": "",
         "familyName": "Borgthorsson",
         "email": "hoskborg@gmail.com",
@@ -49366,21 +49436,21 @@
         }
     },
     {
-        "authorId": "auth39251",
+        "authorId": "auth14794",
         "type": "author",
         "id": "pn2560",
         "venue": "paper",
         "rank": 1,
-        "givenName": "Greg",
-        "middleInitial": "",
+        "givenName": "J.",
+        "middleInitial": "Gregory",
         "familyName": "Trafton",
-        "email": "trafton@mac.com",
+        "email": "greg.trafton@nrl.navy.mil",
         "role": "",
         "primary": {
-            "dept": "AI Center",
-            "institution": "Naval Research Laboratory",
-            "city": "Washington",
-            "country": "United States"
+            "dept": "AI Center, Naval Research Laboratory, Washington, DC, United States",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -49396,7 +49466,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Raj",
-        "middleInitial": "",
+        "middleInitial": "M.",
         "familyName": "Ratwani",
         "email": "raj.ratwani@medicalhfe.org",
         "role": "",
@@ -49404,6 +49474,3157 @@
             "dept": "MedStar",
             "institution": "MedStar",
             "city": "Washington",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth31489",
+        "type": "author",
+        "id": "pan102",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Karen",
+        "familyName": "Holtzblatt",
+        "email": "karen@incontextdesign.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "InContext Design",
+            "city": "Concord",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14090",
+        "type": "author",
+        "id": "pan102",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Janaki",
+        "familyName": "Kumar",
+        "email": "janaki.kumar@sap.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "SAP Labs",
+            "city": "Palo Alto",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth16185",
+        "type": "author",
+        "id": "pan102",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "David",
+        "familyName": "Rondeau",
+        "email": "david.rondeau@incontextdesign.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "InContext Design",
+            "city": "Concord",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1917",
+        "type": "author",
+        "id": "pan102",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "John",
+        "familyName": "Zimmerman",
+        "email": "johnz@cs.cmu.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Carnegie Mellon University",
+            "city": "Pittsburgh",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1960",
+        "type": "author",
+        "id": "pan103",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Helena",
+        "familyName": "Mentis",
+        "email": "mentis@umbc.edu",
+        "role": "",
+        "primary": {
+            "dept": "Department of Information Systems",
+            "institution": "University of Maryland, Baltimore County",
+            "city": "Baltimore",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth3543",
+        "type": "author",
+        "id": "pan103",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Kristina",
+        "familyName": "Höök",
+        "email": "kia@sics.se",
+        "role": "",
+        "primary": {
+            "dept": "Mobile Life @ KTH",
+            "institution": "KTH - Royal Institute of Technology",
+            "city": "Stockholm",
+            "country": "Sweden"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2060",
+        "type": "author",
+        "id": "pan103",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Florian",
+        "familyName": "Mueller",
+        "email": "floyd@floydmueller.com",
+        "role": "",
+        "primary": {
+            "dept": "Exertion Games Lab",
+            "institution": "RMIT University",
+            "city": "Melbourne",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1461",
+        "type": "author",
+        "id": "pan103",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Katherine",
+        "familyName": "Isbister",
+        "email": "isbister@poly.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Polytechnic Institute of New York University",
+            "city": "Brooklyn",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth22640",
+        "type": "author",
+        "id": "pan103",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "George Poonkhin",
+        "familyName": "Khut",
+        "email": "georgekhut@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Interaction Design and Human Practice Lab, University of Technology Sydney",
+            "city": "Sydney",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth12108",
+        "type": "author",
+        "id": "pan103",
+        "venue": "panel",
+        "rank": 6,
+        "givenName": "Toni",
+        "familyName": "Robertson",
+        "email": "toni@it.uts.edu.au",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Technology, Sydney",
+            "city": "Sydney",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1924",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Juan Pablo",
+        "familyName": "Hourcade",
+        "email": "juanpablo-hourcade@uiowa.edu",
+        "role": "",
+        "primary": {
+            "dept": "Department of Computer Science",
+            "institution": "University of Iowa",
+            "city": "Iowa City",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41118",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Ann",
+        "familyName": "Cavoukian",
+        "email": "info@ipc.on.ca",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Office of the Information and Privacy Commissioner of Ontario",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41119",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Ronald",
+        "familyName": "Deibert",
+        "email": "r.deibert@utoronto.ca",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Toronto",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1992",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Lorrie",
+        "familyName": "Cranor",
+        "email": "lorrie@cs.cmu.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Carnegie Mellon University",
+            "city": "Pittsburgh",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41120",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Ian",
+        "familyName": "Goldberg",
+        "email": "iang@cs.uwaterloo.ca",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Waterloo",
+            "city": "Waterloo",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth3375",
+        "type": "author",
+        "id": "pan107",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Matthew",
+        "familyName": "Kam",
+        "email": "me@matthewkam.org",
+        "role": "",
+        "primary": {
+            "dept": "International Development Program",
+            "institution": "American Institutes for Research",
+            "city": "Washington",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth12942",
+        "type": "author",
+        "id": "pan107",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Anupam",
+        "familyName": "Jain",
+        "email": "anupamjain@in.ibm.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM Research Lab",
+            "city": "New Delhi",
+            "country": "India"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14513",
+        "type": "author",
+        "id": "pan107",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Michael",
+        "familyName": "Best",
+        "email": "mikeb@cc.gatech.edu",
+        "role": "",
+        "primary": {
+            "dept": "Sam Nunn School of International Affairs and School of Interactive Computing",
+            "institution": "Georgia Tech",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7739",
+        "type": "author",
+        "id": "pan107",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Elizabeth",
+        "familyName": "Gerber",
+        "email": "egerber@northwestern.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Northwestern University",
+            "city": "Evanston",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41254",
+        "type": "author",
+        "id": "pan107",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Rowena",
+        "familyName": "Luk",
+        "email": "rluk@dimagi.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Dimagi Inc.",
+            "city": "Boston",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7080",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Jeffrey",
+        "familyName": "Bardzell",
+        "email": "jbardzel@indiana.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Indiana University Bloomington",
+            "city": "Bloomington",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7081",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Shaowen",
+        "familyName": "Bardzell",
+        "email": "selu@indiana.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Indiana University Bloomington",
+            "city": "Bloomington",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9429",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Silvia",
+        "familyName": "Lindtner",
+        "email": "silvia.lindtner@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9749",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Daniela",
+        "familyName": "Rosner",
+        "email": "dkrosner@uw.edu",
+        "role": "",
+        "primary": {
+            "dept": "Human Centered Design & Engineering",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6095",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Morgan",
+        "familyName": "Ames",
+        "email": "morganya@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Intel Science and Technology Center",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14505",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 6,
+        "givenName": "David",
+        "familyName": "Mellis",
+        "email": "mellis@media.mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Massachusetts Institute of Technology",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth31163",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 7,
+        "givenName": "Matt",
+        "familyName": "Ratto",
+        "email": "matt.ratto@utoronto.ca",
+        "role": "",
+        "primary": {
+            "dept": "Faculty of Information",
+            "institution": "University of Toronto",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth17138",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 8,
+        "givenName": "Joshua",
+        "familyName": "Tanenbaum",
+        "email": "joshuat@sfu.ca",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Simon Fraser University",
+            "city": "Surrey",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7739",
+        "type": "author",
+        "id": "pan110",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Elizabeth",
+        "familyName": "Gerber",
+        "email": "egerber@northwestern.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Northwestern University",
+            "city": "Evanston",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1047",
+        "type": "author",
+        "id": "pan110",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Michael",
+        "familyName": "Muller",
+        "email": "michael_muller@us.ibm.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM T.J. Watson Research",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6817",
+        "type": "author",
+        "id": "pan110",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Rick",
+        "familyName": "Wash",
+        "email": "wash@msu.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Michigan State University",
+            "city": "East Lansing",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9206",
+        "type": "author",
+        "id": "pan114",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Svetlena",
+        "familyName": "Taneva",
+        "email": "svetlena@humanfactors.ca",
+        "role": "",
+        "primary": {
+            "dept": "Healthcare Human Factors",
+            "institution": "University Health Network",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41580",
+        "type": "author",
+        "id": "pan114",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Waxberg",
+        "familyName": "Sara",
+        "email": "sara.waxberg@philips.com",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "Philips Healthcare",
+            "city": "Andover",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41581",
+        "type": "author",
+        "id": "pan114",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Goss",
+        "familyName": "Julian",
+        "email": "jgoss@faculty.ocadu.ca",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "Ontario College of Arts and Design ",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41585",
+        "type": "author",
+        "id": "pan114",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Rossos",
+        "familyName": "Peter",
+        "email": "Peter.Rossos@uhn.ca",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "University Health Network",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41586",
+        "type": "author",
+        "id": "pan114",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Nicholas",
+        "familyName": "Emily",
+        "email": "emily.nicholas@patientsassociation.ca",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "Patients Canada",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41582",
+        "type": "author",
+        "id": "pan114",
+        "venue": "panel",
+        "rank": 6,
+        "givenName": "Cafazzo",
+        "familyName": "Joseph",
+        "email": "joe@humanfactors.ca",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "Healthcare Human Factors",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4587",
+        "type": "author",
+        "id": "pan118",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Michelle",
+        "familyName": "Zhou",
+        "email": "mzhou@us.ibm.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM Research - Almaden",
+            "city": "San Jose",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2720",
+        "type": "author",
+        "id": "pan118",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Jeffrey",
+        "familyName": "Nichols",
+        "email": "jwnichols@us.ibm.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM Research",
+            "city": "San Josè",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6176",
+        "type": "author",
+        "id": "pan118",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Jennifer",
+        "familyName": "Golbeck",
+        "email": "golbeck@cs.umd.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth18083",
+        "type": "author",
+        "id": "pan118",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "James",
+        "familyName": "Pennebaker",
+        "email": "pennebaker@mail.utexas.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "The University of Texas at Austin",
+            "city": "Austin",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9440",
+        "type": "author",
+        "id": "alt101",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Dimitris",
+        "middleInitial": "",
+        "familyName": "Grammenos",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Foundation for Research and Technology - Hellas",
+            "city": "Heraklion",
+            "country": "Greece"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40683",
+        "type": "author",
+        "id": "alt104",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Arne",
+        "middleInitial": "",
+        "familyName": "Renkema-Padmos",
+        "role": "",
+        "primary": {
+            "dept": "SecUSo",
+            "institution": "CASED / TU Darmstadt",
+            "city": "Darmstadt",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth38846",
+        "type": "author",
+        "id": "alt104",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Melanie",
+        "middleInitial": "",
+        "familyName": "Volkamer",
+        "role": "",
+        "primary": {
+            "dept": "SecUso",
+            "institution": "CASED / TU Darmstadt",
+            "city": "Darmstadt",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6035",
+        "type": "author",
+        "id": "alt104",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Karen",
+        "middleInitial": "",
+        "familyName": "Renaud",
+        "role": "",
+        "primary": {
+            "dept": "School of Computing Science",
+            "institution": "University of Glasgow",
+            "city": "Glasgow",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth11718",
+        "type": "author",
+        "id": "alt105",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Adam",
+        "middleInitial": "",
+        "familyName": "Fourney",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Waterloo",
+            "city": "Waterloo",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth5895",
+        "type": "author",
+        "id": "alt105",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Michael",
+        "middleInitial": "A",
+        "familyName": "Terry",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Waterloo",
+            "city": "Waterloo",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7663",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Eric",
+        "middleInitial": "P. S.",
+        "familyName": "Baumer",
+        "role": "",
+        "primary": {
+            "dept": "Communication Department",
+            "institution": "Cornell University",
+            "city": "Ithaca",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "Information Science Department",
+            "institution": "Cornell University",
+            "city": "Ithaca",
+            "country": "United States"
+        }
+    },
+    {
+        "authorId": "auth21212",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "June",
+        "middleInitial": "",
+        "familyName": "Ahn",
+        "role": "",
+        "primary": {
+            "dept": "Human-Computer Interaction Lab",
+            "institution": "University of Maryland, College Park",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40742",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Mei",
+        "middleInitial": "",
+        "familyName": "Bie",
+        "role": "",
+        "primary": {
+            "dept": "Human-Computer Interaction Lab",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth15706",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Elizabeth",
+        "middleInitial": "M",
+        "familyName": "Bonsignore",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Human-Computer Interaction Lab",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40743",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 5,
+        "givenName": "Ahmet",
+        "middleInitial": "",
+        "familyName": "Börütecene",
+        "role": "",
+        "primary": {
+            "dept": "Design Lab",
+            "institution": "Koç University",
+            "city": "Istanbul",
+            "country": "Turkey"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40744",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 6,
+        "givenName": "Oğuz Turan",
+        "middleInitial": "",
+        "familyName": "Buruk",
+        "role": "",
+        "primary": {
+            "dept": "Design Lab",
+            "institution": "Koç University",
+            "city": "Istanbul",
+            "country": "Turkey"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40102",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 7,
+        "givenName": "Tamara",
+        "middleInitial": "",
+        "familyName": "Clegg",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1070",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 8,
+        "givenName": "Allison",
+        "middleInitial": "",
+        "familyName": "Druin",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "HCIL",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9500",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 9,
+        "givenName": "Florian",
+        "middleInitial": "",
+        "familyName": "Echtler",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Regensburg",
+            "city": "Regensburg",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2227",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 10,
+        "givenName": "Dan",
+        "middleInitial": "",
+        "familyName": "Gruen",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM Research",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9212",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 11,
+        "givenName": "Mona Leigh",
+        "middleInitial": "",
+        "familyName": "Guha",
+        "role": "",
+        "primary": {
+            "dept": "HCIL",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40745",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 12,
+        "givenName": "Chelsea",
+        "middleInitial": "",
+        "familyName": "Hordatt",
+        "role": "",
+        "primary": {
+            "dept": "Human-Computer Interaction Lab",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6436",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 13,
+        "givenName": "Antonio",
+        "middleInitial": "",
+        "familyName": "Krüger",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "DFKI GmbH",
+            "city": "Saarbrucken",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth37044",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 14,
+        "givenName": "shachar",
+        "middleInitial": "",
+        "familyName": "maidenbaum",
+        "role": "",
+        "primary": {
+            "dept": "IMRIC",
+            "institution": "Hebrew university of Jerusalem",
+            "city": "Jerusalem",
+            "country": "Israel"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth22431",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 15,
+        "givenName": "Meethu",
+        "middleInitial": "",
+        "familyName": "Malu",
+        "role": "",
+        "primary": {
+            "dept": "Department of Computer Science",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth20357",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 16,
+        "givenName": "Brenna",
+        "middleInitial": "",
+        "familyName": "McNally",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1047",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 17,
+        "givenName": "Michael",
+        "middleInitial": "",
+        "familyName": "Muller",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM T.J. Watson Research",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40748",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 18,
+        "givenName": "Leyla",
+        "middleInitial": "",
+        "familyName": "Norooz",
+        "role": "",
+        "primary": {
+            "dept": "Human-Computer Interaction Lab",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth29432",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 19,
+        "givenName": "Juliet",
+        "middleInitial": "",
+        "familyName": "Norton",
+        "role": "",
+        "primary": {
+            "dept": "Department of Informatics",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth34016",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 20,
+        "givenName": "Oguzhan",
+        "middleInitial": "",
+        "familyName": "Ozcan",
+        "role": "",
+        "primary": {
+            "dept": "Design Lab",
+            "institution": "Koç University",
+            "city": "Istanbul",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6028",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 21,
+        "givenName": "Donald",
+        "middleInitial": "J",
+        "familyName": "Patterson",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth18895",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 22,
+        "givenName": "Andreas",
+        "middleInitial": "",
+        "familyName": "Riener",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Johannes Kepler University Linz, Austria",
+            "city": "Linz",
+            "country": "Austria"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4449",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 23,
+        "givenName": "Steven",
+        "middleInitial": "I",
+        "familyName": "Ross",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM Research",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40747",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 24,
+        "givenName": "Karen",
+        "middleInitial": "",
+        "familyName": "Rust",
+        "role": "",
+        "primary": {
+            "dept": "Human-Computer Interaction Lab",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth28768",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 25,
+        "givenName": "Johannes",
+        "middleInitial": "",
+        "familyName": "Schöning",
+        "role": "",
+        "primary": {
+            "dept": "Expertise Centre for Digital Media",
+            "institution": "Hasselt University - tUL - iMinds",
+            "city": "Diepenbeek",
+            "country": "Belgium"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth22891",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 26,
+        "givenName": "M.",
+        "middleInitial": "Six",
+        "familyName": "Silberman",
+        "role": "",
+        "primary": {
+            "dept": "Informatics",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4917",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 27,
+        "givenName": "Bill",
+        "middleInitial": "",
+        "familyName": "Tomlinson",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth23842",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 28,
+        "givenName": "Jason",
+        "middleInitial": "",
+        "familyName": "Yip",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "HCIL",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth22495",
+        "type": "author",
+        "id": "alt109",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Jayne",
+        "middleInitial": "",
+        "familyName": "Wallace",
+        "role": "",
+        "primary": {
+            "dept": "DJCAD",
+            "institution": "University of Dundee",
+            "city": "Dundee",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6865",
+        "type": "author",
+        "id": "alt109",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Joyce",
+        "middleInitial": "",
+        "familyName": "Yee",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Northumbria University",
+            "city": "Newcastle upon Tyne",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9649",
+        "type": "author",
+        "id": "alt109",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Abigail",
+        "middleInitial": "",
+        "familyName": "Durrant",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Newcastle University",
+            "city": "Newcastle upon Tyne",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth18434",
+        "type": "author",
+        "id": "alt112",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Megan",
+        "middleInitial": "",
+        "familyName": "Strait",
+        "role": "",
+        "primary": {
+            "dept": "Human-Robot Interaction Lab",
+            "institution": "Tufts University",
+            "city": "Medford",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth30860",
+        "type": "author",
+        "id": "alt112",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Cody",
+        "middleInitial": "",
+        "familyName": "Canning",
+        "role": "",
+        "primary": {
+            "dept": "Human-Robot Interaction Lab",
+            "institution": "Tufts University",
+            "city": "Medford",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth12988",
+        "type": "author",
+        "id": "alt112",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Matthias",
+        "middleInitial": "",
+        "familyName": "Scheutz",
+        "role": "",
+        "primary": {
+            "dept": "Human-Robot Interaction Lab",
+            "institution": "Tufts University",
+            "city": "Medford",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth28737",
+        "type": "author",
+        "id": "alt116",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Stefano",
+        "middleInitial": "",
+        "familyName": "Padilla",
+        "role": "",
+        "primary": {
+            "dept": "School of Mathematical & Computer Sciences",
+            "institution": "Heriot Watt University",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41363",
+        "type": "author",
+        "id": "alt116",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Thomas",
+        "middleInitial": "S",
+        "familyName": "Methven",
+        "role": "",
+        "primary": {
+            "dept": "School of Mathematical & Computer Sciences",
+            "institution": "Heriot-Watt University",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41364",
+        "type": "author",
+        "id": "alt116",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "David",
+        "middleInitial": "W",
+        "familyName": "Corne",
+        "role": "",
+        "primary": {
+            "dept": "School of Mathematical & Computer Sciences",
+            "institution": "Heriot-Watt University",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41365",
+        "type": "author",
+        "id": "alt116",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Mike",
+        "middleInitial": "J",
+        "familyName": "Chantler",
+        "role": "",
+        "primary": {
+            "dept": "School of Mathematical & Computer Sciences",
+            "institution": "Heriot-Watt University",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth20910",
+        "type": "author",
+        "id": "alt119",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Matthew",
+        "middleInitial": "P",
+        "familyName": "Aylett",
+        "role": "",
+        "primary": {
+            "dept": "School of Informatics",
+            "institution": "University of Edinburgh",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "CereProc Ltd.",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        }
+    },
+    {
+        "authorId": "auth3496",
+        "type": "author",
+        "id": "alt119",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Per Ola",
+        "middleInitial": "",
+        "familyName": "Kristensson",
+        "role": "",
+        "primary": {
+            "dept": "School of Computer Science",
+            "institution": "University of St Andrews",
+            "city": "St Andrews",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13221",
+        "type": "author",
+        "id": "alt119",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Steve",
+        "middleInitial": "",
+        "familyName": "Whittaker",
+        "role": "",
+        "primary": {
+            "dept": "HCI Lab",
+            "institution": "University of California at Santa Cruz",
+            "city": "Santa Cruz",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth12656",
+        "type": "author",
+        "id": "alt119",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Yolanda",
+        "middleInitial": "",
+        "familyName": "Vazquez-Alvarez",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Glasgow",
+            "city": "Glasgow",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40469",
+        "type": "author",
+        "id": "alt121",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Andy",
+        "middleInitial": "",
+        "familyName": "Brown",
+        "role": "",
+        "primary": {
+            "dept": "School of Computer Science",
+            "institution": "University of Manchester",
+            "city": "Manchester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth24409",
+        "type": "author",
+        "id": "alt121",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Michael",
+        "middleInitial": "",
+        "familyName": "Evans",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "British Broadcasting Corporation",
+            "city": "Manchester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6061",
+        "type": "author",
+        "id": "alt121",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Caroline",
+        "middleInitial": "",
+        "familyName": "Jay",
+        "role": "",
+        "primary": {
+            "dept": "School of Computer Science",
+            "institution": "University of Manchester, UK",
+            "city": "Manchester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth28789",
+        "type": "author",
+        "id": "alt121",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Maxine",
+        "middleInitial": "",
+        "familyName": "Glancy",
+        "role": "",
+        "primary": {
+            "dept": "BBC Research & Development",
+            "institution": "BBC",
+            "city": "Manchester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40822",
+        "type": "author",
+        "id": "alt121",
+        "venue": "altchi",
+        "rank": 5,
+        "givenName": "Rhianne",
+        "middleInitial": "",
+        "familyName": "Jones",
+        "role": "",
+        "primary": {
+            "dept": "BBC Research and Development",
+            "institution": "BBC",
+            "city": "Manchester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6079",
+        "type": "author",
+        "id": "alt121",
+        "venue": "altchi",
+        "rank": 6,
+        "givenName": "Simon",
+        "middleInitial": "",
+        "familyName": "Harper",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Manchester",
+            "city": "Manchester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40905",
+        "type": "author",
+        "id": "alt133",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Gabriella",
+        "middleInitial": "",
+        "familyName": "Dodero",
+        "role": "",
+        "primary": {
+            "dept": "Faculty of Computer Science",
+            "institution": "Free University of Bozen-Bolzano",
+            "city": "Bolzano",
+            "country": "Italy"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth39753",
+        "type": "author",
+        "id": "alt133",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Rosella",
+        "middleInitial": "",
+        "familyName": "Gennari",
+        "role": "",
+        "primary": {
+            "dept": "Faculty of Computer Science",
+            "institution": "Free University of Bozen-Bolzano",
+            "city": "Bolzano",
+            "country": "Italy"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40906",
+        "type": "author",
+        "id": "alt133",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Alessandra",
+        "middleInitial": "",
+        "familyName": "Melonio",
+        "role": "",
+        "primary": {
+            "dept": "Faculty of Computer Science",
+            "institution": "Free University of Bozen-Bolzano",
+            "city": "Bolzano",
+            "country": "Italy"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40907",
+        "type": "author",
+        "id": "alt133",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Santina",
+        "middleInitial": "",
+        "familyName": "Torello",
+        "role": "",
+        "primary": {
+            "dept": "Faculty of Computer Science",
+            "institution": "Free University of Bozen-Bolzano",
+            "city": "Bolzano",
+            "country": "Italy"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth27883",
+        "type": "author",
+        "id": "alt143",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Razvan",
+        "middleInitial": "",
+        "familyName": "Rughinis",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University POLITEHNICA of Bucharest",
+            "city": "Bucharest",
+            "country": "Romania"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth38226",
+        "type": "author",
+        "id": "alt143",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Cosima",
+        "middleInitial": "",
+        "familyName": "Rughinis",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Bucharest",
+            "city": "Bucharest",
+            "country": "Romania"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41025",
+        "type": "author",
+        "id": "alt143",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Alina Petra",
+        "middleInitial": "",
+        "familyName": "Marinescu Nenciu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Bucharest",
+            "city": "Bucharest",
+            "country": "Romania"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41024",
+        "type": "author",
+        "id": "alt145",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Michael",
+        "middleInitial": "",
+        "familyName": "Nitsche",
+        "role": "",
+        "primary": {
+            "dept": "Digital Media",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States of America"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth31164",
+        "type": "author",
+        "id": "alt145",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Andrew",
+        "middleInitial": "",
+        "familyName": "Quitmeyer",
+        "role": "",
+        "primary": {
+            "dept": "Digital Media",
+            "institution": "Georgia Tech",
+            "city": "Atlanta",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41037",
+        "type": "author",
+        "id": "alt145",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Kate",
+        "middleInitial": "",
+        "familyName": "Farina",
+        "role": "",
+        "primary": {
+            "dept": "Digital Media",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41045",
+        "type": "author",
+        "id": "alt145",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Samuel",
+        "middleInitial": "",
+        "familyName": "Zwaan",
+        "role": "",
+        "primary": {
+            "dept": "Digital Media",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14879",
+        "type": "author",
+        "id": "alt145",
+        "venue": "altchi",
+        "rank": 5,
+        "givenName": "Hye Yeon",
+        "middleInitial": "",
+        "familyName": "Nam",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth15364",
+        "type": "author",
+        "id": "alt146",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Naveen",
+        "middleInitial": "L",
+        "familyName": "Bagalkot",
+        "role": "",
+        "primary": {
+            "dept": "Srishti Labs",
+            "institution": "Srishti School of Art, Design and Technology",
+            "city": "Bangalore",
+            "country": "India"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13324",
+        "type": "author",
+        "id": "alt146",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Erik",
+        "middleInitial": "",
+        "familyName": "Grönvall",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IT University of Copenhagen",
+            "city": "Copenhagen",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth5228",
+        "type": "author",
+        "id": "alt146",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Tomas",
+        "middleInitial": "",
+        "familyName": "Sokoler",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IT University of Copenhagen",
+            "city": "Copenhagen",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41154",
+        "type": "author",
+        "id": "alt153",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Laura",
+        "middleInitial": "",
+        "familyName": "Buttrick",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Lincoln",
+            "city": "Lincoln",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13937",
+        "type": "author",
+        "id": "alt153",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Conor",
+        "middleInitial": "",
+        "familyName": "Linehan",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Lincoln",
+            "city": "Lincoln",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth10649",
+        "type": "author",
+        "id": "alt153",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Ben",
+        "middleInitial": "",
+        "familyName": "Kirman",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Lincoln",
+            "city": "Lincoln",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41155",
+        "type": "author",
+        "id": "alt153",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Dan",
+        "middleInitial": "",
+        "familyName": "O'Hara",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Birmingham City University",
+            "city": "Birmingham",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth33045",
+        "type": "author",
+        "id": "alt155",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "John",
+        "middleInitial": "P",
+        "familyName": "Fass",
+        "role": "",
+        "primary": {
+            "dept": "Visual Communication",
+            "institution": "Royal College of Art",
+            "city": "London",
+            "country": "UK"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth32200",
+        "type": "author",
+        "id": "alt156",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Tom",
+        "middleInitial": "",
+        "familyName": "Giraud",
+        "role": "",
+        "primary": {
+            "dept": "LIMSI-CNRS",
+            "institution": "CNRS",
+            "city": "Orsay",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth30981",
+        "type": "author",
+        "id": "alt156",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Matthieu",
+        "middleInitial": "",
+        "familyName": "Courgeon",
+        "role": "",
+        "primary": {
+            "dept": "Lab-STICC ",
+            "institution": "University of South Brittany",
+            "city": "Brest",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41186",
+        "type": "author",
+        "id": "alt156",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Marion",
+        "middleInitial": "",
+        "familyName": "Tardieu",
+        "role": "",
+        "primary": {
+            "dept": "IR4M",
+            "institution": "UMR8081 CNRS",
+            "city": "Orsay",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41187",
+        "type": "author",
+        "id": "alt156",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Alexandra",
+        "middleInitial": "",
+        "familyName": "Roatis",
+        "role": "",
+        "primary": {
+            "dept": "LRI",
+            "institution": "University Paris South",
+            "city": "Orsay",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41188",
+        "type": "author",
+        "id": "alt156",
+        "venue": "altchi",
+        "rank": 5,
+        "givenName": "Xavier",
+        "middleInitial": "",
+        "familyName": "Maitre",
+        "role": "",
+        "primary": {
+            "dept": "IR4M",
+            "institution": "UMR8081 CNRS",
+            "city": "Orsay",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41247",
+        "type": "author",
+        "id": "alt163",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "yasuhiro",
+        "middleInitial": "",
+        "familyName": "suzuki",
+        "role": "",
+        "primary": {
+            "dept": "Information Science",
+            "institution": "Nagoya University",
+            "city": "Nagoya",
+            "country": "Japan"
+        },
+        "secondary": {
+            "dept": "System Design Management",
+            "institution": "Keio",
+            "city": "Yokohama",
+            "country": "Japan"
+        }
+    },
+    {
+        "authorId": "auth100001",
+        "type": "author",
+        "id": "alt163",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "RIeko",
+        "middleInitial": "",
+        "familyName": "Suzuki",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100002",
+        "type": "author",
+        "id": "alt163",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Junji",
+        "middleInitial": "",
+        "familyName": "Watanabe",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9794",
+        "type": "author",
+        "id": "alt168",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Maria",
+        "middleInitial": "K",
+        "familyName": "Wolters",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Edinburgh",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth26937",
+        "type": "author",
+        "id": "alt170",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Tom",
+        "middleInitial": "",
+        "familyName": "Jenkins",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth31325",
+        "type": "author",
+        "id": "alt170",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Ian",
+        "middleInitial": "",
+        "familyName": "Bogost",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13937",
+        "type": "author",
+        "id": "alt172",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Conor",
+        "middleInitial": "",
+        "familyName": "Linehan",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Lincoln",
+            "city": "Lincoln",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth10649",
+        "type": "author",
+        "id": "alt172",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Ben",
+        "middleInitial": "",
+        "familyName": "Kirman",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Lincoln",
+            "city": "Lincoln",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4560",
+        "type": "author",
+        "id": "alt174",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Pierre",
+        "middleInitial": "",
+        "familyName": "Dragicevic",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "INRIA",
+            "city": "Saclay",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41376",
+        "type": "author",
+        "id": "alt174",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Fanny",
+        "middleInitial": "",
+        "familyName": "Chevalier",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "INRIA",
+            "city": "Lille",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4580",
+        "type": "author",
+        "id": "alt174",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Stephane",
+        "middleInitial": "",
+        "familyName": "Huot",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Université Paris-Sud",
+            "city": "Orsay",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth17146",
+        "type": "author",
+        "id": "alt179",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Henning",
+        "middleInitial": "",
+        "familyName": "Pohl",
+        "role": "",
+        "primary": {
+            "dept": "FG Mensch-Computer-Interaktion",
+            "institution": "University of Hanover",
+            "city": "Hannover",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth39156",
+        "type": "author",
+        "id": "alt188",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Kevin",
+        "middleInitial": "",
+        "familyName": "Hamilton",
+        "role": "",
+        "primary": {
+            "dept": "Center for People and Infrastructures",
+            "institution": "University of Illinois",
+            "city": "Urbana",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2527",
+        "type": "author",
+        "id": "alt188",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Karrie",
+        "middleInitial": "",
+        "familyName": "Karahalios",
+        "role": "",
+        "primary": {
+            "dept": "Center for People and Infrastructures",
+            "institution": "University of Illinois",
+            "city": "Urbana",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth28128",
+        "type": "author",
+        "id": "alt188",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Christian",
+        "middleInitial": "",
+        "familyName": "Sandvig",
+        "role": "",
+        "primary": {
+            "dept": "Dept. of Communication Studies and School of Information",
+            "institution": "University of Michigan",
+            "city": "Ann Arbor",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth39158",
+        "type": "author",
+        "id": "alt188",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Motahhare",
+        "middleInitial": "",
+        "familyName": "Eslami",
+        "role": "",
+        "primary": {
+            "dept": "Computer Science",
+            "institution": "University of Illinois at Urbana-Champaign",
+            "city": "Urbana",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7535",
+        "type": "author",
+        "id": "alt191",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Ji Soo",
+        "middleInitial": "",
+        "familyName": "Yi",
+        "role": "",
+        "primary": {
+            "dept": "School of Industrial Engineering",
+            "institution": "Purdue University",
+            "city": "West Lafayette",
             "country": "United States"
         },
         "secondary": {

@@ -38,7 +38,7 @@
     {
         "id": "crs101",
         "title": "Methods of Design Synthesis – Moving from Data to Innovation",
-        "abstract": "",
+        "abstract": "User-centered design research activities produce an enormous quantity of raw data, which must be systematically and rigorously synthesized in order to extract meaning and insight. Unfortunately, these methods of synthesis are poorly documented and rarely taught, and because of the pragmatic time constraints associated with working with clients, there is often no time dedicated in a statement of work to a practice of formal synthesis. As a result, raw design research data is inappropriately positioned as insight, and the value of user-centered research activities is marginalized – in fact, stakeholders may lose faith in the entire research practice, as they don’t see direct return on the investment of research activities.  \\  \\ Design synthesis methods can be taught, and when selectively applied, visual, diagrammatic synthesis techniques can be completed relatively quickly. During synthesis, Designers visually explore large quantities of data in an effort to find and understand hidden relationships, to extract insight, and to look at complexity in new ways. These visualizations can then be used to communicate to other members of a design team, or can be used as platforms for the creation of generative sketching or model making. The action of diagramming is a way to actively produce knowledge and meaning, and a way to provoke a process known as sensemaking.  \\  \\ This skills-based course will introduce various methods of synthesis as ways to translate research into meaningful insights. Course participants will learn about how to manage the complexity of gathered data, and through hands-on exercises, they will apply various synthesis methods to elicit hidden meaning in gathered data. This hands-on approach is critical for building both confidence and ability with the various synthesis methods that are discussed.  \\ ",
         "acmLink": "",
         "authors": [
             {
@@ -110,7 +110,7 @@
     {
         "id": "crs105",
         "title": "Card Sorting for Navigation Design",
-        "abstract": "",
+        "abstract": "Abstract \\ This course covers the theory and practice of card sorting with a particular focus on navigation design. It includes a paper-based card sort activity. Online methods are also discussed. \\  \\ Author Keywords \\ Card sorting; cluster analysis; information architecture; tree sorting \\  \\ ACM Classification Keywords \\ H.5.2. User-centered design \\  \\ Description \\ This half-day hands-on course covers the theory and practice of card sorting. It includes hands-on experience of performing a paper-based card sort and quick data capture using barcode scanners (the techniques are applicable to many other problem domains). \\  \\ Origins \\ This is an update of an earlier course ('Innovations in Card Sorting) that has been run for several years at CHI/HCI and usability conferences (HCI 2006 & 2007, CADUI 2008, HCI 2009, CHI 2009-2012). A one-day version of this course was presented as part of Nielsen-Norman Group's Usability Week in 2009. The updated, half-day version appeared at CHI 2011, 2012 and 2013. \\  \\ Features \\ On completion of this tutorial you will be able to: \\ •\tchoose an appropriate card sorting method \\ •\texplain cluster analysis and dendrograms to colleagues and clients \\ •\tapply appropriate techniques for getting the best information from participants and the resulting data \\ •\tperform quick and reliable data capture \\  \\ Audience \\ Web and intranet designers, information architects, usability and HCI professionals interested in the practical application of card sorting. No specialist skills or knowledge are required. \\  \\ Presentation \\ The course is approximately 60% tutorials and 40% practical card-sorting activities or group discussions. \\  \\ Instructor Background \\ William Hudson has over 40 years' experience in the development of interactive systems. He is the founder of Syntagm, a consultancy specializing in user-centered design and has conducted more than 300 intranet and web site expert evaluations. William has written over 30 articles, papers and studies including the InteractionDesign.org Encyclopedia entry on card sorting. He was courses co-chair for CHI in 2013. \\  \\ Website \\ Further information about the instructor and this course can be found at www.syntagm.co.uk/design \\ ",
         "acmLink": "",
         "authors": [
             {
@@ -1316,7 +1316,7 @@
     {
         "id": "crs157",
         "title": "Reflections on Design",
-        "abstract": "",
+        "abstract": "The Design of Everyday Things [1](DOET) was first published 25 years ago, in 1988. Even though the fundamental principles of human interaction introduced in that book are still true, a lot has changed since then. The examples in the book reveal its age but more importantly, the technology of interaction has changed.  \\  \\ The new DOET maintains the same basic structure with the same fundamental design principles.  But new material has been added.  First, I added the role of emotion, beauty and pleasure to the original DOET’s emphasis on utility and understanding. Second, I added two chapters about the role of Design Thinking and how these principles work in the world of business. What are the constraints of the installed base, legacy products, and consumer readiness? What about time and budget? Among other things, I introduce Norman’s Law: The day the product team is assembled, it is behind schedule and over its budget. \\  \\ Technologies disappear, but the needs they satisfied often remain. Phonographs, slide projectors, and film have disappeared, but music, illustrated talks, and photographs still exist. Doors, water taps, and light switches may remain the same, but automobiles will drive themselves, machines are becoming more intelligent, more fully autonomous, taking over many tasks we do ourselves, anticipating our desires. And often they will get it wrong. What design rules must change? How shall we design in the 21st century? \\ Reference \\  \\ [1]\tNorman, D. A. (2013). The design of everyday things: Revised and expanded edition. New York; Basic Books; London: MIT Press (British Isles only).  \\ ",
         "acmLink": "",
         "authors": [
             {
@@ -1329,7 +1329,7 @@
                 "email": "don@jnd.org",
                 "primary": {
                     "dept": "",
-                    "institution": "Northwestern, KAIST, Nielsen Norman Group",
+                    "institution": "Nielsen Norman Group",
                     "city": "Palo Alto",
                     "country": "United States"
                 },

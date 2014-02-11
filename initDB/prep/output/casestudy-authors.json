@@ -184,17 +184,17 @@
         }
     },
     {
-        "authorId": "auth39719",
+        "authorId": "auth42508",
         "type": "author",
         "id": "case118",
         "venue": "casestudy",
         "rank": 1,
         "givenName": "Kate Sangwon",
         "familyName": "Lee",
-        "email": "kate@navercorp.com",
+        "email": "kate.lee@navercorp.com",
         "role": "",
         "primary": {
-            "dept": "UX Department",
+            "dept": "Design Research Lab.",
             "institution": "Naver Corp.",
             "city": "Seongnam-si",
             "country": "Korea, Republic of"
@@ -217,7 +217,7 @@
         "email": "sun.lee@navercorp.com",
         "role": "",
         "primary": {
-            "dept": "UX Department",
+            "dept": "Design Research Lab.",
             "institution": "Naver Corp.",
             "city": "Seongnam-si",
             "country": "Korea, Republic of"
@@ -230,17 +230,17 @@
         }
     },
     {
-        "authorId": "auth39716",
+        "authorId": "auth42509",
         "type": "author",
         "id": "case118",
         "venue": "casestudy",
         "rank": 3,
         "givenName": "Hyojung",
         "familyName": "Kim",
-        "email": "kihozip@navercorp.com",
+        "email": "kim.hyojung@navercorp.com",
         "role": "",
         "primary": {
-            "dept": "UX Department",
+            "dept": "Design Research Lab.",
             "institution": "Naver Corp.",
             "city": "Seongnam-si",
             "country": "Korea, Republic of"
@@ -598,6 +598,29 @@
         }
     },
     {
+        "authorId": "auth31606",
+        "type": "author",
+        "id": "case163",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Laura",
+        "familyName": "Malinverni",
+        "email": "malinverni.laura@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Universitat Pompeu Fabra",
+            "city": "Barcelona",
+            "country": "Spain"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
         "authorId": "auth39991",
         "type": "author",
         "id": "case170",
@@ -644,14 +667,14 @@
         }
     },
     {
-        "authorId": "auth39915",
+        "authorId": "auth40151",
         "type": "author",
         "id": "case170",
         "venue": "casestudy",
         "rank": 3,
-        "givenName": "David",
-        "familyName": "Niedober",
-        "email": "david.niedober.788@my.csun.edu",
+        "givenName": "Gina",
+        "familyName": "Masequesmay",
+        "email": "gina.masequesmay@csun.edu",
         "role": "",
         "primary": {
             "dept": "Systems Engineering Research Laboratory",
@@ -667,14 +690,14 @@
         }
     },
     {
-        "authorId": "auth40151",
+        "authorId": "auth39915",
         "type": "author",
         "id": "case170",
         "venue": "casestudy",
         "rank": 4,
-        "givenName": "Gina",
-        "familyName": "Masequesmay",
-        "email": "gina.masequesmay@csun.edu",
+        "givenName": "David",
+        "familyName": "Niedober",
+        "email": "david.niedober.788@my.csun.edu",
         "role": "",
         "primary": {
             "dept": "Systems Engineering Research Laboratory",
@@ -713,41 +736,18 @@
         }
     },
     {
-        "authorId": "auth40153",
-        "type": "author",
-        "id": "case170",
-        "venue": "casestudy",
-        "rank": 6,
-        "givenName": "Artemio",
-        "familyName": "Cacanindin",
-        "email": "artemio.cacanindin@us.af.mil",
-        "role": "",
-        "primary": {
-            "dept": "Air Force Flight Test Center, Edwards AFB, CA",
-            "institution": "United States Air Force",
-            "city": "Edwards AFB",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
         "authorId": "auth40154",
         "type": "author",
         "id": "case170",
         "venue": "casestudy",
-        "rank": 7,
+        "rank": 6,
         "givenName": "Walter",
         "familyName": "Johnson",
         "email": "walter.johnson@nasa.gov",
         "role": "",
         "primary": {
-            "dept": "NASA Ames Research Center, CA",
-            "institution": "NASA",
+            "dept": "",
+            "institution": "NASA Ames Research Center",
             "city": "Mountain View",
             "country": "United States"
         },
@@ -759,7 +759,53 @@
         }
     },
     {
-        "authorId": "auth16346",
+        "authorId": "auth40153",
+        "type": "author",
+        "id": "case170",
+        "venue": "casestudy",
+        "rank": 7,
+        "givenName": "Artemio",
+        "familyName": "Cacanindin",
+        "email": "artemio.cacanindin@us.af.mil",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Air Force Flight Test Center",
+            "city": "Edwards",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth42516",
+        "type": "author",
+        "id": "case170",
+        "venue": "casestudy",
+        "rank": 8,
+        "givenName": "Joseph",
+        "familyName": "Lyons",
+        "email": "joseph.lyons.6@us.af.mil",
+        "role": "",
+        "primary": {
+            "dept": "Human Trust and Interaction Division",
+            "institution": "Air Force Research Laboratory",
+            "city": "Wright-Patterson AFB",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth42517",
         "type": "author",
         "id": "case173",
         "venue": "casestudy",
@@ -769,7 +815,7 @@
         "email": "sosik@cs.cornell.edu",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "Cornell University, Ithaca, New York, United States",
             "institution": "Cornell University",
             "city": "Ithaca",
             "country": "United States"
@@ -816,7 +862,7 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Google",
+            "institution": "Google, Inc.",
             "city": "Mountain View",
             "country": "United States"
         },

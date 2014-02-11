@@ -11,8 +11,8 @@ entities={
                 "name": "Shoshana Holtzblatt"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "SIG",
+        "subtype": "SIG",
         "award": false,
         "hm": false
     },
@@ -46,8 +46,8 @@ entities={
                 "name": "Peter Pirolli"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "SIG",
+        "subtype": "SIG",
         "award": false,
         "hm": false
     },
@@ -72,8 +72,8 @@ entities={
                 "name": "Jakob Tholander"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "SIG",
+        "subtype": "SIG",
         "award": false,
         "hm": false
     },
@@ -107,8 +107,8 @@ entities={
                 "name": "Kirk Woolford"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "SIG",
+        "subtype": "SIG",
         "award": false,
         "hm": false
     },
@@ -124,8 +124,8 @@ entities={
                 "name": "Judith Ramey"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "SIG",
+        "subtype": "SIG",
         "award": false,
         "hm": false
     },
@@ -156,8 +156,8 @@ entities={
                 "name": "Susan Dray"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "SIG",
+        "subtype": "SIG",
         "award": false,
         "hm": false
     },
@@ -176,8 +176,8 @@ entities={
                 "name": "Jun Rekimoto"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "SIG",
+        "subtype": "SIG",
         "award": false,
         "hm": false
     },
@@ -199,8 +199,8 @@ entities={
                 "name": "Ole Iversen"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "SIG",
+        "subtype": "SIG",
         "award": false,
         "hm": false
     },
@@ -216,8 +216,8 @@ entities={
                 "name": "Erik Stolterman"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "SIG",
+        "subtype": "SIG",
         "award": false,
         "hm": false
     },
@@ -242,8 +242,8 @@ entities={
                 "name": "Regina Bernhaupt"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "SIG",
+        "subtype": "SIG",
         "award": false,
         "hm": false
     },
@@ -277,8 +277,8 @@ entities={
                 "name": "Annalu Waller"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "SIG",
+        "subtype": "SIG",
         "award": false,
         "hm": false
     },
@@ -294,8 +294,8 @@ entities={
                 "name": "Carola Thompson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "SIG",
+        "subtype": "SIG",
         "award": false,
         "hm": false
     },
@@ -329,8 +329,8 @@ entities={
                 "name": "Kelley Wagg"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "casestudy",
+        "subtype": "casestudy",
         "award": false,
         "hm": false
     },
@@ -349,8 +349,8 @@ entities={
                 "name": "Hyojung Kim"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "casestudy",
+        "subtype": "casestudy",
         "award": false,
         "hm": false
     },
@@ -366,8 +366,8 @@ entities={
                 "name": "Fergus Quilligan"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "casestudy",
+        "subtype": "casestudy",
         "award": false,
         "hm": false
     },
@@ -392,8 +392,8 @@ entities={
                 "name": "Stacey Kuznetsov"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "casestudy",
+        "subtype": "casestudy",
         "award": false,
         "hm": false
     },
@@ -424,8 +424,8 @@ entities={
                 "name": "Mikko Loimusalo"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "casestudy",
+        "subtype": "casestudy",
         "award": false,
         "hm": false
     },
@@ -438,8 +438,8 @@ entities={
                 "name": "Lilia Villafuerte"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "casestudy",
+        "subtype": "casestudy",
         "award": false,
         "hm": false
     },
@@ -470,8 +470,8 @@ entities={
                 "name": "Walter Johnson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "casestudy",
+        "subtype": "casestudy",
         "award": false,
         "hm": false
     },
@@ -505,8 +505,8 @@ entities={
                 "name": "Aaron Sedley"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "casestudy",
+        "subtype": "casestudy",
         "award": false,
         "hm": false
     },
@@ -519,8 +519,8 @@ entities={
                 "name": "Susan Dray"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "casestudy",
+        "subtype": "casestudy",
         "award": false,
         "hm": false
     },
@@ -533,8 +533,8 @@ entities={
                 "name": "Jonathan Lazar"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -547,8 +547,8 @@ entities={
                 "name": "Jon Kolko"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -561,8 +561,8 @@ entities={
                 "name": "Jeff Johnson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -575,8 +575,8 @@ entities={
                 "name": "William Hudson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -589,8 +589,8 @@ entities={
                 "name": "William Hudson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -603,8 +603,8 @@ entities={
                 "name": "Parker Jim"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -620,8 +620,8 @@ entities={
                 "name": "Steven Castellucci"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -640,8 +640,8 @@ entities={
                 "name": "Sidney Fels"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -657,8 +657,8 @@ entities={
                 "name": "Wendy Ju"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -671,8 +671,8 @@ entities={
                 "name": "Stephanie Foehrenbach"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -691,8 +691,8 @@ entities={
                 "name": "Mona Leigh Guha"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -711,8 +711,8 @@ entities={
                 "name": "Robert Atkinson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -728,8 +728,8 @@ entities={
                 "name": "Pablo Cesar"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -748,8 +748,8 @@ entities={
                 "name": "Elizabeth Ferrall-Nunge"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -762,8 +762,8 @@ entities={
                 "name": "Terrill Thompson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -779,8 +779,8 @@ entities={
                 "name": "David Shamma"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -793,8 +793,8 @@ entities={
                 "name": "Jim Parker"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -810,8 +810,8 @@ entities={
                 "name": "Gerald Penn"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -824,8 +824,8 @@ entities={
                 "name": "Nigel Bevan"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -838,8 +838,8 @@ entities={
                 "name": "Duen Horng (Polo) Chau"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -855,8 +855,8 @@ entities={
                 "name": "Hayes Raffle"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -872,8 +872,8 @@ entities={
                 "name": "Panos Markopoulos"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -889,8 +889,8 @@ entities={
                 "name": "Carola Fellenz Thompson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -906,8 +906,8 @@ entities={
                 "name": "Betsy Williams"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -923,8 +923,8 @@ entities={
                 "name": "Enrico Rukzio"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -937,8 +937,8 @@ entities={
                 "name": "WIlliam Buxton"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -951,8 +951,8 @@ entities={
                 "name": "Don Norman"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -965,8 +965,8 @@ entities={
                 "name": "Ronald Baecker"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -979,8 +979,8 @@ entities={
                 "name": "Toni Robertson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -993,8 +993,8 @@ entities={
                 "name": "Judith Donath"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "course",
+        "subtype": "course",
         "award": false,
         "hm": false
     },
@@ -1031,8 +1031,8 @@ entities={
                 "name": "Jeffrey Wilson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1054,8 +1054,8 @@ entities={
                 "name": "Benjamin Bederson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1095,8 +1095,8 @@ entities={
                 "name": "Matt Adams"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1115,8 +1115,8 @@ entities={
                 "name": "Rob Comber"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1141,8 +1141,8 @@ entities={
                 "name": "Florian Alt"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1164,8 +1164,8 @@ entities={
                 "name": "Volker Wulf"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1181,8 +1181,8 @@ entities={
                 "name": "Julie Hui"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1201,8 +1201,8 @@ entities={
                 "name": "Nuria Oliver"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1224,8 +1224,8 @@ entities={
                 "name": "Leah Maestri"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1250,8 +1250,8 @@ entities={
                 "name": "Mario Alvarez-Jimenez"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1288,8 +1288,8 @@ entities={
                 "name": "Kristen Eglinton"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1305,8 +1305,8 @@ entities={
                 "name": "Wai-Tat Fu"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1334,8 +1334,8 @@ entities={
                 "name": "Robin Laney"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1360,8 +1360,8 @@ entities={
                 "name": "Minna Räsenän"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1380,8 +1380,8 @@ entities={
                 "name": "Khai Truong"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1400,8 +1400,8 @@ entities={
                 "name": "Simon Harper"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1417,8 +1417,8 @@ entities={
                 "name": "Mary Beth Rosson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1437,8 +1437,8 @@ entities={
                 "name": "Gary Priestnall"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1457,8 +1457,8 @@ entities={
                 "name": "Michelle Zhou"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1486,8 +1486,8 @@ entities={
                 "name": "Yue Pan"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1509,8 +1509,8 @@ entities={
                 "name": "Bruce Tsuji"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1529,8 +1529,8 @@ entities={
                 "name": "Nuria Oliver"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1552,8 +1552,8 @@ entities={
                 "name": "Helmut Krcmar"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1572,8 +1572,8 @@ entities={
                 "name": "Daan Van Eijk"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1592,8 +1592,8 @@ entities={
                 "name": "Dipanjan Chakraborty"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1609,8 +1609,8 @@ entities={
                 "name": "Per Ola Kristensson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1641,8 +1641,8 @@ entities={
                 "name": "Roxana Morosanu"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1670,8 +1670,8 @@ entities={
                 "name": "Scott Klemmer"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "TOCHI",
+        "subtype": "TOCHI",
         "award": false,
         "hm": false
     },
@@ -1690,7 +1690,7 @@ entities={
                 "name": "Stelios Frantzeskakis"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -1704,7 +1704,7 @@ entities={
                 "name": "Soroush Vosoughi"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -1724,7 +1724,7 @@ entities={
                 "name": "Ted Selker"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -1741,7 +1741,7 @@ entities={
                 "name": "Bernardo A Huberman"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -1767,7 +1767,7 @@ entities={
                 "name": "Patrick Olivier"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -1787,7 +1787,7 @@ entities={
                 "name": "Andrew Monk"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -1813,7 +1813,7 @@ entities={
                 "name": "Rita Orji"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -1839,7 +1839,7 @@ entities={
                 "name": "Jan D Smeddinck"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -1859,7 +1859,7 @@ entities={
                 "name": "Kasper Hornbaek"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -1885,7 +1885,7 @@ entities={
                 "name": "Wally Smith"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -1908,7 +1908,7 @@ entities={
                 "name": "George Fitzmaurice"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -1928,7 +1928,7 @@ entities={
                 "name": "Michael F Cohen"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -1951,7 +1951,7 @@ entities={
                 "name": "Robert Bruzzi"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -1977,7 +1977,7 @@ entities={
                 "name": "Adrian K Clear"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2006,7 +2006,7 @@ entities={
                 "name": "Vassilis Kostakos"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -2026,7 +2026,7 @@ entities={
                 "name": "Kate Hennessy"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2049,7 +2049,7 @@ entities={
                 "name": "Melissa Mazmanian"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -2066,7 +2066,7 @@ entities={
                 "name": "Robert St. Amant"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -2089,7 +2089,7 @@ entities={
                 "name": "Nuria Oliver"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2115,7 +2115,7 @@ entities={
                 "name": "Max L Wilson"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2138,7 +2138,7 @@ entities={
                 "name": "David Shamma"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2164,7 +2164,7 @@ entities={
                 "name": "Jared Cechanowicz"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2184,7 +2184,7 @@ entities={
                 "name": "Diane Hui"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2207,7 +2207,7 @@ entities={
                 "name": "Matthew Smith"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2227,7 +2227,7 @@ entities={
                 "name": "James Fogarty"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2250,7 +2250,7 @@ entities={
                 "name": "Moira Norrie"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2273,7 +2273,7 @@ entities={
                 "name": "Raj P Rao"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -2290,7 +2290,7 @@ entities={
                 "name": "Vicent Alabau"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -2304,7 +2304,7 @@ entities={
                 "name": "Sarita Y Schoenebeck"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2324,7 +2324,7 @@ entities={
                 "name": "Pourang Irani"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2347,7 +2347,7 @@ entities={
                 "name": "Pat Hanrahan"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2376,7 +2376,7 @@ entities={
                 "name": "Krzysztof Z Gajos"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -2402,7 +2402,7 @@ entities={
                 "name": "George Fitzmaurice"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -2422,7 +2422,7 @@ entities={
                 "name": "Frank Pollick"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2448,7 +2448,7 @@ entities={
                 "name": "Jennifer Mankoff"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2465,7 +2465,7 @@ entities={
                 "name": "Andy Cockburn"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -2485,7 +2485,7 @@ entities={
                 "name": "Guillaume Levieux"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": true
@@ -2505,7 +2505,7 @@ entities={
                 "name": "Vicki Hanson"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2525,7 +2525,7 @@ entities={
                 "name": "Matt Jones"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -2545,7 +2545,7 @@ entities={
                 "name": "Matt Jones"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -2568,7 +2568,7 @@ entities={
                 "name": "Jeffrey Nichols"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -2594,7 +2594,7 @@ entities={
                 "name": "Michael Bernstein"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2614,7 +2614,7 @@ entities={
                 "name": "Nicolas Roussel"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2640,7 +2640,7 @@ entities={
                 "name": "Michael S Bernstein"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2654,7 +2654,7 @@ entities={
                 "name": "Antti Oulasvirta"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -2677,7 +2677,7 @@ entities={
                 "name": "Sascha Spors"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2697,7 +2697,7 @@ entities={
                 "name": "Konrad Tollmar"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2723,7 +2723,7 @@ entities={
                 "name": "Andreas Zimmermann"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -2758,7 +2758,7 @@ entities={
                 "name": "Patrick A Lindemann"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -2781,7 +2781,7 @@ entities={
                 "name": "Jakob Grue Simonsen"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -2807,7 +2807,7 @@ entities={
                 "name": "Patrick Baudisch"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -2830,7 +2830,7 @@ entities={
                 "name": "Sriram Subramanian"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -2859,7 +2859,7 @@ entities={
                 "name": "Charles Spence"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2879,7 +2879,7 @@ entities={
                 "name": "Kasper Hornbaek"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2911,7 +2911,7 @@ entities={
                 "name": "Maneesh Agrawala"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2931,7 +2931,7 @@ entities={
                 "name": "Jean-Daniel Fekete"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -2960,7 +2960,7 @@ entities={
                 "name": "Li Fei-Fei"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -2983,7 +2983,7 @@ entities={
                 "name": "Scott E Hudson"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -3006,7 +3006,7 @@ entities={
                 "name": "Eric Gilbert"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3026,7 +3026,7 @@ entities={
                 "name": "Carl Gutwin"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -3049,7 +3049,7 @@ entities={
                 "name": "Sriram Subramanian"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3096,7 +3096,7 @@ entities={
                 "name": "Patrick Baudisch"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3116,7 +3116,7 @@ entities={
                 "name": "Chris Harrison"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -3136,7 +3136,7 @@ entities={
                 "name": "Kasper Hornbæk"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3153,7 +3153,7 @@ entities={
                 "name": "Kasper Hornbæk"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3179,7 +3179,7 @@ entities={
                 "name": "Wendy Mackay"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -3199,7 +3199,7 @@ entities={
                 "name": "Jan Borchers"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3234,7 +3234,7 @@ entities={
                 "name": "Alex Rogers"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3257,7 +3257,7 @@ entities={
                 "name": "Steve Whittaker"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3274,7 +3274,7 @@ entities={
                 "name": "Germán Sanchis-Trilles"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -3294,7 +3294,7 @@ entities={
                 "name": "Steffen Staab"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3314,7 +3314,7 @@ entities={
                 "name": "Shengdong Zhao"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3337,7 +3337,7 @@ entities={
                 "name": "Tino Weinkauf"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3360,7 +3360,7 @@ entities={
                 "name": "Raimund Dachselt"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3380,7 +3380,7 @@ entities={
                 "name": "Caroline Appert"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3406,7 +3406,7 @@ entities={
                 "name": "John Helmes"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -3426,7 +3426,7 @@ entities={
                 "name": "Andreas Nürnberger"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -3452,7 +3452,7 @@ entities={
                 "name": "Dieter Schmalstieg"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -3475,7 +3475,7 @@ entities={
                 "name": "Stephen Brewster"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3522,7 +3522,7 @@ entities={
                 "name": "Peter Wright"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3539,7 +3539,7 @@ entities={
                 "name": "Chee Siang Ang"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3556,7 +3556,7 @@ entities={
                 "name": "David R Karger"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3582,7 +3582,7 @@ entities={
                 "name": "Walter F Bischof"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3605,7 +3605,7 @@ entities={
                 "name": "Karin Coninx"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3628,7 +3628,7 @@ entities={
                 "name": "Matthew Chalmers"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -3657,7 +3657,7 @@ entities={
                 "name": "Roope Raisamo"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -3683,7 +3683,7 @@ entities={
                 "name": "Arto Kolinummi"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3703,7 +3703,7 @@ entities={
                 "name": "Steve Whittaker"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3723,7 +3723,7 @@ entities={
                 "name": "Jason Hong"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3743,7 +3743,7 @@ entities={
                 "name": "Daniel Wigdor"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3772,7 +3772,7 @@ entities={
                 "name": "Brian P Bailey"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3789,7 +3789,7 @@ entities={
                 "name": "Ivan Poupyrev"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -3809,7 +3809,7 @@ entities={
                 "name": "Leila Takayama"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3829,7 +3829,7 @@ entities={
                 "name": "Andruid Kerne"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3849,7 +3849,7 @@ entities={
                 "name": "Henry Gardner"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -3869,7 +3869,7 @@ entities={
                 "name": "Kristina Höök"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3895,7 +3895,7 @@ entities={
                 "name": "Andreas Schrempf"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3912,7 +3912,7 @@ entities={
                 "name": "Krzysztof Gajos"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3941,7 +3941,7 @@ entities={
                 "name": "Andrew Vande Moere"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -3979,7 +3979,7 @@ entities={
                 "name": "Patrick Olivier"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -3999,7 +3999,7 @@ entities={
                 "name": "Julia Bullard"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -4025,7 +4025,7 @@ entities={
                 "name": "Chris Harrison"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -4042,7 +4042,7 @@ entities={
                 "name": "Bilge Mutlu"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4062,7 +4062,7 @@ entities={
                 "name": "Pourang Irani"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4088,7 +4088,7 @@ entities={
                 "name": "Gillian R Hayes"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4105,7 +4105,7 @@ entities={
                 "name": "Chien-Tung Lai"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4137,7 +4137,7 @@ entities={
                 "name": "John M Carroll"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -4157,7 +4157,7 @@ entities={
                 "name": "Takeo Igarashi"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4174,7 +4174,7 @@ entities={
                 "name": "Andreas Butz"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -4197,7 +4197,7 @@ entities={
                 "name": "Byron  Fernandes"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": true
@@ -4217,7 +4217,7 @@ entities={
                 "name": "Christopher Power"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -4243,7 +4243,7 @@ entities={
                 "name": "Antonio Krüger"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -4272,7 +4272,7 @@ entities={
                 "name": "Michael Weber"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4298,7 +4298,7 @@ entities={
                 "name": "Bruce Mehler"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -4318,7 +4318,7 @@ entities={
                 "name": "Juergen Ziegler"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -4338,7 +4338,7 @@ entities={
                 "name": "Frank Bentley"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4361,7 +4361,7 @@ entities={
                 "name": "Harald Reiterer"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4384,7 +4384,7 @@ entities={
                 "name": "Heather Willever-Farr"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4401,7 +4401,7 @@ entities={
                 "name": "Scott D Fleming"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4415,7 +4415,7 @@ entities={
                 "name": "Donghee Yvette Wohn"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4441,7 +4441,7 @@ entities={
                 "name": "Enrico Rukzio"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4470,7 +4470,7 @@ entities={
                 "name": "Fu-Yin Cherng"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -4490,7 +4490,7 @@ entities={
                 "name": "Gillian R Hayes"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4513,7 +4513,7 @@ entities={
                 "name": "Klaus Opwis"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4533,7 +4533,7 @@ entities={
                 "name": "Ann Blandford"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4550,7 +4550,7 @@ entities={
                 "name": "Kira Storgaard Hansen"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4564,7 +4564,7 @@ entities={
                 "name": "Eric Gilbert"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -4587,7 +4587,7 @@ entities={
                 "name": "Patrick Olivier"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": true,
         "hm": false
@@ -4607,7 +4607,7 @@ entities={
                 "name": "Martyn Dade-Robertson"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4636,7 +4636,7 @@ entities={
                 "name": "Ginger White"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -4659,7 +4659,7 @@ entities={
                 "name": "Leah Findlater"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4685,7 +4685,7 @@ entities={
                 "name": "Bin Zheng"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -4720,7 +4720,7 @@ entities={
                 "name": "Sriram Subramanian"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -4743,7 +4743,7 @@ entities={
                 "name": "David Bonnet"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -4766,7 +4766,7 @@ entities={
                 "name": "Dhanraj Vishwanath"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -4792,7 +4792,7 @@ entities={
                 "name": "Hans Gellersen"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -4821,7 +4821,7 @@ entities={
                 "name": "Junehwa Song"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -4853,7 +4853,7 @@ entities={
                 "name": "Patrick Olivier"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": true,
         "hm": false
@@ -4876,7 +4876,7 @@ entities={
                 "name": "Andrew Howes"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -4893,7 +4893,7 @@ entities={
                 "name": "Robert Kraut"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -4913,7 +4913,7 @@ entities={
                 "name": "Rynson Lau"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4933,7 +4933,7 @@ entities={
                 "name": "Rynson Lau"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4965,7 +4965,7 @@ entities={
                 "name": "Matthew Smith"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -4979,7 +4979,7 @@ entities={
                 "name": "Mark Blythe"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -5008,7 +5008,7 @@ entities={
                 "name": "Ann Blandford"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5034,7 +5034,7 @@ entities={
                 "name": "Patrick Olivier"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5060,7 +5060,7 @@ entities={
                 "name": "Patrick Baudisch"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5080,7 +5080,7 @@ entities={
                 "name": "Benjamin Livshits"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5100,7 +5100,7 @@ entities={
                 "name": "Gavin Doherty"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -5126,7 +5126,7 @@ entities={
                 "name": "Wei Shou"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5158,7 +5158,7 @@ entities={
                 "name": "Bing-Yu Chen"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -5181,7 +5181,7 @@ entities={
                 "name": "Sidney Fels"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5198,7 +5198,7 @@ entities={
                 "name": "Xiangshi Ren"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -5221,7 +5221,7 @@ entities={
                 "name": "John M Levine"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -5244,7 +5244,7 @@ entities={
                 "name": "Sarit Kraus"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5261,7 +5261,7 @@ entities={
                 "name": "Elizabeth M Gerber"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5278,7 +5278,7 @@ entities={
                 "name": "Liam J Bannon"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5298,7 +5298,7 @@ entities={
                 "name": "Tobias Hollerer"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5324,7 +5324,7 @@ entities={
                 "name": "Emilio Camahort"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5350,7 +5350,7 @@ entities={
                 "name": "Patrick Olivier"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5370,7 +5370,7 @@ entities={
                 "name": "Jens Nygren"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -5393,7 +5393,7 @@ entities={
                 "name": "Ilya Kelner"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5419,7 +5419,7 @@ entities={
                 "name": "Anthony Tang"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": true
@@ -5445,7 +5445,7 @@ entities={
                 "name": "David Cormack"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5465,7 +5465,7 @@ entities={
                 "name": "Rebecca E Grinter"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5497,7 +5497,7 @@ entities={
                 "name": "Bo Begole"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5520,7 +5520,7 @@ entities={
                 "name": "Adam J Lee"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5537,7 +5537,7 @@ entities={
                 "name": "Joseph J LaViola Jr."
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -5551,7 +5551,7 @@ entities={
                 "name": "Tawanna R Dillahunt"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5571,7 +5571,7 @@ entities={
                 "name": "Claudia Jacova"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5591,7 +5591,7 @@ entities={
                 "name": "Jason Alexander"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5605,7 +5605,7 @@ entities={
                 "name": "Allison Woodruff"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5628,7 +5628,7 @@ entities={
                 "name": "Tyler Pace"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5648,7 +5648,7 @@ entities={
                 "name": "James E Young"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5668,7 +5668,7 @@ entities={
                 "name": "Kwan-Liu Ma"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5691,7 +5691,7 @@ entities={
                 "name": "Pourang P Irani"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5711,7 +5711,7 @@ entities={
                 "name": "Arnd Christian Konig"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5731,7 +5731,7 @@ entities={
                 "name": "Paul Dourish"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -5751,7 +5751,7 @@ entities={
                 "name": "Anne Marie Piper"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5771,7 +5771,7 @@ entities={
                 "name": "Klaus Hinrichs"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5794,7 +5794,7 @@ entities={
                 "name": "Rajit Manohar"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -5820,7 +5820,7 @@ entities={
                 "name": "Scott C Olson"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5840,7 +5840,7 @@ entities={
                 "name": "Erik Stolterman"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5857,7 +5857,7 @@ entities={
                 "name": "DoYoung Lee"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5871,7 +5871,7 @@ entities={
                 "name": "Aron Culotta"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5888,7 +5888,7 @@ entities={
                 "name": "Joshua Clark"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5917,7 +5917,7 @@ entities={
                 "name": "James T Enns"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5940,7 +5940,7 @@ entities={
                 "name": "George Fitzmaurice"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -5960,7 +5960,7 @@ entities={
                 "name": "Zhenhui Jiang"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5980,7 +5980,7 @@ entities={
                 "name": "Florian ' Mueller"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -5997,7 +5997,7 @@ entities={
                 "name": "Scott Counts"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6023,7 +6023,7 @@ entities={
                 "name": "Michael Haller"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6043,7 +6043,7 @@ entities={
                 "name": "Pearl Pu"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6072,7 +6072,7 @@ entities={
                 "name": "Roderick Murray-Smith"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": true
@@ -6089,7 +6089,7 @@ entities={
                 "name": "Stephen J Payne"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6121,7 +6121,7 @@ entities={
                 "name": "Yoshihiro Kawahara"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6144,7 +6144,7 @@ entities={
                 "name": "Jan Borchers"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6170,7 +6170,7 @@ entities={
                 "name": "Vincent Lewandowski"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6190,7 +6190,7 @@ entities={
                 "name": "Lewis Mackenzie"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6213,7 +6213,7 @@ entities={
                 "name": "Pablo Cesar"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6233,7 +6233,7 @@ entities={
                 "name": "Bipin Indurkhya"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -6259,7 +6259,7 @@ entities={
                 "name": "Patrick Olivier"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -6285,7 +6285,7 @@ entities={
                 "name": "Zoran Popovic"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6305,7 +6305,7 @@ entities={
                 "name": "Aniket Kittur"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6322,7 +6322,7 @@ entities={
                 "name": "Walter S Lasecki"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6339,7 +6339,7 @@ entities={
                 "name": "Lynne Baillie"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6356,7 +6356,7 @@ entities={
                 "name": "Jun Rekimoto"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6382,7 +6382,7 @@ entities={
                 "name": "James D Slotta"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6399,7 +6399,7 @@ entities={
                 "name": "Katherine Isbister"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6416,7 +6416,7 @@ entities={
                 "name": "Jason Alexander"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6439,7 +6439,7 @@ entities={
                 "name": "Mary Czerwinski"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6459,7 +6459,7 @@ entities={
                 "name": "Tek-Jin Nam"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6488,7 +6488,7 @@ entities={
                 "name": "Nicholas R Jennings"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6505,7 +6505,7 @@ entities={
                 "name": "Rudolfs Liepins"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6525,7 +6525,7 @@ entities={
                 "name": "Yuya Wada"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -6542,7 +6542,7 @@ entities={
                 "name": "Daniel Wigdor"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6565,7 +6565,7 @@ entities={
                 "name": "Dan Cosley"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6588,7 +6588,7 @@ entities={
                 "name": "Ken Perlin"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6620,7 +6620,7 @@ entities={
                 "name": "Joseph A Paradiso"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6640,7 +6640,7 @@ entities={
                 "name": "Scott Davidoff"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6666,7 +6666,7 @@ entities={
                 "name": "Meredith R Morris"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6689,7 +6689,7 @@ entities={
                 "name": "Jeffrey P Bigham"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6709,7 +6709,7 @@ entities={
                 "name": "Darren Gergle"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -6744,7 +6744,7 @@ entities={
                 "name": "John Zimmerman"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -6764,7 +6764,7 @@ entities={
                 "name": "Ann Blandford"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6784,7 +6784,7 @@ entities={
                 "name": "Ana Paiva"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6801,7 +6801,7 @@ entities={
                 "name": "Meredith R Morris"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -6818,7 +6818,7 @@ entities={
                 "name": "Joshua Hailpern"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -6841,7 +6841,7 @@ entities={
                 "name": "Albrecht Schmidt"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6870,7 +6870,7 @@ entities={
                 "name": "Frank Vetere"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -6887,7 +6887,7 @@ entities={
                 "name": "William F. Hart-Davidson"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6910,7 +6910,7 @@ entities={
                 "name": "Nemanja Memarovic"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -6939,7 +6939,7 @@ entities={
                 "name": "Albrecht Schmidt"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6956,7 +6956,7 @@ entities={
                 "name": "Volker Wulf"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -6985,7 +6985,7 @@ entities={
                 "name": "Albrecht Schmidt"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7002,7 +7002,7 @@ entities={
                 "name": "Elizabeth D Mynatt"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7028,7 +7028,7 @@ entities={
                 "name": "Venkatesh Choppella"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7063,7 +7063,7 @@ entities={
                 "name": "Guangqiang (George) Zhang"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7086,7 +7086,7 @@ entities={
                 "name": "Amy Bruckman"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -7106,7 +7106,7 @@ entities={
                 "name": "Elizabeth Mynatt"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -7126,7 +7126,7 @@ entities={
                 "name": "Daniel Wigdor"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7146,7 +7146,7 @@ entities={
                 "name": "Stuart Reeves"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -7166,7 +7166,7 @@ entities={
                 "name": "Gloria Mark"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -7192,7 +7192,7 @@ entities={
                 "name": "Tejinder Judge"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7209,7 +7209,7 @@ entities={
                 "name": "Daniel Wigdor"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7229,7 +7229,7 @@ entities={
                 "name": "Michael Gleicher"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7261,7 +7261,7 @@ entities={
                 "name": "Barton Smith"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7287,7 +7287,7 @@ entities={
                 "name": "Cedric Archambeau"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7301,7 +7301,7 @@ entities={
                 "name": "Scott A Hale"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7324,7 +7324,7 @@ entities={
                 "name": "Paul Johns"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -7341,7 +7341,7 @@ entities={
                 "name": "John Canny"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7361,7 +7361,7 @@ entities={
                 "name": "Celine Latulipe"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7381,7 +7381,7 @@ entities={
                 "name": "Lalida Sritanyaratana"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7410,7 +7410,7 @@ entities={
                 "name": "Albrecht Schmidt"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7427,7 +7427,7 @@ entities={
                 "name": "Mary Beth Rosson"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -7444,7 +7444,7 @@ entities={
                 "name": "Anind K Dey"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -7458,7 +7458,7 @@ entities={
                 "name": "Jacob Solomon"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7481,7 +7481,7 @@ entities={
                 "name": "Amirali Salehi-Abari"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -7501,7 +7501,7 @@ entities={
                 "name": "Aniket Kittur"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7521,7 +7521,7 @@ entities={
                 "name": "Ryen W White"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7541,7 +7541,7 @@ entities={
                 "name": "Ge Gao"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7561,7 +7561,7 @@ entities={
                 "name": "Steven A Sloman"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7584,7 +7584,7 @@ entities={
                 "name": "Elizabeth M Gerber"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7607,7 +7607,7 @@ entities={
                 "name": "Michael Cohen"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7624,7 +7624,7 @@ entities={
                 "name": "Carl Gutwin"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7653,7 +7653,7 @@ entities={
                 "name": "Jason I Hong"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7673,7 +7673,7 @@ entities={
                 "name": "Austin Toombs"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": true
@@ -7693,7 +7693,7 @@ entities={
                 "name": "Youn-kyung Lim"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7713,7 +7713,7 @@ entities={
                 "name": "Jeffrey Heer"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7736,7 +7736,7 @@ entities={
                 "name": "Cecilia R Aragon"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7759,7 +7759,7 @@ entities={
                 "name": "Bob Rollins"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -7779,7 +7779,7 @@ entities={
                 "name": "Ben Swift"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -7802,7 +7802,7 @@ entities={
                 "name": "Kenneth M. Anderson"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7828,7 +7828,7 @@ entities={
                 "name": "Nicholas Diakopoulos"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7851,7 +7851,7 @@ entities={
                 "name": "Susan R Fussell"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7886,7 +7886,7 @@ entities={
                 "name": "Robert J Jacob"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -7903,7 +7903,7 @@ entities={
                 "name": "Aniket Kittur"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -7923,7 +7923,7 @@ entities={
                 "name": "Geehyuk Lee"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -7973,7 +7973,7 @@ entities={
                 "name": "Romain Rutten"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -7993,7 +7993,7 @@ entities={
                 "name": "Shaun K Kane"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -8019,7 +8019,7 @@ entities={
                 "name": "Denis Charles"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -8039,7 +8039,7 @@ entities={
                 "name": "Jürgen Steimle"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8056,7 +8056,7 @@ entities={
                 "name": "Wai-Tat Fu"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -8076,7 +8076,7 @@ entities={
                 "name": "Maneesh Agrawala"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8093,7 +8093,7 @@ entities={
                 "name": "Thomas Vincent"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -8113,7 +8113,7 @@ entities={
                 "name": "Pablo Paredes"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8139,7 +8139,7 @@ entities={
                 "name": "Daniel Gooch"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8168,7 +8168,7 @@ entities={
                 "name": "Allison Druin"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -8188,7 +8188,7 @@ entities={
                 "name": "Eric B Hekler"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8205,7 +8205,7 @@ entities={
                 "name": "Gahgene Gweon"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -8231,7 +8231,7 @@ entities={
                 "name": "Ning Gu"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8251,7 +8251,7 @@ entities={
                 "name": "Jason Alexander"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -8271,7 +8271,7 @@ entities={
                 "name": "Gary Burnett"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8297,7 +8297,7 @@ entities={
                 "name": "Pattarawut Subyen"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8314,7 +8314,7 @@ entities={
                 "name": "masaaki fukumoto"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8334,7 +8334,7 @@ entities={
                 "name": "Ge Wang"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8354,7 +8354,7 @@ entities={
                 "name": "Steven M Drucker"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8371,7 +8371,7 @@ entities={
                 "name": "Carman Neustaedter"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8388,7 +8388,7 @@ entities={
                 "name": "Robert C Miller"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8414,7 +8414,7 @@ entities={
                 "name": "Florian Mueller"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8449,7 +8449,7 @@ entities={
                 "name": "Mike Y Chen"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -8472,7 +8472,7 @@ entities={
                 "name": "Boriana Koleva"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8492,7 +8492,7 @@ entities={
                 "name": "Stephen Brewster"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8512,7 +8512,7 @@ entities={
                 "name": "Volker Wulf"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -8538,7 +8538,7 @@ entities={
                 "name": "Anna Cox"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8558,7 +8558,7 @@ entities={
                 "name": "Yang Li"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -8572,7 +8572,7 @@ entities={
                 "name": "Colin M Gray"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8598,7 +8598,7 @@ entities={
                 "name": "Alexandre N Tuch"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8618,7 +8618,7 @@ entities={
                 "name": "Georgi Christov"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8641,7 +8641,7 @@ entities={
                 "name": "Petra Sundström"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -8676,7 +8676,7 @@ entities={
                 "name": "Amanda Williams"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8702,7 +8702,7 @@ entities={
                 "name": "Vicki L Hanson"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": true,
         "hm": false
@@ -8716,7 +8716,7 @@ entities={
                 "name": "Leonard Wein"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": true
@@ -8748,7 +8748,7 @@ entities={
                 "name": "Giulio Jacucci"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8771,7 +8771,7 @@ entities={
                 "name": "Darren Edge"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8791,7 +8791,7 @@ entities={
                 "name": "Andruid Kerne"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8817,7 +8817,7 @@ entities={
                 "name": "Vanessa Evers"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8837,7 +8837,7 @@ entities={
                 "name": "Rick Wash"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -8857,7 +8857,7 @@ entities={
                 "name": "Anthony Steed"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8886,7 +8886,7 @@ entities={
                 "name": "Serena Hillman"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8915,7 +8915,7 @@ entities={
                 "name": "Jeffrey M. Hausdorff"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -8932,7 +8932,7 @@ entities={
                 "name": "Tim Gamble"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -8955,7 +8955,7 @@ entities={
                 "name": "Elizabeth J Carter"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -8987,7 +8987,7 @@ entities={
                 "name": "Craig Stewart"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9007,7 +9007,7 @@ entities={
                 "name": "Miguel Nacenta"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9027,7 +9027,7 @@ entities={
                 "name": "Maic Masuch"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9047,7 +9047,7 @@ entities={
                 "name": "Robert Stevens"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -9070,7 +9070,7 @@ entities={
                 "name": "Krishna P Gummadi"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -9090,7 +9090,7 @@ entities={
                 "name": "Darren Edge"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -9122,7 +9122,7 @@ entities={
                 "name": "Bholanathsingh Surajbali"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9142,7 +9142,7 @@ entities={
                 "name": "Zdenek Mikovec"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -9162,7 +9162,7 @@ entities={
                 "name": "Morten Fjeld"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -9194,7 +9194,7 @@ entities={
                 "name": "Lars Kulik"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9211,7 +9211,7 @@ entities={
                 "name": "Siân Lindley"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9234,7 +9234,7 @@ entities={
                 "name": "Sunny Consolvo"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": true
@@ -9251,7 +9251,7 @@ entities={
                 "name": "Wanda Pratt"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9280,7 +9280,7 @@ entities={
                 "name": "Alexandra Silva"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9300,7 +9300,7 @@ entities={
                 "name": "Manfred Tscheligi"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9317,7 +9317,7 @@ entities={
                 "name": "Chris Baber"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9337,7 +9337,7 @@ entities={
                 "name": "Geri Gay"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9360,7 +9360,7 @@ entities={
                 "name": "Natasa Milic-Frayling"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9380,7 +9380,7 @@ entities={
                 "name": "Jon Froehlich"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9406,7 +9406,7 @@ entities={
                 "name": "Volker Wulf"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9438,7 +9438,7 @@ entities={
                 "name": "Randall S Burd"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9458,7 +9458,7 @@ entities={
                 "name": "Edward Lank"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9484,7 +9484,7 @@ entities={
                 "name": "Susan R Fussell"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9510,7 +9510,7 @@ entities={
                 "name": "Karan Singh"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9527,7 +9527,7 @@ entities={
                 "name": "Pernille Bjorn"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9547,7 +9547,7 @@ entities={
                 "name": "Merja Haveri"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9570,7 +9570,7 @@ entities={
                 "name": "David Randall"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9593,7 +9593,7 @@ entities={
                 "name": "Scott Bateman"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9610,7 +9610,7 @@ entities={
                 "name": "Leah Buechley"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9639,7 +9639,7 @@ entities={
                 "name": "Jean-Daniel Fekete"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9662,7 +9662,7 @@ entities={
                 "name": "Mark Lochrie"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -9682,7 +9682,7 @@ entities={
                 "name": "John Williamson"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9702,7 +9702,7 @@ entities={
                 "name": "Loren Terveen"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9734,7 +9734,7 @@ entities={
                 "name": "Laurie Buys"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -9754,7 +9754,7 @@ entities={
                 "name": "Elin Önnevall"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9777,7 +9777,7 @@ entities={
                 "name": "Joaquim A Jorge"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -9797,7 +9797,7 @@ entities={
                 "name": "Margit Pohl"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9814,7 +9814,7 @@ entities={
                 "name": "Jakob Tholander"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9840,7 +9840,7 @@ entities={
                 "name": "W. Keith Edwards"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9857,7 +9857,7 @@ entities={
                 "name": "Anthony Steed"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -9877,7 +9877,7 @@ entities={
                 "name": "Anind K. Dey"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9906,7 +9906,7 @@ entities={
                 "name": "Dan Jurafsky"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9932,7 +9932,7 @@ entities={
                 "name": "Yvonne Rogers"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -9949,7 +9949,7 @@ entities={
                 "name": "Anthony Hornof"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -9969,7 +9969,7 @@ entities={
                 "name": "Sriram Subramanian"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -9989,7 +9989,7 @@ entities={
                 "name": "Songjia Shen"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10018,7 +10018,7 @@ entities={
                 "name": "Karthik Ramani"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10035,7 +10035,7 @@ entities={
                 "name": "James M Coughlan"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10052,7 +10052,7 @@ entities={
                 "name": "Anthony Whitehead"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10075,7 +10075,7 @@ entities={
                 "name": "Sunny Consolvo"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10098,7 +10098,7 @@ entities={
                 "name": "Cem Keskin"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": true
@@ -10115,7 +10115,7 @@ entities={
                 "name": "Laewoo Kang"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -10144,7 +10144,7 @@ entities={
                 "name": "Stan Healy"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10170,7 +10170,7 @@ entities={
                 "name": "Henry Been-Lirn Duh"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -10220,7 +10220,7 @@ entities={
                 "name": "Vivek Pradeep"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -10243,7 +10243,7 @@ entities={
                 "name": "Naren Ramakrishnan"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -10257,7 +10257,7 @@ entities={
                 "name": "Scott Hudson"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -10295,7 +10295,7 @@ entities={
                 "name": "Yuanchun Shi"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -10315,7 +10315,7 @@ entities={
                 "name": "Kris Luyten"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10329,7 +10329,7 @@ entities={
                 "name": "Gillian Smith"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10346,7 +10346,7 @@ entities={
                 "name": "Christian Dindler"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10369,7 +10369,7 @@ entities={
                 "name": "Anne Marie Piper"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -10389,7 +10389,7 @@ entities={
                 "name": "Jiang Yang"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10412,7 +10412,7 @@ entities={
                 "name": "A. Imran Nordin"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10429,7 +10429,7 @@ entities={
                 "name": "Klaus Hinrichs"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -10455,7 +10455,7 @@ entities={
                 "name": "S. Shyam Sundar"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -10484,7 +10484,7 @@ entities={
                 "name": "Robert E Kraut"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10513,7 +10513,7 @@ entities={
                 "name": "Ramanathan Subramanian"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10536,7 +10536,7 @@ entities={
                 "name": "Gavin Doherty"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -10553,7 +10553,7 @@ entities={
                 "name": "Anthony J Hornof"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -10573,7 +10573,7 @@ entities={
                 "name": "Tadayoshi Kohno"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10590,7 +10590,7 @@ entities={
                 "name": "Lynne Baillie"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10607,7 +10607,7 @@ entities={
                 "name": "Antti Oulasvirta"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10627,7 +10627,7 @@ entities={
                 "name": "Per Ola Kristensson"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10644,7 +10644,7 @@ entities={
                 "name": "Siân Lindley"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10670,7 +10670,7 @@ entities={
                 "name": "John Zimmerman"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10690,7 +10690,7 @@ entities={
                 "name": "Licia Capra"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10716,7 +10716,7 @@ entities={
                 "name": "Tanyoung Kim"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -10739,7 +10739,7 @@ entities={
                 "name": "Majken Kirkegaard Rasmussen"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -10759,7 +10759,7 @@ entities={
                 "name": "Melissa Niiya"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -10776,7 +10776,7 @@ entities={
                 "name": "Yang Li"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10796,7 +10796,7 @@ entities={
                 "name": "Yunan Chen"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -10816,7 +10816,7 @@ entities={
                 "name": "Marina Jirotka"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10839,7 +10839,7 @@ entities={
                 "name": "Enrico Rukzio"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -10880,7 +10880,7 @@ entities={
                 "name": "Junehwa Song"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10900,7 +10900,7 @@ entities={
                 "name": "Andrew Smith"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10923,7 +10923,7 @@ entities={
                 "name": "Xiang Cao"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -10943,7 +10943,7 @@ entities={
                 "name": "Goranka Zoric"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -10963,7 +10963,7 @@ entities={
                 "name": "Clifford Nass"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -10983,7 +10983,7 @@ entities={
                 "name": "Robert E Kraut"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -11009,7 +11009,7 @@ entities={
                 "name": "Julie A Kientz"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -11044,7 +11044,7 @@ entities={
                 "name": "Miriam K Konkel"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -11067,7 +11067,7 @@ entities={
                 "name": "Anita Lee Hong"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": true,
         "hm": false
@@ -11105,7 +11105,7 @@ entities={
                 "name": "Haoqi Zhang"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -11140,7 +11140,7 @@ entities={
                 "name": "Rifat Sabbir Mansur"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11181,7 +11181,7 @@ entities={
                 "name": "Lorrie F Cranor"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11201,7 +11201,7 @@ entities={
                 "name": "Robert Kraut"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11221,7 +11221,7 @@ entities={
                 "name": "Jean-Daniel Fekete"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11241,7 +11241,7 @@ entities={
                 "name": "Jodi Forlizzi"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": true,
         "hm": false
@@ -11258,7 +11258,7 @@ entities={
                 "name": "Ingrid Erickson"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -11284,7 +11284,7 @@ entities={
                 "name": "Susan M Hessey"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -11307,7 +11307,7 @@ entities={
                 "name": "Thomas Zimmermann"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11327,7 +11327,7 @@ entities={
                 "name": "Geraldine Fitzpatrick"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11344,7 +11344,7 @@ entities={
                 "name": "Carl Gutwin"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11367,7 +11367,7 @@ entities={
                 "name": "Julie Kientz"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11387,7 +11387,7 @@ entities={
                 "name": "Steven Schwaitzberg"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11413,7 +11413,7 @@ entities={
                 "name": "Quentin (Gad) Jones"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11433,7 +11433,7 @@ entities={
                 "name": "Darren Edge"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": true
@@ -11447,7 +11447,7 @@ entities={
                 "name": "Dana Ruggiero"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -11464,7 +11464,7 @@ entities={
                 "name": "Leah Buechley"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11487,7 +11487,7 @@ entities={
                 "name": "Zoran Popovic"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -11510,7 +11510,7 @@ entities={
                 "name": "Brad A Myers"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11542,7 +11542,7 @@ entities={
                 "name": "Karthik Ramani"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11562,7 +11562,7 @@ entities={
                 "name": "Erik Stolterman"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -11588,7 +11588,7 @@ entities={
                 "name": "Robert Harris"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -11605,7 +11605,7 @@ entities={
                 "name": "Daniel Vogel"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -11625,7 +11625,7 @@ entities={
                 "name": "Huahai Yang"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11642,7 +11642,7 @@ entities={
                 "name": "Michael Kipp"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -11674,7 +11674,7 @@ entities={
                 "name": "David Wagner"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11697,7 +11697,7 @@ entities={
                 "name": "Norman Sadeh"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11714,7 +11714,7 @@ entities={
                 "name": "Melanie Baljko"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": false
@@ -11734,7 +11734,7 @@ entities={
                 "name": "Eric Gilbert"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11757,7 +11757,7 @@ entities={
                 "name": "Tracy Hammond"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11783,7 +11783,7 @@ entities={
                 "name": "Max Mühlhäuser"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11800,7 +11800,7 @@ entities={
                 "name": "Jacob O Wobbrock"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11826,7 +11826,7 @@ entities={
                 "name": "Mike Y Chen"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11843,7 +11843,7 @@ entities={
                 "name": "Jock D Mackinlay"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11863,7 +11863,7 @@ entities={
                 "name": "Rob C Miller"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11880,7 +11880,7 @@ entities={
                 "name": "Jacob O Wobbrock"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11903,7 +11903,7 @@ entities={
                 "name": "André van der Hoek"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11929,7 +11929,7 @@ entities={
                 "name": "Per Ola Kristensson"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11958,7 +11958,7 @@ entities={
                 "name": "Norman Sadeh"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11978,7 +11978,7 @@ entities={
                 "name": "Shumin Zhai"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -11998,7 +11998,7 @@ entities={
                 "name": "George Fitzmaurice"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -12015,7 +12015,7 @@ entities={
                 "name": "Lada Adamic"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -12044,7 +12044,7 @@ entities={
                 "name": "Dan Siewiorek"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -12064,7 +12064,7 @@ entities={
                 "name": "Jilin Chen"
             }
         ],
-        "type": "Note",
+        "type": "paper",
         "subtype": "Note",
         "award": false,
         "hm": true
@@ -12087,7 +12087,7 @@ entities={
                 "name": "G.A. Mendelsohn"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -12110,7 +12110,7 @@ entities={
                 "name": "Juergen Sauer"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -12133,7 +12133,7 @@ entities={
                 "name": "Michael L Littman"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -12156,7 +12156,7 @@ entities={
                 "name": "Höskuldur  Borgthorsson"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": true
@@ -12173,7 +12173,7 @@ entities={
                 "name": "Raj Ratwani"
             }
         ],
-        "type": "Paper",
+        "type": "paper",
         "subtype": "Paper",
         "award": false,
         "hm": false
@@ -12196,8 +12196,8 @@ entities={
                 "name": "John Zimmerman"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "panel",
+        "subtype": "panel",
         "award": false,
         "hm": false
     },
@@ -12225,8 +12225,8 @@ entities={
                 "name": "Toni Robertson"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "panel",
+        "subtype": "panel",
         "award": false,
         "hm": false
     },
@@ -12251,8 +12251,8 @@ entities={
                 "name": "Ian Goldberg"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "panel",
+        "subtype": "panel",
         "award": false,
         "hm": false
     },
@@ -12277,8 +12277,8 @@ entities={
                 "name": "Rowena Luk"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "panel",
+        "subtype": "panel",
         "award": false,
         "hm": false
     },
@@ -12312,8 +12312,8 @@ entities={
                 "name": "Joshua Tanenbaum"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "panel",
+        "subtype": "panel",
         "award": false,
         "hm": false
     },
@@ -12332,8 +12332,8 @@ entities={
                 "name": "Rick Wash"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "panel",
+        "subtype": "panel",
         "award": false,
         "hm": false
     },
@@ -12361,8 +12361,8 @@ entities={
                 "name": "Cafazzo Joseph"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "panel",
+        "subtype": "panel",
         "award": false,
         "hm": false
     },
@@ -12384,8 +12384,8 @@ entities={
                 "name": "James Pennebaker"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "panel",
+        "subtype": "panel",
         "award": false,
         "hm": false
     },
@@ -12398,8 +12398,8 @@ entities={
                 "name": "Dimitris Grammenos"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12418,8 +12418,8 @@ entities={
                 "name": "Karen Renaud"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12435,8 +12435,8 @@ entities={
                 "name": "Michael A Terry"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12530,8 +12530,8 @@ entities={
                 "name": "Jason Yip"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12550,8 +12550,8 @@ entities={
                 "name": "Abigail Durrant"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12570,8 +12570,8 @@ entities={
                 "name": "Matthias Scheutz"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12593,8 +12593,8 @@ entities={
                 "name": "Mike J Chantler"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12616,8 +12616,8 @@ entities={
                 "name": "Yolanda Vazquez-Alvarez"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12645,8 +12645,8 @@ entities={
                 "name": "Simon Harper"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12668,8 +12668,8 @@ entities={
                 "name": "Santina Torello"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12688,8 +12688,8 @@ entities={
                 "name": "Alina Petra Marinescu Nenciu"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12714,8 +12714,8 @@ entities={
                 "name": "Hye Yeon Nam"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12734,8 +12734,8 @@ entities={
                 "name": "Tomas Sokoler"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12757,8 +12757,8 @@ entities={
                 "name": "Dan O'Hara"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12771,8 +12771,8 @@ entities={
                 "name": "John P Fass"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12797,8 +12797,8 @@ entities={
                 "name": "Xavier Maitre"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12817,8 +12817,8 @@ entities={
                 "name": "Junji Watanabe"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12831,8 +12831,8 @@ entities={
                 "name": "Maria K Wolters"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12848,8 +12848,8 @@ entities={
                 "name": "Ian Bogost"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12865,8 +12865,8 @@ entities={
                 "name": "Ben Kirman"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12885,8 +12885,8 @@ entities={
                 "name": "Stephane Huot"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12899,8 +12899,8 @@ entities={
                 "name": "Henning Pohl"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12922,8 +12922,8 @@ entities={
                 "name": "Motahhare Eslami"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     },
@@ -12936,8 +12936,8 @@ entities={
                 "name": "Ji Soo Yi"
             }
         ],
-        "type": "",
-        "subtype": "",
+        "type": "altchi",
+        "subtype": "altchi",
         "award": false,
         "hm": false
     }

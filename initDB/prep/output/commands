@@ -1,3 +1,5 @@
 node joinJSON.js authors.json SIG-authors casestudy-authors course-authors TOCHI-authors paper-authors	
+node joinJSON.js authors.json SIG-authors casestudy-authors course-authors TOCHI-authors paper-authors panel-authors altchi-authors
 node joinJSON.js entities.json SIG-entities casestudy-entities course-entities TOCHI-entities paper-entities	
+node joinJSON.js entities.json SIG-entities casestudy-entities course-entities TOCHI-entities paper-entities panel-entities altchi-entities	
 node joinJSON.js sessions.json SIG-sessions casestudy-sessions course-sessions paper-sessions	empty-sessions
