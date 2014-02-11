@@ -554,6 +554,27 @@ var Sidebar = function() {
                          $(item).find(".display").html(session.personas);
                     });
                break;
+               case "author-interests":
+                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+                         var id = $(item).attr("id").substr(8);
+                         var session = allSessions[id];
+                         var i, submission;
+                         var score = 0;
+                         for (i=0; i<session.submissions.length; i++){
+                              submission = session.submissions[i]["id"];
+                              if (submission in CCOps.authorsourcingInterestedCounts){
+                                   score += CCOps.authorsourcingInterestedCounts[submission];
+                              }
+                         }
+                         var $score = $("<span/>").addClass("popularity").html(score);
+                         if (score >= 40)
+                              $score.addClass("popularity-high");
+                         else if (score >= 20)
+                              $score.addClass("popularity-medium");
+                         else
+                              $score.addClass("popularity-low");
+                         $(item).find(".display").html($score);                         
+                    });               
                default:
                break;
           }

@@ -106,7 +106,7 @@ var Conflicts = function() {
             list = Conflicts.chairSeverityList;
           else if (mode == "c+p")
             list = Conflicts.confPrefSeverityList;
-        console.log(list);
+
           element.html("");
           $.each(list, function(index, severity){
             var filteredArray = []; 

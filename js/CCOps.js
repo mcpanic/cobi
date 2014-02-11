@@ -92,6 +92,7 @@ var CCOps = function(){
     var allConflicts = [];
     var authorsourcingData = null;
     var authorsourcingAuthor = null;
+    var authorsourcingInterestedCounts = null;
     var scoreThreshold = 10;
     var goodThreshold = 9;
     var fitMat = {}; // paper to paper fit
@@ -724,6 +725,7 @@ var CCOps = function(){
 		}
 	    }
 	}
+
 	// 	for(var i in relevantconstraints){
 	// 	    for(var j in relevantconstraints[i]){
 	// 		var score = -5 * relevantconstraints[i][j];
@@ -814,12 +816,34 @@ var CCOps = function(){
 	}
     }
     
+    function generateAuthorsourcingCounts(){
+		CCOps.authorsourcingInterestedCounts = {};
+		for(var submission in CCOps.authorsourcingData){
+			for(var author in CCOps.authorsourcingData[submission]) {
+				var i = CCOps.authorsourcingData[submission][author].length -1;
+				var interestedList = CCOps.authorsourcingData[submission][author][i].interested;
+				if (interestedList == "") 
+					interestedList = [];
+				else
+					interestedList = interestedList.split(',');	
+				// console.log(CCOps.authorsourcingData[submission][author][i].interested, interestedList);
+				for(var j = 0; j < interestedList.length; j++){
+					if (!(interestedList[j] in CCOps.authorsourcingInterestedCounts))
+						CCOps.authorsourcingInterestedCounts[interestedList[j]] = 0;
+					CCOps.authorsourcingInterestedCounts[interestedList[j]] += 1;
+				} 
+			}
+		}
+    }
+
+
     function initialize(){
 	loadAuthorsourcingData();
 	generateAuthorsourcingConstraints();
 	generatePersonaConstraints();
 	generateAuthorConstraints();
 	generateChairConstraints();
+	generateAuthorsourcingCounts();
     }
 
     // session level conflict
@@ -3565,6 +3589,7 @@ var CCOps = function(){
 	    removeSames: removeSames,
 	    authorsourcingData: authorsourcingData,
 	    authorsourcingAuthor: authorsourcingAuthor,
+	    authorsourcingInterestedCounts: authorsourcingInterestedCounts,
 	    generateAuthorsourcingConstraints: 	    generateAuthorsourcingConstraints,
 	    generatePersonaConstraints:	    generatePersonaConstraints,
 	    generateAuthorConstraints: generateAuthorConstraints,

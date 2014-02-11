@@ -358,6 +358,26 @@ body.loading .modal {
     color: #bbbbbb;
 }
 
+.main .cell .display .popularity {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.main .cell .display .popularity-high {
+    color: red;
+    font-weight: bold;
+}
+
+.main .cell .display .popularity-medium {
+    color: #FF8A00;
+    font-weight: bold;
+}
+
+.main .cell .display .popularity-low {
+    color: #bbbbbb;
+}
+
+
 .main .cell .conflicts .icon {
     width: 24px;
 }
