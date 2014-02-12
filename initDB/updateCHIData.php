@@ -1,4 +1,4 @@
-<?php
+B1;2c<?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
 include "../settings/settings.php";
@@ -66,8 +66,12 @@ function updateEntityTable($mysqli) {
 	 $entityFile = file_get_contents(ENTITYFILE);
 	 $entityData = json_decode($entityFile, true);
 
-	 $query = "CREATE TABLE updated_entity LIKE entity; INSERT updated_entity SELECT * FROM entity";
+	 $query = "CREATE TABLE updated_entity LIKE entity";
 	 mysqli_query($mysqli, $query);
+	 echo  mysqli_error($mysqli);
+
+	 $query2 = "INSERT updated_entity SELECT * FROM entity";
+	 mysqli_query($mysqli, $query2);
 	 echo  mysqli_error($mysqli);
 
 	 foreach ($entityData as $sub) {
