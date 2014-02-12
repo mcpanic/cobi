@@ -8,8 +8,8 @@ if(count($argv) != 2 or $argv[1] != 'pineapple'){
   exit(1);
 }
 
-define("AUTHORFILE", "authors.json");
-define("ENTITYFILE", "entities.json");
+define("AUTHORFILE", "updated-authors.json");
+define("ENTITYFILE", "updated-entities.json");
 
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
