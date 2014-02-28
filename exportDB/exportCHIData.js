@@ -1,8 +1,11 @@
 var fs = require('fs');
-
+var csv = require('csv');
 var ENTITYFILE = "papers.json";
 var SESSIONFILE = "sessions.json";
 var SCHEDULEFILE = "schedule.json";
+
+var makeScheduleCSV = true;
+var sessionIgnore = []//['s-crs115R-1', 's-crs115R-2'];
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
@@ -12,38 +15,280 @@ var connection = mysql.createConnection({
     database : 'cobiCHI2014'
 });
 
-connection.connect();
-connection.query("set names 'utf8'", function(err, rows, fields){ if(err) throw err;});
+var keynotes = [];
+var keynoteEntity = null;
+var sessions = null;
+var sessionOutput = null;
+var schedule = null;
+var entity = null;
 
-connection.query('SELECT * from session', function(err, rows, fields) {
-    if (err) throw err;
-    var sessions = rows;
-    getChairs(connection, sessions);
-});
+var keynoteSchedule = [
+    {
+        "day": "Monday",
+        "slot": {
+            "slot_id": "Monday_9_00_10_20",
+            "time": "9:00 - 10:20",
+            "slot_class": "morning1",
+            "sessions": [
+                {
+                    "session": "s-key106",
+                    "room" : "Exhibit Hall G"
+                }
+	    ]
+	}
+    },
+    {
+        "day": "Tuesday",
+        "slot": {
+            "slot_id": "Tuesday_8_30_8_50",
+            "time": "8:30 - 8:50",
+            "slot_class": "morning1",
+            "sessions": [
+                {
+                    "session": "s-key104",
+                    "room" : "Exhibit Hall G"
+                }
+	    ]
+	}
+    },
+    {
+        "day": "Wednesday",
+        "slot": {
+            "slot_id": "Wednesday_8_30_8_50",
+            "time": "8:30 - 8:50",
+            "slot_class": "morning1",
+            "sessions": [
+                {
+                    "session": "s-key103",
+                    "room" : "Exhibit Hall G"
+                }
+	    ]
+	}
+    },
+    {
+        "day": "Thursday",
+        "slot": {
+            "slot_id": "Thursday_8_30_8_50",
+            "time": "8:30 - 8:50",
+            "slot_class": "morning1",
+            "sessions": [
+                {
+                    "session": "s-key102",
+                    "room" : "Exhibit Hall G"
+                }
+	    ]
+	}
+    },
+    {
+        "day": "Thursday",
+        "slot": {
+            "slot_id": "Thursday_15_20_16_00",
+            "time": "15:20 - 16:00",
+            "slot_class": "afternoon1",
+            "sessions": [
+                {
+                    "session": "s-key100",
+                    "room" : "Exhibit Hall G"
+                }
+	    ]
+	}
+    }
+]
 
-connection.query("SELECT * from schedule where id<>''", function(err, rows, fields) {
-    if (err) throw err;
-    var schedule = rows;
-    writeSchedule(schedule);
-});
+var keynoteSessions = {
+    "s-key106": {
+        "s_title": "Opening Keynote, Margaret Atwood",
+        "room": "Exhibit Hall G",
+        "time": "9:00-10:20",
+        "submissions": [
+            "key106"
+        ],
+        "personas": "",
+        "venue": "keynote",
+        "day": "Monday",
+        "s_tags": [],
+        "type": "keynote",
+        "subtype": "keynote",
+        "chair": ""
+    },
+    "s-key104": {
+        "s_title": "Provoke! Wisdom! Impact! - Nathan Eagle",
+	"room": "Exhibit Hall G",
+        "time": "8:30-8:50",
+        "submissions": [
+            "key104"
+        ],
+        "personas": "",
+        "venue": "keynote",
+        "day": "Tuesday",
+        "s_tags": [],
+        "type": "keynote",
+        "subtype": "keynote",
+        "chair": ""
+    },
+    "s-key103": {
+        "s_title": "Provoke! Wisdom! Impact! - Scooter Morris",
+        "room": "Exhibit Hall G",
+        "time": "8:30-8:50",
+        "submissions": [
+            "key103"
+        ],
+        "personas": "",
+        "venue": "keynote",
+        "day": "Wednesday",
+        "s_tags": [],
+        "type": "keynote",
+        "subtype": "keynote",
+        "chair": ""
+    },
+    "s-key102": {
+        "s_title": "Provoke! Wisdom! Impact! - Elizabeth F. Churchill",
+        "room": "Exhibit Hall G",
+        "time": "8:30-8:50",
+        "submissions": [
+            "key102"
+        ],
+        "personas": "",
+        "venue": "keynote",
+        "day": "Thursday",
+        "s_tags": [],
+        "type": "keynote",
+        "subtype": "keynote",
+        "chair": ""
+    },
+   "s-key100": {
+       "s_title": "Closing Keynote - Scott Jenson",
+       "room": "Exhibit Hall G",
+       "time": "15:20-16:00",
+       "submissions": [
+           "key100"
+       ],
+       "personas": "",
+       "venue": "keynote",
+       "day": "Thursday",
+       "s_tags": [],
+       "type": "keynote",
+       "subtype": "keynote",
+       "chair": ""
+   }
+};
 
-connection.query("SELECT * from entity", function(err, rows, fields) {
-    if (err) throw err;
-    var entities = rows;
-    writeEntities(entities);
-});
+getKeynotes();
+
+function writeOutputs(){
+    connection.connect();
+    connection.query("set names 'latin1'", function(err, rows, fields){ 
+	if(err) throw err;
+	
+	connection.query('SELECT * from session where scheduled=1', function(err, rows, fields) {
+	    if (err) throw err;
+	    sessions = rows;
+	    getChairs(connection, sessions);
+	});
+    });
+}
+
+function getEntities(connection){
+    connection.end();
+    var connection2 = mysql.createConnection({
+	host     : 'mysql.csail.mit.edu',
+	user     : 'cobi',
+	password : 'su4Biha',
+	database : 'cobiCHI2014'
+    });
+    connection2.query("SELECT * from entity", function(err, rows, fields) {
+	if (err) throw err;
+	entities = rows;
+	writeEntities(entities);
+	getSchedule(connection2);
+    });
+}
+
+function getSchedule(connection){
+    connection.query("SELECT * from schedule where id<>''", function(err, rows, fields) {
+	if (err) throw err;
+	schedule = rows;
+	writeSchedule(schedule);
+	connection.end();
+    });
+}
 
 function getChairs(connection, sessions){
     connection.query('SELECT * from sessionChairs', function(err, rows, fields) {
 	if (err) throw err;
 	writeSessions(sessions, rows);
-	connection.end();
+	getEntities(connection);
     });
 }
 
+function getKeynotes(){
+    var parser = csv();
+    parser.on("record", function (row, index){
+	keynotes.push(row);
+    });
+    parser.from.options({
+	columns: true
+    });
+    parser.from('keynotes.csv');
+    parser.on("end", function(){
+	var output = {};
+	for(var i = 0; i < keynotes.length; i++){
+	    output[keynotes[i]['ID']] = {
+		"title" : keynotes[i]['Title'],
+		"abstract" : keynotes[i]['Abstract'],
+		"cAndB" : "",
+		"keywords": [],
+		"authors": [
+		    {
+			"name": keynotes[i]['Given name 1'] + " " + keynotes[i]['Family name 1'],
+			"dept": keynotes[i]['Primary Affiliation 1 - Department/School/Lab'],
+			"institution": keynotes[i]['Primary Affiliation 1 - Institution'],
+			"city": keynotes[i]['Primary Affiliation 1 - City'],
+			"country": keynotes[i]['Primary Affiliation 1 - Country'],
+			"affiliation":  getAffiliation(keynotes[i]['Primary Affiliation 1 - Department/School/Lab'],
+						       keynotes[i]['Primary Affiliation 1 - Institution']),
+			"location": getLocation(keynotes[i]['Primary Affiliation 1 - City'], keynotes[i]['Primary Affiliation 1 - Country'])
+		    }
+		]
+		
+	    };
+	}
+	keynoteEntity = output;
+	writeOutputs();
+    });
+}
+	
+
+
 function getAuthors(ent){
     var authors = ent['authors'];
-    return JSON.parse(authors).map(function(x) { return {'name': resolveName(x)}});
+    return JSON.parse(authors).map(function(x) { return {
+	'name': resolveName(x),
+	'dept': (('primary' in x) ? x['primary']['dept'] : ''),
+	'institution': (('primary' in x) ? x['primary']['institution'] : ''),
+	'city' : (('primary' in x) ? x['primary']['city'] : ''),
+	'country' :(('primary' in x) ? x['primary']['country'] : ''),
+	'affiliation' : (('primary' in x) ? 
+			 getAffiliation(x['primary']['dept'], x['primary']['institution']) : ""),
+	'location' : (('primary' in x) ? 
+			 getLocation(x['primary']['city'], x['primary']['country']) : "")
+    }});
+}
+
+function getCombined(a, b){
+
+    if((a == "" || (typeof a === 'undefined')) && (b == "" || (typeof b === 'undefined'))) return "";
+    if((a == "" || (typeof a === 'undefined'))) return b;
+    if((b == "" || (typeof b === 'undefined'))) return a;
+    return a + ", " + b;
+}
+
+function getAffiliation(dept, inst){
+    return getCombined(dept, inst);
+}
+
+function getLocation(city, country){
+    return getCombined(city, country);
 }
 
 function resolveName(x){
@@ -55,7 +300,7 @@ function resolveName(x){
 }
 
 function getAbstract(ent){
-    return ent['abstract'];
+    return ent['abstract'].replace(/\\  /g,"").replace(/\\ /g, "").replace(/\\/g,"")
 }
 
 function getTitle(ent){
@@ -66,9 +311,31 @@ function getType(ent){
     return ent['type'];
 }
 
+function getKeywords(ent){
+    if(ent['keywords'] == null) return [];
+
+    ent['keywords'] = ent['keywords'].replace(/\"/g,"");
+
+    if(ent['keywords'].indexOf("; ") != -1){
+	return ent['keywords'].split("; ").map(function(x){return x.trim()});
+    }
+    if(ent['keywords'].indexOf(", ") != -1){
+	return ent['keywords'].split(", ").map(function(x){return x.trim()});
+    }
+    return [];
+}
+
+function getCommunities(ent){
+    return JSON.parse(ent['coreCommunities']);
+}
+
 function getSubtype(ent){
     if(ent['type'] == 'paper') return ent['subtype']
     return ent['type'];
+}
+
+function getCB(ent){
+    return ent['cAndB'].replace(/\\  /g,"").replace(/\\ /g, "").replace(/\\/g,"")    
 }
 
 function writeEntities(entities){
@@ -78,13 +345,17 @@ function writeEntities(entities){
 	output[ent.id] = {
 	    "title" : getTitle(ent),
 	    "abstract" : getAbstract(ent),
-	    "keywords" : JSON.parse(ent['coreCommunities']).join(", "),
+	    "cAndB" : getCB(ent),
+	    "keywords" : getKeywords(ent),//JSON.parse(ent['coreCommunities']).join(", "),
 	    "authors" : getAuthors(ent),
 	    "type": getType(ent),
 	    "subtype": getSubtype(ent),
-	    "award": ent.bestPaperAward==1,
-	    "hm": ent.bestPaperNominee==1
+	    //	    "award": ent.bestPaperAward==1,
+	    //            "hm": ent.bestPaperNominee==1
 	}
+    }
+    for(var e in keynoteEntity){
+	output[e] = keynoteEntity[e];
     }
     fs.writeFile(ENTITYFILE, 'entities='+JSON.stringify(output, null, 4), function(err) {});
 }
@@ -112,8 +383,9 @@ function getTimeClass(t){
 function writeSchedule(schedule){
     var output = [];
     var dateIndex = ['Monday','Tuesday','Wednesday','Thursday'];
-    var roomIndex = ["718A","718B","701A","701B","801A","801B","803AB","716A","716B","714AB","717AB","802AB","715A","715B","713AB","707","709","711","Plenary"];
-
+    var roomIndex = ["Exhibit Hall G","718A","718B","701A","701B","801A","801B","803AB","716A","716B","714AB","717AB","802AB","715A","715B","713AB","707","709","711"]; //, "Plenary"];
+    var dates = ["April 28th, 2014", "April 29th, 2014", "April 30th, 2014", "May 1st, 2014"];
+    
     schedule.sort(function (a,b){
 	var dateA = (a.date.split(','))[0];
 	var dateB = (b.date.split(','))[0];
@@ -133,34 +405,35 @@ function writeSchedule(schedule){
     });
 
     var SD = [];
-    var DD = {"date":  schedule[0].date,
+    var DD = {"date":  dates[dateIndex.indexOf(schedule[0].date)],
 	      "day" : (schedule[0].date.split(','))[0]
 	     }
     var slots = [];
     var timeSlot = {'slot_id' : getId(schedule[0].date + ' ' + schedule[0].time),
-		    'time' : schedule[0].time,
+		    'time' : schedule[0].time.replace('-', ' - '),
 		    'slot_class' : getTimeClass(schedule[0].time),
 		    'sessions' : []
 		   };
     
     for(var i = 0; i < schedule.length; i++){
-	if(schedule[i].date != DD.date){
+	if(dates[dateIndex.indexOf(schedule[i].date)] != DD.date){
 	    slots.push(timeSlot);
 	    DD.slots = slots;
 	    SD.push(DD);
-	    DD = {"date":  schedule[i].date,
+	    
+	    DD = {"date": dates[dateIndex.indexOf(schedule[i].date)],// schedule[i].date,
 		  "day" : (schedule[i].date.split(','))[0]
 		 }
 	    slots = [];
 	    timeSlot = {'slot_id' : getId(schedule[i].date + ' ' + schedule[i].time),
-			'time' : schedule[i].time,
+			'time' : schedule[i].time.replace('-', ' - '),
 			'slot_class' : getTimeClass(schedule[i].time),	
 			'sessions' : []
-		   };
-	}else if(schedule[i].time != timeSlot.time){
+		       };
+	}else if(schedule[i].time.replace('-', ' - ') != timeSlot.time){
 	    slots.push(timeSlot);
 	    timeSlot = {'slot_id' : getId(schedule[i].date + ' ' + schedule[i].time),
-			'time' : schedule[i].time,
+			'time' : schedule[i].time.replace('-', ' - '),
 			'slot_class' : getTimeClass(schedule[i].time),	
 			'sessions' : []
 		       };
@@ -174,7 +447,60 @@ function writeSchedule(schedule){
     slots.push(timeSlot);
     DD.slots = slots;
     SD.push(DD);
+
+    for(var i = 0; i < keynoteSchedule.length; i++){
+	insertScheduleSlot(keynoteSchedule[i], SD);
+    }
+
+    if(makeScheduleCSV){
+	generateScheduleCSV(SD, roomIndex, dates)
+    }
+
     fs.writeFile(SCHEDULEFILE, 'schedule='+JSON.stringify(SD, null, 4), function(err) {});
+}
+
+function generateScheduleCSV(sch, rooms, dates){
+    var table = [];
+    var header = ["", ""];
+
+    for(var i = 0; i < rooms.length; i++)
+	header.push(rooms[i]);
+
+    table.push(header)
+    for(var d = 0; d < sch.length; d++){
+	var date = sch[d].day + ", " + sch[d].date;
+	for(var s = 0; s < sch[d].slots.length; s++){
+	    var time = sch[d].slots[s].time
+	    var row = [date, time]
+	    for(var r in rooms) row.push("");
+	    for(var ss = 0; ss < sch[d].slots[s].sessions.length; ss++){
+		var session  = sch[d].slots[s].sessions[ss]
+		
+		row[rooms.indexOf(session.room) +2] = "[" + sessionOutput[session.session].venue + "] " + session.session + ": " + sessionOutput[session.session].s_title
+	    }
+	    table.push(row)
+	}
+    }
+    csv().from(table).to('scheduleTable.csv')
+}
+
+function insertScheduleSlot(slot, sch){
+    for(var i = 0; i < sch.length; i++){
+	if(sch[i].day == slot.day){
+	    for(var j = 0; j < sch[i].slots.length; j++){
+		if(sch[i].slots[j].slot_id == slot.slot.slot_id){
+		    sch[i].slots[j].sessions.unshift(slot.slot.sessions[0]);
+		    return;
+		}
+	    }
+	    // create a new timeslot
+	    if(slot.slot.slot_class.indexOf("morning") >= 0)
+		sch[i].slots.unshift(slot.slot);
+	    else 
+		sch[i].slots.push(slot.slot);
+	    return;
+	}
+    }
 }
 
 function getSubmissions(ses){
@@ -193,6 +519,7 @@ function lookupChair(session, chairs){
 function writeSessions(sessions, chairs){
     var output = {};
     for(var s in sessions){
+	if(sessionIgnore.indexOf(sessions[s].id) >= 0) continue;
 	var ses = sessions[s];
 	output[ses.id] = {
 	    "s_title": ses.title,
@@ -204,12 +531,16 @@ function writeSessions(sessions, chairs){
 	    "day": ses.date,
 	    "s_tags": JSON.parse(ses.coreCommunities),
 	    "type": ses.venue,
-	    "hasAward": ses.hasAward,
-	    "hasHonorableMention": ses.hasHonorableMention,
+//	    "hasAward": ses.hasAward,
+//	    "hasHonorableMention": ses.hasHonorableMention,
 	    "subtype": ses.venue,
 	    "chair": lookupChair(ses, chairs)
 	}
     }
 
+    for(var s in keynoteSessions){
+	output[s] = keynoteSessions[s];
+    }
+    sessionOutput = output;
     fs.writeFile(SESSIONFILE, 'sessions='+JSON.stringify(output, null, 4), function(err) {});
 }

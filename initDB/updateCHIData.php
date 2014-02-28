@@ -1,4 +1,4 @@
-B1;2c<?php
+<?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
 include "../settings/settings.php";

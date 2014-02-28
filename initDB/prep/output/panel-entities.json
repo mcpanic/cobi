@@ -2,7 +2,7 @@
     {
         "id": "pan102",
         "title": "Design Methods for the Future that is NOW: Have Disruptive Technologies Disrupted Our Design Methodologies?",
-        "abstract": "",
+        "abstract": "Responsive Design. Mobile First. Agile Development. Lean UX. Crowdsourcing. Machine Learning. In a world that has been disrupted by new technologies and approaches, what does it mean to do “front-end” or “user-centered design”? Are we relying on methods that are too rooted in the past? What techniques are succeeding and what changes do we need to be making? Do we need different data collected, different styles of prototyping, different design principles, and ways of structuring products or apps when building across multiple platforms? How will any changes in UCD techniques be received by current professionals as well as product managers and developers? This panel explores whether user research and design methods as we know them need to be radically overhauled, or some even eliminated. ",
         "acmLink": "",
         "authors": [
             {
@@ -27,16 +27,37 @@
                 }
             },
             {
-                "id": "auth14090",
+                "id": "auth6550",
                 "type": "author",
                 "venue": "panel",
                 "rank": 2,
+                "givenName": "Ilpo",
+                "familyName": "Koskinen",
+                "email": "ilpo.koskinen@aalto.fi",
+                "primary": {
+                    "dept": "",
+                    "institution": "Aalto University",
+                    "city": "Espoo",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth14090",
+                "type": "author",
+                "venue": "panel",
+                "rank": 3,
                 "givenName": "Janaki",
                 "familyName": "Kumar",
                 "email": "janaki.kumar@sap.com",
                 "primary": {
                     "dept": "",
-                    "institution": "SAP Labs",
+                    "institution": "SAP Labs, LLC",
                     "city": "Palo Alto",
                     "country": "United States"
                 },
@@ -51,7 +72,7 @@
                 "id": "auth16185",
                 "type": "author",
                 "venue": "panel",
-                "rank": 3,
+                "rank": 4,
                 "givenName": "David",
                 "familyName": "Rondeau",
                 "email": "david.rondeau@incontextdesign.com",
@@ -72,7 +93,7 @@
                 "id": "auth1917",
                 "type": "author",
                 "venue": "panel",
-                "rank": 4,
+                "rank": 5,
                 "givenName": "John",
                 "familyName": "Zimmerman",
                 "email": "johnz@cs.cmu.edu",
@@ -93,15 +114,15 @@
         "contactEmail": "shelley@incontextdesign.com",
         "contactFirstName": "Shelley",
         "contactLastName": "Wood",
-        "keywords": "",
+        "keywords": "Cross-platform design; design methods; front-end design; innovation; Lean UX; product design; prototyping; requirements gathering; responsive design; service design ",
         "venue": "panel",
         "session": "s-panel1",
         "communities": []
     },
     {
         "id": "pan103",
-        "title": "Panel: Designing for the Experiential Body",
-        "abstract": "",
+        "title": "Designing for the Experiential Body",
+        "abstract": "The goal of this panel is to reflect on the past and discuss the present and future of designing for an experiencing body in HCI. The motivation is to discuss the full range of rich body/movement-based experiences and how the CHI community can embrace and extend these perspectives on designing for the body. The panelists and audience will be asked to share their perspectives on what has most influenced thought in designing for the body, how new sensing technologies are crafting the HCI perspective, and where they see this line of research and design heading in the next ten years.",
         "acmLink": "",
         "authors": [
             {
@@ -234,7 +255,7 @@
         "contactEmail": "mentis@umbc.edu",
         "contactFirstName": "Helena",
         "contactLastName": "Mentis",
-        "keywords": "",
+        "keywords": "Measurement; evaluation; bodily interaction; health; exertion interface; whole-body interaction.",
         "venue": "panel",
         "session": "s-panel2",
         "communities": []
@@ -361,23 +382,23 @@
     },
     {
         "id": "pan107",
-        "title": "Can You Do Good and Do Well? Exploring HCI Careers in Development",
-        "abstract": "",
+        "title": "Can You Do Good and Do Well? Exploring HCI Careers for Societal Impact",
+        "abstract": "International development and initiatives towards societal impact have been slowly gaining momentum in the HCI forums over the last few years. A subset of HCI researchers and practitioners worldwide have been working to design, build, evaluate and deploy solutions for the 80% of the world which lives on less than $10 a day[2] and broadly for humanitarian efforts that improves people’s lives at large. However, a large section of the HCI community is still not directly involved in this space even if they are interested, because of concerns like job uncertainty, lack of awareness of avenues to help, time availability and perhaps some delusions about the space. This panel brings together panelists who are HCI professionals trying to produce social impact from four different domains (non-profit, for-profit social enterprise, academic research and corporate research) and are from different geographies and stages in their careers. . The panel explores how HCI researchers and practitioners can consider HCI-related careers in international development and other societal impact initiatives, introduce the CHI community to different means through which they could make meaningful contributions, discuss why it may be imminent for HCI specialists to apply their expertise to this space, cite and discuss some real world stories and try to answer as many queries from people who would like to get involved either as volunteers or for full-time careers.",
         "acmLink": "",
         "authors": [
             {
-                "id": "auth3375",
+                "id": "auth12942",
                 "type": "author",
                 "venue": "panel",
                 "rank": 1,
-                "givenName": "Matthew",
-                "familyName": "Kam",
-                "email": "me@matthewkam.org",
+                "givenName": "Anupam",
+                "familyName": "Jain",
+                "email": "anupamjain@in.ibm.com",
                 "primary": {
-                    "dept": "International Development Program",
-                    "institution": "American Institutes for Research",
-                    "city": "Washington",
-                    "country": "United States"
+                    "dept": "",
+                    "institution": "IBM Research Lab",
+                    "city": "New Delhi",
+                    "country": "India"
                 },
                 "secondary": {
                     "dept": "",
@@ -387,18 +408,18 @@
                 }
             },
             {
-                "id": "auth12942",
+                "id": "auth3375",
                 "type": "author",
                 "venue": "panel",
                 "rank": 2,
-                "givenName": "Anupam",
-                "familyName": "Jain",
-                "email": "anupamjain@in.ibm.com",
+                "givenName": "Matthew",
+                "familyName": "Kam",
+                "email": "mkam@air.org",
                 "primary": {
-                    "dept": "",
-                    "institution": "IBM Research Lab",
-                    "city": "New Delhi",
-                    "country": "India"
+                    "dept": "International Development Program",
+                    "institution": "American Institutes for Research",
+                    "city": "Washington",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",
@@ -474,7 +495,7 @@
         "contactEmail": "anupamjain@in.ibm.com",
         "contactFirstName": "Anupam",
         "contactLastName": "Jain",
-        "keywords": "",
+        "keywords": "Social impact; HCI4D; International Development; ICTD; Non Profits; Social Enterprise; HCI career",
         "venue": "panel",
         "session": "s-panel4",
         "communities": []
@@ -482,14 +503,35 @@
     {
         "id": "pan108",
         "title": "Making Cultures: Empowerment, Participation, and Democracy – or Not?",
-        "abstract": "",
+        "abstract": "Making has transformed from a fringe and hobbyist practice into a professionalizing field and an emerging industry. Enthusiasts laud its potential to democratize technology, improve the workforce, empower consumers, encourage citizen science, and contribute to the global economy. Yet critics counter that in the West, making often remains a hobby for the privileged and seems to be increasingly co-opted by corporate interests. This panel brings together HCI scholars and practitioners active in making, handwork, DIY, crafts, and tool design to examine and debate the visions that come from maker cultures.",
         "acmLink": "",
         "authors": [
+            {
+                "id": "auth6095",
+                "type": "author",
+                "venue": "panel",
+                "rank": 1,
+                "givenName": "Morgan",
+                "familyName": "Ames",
+                "email": "morganya@gmail.com",
+                "primary": {
+                    "dept": "Intel Science and Technology Center",
+                    "institution": "University of California, Irvine",
+                    "city": "Irvine",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
             {
                 "id": "auth7080",
                 "type": "author",
                 "venue": "panel",
-                "rank": 1,
+                "rank": 2,
                 "givenName": "Jeffrey",
                 "familyName": "Bardzell",
                 "email": "jbardzel@indiana.edu",
@@ -510,7 +552,7 @@
                 "id": "auth7081",
                 "type": "author",
                 "venue": "panel",
-                "rank": 2,
+                "rank": 3,
                 "givenName": "Shaowen",
                 "familyName": "Bardzell",
                 "email": "selu@indiana.edu",
@@ -531,7 +573,7 @@
                 "id": "auth9429",
                 "type": "author",
                 "venue": "panel",
-                "rank": 3,
+                "rank": 4,
                 "givenName": "Silvia",
                 "familyName": "Lindtner",
                 "email": "silvia.lindtner@gmail.com",
@@ -549,52 +591,10 @@
                 }
             },
             {
-                "id": "auth9749",
-                "type": "author",
-                "venue": "panel",
-                "rank": 4,
-                "givenName": "Daniela",
-                "familyName": "Rosner",
-                "email": "dkrosner@uw.edu",
-                "primary": {
-                    "dept": "Human Centered Design & Engineering",
-                    "institution": "University of Washington",
-                    "city": "Seattle",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth6095",
-                "type": "author",
-                "venue": "panel",
-                "rank": 5,
-                "givenName": "Morgan",
-                "familyName": "Ames",
-                "email": "morganya@gmail.com",
-                "primary": {
-                    "dept": "Intel Science and Technology Center",
-                    "institution": "University of California, Irvine",
-                    "city": "Irvine",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
                 "id": "auth14505",
                 "type": "author",
                 "venue": "panel",
-                "rank": 6,
+                "rank": 5,
                 "givenName": "David",
                 "familyName": "Mellis",
                 "email": "mellis@media.mit.edu",
@@ -612,39 +612,18 @@
                 }
             },
             {
-                "id": "auth31163",
+                "id": "auth9749",
                 "type": "author",
                 "venue": "panel",
-                "rank": 7,
-                "givenName": "Matt",
-                "familyName": "Ratto",
-                "email": "matt.ratto@utoronto.ca",
+                "rank": 6,
+                "givenName": "Daniela",
+                "familyName": "Rosner",
+                "email": "dkrosner@uw.edu",
                 "primary": {
-                    "dept": "Faculty of Information",
-                    "institution": "University of Toronto",
-                    "city": "Toronto",
-                    "country": "Canada"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth17138",
-                "type": "author",
-                "venue": "panel",
-                "rank": 8,
-                "givenName": "Joshua",
-                "familyName": "Tanenbaum",
-                "email": "joshuat@sfu.ca",
-                "primary": {
-                    "dept": "",
-                    "institution": "Simon Fraser University",
-                    "city": "Surrey",
-                    "country": "Canada"
+                    "dept": "Human Centered Design & Engineering",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",
@@ -657,7 +636,7 @@
         "contactEmail": "selu@indiana.edu",
         "contactFirstName": "Shaowen",
         "contactLastName": "Bardzell",
-        "keywords": "",
+        "keywords": "Making; hacking; design; maker culture; peer production; future visions; empowerment; participation; materiality; DIY; sociotechnical systems",
         "venue": "panel",
         "session": "s-panel5",
         "communities": []
@@ -665,7 +644,7 @@
     {
         "id": "pan110",
         "title": "CROWDFUNDING: An Emerging Field of Research",
-        "abstract": "",
+        "abstract": "Crowdfunding, the request of resources through social media, has generated much discussion in the popular press; however, there have been few systematic empirical studies of this growing phenomenon. We bring together the leading HCI researchers in crowdfunding and crowdsourcing to discuss this potentially transformative socio-technical innovation that may advance (or harm) human capabilities to innovate and collaborate.  We will discuss current empirical research on crowdfunding and the future of research in this field from diverse perspectives including computer science, social science, communications, and design, using both qualitative and quantitative research methods.  To make real progress towards realizing future research, we will lead a discussion with the audience of new research agendas in crowdfunding.",
         "acmLink": "",
         "authors": [
             {
@@ -730,20 +709,83 @@
                     "city": "",
                     "country": ""
                 }
+            },
+            {
+                "id": "auth7578",
+                "type": "author",
+                "venue": "panel",
+                "rank": 4,
+                "givenName": "Lilly",
+                "familyName": "Irani",
+                "email": "lirani@ucsd.edu",
+                "primary": {
+                    "dept": "Communication",
+                    "institution": "University of California, San Diego",
+                    "city": "La Jolla",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth26684",
+                "type": "author",
+                "venue": "panel",
+                "rank": 5,
+                "givenName": "Amanda",
+                "familyName": "Williams",
+                "email": "amanda@fabule.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Wyld Collective Ltd.",
+                    "city": "Montréal",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth1149",
+                "type": "author",
+                "venue": "panel",
+                "rank": 6,
+                "givenName": "Elizabeth",
+                "familyName": "Churchill",
+                "email": "churchill@acm.org",
+                "primary": {
+                    "dept": "",
+                    "institution": "eBay Research Lab, eBay Inc.",
+                    "city": "San Jose",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "contactEmail": "egerber@northwestern.edu",
         "contactFirstName": "Elizabeth",
         "contactLastName": "Gerber",
-        "keywords": "",
+        "keywords": "Crowdfunding; Enterprise crowdfunding; Qualitative Methods; Quantitative Methods; Digital divide",
         "venue": "panel",
         "session": "s-panel6",
         "communities": []
     },
     {
         "id": "pan114",
-        "title": "The Meaning of Design in Healthcare: the Academia, Industry, HF Consultant, Clinician and Patient Perspectives",
-        "abstract": "",
+        "title": "The Meaning of Design in Healthcare: Industry, Academia, Visual Design, Clinician, Patient and HF Consultant Perspectives",
+        "abstract": "Healthcare technologies have a reputation for being overly-complex, difficult-to-use, uninspired, and unusable. There is a significant opportunity to incorporate human-centered design into healthcare through the synthesis of deep healthcare domain expertise, visual and industrial design, human factors theory and practice, and an understanding of the patient experience. In practice, the need for such synthesis brings together professionals who often have distinct understanding of the meaning of design in healthcare and the ways in which design can solve problems in healthcare. As such, each professional encounters distinct challenges in trying to realize good design in healthcare. This panel will bring together the contrasting perspectives of industry, academia, visual design, clinicians, patients, and human factors consultants on the role of user interface and technology design in healthcare. Each representative speaker will share his/her experience, lessons learned, and thoughts on the role and meaning of design in healthcare. The audience will then be engaged in a discussion that aims to bring a common understanding, inclusive of all perspectives.",
         "acmLink": "",
         "authors": [
             {
@@ -776,10 +818,10 @@
                 "familyName": "Sara",
                 "email": "sara.waxberg@philips.com",
                 "primary": {
-                    "dept": "create",
-                    "institution": "Philips Healthcare",
-                    "city": "Andover",
-                    "country": "United States"
+                    "dept": "Philips Healthcare, Andover, Massachusetts, United States",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -797,10 +839,10 @@
                 "familyName": "Julian",
                 "email": "jgoss@faculty.ocadu.ca",
                 "primary": {
-                    "dept": "create",
-                    "institution": "Ontario College of Arts and Design ",
-                    "city": "Toronto",
-                    "country": "Canada"
+                    "dept": "Ontario College of Art and Design University , Toronto, Ontario, Canada",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -818,10 +860,10 @@
                 "familyName": "Peter",
                 "email": "Peter.Rossos@uhn.ca",
                 "primary": {
-                    "dept": "create",
-                    "institution": "University Health Network",
-                    "city": "Toronto",
-                    "country": "Canada"
+                    "dept": "University Health Network, Toronto, Ontario, Canada",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -839,10 +881,10 @@
                 "familyName": "Emily",
                 "email": "emily.nicholas@patientsassociation.ca",
                 "primary": {
-                    "dept": "create",
-                    "institution": "Patients Canada",
-                    "city": "Toronto",
-                    "country": "Canada"
+                    "dept": "Patients Canada, Toronto, Ontario, Canada",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -860,10 +902,10 @@
                 "familyName": "Joseph",
                 "email": "joe@humanfactors.ca",
                 "primary": {
-                    "dept": "create",
-                    "institution": "Healthcare Human Factors",
-                    "city": "Toronto",
-                    "country": "Canada"
+                    "dept": "Healthcare Human Factors, Toronto, Ontario, Canada",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -876,15 +918,15 @@
         "contactEmail": "svetlena@humanfactors.ca",
         "contactFirstName": "Svetlena",
         "contactLastName": "Taneva",
-        "keywords": "",
+        "keywords": "Design; Healthcare; Industry; Academia; Clinical; Patient; Clinician; Human Factors",
         "venue": "panel",
         "session": "s-panel7",
         "communities": []
     },
     {
         "id": "pan118",
-        "title": "Interacting with Digital Individuals: Opportunities and Risks of Discovering Personality Traits from Social Media",
-        "abstract": "",
+        "title": "Opportunities and Risks of Discovering Personality Traits from Social Media",
+        "abstract": "With the emergence of social media and the availability of big data, there has been much interest in mining the digital footprints left by users to predict personality traits (e.g., introvert and idealistic) and gain a deeper understanding of individuals. While such understanding will enable hyper-personalized computing, such as  \\ personality-based marketing, the use of this technology will have far-reaching social implications that could affect almost every aspect of our lives. For example, personality traits mined from social media could be used to guide hiring and promotion decisions or decide who is admitted into top academic programs. The risks of using derived personality traits are potentially high, particular due to factors such as the veracity of data collected from social media, imperfections in prediction algorithms, and a lack of control over how, when, and to whom anyone’s personality traits might be exposed. We will use this panel to bring together experts from the fields of Psychology, Social Science, Computer Science, along with the CHI community, to discuss and debate the opportunities and risks of personality discovery from social media and the implications on technical communities and our society at large.   \\ ",
         "acmLink": "",
         "authors": [
             {
@@ -930,16 +972,58 @@
                 }
             },
             {
-                "id": "auth6176",
+                "id": "auth42631",
                 "type": "author",
                 "venue": "panel",
                 "rank": 3,
+                "givenName": "Tom",
+                "familyName": "Dignan",
+                "email": "tom.dignan@reputation.com",
+                "primary": {
+                    "dept": "create",
+                    "institution": "Reputation Inc.",
+                    "city": "San Francisco",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth42632",
+                "type": "author",
+                "venue": "panel",
+                "rank": 4,
+                "givenName": "Steve",
+                "familyName": "Lohr",
+                "email": "lohr@nytimes.com",
+                "primary": {
+                    "dept": "create",
+                    "institution": "New York Times",
+                    "city": "New York",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth6176",
+                "type": "author",
+                "venue": "panel",
+                "rank": 5,
                 "givenName": "Jennifer",
                 "familyName": "Golbeck",
                 "email": "golbeck@cs.umd.edu",
                 "primary": {
                     "dept": "",
-                    "institution": "University of Maryland",
+                    "institution": "University of Maryland, College Park",
                     "city": "College Park",
                     "country": "United States"
                 },
@@ -954,7 +1038,7 @@
                 "id": "auth18083",
                 "type": "author",
                 "venue": "panel",
-                "rank": 4,
+                "rank": 6,
                 "givenName": "James",
                 "familyName": "Pennebaker",
                 "email": "pennebaker@mail.utexas.edu",
@@ -975,7 +1059,7 @@
         "contactEmail": "mzhou@us.ibm.com",
         "contactFirstName": "Michelle",
         "contactLastName": "Zhou",
-        "keywords": "",
+        "keywords": "Psycholinguistic Analytics; Personality Traits; Social Media, Deep People Understanding; Privacy;",
         "venue": "panel",
         "session": "s-panel8",
         "communities": []

@@ -632,7 +632,9 @@ function createEntityData(data, sessionData, venue){
 	    "abstract" : sub["Abstract"],
 	    "acmLink" : "",
 	    "authors" : createEntityAuthors(sub, venue), 
-	    "cbStatement" : sub["Contribution & Benefit Statement (Mandatory Field)"],
+	    "cbStatement" :( (venue == 'altchi') ?
+			     sub["Contribution and Benefit Statement"] :
+			     sub["Contribution & Benefit Statement (Mandatory Field)"]),
 	    "contactEmail" : sub["Contact Email"],
 	    "contactFirstName" : sub["Contact given name"],
 	    "contactLastName" : sub["Contact family name"],

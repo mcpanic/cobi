@@ -23,6 +23,29 @@
         }
     },
     {
+        "authorId": "auth1949",
+        "type": "author",
+        "id": "crs100",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Simone",
+        "familyName": "Barbosa",
+        "email": "simonedjb@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Departamento de Informática",
+            "institution": "Pontifical Catholic University of Rio de Janeiro (PUC-Rio)",
+            "city": "Rio de Janeiro",
+            "country": "Brazil"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
         "authorId": "auth2854",
         "type": "author",
         "id": "crs101",
@@ -143,7 +166,7 @@
         "id": "crs111",
         "venue": "course",
         "rank": 1,
-        "givenName": "Scott",
+        "givenName": "I. Scott",
         "familyName": "MacKenzie",
         "email": "mack@cse.yorku.ca",
         "role": "",
@@ -445,6 +468,29 @@
         "givenName": "Robert",
         "familyName": "Atkinson",
         "email": "robert.atkinson@asu.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Arizona State University",
+            "city": "Tempe",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1836",
+        "type": "author",
+        "id": "crs122",
+        "venue": "course",
+        "rank": 4,
+        "givenName": "Winslow",
+        "familyName": "Burleson",
+        "email": "winslow.burleson@asu.edu",
         "role": "",
         "primary": {
             "dept": "",
@@ -1035,19 +1081,19 @@
         }
     },
     {
-        "authorId": "auth2083",
+        "authorId": "auth23599",
         "type": "author",
         "id": "crs158",
         "venue": "course",
         "rank": 1,
         "givenName": "Ronald",
         "familyName": "Baecker",
-        "email": "rmb@kmdi.toronto.edu",
+        "email": "ron@taglab.ca",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "Technologies for Aging Gracefully Laboratory (TAGlab)",
             "institution": "University of Toronto",
-            "city": "Toronto ",
+            "city": "Toronto",
             "country": "Canada"
         },
         "secondary": {
@@ -1094,6 +1140,52 @@
             "dept": "Berkman Center",
             "institution": "Harvard University",
             "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2714",
+        "type": "author",
+        "id": "crs162",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Jenny",
+        "familyName": "Preece",
+        "email": "preece@umd.edu",
+        "role": "",
+        "primary": {
+            "dept": "iSchool",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth11429",
+        "type": "author",
+        "id": "crs163",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Susan",
+        "familyName": "Dray",
+        "email": "susan.dray@dray.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Dray & Associates, Inc.",
+            "city": "Oakland",
             "country": "United States"
         },
         "secondary": {

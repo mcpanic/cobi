@@ -73,9 +73,9 @@
             }
         ],
         "cbStatement": "Presents Smarties, an input system for collaborative wall display applications, consisting of a customizable mobile interface, a communication protocol and development libraries. Demonstrates its power with several examples.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "chapuis@lri.fr",
+        "contactFirstName": "Olivier",
+        "contactLastName": "Chapuis",
         "keywords": "input toolkit; wall display; hand-held touch devices;  cscw; multi-cursors",
         "venue": "paper",
         "subtype": "Paper",
@@ -117,9 +117,9 @@
             }
         ],
         "cbStatement": "This paper presents and evaluates a multimodal speech recognition system for real world scene description tasks that fuses traditional speech recognition with gaze-direction, calculated using the Microsoft Kinect.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "soroush@mit.edu",
+        "contactFirstName": "Soroush",
+        "contactLastName": "Vosoughi",
         "keywords": "visual grounding; language models; automatic speech  recognition; head pose estimation; visual attention ",
         "venue": "paper",
         "subtype": "Note",
@@ -405,9 +405,9 @@
             }
         ],
         "cbStatement": "Live theatre is used as part of an experience-centered design process where multiple-stakeholders were involved in envisioning near-future care services. We detail the process and reflect on the method’s qualities.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "john.vines@newcastle.ac.uk",
+        "contactFirstName": "John",
+        "contactLastName": "Vines",
         "keywords": "Experience-centered design; theatre; care; older people; ageing; intergenerational",
         "venue": "paper",
         "subtype": "Paper",
@@ -530,10 +530,10 @@
                 "givenName": "Kathrin",
                 "middleInitial": "Maria",
                 "familyName": "Gerling",
-                "email": "kathrin.gerling@usask.ca",
+                "email": "kgerling@lincoln.ac.uk",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of Saskatchewan",
+                    "dept": "Interaction Lab",
+                    "institution": "University  of Saskatchewan",
                     "city": "Saskatoon",
                     "country": "Canada"
                 },
@@ -663,10 +663,10 @@
                 "givenName": "Kathrin",
                 "middleInitial": "Maria",
                 "familyName": "Gerling",
-                "email": "kathrin.gerling@usask.ca",
+                "email": "kgerling@lincoln.ac.uk",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of Saskatchewan",
+                    "dept": "Interaction Lab",
+                    "institution": "University  of Saskatchewan",
                     "city": "Saskatoon",
                     "country": "Canada"
                 },
@@ -1834,7 +1834,7 @@
                 "email": "khong@ncsu.edu",
                 "primary": {
                     "dept": "",
-                    "institution": "NORTH CAROLINA STATE UNIVERSITY",
+                    "institution": "North Carolina State University",
                     "city": "Raleigh",
                     "country": "United States"
                 },
@@ -2912,10 +2912,10 @@
                 "familyName": "Leiva",
                 "email": "luileito@upv.es",
                 "primary": {
-                    "dept": "",
-                    "institution": "ITI/DSIC, Universitat Politècnica de València",
-                    "city": "Valencia",
-                    "country": "Spain"
+                    "dept": "ITI/DSIC, Universitat Politècnica de València, Valencia, Spain",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -3022,16 +3022,16 @@
                 "givenName": "Marcos",
                 "middleInitial": "",
                 "familyName": "Serrano",
-                "email": "marcos@cs.umanitoba.ca",
+                "email": "marcos.serrano@irit.fr",
                 "primary": {
-                    "dept": "",
+                    "dept": "University of Manitoba, Winnipeg, Manitoba, Canada",
                     "institution": "University of Manitoba",
                     "city": "Winnipeg",
                     "country": "Canada"
                 },
                 "secondary": {
-                    "dept": "",
-                    "institution": "IRIT",
+                    "dept": "IRIT, Toulouse, France",
+                    "institution": "IRIT-University of Toulouse",
                     "city": "Toulouse",
                     "country": "France"
                 }
@@ -3867,9 +3867,9 @@
             }
         ],
         "cbStatement": "We observe players’ behavior with a tangible video game and discuss two of its properties that affect players’ perception of freedom and relatedness, and the game’s learnability and customization opportunities.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "clement.pillias@cnam.fr",
+        "contactFirstName": "Clément",
+        "contactLastName": "Pillias",
         "keywords": "Sifteo Cubes; tangible user interface; tangible video game; video game design; mixed-reality games; player strategies",
         "venue": "paper",
         "subtype": "Note",
@@ -4044,9 +4044,9 @@
             }
         ],
         "cbStatement": "This paper contributes a novel photo interaction technique that makes textual information more accessible to those with limited textual literacy, and explores its value in both India and South Africa.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "cssimonr@swan.ac.uk",
+        "contactFirstName": "Simon",
+        "contactLastName": "Robinson",
         "keywords": "QR codes; camera phones; audio; developing regions",
         "venue": "paper",
         "subtype": "Note",
@@ -4873,7 +4873,7 @@
     {
         "id": "pn286",
         "title": "Help Beacons: Design and Evaluation of an Ad-Hoc Lightweight S.O.S. System for Smartphones",
-        "abstract": "1. Al-Akkad, A., et al. Reconstructing normality: The use of infrastructure leftovers in crisis situations as inspiration for the design of resilient technology. Proc. OzCHI'13, ACM Press (2013), 457-466. \\ 2. Android Issue 30880: Wi-Fi Direct API for connection acceptance. http://bit.ly/ZTbwLM \\ 3. Bambuser. http://bambuser.com/ \\ 4. Battlemesh mailing list Still no ad-hoc in Android 4.0 \"Ice Cream Sandwich\"? http://bit.ly/Z0pVDA \\ 5. Camps-Mur, D., Garcia-Saavedra, A., and Serrano, P. Device-to-device communications with Wi-Fi Direct: overview and experimentation. IEEE Wireless Communications 20, 3 (2013), 96-104. \\ 6. Conti, G. Guest Editor's Introduction. CACM 49, 6 (2006), 32-36. \\ 7. Convertino, G., et al. Supporting common ground and awareness in emergency management planning: A design research project. ACM TOCHI 18, 4 (2011), 134. \\ 8. Edwards, W.K., et al. The challenges of user-centered design and evaluation for infrastructure. Proc. CHI 2003, ACM Press (2003), 297-304. \\ 9. Federal Emergency Management Agency (FEMA) FEMA App, USA.gov http://1.usa.gov/P8V5sf \\ 10. HackHut Emergency S.O.S. Beacon. http://bit.ly/X2PEvE \\ 11. Hossmann, T., et al. Twitter in disaster mode: Opportunistic Communication and Distribution of Sensor Data in Emergencies. Proc. ExtremeCom 2011, ACM Press (2011), 1-6. \\ 12. Jones, C. Android Solidifies Smartphone Market Share, Forbes.com, 2013. http://onforb.es/X3u5wt \\ 13. Krishnamoorthy, S. and Agrawala, A. Context-aware, technology enabled social contribution for public safety using M-Urgency. Proc. MobileHCI 2012, ACM Press (2012), 123-132. \\ 14. Lien, Y.N., Li-Cheng, C., and Chih-Chieh, H. A Multihop Walkie-Talkie-Like Emergency Communication System for Catastrophic Natural Disasters. Proc. ICPPW 2010, (2010), 527-532. \\ 15. Lukowicz, P., Baker, M.G., and Paradiso, J. Guest Editors' Introduction: Hostile Environments. IEEE Pervasive Computing 9, 4 (2010), 13-15. \\ 16. Martin-Campillo, A., et al. Using Haggle to create an electronic triage tag. Proc. MobiOpp Workshop 2010, ACM Press (2010), 167-170. \\ 17. Network Working Group RFC 3748 - Extensible Authentication Protocol (EAP), 2004. http://tools.ietf.org/html/rfc3748 \\ 18. NowForce Inc. http://www.nowforce.com/ \\ 19. Open Garden Inc. http://opengarden.com/ \\ 20. Palen, L. and Liu, S.B. Citizen communications in crisis: anticipating a future of ICT-supported public participation. Proc. CHI 2007, ACM Press (2007), 727736. \\ 21. Ramirez, L., et al. Landmarke: an ad hoc deployable ubicomp infrastructure to support indoor navigation of firefighters. PUC 16, 8 (2012), 1025-1038. \\ 22. SafeCity Get live information from the society. http://www.safecity.nl/english/ \\ 23. Shanshan, L., et al. Device discovery and connection establishment approach using Ad-Hoc Wi-Fi for opportunistic networks. Proc. PERCOM 2011 Workshops, (2011), 461-466. \\ 24. Shklovski, I., Palen, L., and Sutton, J. Finding community through information and communication technology in disaster response. Proc. CSCW 2008, ACM Press (2008), 127-136. \\ 25. Simpson, P.V. Internet savvy Swedes launch 'Angry note 2.0'. The Local (Swedish News). http://bit.ly/bGnhsM \\ 26. Starbird, K. and Stamberger, J. Tweak the Tweet: Leveraging Microblogging Proliferation with a Prescriptive Syntax to Support Citizen Reporting. Proc. ISCRAM 2010, ISCRAM Press. \\ 27. Starbird, K. and Palen, L. \"Voluntweeters\": selforganizing by digital volunteers in times of crisis. Proc. CHI 2011, ACM Press (2011), 1071-1080. \\ 28. Su, J., et al. Haggle: seamless networking for mobile applications. Proc. UbiComp 2007, Springer Press (2007), 391-408. \\ 29. Toups, Z.O., et al. Zero-fidelity simulation of fire emergency response: improving team coordination learning. Proc. CHI 2011, ACM Press (2011), 19591968. \\ 30. Trifunovic, S., et al. WiFi-Opp: ad-hoc-less opportunistic networking. Proc. CHANTS 2011, ACM Press (2011), 37-42. \\ 31. Turoff, M. Past and future emergency response information systems. CACM 45, 4 (2002), 29-32. \\ 32. Ushahidi Ushahidi Crowdmap. http://www.ushahidi.com/ \\ 33. Wong, M.P., A; Clement, A. Reading Service Set Identifiers (SSIDs): Marking and Locating for Public and Private Wireless Spaces. Proc. AOIR'07, (2007). \\ 34. Yau, N. Political allegiance via wireless network SSIDs, mapped, FlowingData. http://bit.ly/LulXy2 \\ 35. Yu, H. The power of thumbs: the politics of SMS in urban China. Graduate Journal of Asia-Pacific Studies 2, 2 (2004), 30-43. \\ ",
+        "abstract": "We present the design and evaluation of a lightweight mobile S.O.S. system that facilitates ad-hoc communication between first responders and victims in emergency situations. Our approach leverages established protocols and standards in unforeseen ways to provide a platform supporting the creation of short-lived communication links. The system comprises two mobile applications: one victim application that allows the broadcasting of distress signals by a novel use of Wi-Fi SSIDs; and a responder application that allows first responders to discover and trace the people broadcasting the signals. The main difference of our system with other platforms enabling communication in crisis situations is that our system is independent from existing network infrastructure and runs on off-the-shelf, commercially available smartphones. We describe the results of our evaluation process in the context of both a design evaluation during a real-world emergency response exercise and of two user workshops in preparation for an upcoming large-scale exercise.",
         "acmLink": "",
         "authors": [
             {
@@ -4937,47 +4937,47 @@
                 },
                 "secondary": {
                     "dept": "University of Siegen, Siegen, NRW, Germany",
-                    "institution": "40841",
-                    "city": "Dave",
-                    "country": "Randall"
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 }
             },
             {
-                "id": "authdave.randall@uni-siegen.de",
+                "id": "auth40841",
                 "type": "author",
                 "venue": "paper",
                 "rank": 4,
-                "givenName": "",
-                "middleInitial": "University of Siegen",
-                "familyName": "Siegen",
-                "email": "NRW",
+                "givenName": "Dave",
+                "middleInitial": "",
+                "familyName": "Randall",
+                "email": "dave.randall@uni-siegen.de",
                 "primary": {
-                    "dept": "Germany",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "",
+                    "institution": "University of Siegen",
+                    "city": "Siegen",
+                    "country": "Germany"
                 },
                 "secondary": {
                     "dept": "",
-                    "institution": "30349",
-                    "city": "Andreas",
-                    "country": "Zimmermann"
-                }
-            },
-            {
-                "id": "authandreas.zimmermann@fit.fraunhofer.de",
-                "type": "author",
-                "venue": "paper",
-                "rank": 5,
-                "givenName": "",
-                "middleInitial": "Fraunhofer Institute for Applied Information Technology (FIT)",
-                "familyName": "Sankt Augustin",
-                "email": "",
-                "primary": {
-                    "dept": "Germany",
                     "institution": "",
                     "city": "",
                     "country": ""
+                }
+            },
+            {
+                "id": "auth30349",
+                "type": "author",
+                "venue": "paper",
+                "rank": 5,
+                "givenName": "Andreas",
+                "middleInitial": "",
+                "familyName": "Zimmermann",
+                "email": "andreas.zimmermann@fit.fraunhofer.de",
+                "primary": {
+                    "dept": "",
+                    "institution": "Fraunhofer Institute for Applied Information Technology (FIT)",
+                    "city": "Sankt Augustin",
+                    "country": "Germany"
                 },
                 "secondary": {
                     "dept": "",
@@ -4987,13 +4987,13 @@
                 }
             }
         ],
-        "cbStatement": "Alexander Boden",
+        "cbStatement": "The design and evaluation of a lightweight mobile S.O.S. system that facilitates ad-hoc communication between first responders and victims in the face of disruptions of network infrastructure. ",
         "contactEmail": "amro.al-akkad@fit.fraunhofer.de",
         "contactFirstName": "Amro",
         "contactLastName": "Al-Akkad",
-        "keywords": "",
+        "keywords": "Mobile computing; Ad-hoc communication; Emergency response; Smartphones",
         "venue": "paper",
-        "subtype": "Mobile computing; Ad-hoc communication; Emergency response; Smartphones",
+        "subtype": "Paper",
         "session": "s123",
         "communities": [
             "Smartphones",
@@ -5208,7 +5208,7 @@
     {
         "id": "pn292",
         "title": "Is Once Enough? On the Extent and Content of Replications in Human-Computer Interaction",
-        "abstract": "1.\tAppert, C., Chapuis, O., and Pietriga, E. High-precision magnification lenses. In Proc. CHI (2010), 273–282. \\ 2.\tBegley, C.G. and Ellis, L.M. Drug development: Raise standards for preclinical cancer research. Nature 483, 7391 (2012), 531–533. \\ 3.\tCasiez, G. and Vogel, D. The effect of spring stiffness and control gain with an elastic rate control pointing device. In Proc. CHI, (2008), 1709–1718. \\ 4.\tChapuis, O., Labrune, J.-B., and Pietriga, E. DynaSpot: speed-dependent area cursor. In Proc. CHI (2009), 1391–1400. \\ 5.\tChen, N.Y., Guimbretière, F., and Löckenhoff, C.E. Relative role of merging and two-handed operation on command selection speed. International Journal of Human-Computer Studies 66, 10 (2008), 729–740. \\ 6.\tD’Mello, S.K., Graesser, A., and King, B. Toward Spoken Human–Computer Tutorial Dialogues. Human–Computer Interaction 25, 4 (2010), 289–323. \\ 7.\tEgan, D.E., Remde, J.R., Gomez, L.M., Landauer, T.K., Eberhardt, J., and Lochbaum, C.C. Formative design evaluation of superbook. ACM Transactions on Information Systems (TOIS) 7, 1 (1989), 30–57. \\ 8.\tEvanschitzky, H., Baumgarth, C., Hubbard, R., and Armstrong, J.S. Replication research’s disturbing trend. Journal of Business Research 60, 4 (2007), 411–415. \\ 9.\tFindlater, L. and McGrenere, J. Impact of screen size on performance, awareness, and user satisfaction with adaptive graphical user interfaces. In Proc. CHI (2008), 1247–1256. \\ 10.\tForlines, C. and Balakrishnan, R. Evaluating tactile feedback and direct vs. indirect stylus input in pointing and crossing selection tasks. In Proc. CHI, (2008), 1563–1572. \\ 11.\tGreenberg, S. and Buxton, B. Usability evaluation considered harmful (some of the time). In Proc. CHI (2008), 111–120. \\ 12.\tGrimes, D., Tan, D.S., Hudson, S.E., Shenoy, P., and Rao, R.P. Feasibility and pragmatics of classifying working memory load with an electroencephalograph. In Proc. CHI, (2008), 835–844. \\ 13.\tHartmann, J., De Angeli, A., and Sutcliffe, A. Framing the user experience: information biases on website quality judgement. In Proc. CHI (2008), 855–864. \\ 14.\tHeer, J. and Bostock, M. Crowdsourcing graphical perception: using mechanical turk to assess visualization design. In Proc. CHI (2010), 203–212. \\ 15.\tHendrick, C. Replications, strict replications, and conceptual replications: Are they important? Journal of Social Behavior & Personality, (1990). \\ 16.\tHoggan, E., Brewster, S.A., and Johnston, J. Investigating the effectiveness of tactile feedback for mobile touchscreens. In Proc. CHI (2008), 1573–1582. \\ 17.\tHornbæk, K. Some Whys and Hows of Experiments in Human–Computer Interaction. Foundations and Trends in Human–Computer Interaction 5, 4 (2013), 299–373. \\ 18.\tHuizenga, J.R. Cold fusion: The scientific fiasco of the century (1992). \\ 19.\tHunter, J.E. and Schmidt, F.L. Methods of meta-analysis. Sage, 2004. \\ 20.\tIoannidis, J.P. Why most published research findings are false. PLoS medicine 2, 8 (2005), e124. \\ 21.\tJasny, B.R., Chin, G., Chong, L., and Vignieri, S. Again, and again, and again…. Science 334, 6060 (2011), 1225–1225. \\ 22.\tJohn, B. Avoiding “It’s JUST a Replication”, RepliCHI 2013 Workshop. \\ 23.\tJones, K.S., Derby, P.L., and Schmidlin, E.A. An investigation of the prevalence of replication research in human factors. Human Factors, 52, 5 (2010), 586–595. \\ 24.\tKaplan, A. The Conduct of Inquiry: methodology for behavioral science. Chandler, San Francisco, CA, 1964. \\ 25.\tKarlson, A.K. and Bederson, B.B. One-handed touchscreen input for legacy applications. In Proc. CHI (2008), 1399–1408. \\ 26.\tKelly, C.W., Chase, L.J., and Tucker, R.K. Replication in experimental communication research: An analysis. Human Communication Research 5, 4 (1979), 338–342. \\ 27.\tLallemand, C., Koenig, V., and Gronier, G. Replicating an International Survey on User Experience: Challenges, Successes and Limitations. RepliCHI 2013 Workshop. \\ 28.\tLandis, J.R. and Koch, G.G. The measurement of observer agreement for categorical data. Biometrics, (1977), 159–174. \\ 29.\tLee, E.-J. Flattery may get computers somewhere, sometimes: The moderating role of output modality, computer gender, and user gender. International Journal of Human-Computer Studies 66, 11 (2008), 789–800. \\ 30.\tLee, E.-J. I like you, but I won’t listen to you: Effects of rationality on affective and behavioral responses to computers that flatter. International Journal of Human-Computer Studies 67, 8 (2009), 628–638. \\ 31.\tMakel, M.C., Plucker, J.A., and Hegarty, B. Replications in Psychology Research How Often Do They Really Occur? Perspectives on Psychological Science 7, 6 (2012), 537–542. \\ 32.\tMarshall, C. and Rossman, G. B.. Designing qualitative research, Sage (1999). \\ 33.\tMartin, B. and Isokoski, P. EdgeWrite with integrated corner sequence help. In Proc. CHI (2008), 583–592. \\ 34.\tMcGrath, J.E. Methodology matters: Doing research in the behavioral and social sciences, in Human-computer interaction (1995), Morgan Kaufmann, 152-169.  \\ 35.\tMoffatt, K. and McGrenere, J. Steadied-bubbles: combining techniques to address pen-based pointing errors for younger and older adults. In Proc. CHI (2010), 1125–1134. \\ 36.\tMorris, D., Ringel Morris, M., and Venolia, G. SearchBar: a search-centric web history for task resumption and information re-finding. In Proc. CHI (2008), 1207–1216. \\ 37.\tMoscovich, T. and Hughes, J.F. Indirect mappings of multi-touch input using one and two hands. In Proc. CHI (2008), 1275–1284. \\ 38.\tNacenta, M.A., Mandryk, R.L., and Gutwin, C. Targeting across displayless space. In Proc. CHI (2008), 777–786. \\ 39.\tNeuliep, J.W. and Crandall, R. Everyone was wrong: There are lots of replications out there. Journal of Social Behavior & Personality, (1993). \\ 40.\tNewman, W. A preliminary analysis of the products of HCI research, using pro forma abstracts. In Proc. CHI (1994), 278–284. \\ 41.\tOlwal, A., Feiner, S., and Heyman, S. Rubbing and tapping for precise and rapid selection on touch-screen displays. In Proc. CHI (2008), 295–304. \\ 42.\tPietriga, E. and Appert, C. Sigma lenses: focus-context transitions combining space, time and translucence. In Proc. CHI (2008), 1343–1352. \\ 43.\tReaves, M.L., Sinha, S., Rabinowitz, J.D., Kruglyak, L., and Redfield, R.J. Absence of detectable arsenate in DNA from arsenate-grown GFAJ-1 cells. Science 337, 6093 (2012), 470–473. \\ 44.\tRosenthal, R. and Rosnow, R. Essentials of behavioural research. McGraw-Hill (1991). \\ 45.\tRosenthal, R. Replication in behavioral research. Journal of Social Behavior & Personality, 5, 1990, 1-30. \\ 46.\tSterling, T.D. Publication decisions and their possible effects on inferences drawn from tests of significance—or vice versa. Journal of the American statistical association 54, 285 (1959), 30–34. \\ 47.\tTakayama, L. and Nass, C. Driver safety and information from afar: An experimental driving simulator study of wireless vs. in-car information services. International Journal of Human-Computer Studies 66, 3 (2008), 173–184. \\ 48.\tTsang, E.W. and Kwan, K.-M. Replication and theory development in organizational science. Academy of Management Review 24, 4 (1999), 759–780. \\ 49.\tTuddenham, P., Kirk, D., and Izadi, S. Graspables revisited. In Proc. CHI (2010), 2223–2232. \\ 50.\tVogel, D. and Baudisch, P. Shift: a technique for operating pen-based interfaces using touch. In Proc. CHI (2007), 657–666. \\ 51.\tWilson, M.L., Mackay, W., Chi, E., Bernstein, M., Russell, D., and Thimbleby, H. RepliCHI-CHI should be replicating and validating results more. In Extended Abstracts of CHI (2011), 463–466. \\ 52.\tYatani, K., Partridge, K., Bern, M., and Newman, M.W. Escape: a target selection technique using visually-cued gestures. In Proc. CHI (2008), 285–294. \\ 53.\tZhai, S., Conversy, S., Beaudouin-Lafon, M., and Guiard, Y. Human on-line response to target expansion. In Proc. CHI (2003), 177–184. \\ ",
+        "abstract": "A replication is an attempt to confirm an earlier study's findings. It is often claimed that research in Human-Computer Interaction (HCI) contains too few replications. To investigate this claim we examined four publication outlets (891 papers) and found 3% attempting replication of an earlier result. The replications typically confirmed earlier findings, but treated replication as a confirm/not-confirm decision, rarely analyzing effect sizes or comparing in depth to the replicated paper. When asked, most authors agreed that their studies were replications, but rarely planned them as such. Many non-replication studies could have corroborated earlier work if they had analyzed data differently or used minimal effort to collect extra data. We discuss what these results mean to HCI, including how reporting of studies could be improved and how conferences/journals may change author instructions to get more replications. ",
         "acmLink": "",
         "authors": [
             {
@@ -5221,76 +5221,76 @@
                 "familyName": "Hornbæk",
                 "email": "kash@diku.dk",
                 "primary": {
-                    "dept": "University of Copenhagen, Copenhagen, Denmark",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Department of Computer Science",
+                    "institution": "University of Copenhagen",
+                    "city": "Copenhagen",
+                    "country": "Denmark"
                 },
                 "secondary": {
                     "dept": "",
-                    "institution": "37230",
-                    "city": "Søren",
-                    "country": "Sander"
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 }
             },
             {
-                "id": "auths.s.sander@mail.dk",
+                "id": "auth37230",
                 "type": "author",
                 "venue": "paper",
                 "rank": 2,
-                "givenName": "",
-                "middleInitial": "University of Copenhagen",
-                "familyName": "Copenhagen",
-                "email": "",
+                "givenName": "Søren",
+                "middleInitial": "S",
+                "familyName": "Sander",
+                "email": "s.s.sander@mail.dk",
                 "primary": {
-                    "dept": "Denmark",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "",
+                    "institution": "University of Copenhagen",
+                    "city": "Copenhagen",
+                    "country": "Denmark"
                 },
                 "secondary": {
                     "dept": "",
-                    "institution": "13349",
-                    "city": "Javier",
-                    "country": "Bargas-Avila"
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 }
             },
             {
-                "id": "authbargas@google.com",
+                "id": "auth13349",
                 "type": "author",
                 "venue": "paper",
                 "rank": 3,
-                "givenName": "",
-                "middleInitial": "Google, Inc.",
-                "familyName": "Zurich",
-                "email": "ZH",
+                "givenName": "Javier",
+                "middleInitial": "Andrés",
+                "familyName": "Bargas-Avila",
+                "email": "bargas@google.com",
                 "primary": {
-                    "dept": "Switzerland",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Zurich",
+                    "country": "Switzerland"
                 },
                 "secondary": {
                     "dept": "",
-                    "institution": "26067",
-                    "city": "Jakob",
-                    "country": "Grue Simonsen"
-                }
-            },
-            {
-                "id": "authsimonsen@diku.dk",
-                "type": "author",
-                "venue": "paper",
-                "rank": 4,
-                "givenName": "",
-                "middleInitial": "University of Copenhagen",
-                "familyName": "Copenhagen",
-                "email": "",
-                "primary": {
-                    "dept": "Denmark",
                     "institution": "",
                     "city": "",
                     "country": ""
+                }
+            },
+            {
+                "id": "auth26067",
+                "type": "author",
+                "venue": "paper",
+                "rank": 4,
+                "givenName": "Jakob",
+                "middleInitial": "",
+                "familyName": "Grue Simonsen",
+                "email": "simonsen@diku.dk",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Copenhagen",
+                    "city": "Copenhagen",
+                    "country": "Denmark"
                 },
                 "secondary": {
                     "dept": "",
@@ -5300,13 +5300,13 @@
                 }
             }
         ],
-        "cbStatement": "Javier Bargas-Avila",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
-        "keywords": "",
+        "cbStatement": "We examine 891 HCI papers and find that 3% attempt to replicate an earlier result. We discuss how to improve replication rates and the reporting of empirical studies in HCI.",
+        "contactEmail": "kash@diku.dk",
+        "contactFirstName": "Kasper",
+        "contactLastName": "Hornbæk",
+        "keywords": "Replications",
         "venue": "paper",
-        "subtype": "Replications",
+        "subtype": "Paper",
         "session": "s150",
         "communities": [
             "replication",
@@ -5465,7 +5465,7 @@
                 "familyName": "Roudaut",
                 "email": "roudauta@gmail.com",
                 "primary": {
-                    "dept": "create",
+                    "dept": "",
                     "institution": "University of Bristol",
                     "city": "Bristol",
                     "country": "United Kingdom"
@@ -5487,10 +5487,10 @@
                 "familyName": "Reed",
                 "email": "rr0743@my.bristol.ac.uk",
                 "primary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "create",
+                    "institution": "University of Bristol",
+                    "city": "Bristol",
+                    "country": "United Kingdom"
                 },
                 "secondary": {
                     "dept": "",
@@ -5509,7 +5509,7 @@
                 "familyName": "Hao",
                 "email": "th12120@my.bristol.ac.uk",
                 "primary": {
-                    "dept": "create",
+                    "dept": "",
                     "institution": "University of Bristol",
                     "city": "Bristol",
                     "country": "United Kingdom"
@@ -5531,7 +5531,7 @@
                 "familyName": "Subramanian",
                 "email": "sriramable@gmail.com",
                 "primary": {
-                    "dept": "create",
+                    "dept": "",
                     "institution": "University of Bristol",
                     "city": "Bristol",
                     "country": "United Kingdom"
@@ -5702,9 +5702,9 @@
             }
         ],
         "cbStatement": "We address the need for a systematic study of people’s taste experiences and their specific characteristics in order to make a fuller use of this sense in future taste-enhanced technologies.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "obristmarianna@gmail.com",
+        "contactFirstName": "Marianna",
+        "contactLastName": "Obrist",
         "keywords": "Taste; user experience; taste experiences; sensory research; explicitation interview technique; sensual evaluation tool",
         "venue": "paper",
         "subtype": "Paper",
@@ -5723,7 +5723,7 @@
     {
         "id": "pn320",
         "title": "Opportunities for Odor: Experiences with Smell and Implications for Technology",
-        "abstract": "1.\tAlaoui-Ismaïli, O., Robin, O., Rada, H., Dittmar, A., Vernet-Maury, E. Basic Emotions Evoked by Odorants: Comparison Between Autonomic Responses and Self-Evaluation. Physiology & Beh. 62, 4 (1997), 713–720. \\ 2.\tBakalar, N. Sensory science: Partners in flavour. Nature 486, 7403 (2012), S4–S5. \\ 3.\tBaumeister, R.F., Newman, L.S. How Stories Make Sense of Personal Experiences: Motives that Shape Autobiographical Narratives. Personality and Social Psychology Bulletin 20, 6 (1994), 676–690. \\ 4.\tBodnar, A., Corbett, R., Nekrasovski, D. AROMA: ambient awareness through olfaction in a messaging application. Proc. ICMI, (2004), 183–190. \\ 5.\tBrewster, S., McGookin, D., Miller, C. Olfoto: designing a smell-based interaction. Proc. CHI (2006), 653–662. \\ 6.\tBruner, J. Life as narrative. Social Research: An International Quarterly 71, 3 (2004), 691–710. \\ 7.\tChrea, C., Grandjean, D., Delplanque, S., Cayeux, I., Le Calvé, B., Aymard, L., Velazco, MI., Sander, D., Scherer, KR. Mapping the Semantic Space for the Subjective Experience of Emotional Responses to Odors. Chem. Senses 34, 1 (2009), 49–62. \\ 8.\tEhrlichman, H., Bastone, L. The use of odour in the study of emotion. In S. Van and G.H. Dodd, (Eds.), Fragrance: The psychology and biology of perfume. Elsevier, (1992), 143–159. \\ 9.\tEmsenhuber, B. Scent Marketing: Making Olfactory Advertising Pervasive. In J. Müller, F. Alt and D. Michelis (Eds.), Pervasive Advertising. Springer, (2011), 343–360. \\ 10.\tErickson, T. Design as storytelling. Interactions 3, 4 (1996), 30–35. \\ 11.\tFaste, H., Rachmel, N., Essary, R., Sheehan, E. Brainstorm, Chainstorm, Cheatstorm, Tweetstorm: new ideation strategies for distributed HCI design. Proc. CHI (2013), 1343–1352. \\ 12.\tFleiss, J.L., Levin, B., Paik, M.C. Statistical Methods for Rates and Proportions. John Wiley & Sons, (2013). \\ 13.\tGhinea, G., Ademoye, O. The sweet smell of success: Enhancing multimedia applications with olfaction. TOMCCAP 8, 1 (2012), 2. \\ 14.\tHassenzahl, M. Experience Design: Technology for All the Right Reasons. Syn. Lect. on HCI 3, 1 (2010), 1–95. \\ 15.\tHerz, R.S., Engen, T. Odor memory: review and analysis. Psy. Bulletin & Review. 3, 3 (1996), 300–313. \\ 16.\tJonsson, F., Verhagen, H. Senses working overtime: on sensuous experiences and public computer game play. Proc. ACE (2011), 56:1–56:8. \\ 17.\tKaye, J. “Jofish.” Making Scents: aromatic output for HCI. Interactions 11, 1 (2004), 48–61. \\ 18.\tKazakos, K., Howard, S., Vetere, F. Revisiting the relationship between reunion and technology-mediated separation in periodically transitioning families. Proc. CSCW (2013), 1157–1168. \\ 19.\tLoumakis, F., Stumpf, S., Grayson, D. This image smells good: effects of image information scent in search engine results pages. CIKM (2011), 475–484. \\ 20.\tMason, W., Suri, S. Conducting behavioral research on Amazon’s Mechanical Turk. Behavior Research Methods 44, 1 (2012), 1–23. \\ 21.\tMassimi, M., Moncur, W., Odom, W., Banks, R., Kirk, D. Memento mori: technology design for the end of life. Proc. CHI EA (2012), 2759–2762. \\ 22.\tMatsukura, H., Yoneda, T., Ishida, H. Smelling Screen: Development and Evaluation of an Olfactory Display System for Presenting a Virtual Odor Source. IEEE TVCG 19, 4 (2013), 606–615. \\ 23.\tPetitmengin, C. Describing one’s subjective experience in the second person: An interview method for the science of consciousness. Phenomenology and the Cognitive Sciences 5, 3-4 (2006), 229–269. \\ 24.\tRanasinghe, N., Karunanayaka, K., Cheok, A.D., Fernando, O.N.N., Nii, H., Gopalakrishnakone, P. Digital taste and smell communication. Proc. BodyNets, (2011), 78–84. \\ 25.\tSaldana, J. The Coding Manual for Qualitative Researchers. SAGE (2012). \\ 26.\tScherer, K.R. Appraisal considered as a process of multilevel sequential checking. Appraisal processes in emotion: Theory, methods, research 92, (2001), 120. \\ 27.\tScherer, K.R. What are emotions? And how can they be measured? Social Science Inf. 44, 4 (2005), 695–729. \\ 28.\tSeligman, M.E.P., Csikszentmihalyi, M. Positive psychology: An intro. Am. Psy. 55, 1(2000), 5–14. \\ 29.\tSeo, H.-S., Guarneros, M., Hudson, R., et al. Attitudes toward Olfaction: A Cross-regional Study. Chem. Senses 36, 2 (2011), 177–187. \\ 30.\tSuddendorf, T., Corballis, M.C. The evolution of foresight: What is mental time travel, and is it unique to humans? Beh. & Brain Sciences 30, 3 (2007), 299–313. \\ 31.\tTuch, A.N., Trusell, R., Hornbæk, K. Analyzing users’ narratives to understand experience with interactive products. Proc. CHI (2013), 2079–2088. \\ 32.\tWallace, J., Wright, P.C., McCarthy, J., Green, D.P., Thomas, J., Olivier, P. A design-led inquiry into personhood in dementia. Proc. CHI (2013), 2617–2626. \\ 33.\tWillander, J., Larsson, M. Smell your way back to childhood: Autobiographical odor memory. Psy. Bulletin & Review 13, 2 (2006), 240–244. \\ 34.\tWright, P., McCarthy, J. Experience-Centered Design: Designers, Users, and Communities in Dialogue. Syn. Lect. on HCI 3, 1 (2010), 1–123. \\ 35.\tWyszynski, B., Yamanaka, T., Nakamoto, T. Recording and reproducing citrus flavors using odor recorder. Sensors&Actuators B: Chemical 106, 1(2005), 388–393.",
+        "abstract": "Technologies for capturing and generating smell are emerging, and our ability to engineer such technologies and use them in HCI is rapidly developing. Our understanding of how these technologies match the experiences with smell that people have or want to have is surprisingly limited. We therefore investigated the experience of smell and the emotions that accompany it. We collected stories from 439 participants who described personally memorable smell experiences in an online questionnaire. Based on the stories we developed 10 categories of smell experience. We explored the implications of the categories for smell-enhanced technology design by (a) probing participants to envision technologies that match their smell story and (b) having HCI researchers brainstorm technologies using the categories as design stimuli. We discuss how our findings can benefit research on personal memories, momentary and first time experiences, and wellbeing.",
         "acmLink": "",
         "authors": [
             {
@@ -5780,10 +5780,10 @@
                 "familyName": "Hornbaek",
                 "email": "kash@diku.dk",
                 "primary": {
-                    "dept": "University of Copenhagen, Copenhagen, Denmark",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Department of Computer Science",
+                    "institution": "University of Copenhagen",
+                    "city": "Copenhagen",
+                    "country": "Denmark"
                 },
                 "secondary": {
                     "dept": "",
@@ -5793,13 +5793,13 @@
                 }
             }
         ],
-        "cbStatement": "Alexandre Tuch",
+        "cbStatement": "This work guides smell enhanced technology design, not only giving a categorization of the role of smell in experiences, but also extracting the qualities of smell across 439 smell stories.",
         "contactEmail": "obristmarianna@gmail.com",
         "contactFirstName": "Marianna",
         "contactLastName": "Obrist",
-        "keywords": "",
+        "keywords": "Smell; smell experiences; odor; olfaction; user experience; smell-enhanced technology; narratives; smell stories; crowdsourcing; design brainstorming; designing for smell. ",
         "venue": "paper",
-        "subtype": "Smell; smell experiences; odor; olfaction; user experience; smell-enhanced technology; narratives; smell stories; crowdsourcing; design brainstorming; designing for smell. ",
+        "subtype": "Paper",
         "session": "s194",
         "communities": [
             "Perception",
@@ -7048,7 +7048,7 @@
     {
         "id": "pn385",
         "title": "Is my Phone Alive? A Large-Scale Study of Shape Change in Handheld Devices Using Videos",
-        "abstract": "1. J. Alexander, J. Kildal, K. Hornbæk, V. Aaltonen, A. Lucero, and S. Subramanian. Interaction with deformable displays. In Proc. of MobileHCI ’12, pages 237–240, New York, NY, USA, 2012. ACM. \\ 2. J. Alexander, A. Lucero, and S. Subramanian. Tilt displays: designing display surfaces with multi-axis tilting and actuation. In Proc. of MobileHCI ’12, pages 161–170, New York, NY, USA, 2012. ACM. \\ 3. J. A. Bargas-Avila and K. Hornbæk. Old wine in new bottles or novel challenges: a critical analysis of empirical studies of user experience. In Proc. of CHI ’11, pages 2689–2698. ACM, 2011. \\ 4. C. Bartneck, D. Kuli´c, E. Croft, and S. Zoghbi. Measurement instruments for the anthropomorphism, animacy, likeability, perceived intelligence, and perceived safety of robots. Int. Journal of Social Robotics, 1(1):71–81, 2009. \\ 5. M. M. Bradley and P. J. Lang. Measuring emotion: the self-assessment manikin and the semantic differential. Journal of behavior therapy and experimental psychiatry, 25(1):49–59, 1994. \\ 6. M. Coelho and P. Maes. Shutters: a permeable surface for environmental control and communication. In Proc. of ITS ’09, pages 13–18, New York, NY, USA, 2009. ACM. \\ 7. M. Coelho and J. Zigelbaum. Shape-changing interfaces. Personal Ubiquitous Comput., 15(2):161–173, Feb. 2011. \\ 8. J. Dawson, O. Schneider, J. Ferstay, D. Toker, J. Link, S. Haddad, and K. MacLean. It’s alive! exploring the design space of a gesturing phone. In Proc. of GI ’13, New York, NY, USA, 2013. ACM. \\ 9. A. Girouard, R. Vertegaal, and I. Poupyrev. Special issue: Organic user interfaces. Interacting with Computers, 25(2):115–116, 2013. \\ 10. A. Gomes, A. Nesbitt, and R. Vertegaal. Morephone: a study of actuated shape deformations for ﬂexible thin-ﬁlm smartphone notiﬁcations. In Proc. of CHI ’13, pages 583–592, New York, NY, USA, 2013. ACM. \\ 11. M. Hassenzahl. The interplay of beauty, goodness, and usability in interactive products. Hum.-Comput. Interact., 19(4):319–349, Dec. 2008. \\ 12. M. Hassenzahl, M. Burmester, and F. Koller. Attrakdiff: Ein fragebogen zur messung wahrgenommener hedonischer und pragmatischer qualit¨at. In Mensch & Computer 2003, pages 187–196. Springer, 2003. \\ 13. J. Heer and M. Bostock. Crowdsourcing graphical perception: using mechanical turk to assess visualization design. In Proc. of CHI ’10, pages 203–212. ACM, 2010. \\ 14. F. Heider and M.-A. Simmel. An experimental study of apparent behaviour. American Journal of Psychology, 57:243–259, 1944. \\ 15. F. Hemmert, S. Hamann, M. L¨owe, J. Zeipelt, and G. Joost. Shape-changing mobiles: tapering in two-dimensional deformational displays in mobile phones. In Proc. of CHI EA ’10, pages 3075–3080, New York, NY, USA, 2010. ACM. \\ 16. F. Hemmert, G. Joost, A. Kn¨orig, and R. Wettach. Dynamic knobs: shape change as a means of interaction on a mobile phone. In Proc. of CHI EA ’08, pages 2309–2314, New York, NY, USA, 2008. ACM. \\ 17. F. Hemmert, M. L¨owe, A. Wohlauf, and G. Joost. Animate mobiles: Proxemically reactive posture actuation as a means of relational interaction with mobile phones. In Proc. of TEI ’13, New York, NY, USA, 2013. ACM. \\ 18. M. Iacoboni, I. Molnar-Szakacs, V. Gallese, G. Buccino, J. C. Mazziotta, and G. Rizzolatti. Grasping the intentions of others with one’s own mirror neuron system. PLoS biology, 3(3):e79, 2005. \\ 19. H. Iwata, H. Yano, F. Nakaizumi, and R. Kawamura. Project feelex: adding haptic surface to graphics. In Proc. of SIGGRAPH ’01, pages 469–476, New York, NY, USA, 2001. ACM. \\ 20. W. Ju and L. Takayama. Approachability: How people interpret automatic door movement as gesture. International Journal of Design, 3(2):1–10, 2009. \\ 21. J. Kildal, S. Paasovaara, and V. Aaltonen. Kinetic device: designing interactions with a deformable mobile interface. In Proc. of CHI EA ’12, pages 1871–1876, New York, NY, USA, 2012. ACM. \\ 22. H. Kim and W. Lee. Shade pixel. In ACM SIGGRAPH 2008 posters, SIGGRAPH ’08, pages 34:1–34:1, New York, NY, USA, 2008. ACM. \\ 23. S. Kim, H. Kim, B. Lee, T.-J. Nam, and W. Lee. Inﬂatable mouse: volume-adjustable mouse with air-pressure-sensitive input and haptic feedback. In Proc. of CHI ’08, pages 211–224, New York, NY, USA, 2008. ACM. \\ 24. S. Komarov, K. Reinecke, and K. Z. Gajos. Crowdsourcing performance evaluations of user interfaces. In Proc. of CHI ’13, pages 207–216, New York, NY, USA, 2013. ACM. \\ 25. B. Lahey, A. Girouard, W. Burleson, and R. Vertegaal. Paperphone: understanding the use of bend gestures in mobile devices with ﬂexible electronic paper displays. In Proc. of CHI ’11, pages 1303–1312, New York, NY, USA, 2011. ACM. \\ 26. D. Leithinger and H. Ishii. Relief: a scalable actuated shape display. In Proc. of TEI ’10, pages 221–222, New York, NY, USA, 2010. ACM. \\ 27. Y.-k. Lim, S.-S. Lee, and K.-y. Lee. Interactivity attributes: a new way of thinking and describing interactivity. In Proc. of CHI ’09, pages 105–108, New York, NY, USA, 2009. ACM. \\ 28. W. E. Mackay, A. V. Ratzer, and P. Janecek. Video artifacts for design: bridging the gap between abstraction and detail. In Proc. of DIS ’00, pages 72–82, New York, NY, USA, 2000. ACM. \\ 29. C. Mancini, Y. Rogers, A. K. Bandara, T. Coe, L. Jedrzejczyk, A. N. Joinson, B. A. Price, K. Thomas, and B. Nuseibeh. Contravision: exploring users’ reactions to futuristic technology. In Proc. of CHI ’10, pages 153–162, New York, NY, USA, 2010. ACM. \\ 30. A. Parkes and H. Ishii. Kinetic sketchup: motion prototyping in the tangible design process. In Proc. of TEI ’09, pages 367–372, New York, NY, USA, 2009. ACM. \\ 31. M. K. Rasmussen, E. W. Pedersen, M. G. Petersen, and K. Hornbæk. Shape-changing interfaces: a review of the design space and open research questions. In Proc. of CHI ’12, pages 735–744, New York, NY, USA, 2012. ACM. \\ 32. A. Roudaut, A. Karnik, M. L¨ochtefeld, and S. Subramanian. Morphees: toward high ”shape resolution” in self-actuated ﬂexible mobile devices. In Proc. of CHI ’13, pages 593–602, New York, NY, USA, 2013. ACM. \\ 33. J. A. Russell. A circumplex model of affect. Journal of Personality and Social Psychology, 39(6):1161–1178, Dec. 1980. \\ 34. C. Schwesig, I. Poupyrev, and E. Mori. Gummi: a bendable computer. In Proc. of CHI ’04, pages 263–270, New York, NY, USA, 2004. ACM. \\ 35. J. Togler, F. Hemmert, and R. Wettach. Living interfaces: the thrifty faucet. In Proc. of TEI ’09, pages 43–44, New York, NY, USA, 2009. ACM. \\ ",
+        "abstract": "Shape-changing handheld devices are emerging as research prototypes, but it is unclear how users perceive them and which experiences they engender. The little data we have on user experience is from single prototypes, only covering a small part of the possibilities in shape change. We produce 51 videos of a shape-changing handheld device by systematically varying seven parameters of shape change. In a crowd-sourced study, 187 participants watched the videos and described their experiences using rating scales and free text. We find significant and large differences among parameters of shape change. Shapes that have previously been used for notifications were rated the least urgent; the degree of shape change was found to impact experience more than type of shape change. The experience of shape change was surprisingly complex: hedonic quality were inversely related to urgency, and some shapes were perceived as ugly, yet useful. We discuss how to advance models of shape change and improve research on the experience of shape change.",
         "acmLink": "",
         "authors": [
             {
@@ -7056,10 +7056,10 @@
                 "type": "author",
                 "venue": "paper",
                 "rank": 1,
-                "givenName": "Esben Warming",
+                "givenName": "Esben",
                 "middleInitial": "W.",
                 "familyName": "Pedersen",
-                "email": "esbenwp@diku.dk",
+                "email": "mail@esbenwarming.dk",
                 "primary": {
                     "dept": "",
                     "institution": "University of Copenhagen",
@@ -7105,10 +7105,10 @@
                 "familyName": "Hornbæk",
                 "email": "kash@diku.dk",
                 "primary": {
-                    "dept": "University of Copenhagen, Copenhagen, Denmark",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Department of Computer Science",
+                    "institution": "University of Copenhagen",
+                    "city": "Copenhagen",
+                    "country": "Denmark"
                 },
                 "secondary": {
                     "dept": "",
@@ -7118,13 +7118,13 @@
                 }
             }
         ],
-        "cbStatement": "Kasper Hornbæk",
+        "cbStatement": "We investigate how different shape changes affect the user experience using 51 videos of an animated smartphone that changes its shape.",
         "contactEmail": "esbenwp@diku.dk",
         "contactFirstName": "Esben",
         "contactLastName": "Pedersen",
-        "keywords": "pn0385-file3.mp4",
+        "keywords": "Shape-changing Interfaces; Shape Displays; Organic User Interfaces; Actuated Interfaces",
         "venue": "paper",
-        "subtype": "Shape-changing Interfaces; Shape Displays; Organic User Interfaces; Actuated Interfaces",
+        "subtype": "Paper",
         "session": "s103",
         "communities": [
             "Handheld Devices and Mobile Computing",
@@ -7143,7 +7143,7 @@
                 "type": "author",
                 "venue": "paper",
                 "rank": 1,
-                "givenName": "Esben Warming",
+                "givenName": "Esben",
                 "middleInitial": "W.",
                 "familyName": "Pedersen",
                 "email": "esbenwp@diku.dk",
@@ -7170,7 +7170,7 @@
                 "familyName": "Hornbæk",
                 "email": "kash@diku.dk",
                 "primary": {
-                    "dept": "",
+                    "dept": "Department of Computer Science",
                     "institution": "University of Copenhagen",
                     "city": "Copenhagen",
                     "country": "Denmark"
@@ -7324,9 +7324,9 @@
             }
         ],
         "cbStatement": "Introduces an abstract classification that involves data manipulation and operationalizes information density and task difficulty. Uses this task to better understand when a high-resolution wall-sized display outperforms a desktop display.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "can.liu@lri.fr",
+        "contactFirstName": "Can",
+        "contactLastName": "Liu",
         "keywords": "Wall-size display; Classification task;  Physical navigation; Pan-and-zoom; Lenses; Overview+detail",
         "venue": "paper",
         "subtype": "Paper",
@@ -7756,10 +7756,10 @@
                 "familyName": "Leiva",
                 "email": "luileito@upv.es",
                 "primary": {
-                    "dept": "",
-                    "institution": "ITI/DSIC, Universitat Politècnica de València",
-                    "city": "Valencia",
-                    "country": "Spain"
+                    "dept": "ITI/DSIC, Universitat Politècnica de València, Valencia, Spain",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -9540,9 +9540,9 @@
             }
         ],
         "cbStatement": "This paper reports an interview study with 22 activity trackers users. It focuses on how health and wellbeing information is used, interwoven and interpreted within day-to-day life.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "rooksby@googlemail.com",
+        "contactFirstName": "John",
+        "contactLastName": "Rooksby",
         "keywords": "Activity Tracking; Data; Qualitative methods",
         "venue": "paper",
         "subtype": "Paper",
@@ -10502,9 +10502,9 @@
             }
         ],
         "cbStatement": "We present an ethnographic investigation of the live streaming of video games on Twitch. Specifically, we investigate how live mixed media foster the formation of participatory communities.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "luin.uial@gmail.com",
+        "contactFirstName": "William",
+        "contactLastName": "Hamilton",
         "keywords": "live streaming; Twitch; video games; online communities; third places; ethnography",
         "venue": "paper",
         "subtype": "Paper",
@@ -10701,9 +10701,9 @@
             }
         ],
         "cbStatement": "The Vocal Chorder is a large interactive instrument devised to create accompaniment for opera singers. We discuss how designing for opera and for the stage requires extraordinary durability. ",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "carl.unander-scharin@telia.com",
+        "contactFirstName": "Carl",
+        "contactLastName": "Unander-Scharin",
         "keywords": "Opera; Autobiographical design; Interactive instruments; embodiment; empowerment; appropriation",
         "venue": "paper",
         "subtype": "Paper",
@@ -12061,9 +12061,9 @@
             }
         ],
         "cbStatement": "This paper shows how the timebanking metaphor does not encourage participation in valuable community-building peer-to-peer service exchanges and how UX design measures might help",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "bellotti@parc.com",
+        "contactFirstName": "Victoria",
+        "contactLastName": "Bellotti",
         "keywords": "Timebanking; field study; user experience design",
         "venue": "paper",
         "subtype": "Paper",
@@ -12336,9 +12336,9 @@
             }
         ],
         "cbStatement": "We show that eye gaze strategy in a menu selection task is influenced by the kind of search activity a user is asked to perform.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "Brumby@cs.ucl.ac.uk",
+        "contactFirstName": "Duncan",
+        "contactLastName": "Brumby",
         "keywords": "Visual search; menus; information foraging; eye-tracking",
         "venue": "paper",
         "subtype": "Note",
@@ -13043,9 +13043,9 @@
             }
         ],
         "cbStatement": "We present a study of live-tweeting practices during third season of Downton Abbey. Our findings on emerging practices can inform the design of new social television systems.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "bentley79@gmail.com",
+        "contactFirstName": "Frank",
+        "contactLastName": "Bentley",
         "keywords": "Live-tweeting; annotation; user research; social television; second screen; Twitter",
         "venue": "paper",
         "subtype": "Paper",
@@ -15102,9 +15102,9 @@
             }
         ],
         "cbStatement": "We present an investigation of gaze-contingent depth of field as a method to display realistic 3D images, and analyze how effectively people can use it to perceive depth.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "mm285@st-andrews.ac.uk",
+        "contactFirstName": "Michael",
+        "contactLastName": "Mauderer",
         "keywords": "Blur;  depth cues; depth perception; depth-of-field; eye tracking; gaze-contingent display; three-dimensional graphics and realism",
         "venue": "paper",
         "subtype": "Paper",
@@ -16128,7 +16128,7 @@
     {
         "id": "pn758",
         "title": "Research Through Design Fiction: Narratives in Real and Imaginary Abstracts",
-        "abstract": "This paper reflects on the value of prototypes in “Research through Design” and considers “Design Fiction” as a development technique. It begins with an analysis of RtD abstracts in the ACM digital library using a corpus query system called Sketch Engine. It identifies an emerging language and structure in academic abstracts on Research through Design. The abstracts frame a problem space, introduce a study, often involving the deployment of a prototype, and conclude with considerations, reflections and discussion. This format is pastiched in a series of design fictions written for the “digital originals” project investigating new and emerging forms of reproduction in Art. The fictions take the form of “imaginary abstracts” which summarize findings of papers that have not been written about prototypes that do not exist. It is argued that framing concept designs as fictional studies can provide a space for research focused critique and development. ",
+        "abstract": "This paper reflects on the value of prototypes in “Research through Design” and considers “Design Fiction” as a development technique. It begins with an analysis of RtD abstracts in the ACM digital library using a corpus query system called Sketch Engine. It identifies an emerging language and structure in academic abstracts on Research through Design. The abstracts frame a problem space, introduce a study, often involving the deployment of a prototype, and conclude with considerations, reflections and discussion. This format is then pastiched in a series of design fictions written for a project investigating new and emerging forms of reproduction in Art. The fictions take the form of “imaginary abstracts” which summarize findings of papers that have not been written about prototypes that do not exist. It is argued that framing concept designs as fictional studies can provide a space for research focused critique and development. ",
         "acmLink": "",
         "authors": [
             {
@@ -17118,7 +17118,7 @@
                 "venue": "paper",
                 "rank": 1,
                 "givenName": "Abir",
-                "middleInitial": "M",
+                "middleInitial": "",
                 "familyName": "Al-Hajri",
                 "email": "abira@ece.ubc.ca",
                 "primary": {
@@ -17202,9 +17202,9 @@
             }
         ],
         "cbStatement": "We propose two designs, Video Timeline and Video Tiles, to visualize and navigate a video space using a personal video history, which could be integrated easily in a video viewer.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "abira@ece.ubc.ca",
+        "contactFirstName": "Abir",
+        "contactLastName": "Al-Hajri",
         "keywords": "Video; Navigation; History; Visualization",
         "venue": "paper",
         "subtype": "Paper",
@@ -17642,9 +17642,9 @@
             }
         ],
         "cbStatement": "This paper argues for re-conceptualizing HCI research, adopting a “practice-lens” perspective. It provides a short account of the perspective, and shows how it can illuminate some of the recent debates within HCI",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "kari.kuutti@oulu.fi",
+        "contactFirstName": "Kari",
+        "contactLastName": "Kuutti",
         "keywords": "Research; practice; theory; methodology",
         "venue": "paper",
         "subtype": "Paper",
@@ -20728,9 +20728,9 @@
             }
         ],
         "cbStatement": "Short video clips can effectively demonstrate tools in complex software. We show that good demonstrations occur naturally in workflow recordings, and investigate how they could be automatically identified.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "bjlafren@cs.uwaterloo.ca",
+        "contactFirstName": "Ben",
+        "contactLastName": "Lafreniere",
         "keywords": "Help; learning; feature-rich software; video tooltips; toolclips; in-situ usage data",
         "venue": "paper",
         "subtype": "Paper",
@@ -21477,10 +21477,10 @@
                 "familyName": "Villar",
                 "email": "nvillar@microsoft.com",
                 "primary": {
-                    "dept": "Microsoft Research, Cambridge, United Kingdom",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "",
+                    "institution": "Microsoft Research",
+                    "city": "Cambridge",
+                    "country": "United Kingdom"
                 },
                 "secondary": {
                     "dept": "",
@@ -21495,7 +21495,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Nicholas",
-                "middleInitial": "Y",
+                "middleInitial": "",
                 "familyName": "Chen",
                 "email": "nchen@microsoft.com",
                 "primary": {
@@ -26135,9 +26135,9 @@
             }
         ],
         "cbStatement": "Our study sheds light on the role of photos in Experience Sampling Method (ESM) and retrospective studies that researchers can reference when constructing future study designs.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "janezhenyue@gmail.com",
+        "contactFirstName": "Zhen",
+        "contactLastName": "Yue",
         "keywords": "Experience sampling method; photo-elicitation; information need; retrospective study method",
         "venue": "paper",
         "subtype": "Paper",
@@ -29604,7 +29604,7 @@
     {
         "id": "pn1460",
         "title": "NewsViews: An Automated Pipeline for Creating Custom Geovisualizations for News",
-        "abstract": "Interactive visualizations add rich, data-based context to online news articles. Geographic maps are currently the most prevalent form of these visualizations. Unfortunately, designers capable of producing high-quality, customized geovisualizations are scarce. We present NewsViews, a novel automated news visualization system that generates interactive, annotated maps without requiring professional designers. NewsViews’ maps support trend identification and data comparisons relevant to a given news article. The NewsViews system leverages text mining to identify key concepts and locations discussed in articles (as well as potential annotations), an extensive repository of “found” databases, and techniques adapted from cartography to identify and create visually “interesting” thematic maps. In this work, we develop and evaluate key criteria in automatic, annotated, map generation and experimentally validate the key features for successful representations (e.g., relevance to context, variable selection, “interestingness” of representation and annotation quality).",
+        "abstract": "Interactive visualizations add rich, data-based context to online news articles. Geographic maps are currently the most prevalent form of these visualizations. Unfortunately, designers capable of producing high-quality, customized geovisualizations are scarce. We present NewsViews, a novel automated news visualization system that generates interactive, annotated maps without requiring professional designers. NewsViews’ maps support trend identification and data comparisons relevant to a given news article. The NewsViews system leverages text mining to identify key concepts and locations discussed in articles (as well as potential annotations), an extensive repository of “found” databases, and techniques adapted from cartography to identify and create visually “interesting” thematic maps. In this work, we develop and evaluate key criteria in automatic, annotated, map generation and experimentally validate the key features for successful representations (e.g., relevance to context, variable selection, “interestingness” of representation and annotation quality). ",
         "acmLink": "",
         "authors": [
             {
@@ -31501,9 +31501,9 @@
             }
         ],
         "cbStatement": "This paper presents an experiment testing the impact of intention (i.e., “Gameplay” or “Exercise”) and feedback on exergame usage. Results suggest “healthifying” exergames by highlighting an exergames’ dual purpose.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "eric.hekler@asu.edu",
+        "contactFirstName": "Eric",
+        "contactLastName": "Hekler",
         "keywords": "Exergaming; Priming; Persuasive Technology; Fitness",
         "venue": "paper",
         "subtype": "Paper",
@@ -34201,10 +34201,10 @@
                     "country": "Finland"
                 },
                 "secondary": {
-                    "dept": "Department of Computer Science",
-                    "institution": "University of Helsinki",
-                    "city": "Helsinki",
-                    "country": "Finland"
+                    "dept": "Department of Computer Science, University of Helsinki, Helsinki, Finland",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 }
             }
         ],
@@ -36903,9 +36903,9 @@
             }
         ],
         "cbStatement": "In this paper we define “mobile attachment” as a bond between a person’s self and a mobile phone that varies in strength. A conceptual causes and consequences model is presented.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "alexander.meschtscherjakov@sbg.ac.at",
+        "contactFirstName": "Alexander",
+        "contactLastName": "Meschtscherjakov",
         "keywords": "Emotional attachment; mobile phones; user experience",
         "venue": "paper",
         "subtype": "Paper",
@@ -37575,9 +37575,9 @@
             }
         ],
         "cbStatement": "A participatory design (PD) study to develop an information display for safety-critical and multidisciplinary medical teamwork revealed role-based and design tensions. Approaches to managing these tensions through PD are discussed.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "dsk38@drexel.edu",
+        "contactFirstName": "Diana",
+        "contactLastName": "Kusunoki",
         "keywords": "Participatory design; information displays; design tensions; teamwork; healthcare; trauma resuscitation",
         "venue": "paper",
         "subtype": "Paper",
@@ -38644,9 +38644,9 @@
             }
         ],
         "cbStatement": "We propose a new supply-side emphasis for sustainable HCI and offer an initial five-point strategy for addressing barriers to action toward affecting supply.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "branknowles9@gmail.com",
+        "contactFirstName": "Bran",
+        "contactLastName": "Knowles",
         "keywords": "Sustainability, climate change, supply, psychological barriers, activism",
         "venue": "paper",
         "subtype": "Note",
@@ -39361,9 +39361,9 @@
             }
         ],
         "cbStatement": "We use performativity to analyse interaction with EcoFriends, an application for seasonal grocery shopping. Our findings point to design-oriented research challenges regarding foundational aspects of trust, responsibility and critical reflection. ",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "maria.normark@sh.se",
+        "contactFirstName": "Maria",
+        "contactLastName": "Normark",
         "keywords": "Performative Design; Mobile Interaction; Sustainable Interaction",
         "venue": "paper",
         "subtype": "Paper",
@@ -40425,9 +40425,9 @@
             }
         ],
         "cbStatement": "This paper presents an investigation of how a blind person operates a mobile computer vision system implemented on a smartphone to detect and reach an object.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "coughlan@ski.org",
+        "contactFirstName": "James",
+        "contactLastName": "Coughlan",
         "keywords": "Assistive technology; Blindness; Wayfinding; Camera-based access to information",
         "venue": "paper",
         "subtype": "Paper",
@@ -41097,8 +41097,8 @@
     },
     {
         "id": "pn2022",
-        "title": "FloodLight: 3D Silhouette Sensing for High-Precision Input On and Above Physical Surfaces",
-        "abstract": "We present FloodLight, a new vision-based system for accurately \\ sensing the 3D silhouettes of hands, styluses, and \\ other objects, as they interact on and above physical surfaces. \\ Our setup is simple, cheap, and easily reproducible, comprising \\ of two infrared cameras, diffuse infrared LEDs, and any \\ off-the-shelf retro-reflective material. The retro-reflector aids \\ image segmentation, creating a strong contrast between the \\ surface and any object in proximity. A new highly efficient \\ stereo matching algorithm precisely estimates the 3D contours \\ of interacting objects and the retro-reflective surfaces. \\ A novel pipeline enables 3D finger, hand and object tracking, \\ as well as gesture recognition, purely using these 3D \\ contours. We demonstrate high-precision sensing, allowing \\ robust disambiguation between a finger or stylus touching, \\ pressing or interacting above the surface. This allows many interactive \\ scenarios that seamlessly mix together freehand 3D \\ interactions with touch, pressure and stylus input. As shown, \\ these rich modalities of input are enabled on and above any \\ retro-reflective surface, including custom “physical widgets” \\ fabricated by users. We compare our system with Kinect and \\ Leap Motion, and conclude with limitations and future work.",
+        "title": "RetroDepth: 3D Silhouette Sensing for High-Precision Input On and Above Physical Surfaces",
+        "abstract": "We present RetroDepth, a new vision-based system for accurately sensing the 3D silhouettes of hands, styluses, and other objects, as they interact on and above physical surfaces. Our setup is simple, cheap, and easily reproducible, comprising of two infrared cameras, diffuse infrared LEDs, and any off-the-shelf retro-reflective material. The retro-reflector aids image segmentation, creating a strong contrast between the surface and any object in proximity. A new highly efficient stereo matching algorithm precisely estimates the 3D contours of interacting objects and the retro-reflective surfaces. A novel pipeline enables 3D finger, hand and object tracking, as well as gesture recognition, purely using these 3D contours. We demonstrate high-precision sensing, allowing robust disambiguation between a finger or stylus touching, pressing or interacting above the surface. This allows many interactive scenarios that seamlessly mix together freehand 3D interactions with touch, pressure and stylus input. As shown, these rich modalities of input are enabled on and above any retro-reflective surface, including custom \"physical widgets\" fabricated by users. We compare our system with Kinect and Leap Motion, and conclude with limitations and future work.",
         "acmLink": "",
         "authors": [
             {
@@ -41388,7 +41388,7 @@
                 }
             }
         ],
-        "cbStatement": "We present FloodLight, a new vision-based system for accurately \\ sensing the 3D silhouettes of hands, styluses, and \\ other objects, as they interact on and above physical surfaces.",
+        "cbStatement": "We present RetroDepth, a new vision-based system for accurately \\ sensing the 3D silhouettes of hands, styluses, and \\ other objects, as they interact on and above physical surfaces.",
         "contactEmail": "davidkim@microsoft.com",
         "contactFirstName": "David",
         "contactLastName": "Kim",
@@ -44571,7 +44571,7 @@
     },
     {
         "id": "pn2193",
-        "title": "HCI as a means to prosociality in the economy",
+        "title": "HCI as a Means to Prosociality in the Economy",
         "abstract": "HCI research often involves intervening in the economic lives of people, but researchers only rarely give explicit consideration to what actually constitutes prosociality in the economy. Much has been said previously regarding sustainability but this has largely focused on environmental rather than interpersonal relations. This paper provides an analysis of how prosocial HCI has been discussed and continues to be defined as a research field. Based on a corpus of published works, we describe a variety of genres of work relating to prosocial HCI. Key intellectual differences are explored, including the epistemological and ethical positions involved in designing for prosocial outcomes as well as how HCI researchers posit economic decision-making. Finally, emerging issues and opportunities for further debate and collaboration are discussed in turn.",
         "acmLink": "",
         "authors": [
@@ -45003,7 +45003,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Robert",
-                "middleInitial": "E",
+                "middleInitial": "E.",
                 "familyName": "Kraut",
                 "email": "robert.kraut@cmu.edu",
                 "primary": {
@@ -45342,7 +45342,7 @@
                 "familyName": "Konkel",
                 "email": "konkel@lsu.edu",
                 "primary": {
-                    "dept": "create",
+                    "dept": "",
                     "institution": "Louisiana State University",
                     "city": "Baton Rouge",
                     "country": "United States"
@@ -45694,9 +45694,9 @@
             }
         ],
         "cbStatement": "Frenzy is a time-saving tool for conference session-making which allows organizers to incorporate many peoples' expertise in parallel to collaboratively solve the constraint of grouping papers thematically into named sessions.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "hmslydia@gmail.com",
+        "contactFirstName": "Lydia",
+        "contactLastName": "Chilton",
         "keywords": "Crowdsourcing; groupware; communitysourcing",
         "venue": "paper",
         "subtype": "Paper",
@@ -46217,7 +46217,7 @@
                 "venue": "paper",
                 "rank": 3,
                 "givenName": "Robert",
-                "middleInitial": "E",
+                "middleInitial": "E.",
                 "familyName": "Kraut",
                 "email": "robert.kraut@cmu.edu",
                 "primary": {
@@ -48057,9 +48057,9 @@
             }
         ],
         "cbStatement": "We explore how to do participatory design with dogs. Specifically, we discuss a methodology to elicit requirements for the canine interface of an emergency alert system for Diabetes Alert Dogs.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "charlotte.l.robinson@gmail.com",
+        "contactFirstName": "Charlotte",
+        "contactLastName": "Robinson",
         "keywords": "Diabetes Alert Dog; human-animal interaction; animal-computer interaction; user-centered design; multispecies ethnography",
         "venue": "paper",
         "subtype": "Paper",
@@ -48152,7 +48152,7 @@
     {
         "id": "pn2380",
         "title": "KnowMe and ShareMe: Understanding Automatically Discovered Personality Traits from Social Media and User Sharing Preferences",
-        "abstract": "There is much recent work on using the digital footprints left by people on social media to predict personal traits and gain a deeper understanding of individuals. Due to the veracity of social media, imperfections in prediction algorithms, and the sensitive nature of one’s personal traits, much research is still needed to better understand the effectiveness of this line of work, including users’ preferences of sharing their computationally derived traits. In this paper, we report a two- part study involving 256 participants, which (1) examines the feasibility and effectiveness of automatically deriving three types of personality traits from Twitter, including Big 5 personality, basic human values, and fundamental needs, and (2) investigates users’ opinions of using and sharing these traits. Our findings show there is a potential feasibility of automatically deriving one’s personality traits from social media with various factors impacting the accuracy of models, and the trait of basic human values outperforms the models of Big 5 personality and fundamental needs. The results also indicate over 61.5% users are willing to share their derived traits in the workplace and that a number of factors significantly influence their sharing preferences. Since our findings demonstrate the feasibility of automatically inferring a user’s personal traits from social media, we discuss their implications for designing a new generation of privacy-preserving, hyper-personalized systems.",
+        "abstract": "There is much recent work on using the digital footprints left by people on social media to predict personal traits and gain a deeper understanding of individuals. Due to the veracity of social media, imperfections in prediction algorithms, and the sensitive nature of one’s personal traits, much research is still needed to better understand the effectiveness of this line of work, including users’ preferences of sharing their computationally derived traits. In this paper, we report a two- part study involving 256 participants, which (1) examines the feasibility and effectiveness of automatically deriving three types of personality traits from Twitter, including Big 5 personality, basic human values, and fundamental needs, and (2) investigates users’ opinions of using and sharing these traits. Our findings show there is a potential feasibility of automatically deriving one’s personality traits from social media with various factors impacting the accuracy of models. The results also indicate over 61.5% users are willing to share their derived traits in the workplace and that a number of factors significantly influence their sharing preferences. Since our findings demonstrate the feasibility of automatically inferring a user’s personal traits from social media, we discuss their implications for designing a new generation of privacy-preserving, hyper-personalized systems.",
         "acmLink": "",
         "authors": [
             {
@@ -48183,7 +48183,7 @@
                 "venue": "paper",
                 "rank": 2,
                 "givenName": "Michelle",
-                "middleInitial": "",
+                "middleInitial": "X",
                 "familyName": "Zhou",
                 "email": "mzhou@us.ibm.com",
                 "primary": {
@@ -48226,7 +48226,7 @@
         "contactEmail": "lgou@us.ibm.com",
         "contactFirstName": "Liang",
         "contactLastName": "Gou",
-        "keywords": "Personality traits, Big 5 personality, basic values, fundamental needs,  privacy, social media",
+        "keywords": "Personality traits; Big 5 personality; basic values; fundamental needs; privacy; social media",
         "venue": "paper",
         "subtype": "Paper",
         "session": "s165",
@@ -48588,9 +48588,9 @@
             }
         ],
         "cbStatement": "Curated City is a website that lets people build personal city guides.  Social mechanisms allow users to interact with each other’s guides, highlighting the shared urban experience through social curation.",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "jcransh@cs.cmu.edu",
+        "contactFirstName": "Justin",
+        "contactLastName": "Cranshaw",
         "keywords": "Location-based services; local search; mental maps; social computing; neighborhoods; urban computing; social curation",
         "venue": "paper",
         "subtype": "Paper",
@@ -49595,8 +49595,8 @@
                 "familyName": "Pohl",
                 "email": "Henning@hci.uni-hannover.de",
                 "primary": {
-                    "dept": "FG Mensch-Computer-Interaktion",
-                    "institution": "University of Hanover",
+                    "dept": "",
+                    "institution": "University of Hannover",
                     "city": "Hannover",
                     "country": "Germany"
                 },
@@ -50013,9 +50013,9 @@
             }
         ],
         "cbStatement": "We designed CADament, a multiplayer gamified tutorial system. CADament generates engaging learning experiences through head-to-head competitions, where over-the-shoulder learning was simulated at different pacing stages. ",
-        "contactEmail": "",
-        "contactFirstName": "",
-        "contactLastName": "",
+        "contactEmail": "wei.li@autodesk.com",
+        "contactFirstName": "Wei",
+        "contactLastName": "Li",
         "keywords": "Game; Multiplayer; Tutorial; Learning.",
         "venue": "paper",
         "subtype": "Paper",

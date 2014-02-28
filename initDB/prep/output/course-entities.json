@@ -25,6 +25,27 @@
                     "city": "",
                     "country": ""
                 }
+            },
+            {
+                "id": "auth1949",
+                "type": "author",
+                "venue": "course",
+                "rank": 2,
+                "givenName": "Simone",
+                "familyName": "Barbosa",
+                "email": "simonedjb@gmail.com",
+                "primary": {
+                    "dept": "Departamento de Informática",
+                    "institution": "Pontifical Catholic University of Rio de Janeiro (PUC-Rio)",
+                    "city": "Rio de Janeiro",
+                    "country": "Brazil"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "Gives newcomers background in the field of HCI to make their conference experience more meaningful. Provides a framework to understand how the various topics are related to research and practice.",
@@ -146,7 +167,7 @@
     {
         "id": "crs106",
         "title": "Agile User Experience and UCD",
-        "abstract": "",
+        "abstract": "Abstract \\ This half-day course shows how to integrate User-Centered Design with Agile methods to create great user experiences. It takes an 'emotionally intelligent' approach to engaging all team members in UCD. \\  \\ Author Keywords \\ Agile UX; Agile UCD; persona stories; personas; balanced teams \\  \\ ACM Classification Keywords \\ H.5.2. User-centered design \\  \\ Description \\ This half-day course shows how to integrate User-Centered Design with Agile methods to create great user experiences. It also addresses the new topic of Persona Stories, introduced in an Interactions article by the author in the Nov-Dec 2013 issue (available at www.personastories.com). \\  \\ Origins \\ This is an updated half-day version of a popular one-day course that has been well-received within a major UK telecoms operator and at a number of public presentations in London, Brussels and Hamburg in 2010 and 2011. It has been part of the CHI course offerings annually since 2011. It was well-attended at CHI 2013, with 50 places booked and a waiting list. \\  \\ Features \\ On completion of this tutorial you will be able to: \\ •\tdescribe the origins of Agile and the challenges of the Agile-to-user relationship \\ •\tappreciate the issues raised by the empathy gap and using empathetic design to address them \\ •\texplain the need for an balanced teams and embedded UX roles \\ •\tperform UX and UCD activities in an Agile-friendly manner \\  \\ Audience \\ The course is aimed primarily at UX, UCD and usability practitioners. Some knowledge of UX, UCD and usability is preferred since the course does not explain the techniques discussed in great detail due to time constraints. \\  \\ Presentation \\ The course is approximately 60% tutorials and 40% discussion or design activities. \\  \\ Instructor Background \\ William Hudson has over 40 years' experience in the development of interactive systems. He is the founder of Syntagm, a consultancy specializing in user-centered design and has conducted more than 300 intranet and web site expert evaluations. William has written over 30 articles, papers and studies. \\  \\ Website \\ Further information about the instructor and this course can be found at www.syntagm.co.uk/design \\ ",
         "acmLink": "",
         "authors": [
             {
@@ -218,7 +239,7 @@
     {
         "id": "crs111",
         "title": "Empirical Research Methods for Human-Computer Interaction",
-        "abstract": "",
+        "abstract": "Most attendees at CHI conferences will agree that an experiment (user study) is the hallmark of good research in human-computer interaction.  But, what constitutes an experiment?  And how does one go from an experiment to a CHI paper?  This course will teach how to pose testable research questions, how to make and measure observations, and how to design an experiment.  Attendees will participate in a real experiment to gain experience as both an investigator and as a participant.  Most notably, attendees will learn how to organize experiment results and write a CHI paper. \\  \\ The presentation will include PowerPoint slides and real-time demos.  In addition, attendees will participate in an experiment conducted during the first session.  Working in pairs, attendees will take turns acting both as investigator (i.e., instructing the participant, observing and recording data) and as participant (i.e., performing tasks as instructed).  The data collected will be analyzed during the break and the results will be presented in the second session.  The second session will also include a demonstration on how to write a successful CHI paper, including pitfalls to avoid. \\  \\ Attendees require no specific background other than a general knowledge of human-computer interaction as conveyed, for example, through an undergraduate HCI course or attendance at CHI conferences.  The main background is motivation to learn about and use empirical research methods in HCI.  Knowledge of advanced statistics, such as the analysis of variance, is NOT required. \\ ",
         "acmLink": "",
         "authors": [
             {
@@ -226,7 +247,7 @@
                 "type": "author",
                 "venue": "course",
                 "rank": 1,
-                "givenName": "Scott",
+                "givenName": "I. Scott",
                 "familyName": "MacKenzie",
                 "email": "mack@cse.yorku.ca",
                 "primary": {
@@ -353,7 +374,7 @@
     {
         "id": "crs115",
         "title": "Make This! Introduction to Electronics Prototyping Using Arduino",
-        "abstract": "",
+        "abstract": "This course is a hands-on introduction to interactive electronics prototyping for people with a variety of backgrounds, including those with no prior experience in electronics. Familiarity with programming is helpful, but not required. Participants learn basic electronics, microcontroller programming and physical prototyping using the Arduino platform, then use digital and analog sensors, LED lights and motors to build, program and customize a small paper robot.",
         "acmLink": "",
         "authors": [
             {
@@ -399,7 +420,7 @@
                 }
             }
         ],
-        "cbStatement": "Course is a hands-on introduction to interactive electronics prototyping for people with a variety of backgrounds, including those with no prior experience in electronics. ",
+        "cbStatement": "The course is a hands-on introduction to interactive electronics prototyping for people with a variety of backgrounds, including those with no prior experience in electronics. ",
         "contactEmail": "sirkin@cdr.stanford.edu",
         "contactFirstName": "David",
         "contactLastName": "Sirkin",
@@ -410,7 +431,7 @@
     {
         "id": "crs116",
         "title": "Hands-on Sketching Course",
-        "abstract": "Sketching as a technique to quickly draw ideas on a sheet of paper can be used to document, explore and communicate concepts and ideas. Sketches can help to elicit feedback from stakeholders and users in early project phases and therefore prevent from getting on the wrong track. Sketching can furthermore foster the ability to make more convincing ideas to collaborators, managers or clients. Within the user centered design process sketches can be a mean to quickly and inexpensively explore interaction concepts. They can be used to create storyboards and inform wireframes and prototypes.  \\  \\ However, the task of producing sketches can be challenging, especially if drawing skills are lacking. In this course, participants will be introduced to basic sketching techniques and a visual language, which they can immediately apply in research or practice. It is not a theoretical course but rather a lot of hands-on exercise for the participants.  \\  \\ During the course participants will learn: \\ • how to communicate visually  \\ • how to visualize ideas just on the spot  \\ • and how to use drawing to organize and refine thinking. \\  \\ Everybody is welcome to this course and there are no prerequisites. However, it is most valuable for practitioners such as user experience professionals, requirements engineers or product managers, as well as researchers and students in the field of human computer interaction.  \\  \\ The course is given by Stephanie Foehrenbach (M.Sc., Dipl. Inform. (FH)). Stephanie is a usability lead consultant and trainer employed by Zuehlke in Switzerland. She works for clients from various industries. \\ ",
+        "abstract": "Sketching as a technique to quickly draw something on a piece of paper is used to explore and communicate ideas. This course introduces basic sketching techniques and a visual language which participants can apply in research and practice. It is a hands-on course which lets participants do a lot of sketching during the session.",
         "acmLink": "",
         "authors": [
             {
@@ -523,8 +544,8 @@
     },
     {
         "id": "crs122",
-        "title": "Multimodal Detection of Affective States: A Roadmap from Brain-Computer Interfaces, Face-Based Emotion Recognition, Eye Tracking Systems and Other Sensors",
-        "abstract": "One novel part of the design of interactions between people and computers, related with the facet of securing user satisfaction, is the capability of systems to adapt to their individual users showing empathy. Being empathetic implies that the computer is able to recognize user’s affective states and understand the implication of those states. Automatic detection of affective states requires the computer: to sense information; to process and understand information integrating several sources that could range from brain-waves signals and biofeedback readings, passing from gestures recognition, to posture and pressure sensing; and to apply algorithms and data processing tools to understand user’s affective states. \\  \\ Through this course, attendees will:  \\  \\ a)\tLearn about sensing approaches used to detect affective states: brain-computer interfaces, face-based emotion recognition systems, eye-tracking system, and physiological sensors –including skin conductivity, posture, and pressure sensors—. \\  \\ b)\tUnderstand the pros and cons of the diverse sensing approaches used to detect affective states. \\  \\ c)\tLearn about the data that is gathered from each device and understand its characteristics. \\  \\ d)\tLearn about approaches and tools to pre-process, synchronize, and analyze data. \\  \\ This course is open to researchers, practitioners, and educators interested in incorporating affective computing as part of their adaptive and personalized technology toolbox. \\  \\ The presentation will be a mix of enthusiastic instruction with demonstrations and exercises, all aimed to help making the topic concrete, memorable, and actionable. \\ ",
+        "title": "Multimodal Detection of Affective States: A Roadmap Through Diverse Technologies",
+        "abstract": "One important way for systems to adapt to their individual users is related to their ability to show empathy. Being empathetic implies that the computer is able to recognize a user’s affective states and understand the implication of those states. Detection of affective states is a step forward to provide machines with the necessary intelligence to appropriately interact with humans. This course provides a description and demonstration of tools and methodologies for automatically detecting affective states with a multimodal approach.",
         "acmLink": "",
         "authors": [
             {
@@ -589,6 +610,27 @@
                     "city": "",
                     "country": ""
                 }
+            },
+            {
+                "id": "auth1836",
+                "type": "author",
+                "venue": "course",
+                "rank": 4,
+                "givenName": "Winslow",
+                "familyName": "Burleson",
+                "email": "winslow.burleson@asu.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "Arizona State University",
+                    "city": "Tempe",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
         "cbStatement": "This course presents devices and explores methodologies for multimodal detection of affective states, as well as a discussion about presenter’s experiences using them both in learning and gaming scenarios.",
@@ -602,7 +644,7 @@
     {
         "id": "crs123",
         "title": "Interaction Design for Online Video and Television",
-        "abstract": "This course features: \\ - An up-to-date overview of online video and TV applications  \\ - A framework describing the different aspects of such applications \\ - Interaction Design principles for TV and online video applications \\ - User testing tips and heuristics to evaluate these applications \\ - A plenary exercise applying the design principles and heuristics \\ - Future outlook on television and online video \\  \\ The course builds on the successful CHI2012 course “Social Interaction Design for Online Video and Television”. It has been expanded and extensively updated including the most recent evolutions in this fast moving field, and taking into account comments and suggestions from previous attendees. It also draws on previous courses by the instructors at other conferences. \\  \\ The presentation will be a lecture format with plenty of examples and videos, including exercises and plenary discussions. \\  \\ Instructors’ background \\ David Geerts has a PhD in Social Sciences at the KU Leuven, Belgium where he is Research Manager of the Centre for User Experience Research. David is specialized in user-centered design and evaluation of social TV. He has organized several workshops, SIGs and tutorials at various conferences. \\  \\ Pablo Cesar has a PhD from Helsinki University of Technology. He is a senior researcher at CWI (The National Research Institute for Mathematics and Computer Science), in the Netherlands. He has (co)authored over 50 conference papers and journal articles about multimedia systems and infrastructures, social media sharing, interactive media, multimedia content modelling, and user interaction.",
+        "abstract": "This course will teach attendees how to design and evaluate interaction with online video and television. It provides attendees a pragmatic toolset, including techniques and guidelines, which can be directly applied in practice. The different tools will be contextualized based on current developments, giving participants a complete overview of the state of the art and industry.",
         "acmLink": "",
         "authors": [
             {
@@ -659,7 +701,7 @@
     {
         "id": "crs124",
         "title": "Designing Unbiased Surveys for HCI Research",
-        "abstract": "",
+        "abstract": "Surveys are a commonly used method within HCI research. While it initially appears easy and inexpensive to conduct surveys, overlooking key considerations in questionnaire design and the survey research process can yield skewed, biased, or entirely invalid survey results. Fortunately decades of academic research and analysis exist on optimizing the validity and reliability of survey data, from which this course will draw. To enable the creation of unbiased surveys, this course demonstrates questionnaire design biases and pitfalls, provides best practices for minimizing these, and reviews different uses of surveys within HCI.",
         "acmLink": "",
         "authors": [
             {
@@ -773,7 +815,7 @@
     {
         "id": "crs136",
         "title": "A Crash Course in Modern Geography for HCI Researchers and Practitioners",
-        "abstract": "",
+        "abstract": "Recently, geography's role in human-computer interaction has risen \\ due in part to the popularity of social computing as well as the number of \\ ubiquitous GPS enabled devices.  We now, either explicitly or \\ implicitly, track, store capture, and annotate our surroundings \\ constantly through out the day.  In turn this changes how one might \\ come to understand and perceive the spaces and locations around us. \\ This course builds a framework for researchers and practitioners in \\ geographic human-computer interaction, providing an introduction to \\ foundational literature, modern geography, as well as, the \\ qualitative and quantitative research practices that are most \\ relevant to the HCI community. \\ ",
         "acmLink": "",
         "authors": [
             {
@@ -819,7 +861,7 @@
                 }
             }
         ],
-        "cbStatement": "Participants should expect to leave the course with a high-level understanding of methods for properly analyzing geographic data and reporting results, the context necessary to better understand the geography literature, and resources for further engaging with geography research and best practices. \\ ",
+        "cbStatement": "Participants will attain a high-level understanding of methods for properly analyzing geographic data, an increased  understanding of the geography literature, and resources for further engagement with geography research. \\ ",
         "contactEmail": "aymans@acm.org",
         "contactFirstName": "David",
         "contactLastName": "Shamma",
@@ -1109,7 +1151,7 @@
     {
         "id": "crs147",
         "title": "Rapid Design Labs—A Tool to Turbocharge Design-Led Innovation",
-        "abstract": "",
+        "abstract": "We as researchers and User Experience (UX) designers want to identify and create products that change the world and therefore, we choose to engage in strategic research and design. In the real world though, coming up with a breakthrough idea or transformative design doesn’t mean it will automatically be accepted in the research community or get to market. By definition, innovative ideas represent new ways of thinking. Organizations by nature seem to have anti-innovation antibodies that often kill new ideas—even disruptive innovations that could help companies differentiate themselves from their competition. As difficult as coming up with a game-changing idea can be, getting an organization to act on the idea often seems impossible. Perhaps we find ourselves in work routines that do not provide space to think differently. Our experience is that practitioners and academics alike need new tools to meet this challenge—tools that empower UX teams in both business and universities to identify transformative new ideas, and then to get these big ideas and designs accepted. This course proposes rapid design labs—a design-led, facilitative, cross-functional, iterative approach to innovation that aligns organizations and generates value at each step. It provides tools and methods that turn attendees into catalysts, who systemically identify new ideas, and align multi-disciplinary teams around their ideas. Attendees learn how to lead workshops that foster ideation, collaboration, trust, and free expression. These workshops enable intensive brainstorming, purposeful play, design, user testing, and rapid prototyping. Learn how innovative companies, design firms, and universities identify, design, and bring great products to market.",
         "acmLink": "",
         "authors": [
             {
@@ -1352,21 +1394,21 @@
     {
         "id": "crs158",
         "title": "Designing for Seniors",
-        "abstract": "",
+        "abstract": "Designing for Seniors \\  \\ The world is aging rapidly. The U.N. recently quantified the phenomenon: Whereas 5.2 percent of the population was over 65 in 1950, this percentage is projected to grow to 15.9 percent in 2050, to 27.5 percent by 2150, and to 32.3 percent by 2300. \\  \\ These demographic trends and extreme diversity among older adults (social, cognitive, sensory, motor) afford exciting design opportunities and challenges for HCI. Attendees of this course will better understand what these opportunities and challenges are and how to address them. \\  \\ We shall present two frameworks for envisioning solutions, and illustrate with landmark achievements, promising approaches, and open problems. We shall mention approximately 20 and review in some detail 10 examples, a few from our own work and but mainly representing the work of others, to highlight promising technologies at levels and points in these frameworks. \\  \\ We shall conclude with a challenge to the audience — seize and address one of the open problems!",
         "acmLink": "",
         "authors": [
             {
-                "id": "auth2083",
+                "id": "auth23599",
                 "type": "author",
                 "venue": "course",
                 "rank": 1,
                 "givenName": "Ronald",
                 "familyName": "Baecker",
-                "email": "rmb@kmdi.toronto.edu",
+                "email": "ron@taglab.ca",
                 "primary": {
-                    "dept": "",
+                    "dept": "Technologies for Aging Gracefully Laboratory (TAGlab)",
                     "institution": "University of Toronto",
-                    "city": "Toronto ",
+                    "city": "Toronto",
                     "country": "Canada"
                 },
                 "secondary": {
@@ -1423,8 +1465,8 @@
     },
     {
         "id": "crs161",
-        "title": "How social media design reshapes society",
-        "abstract": "",
+        "title": "How social media design shapes society",
+        "abstract": "The design of social media influences the way people interact with each other online – and shapes our society. This course will look at three key areas: how social identity is portrayed online; our changing social networks and the technologies that support them; and the role of pseudonymity in supporting privacy.",
         "acmLink": "",
         "authors": [
             {
@@ -1449,12 +1491,84 @@
                 }
             }
         ],
-        "cbStatement": "Social media interfaces embody assumptions about importance and desirability. Through analysis of several sites and a design exercise, this course explores how our perception of people, and culture, is being reshaped.",
+        "cbStatement": "This course uses empirical studies and design critiques to inspire designers to create radically innovative interfaces while also thoughtfully assessing the likely social impact of their designs. \\ ",
         "contactEmail": "judith@media.mit.edu",
         "contactFirstName": "Judith",
         "contactLastName": "Donath",
         "venue": "course",
         "session": "s-crs161",
+        "communities": []
+    },
+    {
+        "id": "crs162",
+        "title": "CItizen Science: An Introduction",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth2714",
+                "type": "author",
+                "venue": "course",
+                "rank": 1,
+                "givenName": "Jenny",
+                "familyName": "Preece",
+                "email": "preece@umd.edu",
+                "primary": {
+                    "dept": "iSchool",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "preece@umd.edu",
+        "contactFirstName": "Jenny",
+        "contactLastName": "Preece",
+        "venue": "course",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "crs163",
+        "title": "A Conversation with Susan Dray: Uncovering the Ordinary, Inspiring the Extraordinary",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth11429",
+                "type": "author",
+                "venue": "course",
+                "rank": 1,
+                "givenName": "Susan",
+                "familyName": "Dray",
+                "email": "susan.dray@dray.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Dray & Associates, Inc.",
+                    "city": "Oakland",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "susan.dray@dray.com",
+        "contactFirstName": "Susan",
+        "contactLastName": "Dray",
+        "venue": "course",
+        "session": "",
         "communities": []
     }
 ]

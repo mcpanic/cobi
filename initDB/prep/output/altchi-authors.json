@@ -121,7 +121,7 @@
         "venue": "altchi",
         "rank": 2,
         "givenName": "Michael",
-        "middleInitial": "A",
+        "middleInitial": "",
         "familyName": "Terry",
         "role": "",
         "primary": {
@@ -539,7 +539,7 @@
         "familyName": "Norooz",
         "role": "",
         "primary": {
-            "dept": "Human-Computer Interaction Lab",
+            "dept": "iSchool, Human-Computer Interaction Lab, Makeability Lab",
             "institution": "University of Maryland",
             "city": "College Park",
             "country": "United States"
@@ -588,7 +588,7 @@
             "dept": "Design Lab",
             "institution": "Koç University",
             "city": "Istanbul",
-            "country": ""
+            "country": "Turkey"
         },
         "secondary": {
             "dept": "",
@@ -815,7 +815,7 @@
         "familyName": "Yee",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "Northumbria University",
             "institution": "Northumbria University",
             "city": "Newcastle upon Tyne",
             "country": "United Kingdom"
@@ -1040,8 +1040,8 @@
         "id": "alt119",
         "venue": "altchi",
         "rank": 2,
-        "givenName": "Per Ola",
-        "middleInitial": "",
+        "givenName": "Per",
+        "middleInitial": "Ola",
         "familyName": "Kristensson",
         "role": "",
         "primary": {
@@ -1184,7 +1184,7 @@
         "role": "",
         "primary": {
             "dept": "BBC Research & Development",
-            "institution": "BBC",
+            "institution": "British Broadcasting Corporation",
             "city": "Manchester",
             "country": "United Kingdom"
         },
@@ -1229,8 +1229,8 @@
         "familyName": "Harper",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Manchester",
+            "dept": "School  of Computer Science",
+            "institution": "The University of Manchester",
             "city": "Manchester",
             "country": "United Kingdom"
         },
@@ -1339,9 +1339,9 @@
         "id": "alt143",
         "venue": "altchi",
         "rank": 1,
-        "givenName": "Razvan",
+        "givenName": "Răzvan",
         "middleInitial": "",
-        "familyName": "Rughinis",
+        "familyName": "Rughiniș",
         "role": "",
         "primary": {
             "dept": "",
@@ -1364,7 +1364,7 @@
         "rank": 2,
         "givenName": "Cosima",
         "middleInitial": "",
-        "familyName": "Rughinis",
+        "familyName": "Rughiniș",
         "role": "",
         "primary": {
             "dept": "",
@@ -1574,7 +1574,7 @@
         "familyName": "Sokoler",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "Interaction Design Group",
             "institution": "IT University of Copenhagen",
             "city": "Copenhagen",
             "country": "Denmark"
@@ -1736,7 +1736,7 @@
         "role": "",
         "primary": {
             "dept": "Lab-STICC ",
-            "institution": "University of South Brittany",
+            "institution": "University of South Brittany, European Center of Virtual Reality ",
             "city": "Brest",
             "country": "France"
         },
@@ -1759,7 +1759,7 @@
         "role": "",
         "primary": {
             "dept": "IR4M",
-            "institution": "UMR8081 CNRS",
+            "institution": "CNRS – Univ Paris-Sud",
             "city": "Orsay",
             "country": "France"
         },
@@ -1781,8 +1781,8 @@
         "familyName": "Roatis",
         "role": "",
         "primary": {
-            "dept": "LRI",
-            "institution": "University Paris South",
+            "dept": "INRIA",
+            "institution": "Univ Paris-Sud",
             "city": "Orsay",
             "country": "France"
         },
@@ -1805,7 +1805,7 @@
         "role": "",
         "primary": {
             "dept": "IR4M",
-            "institution": "UMR8081 CNRS",
+            "institution": "CNRS – Univ Paris-Sud",
             "city": "Orsay",
             "country": "France"
         },
@@ -1840,7 +1840,7 @@
         }
     },
     {
-        "authorId": "auth100001",
+        "authorId": "auth42649",
         "type": "author",
         "id": "alt163",
         "venue": "altchi",
@@ -1851,9 +1851,9 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Face Therapie, Co. Ltd. ",
+            "city": "Tokyo",
+            "country": "Japan"
         },
         "secondary": {
             "dept": "",
@@ -1863,7 +1863,7 @@
         }
     },
     {
-        "authorId": "auth100002",
+        "authorId": "auth42650",
         "type": "author",
         "id": "alt163",
         "venue": "altchi",
@@ -1873,10 +1873,10 @@
         "familyName": "Watanabe",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "NTT Communication Science Lab.",
+            "institution": "Nippon Telegraph and Telephone Corporationtion",
+            "city": "Atsugi city, Kanagawa perfecture",
+            "country": "Japan"
         },
         "secondary": {
             "dept": "",
@@ -2080,8 +2080,8 @@
         "familyName": "Pohl",
         "role": "",
         "primary": {
-            "dept": "FG Mensch-Computer-Interaktion",
-            "institution": "University of Hanover",
+            "dept": "",
+            "institution": "University of Hannover",
             "city": "Hannover",
             "country": "Germany"
         },

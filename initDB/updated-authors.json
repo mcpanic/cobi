@@ -2323,6 +2323,29 @@
         }
     },
     {
+        "authorId": "auth1949",
+        "type": "author",
+        "id": "crs100",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Simone",
+        "familyName": "Barbosa",
+        "email": "simonedjb@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Departamento de Informática",
+            "institution": "Pontifical Catholic University of Rio de Janeiro (PUC-Rio)",
+            "city": "Rio de Janeiro",
+            "country": "Brazil"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
         "authorId": "auth2854",
         "type": "author",
         "id": "crs101",
@@ -2443,7 +2466,7 @@
         "id": "crs111",
         "venue": "course",
         "rank": 1,
-        "givenName": "Scott",
+        "givenName": "I. Scott",
         "familyName": "MacKenzie",
         "email": "mack@cse.yorku.ca",
         "role": "",
@@ -2745,6 +2768,29 @@
         "givenName": "Robert",
         "familyName": "Atkinson",
         "email": "robert.atkinson@asu.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Arizona State University",
+            "city": "Tempe",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1836",
+        "type": "author",
+        "id": "crs122",
+        "venue": "course",
+        "rank": 4,
+        "givenName": "Winslow",
+        "familyName": "Burleson",
+        "email": "winslow.burleson@asu.edu",
         "role": "",
         "primary": {
             "dept": "",
@@ -3335,19 +3381,19 @@
         }
     },
     {
-        "authorId": "auth2083",
+        "authorId": "auth23599",
         "type": "author",
         "id": "crs158",
         "venue": "course",
         "rank": 1,
         "givenName": "Ronald",
         "familyName": "Baecker",
-        "email": "rmb@kmdi.toronto.edu",
+        "email": "ron@taglab.ca",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "Technologies for Aging Gracefully Laboratory (TAGlab)",
             "institution": "University of Toronto",
-            "city": "Toronto ",
+            "city": "Toronto",
             "country": "Canada"
         },
         "secondary": {
@@ -3394,6 +3440,52 @@
             "dept": "Berkman Center",
             "institution": "Harvard University",
             "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2714",
+        "type": "author",
+        "id": "crs162",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Jenny",
+        "familyName": "Preece",
+        "email": "preece@umd.edu",
+        "role": "",
+        "primary": {
+            "dept": "iSchool",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth11429",
+        "type": "author",
+        "id": "crs163",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Susan",
+        "familyName": "Dray",
+        "email": "susan.dray@dray.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Dray & Associates, Inc.",
+            "city": "Oakland",
             "country": "United States"
         },
         "secondary": {
@@ -3559,10 +3651,10 @@
         "email": "ed.price@imtc.gatech.edu",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Georgia Tech",
-            "city": "Atlanta",
-            "country": "United States"
+            "dept": "Georgia Tech, Atlanta, Georgia, United States",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -4249,7 +4341,7 @@
         "id": "to107",
         "venue": "TOCHI",
         "rank": 1,
-        "givenName": "Liz",
+        "givenName": "Elizabeth",
         "middleInitial": "M",
         "familyName": "Gerber",
         "email": "egerber@northwestern.edu",
@@ -4310,9 +4402,9 @@
         },
         "secondary": {
             "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Google Inc.",
+            "city": "San Bruno",
+            "country": "United States"
         }
     },
     {
@@ -4346,7 +4438,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Nuria",
-        "middleInitial": "m",
+        "middleInitial": "",
         "familyName": "Oliver",
         "email": "nuriao@tid.es",
         "role": "",
@@ -4657,8 +4749,8 @@
         "id": "to112",
         "venue": "TOCHI",
         "rank": 4,
-        "givenName": "William D",
-        "middleInitial": "",
+        "givenName": "William",
+        "middleInitial": "D",
         "familyName": "Tucker",
         "email": "wdtucker@gmail.com",
         "role": "",
@@ -4682,7 +4774,7 @@
         "venue": "TOCHI",
         "rank": 5,
         "givenName": "M",
-        "middleInitial": "J",
+        "middleInitial": "",
         "familyName": "Tshemese",
         "email": "nic.bidwell@gmail.com",
         "role": "",
@@ -4706,7 +4798,7 @@
         "venue": "TOCHI",
         "rank": 6,
         "givenName": "N",
-        "middleInitial": "J",
+        "middleInitial": "",
         "familyName": "Gaven",
         "email": "nic.bidwell@gmail.com",
         "role": "",
@@ -4730,8 +4822,8 @@
         "venue": "TOCHI",
         "rank": 7,
         "givenName": "S",
-        "middleInitial": "J",
-        "familyName": "Ntlango",
+        "middleInitial": "",
+        "familyName": "Ntlangano",
         "email": "nic.bidwell@gmail.com",
         "role": "",
         "primary": {
@@ -4778,7 +4870,7 @@
         "venue": "TOCHI",
         "rank": 9,
         "givenName": "Kristen",
-        "middleInitial": "A.",
+        "middleInitial": "A",
         "familyName": "Eglinton",
         "email": "kristenali@gmail.com",
         "role": "",
@@ -5042,7 +5134,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Li",
-        "middleInitial": "S M",
+        "middleInitial": "",
         "familyName": "Jönsson",
         "email": "ljo@dkds.dk",
         "role": "",
@@ -5091,7 +5183,7 @@
         "rank": 5,
         "givenName": "Minna",
         "middleInitial": "",
-        "familyName": "Räsenän",
+        "familyName": "Räsänen",
         "email": "minna.rasanen@sh.se",
         "role": "",
         "primary": {
@@ -5191,8 +5283,8 @@
         "email": "caroline.jay@manchester.ac.uk",
         "role": "",
         "primary": {
-            "dept": "School  of Computer Science",
-            "institution": "University of Manchester",
+            "dept": "School of Computer Science",
+            "institution": "The University of Manchester",
             "city": "Manchester",
             "country": "United Kingdom"
         },
@@ -5239,10 +5331,10 @@
         "email": "simon.harper@manchester.ac.uk",
         "role": "",
         "primary": {
-            "dept": "School  of Computer Science",
-            "institution": "University of Manchester",
-            "city": "Manchester",
-            "country": "United Kingdom"
+            "dept": "School  of Computer Science, University of Manchester, Manchester, United Kingdom",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -5288,12 +5380,12 @@
         "role": "",
         "primary": {
             "dept": "Center for Human-Computer Interaction, http://www.chiplace.org/content/Members/show-profile.jsp?id=213, University Park, Pennsylvania, United States",
-            "institution": "College of Information Sciences and Technology, The Pennsylvania State University, University Park, Pennsylvania, United States",
+            "institution": "",
             "city": "",
             "country": ""
         },
         "secondary": {
-            "dept": "",
+            "dept": "College of Information Sciences and Technology, The Pennsylvania State University, University Park, Pennsylvania, United States",
             "institution": "",
             "city": "",
             "country": ""
@@ -5521,7 +5613,7 @@
         "id": "to127",
         "venue": "TOCHI",
         "rank": 4,
-        "givenName": "Donald J.",
+        "givenName": "Donald",
         "middleInitial": "J",
         "familyName": "Patterson",
         "email": "djp3@ics.uci.edu",
@@ -5647,10 +5739,10 @@
         "email": "lsumegi@gmail.com",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "Carleton University",
-            "city": "Ottawa",
-            "country": "Canada"
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -5671,10 +5763,10 @@
         "email": "bruce.tsuji@carleton.ca",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "Carleton University",
-            "city": "Ottawa",
-            "country": "Canada"
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -5738,7 +5830,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Nuria",
-        "middleInitial": "m",
+        "middleInitial": "",
         "familyName": "Oliver",
         "email": "nuriao@tid.es",
         "role": "",
@@ -6772,11 +6864,11 @@
         "givenName": "Kathrin",
         "middleInitial": "Maria",
         "familyName": "Gerling",
-        "email": "kathrin.gerling@usask.ca",
+        "email": "kgerling@lincoln.ac.uk",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Saskatchewan",
+            "dept": "Interaction Lab",
+            "institution": "University  of Saskatchewan",
             "city": "Saskatoon",
             "country": "Canada"
         },
@@ -6892,11 +6984,11 @@
         "givenName": "Kathrin",
         "middleInitial": "Maria",
         "familyName": "Gerling",
-        "email": "kathrin.gerling@usask.ca",
+        "email": "kgerling@lincoln.ac.uk",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Saskatchewan",
+            "dept": "Interaction Lab",
+            "institution": "University  of Saskatchewan",
             "city": "Saskatoon",
             "country": "Canada"
         },
@@ -7904,7 +7996,7 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "NORTH CAROLINA STATE UNIVERSITY",
+            "institution": "North Carolina State University",
             "city": "Raleigh",
             "country": "United States"
         },
@@ -8815,10 +8907,10 @@
         "email": "luileito@upv.es",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "ITI/DSIC, Universitat Politècnica de València",
-            "city": "Valencia",
-            "country": "Spain"
+            "dept": "ITI/DSIC, Universitat Politècnica de València, Valencia, Spain",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -8884,17 +8976,17 @@
         "givenName": "Marcos",
         "middleInitial": "",
         "familyName": "Serrano",
-        "email": "marcos@cs.umanitoba.ca",
+        "email": "marcos.serrano@irit.fr",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "University of Manitoba, Winnipeg, Manitoba, Canada",
             "institution": "University of Manitoba",
             "city": "Winnipeg",
             "country": "Canada"
         },
         "secondary": {
-            "dept": "",
-            "institution": "IRIT",
+            "dept": "IRIT, Toulouse, France",
+            "institution": "IRIT-University of Toulouse",
             "city": "Toulouse",
             "country": "France"
         }
@@ -10502,51 +10594,51 @@
         },
         "secondary": {
             "dept": "University of Siegen, Siegen, NRW, Germany",
-            "institution": "40841",
-            "city": "Dave",
-            "country": "Randall"
+            "institution": "",
+            "city": "",
+            "country": ""
         }
     },
     {
-        "authorId": "authdave.randall@uni-siegen.de",
+        "authorId": "auth40841",
         "type": "author",
         "id": "pn286",
         "venue": "paper",
         "rank": 4,
-        "givenName": "",
-        "middleInitial": "University of Siegen",
-        "familyName": "Siegen",
-        "email": "NRW",
+        "givenName": "Dave",
+        "middleInitial": "",
+        "familyName": "Randall",
+        "email": "dave.randall@uni-siegen.de",
         "role": "",
         "primary": {
-            "dept": "Germany",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "",
+            "institution": "University of Siegen",
+            "city": "Siegen",
+            "country": "Germany"
         },
         "secondary": {
             "dept": "",
-            "institution": "30349",
-            "city": "Andreas",
-            "country": "Zimmermann"
+            "institution": "",
+            "city": "",
+            "country": ""
         }
     },
     {
-        "authorId": "authandreas.zimmermann@fit.fraunhofer.de",
+        "authorId": "auth30349",
         "type": "author",
         "id": "pn286",
         "venue": "paper",
         "rank": 5,
-        "givenName": "",
-        "middleInitial": "Fraunhofer Institute for Applied Information Technology (FIT)",
-        "familyName": "Sankt Augustin",
-        "email": "",
+        "givenName": "Andreas",
+        "middleInitial": "",
+        "familyName": "Zimmermann",
+        "email": "andreas.zimmermann@fit.fraunhofer.de",
         "role": "",
         "primary": {
-            "dept": "Germany",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "",
+            "institution": "Fraunhofer Institute for Applied Information Technology (FIT)",
+            "city": "Sankt Augustin",
+            "country": "Germany"
         },
         "secondary": {
             "dept": "",
@@ -10759,82 +10851,82 @@
         "email": "kash@diku.dk",
         "role": "",
         "primary": {
-            "dept": "University of Copenhagen, Copenhagen, Denmark",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Department of Computer Science",
+            "institution": "University of Copenhagen",
+            "city": "Copenhagen",
+            "country": "Denmark"
         },
         "secondary": {
             "dept": "",
-            "institution": "37230",
-            "city": "Søren",
-            "country": "Sander"
+            "institution": "",
+            "city": "",
+            "country": ""
         }
     },
     {
-        "authorId": "auths.s.sander@mail.dk",
+        "authorId": "auth37230",
         "type": "author",
         "id": "pn292",
         "venue": "paper",
         "rank": 2,
-        "givenName": "",
-        "middleInitial": "University of Copenhagen",
-        "familyName": "Copenhagen",
-        "email": "",
+        "givenName": "Søren",
+        "middleInitial": "S",
+        "familyName": "Sander",
+        "email": "s.s.sander@mail.dk",
         "role": "",
         "primary": {
-            "dept": "Denmark",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "",
+            "institution": "University of Copenhagen",
+            "city": "Copenhagen",
+            "country": "Denmark"
         },
         "secondary": {
             "dept": "",
-            "institution": "13349",
-            "city": "Javier",
-            "country": "Bargas-Avila"
+            "institution": "",
+            "city": "",
+            "country": ""
         }
     },
     {
-        "authorId": "authbargas@google.com",
+        "authorId": "auth13349",
         "type": "author",
         "id": "pn292",
         "venue": "paper",
         "rank": 3,
-        "givenName": "",
-        "middleInitial": "Google, Inc.",
-        "familyName": "Zurich",
-        "email": "ZH",
+        "givenName": "Javier",
+        "middleInitial": "Andrés",
+        "familyName": "Bargas-Avila",
+        "email": "bargas@google.com",
         "role": "",
         "primary": {
-            "dept": "Switzerland",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "Zurich",
+            "country": "Switzerland"
         },
         "secondary": {
             "dept": "",
-            "institution": "26067",
-            "city": "Jakob",
-            "country": "Grue Simonsen"
+            "institution": "",
+            "city": "",
+            "country": ""
         }
     },
     {
-        "authorId": "authsimonsen@diku.dk",
+        "authorId": "auth26067",
         "type": "author",
         "id": "pn292",
         "venue": "paper",
         "rank": 4,
-        "givenName": "",
-        "middleInitial": "University of Copenhagen",
-        "familyName": "Copenhagen",
-        "email": "",
+        "givenName": "Jakob",
+        "middleInitial": "",
+        "familyName": "Grue Simonsen",
+        "email": "simonsen@diku.dk",
         "role": "",
         "primary": {
-            "dept": "Denmark",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "",
+            "institution": "University of Copenhagen",
+            "city": "Copenhagen",
+            "country": "Denmark"
         },
         "secondary": {
             "dept": "",
@@ -10975,7 +11067,7 @@
         "email": "roudauta@gmail.com",
         "role": "",
         "primary": {
-            "dept": "create",
+            "dept": "",
             "institution": "University of Bristol",
             "city": "Bristol",
             "country": "United Kingdom"
@@ -10999,10 +11091,10 @@
         "email": "rr0743@my.bristol.ac.uk",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "create",
+            "institution": "University of Bristol",
+            "city": "Bristol",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -11023,7 +11115,7 @@
         "email": "th12120@my.bristol.ac.uk",
         "role": "",
         "primary": {
-            "dept": "create",
+            "dept": "",
             "institution": "University of Bristol",
             "city": "Bristol",
             "country": "United Kingdom"
@@ -11047,7 +11139,7 @@
         "email": "sriramable@gmail.com",
         "role": "",
         "primary": {
-            "dept": "create",
+            "dept": "",
             "institution": "University of Bristol",
             "city": "Bristol",
             "country": "United Kingdom"
@@ -11263,10 +11355,10 @@
         "email": "kash@diku.dk",
         "role": "",
         "primary": {
-            "dept": "University of Copenhagen, Copenhagen, Denmark",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Department of Computer Science",
+            "institution": "University of Copenhagen",
+            "city": "Copenhagen",
+            "country": "Denmark"
         },
         "secondary": {
             "dept": "",
@@ -12385,10 +12477,10 @@
         "id": "pn385",
         "venue": "paper",
         "rank": 1,
-        "givenName": "Esben Warming",
+        "givenName": "Esben",
         "middleInitial": "W.",
         "familyName": "Pedersen",
-        "email": "esbenwp@diku.dk",
+        "email": "mail@esbenwarming.dk",
         "role": "",
         "primary": {
             "dept": "",
@@ -12439,10 +12531,10 @@
         "email": "kash@diku.dk",
         "role": "",
         "primary": {
-            "dept": "University of Copenhagen, Copenhagen, Denmark",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Department of Computer Science",
+            "institution": "University of Copenhagen",
+            "city": "Copenhagen",
+            "country": "Denmark"
         },
         "secondary": {
             "dept": "",
@@ -12457,7 +12549,7 @@
         "id": "pn386",
         "venue": "paper",
         "rank": 1,
-        "givenName": "Esben Warming",
+        "givenName": "Esben",
         "middleInitial": "W.",
         "familyName": "Pedersen",
         "email": "esbenwp@diku.dk",
@@ -12487,7 +12579,7 @@
         "email": "kash@diku.dk",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "Department of Computer Science",
             "institution": "University of Copenhagen",
             "city": "Copenhagen",
             "country": "Denmark"
@@ -12991,10 +13083,10 @@
         "email": "luileito@upv.es",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "ITI/DSIC, Universitat Politècnica de València",
-            "city": "Valencia",
-            "country": "Spain"
+            "dept": "ITI/DSIC, Universitat Politècnica de València, Valencia, Spain",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -21002,7 +21094,7 @@
         "venue": "paper",
         "rank": 1,
         "givenName": "Abir",
-        "middleInitial": "M",
+        "middleInitial": "",
         "familyName": "Al-Hajri",
         "email": "abira@ece.ubc.ca",
         "role": "",
@@ -24607,10 +24699,10 @@
         "email": "nvillar@microsoft.com",
         "role": "",
         "primary": {
-            "dept": "Microsoft Research, Cambridge, United Kingdom",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "",
+            "institution": "Microsoft Research",
+            "city": "Cambridge",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -24626,7 +24718,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Nicholas",
-        "middleInitial": "Y",
+        "middleInitial": "",
         "familyName": "Chen",
         "email": "nchen@microsoft.com",
         "role": "",
@@ -35365,10 +35457,10 @@
             "country": "Finland"
         },
         "secondary": {
-            "dept": "Department of Computer Science",
-            "institution": "University of Helsinki",
-            "city": "Helsinki",
-            "country": "Finland"
+            "dept": "Department of Computer Science, University of Helsinki, Helsinki, Finland",
+            "institution": "",
+            "city": "",
+            "country": ""
         }
     },
     {
@@ -44522,7 +44614,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Robert",
-        "middleInitial": "E",
+        "middleInitial": "E.",
         "familyName": "Kraut",
         "email": "robert.kraut@cmu.edu",
         "role": "",
@@ -44839,7 +44931,7 @@
         "email": "konkel@lsu.edu",
         "role": "",
         "primary": {
-            "dept": "create",
+            "dept": "",
             "institution": "Louisiana State University",
             "city": "Baton Rouge",
             "country": "United States"
@@ -45650,7 +45742,7 @@
         "venue": "paper",
         "rank": 3,
         "givenName": "Robert",
-        "middleInitial": "E",
+        "middleInitial": "E.",
         "familyName": "Kraut",
         "email": "robert.kraut@cmu.edu",
         "role": "",
@@ -47258,7 +47350,7 @@
         "venue": "paper",
         "rank": 2,
         "givenName": "Michelle",
-        "middleInitial": "",
+        "middleInitial": "X",
         "familyName": "Zhou",
         "email": "mzhou@us.ibm.com",
         "role": "",
@@ -48415,8 +48507,8 @@
         "email": "Henning@hci.uni-hannover.de",
         "role": "",
         "primary": {
-            "dept": "FG Mensch-Computer-Interaktion",
-            "institution": "University of Hanover",
+            "dept": "",
+            "institution": "University of Hannover",
             "city": "Hannover",
             "country": "Germany"
         },
@@ -49507,18 +49599,41 @@
         }
     },
     {
-        "authorId": "auth14090",
+        "authorId": "auth6550",
         "type": "author",
         "id": "pan102",
         "venue": "panel",
         "rank": 2,
+        "givenName": "Ilpo",
+        "familyName": "Koskinen",
+        "email": "ilpo.koskinen@aalto.fi",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Aalto University",
+            "city": "Espoo",
+            "country": "Finland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14090",
+        "type": "author",
+        "id": "pan102",
+        "venue": "panel",
+        "rank": 3,
         "givenName": "Janaki",
         "familyName": "Kumar",
         "email": "janaki.kumar@sap.com",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "SAP Labs",
+            "institution": "SAP Labs, LLC",
             "city": "Palo Alto",
             "country": "United States"
         },
@@ -49534,7 +49649,7 @@
         "type": "author",
         "id": "pan102",
         "venue": "panel",
-        "rank": 3,
+        "rank": 4,
         "givenName": "David",
         "familyName": "Rondeau",
         "email": "david.rondeau@incontextdesign.com",
@@ -49557,7 +49672,7 @@
         "type": "author",
         "id": "pan102",
         "venue": "panel",
-        "rank": 4,
+        "rank": 5,
         "givenName": "John",
         "familyName": "Zimmerman",
         "email": "johnz@cs.cmu.edu",
@@ -49829,34 +49944,11 @@
         }
     },
     {
-        "authorId": "auth3375",
-        "type": "author",
-        "id": "pan107",
-        "venue": "panel",
-        "rank": 1,
-        "givenName": "Matthew",
-        "familyName": "Kam",
-        "email": "me@matthewkam.org",
-        "role": "",
-        "primary": {
-            "dept": "International Development Program",
-            "institution": "American Institutes for Research",
-            "city": "Washington",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
         "authorId": "auth12942",
         "type": "author",
         "id": "pan107",
         "venue": "panel",
-        "rank": 2,
+        "rank": 1,
         "givenName": "Anupam",
         "familyName": "Jain",
         "email": "anupamjain@in.ibm.com",
@@ -49866,6 +49958,29 @@
             "institution": "IBM Research Lab",
             "city": "New Delhi",
             "country": "India"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth3375",
+        "type": "author",
+        "id": "pan107",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Matthew",
+        "familyName": "Kam",
+        "email": "mkam@air.org",
+        "role": "",
+        "primary": {
+            "dept": "International Development Program",
+            "institution": "American Institutes for Research",
+            "city": "Washington",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -49944,11 +50059,34 @@
         }
     },
     {
-        "authorId": "auth7080",
+        "authorId": "auth6095",
         "type": "author",
         "id": "pan108",
         "venue": "panel",
         "rank": 1,
+        "givenName": "Morgan",
+        "familyName": "Ames",
+        "email": "morganya@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Intel Science and Technology Center",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7080",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 2,
         "givenName": "Jeffrey",
         "familyName": "Bardzell",
         "email": "jbardzel@indiana.edu",
@@ -49971,7 +50109,7 @@
         "type": "author",
         "id": "pan108",
         "venue": "panel",
-        "rank": 2,
+        "rank": 3,
         "givenName": "Shaowen",
         "familyName": "Bardzell",
         "email": "selu@indiana.edu",
@@ -49994,7 +50132,7 @@
         "type": "author",
         "id": "pan108",
         "venue": "panel",
-        "rank": 3,
+        "rank": 4,
         "givenName": "Silvia",
         "familyName": "Lindtner",
         "email": "silvia.lindtner@gmail.com",
@@ -50013,57 +50151,11 @@
         }
     },
     {
-        "authorId": "auth9749",
-        "type": "author",
-        "id": "pan108",
-        "venue": "panel",
-        "rank": 4,
-        "givenName": "Daniela",
-        "familyName": "Rosner",
-        "email": "dkrosner@uw.edu",
-        "role": "",
-        "primary": {
-            "dept": "Human Centered Design & Engineering",
-            "institution": "University of Washington",
-            "city": "Seattle",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth6095",
-        "type": "author",
-        "id": "pan108",
-        "venue": "panel",
-        "rank": 5,
-        "givenName": "Morgan",
-        "familyName": "Ames",
-        "email": "morganya@gmail.com",
-        "role": "",
-        "primary": {
-            "dept": "Intel Science and Technology Center",
-            "institution": "University of California, Irvine",
-            "city": "Irvine",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
         "authorId": "auth14505",
         "type": "author",
         "id": "pan108",
         "venue": "panel",
-        "rank": 6,
+        "rank": 5,
         "givenName": "David",
         "familyName": "Mellis",
         "email": "mellis@media.mit.edu",
@@ -50082,43 +50174,20 @@
         }
     },
     {
-        "authorId": "auth31163",
+        "authorId": "auth9749",
         "type": "author",
         "id": "pan108",
         "venue": "panel",
-        "rank": 7,
-        "givenName": "Matt",
-        "familyName": "Ratto",
-        "email": "matt.ratto@utoronto.ca",
+        "rank": 6,
+        "givenName": "Daniela",
+        "familyName": "Rosner",
+        "email": "dkrosner@uw.edu",
         "role": "",
         "primary": {
-            "dept": "Faculty of Information",
-            "institution": "University of Toronto",
-            "city": "Toronto",
-            "country": "Canada"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth17138",
-        "type": "author",
-        "id": "pan108",
-        "venue": "panel",
-        "rank": 8,
-        "givenName": "Joshua",
-        "familyName": "Tanenbaum",
-        "email": "joshuat@sfu.ca",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Simon Fraser University",
-            "city": "Surrey",
-            "country": "Canada"
+            "dept": "Human Centered Design & Engineering",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -50197,6 +50266,75 @@
         }
     },
     {
+        "authorId": "auth7578",
+        "type": "author",
+        "id": "pan110",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Lilly",
+        "familyName": "Irani",
+        "email": "lirani@ucsd.edu",
+        "role": "",
+        "primary": {
+            "dept": "Communication",
+            "institution": "University of California, San Diego",
+            "city": "La Jolla",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth26684",
+        "type": "author",
+        "id": "pan110",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Amanda",
+        "familyName": "Williams",
+        "email": "amanda@fabule.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Wyld Collective Ltd.",
+            "city": "Montréal",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1149",
+        "type": "author",
+        "id": "pan110",
+        "venue": "panel",
+        "rank": 6,
+        "givenName": "Elizabeth",
+        "familyName": "Churchill",
+        "email": "churchill@acm.org",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "eBay Research Lab, eBay Inc.",
+            "city": "San Jose",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
         "authorId": "auth9206",
         "type": "author",
         "id": "pan114",
@@ -50230,10 +50368,10 @@
         "email": "sara.waxberg@philips.com",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "Philips Healthcare",
-            "city": "Andover",
-            "country": "United States"
+            "dept": "Philips Healthcare, Andover, Massachusetts, United States",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -50253,10 +50391,10 @@
         "email": "jgoss@faculty.ocadu.ca",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "Ontario College of Arts and Design ",
-            "city": "Toronto",
-            "country": "Canada"
+            "dept": "Ontario College of Art and Design University , Toronto, Ontario, Canada",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -50276,10 +50414,10 @@
         "email": "Peter.Rossos@uhn.ca",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "University Health Network",
-            "city": "Toronto",
-            "country": "Canada"
+            "dept": "University Health Network, Toronto, Ontario, Canada",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -50299,10 +50437,10 @@
         "email": "emily.nicholas@patientsassociation.ca",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "Patients Canada",
-            "city": "Toronto",
-            "country": "Canada"
+            "dept": "Patients Canada, Toronto, Ontario, Canada",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -50322,10 +50460,10 @@
         "email": "joe@humanfactors.ca",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "Healthcare Human Factors",
-            "city": "Toronto",
-            "country": "Canada"
+            "dept": "Healthcare Human Factors, Toronto, Ontario, Canada",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -50381,18 +50519,64 @@
         }
     },
     {
-        "authorId": "auth6176",
+        "authorId": "auth42631",
         "type": "author",
         "id": "pan118",
         "venue": "panel",
         "rank": 3,
+        "givenName": "Tom",
+        "familyName": "Dignan",
+        "email": "tom.dignan@reputation.com",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "Reputation Inc.",
+            "city": "San Francisco",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth42632",
+        "type": "author",
+        "id": "pan118",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Steve",
+        "familyName": "Lohr",
+        "email": "lohr@nytimes.com",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "New York Times",
+            "city": "New York",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6176",
+        "type": "author",
+        "id": "pan118",
+        "venue": "panel",
+        "rank": 5,
         "givenName": "Jennifer",
         "familyName": "Golbeck",
         "email": "golbeck@cs.umd.edu",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "University of Maryland",
+            "institution": "University of Maryland, College Park",
             "city": "College Park",
             "country": "United States"
         },
@@ -50408,7 +50592,7 @@
         "type": "author",
         "id": "pan118",
         "venue": "panel",
-        "rank": 4,
+        "rank": 6,
         "givenName": "James",
         "familyName": "Pennebaker",
         "email": "pennebaker@mail.utexas.edu",
@@ -50548,7 +50732,7 @@
         "venue": "altchi",
         "rank": 2,
         "givenName": "Michael",
-        "middleInitial": "A",
+        "middleInitial": "",
         "familyName": "Terry",
         "role": "",
         "primary": {
@@ -50966,7 +51150,7 @@
         "familyName": "Norooz",
         "role": "",
         "primary": {
-            "dept": "Human-Computer Interaction Lab",
+            "dept": "iSchool, Human-Computer Interaction Lab, Makeability Lab",
             "institution": "University of Maryland",
             "city": "College Park",
             "country": "United States"
@@ -51015,7 +51199,7 @@
             "dept": "Design Lab",
             "institution": "Koç University",
             "city": "Istanbul",
-            "country": ""
+            "country": "Turkey"
         },
         "secondary": {
             "dept": "",
@@ -51242,7 +51426,7 @@
         "familyName": "Yee",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "Northumbria University",
             "institution": "Northumbria University",
             "city": "Newcastle upon Tyne",
             "country": "United Kingdom"
@@ -51467,8 +51651,8 @@
         "id": "alt119",
         "venue": "altchi",
         "rank": 2,
-        "givenName": "Per Ola",
-        "middleInitial": "",
+        "givenName": "Per",
+        "middleInitial": "Ola",
         "familyName": "Kristensson",
         "role": "",
         "primary": {
@@ -51611,7 +51795,7 @@
         "role": "",
         "primary": {
             "dept": "BBC Research & Development",
-            "institution": "BBC",
+            "institution": "British Broadcasting Corporation",
             "city": "Manchester",
             "country": "United Kingdom"
         },
@@ -51656,8 +51840,8 @@
         "familyName": "Harper",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Manchester",
+            "dept": "School  of Computer Science",
+            "institution": "The University of Manchester",
             "city": "Manchester",
             "country": "United Kingdom"
         },
@@ -51766,9 +51950,9 @@
         "id": "alt143",
         "venue": "altchi",
         "rank": 1,
-        "givenName": "Razvan",
+        "givenName": "Răzvan",
         "middleInitial": "",
-        "familyName": "Rughinis",
+        "familyName": "Rughiniș",
         "role": "",
         "primary": {
             "dept": "",
@@ -51791,7 +51975,7 @@
         "rank": 2,
         "givenName": "Cosima",
         "middleInitial": "",
-        "familyName": "Rughinis",
+        "familyName": "Rughiniș",
         "role": "",
         "primary": {
             "dept": "",
@@ -52001,7 +52185,7 @@
         "familyName": "Sokoler",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "Interaction Design Group",
             "institution": "IT University of Copenhagen",
             "city": "Copenhagen",
             "country": "Denmark"
@@ -52163,7 +52347,7 @@
         "role": "",
         "primary": {
             "dept": "Lab-STICC ",
-            "institution": "University of South Brittany",
+            "institution": "University of South Brittany, European Center of Virtual Reality ",
             "city": "Brest",
             "country": "France"
         },
@@ -52186,7 +52370,7 @@
         "role": "",
         "primary": {
             "dept": "IR4M",
-            "institution": "UMR8081 CNRS",
+            "institution": "CNRS – Univ Paris-Sud",
             "city": "Orsay",
             "country": "France"
         },
@@ -52208,8 +52392,8 @@
         "familyName": "Roatis",
         "role": "",
         "primary": {
-            "dept": "LRI",
-            "institution": "University Paris South",
+            "dept": "INRIA",
+            "institution": "Univ Paris-Sud",
             "city": "Orsay",
             "country": "France"
         },
@@ -52232,7 +52416,7 @@
         "role": "",
         "primary": {
             "dept": "IR4M",
-            "institution": "UMR8081 CNRS",
+            "institution": "CNRS – Univ Paris-Sud",
             "city": "Orsay",
             "country": "France"
         },
@@ -52267,7 +52451,7 @@
         }
     },
     {
-        "authorId": "auth100001",
+        "authorId": "auth42649",
         "type": "author",
         "id": "alt163",
         "venue": "altchi",
@@ -52278,9 +52462,9 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Face Therapie, Co. Ltd. ",
+            "city": "Tokyo",
+            "country": "Japan"
         },
         "secondary": {
             "dept": "",
@@ -52290,7 +52474,7 @@
         }
     },
     {
-        "authorId": "auth100002",
+        "authorId": "auth42650",
         "type": "author",
         "id": "alt163",
         "venue": "altchi",
@@ -52300,10 +52484,10 @@
         "familyName": "Watanabe",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "NTT Communication Science Lab.",
+            "institution": "Nippon Telegraph and Telephone Corporationtion",
+            "city": "Atsugi city, Kanagawa perfecture",
+            "country": "Japan"
         },
         "secondary": {
             "dept": "",
@@ -52507,8 +52691,8 @@
         "familyName": "Pohl",
         "role": "",
         "primary": {
-            "dept": "FG Mensch-Computer-Interaktion",
-            "institution": "University of Hanover",
+            "dept": "",
+            "institution": "University of Hannover",
             "city": "Hannover",
             "country": "Germany"
         },

@@ -23,18 +23,41 @@
         }
     },
     {
-        "authorId": "auth14090",
+        "authorId": "auth6550",
         "type": "author",
         "id": "pan102",
         "venue": "panel",
         "rank": 2,
+        "givenName": "Ilpo",
+        "familyName": "Koskinen",
+        "email": "ilpo.koskinen@aalto.fi",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Aalto University",
+            "city": "Espoo",
+            "country": "Finland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14090",
+        "type": "author",
+        "id": "pan102",
+        "venue": "panel",
+        "rank": 3,
         "givenName": "Janaki",
         "familyName": "Kumar",
         "email": "janaki.kumar@sap.com",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "SAP Labs",
+            "institution": "SAP Labs, LLC",
             "city": "Palo Alto",
             "country": "United States"
         },
@@ -50,7 +73,7 @@
         "type": "author",
         "id": "pan102",
         "venue": "panel",
-        "rank": 3,
+        "rank": 4,
         "givenName": "David",
         "familyName": "Rondeau",
         "email": "david.rondeau@incontextdesign.com",
@@ -73,7 +96,7 @@
         "type": "author",
         "id": "pan102",
         "venue": "panel",
-        "rank": 4,
+        "rank": 5,
         "givenName": "John",
         "familyName": "Zimmerman",
         "email": "johnz@cs.cmu.edu",
@@ -345,34 +368,11 @@
         }
     },
     {
-        "authorId": "auth3375",
-        "type": "author",
-        "id": "pan107",
-        "venue": "panel",
-        "rank": 1,
-        "givenName": "Matthew",
-        "familyName": "Kam",
-        "email": "me@matthewkam.org",
-        "role": "",
-        "primary": {
-            "dept": "International Development Program",
-            "institution": "American Institutes for Research",
-            "city": "Washington",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
         "authorId": "auth12942",
         "type": "author",
         "id": "pan107",
         "venue": "panel",
-        "rank": 2,
+        "rank": 1,
         "givenName": "Anupam",
         "familyName": "Jain",
         "email": "anupamjain@in.ibm.com",
@@ -382,6 +382,29 @@
             "institution": "IBM Research Lab",
             "city": "New Delhi",
             "country": "India"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth3375",
+        "type": "author",
+        "id": "pan107",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Matthew",
+        "familyName": "Kam",
+        "email": "mkam@air.org",
+        "role": "",
+        "primary": {
+            "dept": "International Development Program",
+            "institution": "American Institutes for Research",
+            "city": "Washington",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -460,11 +483,34 @@
         }
     },
     {
-        "authorId": "auth7080",
+        "authorId": "auth6095",
         "type": "author",
         "id": "pan108",
         "venue": "panel",
         "rank": 1,
+        "givenName": "Morgan",
+        "familyName": "Ames",
+        "email": "morganya@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Intel Science and Technology Center",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7080",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 2,
         "givenName": "Jeffrey",
         "familyName": "Bardzell",
         "email": "jbardzel@indiana.edu",
@@ -487,7 +533,7 @@
         "type": "author",
         "id": "pan108",
         "venue": "panel",
-        "rank": 2,
+        "rank": 3,
         "givenName": "Shaowen",
         "familyName": "Bardzell",
         "email": "selu@indiana.edu",
@@ -510,7 +556,7 @@
         "type": "author",
         "id": "pan108",
         "venue": "panel",
-        "rank": 3,
+        "rank": 4,
         "givenName": "Silvia",
         "familyName": "Lindtner",
         "email": "silvia.lindtner@gmail.com",
@@ -529,57 +575,11 @@
         }
     },
     {
-        "authorId": "auth9749",
-        "type": "author",
-        "id": "pan108",
-        "venue": "panel",
-        "rank": 4,
-        "givenName": "Daniela",
-        "familyName": "Rosner",
-        "email": "dkrosner@uw.edu",
-        "role": "",
-        "primary": {
-            "dept": "Human Centered Design & Engineering",
-            "institution": "University of Washington",
-            "city": "Seattle",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth6095",
-        "type": "author",
-        "id": "pan108",
-        "venue": "panel",
-        "rank": 5,
-        "givenName": "Morgan",
-        "familyName": "Ames",
-        "email": "morganya@gmail.com",
-        "role": "",
-        "primary": {
-            "dept": "Intel Science and Technology Center",
-            "institution": "University of California, Irvine",
-            "city": "Irvine",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
         "authorId": "auth14505",
         "type": "author",
         "id": "pan108",
         "venue": "panel",
-        "rank": 6,
+        "rank": 5,
         "givenName": "David",
         "familyName": "Mellis",
         "email": "mellis@media.mit.edu",
@@ -598,43 +598,20 @@
         }
     },
     {
-        "authorId": "auth31163",
+        "authorId": "auth9749",
         "type": "author",
         "id": "pan108",
         "venue": "panel",
-        "rank": 7,
-        "givenName": "Matt",
-        "familyName": "Ratto",
-        "email": "matt.ratto@utoronto.ca",
+        "rank": 6,
+        "givenName": "Daniela",
+        "familyName": "Rosner",
+        "email": "dkrosner@uw.edu",
         "role": "",
         "primary": {
-            "dept": "Faculty of Information",
-            "institution": "University of Toronto",
-            "city": "Toronto",
-            "country": "Canada"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth17138",
-        "type": "author",
-        "id": "pan108",
-        "venue": "panel",
-        "rank": 8,
-        "givenName": "Joshua",
-        "familyName": "Tanenbaum",
-        "email": "joshuat@sfu.ca",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Simon Fraser University",
-            "city": "Surrey",
-            "country": "Canada"
+            "dept": "Human Centered Design & Engineering",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -713,6 +690,75 @@
         }
     },
     {
+        "authorId": "auth7578",
+        "type": "author",
+        "id": "pan110",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Lilly",
+        "familyName": "Irani",
+        "email": "lirani@ucsd.edu",
+        "role": "",
+        "primary": {
+            "dept": "Communication",
+            "institution": "University of California, San Diego",
+            "city": "La Jolla",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth26684",
+        "type": "author",
+        "id": "pan110",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Amanda",
+        "familyName": "Williams",
+        "email": "amanda@fabule.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Wyld Collective Ltd.",
+            "city": "Montréal",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1149",
+        "type": "author",
+        "id": "pan110",
+        "venue": "panel",
+        "rank": 6,
+        "givenName": "Elizabeth",
+        "familyName": "Churchill",
+        "email": "churchill@acm.org",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "eBay Research Lab, eBay Inc.",
+            "city": "San Jose",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
         "authorId": "auth9206",
         "type": "author",
         "id": "pan114",
@@ -746,10 +792,10 @@
         "email": "sara.waxberg@philips.com",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "Philips Healthcare",
-            "city": "Andover",
-            "country": "United States"
+            "dept": "Philips Healthcare, Andover, Massachusetts, United States",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -769,10 +815,10 @@
         "email": "jgoss@faculty.ocadu.ca",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "Ontario College of Arts and Design ",
-            "city": "Toronto",
-            "country": "Canada"
+            "dept": "Ontario College of Art and Design University , Toronto, Ontario, Canada",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -792,10 +838,10 @@
         "email": "Peter.Rossos@uhn.ca",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "University Health Network",
-            "city": "Toronto",
-            "country": "Canada"
+            "dept": "University Health Network, Toronto, Ontario, Canada",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -815,10 +861,10 @@
         "email": "emily.nicholas@patientsassociation.ca",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "Patients Canada",
-            "city": "Toronto",
-            "country": "Canada"
+            "dept": "Patients Canada, Toronto, Ontario, Canada",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -838,10 +884,10 @@
         "email": "joe@humanfactors.ca",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "Healthcare Human Factors",
-            "city": "Toronto",
-            "country": "Canada"
+            "dept": "Healthcare Human Factors, Toronto, Ontario, Canada",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -897,18 +943,64 @@
         }
     },
     {
-        "authorId": "auth6176",
+        "authorId": "auth42631",
         "type": "author",
         "id": "pan118",
         "venue": "panel",
         "rank": 3,
+        "givenName": "Tom",
+        "familyName": "Dignan",
+        "email": "tom.dignan@reputation.com",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "Reputation Inc.",
+            "city": "San Francisco",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth42632",
+        "type": "author",
+        "id": "pan118",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Steve",
+        "familyName": "Lohr",
+        "email": "lohr@nytimes.com",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "New York Times",
+            "city": "New York",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6176",
+        "type": "author",
+        "id": "pan118",
+        "venue": "panel",
+        "rank": 5,
         "givenName": "Jennifer",
         "familyName": "Golbeck",
         "email": "golbeck@cs.umd.edu",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "University of Maryland",
+            "institution": "University of Maryland, College Park",
             "city": "College Park",
             "country": "United States"
         },
@@ -924,7 +1016,7 @@
         "type": "author",
         "id": "pan118",
         "venue": "panel",
-        "rank": 4,
+        "rank": 6,
         "givenName": "James",
         "familyName": "Pennebaker",
         "email": "pennebaker@mail.utexas.edu",

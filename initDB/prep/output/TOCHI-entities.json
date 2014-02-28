@@ -147,10 +147,10 @@
                 "familyName": "Price",
                 "email": "ed.price@imtc.gatech.edu",
                 "primary": {
-                    "dept": "",
-                    "institution": "Georgia Tech",
-                    "city": "Atlanta",
-                    "country": "United States"
+                    "dept": "Georgia Tech, Atlanta, Georgia, United States",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -222,7 +222,7 @@
     {
         "id": "to102",
         "title": "Sharing Stories “in the Wild”: A Mobile Storytelling Case Study Using StoryKit",
-        "abstract": "",
+        "abstract": "Today’s mobile devices are equipped with a variety of tools that enable users to capture and share their daily experiences. However, designing authoring tools that effectively integrate the discrete media-capture components of mobile devices to enable rich expression—especially by children—remains a challenge. Evaluating such tools authentically, as they are being used in-situ, can be even more challenging. We detail a long-term, multimethod study on the use of StoryKit, a mobile storytelling application. By taking advantage of a public distribution channel, we were able to evaluate StoryKit’s use on a scale beyond that usually found in lab settings or limited field trials. Our results show that StoryKit’s simple but well-integrated interface attracted a high number of dedicated users in education contexts at all levels, including children with special learning needs. We include a discussion of the challenges and opportunities that similar “in the wild” studies hold for HCI research.",
         "acmLink": "",
         "authors": [
             {
@@ -314,11 +314,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Presents a long-term, multi-method study on the use of StoryKit, a mobile storytelling application. Includes a discussion of challenges and opportunities that similar “in-the-wild” studies hold for HCI research.",
         "contactEmail": "elizabeth.bonsignore@gmail.com",
         "contactFirstName": "Elizabeth",
         "contactLastName": "Bonsignore",
-        "keywords": "",
+        "keywords": "Mobile devices, mobile storytelling, creativity, authoring, children, social apps, participatory design, literacy",
         "venue": "TOCHI",
         "session": "s140",
         "communities": [
@@ -576,7 +576,7 @@
     {
         "id": "to104",
         "title": "Negotiating Food Waste: Using a Practice Lens to Inform Design",
-        "abstract": "",
+        "abstract": "Ecological sustainability is becoming of increasing concern to the HCI community, though little focus has been given yet to issues around food waste. Given the environmental impact of food waste, there is potential to contribute to a significant difference. To understand everyday domestic practices around food and waste, we took a ‘practice’ lens and carried out a study in 14 households that involved interviews, in-home tours and, in 5 of the households, a FridgeCam technology probe. The analysis highlights that food waste is the unintended result of multiple moments of consumption dispersed in space and time across other integrated practices such as shopping and cooking, which are themselves embedded in broader contextual factors and values. We highlight the importance of respecting the complex negotiations that people make within given structural conditions and competing values and practices, and suggest design strategies to support dispersed as well as integrated food practices, rather than focusing on waste itself.",
         "acmLink": "",
         "authors": [
             {
@@ -646,11 +646,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Our study highlights food waste and the complex negotiations that people make around food practices. We suggest that interventions should focus on dispersed and integrated practices rather than waste itself.",
         "contactEmail": "eva.ganglbauer@tuwien.ac.at",
         "contactFirstName": "Eva",
         "contactLastName": "Ganglbauer",
-        "keywords": "",
+        "keywords": "Everyday practice; food; food waste; gardening; sustainability; technology probe; design;",
         "venue": "TOCHI",
         "session": "s133",
         "communities": [
@@ -906,7 +906,7 @@
     {
         "id": "to107",
         "title": "Crowdfunding: Motivations and Deterrents for Participation",
-        "abstract": "",
+        "abstract": "Crowdfunding is changing how, why, and which ideas are brought into existence. With the increasing number of crowdfunded projects, it is important to understand what drives people to either create or fund these projects. To shed light on this new social phenomenon, we present a grounded theory of motivation informed by the first cross-platform qualitative study of the crowdfunding community. By performing 83 semi-structured interviews, we uncover creator motivations which include the desire to raise funds, expand awareness of work, connect with others, gain approval, maintain control, and to learn; and supporter motivations which include the desire to collect rewards, help others, support causes and be part of a community. We also explore ¬deterrents to crowdfunding participation, including, among creators, fear of failure, and, for supporters, lack of trust.  Based on these findings, we provide three emergent design principles to inform the design of effective crowdfunding platforms and support tools.",
         "acmLink": "",
         "authors": [
             {
@@ -914,7 +914,7 @@
                 "type": "author",
                 "venue": "TOCHI",
                 "rank": 1,
-                "givenName": "Liz",
+                "givenName": "Elizabeth",
                 "middleInitial": "M",
                 "familyName": "Gerber",
                 "email": "egerber@northwestern.edu",
@@ -954,11 +954,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Crowdfunding is an emergent way to use social media to raise money. Participants often give as much money as they earn. We identify powerful motivations for participation beyond fundraising.",
         "contactEmail": "egerber@northwestern.edu",
         "contactFirstName": "Elizabeth",
         "contactLastName": "Gerber",
-        "keywords": "",
+        "keywords": "crowdfunding; crowdsourcing; learning; motivation; online community; design; entrepreneurship",
         "venue": "TOCHI",
         "session": "s127",
         "communities": [
@@ -973,7 +973,7 @@
     {
         "id": "to108",
         "title": "Influence of Personality on Satisfaction with Mobile Phone Services",
-        "abstract": "",
+        "abstract": "We propose a conceptual model that explains the relationship between the users’ personality profile and their satisfaction with basic mobile phone services (calls, messages, and simple GPRS/3G services). The model captures direct and indirect effects on satisfaction by means of two variables: actual mobile phone usage and perceived usability of the related services. We empirically validate the model with data gathered from 603 customers of a telecommunication operator, and find that: (1) extroversion, conscientiousness, and intellect have a significant impact on customer satisfaction—positively for the first two traits and negatively for the latter; (2) extroversion positively influences mobile phone usage; and (3) extroversion and conscientiousness positively influence the users’ perceived usability of mobile services. Interestingly, usability has the strongest positive impact on satisfaction, whereas mobile phone usage has a negative impact on satisfaction. We discuss key findings of this model and propose several implications for the design of mobile phone services.",
         "acmLink": "",
         "authors": [
             {
@@ -993,9 +993,9 @@
                 },
                 "secondary": {
                     "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "institution": "Google Inc.",
+                    "city": "San Bruno",
+                    "country": "United States"
                 }
             },
             {
@@ -1026,7 +1026,7 @@
                 "venue": "TOCHI",
                 "rank": 3,
                 "givenName": "Nuria",
-                "middleInitial": "m",
+                "middleInitial": "",
                 "familyName": "Oliver",
                 "email": "nuriao@tid.es",
                 "primary": {
@@ -1043,11 +1043,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "We proposed and empirically validated a conceptual model that measures the impact between the users’ personality profile and their satisfaction with basic mobile phone services.",
         "contactEmail": "oliveirard@yahoo.com.br",
         "contactFirstName": "Rodrigo",
         "contactLastName": "de Oliveira",
-        "keywords": "",
+        "keywords": "Big ﬁve; structural equation modeling; usability",
         "venue": "TOCHI",
         "session": "s201",
         "communities": [
@@ -1060,7 +1060,7 @@
     {
         "id": "to110",
         "title": "A Sustainable Design Fiction: Green Practices",
-        "abstract": "",
+        "abstract": "In this paper, we argue that an approach informed by practice theory coupled with design fiction provides useful insights into the role of interaction design with respect to environmental sustainability. We argue that a practice-oriented approach can help interaction designers step away from models of individual behavior and studies of artifacts towards seeing sustainable behaviors as part of multidimensional and interrelated practices and practice elements. We analyze two previously conducted studies. The first study of everyday repair focuses on how people repair their broken objects. The second study of green-DIY examines how green enthusiasts facilitate their practices of making sustainable DIY (do-it-yourself) projects. We describe the practices of everyday repairers and green enthusiasts in terms of materials, competences, and meanings, and the interrelations among those elements, using the framework of Shove et al. (2012). We argue that understanding the dynamics of practice and their unique configurations is a starting point to redefine the roles of sustainable interaction design (SID). We propose that designers design towards resources and tools in ways that reflect on the challenges of intelligibility of their design interventions in practices. In addition to considering SID in the light of practice theories, we reveal how design fictions are readily incorporated into green practices in ways that transform those practices and hold implications for transformations of design as well. We bring forward opportunities for designers to co-design with DIY enthusiasts, targeted as practitioners in their own right, designing toward or within a design fiction. As a result, we conclude with the possibility for sustainable interaction designers to become practice-oriented designers who design with transparent open strategies and accessible materials and competences.",
         "acmLink": "",
         "authors": [
             {
@@ -1152,11 +1152,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "In this paper, we argue that an approach informed by practice theory coupled with design fiction provides useful insights into the role of interaction design with respect to environmental sustainability. ",
         "contactEmail": "rwakkary@sfu.ca",
         "contactFirstName": "Ron",
         "contactLastName": "Wakkary",
-        "keywords": "",
+        "keywords": "sustainable interaction design; social practices; practice oriented-design; DIY; sustainability; repair; design fiction",
         "venue": "TOCHI",
         "session": "s202",
         "communities": [
@@ -1170,7 +1170,7 @@
     {
         "id": "to111",
         "title": "Moderated Online Social Therapy: Designing and Evaluating Technology for Mental Health",
-        "abstract": "",
+        "abstract": "While the use and prevalence of web-based mental health applications has grown over the last decade, many of these services suffer high rates of attrition. This is problematic as face-to-face support for mental health is limited. To determine appropriate design guidelines for increasing engagement we conducted a study of First Episode Psychosis (FEP) patients and reviewed theories on the use of existing online services. We produced a set of design goals, developed an online application that combined social networking and online therapy within a clinician moderated site and conducted a six week trial with a group of young FEP patients. The design goals, based on existing theory including Supportive Accountability and Positive Psychology are operationalised through a model we call MOST (Moderated Online Social Therapy). The trial results indicate that our implementation achieved the design goals and that the MOST model can inform the development of more effective and engaging online therapies. ",
         "acmLink": "",
         "authors": [
             {
@@ -1284,11 +1284,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "We are building an online therapy for psychosis. Early results indicate that a combination of psychotherapy, social interaction and active moderation by clinicians has therapeutic benefits and improves client engagement. \\ ",
         "contactEmail": "greg.wadley@unimelb.edu.au",
         "contactFirstName": "Greg",
         "contactLastName": "Wadley",
-        "keywords": "",
+        "keywords": "Mental Health Interventions; Online Therapy; Supportive Accountability; Positive Computing; User Experience; User-appropriate Design;",
         "venue": "TOCHI",
         "session": "s108",
         "communities": [
@@ -1374,8 +1374,8 @@
                 "type": "author",
                 "venue": "TOCHI",
                 "rank": 4,
-                "givenName": "William D",
-                "middleInitial": "",
+                "givenName": "William",
+                "middleInitial": "D",
                 "familyName": "Tucker",
                 "email": "wdtucker@gmail.com",
                 "primary": {
@@ -1397,7 +1397,7 @@
                 "venue": "TOCHI",
                 "rank": 5,
                 "givenName": "M",
-                "middleInitial": "J",
+                "middleInitial": "",
                 "familyName": "Tshemese",
                 "email": "nic.bidwell@gmail.com",
                 "primary": {
@@ -1419,7 +1419,7 @@
                 "venue": "TOCHI",
                 "rank": 6,
                 "givenName": "N",
-                "middleInitial": "J",
+                "middleInitial": "",
                 "familyName": "Gaven",
                 "email": "nic.bidwell@gmail.com",
                 "primary": {
@@ -1441,8 +1441,8 @@
                 "venue": "TOCHI",
                 "rank": 7,
                 "givenName": "S",
-                "middleInitial": "J",
-                "familyName": "Ntlango",
+                "middleInitial": "",
+                "familyName": "Ntlangano",
                 "email": "nic.bidwell@gmail.com",
                 "primary": {
                     "dept": "Department of Informatics",
@@ -1485,7 +1485,7 @@
                 "venue": "TOCHI",
                 "rank": 9,
                 "givenName": "Kristen",
-                "middleInitial": "A.",
+                "middleInitial": "A",
                 "familyName": "Eglinton",
                 "email": "kristenali@gmail.com",
                 "primary": {
@@ -1519,7 +1519,7 @@
     {
         "id": "to113",
         "title": "Age Differences in Credibility Judgments of Online Health Information",
-        "abstract": "",
+        "abstract": "Older adults are a notable group among the exponentially growing population of online health information consumers. We conducted two laboratory studies to explore how the credibility cues in message contents, website features, and user-generated comments differentially impact younger (19 to 26 years of age) and older adults’ (58 to 80 years of age) credibility judgments. Results from the first experiment showed that older adults were less sensitive to the credibility cues in message contents and those in website features than younger adults. Verbal protocol analysis revealed that these differences could be caused by the higher tendency of older adults to passively accept web information, and their lack of deliberation on its quality and attention towards contextual web features (e.g., design look, source identity). In the second experiment, we studied how credibility cues from user reviews might differentially impact older and younger adults’ credibility judgments of online health information. Results showed that consistent credibility cues in user reviews and message contents could facilitate older adults’ credibility judgments. When the two were inconsistent, older adults, as compared to younger ones, were less swayed by highly appraising user reviews given to low credibility information. These results provided important implications for designing health information technologies that better fit the older population.",
         "acmLink": "",
         "authors": [
             {
@@ -1567,11 +1567,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "We presented two empirical studies to understand how older adults make credibility judgments of online health information differently from younger adults.",
         "contactEmail": "liaoqz08@gmail.com",
         "contactFirstName": "Q. Vera",
         "contactLastName": "Liao",
-        "keywords": "",
+        "keywords": "Web Credibility; Aging",
         "venue": "TOCHI",
         "session": "s177",
         "communities": [
@@ -1583,7 +1583,7 @@
     {
         "id": "to114",
         "title": "Let’s Jam the Reactable: Peer Learning during Musical Improvisation with a Tabletop Tangible Interface",
-        "abstract": "",
+        "abstract": "There has been little research on how interactions with tabletop and Tangible User Interfaces (TUIs) by groups of users change over time. In this article, we investigate the challenges and opportunities of a tabletop tangible interface based on constructive building blocks. We describe a long-term lab study of groups of expert musicians improvising with the Reactable, a commercial tabletop TUI for music performance. We examine interaction, focusing on interface, tangible, musical, and social phenomena. Our findings reveal a practice-based learning between peers in situated contexts, and new forms of participation, all of which is facilitated by the Reactable’s tangible interface, if compared to traditional musical ensembles. We summarise our findings as a set of design considerations and conclude that construction processes on interactive tabletops support learning by doing and peer learning, which can inform constructivist approaches to learning with technology.",
         "acmLink": "",
         "authors": [
             {
@@ -1719,11 +1719,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Multi-session study detailing peer learning over time with groups of expert musicians improvising with the Reactable interface. A contribution to understanding long-term user interactions with tabletop collaborative systems.",
         "contactEmail": "a.xambo@open.ac.uk",
         "contactFirstName": "Anna",
         "contactLastName": "Xambó",
-        "keywords": "",
+        "keywords": "Tabletop interfaces; tangible user interfaces; collaborative learning; musical improvisation",
         "venue": "TOCHI",
         "session": "s207",
         "communities": [
@@ -1740,7 +1740,7 @@
     {
         "id": "to117",
         "title": "Exploring Sustainable Practices in Workplace Settings through Visualizing Electricity Consumption",
-        "abstract": "",
+        "abstract": "People’s domestic habits are increasingly being targeted to reduce levels of CO2 emissions. Whereas domestic energy consumption has received a lot of attention with several reported studies on sustainable practices, there are very few studies on workplace practices. Nevertheless, these are considered as having much potential for reducing energy consumption. This paper presents the findings from two field studies where two different types of prototypes for visualizing energy use were designed, implemented and evaluated in different types of workplace settings – factories and offices. The studies used design probes to explore how visual feedback for electricity use was interpreted and acted upon by employees in work settings. A striking observation was that it is very difficult to get people to change to more pro-environmental behavior and practices in a workplace environment. The paper discusses why this might be the case.",
         "acmLink": "",
         "authors": [
             {
@@ -1793,7 +1793,7 @@
                 "venue": "TOCHI",
                 "rank": 3,
                 "givenName": "Li",
-                "middleInitial": "S M",
+                "middleInitial": "",
                 "familyName": "Jönsson",
                 "email": "ljo@dkds.dk",
                 "primary": {
@@ -1838,7 +1838,7 @@
                 "rank": 5,
                 "givenName": "Minna",
                 "middleInitial": "",
-                "familyName": "Räsenän",
+                "familyName": "Räsänen",
                 "email": "minna.rasanen@sh.se",
                 "primary": {
                     "dept": "Södertörn University",
@@ -1854,11 +1854,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Presents field studies where prototypes for visualizing energy use were designed and evaluated in different types of workplace settings. Can assist in designing energy efficiency programs for the workplace.",
         "contactEmail": "cecilia.katzeff@tii.se",
         "contactFirstName": "Cecilia",
         "contactLastName": "Katzeff",
-        "keywords": "",
+        "keywords": "Pro-environmental HCI; sustainable practice; design interventions; ethnography; case studies; research through design",
         "venue": "TOCHI",
         "session": "s133",
         "communities": [
@@ -1871,7 +1871,7 @@
     {
         "id": "to118",
         "title": "Disambiguation of Imprecise Input with One-dimensional Rotational Text Entry",
-        "abstract": "",
+        "abstract": "We introduce a distinction between disambiguation supporting continuous vs. discrete ambiguous text entry. With continuous ambiguous text entry methods, letter selections are treated as ambiguous due to expected \\ imprecision rather than due to discretized letter groupings. We investigate the simple case of a one-dimensional character layout to demonstrate the potential of techniques designed for imprecise entry. \\ Our rotation-based sight-free technique, Rotext, maps device orientation to a layout optimized for disambiguation, motor efficiency, and learnability. We also present an audio feedback system for efficient selection of disambiguated word candidates, and explore the role that time spent acknowledging word-level feedback plays in text entry performance. Through a user study, we show that despite missing on average by 2.46–2.92 character positions, with the aid of a maximum a posteriori (MAP) disambiguation algorithm, users can average sight-free entry speed of 12.6 wpm with 98.9% accuracy within 13 sessions (4.3 hours). In a second study, expert users are found to reach 21 wpm with 99.6% accuracy after session 20 (6.7 hours) and continue to grow in performance, with individual phrases entered at up to 37 wpm. A final study revisits the learnability of the optimized layout. Our modelling of ultimate performance indicates maximum overall sight-free entry speeds of 29.0 wpm with audio feedback, or 40.7 wpm if an expert user could operate without relying on audio feedback.",
         "acmLink": "",
         "authors": [
             {
@@ -1941,11 +1941,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "We explore how to design a technique to allow continuous ambiguous input in support of sight-free text entry on a mobile device.",
         "contactEmail": "khai@cs.toronto.edu",
         "contactFirstName": "Khai",
         "contactLastName": "Truong",
-        "keywords": "",
+        "keywords": "Sight-free; text entry; mobile; gyroscope; accelerometer; alphabet design; disambiguation; ambiguous text layout",
         "venue": "TOCHI",
         "session": "s170",
         "communities": [
@@ -1958,7 +1958,7 @@
     {
         "id": "to120",
         "title": "Predicting Whether Users View Dynamic Content on the World Wide Web",
-        "abstract": "",
+        "abstract": "Dynamic micro-content—interactive or updating widgets and features—is now widely used on the Web, but there is little understanding of how people allocate attention to it. In this article we present the results of an eye-tracking investigation examining how the nature of dynamic micro-content influences whether or not the user views it. We propose and validate the Dynamic Update Viewing-likelihood (DUV) model, a CHi-squared Automatic Interaction Detector (CHAID) model that predicts with around 80% accuracy whether users view dynamic updates as a function of how they are initiated, their size, and their duration. The model is constructed with data from live Web sites and does not rely on knowledge of the user's task to make its predictions, giving it a high level of external validity. We discuss one example of its application: informing how dynamic content should be presented in audio via assistive technology for people with visual impairments.",
         "acmLink": "",
         "authors": [
             {
@@ -1971,8 +1971,8 @@
                 "familyName": "Jay",
                 "email": "caroline.jay@manchester.ac.uk",
                 "primary": {
-                    "dept": "School  of Computer Science",
-                    "institution": "University of Manchester",
+                    "dept": "School of Computer Science",
+                    "institution": "The University of Manchester",
                     "city": "Manchester",
                     "country": "United Kingdom"
                 },
@@ -2015,10 +2015,10 @@
                 "familyName": "Harper",
                 "email": "simon.harper@manchester.ac.uk",
                 "primary": {
-                    "dept": "School  of Computer Science",
-                    "institution": "University of Manchester",
-                    "city": "Manchester",
-                    "country": "United Kingdom"
+                    "dept": "School  of Computer Science, University of Manchester, Manchester, United Kingdom",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -2028,11 +2028,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This paper presents the Dynamic Update Viewing-likelihood model, which predicts whether people view interactive or updating content on the Web as a function of content features, independent of user task.",
         "contactEmail": "caroline.jay@manchester.ac.uk",
         "contactFirstName": "Caroline",
         "contactLastName": "Jay",
-        "keywords": "",
+        "keywords": "interaction modeling; Web; ",
         "venue": "TOCHI",
         "session": "s176",
         "communities": [
@@ -2045,7 +2045,7 @@
     {
         "id": "to122",
         "title": "Wild at Home: The Neighborhood as a Living Laboratory for HCI",
-        "abstract": "",
+        "abstract": "HCI can “turn to the wild” but still stay home. Local community life presents a rich context for under-standing challenges and possibilities of information technology. We summarize and reflect upon a program of participatory design research in which we facilitated activities and experiences of our neighbors through developing a series of community-oriented programs and information systems through the past two dec-ades. We organize these reflections around five overlapping themes: visibility of community actors, crea-tion of community information infrastructures, the role of place-based identity and activity in community, the effectiveness of participatory relationships, and the research designs and methods appropriate. We frame these reflections around a conceptual model of community, and the suggestion that the local com-munity can be a living laboratory for HCI in the wild.",
         "acmLink": "",
         "authors": [
             {
@@ -2081,23 +2081,23 @@
                 "email": "mrosson@psu.edu",
                 "primary": {
                     "dept": "Center for Human-Computer Interaction, http://www.chiplace.org/content/Members/show-profile.jsp?id=213, University Park, Pennsylvania, United States",
-                    "institution": "College of Information Sciences and Technology, The Pennsylvania State University, University Park, Pennsylvania, United States",
+                    "institution": "",
                     "city": "",
                     "country": ""
                 },
                 "secondary": {
-                    "dept": "",
+                    "dept": "College of Information Sciences and Technology, The Pennsylvania State University, University Park, Pennsylvania, United States",
                     "institution": "",
                     "city": "",
                     "country": ""
                 }
             }
         ],
-        "cbStatement": null,
+        "cbStatement": "HCI can “turn to the wild” but still stay home. Community life presents rich context for understanding information technology. We describe participatory design research for community-oriented programs and information systems.",
         "contactEmail": "jmcarroll@psu.edu",
         "contactFirstName": "John",
         "contactLastName": "Carroll",
-        "keywords": "Nov 15 10:14",
+        "keywords": "Community informatics; Participatory design research; Turn to the wild",
         "venue": "TOCHI",
         "session": "s204",
         "communities": [
@@ -2288,7 +2288,7 @@
     {
         "id": "to127",
         "title": "Collapse Informatics and Practice: Theory, Method, and Design",
-        "abstract": "",
+        "abstract": "What happens if efforts to achieve sustainability fail? Research in many fields argues that contemporary global industrial civilization will not persist indefinitely in its current form, and may, like many past human societies, eventually collapse. Arguments in environmental studies, anthropology, and other fields indicate that this transformation could begin within the next half-century. While imminent collapse is far from certain, it is prudent to consider now how to develop sociotechnical systems for use in these scenarios. We introduce the notion of collapse informatics—the study, design, and development of sociotechnical systems in the abundant present for use in a future of scarcity. We sketch the design space of collapse informatics and a variety of example projects. We ask how notions of practice—theorized as collective activity in the “here and now”—can shift to the future since collapse has yet to occur.",
         "acmLink": "",
         "authors": [
             {
@@ -2362,7 +2362,7 @@
                 "type": "author",
                 "venue": "TOCHI",
                 "rank": 4,
-                "givenName": "Donald J.",
+                "givenName": "Donald",
                 "middleInitial": "J",
                 "familyName": "Patterson",
                 "email": "djp3@ics.uci.edu",
@@ -2424,11 +2424,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "What happens if efforts to achieve sustainability fail? Collapse informatics is the study, design, and development of sociotechnical systems in the abundant present for use in a future of scarcity. ",
         "contactEmail": "wmt@uci.edu",
         "contactFirstName": "Bill",
         "contactLastName": "Tomlinson",
-        "keywords": "",
+        "keywords": "Sustainable HCI; collapse; sustainability; mitigation; practice theory",
         "venue": "TOCHI",
         "session": "s202",
         "communities": [
@@ -2442,7 +2442,7 @@
     {
         "id": "to128",
         "title": "Evaluating a tool for improving accessibility to charts and graphs",
-        "abstract": "",
+        "abstract": "This paper reports a case study of the iterative design and evaluation of a natural language- driven assistive technology, iGraph-Lite, providing people who are blind access to line graphs. Two laboratory-based usability studies involving blind and sighted people are presented with a discussion of the ensuing implementation of changes. Blind participants were found to adopt different graph interrogation strategies than sighted participants. A small field study is then reported in which a blind user who works with graphs took part to determine the degree to which the iGraph-Lite commands would meet the needs of blind graph experts. The final study invited sighted graph experts and novices to visually inspect and explain a set of line graphs comparable to those used in the usability studies. It aimed to highlight the concepts and the range of words sighted people use, to ascertain the appropriateness of the iGraph-Lite lexicon. A set of preliminary guidelines is presented.",
         "acmLink": "",
         "authors": [
             {
@@ -2499,10 +2499,10 @@
                 "familyName": "Sumegi",
                 "email": "lsumegi@gmail.com",
                 "primary": {
-                    "dept": "create",
-                    "institution": "Carleton University",
-                    "city": "Ottawa",
-                    "country": "Canada"
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -2521,10 +2521,10 @@
                 "familyName": "Tsuji",
                 "email": "bruce.tsuji@carleton.ca",
                 "primary": {
-                    "dept": "create",
-                    "institution": "Carleton University",
-                    "city": "Ottawa",
-                    "country": "Canada"
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -2534,11 +2534,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This research revealed how to present auditory line graph information enabling a visually impaired person  readily to construct a mental model of it. The tool is used routinely.",
         "contactEmail": "glindgaard@swin.edu.au",
         "contactFirstName": "Gitte",
         "contactLastName": "Lindgaard",
-        "keywords": "",
+        "keywords": "human factors; Accessibility (Blind and Visually Impaired), Natural language Interaction, Statistical Graphs",
         "venue": "TOCHI",
         "session": "s131",
         "communities": [
@@ -2550,7 +2550,7 @@
     {
         "id": "to129",
         "title": "A Large Scale Study of Daily Information Needs Captured In-Situ",
-        "abstract": "",
+        "abstract": "The goal of this work is to provide a fundamental understanding of the daily information needs of people through a large-scale, in-depth, quantitative investigation. To this end, we have conducted one of the most comprehensive studies of information needs to date, spanning a 3-month period and involving over 100 users. The study employed a contextual experience sampling method (ESM); a snippet-based diary technique using SMS technology and an on-line Web diary to gather in-situ insights into the types of needs that occur from day to day, how those needs are addressed and how contextual, technological and demographic factors impact on those needs. Our results not only complement earlier studies but also provide a new understanding of the intricacies of people's daily information needs.",
         "acmLink": "",
         "authors": [
             {
@@ -2603,7 +2603,7 @@
                 "venue": "TOCHI",
                 "rank": 3,
                 "givenName": "Nuria",
-                "middleInitial": "m",
+                "middleInitial": "",
                 "familyName": "Oliver",
                 "email": "nuriao@tid.es",
                 "primary": {
@@ -2620,11 +2620,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Provides real-world insights into the daily information needs of people, how their needs are currently addressed (if at all) and the impact of contextual, demographic and technological factors on those daily needs. ",
         "contactEmail": "church.karen@gmail.com",
         "contactFirstName": "Karen",
         "contactLastName": "Church",
-        "keywords": "",
+        "keywords": "Information needs; daily needs; mobile needs; contextual experience sampling method; ESM; context; diary study; SMS; user behavior; mobile computing; mobile hci;",
         "venue": "TOCHI",
         "session": "s118",
         "communities": [
@@ -2729,7 +2729,7 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This study demonstrates that simpler and more natural user interfaces might compromise task performance in safety-critical environments where people perform multiple concurrent tasks such as driving and e-mailing. ",
         "contactEmail": "michael.schermann@in.tum.de",
         "contactFirstName": "Michael",
         "contactLastName": "Schermann",
@@ -2835,7 +2835,7 @@
     {
         "id": "to134",
         "title": "Complex Activity Recognition using Context Driven Activity Theory and Activity Signatures",
-        "abstract": "",
+        "abstract": "In pervasive and ubiquitous computing systems, human activity recognition has immense potential in a large number of application domains. Current activity recognition techniques (i) do not handle variations in sequence, concurrency and interleaving of complex activities; (ii) do not incorporate context; and (iii) require large amounts of training data. There is a lack of a unifying theoretical framework which exploits both domain knowledge and data-driven observations to infer complex activities. In this article, we propose, develop and validate a novel Context-Driven Activity Theory (CDAT) for recognizing complex activities. We develop a mechanism using probabilistic and Markov chain analysis to discover complex activity signatures and generate complex activity definitions. We also develop a Complex Activity Recognition (CAR) algorithm. It achieves an overall accuracy of 95.73% using extensive experimentation with real-life test data. CDAT utilizes context and links complex activities to situations, which reduces inference time by 32.5% and also reduces training data by 66%.",
         "acmLink": "",
         "authors": [
             {
@@ -2905,11 +2905,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "A novel Context-Driven Activity Theory (CDAT) and a Complex Activity Recognition (CAR) algorithm are presented that efficiently handle variations in sequence, concurrency and interleaving of complex activities of daily living.",
         "contactEmail": "saguna.mail@gmail.com",
         "contactFirstName": "Saguna",
         "contactLastName": "Saguna",
-        "keywords": "",
+        "keywords": "activity recognition, complex activity, context-driven activity theory, context awareness, concurrent activities, interleaved activities",
         "venue": "TOCHI",
         "session": "s143",
         "communities": [
@@ -2923,7 +2923,7 @@
     {
         "id": "to135",
         "title": "Complementing Text Entry Evaluations with a Composition Task",
-        "abstract": "",
+        "abstract": "A common methodology for evaluating text entry methods is to ask participants to transcribe a predefined set of memorable sentences or phrases. In this article, we explore if we can complement the conventional transcription task with a more externally valid composition task. In a series of large-scale crowdsourced experiments, we found that participants could consistently and rapidly invent high quality and creative compositions with only modest reductions in entry rates. Based on our series of experiments, we provide a best-practice procedure for using composition tasks in text entry evaluations. This includes a judging protocol which can be performed either by the experimenters or by crowdsourced workers on a microtask market. We evaluated our composition task procedure using a text entry method unfamiliar to participants. Our empirical results show that the composition task can serve as a valid complementary text entry evaluation method.",
         "acmLink": "",
         "authors": [
             {
@@ -2971,11 +2971,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "We investigate the use of composition in text entry evaluations. We found participants could consistently and rapidly invent high quality and creative compositions with only modest reductions in entry rates.",
         "contactEmail": "kvertanen@mtech.edu",
         "contactFirstName": "Keith",
         "contactLastName": "Vertanen",
-        "keywords": "",
+        "keywords": "Text entry evaluation; composition; transcription; crowdsourcing",
         "venue": "TOCHI",
         "session": "s170",
         "communities": [
@@ -3167,7 +3167,7 @@
     {
         "id": "to137",
         "title": "TaskGenies: Automatically Providing Action Plans Helps People Complete Tasks",
-        "abstract": "",
+        "abstract": "People complete tasks more quickly when they have concrete plans. However, they often fail to create such action plans. (How) can systems provide these concrete steps automatically? This paper demonstrates that these benefits can also be realized when these plans are created by others or reused from similar tasks. Four experiments test these approaches, finding that people indeed complete more tasks when they receive externally-created action plans. To automatically provide plans, we introduce the Genies workflow that combines benefits of crowd wisdom, collaborative refinement, and automation. We demonstrate and evaluate this approach through the TaskGenies system, and introduce an NLP similarity algorithm for reusing plans. We demonstrate that it is possible for people to create action plans for others, and we show that it can be cost effective.",
         "acmLink": "",
         "authors": [
             {
@@ -3303,11 +3303,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Experiments showing that people complete more tasks with crowd-created action plans. We also introduce the Genies workﬂow that combines benefits of crowd wisdom, collaborative refinement, and automation.",
         "contactEmail": "nicolas@cs.stanford.edu",
         "contactFirstName": "Nicolas",
         "contactLastName": "Kokkalis",
-        "keywords": "",
+        "keywords": "Task management; Crowdsourcing; Action Plans; Implementation Intentions; Time Management; Task Lists; Tasks; To-do; TODO",
         "venue": "TOCHI",
         "session": "s117",
         "communities": [

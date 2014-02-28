@@ -155,10 +155,10 @@
         "email": "ed.price@imtc.gatech.edu",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Georgia Tech",
-            "city": "Atlanta",
-            "country": "United States"
+            "dept": "Georgia Tech, Atlanta, Georgia, United States",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -845,7 +845,7 @@
         "id": "to107",
         "venue": "TOCHI",
         "rank": 1,
-        "givenName": "Liz",
+        "givenName": "Elizabeth",
         "middleInitial": "M",
         "familyName": "Gerber",
         "email": "egerber@northwestern.edu",
@@ -906,9 +906,9 @@
         },
         "secondary": {
             "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Google Inc.",
+            "city": "San Bruno",
+            "country": "United States"
         }
     },
     {
@@ -942,7 +942,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Nuria",
-        "middleInitial": "m",
+        "middleInitial": "",
         "familyName": "Oliver",
         "email": "nuriao@tid.es",
         "role": "",
@@ -1253,8 +1253,8 @@
         "id": "to112",
         "venue": "TOCHI",
         "rank": 4,
-        "givenName": "William D",
-        "middleInitial": "",
+        "givenName": "William",
+        "middleInitial": "D",
         "familyName": "Tucker",
         "email": "wdtucker@gmail.com",
         "role": "",
@@ -1278,7 +1278,7 @@
         "venue": "TOCHI",
         "rank": 5,
         "givenName": "M",
-        "middleInitial": "J",
+        "middleInitial": "",
         "familyName": "Tshemese",
         "email": "nic.bidwell@gmail.com",
         "role": "",
@@ -1302,7 +1302,7 @@
         "venue": "TOCHI",
         "rank": 6,
         "givenName": "N",
-        "middleInitial": "J",
+        "middleInitial": "",
         "familyName": "Gaven",
         "email": "nic.bidwell@gmail.com",
         "role": "",
@@ -1326,8 +1326,8 @@
         "venue": "TOCHI",
         "rank": 7,
         "givenName": "S",
-        "middleInitial": "J",
-        "familyName": "Ntlango",
+        "middleInitial": "",
+        "familyName": "Ntlangano",
         "email": "nic.bidwell@gmail.com",
         "role": "",
         "primary": {
@@ -1374,7 +1374,7 @@
         "venue": "TOCHI",
         "rank": 9,
         "givenName": "Kristen",
-        "middleInitial": "A.",
+        "middleInitial": "A",
         "familyName": "Eglinton",
         "email": "kristenali@gmail.com",
         "role": "",
@@ -1638,7 +1638,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Li",
-        "middleInitial": "S M",
+        "middleInitial": "",
         "familyName": "Jönsson",
         "email": "ljo@dkds.dk",
         "role": "",
@@ -1687,7 +1687,7 @@
         "rank": 5,
         "givenName": "Minna",
         "middleInitial": "",
-        "familyName": "Räsenän",
+        "familyName": "Räsänen",
         "email": "minna.rasanen@sh.se",
         "role": "",
         "primary": {
@@ -1787,8 +1787,8 @@
         "email": "caroline.jay@manchester.ac.uk",
         "role": "",
         "primary": {
-            "dept": "School  of Computer Science",
-            "institution": "University of Manchester",
+            "dept": "School of Computer Science",
+            "institution": "The University of Manchester",
             "city": "Manchester",
             "country": "United Kingdom"
         },
@@ -1835,10 +1835,10 @@
         "email": "simon.harper@manchester.ac.uk",
         "role": "",
         "primary": {
-            "dept": "School  of Computer Science",
-            "institution": "University of Manchester",
-            "city": "Manchester",
-            "country": "United Kingdom"
+            "dept": "School  of Computer Science, University of Manchester, Manchester, United Kingdom",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -1884,12 +1884,12 @@
         "role": "",
         "primary": {
             "dept": "Center for Human-Computer Interaction, http://www.chiplace.org/content/Members/show-profile.jsp?id=213, University Park, Pennsylvania, United States",
-            "institution": "College of Information Sciences and Technology, The Pennsylvania State University, University Park, Pennsylvania, United States",
+            "institution": "",
             "city": "",
             "country": ""
         },
         "secondary": {
-            "dept": "",
+            "dept": "College of Information Sciences and Technology, The Pennsylvania State University, University Park, Pennsylvania, United States",
             "institution": "",
             "city": "",
             "country": ""
@@ -2117,7 +2117,7 @@
         "id": "to127",
         "venue": "TOCHI",
         "rank": 4,
-        "givenName": "Donald J.",
+        "givenName": "Donald",
         "middleInitial": "J",
         "familyName": "Patterson",
         "email": "djp3@ics.uci.edu",
@@ -2243,10 +2243,10 @@
         "email": "lsumegi@gmail.com",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "Carleton University",
-            "city": "Ottawa",
-            "country": "Canada"
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -2267,10 +2267,10 @@
         "email": "bruce.tsuji@carleton.ca",
         "role": "",
         "primary": {
-            "dept": "create",
-            "institution": "Carleton University",
-            "city": "Ottawa",
-            "country": "Canada"
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -2334,7 +2334,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Nuria",
-        "middleInitial": "m",
+        "middleInitial": "",
         "familyName": "Oliver",
         "email": "nuriao@tid.es",
         "role": "",

@@ -1,11 +1,22 @@
 schedule=[
     {
-        "date": "Monday",
+        "date": "April 28th, 2014",
         "day": "Monday",
         "slots": [
             {
+                "slot_id": "Monday_9_00_10_20",
+                "time": "9:00 - 10:20",
+                "slot_class": "morning1",
+                "sessions": [
+                    {
+                        "session": "s-key106",
+                        "room": "Exhibit Hall G"
+                    }
+                ]
+            },
+            {
                 "slot_id": "Monday_11_00_12_20",
-                "time": "11:00-12:20",
+                "time": "11:00 - 12:20",
                 "slot_class": "morning2",
                 "sessions": [
                     {
@@ -49,7 +60,7 @@ schedule=[
                         "room": "717AB"
                     },
                     {
-                        "session": "s-sig119",
+                        "session": "s-sig111",
                         "room": "715A"
                     },
                     {
@@ -64,7 +75,7 @@ schedule=[
             },
             {
                 "slot_id": "Monday_14_00_15_20",
-                "time": "14:00-15:20",
+                "time": "14:00 - 15:20",
                 "slot_class": "afternoon1",
                 "sessions": [
                     {
@@ -131,7 +142,7 @@ schedule=[
             },
             {
                 "slot_id": "Monday_16_00_17_20",
-                "time": "16:00-17:20",
+                "time": "16:00 - 17:20",
                 "slot_class": "afternoon2",
                 "sessions": [
                     {
@@ -199,12 +210,23 @@ schedule=[
         ]
     },
     {
-        "date": "Tuesday",
+        "date": "April 29th, 2014",
         "day": "Tuesday",
         "slots": [
             {
+                "slot_id": "Tuesday_8_30_8_50",
+                "time": "8:30 - 8:50",
+                "slot_class": "morning1",
+                "sessions": [
+                    {
+                        "session": "s-key104",
+                        "room": "Exhibit Hall G"
+                    }
+                ]
+            },
+            {
                 "slot_id": "Tuesday_9_00_10_20",
-                "time": "9:00-10:20",
+                "time": "9:00 - 10:20",
                 "slot_class": "morning1",
                 "sessions": [
                     {
@@ -256,6 +278,10 @@ schedule=[
                         "room": "715A"
                     },
                     {
+                        "session": "s-crs162",
+                        "room": "713AB"
+                    },
+                    {
                         "session": "s-crs129-1",
                         "room": "709"
                     },
@@ -267,7 +293,7 @@ schedule=[
             },
             {
                 "slot_id": "Tuesday_11_00_12_20",
-                "time": "11:00-12:20",
+                "time": "11:00 - 12:20",
                 "slot_class": "morning2",
                 "sessions": [
                     {
@@ -334,7 +360,7 @@ schedule=[
             },
             {
                 "slot_id": "Tuesday_14_00_15_20",
-                "time": "14:00-15:20",
+                "time": "14:00 - 15:20",
                 "slot_class": "afternoon1",
                 "sessions": [
                     {
@@ -401,7 +427,7 @@ schedule=[
             },
             {
                 "slot_id": "Tuesday_16_00_17_20",
-                "time": "16:00-17:20",
+                "time": "16:00 - 17:20",
                 "slot_class": "afternoon2",
                 "sessions": [
                     {
@@ -465,12 +491,23 @@ schedule=[
         ]
     },
     {
-        "date": "Wednesday",
+        "date": "April 30th, 2014",
         "day": "Wednesday",
         "slots": [
             {
+                "slot_id": "Wednesday_8_30_8_50",
+                "time": "8:30 - 8:50",
+                "slot_class": "morning1",
+                "sessions": [
+                    {
+                        "session": "s-key103",
+                        "room": "Exhibit Hall G"
+                    }
+                ]
+            },
+            {
                 "slot_id": "Wednesday_9_00_10_20",
-                "time": "9:00-10:20",
+                "time": "9:00 - 10:20",
                 "slot_class": "morning1",
                 "sessions": [
                     {
@@ -498,7 +535,7 @@ schedule=[
                         "room": "801B"
                     },
                     {
-                        "session": "s-panel4",
+                        "session": "s-sig112",
                         "room": "716A"
                     },
                     {
@@ -533,7 +570,7 @@ schedule=[
             },
             {
                 "slot_id": "Wednesday_11_00_12_20",
-                "time": "11:00-12:20",
+                "time": "11:00 - 12:20",
                 "slot_class": "morning2",
                 "sessions": [
                     {
@@ -600,7 +637,7 @@ schedule=[
             },
             {
                 "slot_id": "Wednesday_14_00_15_20",
-                "time": "14:00-15:20",
+                "time": "14:00 - 15:20",
                 "slot_class": "afternoon1",
                 "sessions": [
                     {
@@ -667,7 +704,7 @@ schedule=[
             },
             {
                 "slot_id": "Wednesday_16_00_17_20",
-                "time": "16:00-17:20",
+                "time": "16:00 - 17:20",
                 "slot_class": "afternoon2",
                 "sessions": [
                     {
@@ -715,7 +752,7 @@ schedule=[
                         "room": "802AB"
                     },
                     {
-                        "session": "s-sig103",
+                        "session": "s-sig114",
                         "room": "715A"
                     },
                     {
@@ -735,12 +772,23 @@ schedule=[
         ]
     },
     {
-        "date": "Thursday",
+        "date": "May 1st, 2014",
         "day": "Thursday",
         "slots": [
             {
+                "slot_id": "Thursday_8_30_8_50",
+                "time": "8:30 - 8:50",
+                "slot_class": "morning1",
+                "sessions": [
+                    {
+                        "session": "s-key102",
+                        "room": "Exhibit Hall G"
+                    }
+                ]
+            },
+            {
                 "slot_id": "Thursday_9_00_10_20",
-                "time": "9:00-10:20",
+                "time": "9:00 - 10:20",
                 "slot_class": "morning1",
                 "sessions": [
                     {
@@ -788,7 +836,7 @@ schedule=[
                         "room": "802AB"
                     },
                     {
-                        "session": "s-sig111",
+                        "session": "s-sig119",
                         "room": "715A"
                     },
                     {
@@ -807,7 +855,7 @@ schedule=[
             },
             {
                 "slot_id": "Thursday_11_00_12_20",
-                "time": "11:00-12:20",
+                "time": "11:00 - 12:20",
                 "slot_class": "morning2",
                 "sessions": [
                     {
@@ -855,7 +903,7 @@ schedule=[
                         "room": "802AB"
                     },
                     {
-                        "session": "s-sig112",
+                        "session": "s-sig103",
                         "room": "715A"
                     },
                     {
@@ -874,7 +922,7 @@ schedule=[
             },
             {
                 "slot_id": "Thursday_14_00_15_20",
-                "time": "14:00-15:20",
+                "time": "14:00 - 15:20",
                 "slot_class": "afternoon1",
                 "sessions": [
                     {
@@ -918,16 +966,31 @@ schedule=[
                         "room": "802AB"
                     },
                     {
-                        "session": "s-sig114",
+                        "session": "s-panel4",
                         "room": "715A"
                     },
                     {
-                        "session": "s-crs142",
+                        "session": "s-crs163",
                         "room": "713AB"
+                    },
+                    {
+                        "session": "s-crs142",
+                        "room": "709"
                     },
                     {
                         "session": "s-crs146",
                         "room": "711"
+                    }
+                ]
+            },
+            {
+                "slot_id": "Thursday_15_20_16_00",
+                "time": "15:20 - 16:00",
+                "slot_class": "afternoon1",
+                "sessions": [
+                    {
+                        "session": "s-key100",
+                        "room": "Exhibit Hall G"
                     }
                 ]
             }
