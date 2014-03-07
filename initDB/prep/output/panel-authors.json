@@ -793,9 +793,9 @@
         "role": "",
         "primary": {
             "dept": "Philips Healthcare, Andover, Massachusetts, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Philips Healthcare",
+            "city": "Andover",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -816,9 +816,9 @@
         "role": "",
         "primary": {
             "dept": "Ontario College of Art and Design University , Toronto, Ontario, Canada",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Ontario College of Art and Design University",
+            "city": "Toronto",
+            "country": "Canada"
         },
         "secondary": {
             "dept": "",
@@ -839,9 +839,9 @@
         "role": "",
         "primary": {
             "dept": "University Health Network, Toronto, Ontario, Canada",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "University Health Network",
+            "city": "Toronto",
+            "country": "Canada"
         },
         "secondary": {
             "dept": "",
@@ -862,9 +862,9 @@
         "role": "",
         "primary": {
             "dept": "Patients Canada, Toronto, Ontario, Canada",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Patients Canada",
+            "city": "Toronto",
+            "country": "Canada"
         },
         "secondary": {
             "dept": "",
@@ -885,9 +885,9 @@
         "role": "",
         "primary": {
             "dept": "Healthcare Human Factors, Toronto, Ontario, Canada",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Healthcare Human Factors",
+            "city": "Toronto",
+            "country": "Canada"
         },
         "secondary": {
             "dept": "",

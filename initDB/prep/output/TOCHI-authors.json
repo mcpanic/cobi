@@ -155,10 +155,10 @@
         "email": "ed.price@imtc.gatech.edu",
         "role": "",
         "primary": {
-            "dept": "Georgia Tech, Atlanta, Georgia, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Institute for People and Technology",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -1835,10 +1835,10 @@
         "email": "simon.harper@manchester.ac.uk",
         "role": "",
         "primary": {
-            "dept": "School  of Computer Science, University of Manchester, Manchester, United Kingdom",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "School  of Computer Science",
+            "institution": "The University of Manchester",
+            "city": "Manchester",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -1883,16 +1883,16 @@
         "email": "mrosson@psu.edu",
         "role": "",
         "primary": {
-            "dept": "Center for Human-Computer Interaction, http://www.chiplace.org/content/Members/show-profile.jsp?id=213, University Park, Pennsylvania, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Center for Human-Computer Interaction",
+            "institution": "Pennsylvania State University",
+            "city": "University Park",
+            "country": "United States"
         },
         "secondary": {
-            "dept": "College of Information Sciences and Technology, The Pennsylvania State University, University Park, Pennsylvania, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Center for Human-Computer Interaction",
+            "institution": "Pennsylvania State University",
+            "city": "University Park",
+            "country": "United States"
         }
     },
     {
@@ -2292,9 +2292,9 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Yahoo Labs",
-            "city": "Sunnyvale",
-            "country": "United States"
+            "institution": "Telefonica Research",
+            "city": "Barcelona",
+            "country": "Spain"
         },
         "secondary": {
             "dept": "",
@@ -2316,9 +2316,9 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Zurich",
-            "country": "Switzerland"
+            "institution": "Telefonica Research",
+            "city": "Barcelona",
+            "country": "Spain"
         },
         "secondary": {
             "dept": "",
@@ -2490,7 +2490,7 @@
         },
         "secondary": {
             "dept": "",
-            "institution": "Delft University of Technology, Industrial Design",
+            "institution": "Delft University of Technology",
             "city": "Delft",
             "country": "The Netherlands"
         }
@@ -2507,10 +2507,10 @@
         "email": "D.j.vaneijk@tudelft.nl",
         "role": "",
         "primary": {
-            "dept": "Industrial Design",
+            "dept": "",
             "institution": "Delft University of Technology",
             "city": "Delft",
-            "country": "Netherlands"
+            "country": "The Netherlands"
         },
         "secondary": {
             "dept": "",

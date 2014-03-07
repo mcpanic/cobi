@@ -1900,7 +1900,7 @@
     },
     {
         "id": "alt163",
-        "title": "Translation from text to touch - Touching a “Japanese old tale”",
+        "title": "Translation from Text to Touch -- Touching a “Japanese Old Tale”",
         "abstract": "The character display and interface through visual and auditory senses have been the focus of the Computer Human Interaction and also tactile sense interface has been studied. We propose a method for integrating character information and tactile sense, by focusing on the structure of texts and phonetic aspects of language. By using this method, we extract the tactile elements of “The Tale of the Heike, which has been handed down in Japan over a thousand years. Also, we extract the tactile elements of the English version of the tale and a passage from Hamlet and compare their tactile characteristics. ",
         "acmLink": "",
         "authors": [
@@ -1940,10 +1940,10 @@
                     "country": "Japan"
                 },
                 "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "SDM Institute",
+                    "institution": "Keio University",
+                    "city": "Yokohama City",
+                    "country": "Japan"
                 }
             },
             {
@@ -2342,7 +2342,7 @@
     {
         "id": "alt191",
         "title": "QnDReview: Read 100 CHI Papers in 7 Hours",
-        "abstract": "In 2013, 392 CHI research papers and notes were published and even more papers in the domain of Human-Computer Interaction (HCI) are constantly published in various conferences and journals. It is quite arduous, if not impossible, to read all of these papers. One approach to deal with this information deluge is to focus on skimming through lots of papers in a short period of time, so that one can more wisely choose what to read before investing time in them. In order to teach such a skimming technique, I have taught graduate-level students in an HCI course a technique, called \"Quick and Dirty Review (QnDReview).\" The method has been employed in the course for five semesters, and students' responses were collected and analyzed. Results showed that students spent, on average, 4.3 minutes per paper and believed that they got the gist of each paper. However, the largest benefits I noticed are that students get the overall pictures of the fields and generate interesting ideas while exposing themselves to various new ideas through this approach.",
+        "abstract": "In 2013, 392 research papers and notes were published in the CHI conference (The ACM CHI Conference on Human Factors in Computing Systems) and even more papers in the domain of Human-Computer Interaction (HCI) are constantly published in various conferences and journals. It is quite arduous, if not impossible, to read all of these papers. One approach to deal with this information deluge is to focus on skimming through lots of papers in a short period of time, so that one can more wisely choose what to read before investing time in them. In order to teach such a skimming technique, I have taught a technique, called \"Quick and Dirty Review (QnDReview),\" in a graduate-level HCI course. The method has been employed in the course for five semesters, and students' responses were collected and analyzed. Results showed that students spent, on average, 4.3 minutes per paper and believed that they got the gist of each paper. However, the largest benefit I noticed is that students get the overall pictures of the fields while exposing themselves to various new ideas through this approach.",
         "acmLink": "",
         "authors": [
             {

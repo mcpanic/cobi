@@ -3389,7 +3389,7 @@
     {
         "id": "crs142",
         "title": "How You Could Benefit from Using ISO Standards",
-        "abstract": "",
+        "abstract": "The course explains how international standards can provide a sound basis for education and training, can provide authority for design and development, and are a rich source of guidance and reference material.  It provides an overview of the contribution that international standards can make to: better user interface design, measuring usability, documenting information about usability, broadening the concept of usability, good practice in human-centred design, helping your organisation improve its process, and making usability and UX a part of systems engineering.",
         "acmLink": "",
         "authors": [
             {
@@ -3518,7 +3518,7 @@
     {
         "id": "crs146",
         "title": "Evaluating Children’s Interactive Products",
-        "abstract": "",
+        "abstract": "Over the last decade there has been an increased interest in designing for children within the context of HCI.  This activity has lead to a community of researchers and practitioners seeking information on best practice on how to work with children.  This course will introduce attendees to some of the pitfalls and difficulties when carrying out evaluations with children but will then balance these with tips and tricks, methods and processes that will ensure that anyone attending this course will leave being able to plan and carry out a reasonable and safe evaluation with children.",
         "acmLink": "",
         "authors": [
             {
@@ -3852,44 +3852,8 @@
         "communities": []
     },
     {
-        "id": "crs160",
-        "title": "The Body in Design",
-        "abstract": "",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth12108",
-                "type": "author",
-                "venue": "course",
-                "rank": 1,
-                "givenName": "Toni",
-                "familyName": "Robertson",
-                "email": "Toni.Robertson@uts.edu.au",
-                "primary": {
-                    "dept": "",
-                    "institution": "University of Technology, Sydney",
-                    "city": "Sydney",
-                    "country": "Australia"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            }
-        ],
-        "cbStatement": "This course revisits feminist theory to examine the ethical and pragmatic motivations for prioritising the active human body in technology design.",
-        "contactEmail": "Toni.Robertson@uts.edu.au",
-        "contactFirstName": "Toni",
-        "contactLastName": "Robertson",
-        "venue": "course",
-        "session": "s-crs160",
-        "communities": []
-    },
-    {
         "id": "crs161",
-        "title": "How social media design shapes society",
+        "title": "How Social Media Design Shapes Society",
         "abstract": "The design of social media influences the way people interact with each other online – and shapes our society. This course will look at three key areas: how social identity is portrayed online; our changing social networks and the technologies that support them; and the role of pseudonymity in supporting privacy.",
         "acmLink": "",
         "authors": [
@@ -3925,7 +3889,7 @@
     },
     {
         "id": "crs162",
-        "title": "CItizen Science: An Introduction",
+        "title": "What HCI can do for Citizen Science",
         "abstract": "",
         "acmLink": "",
         "authors": [
@@ -3951,7 +3915,7 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Citizen science supports public participation in scientific research. Increasingly new devices including smartphones, sensors, and technologies for validating and communicating data, are integrated into these practices. We suggest design, privacy and security guidelines.",
         "contactEmail": "preece@umd.edu",
         "contactFirstName": "Jenny",
         "contactLastName": "Preece",
@@ -3961,7 +3925,7 @@
     },
     {
         "id": "crs163",
-        "title": "A Conversation with Susan Dray: Uncovering the Ordinary, Inspiring the Extraordinary",
+        "title": "Uncovering the Ordinary, Inspiring the Extraordinary: A Conversation with Susan Dray",
         "abstract": "",
         "acmLink": "",
         "authors": [
@@ -3985,9 +3949,30 @@
                     "city": "",
                     "country": ""
                 }
+            },
+            {
+                "id": "auth1149",
+                "type": "author",
+                "venue": "course",
+                "rank": 2,
+                "givenName": "Elizabeth",
+                "familyName": "Churchill",
+                "email": "churchill@acm.org",
+                "primary": {
+                    "dept": "",
+                    "institution": "eBay Research Lab, eBay Inc.",
+                    "city": "San Jose",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "From studying the neurophysiology of learning, to championing HCI in industry and promoting user-centered approaches to international development, Susan Dray, a 2014 inductee to the CHI Academy, will share key projects and key lessons for HCI from her career. ",
         "contactEmail": "susan.dray@dray.com",
         "contactFirstName": "Susan",
         "contactLastName": "Dray",
@@ -4143,10 +4128,10 @@
                 "familyName": "Price",
                 "email": "ed.price@imtc.gatech.edu",
                 "primary": {
-                    "dept": "Georgia Tech, Atlanta, Georgia, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Institute for People and Technology",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",
@@ -4329,7 +4314,7 @@
     {
         "id": "to103",
         "title": "Performance-led Research In The Wild",
-        "abstract": "",
+        "abstract": "We explore the approach of performance-led research in the wild in which artists drive the creation of novel performances with the support of HCI researchers that are then deployed and studied at public performance in cultural settings such as galleries, festivals and on the city streets. We motivate the approach and then describe how it consists of three distinct activities – practice, studies and theory – that are interleaved in complex ways through nine different relationships. We present a historical account of how the approach has evolved over a fifteen-year period, charting the evolution of a complex web of projects, papers and relationships between them. We articulate the challenges of pursuing each activity as well as overarching challenges of balancing artistic and research interests, flexible management of relationships, and finally ethics.",
         "acmLink": "",
         "authors": [
             {
@@ -4553,11 +4538,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Performance-led research in the wild involves artists and HCI researchers creating performances that are deployed and studied in cultural settings such as galleries, festivals and on the city streets.",
         "contactEmail": "sdb@cs.nott.ac.uk",
         "contactFirstName": "Steve",
         "contactLastName": "Benford",
-        "keywords": "",
+        "keywords": "Art; performance; methodology; ethnography; theory; performance-led; in the wild",
         "venue": "TOCHI",
         "session": "s204",
         "communities": [
@@ -4646,7 +4631,7 @@
         "contactEmail": "eva.ganglbauer@tuwien.ac.at",
         "contactFirstName": "Eva",
         "contactLastName": "Ganglbauer",
-        "keywords": "Everyday practice; food; food waste; gardening; sustainability; technology probe; design;",
+        "keywords": "Everyday practice; food; food waste; gardening; sustainability; technology probe;",
         "venue": "TOCHI",
         "session": "s133",
         "communities": [
@@ -4791,7 +4776,7 @@
     {
         "id": "to106",
         "title": "Uncovering practices of making energy consumption accountable: A phenomenological inquiry",
-        "abstract": "",
+        "abstract": "Reacting to the discussion on global warming, the HCI community has started to explore the design of tools to support responsible energy consumption. An important part of this research focuses on motivating energy savings by providing feedback tools which present consumption metrics interactively. In this line of work, the configuration of feedback has been mainly discussed using cognitive or behavioral factors. This narrow focus, however, misses a highly relevant perspective for the design of technology that supports sustainable lifestyles: to investigate into the multiplicity of forms in which individuals or collectives actually consume energy. In this paper, we broaden this focus, by taking a phenomenological lens to study how people use off-the-shelf eco-feedback systems in private households to make energy consumption accountable and explainable. By reconstructing accounting practices, we delineate several constitutive elements of the phenomenon of energy usage in daily life. We complement these elements with a description of the sophisticated methods used by people to organize their energy practices and to give a meaning to their energy consumption. We describe these elements and methods, providing examples coming from the fieldwork and uncovering observed strategies to account for consumption. Based on our results, we provide a critical perspective on existing eco-feedback mechanisms and describe several elements for a design rationale for designing support for responsible energy consumption. We argue that interactive feedback systems should not simply be an end, but rather a resource for the construction of the artful practice of making energy consumption accountable.",
         "acmLink": "",
         "authors": [
             {
@@ -4883,11 +4868,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "In this paper we study how people use off-the-shelf eco-feedback systems in private households to make energy consumption accountable and explainable.",
         "contactEmail": "tobias.schwartz@fit.fraunhofer.de",
         "contactFirstName": "Tobias",
         "contactLastName": "Schwartz",
-        "keywords": "",
+        "keywords": "Energy;sustainability;Theory",
         "venue": "TOCHI",
         "session": "s202",
         "communities": [
@@ -5719,7 +5704,7 @@
         "contactEmail": "a.xambo@open.ac.uk",
         "contactFirstName": "Anna",
         "contactLastName": "Xambó",
-        "keywords": "Tabletop interfaces; tangible user interfaces; collaborative learning; musical improvisation",
+        "keywords": "Tabletop interfaces; Tangible user interfaces; Collaborative learning; Musical improvisation",
         "venue": "TOCHI",
         "session": "s207",
         "communities": [
@@ -6011,10 +5996,10 @@
                 "familyName": "Harper",
                 "email": "simon.harper@manchester.ac.uk",
                 "primary": {
-                    "dept": "School  of Computer Science, University of Manchester, Manchester, United Kingdom",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "School  of Computer Science",
+                    "institution": "The University of Manchester",
+                    "city": "Manchester",
+                    "country": "United Kingdom"
                 },
                 "secondary": {
                     "dept": "",
@@ -6024,7 +6009,7 @@
                 }
             }
         ],
-        "cbStatement": "This paper presents the Dynamic Update Viewing-likelihood model, which predicts whether people view interactive or updating content on the Web as a function of content features, independent of user task.",
+        "cbStatement": "The Dynamic Update Viewing-likelihood model predicts whether people view interactive or updating Web content as a function of content features, independent of user task. We'll discuss its application to television.",
         "contactEmail": "caroline.jay@manchester.ac.uk",
         "contactFirstName": "Caroline",
         "contactLastName": "Jay",
@@ -6076,16 +6061,16 @@
                 "familyName": "Rosson",
                 "email": "mrosson@psu.edu",
                 "primary": {
-                    "dept": "Center for Human-Computer Interaction, http://www.chiplace.org/content/Members/show-profile.jsp?id=213, University Park, Pennsylvania, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Center for Human-Computer Interaction",
+                    "institution": "Pennsylvania State University",
+                    "city": "University Park",
+                    "country": "United States"
                 },
                 "secondary": {
-                    "dept": "College of Information Sciences and Technology, The Pennsylvania State University, University Park, Pennsylvania, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Center for Human-Computer Interaction",
+                    "institution": "Pennsylvania State University",
+                    "city": "University Park",
+                    "country": "United States"
                 }
             }
         ],
@@ -6106,7 +6091,7 @@
     {
         "id": "to123",
         "title": "Of Catwalk Technologies and Boundary Creatures",
-        "abstract": "",
+        "abstract": "Researchers designing and deploying technologies in the wild can find it difficult to balance pure innovation with scalable \\ solutions. We propose a catwalk technology metaphor where researchers as boundary creatures focus on innovation whilst \\ providing links to prêt-a-porter (ready to wear) developments. Evidence from three ‘in-the-wild’ field-based learning case \\ studies with 140 geosciences and history learners are used to conceptualise the researchers’ ‘boundary creature’ role in \\ managing these design process tensions, specifically for e-learning using mobile systems, distributed collaboration, sensors \\ and augmented reality in quarries, up mountains and in the city. The analysis details the researcher issues of \\ spatial/temporal acuity and socio-political astuteness in an adapted practitioner inquiry approach. Ultimately, a researcher \\ design role (RDR) model reveals how researchers establish expectations with the design team, stakeholders and users \\ around what is to be innovated (e.g. technology, activities) and how the system will change or enable current practices.",
         "acmLink": "",
         "authors": [
             {
@@ -6176,11 +6161,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Understanding researchers as boundary creatures using a catwalk technology metaphor supports the role of researchers, designing in the wild, with multiple stakeholders and competing expectations of what is being designed.  ",
         "contactEmail": "anne.adams@open.ac.uk",
         "contactFirstName": "Anne",
         "contactLastName": "Adams",
-        "keywords": "",
+        "keywords": "researchers role; in the wild; boundary creatures; catwalk technologies; innovation design; scalability ",
         "venue": "TOCHI",
         "session": "s204",
         "communities": [
@@ -6560,9 +6545,9 @@
                 "email": "church.karen@gmail.com",
                 "primary": {
                     "dept": "",
-                    "institution": "Yahoo Labs",
-                    "city": "Sunnyvale",
-                    "country": "United States"
+                    "institution": "Telefonica Research",
+                    "city": "Barcelona",
+                    "country": "Spain"
                 },
                 "secondary": {
                     "dept": "",
@@ -6582,9 +6567,9 @@
                 "email": "martigan@gmail.com",
                 "primary": {
                     "dept": "",
-                    "institution": "Google, Inc.",
-                    "city": "Zurich",
-                    "country": "Switzerland"
+                    "institution": "Telefonica Research",
+                    "city": "Barcelona",
+                    "country": "Spain"
                 },
                 "secondary": {
                     "dept": "",
@@ -6745,7 +6730,7 @@
     {
         "id": "to133",
         "title": "Practices as a Unit of Design: An Exploration of Theoretical Guidelines in a Study on Bathing",
-        "abstract": "",
+        "abstract": "The sustainability challenges facing society today require approaches that look beyond single productuser interactions. Focusing on socially shared practices—e.g. cooking, laundering—has been identified as a \\ promising direction. Building on a growing body of research in sustainable HCI that takes practices as unit of analysis, this article explores what it means to take practices as a unit of design. Drawing on theories of practice, it proposes that practice-oriented design approaches should: involve bodily performance, create crises of routine and generate a variety of performances. These guidelines were integrated into a Generative Improv Performances (GIP) approach, entailing a series of performances by improvisation actors with lowfidelity prototypes in a lab environment. The approach was implemented in an empirical study on bathing. Although the empirical example does not deal with common types of interactive technologies, the guidelines and GIP approach offer sustainable HCI a way to think beyond immediate interactions and to conceptualize change on a practice level.",
         "acmLink": "",
         "authors": [
             {
@@ -6787,7 +6772,7 @@
                 },
                 "secondary": {
                     "dept": "",
-                    "institution": "Delft University of Technology, Industrial Design",
+                    "institution": "Delft University of Technology",
                     "city": "Delft",
                     "country": "The Netherlands"
                 }
@@ -6802,10 +6787,10 @@
                 "familyName": "Van Eijk",
                 "email": "D.j.vaneijk@tudelft.nl",
                 "primary": {
-                    "dept": "Industrial Design",
+                    "dept": "",
                     "institution": "Delft University of Technology",
                     "city": "Delft",
-                    "country": "Netherlands"
+                    "country": "The Netherlands"
                 },
                 "secondary": {
                     "dept": "",
@@ -6815,11 +6800,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "The paper was part of a special issue of TOCHI that explored implications of social practice theory for sustainable HCI. It contains an innovative case study on bathing involving improvisation actors.",
         "contactEmail": "s.c.kuijer@tudelft.nl",
         "contactFirstName": "Lenneke",
         "contactLastName": "Kuijer",
-        "keywords": "",
+        "keywords": "Bathing; design; sustainable HCI; improvisation actors; performances; practice theory; research through design; sustainability",
         "venue": "TOCHI",
         "session": "s133",
         "communities": [
@@ -7467,10 +7452,10 @@
                     "country": "Germany"
                 },
                 "secondary": {
-                    "dept": "create",
-                    "institution": "Telecom ParisTech",
-                    "city": "Paris",
-                    "country": "France"
+                    "dept": "",
+                    "institution": "University of Munich (LMU)",
+                    "city": "Munich",
+                    "country": "Germany"
                 }
             },
             {
@@ -8157,10 +8142,10 @@
                 "familyName": "Hornbaek",
                 "email": "kash@diku.dk",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of Copenhagen",
-                    "city": "Copenhagen",
-                    "country": "Denmark"
+                    "dept": "University of Copenhagen, Copenhagen, Denmark",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -10227,10 +10212,10 @@
                 "familyName": "Leiva",
                 "email": "luileito@upv.es",
                 "primary": {
-                    "dept": "ITI/DSIC, Universitat Politècnica de València, Valencia, Spain",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "ITI/DSIC",
+                    "institution": "Universitat Politècnica de València",
+                    "city": "Valencia",
+                    "country": "Spain"
                 },
                 "secondary": {
                     "dept": "",
@@ -14273,7 +14258,7 @@
     },
     {
         "id": "pn372",
-        "title": "Expanding the Input Expressivity of Smartwatches with Physical Pan, Twist, Tilt and Click",
+        "title": "Expanding the Input Expressivity of Smartwatches with Mechanical Pan, Twist, Tilt and Click",
         "abstract": "Smartwatches promise to bring enhanced convenience to common communication, creation and information retrieval tasks. Due to their prominent placement on the wrist, they must be small and otherwise unobtrusive, which limits the sophistication of interactions we can perform. This problem is particularly acute if the smartwatch relies on a touchscreen for input, as the display is small and our fingers are relatively large. In this work, we propose a complementary input approach: using the watch face as a multi-degree-of-freedom, mechanical interface. We developed a proof of concept smartwatch that supports continuous 2D panning and twist, as well as binary tilt and click. To illustrate the potential of our approach, we developed a series of example applications, many of which are cumbersome – or even impossible – on today’s smartwatch devices.",
         "acmLink": "",
         "authors": [
@@ -15071,10 +15056,10 @@
                 "familyName": "Leiva",
                 "email": "luileito@upv.es",
                 "primary": {
-                    "dept": "ITI/DSIC, Universitat Politècnica de València, Valencia, Spain",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "ITI/DSIC",
+                    "institution": "Universitat Politècnica de València",
+                    "city": "Valencia",
+                    "country": "Spain"
                 },
                 "secondary": {
                     "dept": "",
@@ -15456,7 +15441,7 @@
                 "givenName": "Martin",
                 "middleInitial": "",
                 "familyName": "Schuessler",
-                "email": "research@mschuessler.de",
+                "email": "schuesslerm@acm.org",
                 "primary": {
                     "dept": "Quality and Usability Lab",
                     "institution": "Telekom Innovation Laboratories TU Berlin",
@@ -15550,7 +15535,7 @@
                 "email": "halla@lri.fr",
                 "primary": {
                     "dept": "",
-                    "institution": "Univ Paris-Sud",
+                    "institution": "Univ Paris-Sud, CNRS",
                     "city": "Orsay",
                     "country": "France"
                 },
@@ -15594,7 +15579,7 @@
                 "email": "appert@lri.fr",
                 "primary": {
                     "dept": "",
-                    "institution": "Univ Paris-Sud",
+                    "institution": "Univ Paris-Sud, CNRS",
                     "city": "Orsay",
                     "country": "France"
                 },
@@ -25950,10 +25935,10 @@
                 "familyName": "Islam Aumi",
                 "email": "tanvir@uw.edu",
                 "primary": {
-                    "dept": "University of Washington, Seattle, Washington, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Computer Science and Engineering",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",
@@ -28814,8 +28799,8 @@
                 "familyName": "Chen",
                 "email": "nchen@microsoft.com",
                 "primary": {
-                    "dept": "",
-                    "institution": "Microsoft Research",
+                    "dept": "Microsoft Research",
+                    "institution": "",
                     "city": "Cambridge",
                     "country": "United Kingdom"
                 },
@@ -32594,10 +32579,10 @@
                 "familyName": "Greis",
                 "email": "greismm@studi.informatik.uni-stuttgart.de",
                 "primary": {
-                    "dept": "University of Stuttgart, Stuttgart, Germany",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "",
+                    "institution": "University of Stuttgart",
+                    "city": "Stuttgart",
+                    "country": "Germany"
                 },
                 "secondary": {
                     "dept": "",
@@ -39380,9 +39365,9 @@
                     "country": "Japan"
                 },
                 "secondary": {
-                    "dept": "",
-                    "institution": "JSPS Research Fellow",
-                    "city": "",
+                    "dept": "JSPS Research Fellow, Tokyo, Japan",
+                    "institution": "JSPS",
+                    "city": "Tokyo",
                     "country": "Japan"
                 }
             },
@@ -41516,10 +41501,10 @@
                     "country": "Finland"
                 },
                 "secondary": {
-                    "dept": "Department of Computer Science, University of Helsinki, Helsinki, Finland",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Department of Computer Science",
+                    "institution": "University of Helsinki",
+                    "city": "Helsinki",
+                    "country": "Finland"
                 }
             }
         ],
@@ -44160,7 +44145,7 @@
                 "familyName": "Meschtscherjakov",
                 "email": "alexander.meschtscherjakov@sbg.ac.at",
                 "primary": {
-                    "dept": "",
+                    "dept": "University of Salzburg, Salzburg, Austria",
                     "institution": "University of Salzburg",
                     "city": "Salzburg",
                     "country": "Austria"
@@ -44204,7 +44189,7 @@
                 "familyName": "Tscheligi",
                 "email": "manfred.tscheligi@sbg.ac.at",
                 "primary": {
-                    "dept": "",
+                    "dept": "ICT&S Center",
                     "institution": "University of Salzburg",
                     "city": "Salzburg",
                     "country": "Austria"
@@ -55180,8 +55165,8 @@
                 "familyName": "LEE",
                 "email": "hrl@indiana.edu",
                 "primary": {
-                    "dept": "",
-                    "institution": "Indiana University Bloomington",
+                    "dept": "Indiana University Bloomington, Bloomington, Indiana, United States",
+                    "institution": "Indiana University",
                     "city": "Bloomington",
                     "country": "United States"
                 },
@@ -58133,10 +58118,10 @@
                 "familyName": "Trafton",
                 "email": "greg.trafton@nrl.navy.mil",
                 "primary": {
-                    "dept": "AI Center, Naval Research Laboratory, Washington, DC, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "AI Center",
+                    "institution": "Naval Research Laboratory",
+                    "city": "Washington",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",
@@ -59006,9 +58991,9 @@
                 "email": "sara.waxberg@philips.com",
                 "primary": {
                     "dept": "Philips Healthcare, Andover, Massachusetts, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "institution": "Philips Healthcare",
+                    "city": "Andover",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",
@@ -59027,9 +59012,9 @@
                 "email": "jgoss@faculty.ocadu.ca",
                 "primary": {
                     "dept": "Ontario College of Art and Design University , Toronto, Ontario, Canada",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "institution": "Ontario College of Art and Design University",
+                    "city": "Toronto",
+                    "country": "Canada"
                 },
                 "secondary": {
                     "dept": "",
@@ -59048,9 +59033,9 @@
                 "email": "Peter.Rossos@uhn.ca",
                 "primary": {
                     "dept": "University Health Network, Toronto, Ontario, Canada",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "institution": "University Health Network",
+                    "city": "Toronto",
+                    "country": "Canada"
                 },
                 "secondary": {
                     "dept": "",
@@ -59069,9 +59054,9 @@
                 "email": "emily.nicholas@patientsassociation.ca",
                 "primary": {
                     "dept": "Patients Canada, Toronto, Ontario, Canada",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "institution": "Patients Canada",
+                    "city": "Toronto",
+                    "country": "Canada"
                 },
                 "secondary": {
                     "dept": "",
@@ -59090,9 +59075,9 @@
                 "email": "joe@humanfactors.ca",
                 "primary": {
                     "dept": "Healthcare Human Factors, Toronto, Ontario, Canada",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "institution": "Healthcare Human Factors",
+                    "city": "Toronto",
+                    "country": "Canada"
                 },
                 "secondary": {
                     "dept": "",
@@ -61152,7 +61137,7 @@
     },
     {
         "id": "alt163",
-        "title": "Translation from text to touch - Touching a “Japanese old tale”",
+        "title": "Translation from Text to Touch -- Touching a “Japanese Old Tale”",
         "abstract": "The character display and interface through visual and auditory senses have been the focus of the Computer Human Interaction and also tactile sense interface has been studied. We propose a method for integrating character information and tactile sense, by focusing on the structure of texts and phonetic aspects of language. By using this method, we extract the tactile elements of “The Tale of the Heike, which has been handed down in Japan over a thousand years. Also, we extract the tactile elements of the English version of the tale and a passage from Hamlet and compare their tactile characteristics. ",
         "acmLink": "",
         "authors": [
@@ -61192,10 +61177,10 @@
                     "country": "Japan"
                 },
                 "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "SDM Institute",
+                    "institution": "Keio University",
+                    "city": "Yokohama City",
+                    "country": "Japan"
                 }
             },
             {
@@ -61594,7 +61579,7 @@
     {
         "id": "alt191",
         "title": "QnDReview: Read 100 CHI Papers in 7 Hours",
-        "abstract": "In 2013, 392 CHI research papers and notes were published and even more papers in the domain of Human-Computer Interaction (HCI) are constantly published in various conferences and journals. It is quite arduous, if not impossible, to read all of these papers. One approach to deal with this information deluge is to focus on skimming through lots of papers in a short period of time, so that one can more wisely choose what to read before investing time in them. In order to teach such a skimming technique, I have taught graduate-level students in an HCI course a technique, called \"Quick and Dirty Review (QnDReview).\" The method has been employed in the course for five semesters, and students' responses were collected and analyzed. Results showed that students spent, on average, 4.3 minutes per paper and believed that they got the gist of each paper. However, the largest benefits I noticed are that students get the overall pictures of the fields and generate interesting ideas while exposing themselves to various new ideas through this approach.",
+        "abstract": "In 2013, 392 research papers and notes were published in the CHI conference (The ACM CHI Conference on Human Factors in Computing Systems) and even more papers in the domain of Human-Computer Interaction (HCI) are constantly published in various conferences and journals. It is quite arduous, if not impossible, to read all of these papers. One approach to deal with this information deluge is to focus on skimming through lots of papers in a short period of time, so that one can more wisely choose what to read before investing time in them. In order to teach such a skimming technique, I have taught a technique, called \"Quick and Dirty Review (QnDReview),\" in a graduate-level HCI course. The method has been employed in the course for five semesters, and students' responses were collected and analyzed. Results showed that students spent, on average, 4.3 minutes per paper and believed that they got the gist of each paper. However, the largest benefit I noticed is that students get the overall pictures of the fields while exposing themselves to various new ideas through this approach.",
         "acmLink": "",
         "authors": [
             {

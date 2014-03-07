@@ -471,7 +471,7 @@ sessions={
         "chair": ""
     },
     "s-crs115-1": {
-        "s_title": "Make This! Introduction to Electronics Prototyping Using Arduino (1/4)",
+        "s_title": "Make This! Introduction to Electronics Prototyping Using Arduino (1/2)",
         "room": "802AB",
         "time": "14:00-15:20",
         "submissions": [
@@ -486,7 +486,7 @@ sessions={
         "chair": ""
     },
     "s-crs115-2": {
-        "s_title": "Make This! Introduction to Electronics Prototyping Using Arduino (2/4)",
+        "s_title": "Make This! Introduction to Electronics Prototyping Using Arduino (2/2)",
         "room": "802AB",
         "time": "16:00-17:20",
         "submissions": [
@@ -495,36 +495,6 @@ sessions={
         "personas": "",
         "venue": "course",
         "day": "Wednesday",
-        "s_tags": [],
-        "type": "course",
-        "subtype": "course",
-        "chair": ""
-    },
-    "s-crs115R-1": {
-        "s_title": "Make This! Introduction to Electronics Prototyping Using Arduino (3/4)",
-        "room": "709",
-        "time": "9:00-10:20",
-        "submissions": [
-            "crs115"
-        ],
-        "personas": "",
-        "venue": "course",
-        "day": "Thursday",
-        "s_tags": [],
-        "type": "course",
-        "subtype": "course",
-        "chair": ""
-    },
-    "s-crs115R-2": {
-        "s_title": "Make This! Introduction to Electronics Prototyping Using Arduino (4/4)",
-        "room": "709",
-        "time": "11:00-12:20",
-        "submissions": [
-            "crs115"
-        ],
-        "personas": "",
-        "venue": "course",
-        "day": "Thursday",
         "s_tags": [],
         "type": "course",
         "subtype": "course",
@@ -2447,7 +2417,7 @@ sessions={
             "pn581",
             "pn999",
             "pn1241",
-            "pn1417"
+            "pn2129"
         ],
         "personas": "Design",
         "venue": "paper",
@@ -3014,7 +2984,7 @@ sessions={
         "room": "716B",
         "time": "11:00-12:20",
         "submissions": [
-            "pn1171",
+            "pn2115",
             "pn1736",
             "pn2487",
             "pn739",
@@ -3368,7 +3338,7 @@ sessions={
         "chair": ""
     },
     "s160": {
-        "s_title": "Pervasive Displays",
+        "s_title": "Interactive Surfaces and Pervasive Displays",
         "room": "718B",
         "time": "14:00-15:20",
         "submissions": [
@@ -3498,7 +3468,7 @@ sessions={
         "submissions": [
             "pn2048",
             "pn1667",
-            "pn2129",
+            "pn1417",
             "pn687"
         ],
         "personas": "Design",
@@ -3576,7 +3546,7 @@ sessions={
         "chair": ""
     },
     "s165": {
-        "s_title": "Studying Mobile Behavior",
+        "s_title": "Social Local Mobile",
         "room": "714AB",
         "time": "11:00-12:20",
         "submissions": [
@@ -4929,7 +4899,7 @@ sessions={
         "time": "14:00-15:20",
         "submissions": [
             "pn1684",
-            "pn2115",
+            "pn1171",
             "pn1290",
             "pn1845"
         ],
@@ -5524,7 +5494,7 @@ sessions={
     "s-float-3": {
         "s_title": "Student Research Competition",
         "room": "717AB",
-        "time": "16:00-17:20",
+        "time": "11:00-12:20",
         "submissions": [],
         "personas": "",
         "venue": "special",
@@ -5556,7 +5526,9 @@ sessions={
         "s_title": "Social Impact Award: Richard Ladner",
         "room": "701B",
         "time": "14:00-15:20",
-        "submissions": [],
+        "submissions": [
+            "key105"
+        ],
         "personas": "",
         "venue": "special",
         "day": "Monday",
@@ -5569,7 +5541,9 @@ sessions={
         "s_title": "Lifetime Research Award: Steve Whittaker",
         "room": "701B",
         "time": "14:00-15:20",
-        "submissions": [],
+        "submissions": [
+            "key101"
+        ],
         "personas": "",
         "venue": "special",
         "day": "Tuesday",
@@ -5582,7 +5556,9 @@ sessions={
         "s_title": "Lifetime Practice Award: Gillian Crampton Smith",
         "room": "701B",
         "time": "14:00-15:20",
-        "submissions": [],
+        "submissions": [
+            "key107"
+        ],
         "personas": "",
         "venue": "special",
         "day": "Wednesday",
@@ -5594,7 +5570,7 @@ sessions={
     "s-float-8": {
         "s_title": "Student Game Competition",
         "room": "717AB",
-        "time": "11:00-12:20",
+        "time": "16:00-17:20",
         "submissions": [],
         "personas": "",
         "venue": "special",
@@ -5916,11 +5892,11 @@ sessions={
             "key104"
         ],
         "personas": "",
-        "venue": "keynote",
+        "venue": "plenary",
         "day": "Tuesday",
         "s_tags": [],
-        "type": "keynote",
-        "subtype": "keynote",
+        "type": "plenary",
+        "subtype": "plenary",
         "chair": ""
     },
     "s-key103": {
@@ -5931,11 +5907,11 @@ sessions={
             "key103"
         ],
         "personas": "",
-        "venue": "keynote",
+        "venue": "plenary",
         "day": "Wednesday",
         "s_tags": [],
-        "type": "keynote",
-        "subtype": "keynote",
+        "type": "plenary",
+        "subtype": "plenary",
         "chair": ""
     },
     "s-key102": {
@@ -5946,17 +5922,17 @@ sessions={
             "key102"
         ],
         "personas": "",
-        "venue": "keynote",
+        "venue": "plenary",
         "day": "Thursday",
         "s_tags": [],
-        "type": "keynote",
-        "subtype": "keynote",
+        "type": "plenary",
+        "subtype": "plenary",
         "chair": ""
     },
     "s-key100": {
         "s_title": "Closing Keynote - Scott Jenson",
         "room": "Exhibit Hall G",
-        "time": "15:20-16:00",
+        "time": "16:00-17:20",
         "submissions": [
             "key100"
         ],
@@ -5966,6 +5942,96 @@ sessions={
         "s_tags": [],
         "type": "keynote",
         "subtype": "keynote",
+        "chair": ""
+    },
+    "s-preview-1": {
+        "s_title": "Video Preview",
+        "room": "801AB",
+        "time": "7:30-8:30",
+        "submissions": [
+            "preview-1"
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Monday",
+        "s_tags": [],
+        "type": "special",
+        "subtype": "special",
+        "chair": ""
+    },
+    "s-preview-2": {
+        "s_title": "Video Preview",
+        "room": "Exhibit Hall G",
+        "time": "7:00-8:20",
+        "submissions": [
+            "preview-2"
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Tuesday",
+        "s_tags": [],
+        "type": "special",
+        "subtype": "special",
+        "chair": ""
+    },
+    "s-preview-3": {
+        "s_title": "Video Preview",
+        "room": "Exhibit Hall G",
+        "time": "7:00-8:20",
+        "submissions": [
+            "preview-3"
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Wednesday",
+        "s_tags": [],
+        "type": "special",
+        "subtype": "special",
+        "chair": ""
+    },
+    "s-preview-4": {
+        "s_title": "Video Preview",
+        "room": "Exhibit Hall G",
+        "time": "7:00-8:20",
+        "submissions": [
+            "preview-4"
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Thursday",
+        "s_tags": [],
+        "type": "special",
+        "subtype": "special",
+        "chair": ""
+    },
+    "s-townhall": {
+        "s_title": "SIGCHI Town Hall Lunch",
+        "room": "718A",
+        "time": "12:20-14:00",
+        "submissions": [
+            "townhall"
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Wednesday",
+        "s_tags": [],
+        "type": "special",
+        "subtype": "special",
+        "chair": ""
+    },
+    "s-showcase": {
+        "s_title": "Video Showcase",
+        "room": "718A",
+        "time": "17:30-19:00",
+        "submissions": [
+            "showcase"
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Wednesday",
+        "s_tags": [],
+        "type": "special",
+        "subtype": "special",
         "chair": ""
     }
 }

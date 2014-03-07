@@ -152,10 +152,10 @@
                     "country": "Germany"
                 },
                 "secondary": {
-                    "dept": "create",
-                    "institution": "Telecom ParisTech",
-                    "city": "Paris",
-                    "country": "France"
+                    "dept": "",
+                    "institution": "University of Munich (LMU)",
+                    "city": "Munich",
+                    "country": "Germany"
                 }
             },
             {
@@ -842,10 +842,10 @@
                 "familyName": "Hornbaek",
                 "email": "kash@diku.dk",
                 "primary": {
-                    "dept": "",
-                    "institution": "University of Copenhagen",
-                    "city": "Copenhagen",
-                    "country": "Denmark"
+                    "dept": "University of Copenhagen, Copenhagen, Denmark",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -2912,10 +2912,10 @@
                 "familyName": "Leiva",
                 "email": "luileito@upv.es",
                 "primary": {
-                    "dept": "ITI/DSIC, Universitat Politècnica de València, Valencia, Spain",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "ITI/DSIC",
+                    "institution": "Universitat Politècnica de València",
+                    "city": "Valencia",
+                    "country": "Spain"
                 },
                 "secondary": {
                     "dept": "",
@@ -6958,7 +6958,7 @@
     },
     {
         "id": "pn372",
-        "title": "Expanding the Input Expressivity of Smartwatches with Physical Pan, Twist, Tilt and Click",
+        "title": "Expanding the Input Expressivity of Smartwatches with Mechanical Pan, Twist, Tilt and Click",
         "abstract": "Smartwatches promise to bring enhanced convenience to common communication, creation and information retrieval tasks. Due to their prominent placement on the wrist, they must be small and otherwise unobtrusive, which limits the sophistication of interactions we can perform. This problem is particularly acute if the smartwatch relies on a touchscreen for input, as the display is small and our fingers are relatively large. In this work, we propose a complementary input approach: using the watch face as a multi-degree-of-freedom, mechanical interface. We developed a proof of concept smartwatch that supports continuous 2D panning and twist, as well as binary tilt and click. To illustrate the potential of our approach, we developed a series of example applications, many of which are cumbersome – or even impossible – on today’s smartwatch devices.",
         "acmLink": "",
         "authors": [
@@ -7756,10 +7756,10 @@
                 "familyName": "Leiva",
                 "email": "luileito@upv.es",
                 "primary": {
-                    "dept": "ITI/DSIC, Universitat Politècnica de València, Valencia, Spain",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "ITI/DSIC",
+                    "institution": "Universitat Politècnica de València",
+                    "city": "Valencia",
+                    "country": "Spain"
                 },
                 "secondary": {
                     "dept": "",
@@ -8141,7 +8141,7 @@
                 "givenName": "Martin",
                 "middleInitial": "",
                 "familyName": "Schuessler",
-                "email": "research@mschuessler.de",
+                "email": "schuesslerm@acm.org",
                 "primary": {
                     "dept": "Quality and Usability Lab",
                     "institution": "Telekom Innovation Laboratories TU Berlin",
@@ -8235,7 +8235,7 @@
                 "email": "halla@lri.fr",
                 "primary": {
                     "dept": "",
-                    "institution": "Univ Paris-Sud",
+                    "institution": "Univ Paris-Sud, CNRS",
                     "city": "Orsay",
                     "country": "France"
                 },
@@ -8279,7 +8279,7 @@
                 "email": "appert@lri.fr",
                 "primary": {
                     "dept": "",
-                    "institution": "Univ Paris-Sud",
+                    "institution": "Univ Paris-Sud, CNRS",
                     "city": "Orsay",
                     "country": "France"
                 },
@@ -18635,10 +18635,10 @@
                 "familyName": "Islam Aumi",
                 "email": "tanvir@uw.edu",
                 "primary": {
-                    "dept": "University of Washington, Seattle, Washington, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Computer Science and Engineering",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",
@@ -21499,8 +21499,8 @@
                 "familyName": "Chen",
                 "email": "nchen@microsoft.com",
                 "primary": {
-                    "dept": "",
-                    "institution": "Microsoft Research",
+                    "dept": "Microsoft Research",
+                    "institution": "",
                     "city": "Cambridge",
                     "country": "United Kingdom"
                 },
@@ -25279,10 +25279,10 @@
                 "familyName": "Greis",
                 "email": "greismm@studi.informatik.uni-stuttgart.de",
                 "primary": {
-                    "dept": "University of Stuttgart, Stuttgart, Germany",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "",
+                    "institution": "University of Stuttgart",
+                    "city": "Stuttgart",
+                    "country": "Germany"
                 },
                 "secondary": {
                     "dept": "",
@@ -32065,9 +32065,9 @@
                     "country": "Japan"
                 },
                 "secondary": {
-                    "dept": "",
-                    "institution": "JSPS Research Fellow",
-                    "city": "",
+                    "dept": "JSPS Research Fellow, Tokyo, Japan",
+                    "institution": "JSPS",
+                    "city": "Tokyo",
                     "country": "Japan"
                 }
             },
@@ -34201,10 +34201,10 @@
                     "country": "Finland"
                 },
                 "secondary": {
-                    "dept": "Department of Computer Science, University of Helsinki, Helsinki, Finland",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Department of Computer Science",
+                    "institution": "University of Helsinki",
+                    "city": "Helsinki",
+                    "country": "Finland"
                 }
             }
         ],
@@ -36845,7 +36845,7 @@
                 "familyName": "Meschtscherjakov",
                 "email": "alexander.meschtscherjakov@sbg.ac.at",
                 "primary": {
-                    "dept": "",
+                    "dept": "University of Salzburg, Salzburg, Austria",
                     "institution": "University of Salzburg",
                     "city": "Salzburg",
                     "country": "Austria"
@@ -36889,7 +36889,7 @@
                 "familyName": "Tscheligi",
                 "email": "manfred.tscheligi@sbg.ac.at",
                 "primary": {
-                    "dept": "",
+                    "dept": "ICT&S Center",
                     "institution": "University of Salzburg",
                     "city": "Salzburg",
                     "country": "Austria"
@@ -47865,8 +47865,8 @@
                 "familyName": "LEE",
                 "email": "hrl@indiana.edu",
                 "primary": {
-                    "dept": "",
-                    "institution": "Indiana University Bloomington",
+                    "dept": "Indiana University Bloomington, Bloomington, Indiana, United States",
+                    "institution": "Indiana University",
                     "city": "Bloomington",
                     "country": "United States"
                 },
@@ -50818,10 +50818,10 @@
                 "familyName": "Trafton",
                 "email": "greg.trafton@nrl.navy.mil",
                 "primary": {
-                    "dept": "AI Center, Naval Research Laboratory, Washington, DC, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "AI Center",
+                    "institution": "Naval Research Laboratory",
+                    "city": "Washington",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",

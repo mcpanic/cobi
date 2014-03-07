@@ -147,10 +147,10 @@
                 "familyName": "Price",
                 "email": "ed.price@imtc.gatech.edu",
                 "primary": {
-                    "dept": "Georgia Tech, Atlanta, Georgia, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Institute for People and Technology",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",
@@ -333,7 +333,7 @@
     {
         "id": "to103",
         "title": "Performance-led Research In The Wild",
-        "abstract": "",
+        "abstract": "We explore the approach of performance-led research in the wild in which artists drive the creation of novel performances with the support of HCI researchers that are then deployed and studied at public performance in cultural settings such as galleries, festivals and on the city streets. We motivate the approach and then describe how it consists of three distinct activities – practice, studies and theory – that are interleaved in complex ways through nine different relationships. We present a historical account of how the approach has evolved over a fifteen-year period, charting the evolution of a complex web of projects, papers and relationships between them. We articulate the challenges of pursuing each activity as well as overarching challenges of balancing artistic and research interests, flexible management of relationships, and finally ethics.",
         "acmLink": "",
         "authors": [
             {
@@ -557,11 +557,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Performance-led research in the wild involves artists and HCI researchers creating performances that are deployed and studied in cultural settings such as galleries, festivals and on the city streets.",
         "contactEmail": "sdb@cs.nott.ac.uk",
         "contactFirstName": "Steve",
         "contactLastName": "Benford",
-        "keywords": "",
+        "keywords": "Art; performance; methodology; ethnography; theory; performance-led; in the wild",
         "venue": "TOCHI",
         "session": "s204",
         "communities": [
@@ -650,7 +650,7 @@
         "contactEmail": "eva.ganglbauer@tuwien.ac.at",
         "contactFirstName": "Eva",
         "contactLastName": "Ganglbauer",
-        "keywords": "Everyday practice; food; food waste; gardening; sustainability; technology probe; design;",
+        "keywords": "Everyday practice; food; food waste; gardening; sustainability; technology probe;",
         "venue": "TOCHI",
         "session": "s133",
         "communities": [
@@ -795,7 +795,7 @@
     {
         "id": "to106",
         "title": "Uncovering practices of making energy consumption accountable: A phenomenological inquiry",
-        "abstract": "",
+        "abstract": "Reacting to the discussion on global warming, the HCI community has started to explore the design of tools to support responsible energy consumption. An important part of this research focuses on motivating energy savings by providing feedback tools which present consumption metrics interactively. In this line of work, the configuration of feedback has been mainly discussed using cognitive or behavioral factors. This narrow focus, however, misses a highly relevant perspective for the design of technology that supports sustainable lifestyles: to investigate into the multiplicity of forms in which individuals or collectives actually consume energy. In this paper, we broaden this focus, by taking a phenomenological lens to study how people use off-the-shelf eco-feedback systems in private households to make energy consumption accountable and explainable. By reconstructing accounting practices, we delineate several constitutive elements of the phenomenon of energy usage in daily life. We complement these elements with a description of the sophisticated methods used by people to organize their energy practices and to give a meaning to their energy consumption. We describe these elements and methods, providing examples coming from the fieldwork and uncovering observed strategies to account for consumption. Based on our results, we provide a critical perspective on existing eco-feedback mechanisms and describe several elements for a design rationale for designing support for responsible energy consumption. We argue that interactive feedback systems should not simply be an end, but rather a resource for the construction of the artful practice of making energy consumption accountable.",
         "acmLink": "",
         "authors": [
             {
@@ -887,11 +887,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "In this paper we study how people use off-the-shelf eco-feedback systems in private households to make energy consumption accountable and explainable.",
         "contactEmail": "tobias.schwartz@fit.fraunhofer.de",
         "contactFirstName": "Tobias",
         "contactLastName": "Schwartz",
-        "keywords": "",
+        "keywords": "Energy;sustainability;Theory",
         "venue": "TOCHI",
         "session": "s202",
         "communities": [
@@ -1723,7 +1723,7 @@
         "contactEmail": "a.xambo@open.ac.uk",
         "contactFirstName": "Anna",
         "contactLastName": "Xambó",
-        "keywords": "Tabletop interfaces; tangible user interfaces; collaborative learning; musical improvisation",
+        "keywords": "Tabletop interfaces; Tangible user interfaces; Collaborative learning; Musical improvisation",
         "venue": "TOCHI",
         "session": "s207",
         "communities": [
@@ -2015,10 +2015,10 @@
                 "familyName": "Harper",
                 "email": "simon.harper@manchester.ac.uk",
                 "primary": {
-                    "dept": "School  of Computer Science, University of Manchester, Manchester, United Kingdom",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "School  of Computer Science",
+                    "institution": "The University of Manchester",
+                    "city": "Manchester",
+                    "country": "United Kingdom"
                 },
                 "secondary": {
                     "dept": "",
@@ -2028,7 +2028,7 @@
                 }
             }
         ],
-        "cbStatement": "This paper presents the Dynamic Update Viewing-likelihood model, which predicts whether people view interactive or updating content on the Web as a function of content features, independent of user task.",
+        "cbStatement": "The Dynamic Update Viewing-likelihood model predicts whether people view interactive or updating Web content as a function of content features, independent of user task. We'll discuss its application to television.",
         "contactEmail": "caroline.jay@manchester.ac.uk",
         "contactFirstName": "Caroline",
         "contactLastName": "Jay",
@@ -2080,16 +2080,16 @@
                 "familyName": "Rosson",
                 "email": "mrosson@psu.edu",
                 "primary": {
-                    "dept": "Center for Human-Computer Interaction, http://www.chiplace.org/content/Members/show-profile.jsp?id=213, University Park, Pennsylvania, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Center for Human-Computer Interaction",
+                    "institution": "Pennsylvania State University",
+                    "city": "University Park",
+                    "country": "United States"
                 },
                 "secondary": {
-                    "dept": "College of Information Sciences and Technology, The Pennsylvania State University, University Park, Pennsylvania, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "Center for Human-Computer Interaction",
+                    "institution": "Pennsylvania State University",
+                    "city": "University Park",
+                    "country": "United States"
                 }
             }
         ],
@@ -2110,7 +2110,7 @@
     {
         "id": "to123",
         "title": "Of Catwalk Technologies and Boundary Creatures",
-        "abstract": "",
+        "abstract": "Researchers designing and deploying technologies in the wild can find it difficult to balance pure innovation with scalable \\ solutions. We propose a catwalk technology metaphor where researchers as boundary creatures focus on innovation whilst \\ providing links to prêt-a-porter (ready to wear) developments. Evidence from three ‘in-the-wild’ field-based learning case \\ studies with 140 geosciences and history learners are used to conceptualise the researchers’ ‘boundary creature’ role in \\ managing these design process tensions, specifically for e-learning using mobile systems, distributed collaboration, sensors \\ and augmented reality in quarries, up mountains and in the city. The analysis details the researcher issues of \\ spatial/temporal acuity and socio-political astuteness in an adapted practitioner inquiry approach. Ultimately, a researcher \\ design role (RDR) model reveals how researchers establish expectations with the design team, stakeholders and users \\ around what is to be innovated (e.g. technology, activities) and how the system will change or enable current practices.",
         "acmLink": "",
         "authors": [
             {
@@ -2180,11 +2180,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Understanding researchers as boundary creatures using a catwalk technology metaphor supports the role of researchers, designing in the wild, with multiple stakeholders and competing expectations of what is being designed.  ",
         "contactEmail": "anne.adams@open.ac.uk",
         "contactFirstName": "Anne",
         "contactLastName": "Adams",
-        "keywords": "",
+        "keywords": "researchers role; in the wild; boundary creatures; catwalk technologies; innovation design; scalability ",
         "venue": "TOCHI",
         "session": "s204",
         "communities": [
@@ -2564,9 +2564,9 @@
                 "email": "church.karen@gmail.com",
                 "primary": {
                     "dept": "",
-                    "institution": "Yahoo Labs",
-                    "city": "Sunnyvale",
-                    "country": "United States"
+                    "institution": "Telefonica Research",
+                    "city": "Barcelona",
+                    "country": "Spain"
                 },
                 "secondary": {
                     "dept": "",
@@ -2586,9 +2586,9 @@
                 "email": "martigan@gmail.com",
                 "primary": {
                     "dept": "",
-                    "institution": "Google, Inc.",
-                    "city": "Zurich",
-                    "country": "Switzerland"
+                    "institution": "Telefonica Research",
+                    "city": "Barcelona",
+                    "country": "Spain"
                 },
                 "secondary": {
                     "dept": "",
@@ -2749,7 +2749,7 @@
     {
         "id": "to133",
         "title": "Practices as a Unit of Design: An Exploration of Theoretical Guidelines in a Study on Bathing",
-        "abstract": "",
+        "abstract": "The sustainability challenges facing society today require approaches that look beyond single productuser interactions. Focusing on socially shared practices—e.g. cooking, laundering—has been identified as a \\ promising direction. Building on a growing body of research in sustainable HCI that takes practices as unit of analysis, this article explores what it means to take practices as a unit of design. Drawing on theories of practice, it proposes that practice-oriented design approaches should: involve bodily performance, create crises of routine and generate a variety of performances. These guidelines were integrated into a Generative Improv Performances (GIP) approach, entailing a series of performances by improvisation actors with lowfidelity prototypes in a lab environment. The approach was implemented in an empirical study on bathing. Although the empirical example does not deal with common types of interactive technologies, the guidelines and GIP approach offer sustainable HCI a way to think beyond immediate interactions and to conceptualize change on a practice level.",
         "acmLink": "",
         "authors": [
             {
@@ -2791,7 +2791,7 @@
                 },
                 "secondary": {
                     "dept": "",
-                    "institution": "Delft University of Technology, Industrial Design",
+                    "institution": "Delft University of Technology",
                     "city": "Delft",
                     "country": "The Netherlands"
                 }
@@ -2806,10 +2806,10 @@
                 "familyName": "Van Eijk",
                 "email": "D.j.vaneijk@tudelft.nl",
                 "primary": {
-                    "dept": "Industrial Design",
+                    "dept": "",
                     "institution": "Delft University of Technology",
                     "city": "Delft",
-                    "country": "Netherlands"
+                    "country": "The Netherlands"
                 },
                 "secondary": {
                     "dept": "",
@@ -2819,11 +2819,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "The paper was part of a special issue of TOCHI that explored implications of social practice theory for sustainable HCI. It contains an innovative case study on bathing involving improvisation actors.",
         "contactEmail": "s.c.kuijer@tudelft.nl",
         "contactFirstName": "Lenneke",
         "contactLastName": "Kuijer",
-        "keywords": "",
+        "keywords": "Bathing; design; sustainable HCI; improvisation actors; performances; practice theory; research through design; sustainability",
         "venue": "TOCHI",
         "session": "s133",
         "communities": [

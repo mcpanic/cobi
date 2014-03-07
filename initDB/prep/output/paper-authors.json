@@ -113,10 +113,10 @@
             "country": "Germany"
         },
         "secondary": {
-            "dept": "create",
-            "institution": "Telecom ParisTech",
-            "city": "Paris",
-            "country": "France"
+            "dept": "",
+            "institution": "University of Munich (LMU)",
+            "city": "Munich",
+            "country": "Germany"
         }
     },
     {
@@ -707,10 +707,10 @@
         "email": "kash@diku.dk",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Copenhagen",
-            "city": "Copenhagen",
-            "country": "Denmark"
+            "dept": "University of Copenhagen, Copenhagen, Denmark",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -2459,10 +2459,10 @@
         "email": "luileito@upv.es",
         "role": "",
         "primary": {
-            "dept": "ITI/DSIC, Universitat Politècnica de València, Valencia, Spain",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "ITI/DSIC",
+            "institution": "Universitat Politècnica de València",
+            "city": "Valencia",
+            "country": "Spain"
         },
         "secondary": {
             "dept": "",
@@ -6635,10 +6635,10 @@
         "email": "luileito@upv.es",
         "role": "",
         "primary": {
-            "dept": "ITI/DSIC, Universitat Politècnica de València, Valencia, Spain",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "ITI/DSIC",
+            "institution": "Universitat Politècnica de València",
+            "city": "Valencia",
+            "country": "Spain"
         },
         "secondary": {
             "dept": "",
@@ -6944,7 +6944,7 @@
         "givenName": "Martin",
         "middleInitial": "",
         "familyName": "Schuessler",
-        "email": "research@mschuessler.de",
+        "email": "schuesslerm@acm.org",
         "role": "",
         "primary": {
             "dept": "Quality and Usability Lab",
@@ -7020,7 +7020,7 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Univ Paris-Sud",
+            "institution": "Univ Paris-Sud, CNRS",
             "city": "Orsay",
             "country": "France"
         },
@@ -7068,7 +7068,7 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Univ Paris-Sud",
+            "institution": "Univ Paris-Sud, CNRS",
             "city": "Orsay",
             "country": "France"
         },
@@ -15923,10 +15923,10 @@
         "email": "tanvir@uw.edu",
         "role": "",
         "primary": {
-            "dept": "University of Washington, Seattle, Washington, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Computer Science and Engineering",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -18275,8 +18275,8 @@
         "email": "nchen@microsoft.com",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Microsoft Research",
+            "dept": "Microsoft Research",
+            "institution": "",
             "city": "Cambridge",
             "country": "United Kingdom"
         },
@@ -21443,10 +21443,10 @@
         "email": "greismm@studi.informatik.uni-stuttgart.de",
         "role": "",
         "primary": {
-            "dept": "University of Stuttgart, Stuttgart, Germany",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "",
+            "institution": "University of Stuttgart",
+            "city": "Stuttgart",
+            "country": "Germany"
         },
         "secondary": {
             "dept": "",
@@ -27185,9 +27185,9 @@
             "country": "Japan"
         },
         "secondary": {
-            "dept": "",
-            "institution": "JSPS Research Fellow",
-            "city": "",
+            "dept": "JSPS Research Fellow, Tokyo, Japan",
+            "institution": "JSPS",
+            "city": "Tokyo",
             "country": "Japan"
         }
     },
@@ -29009,10 +29009,10 @@
             "country": "Finland"
         },
         "secondary": {
-            "dept": "Department of Computer Science, University of Helsinki, Helsinki, Finland",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Department of Computer Science",
+            "institution": "University of Helsinki",
+            "city": "Helsinki",
+            "country": "Finland"
         }
     },
     {
@@ -31259,7 +31259,7 @@
         "email": "alexander.meschtscherjakov@sbg.ac.at",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "University of Salzburg, Salzburg, Austria",
             "institution": "University of Salzburg",
             "city": "Salzburg",
             "country": "Austria"
@@ -31307,7 +31307,7 @@
         "email": "manfred.tscheligi@sbg.ac.at",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "ICT&S Center",
             "institution": "University of Salzburg",
             "city": "Salzburg",
             "country": "Austria"
@@ -40643,8 +40643,8 @@
         "email": "hrl@indiana.edu",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Indiana University Bloomington",
+            "dept": "Indiana University Bloomington, Bloomington, Indiana, United States",
+            "institution": "Indiana University",
             "city": "Bloomington",
             "country": "United States"
         },
@@ -43091,10 +43091,10 @@
         "email": "greg.trafton@nrl.navy.mil",
         "role": "",
         "primary": {
-            "dept": "AI Center, Naval Research Laboratory, Washington, DC, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "AI Center",
+            "institution": "Naval Research Laboratory",
+            "city": "Washington",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",

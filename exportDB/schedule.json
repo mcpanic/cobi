@@ -4,6 +4,17 @@ schedule=[
         "day": "Monday",
         "slots": [
             {
+                "slot_id": "Monday_7_30_8_30",
+                "time": "7:30 - 8:30",
+                "slot_class": "morning1",
+                "sessions": [
+                    {
+                        "session": "s-preview-1",
+                        "room": "801AB"
+                    }
+                ]
+            },
+            {
                 "slot_id": "Monday_9_00_10_20",
                 "time": "9:00 - 10:20",
                 "slot_class": "morning1",
@@ -20,14 +31,6 @@ schedule=[
                 "slot_class": "morning2",
                 "sessions": [
                     {
-                        "session": "s102",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s167",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s114",
                         "room": "701A"
                     },
@@ -36,12 +39,20 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s129",
-                        "room": "801A"
+                        "session": "s-crs124",
+                        "room": "711"
                     },
                     {
-                        "session": "s133",
-                        "room": "801B"
+                        "session": "s-crs156",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s165",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s-sig111",
+                        "room": "715A"
                     },
                     {
                         "session": "s-panel1",
@@ -52,24 +63,24 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s165",
-                        "room": "714AB"
-                    },
-                    {
                         "session": "s-alt1",
                         "room": "717AB"
                     },
                     {
-                        "session": "s-sig111",
-                        "room": "715A"
+                        "session": "s102",
+                        "room": "718A"
                     },
                     {
-                        "session": "s-crs156",
-                        "room": "713AB"
+                        "session": "s167",
+                        "room": "718B"
                     },
                     {
-                        "session": "s-crs124",
-                        "room": "711"
+                        "session": "s129",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s133",
+                        "room": "801B"
                     }
                 ]
             },
@@ -79,14 +90,6 @@ schedule=[
                 "slot_class": "afternoon1",
                 "sessions": [
                     {
-                        "session": "s209",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s124",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s164",
                         "room": "701A"
                     },
@@ -95,12 +98,24 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s143",
-                        "room": "801A"
+                        "session": "s-crs101-1",
+                        "room": "709"
                     },
                     {
-                        "session": "s120",
-                        "room": "801B"
+                        "session": "s-crs111-1",
+                        "room": "711"
+                    },
+                    {
+                        "session": "s-crs100-1",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s146",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s-sig108",
+                        "room": "715A"
                     },
                     {
                         "session": "s-panel2",
@@ -111,32 +126,28 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s146",
-                        "room": "714AB"
-                    },
-                    {
                         "session": "s-alt2",
                         "room": "717AB"
                     },
                     {
+                        "session": "s209",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s124",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "s143",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s120",
+                        "room": "801B"
+                    },
+                    {
                         "session": "s-crs108-1",
                         "room": "802AB"
-                    },
-                    {
-                        "session": "s-sig108",
-                        "room": "715A"
-                    },
-                    {
-                        "session": "s-crs100-1",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs101-1",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs111-1",
-                        "room": "711"
                     }
                 ]
             },
@@ -146,14 +157,6 @@ schedule=[
                 "slot_class": "afternoon2",
                 "sessions": [
                     {
-                        "session": "s116",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s186",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s135",
                         "room": "701A"
                     },
@@ -162,12 +165,24 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s156",
-                        "room": "801A"
+                        "session": "s-crs101-2",
+                        "room": "709"
                     },
                     {
-                        "session": "s153",
-                        "room": "801B"
+                        "session": "s-crs111-2",
+                        "room": "711"
+                    },
+                    {
+                        "session": "s-crs100-2",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s166",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s112",
+                        "room": "715B"
                     },
                     {
                         "session": "s-panel3",
@@ -178,32 +193,28 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s166",
-                        "room": "714AB"
-                    },
-                    {
                         "session": "s121",
                         "room": "717AB"
                     },
                     {
+                        "session": "s116",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s186",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "s156",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s153",
+                        "room": "801B"
+                    },
+                    {
                         "session": "s-crs108-2",
                         "room": "802AB"
-                    },
-                    {
-                        "session": "s112",
-                        "room": "715B"
-                    },
-                    {
-                        "session": "s-crs100-2",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs101-2",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs111-2",
-                        "room": "711"
                     }
                 ]
             }
@@ -213,6 +224,17 @@ schedule=[
         "date": "April 29th, 2014",
         "day": "Tuesday",
         "slots": [
+            {
+                "slot_id": "Tuesday_7_00_8_20",
+                "time": "7:00 - 8:20",
+                "slot_class": "morning1",
+                "sessions": [
+                    {
+                        "session": "s-preview-2",
+                        "room": "Exhibit Hall G"
+                    }
+                ]
+            },
             {
                 "slot_id": "Tuesday_8_30_8_50",
                 "time": "8:30 - 8:50",
@@ -230,14 +252,6 @@ schedule=[
                 "slot_class": "morning1",
                 "sessions": [
                     {
-                        "session": "s139",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s110",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s187",
                         "room": "701A"
                     },
@@ -246,12 +260,24 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s203",
-                        "room": "801A"
+                        "session": "s-crs129-1",
+                        "room": "709"
                     },
                     {
-                        "session": "s202",
-                        "room": "801B"
+                        "session": "s-crs122-1",
+                        "room": "711"
+                    },
+                    {
+                        "session": "s-crs162",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s189",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s-sig109",
+                        "room": "715A"
                     },
                     {
                         "session": "s175",
@@ -262,32 +288,28 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s189",
-                        "room": "714AB"
-                    },
-                    {
                         "session": "s-alt3",
                         "room": "717AB"
                     },
                     {
+                        "session": "s139",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s110",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "s203",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s202",
+                        "room": "801B"
+                    },
+                    {
                         "session": "s-crs105-1",
                         "room": "802AB"
-                    },
-                    {
-                        "session": "s-sig109",
-                        "room": "715A"
-                    },
-                    {
-                        "session": "s-crs162",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs129-1",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs122-1",
-                        "room": "711"
                     }
                 ]
             },
@@ -297,14 +319,6 @@ schedule=[
                 "slot_class": "morning2",
                 "sessions": [
                     {
-                        "session": "s122",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s147",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s197",
                         "room": "701A"
                     },
@@ -313,12 +327,24 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s174",
-                        "room": "801A"
+                        "session": "s-crs129-2",
+                        "room": "709"
                     },
                     {
-                        "session": "s123",
-                        "room": "801B"
+                        "session": "s-crs122-2",
+                        "room": "711"
+                    },
+                    {
+                        "session": "s-crs157",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s176",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s-sig117",
+                        "room": "715A"
                     },
                     {
                         "session": "s206",
@@ -329,32 +355,28 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s176",
-                        "room": "714AB"
-                    },
-                    {
                         "session": "s-alt4",
                         "room": "717AB"
                     },
                     {
+                        "session": "s122",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s147",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "s174",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s123",
+                        "room": "801B"
+                    },
+                    {
                         "session": "s-crs105-2",
                         "room": "802AB"
-                    },
-                    {
-                        "session": "s-sig117",
-                        "room": "715A"
-                    },
-                    {
-                        "session": "s-crs157",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs129-2",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs122-2",
-                        "room": "711"
                     }
                 ]
             },
@@ -364,14 +386,6 @@ schedule=[
                 "slot_class": "afternoon1",
                 "sessions": [
                     {
-                        "session": "s109",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s144",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s118",
                         "room": "701A"
                     },
@@ -380,12 +394,24 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s148",
-                        "room": "801A"
+                        "session": "s-crs102-1",
+                        "room": "709"
                     },
                     {
-                        "session": "s188",
-                        "room": "801B"
+                        "session": "s-crs149-1",
+                        "room": "711"
+                    },
+                    {
+                        "session": "s-crs153-1",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s152",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s-sig105",
+                        "room": "715A"
                     },
                     {
                         "session": "s-panel8",
@@ -396,32 +422,28 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s152",
-                        "room": "714AB"
-                    },
-                    {
                         "session": "s163",
                         "room": "717AB"
                     },
                     {
+                        "session": "s109",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s144",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "s148",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s188",
+                        "room": "801B"
+                    },
+                    {
                         "session": "s-crs137-1",
                         "room": "802AB"
-                    },
-                    {
-                        "session": "s-sig105",
-                        "room": "715A"
-                    },
-                    {
-                        "session": "s-crs153-1",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs102-1",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs149-1",
-                        "room": "711"
                     }
                 ]
             },
@@ -431,20 +453,48 @@ schedule=[
                 "slot_class": "afternoon2",
                 "sessions": [
                     {
-                        "session": "s-float-1",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s142",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s131",
                         "room": "701A"
                     },
                     {
                         "session": "s190",
                         "room": "701B"
+                    },
+                    {
+                        "session": "s-crs102-2",
+                        "room": "709"
+                    },
+                    {
+                        "session": "s-crs149-2",
+                        "room": "711"
+                    },
+                    {
+                        "session": "s-crs153-2",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s140",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s-sig107",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "s177",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "s137",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "s-float-1",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s142",
+                        "room": "718B"
                     },
                     {
                         "session": "s107",
@@ -455,36 +505,8 @@ schedule=[
                         "room": "801B"
                     },
                     {
-                        "session": "s177",
-                        "room": "716B"
-                    },
-                    {
-                        "session": "s140",
-                        "room": "714AB"
-                    },
-                    {
-                        "session": "s137",
-                        "room": "717AB"
-                    },
-                    {
                         "session": "s-crs137-2",
                         "room": "802AB"
-                    },
-                    {
-                        "session": "s-sig107",
-                        "room": "715A"
-                    },
-                    {
-                        "session": "s-crs153-2",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs102-2",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs149-2",
-                        "room": "711"
                     }
                 ]
             }
@@ -494,6 +516,17 @@ schedule=[
         "date": "April 30th, 2014",
         "day": "Wednesday",
         "slots": [
+            {
+                "slot_id": "Wednesday_7_00_8_20",
+                "time": "7:00 - 8:20",
+                "slot_class": "morning1",
+                "sessions": [
+                    {
+                        "session": "s-preview-3",
+                        "room": "Exhibit Hall G"
+                    }
+                ]
+            },
             {
                 "slot_id": "Wednesday_8_30_8_50",
                 "time": "8:30 - 8:50",
@@ -511,14 +544,6 @@ schedule=[
                 "slot_class": "morning1",
                 "sessions": [
                     {
-                        "session": "s170",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s201",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s159",
                         "room": "701A"
                     },
@@ -527,12 +552,20 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s157",
-                        "room": "801A"
+                        "session": "s-crs147-1",
+                        "room": "709"
                     },
                     {
-                        "session": "s-float-9",
-                        "room": "801B"
+                        "session": "s-crs143-1",
+                        "room": "711"
+                    },
+                    {
+                        "session": "s-crs161",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s192",
+                        "room": "714AB"
                     },
                     {
                         "session": "s-sig112",
@@ -543,28 +576,28 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s192",
-                        "room": "714AB"
-                    },
-                    {
                         "session": "s-alt6",
                         "room": "717AB"
                     },
                     {
+                        "session": "s170",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s201",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "s157",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s-float-9",
+                        "room": "801B"
+                    },
+                    {
                         "session": "s-crs106-1",
                         "room": "802AB"
-                    },
-                    {
-                        "session": "s-crs161",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs147-1",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs143-1",
-                        "room": "711"
                     }
                 ]
             },
@@ -574,14 +607,6 @@ schedule=[
                 "slot_class": "morning2",
                 "sessions": [
                     {
-                        "session": "s103",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s113",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s106",
                         "room": "701A"
                     },
@@ -590,12 +615,24 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s183",
-                        "room": "801A"
+                        "session": "s-crs147-2",
+                        "room": "709"
                     },
                     {
-                        "session": "s178",
-                        "room": "801B"
+                        "session": "s-crs143-2",
+                        "room": "711"
+                    },
+                    {
+                        "session": "s-crs158",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s134",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s-sig118",
+                        "room": "715A"
                     },
                     {
                         "session": "s-panel5",
@@ -606,32 +643,39 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s134",
-                        "room": "714AB"
+                        "session": "s-float-3",
+                        "room": "717AB"
                     },
                     {
-                        "session": "s-float-8",
-                        "room": "717AB"
+                        "session": "s103",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s113",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "s183",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s178",
+                        "room": "801B"
                     },
                     {
                         "session": "s-crs106-2",
                         "room": "802AB"
-                    },
+                    }
+                ]
+            },
+            {
+                "slot_id": "Wednesday_12_20_14_00",
+                "time": "12:20 - 14:00",
+                "slot_class": "afternoon1",
+                "sessions": [
                     {
-                        "session": "s-sig118",
-                        "room": "715A"
-                    },
-                    {
-                        "session": "s-crs158",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs147-2",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs143-2",
-                        "room": "711"
+                        "session": "s-townhall",
+                        "room": "718A"
                     }
                 ]
             },
@@ -641,14 +685,6 @@ schedule=[
                 "slot_class": "afternoon1",
                 "sessions": [
                     {
-                        "session": "s194",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s119",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s168",
                         "room": "701A"
                     },
@@ -657,12 +693,24 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s115",
-                        "room": "801A"
+                        "session": "s-crs113-1",
+                        "room": "709"
                     },
                     {
-                        "session": "s184",
-                        "room": "801B"
+                        "session": "s-crs121-1",
+                        "room": "711"
+                    },
+                    {
+                        "session": "s-crs123-1",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s149",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s-sig110",
+                        "room": "715A"
                     },
                     {
                         "session": "s-panel6",
@@ -673,32 +721,28 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s149",
-                        "room": "714AB"
-                    },
-                    {
                         "session": "s-float-10",
                         "room": "717AB"
                     },
                     {
+                        "session": "s194",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s119",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "s115",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s184",
+                        "room": "801B"
+                    },
+                    {
                         "session": "s-crs115-1",
                         "room": "802AB"
-                    },
-                    {
-                        "session": "s-sig110",
-                        "room": "715A"
-                    },
-                    {
-                        "session": "s-crs123-1",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs113-1",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs121-1",
-                        "room": "711"
                     }
                 ]
             },
@@ -708,14 +752,6 @@ schedule=[
                 "slot_class": "afternoon2",
                 "sessions": [
                     {
-                        "session": "s207",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s125",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s205",
                         "room": "701A"
                     },
@@ -724,12 +760,24 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s111",
-                        "room": "801A"
+                        "session": "s-crs113-2",
+                        "room": "709"
                     },
                     {
-                        "session": "s158",
-                        "room": "801B"
+                        "session": "s-crs121-2",
+                        "room": "711"
+                    },
+                    {
+                        "session": "s-crs123-2",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s145",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s-sig114",
+                        "room": "715A"
                     },
                     {
                         "session": "s-panel7",
@@ -740,32 +788,39 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s145",
-                        "room": "714AB"
+                        "session": "s-float-8",
+                        "room": "717AB"
                     },
                     {
-                        "session": "s-float-3",
-                        "room": "717AB"
+                        "session": "s207",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s125",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "s111",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s158",
+                        "room": "801B"
                     },
                     {
                         "session": "s-crs115-2",
                         "room": "802AB"
-                    },
+                    }
+                ]
+            },
+            {
+                "slot_id": "Wednesday_17_30_19_00",
+                "time": "17:30 - 19:00",
+                "slot_class": "evening1",
+                "sessions": [
                     {
-                        "session": "s-sig114",
-                        "room": "715A"
-                    },
-                    {
-                        "session": "s-crs123-2",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs113-2",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs121-2",
-                        "room": "711"
+                        "session": "s-showcase",
+                        "room": "718A"
                     }
                 ]
             }
@@ -775,6 +830,17 @@ schedule=[
         "date": "May 1st, 2014",
         "day": "Thursday",
         "slots": [
+            {
+                "slot_id": "Thursday_7_00_8_20",
+                "time": "7:00 - 8:20",
+                "slot_class": "morning1",
+                "sessions": [
+                    {
+                        "session": "s-preview-4",
+                        "room": "Exhibit Hall G"
+                    }
+                ]
+            },
             {
                 "slot_id": "Thursday_8_30_8_50",
                 "time": "8:30 - 8:50",
@@ -792,14 +858,6 @@ schedule=[
                 "slot_class": "morning1",
                 "sessions": [
                     {
-                        "session": "s-float-2",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s154",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s195",
                         "room": "701A"
                     },
@@ -808,12 +866,20 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s150",
-                        "room": "801A"
+                        "session": "s-crs138-1",
+                        "room": "711"
                     },
                     {
-                        "session": "s196",
-                        "room": "801B"
+                        "session": "s-crs116-1",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s-float-4",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s-sig119",
+                        "room": "715A"
                     },
                     {
                         "session": "s-case-1",
@@ -824,32 +890,28 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s-float-4",
-                        "room": "714AB"
-                    },
-                    {
                         "session": "s-alt5",
                         "room": "717AB"
                     },
                     {
+                        "session": "s-float-2",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s154",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "s150",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s196",
+                        "room": "801B"
+                    },
+                    {
                         "session": "s-crs144-1",
                         "room": "802AB"
-                    },
-                    {
-                        "session": "s-sig119",
-                        "room": "715A"
-                    },
-                    {
-                        "session": "s-crs116-1",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs115R-1",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs138-1",
-                        "room": "711"
                     }
                 ]
             },
@@ -859,14 +921,6 @@ schedule=[
                 "slot_class": "morning2",
                 "sessions": [
                     {
-                        "session": "s213",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s105",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s155",
                         "room": "701A"
                     },
@@ -875,12 +929,20 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s173",
-                        "room": "801A"
+                        "session": "s-crs138-2",
+                        "room": "711"
                     },
                     {
-                        "session": "s212",
-                        "room": "801B"
+                        "session": "s-crs116-2",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s181",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s-sig103",
+                        "room": "715A"
                     },
                     {
                         "session": "s-case-2",
@@ -891,32 +953,28 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s181",
-                        "room": "714AB"
-                    },
-                    {
                         "session": "s191",
                         "room": "717AB"
                     },
                     {
+                        "session": "s213",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s105",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "s173",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s212",
+                        "room": "801B"
+                    },
+                    {
                         "session": "s-crs144-2",
                         "room": "802AB"
-                    },
-                    {
-                        "session": "s-sig103",
-                        "room": "715A"
-                    },
-                    {
-                        "session": "s-crs116-2",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs115R-2",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs138-2",
-                        "room": "711"
                     }
                 ]
             },
@@ -926,14 +984,6 @@ schedule=[
                 "slot_class": "afternoon1",
                 "sessions": [
                     {
-                        "session": "s130",
-                        "room": "718A"
-                    },
-                    {
-                        "session": "s160",
-                        "room": "718B"
-                    },
-                    {
                         "session": "s179",
                         "room": "701A"
                     },
@@ -942,12 +992,24 @@ schedule=[
                         "room": "701B"
                     },
                     {
-                        "session": "s204",
-                        "room": "801A"
+                        "session": "s-crs142",
+                        "room": "709"
                     },
                     {
-                        "session": "s210",
-                        "room": "801B"
+                        "session": "s-crs146",
+                        "room": "711"
+                    },
+                    {
+                        "session": "s-crs163",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "s136",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "s-panel4",
+                        "room": "715A"
                     },
                     {
                         "session": "s-case-3",
@@ -958,35 +1020,31 @@ schedule=[
                         "room": "716B"
                     },
                     {
-                        "session": "s136",
-                        "room": "714AB"
+                        "session": "s130",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "s160",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "s204",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "s210",
+                        "room": "801B"
                     },
                     {
                         "session": "s-crs136",
                         "room": "802AB"
-                    },
-                    {
-                        "session": "s-panel4",
-                        "room": "715A"
-                    },
-                    {
-                        "session": "s-crs163",
-                        "room": "713AB"
-                    },
-                    {
-                        "session": "s-crs142",
-                        "room": "709"
-                    },
-                    {
-                        "session": "s-crs146",
-                        "room": "711"
                     }
                 ]
             },
             {
-                "slot_id": "Thursday_15_20_16_00",
-                "time": "15:20 - 16:00",
-                "slot_class": "afternoon1",
+                "slot_id": "Thursday_16_00_17_20",
+                "time": "16:00 - 17:20",
+                "slot_class": "afternoon2",
                 "sessions": [
                     {
                         "session": "s-key100",

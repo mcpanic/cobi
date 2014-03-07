@@ -20,7 +20,8 @@ var PCSINPUT = "";
 //var VENUE = "SIG";
 //var VENUE = "course";
 //var VENUE = "panel";
-var VENUE = "altchi";
+//var VENUE = "altchi";
+var VENUE = "keynote";
 
 if(VENUE == "paper"){
     PCSINPUT = "./input/Papers-listOfFinalSubmissions.csv";
@@ -36,6 +37,8 @@ if(VENUE == "paper"){
     PCSINPUT = "./input/panels-listOfFinalSubmissions.csv";
 }else if(VENUE == "altchi"){
     PCSINPUT = "./input/altchi-listOfFinalSubmissions.csv";
+}else if(VENUE == "keynote"){
+    PCSINPUT = "./input/invited-listOfFinalSubmissions.csv";
 }
 
 var AUTHORFILE = VENUE + "-authors.json";
@@ -523,10 +526,10 @@ function createAuthors(sub, venue){
 	    "id" : sub["ID"],
 	    "venue" : venue,
 	    "rank" : i,
-	    "givenName" : ((venue == 'TOCHI') ? sub["Given name " + i] : sub["Author given first name " + i]),	
-	    "middleInitial" : ((venue == "TOCHI") ? sub["Middle initial " + i] : sub["Middle initial or name " + i]),
-	    "familyName" : ((venue == "TOCHI") ? sub["Family name " + i] : sub["Author last/family name " + i]),
-	    "email" : ((venue == "TOCHI") ? sub["Email " + i] : sub["Valid email address " + i]),
+	    "givenName" : ((venue == "TOCHI" || venue == "keynote") ? sub["Given name " + i] : sub["Author given first name " + i]),	
+	    "middleInitial" : ((venue == "TOCHI" || venue == "keynote") ? sub["Middle initial " + i] : sub["Middle initial or name " + i]),
+	    "familyName" : ((venue == "TOCHI" || venue == "keynote") ? sub["Family name " + i] : sub["Author last/family name " + i]),
+	    "email" : ((venue == "TOCHI" || venue == "keynote") ? sub["Email " + i] : sub["Valid email address " + i]),
 	    "role" : "",
 	    "primary" : { 
 		"dept" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel') ? sub["Primary Affiliation (no labs or depts names in this field) " + i + " - Department/School/Lab"] 
@@ -570,10 +573,10 @@ function createEntityAuthors(sub, venue){
 	    "type" : "author",
 	    "venue" : venue,
 	    "rank" : i,
-	    "givenName" : ((venue == 'TOCHI') ? sub["Given name " + i] : sub["Author given first name " + i]),	
-   	    "middleInitial" : ((venue == "TOCHI") ? sub["Middle initial " + i] : sub["Middle initial or name " + i]),
-	    "familyName" : ((venue == "TOCHI") ? sub["Family name " + i] : sub["Author last/family name " + i]),
-	    "email" : ((venue == "TOCHI") ? sub["Email " + i] : sub["Valid email address " + i]),
+	    "givenName" : ((venue == 'TOCHI' || venue == 'keynote') ? sub["Given name " + i] : sub["Author given first name " + i]),	
+   	    "middleInitial" : ((venue == "TOCHI" || venue == "keynote") ? sub["Middle initial " + i] : sub["Middle initial or name " + i]),
+	    "familyName" : ((venue == "TOCHI" || venue == "keynote") ? sub["Family name " + i] : sub["Author last/family name " + i]),
+	    "email" : ((venue == "TOCHI" || venue == "keynote") ? sub["Email " + i] : sub["Valid email address " + i]),
 	    "primary" : { 
 		"dept" : ((venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel') ? sub["Primary Affiliation (no labs or depts names in this field) " + i + " - Department/School/Lab"] 
 			  : sub["Primary Affiliation " + i + " - Department/School/Lab"]),

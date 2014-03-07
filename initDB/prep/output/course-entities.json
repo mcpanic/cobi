@@ -965,7 +965,7 @@
     {
         "id": "crs142",
         "title": "How You Could Benefit from Using ISO Standards",
-        "abstract": "",
+        "abstract": "The course explains how international standards can provide a sound basis for education and training, can provide authority for design and development, and are a rich source of guidance and reference material.  It provides an overview of the contribution that international standards can make to: better user interface design, measuring usability, documenting information about usability, broadening the concept of usability, good practice in human-centred design, helping your organisation improve its process, and making usability and UX a part of systems engineering.",
         "acmLink": "",
         "authors": [
             {
@@ -1094,7 +1094,7 @@
     {
         "id": "crs146",
         "title": "Evaluating Children’s Interactive Products",
-        "abstract": "",
+        "abstract": "Over the last decade there has been an increased interest in designing for children within the context of HCI.  This activity has lead to a community of researchers and practitioners seeking information on best practice on how to work with children.  This course will introduce attendees to some of the pitfalls and difficulties when carrying out evaluations with children but will then balance these with tips and tricks, methods and processes that will ensure that anyone attending this course will leave being able to plan and carry out a reasonable and safe evaluation with children.",
         "acmLink": "",
         "authors": [
             {
@@ -1428,44 +1428,8 @@
         "communities": []
     },
     {
-        "id": "crs160",
-        "title": "The Body in Design",
-        "abstract": "",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth12108",
-                "type": "author",
-                "venue": "course",
-                "rank": 1,
-                "givenName": "Toni",
-                "familyName": "Robertson",
-                "email": "Toni.Robertson@uts.edu.au",
-                "primary": {
-                    "dept": "",
-                    "institution": "University of Technology, Sydney",
-                    "city": "Sydney",
-                    "country": "Australia"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            }
-        ],
-        "cbStatement": "This course revisits feminist theory to examine the ethical and pragmatic motivations for prioritising the active human body in technology design.",
-        "contactEmail": "Toni.Robertson@uts.edu.au",
-        "contactFirstName": "Toni",
-        "contactLastName": "Robertson",
-        "venue": "course",
-        "session": "s-crs160",
-        "communities": []
-    },
-    {
         "id": "crs161",
-        "title": "How social media design shapes society",
+        "title": "How Social Media Design Shapes Society",
         "abstract": "The design of social media influences the way people interact with each other online – and shapes our society. This course will look at three key areas: how social identity is portrayed online; our changing social networks and the technologies that support them; and the role of pseudonymity in supporting privacy.",
         "acmLink": "",
         "authors": [
@@ -1501,7 +1465,7 @@
     },
     {
         "id": "crs162",
-        "title": "CItizen Science: An Introduction",
+        "title": "What HCI can do for Citizen Science",
         "abstract": "",
         "acmLink": "",
         "authors": [
@@ -1527,7 +1491,7 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Citizen science supports public participation in scientific research. Increasingly new devices including smartphones, sensors, and technologies for validating and communicating data, are integrated into these practices. We suggest design, privacy and security guidelines.",
         "contactEmail": "preece@umd.edu",
         "contactFirstName": "Jenny",
         "contactLastName": "Preece",
@@ -1537,7 +1501,7 @@
     },
     {
         "id": "crs163",
-        "title": "A Conversation with Susan Dray: Uncovering the Ordinary, Inspiring the Extraordinary",
+        "title": "Uncovering the Ordinary, Inspiring the Extraordinary: A Conversation with Susan Dray",
         "abstract": "",
         "acmLink": "",
         "authors": [
@@ -1561,9 +1525,30 @@
                     "city": "",
                     "country": ""
                 }
+            },
+            {
+                "id": "auth1149",
+                "type": "author",
+                "venue": "course",
+                "rank": 2,
+                "givenName": "Elizabeth",
+                "familyName": "Churchill",
+                "email": "churchill@acm.org",
+                "primary": {
+                    "dept": "",
+                    "institution": "eBay Research Lab, eBay Inc.",
+                    "city": "San Jose",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "From studying the neurophysiology of learning, to championing HCI in industry and promoting user-centered approaches to international development, Susan Dray, a 2014 inductee to the CHI Academy, will share key projects and key lessons for HCI from her career. ",
         "contactEmail": "susan.dray@dray.com",
         "contactFirstName": "Susan",
         "contactLastName": "Dray",

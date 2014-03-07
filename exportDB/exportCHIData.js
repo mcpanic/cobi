@@ -22,6 +22,271 @@ var sessionOutput = null;
 var schedule = null;
 var entity = null;
 
+
+var previewSchedule = [
+    {
+	"day": "Monday",
+	"slot": {
+            "slot_id": "Monday_7_30_8_30",
+            "time": "7:30 - 8:30",
+            "slot_class": "morning1",
+            "sessions": [
+		{
+                    "session": "s-preview-1",
+                    "room" : "801AB"
+		}
+	    ]
+	}
+    },
+    {
+	"day": "Tuesday",
+	"slot": {
+            "slot_id": "Tuesday_7_00_8_20",
+            "time": "7:00 - 8:20",
+            "slot_class": "morning1",
+            "sessions": [
+		{
+                    "session": "s-preview-2",
+                    "room" : "Exhibit Hall G"
+		}
+	    ]
+	}
+    },
+    {
+	"day": "Wednesday",
+	"slot": {
+            "slot_id": "Wednesday_7_00_8_20",
+            "time": "7:00 - 8:20",
+            "slot_class": "morning1",
+            "sessions": [
+		{
+                    "session": "s-preview-3",
+                    "room" : "Exhibit Hall G"
+		}
+	    ]
+	}
+    },
+    {
+	"day": "Thursday",
+	"slot": {
+            "slot_id": "Thursday_7_00_8_20",
+            "time": "7:00 - 8:20",
+            "slot_class": "morning1",
+            "sessions": [
+		{
+                    "session": "s-preview-4",
+                    "room" : "Exhibit Hall G"
+		}
+	    ]
+	}
+    },
+]
+
+var previewSessions = {
+    "s-preview-1": {
+        "s_title": "Video Preview",
+        "room": "801AB",
+        "time": "7:30-8:30",
+        "submissions": [
+	    'preview-1'
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Monday",
+        "s_tags": [],
+        "type": "special",
+        "subtype": "special",
+        "chair": ""
+    },
+    "s-preview-2": {
+        "s_title": "Video Preview",
+        "room": "Exhibit Hall G",
+        "time": "7:00-8:20",
+        "submissions": [
+	    'preview-2'
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Tuesday",
+        "s_tags": [],
+        "type": "special",
+        "subtype": "special",
+        "chair": ""
+    },
+    "s-preview-3": {
+        "s_title": "Video Preview",
+        "room": "Exhibit Hall G",
+        "time": "7:00-8:20",
+        "submissions": [
+	    'preview-3'
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Wednesday",
+        "s_tags": [],
+        "type": "special",
+        "subtype": "special",
+        "chair": ""
+    },
+    "s-preview-4": {
+        "s_title": "Video Preview",
+        "room": "Exhibit Hall G",
+        "time": "7:00-8:20",
+        "submissions": [
+	    'preview-4'
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Thursday",
+        "s_tags": [],
+        "type": "special",
+        "subtype": "special",
+        "chair": ""
+    }
+}
+
+var previewEntities = {
+    "preview-1": {
+        "title": "Video Previews",
+        "abstract": "For the early risers! Plan your daily schedule by viewing the 30 second Video Previews for the current day. The video previews for the current day’s Papers and Notes will be played through, in a single, back-to-back, playlist.",
+        "cAndB": "",
+        "keywords": [
+        ],
+        "authors": [
+        ],
+        "type": "special",
+        "subtype": "special"
+    },
+    "preview-2": {
+        "title": "Video Previews",
+        "abstract": "For the early risers! Plan your daily schedule by viewing the 30 second Video Previews for the current day. The video previews for the current day’s Papers and Notes will be played through, in a single, back-to-back, playlist.",
+        "cAndB": "",
+        "keywords": [
+        ],
+        "authors": [
+        ],
+        "type": "special",
+        "subtype": "special"
+    },
+    "preview-3": {
+        "title": "Video Previews",
+        "abstract": "For the early risers! Plan your daily schedule by viewing the 30 second Video Previews for the current day. The video previews for the current day’s Papers and Notes will be played through, in a single, back-to-back, playlist.",
+        "cAndB": "",
+        "keywords": [
+        ],
+        "authors": [
+        ],
+        "type": "special",
+        "subtype": "special"
+    },
+    "preview-4": {
+        "title": "Video Previews",
+        "abstract": "For the early risers! Plan your daily schedule by viewing the 30 second Video Previews for the current day. The video previews for the current day’s Papers and Notes will be played through, in a single, back-to-back, playlist.",
+        "cAndB": "",
+        "keywords": [
+        ],
+        "authors": [
+        ],
+        "type": "special",
+        "subtype": "special"
+    },
+};
+
+
+var showcaseSchedule = {
+    "day": "Wednesday",
+    "slot": {
+        "slot_id": "Wednesday_17_30_19_00",
+        "time": "17:30 - 19:00",
+        "slot_class": "evening1",
+        "sessions": [
+            {
+                "session": "s-showcase",
+                "room" : "718A"
+            }
+	]
+    }
+}; 
+
+var showcaseSession = {
+    "s-showcase": {
+        "s_title": "Video Showcase",
+        "room": "718A",
+        "time": "17:30-19:00",
+        "submissions": [
+	    'showcase'
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Wednesday",
+        "s_tags": [],
+        "type": "special",
+        "subtype": "special",
+        "chair": ""
+    },
+}
+
+var showcaseEntity = {
+    "showcase": {
+        "title": "Video Showcase",
+        "abstract": "Video Showcase features engaging videos that offer a variety of perspectives on human-computer interaction, including novel interfaces, reflective pieces and future envisionments. Come and enjoy the best videos on Wednesday (17:30) followed by the Golden Mouse award ceremony.", 
+        "cAndB": "",
+        "keywords": [
+        ],
+        "authors": [
+        ],
+        "type": "special",
+        "subtype": "special"
+    },
+};
+
+var townhallSchedule =     {
+    "day": "Wednesday",
+    "slot": {
+        "slot_id": "Wednesday_12_20_14_00",
+        "time": "12:20 - 14:00",
+        "slot_class": "afternoon1",
+        "sessions": [
+            {
+                "session": "s-townhall",
+                "room" : "718A"
+            }
+	]
+    }
+};
+
+var townhallSession = {
+    "s-townhall": {
+        "s_title": "SIGCHI Town Hall Lunch",
+        "room": "718A",
+        "time": "12:20-14:00",
+        "submissions": [
+            "townhall"
+        ],
+        "personas": "",
+        "venue": "special",
+        "day": "Wednesday",
+        "s_tags": [],
+        "type": "special",
+        "subtype": "special",
+        "chair": ""
+    },
+}
+
+var townhallEntity = {
+    "townhall": {
+        "title": "SIGCHI Town Hall Lunch",
+        "abstract": "SIGCHI officers present ongoing programs and activities, followed by an audience Q&A session. Participants interested in shaping SIGCHI’s future are encouraged to attend. An informal lunch is available on a first-come, first-served basis.",
+        "cAndB": "",
+        "keywords": [
+        ],
+        "authors": [
+        ],
+        "type": "special",
+        "subtype": "special"
+    },
+}
+
 var keynoteSchedule = [
     {
         "day": "Monday",
@@ -82,9 +347,9 @@ var keynoteSchedule = [
     {
         "day": "Thursday",
         "slot": {
-            "slot_id": "Thursday_15_20_16_00",
-            "time": "15:20 - 16:00",
-            "slot_class": "afternoon1",
+            "slot_id": "Thursday_16_00_17_20",
+            "time": "16:00 - 17:20",
+            "slot_class": "afternoon2",
             "sessions": [
                 {
                     "session": "s-key100",
@@ -119,11 +384,11 @@ var keynoteSessions = {
             "key104"
         ],
         "personas": "",
-        "venue": "keynote",
+        "venue": "plenary",
         "day": "Tuesday",
         "s_tags": [],
-        "type": "keynote",
-        "subtype": "keynote",
+        "type": "plenary",
+        "subtype": "plenary",
         "chair": ""
     },
     "s-key103": {
@@ -134,11 +399,11 @@ var keynoteSessions = {
             "key103"
         ],
         "personas": "",
-        "venue": "keynote",
+        "venue": "plenary",
         "day": "Wednesday",
         "s_tags": [],
-        "type": "keynote",
-        "subtype": "keynote",
+        "type": "plenary",
+        "subtype": "plenary",
         "chair": ""
     },
     "s-key102": {
@@ -149,17 +414,17 @@ var keynoteSessions = {
             "key102"
         ],
         "personas": "",
-        "venue": "keynote",
+        "venue": "plenary",
         "day": "Thursday",
         "s_tags": [],
-        "type": "keynote",
-        "subtype": "keynote",
+        "type": "plenary",
+        "subtype": "plenary",
         "chair": ""
     },
    "s-key100": {
        "s_title": "Closing Keynote - Scott Jenson",
        "room": "Exhibit Hall G",
-       "time": "15:20-16:00",
+       "time": "16:00-17:20",
        "submissions": [
            "key100"
        ],
@@ -196,12 +461,16 @@ function getEntities(connection){
 	password : 'su4Biha',
 	database : 'cobiCHI2014'
     });
-    connection2.query("SELECT * from entity", function(err, rows, fields) {
-	if (err) throw err;
-	entities = rows;
-	writeEntities(entities);
-	getSchedule(connection2);
-    });
+    connection2.query("set names 'latin1'", function(err, rows, fields){ 
+	if(err) throw err;
+	
+	connection2.query("SELECT * from entity", function(err, rows, fields) {
+	    if (err) throw err;
+	    entities = rows;
+	    writeEntities(entities);
+	    getSchedule(connection2);
+	});
+    })
 }
 
 function getSchedule(connection){
@@ -357,6 +626,16 @@ function writeEntities(entities){
     for(var e in keynoteEntity){
 	output[e] = keynoteEntity[e];
     }
+    for(var e in townhallEntity){
+	output[e] = townhallEntity[e];
+    }
+    
+    for(var e in showcaseEntity){
+	output[e] = showcaseEntity[e];
+    }
+for(var e in previewEntities){
+output[e] = previewEntities[e];
+}
     fs.writeFile(ENTITYFILE, 'entities='+JSON.stringify(output, null, 4), function(err) {});
 }
 
@@ -383,7 +662,11 @@ function getTimeClass(t){
 function writeSchedule(schedule){
     var output = [];
     var dateIndex = ['Monday','Tuesday','Wednesday','Thursday'];
-    var roomIndex = ["Exhibit Hall G","718A","718B","701A","701B","801A","801B","803AB","716A","716B","714AB","717AB","802AB","715A","715B","713AB","707","709","711"]; //, "Plenary"];
+
+    var roomIndex = ["Exhibit Hall G", "701A","701B", "707","709","711", "713AB", "714AB","715A","715B", "716A","716B","717AB","718A","718B", "801A","801B","801AB","802AB", "803AB"]
+
+
+//    var roomIndex = ["Exhibit Hall G","718A","718B","701A","701B","801A","801B","803AB","716A","716B","714AB","717AB","802AB","715A","715B","713AB","707","709","711"]; //, "Plenary"];
     var dates = ["April 28th, 2014", "April 29th, 2014", "April 30th, 2014", "May 1st, 2014"];
     
     schedule.sort(function (a,b){
@@ -451,6 +734,12 @@ function writeSchedule(schedule){
     for(var i = 0; i < keynoteSchedule.length; i++){
 	insertScheduleSlot(keynoteSchedule[i], SD);
     }
+    for(var i = 0; i < previewSchedule.length; i++){
+	insertScheduleSlot(previewSchedule[i], SD);
+    }
+
+    insertScheduleSlot(townhallSchedule, SD);
+    insertScheduleSlot(showcaseSchedule, SD);
 
     if(makeScheduleCSV){
 	generateScheduleCSV(SD, roomIndex, dates)
@@ -496,8 +785,15 @@ function insertScheduleSlot(slot, sch){
 	    // create a new timeslot
 	    if(slot.slot.slot_class.indexOf("morning") >= 0)
 		sch[i].slots.unshift(slot.slot);
-	    else 
-		sch[i].slots.push(slot.slot);
+	    else if(slot.slot.slot_class.indexOf("afternoon1") >= 0){
+		// insert before afternoon
+		for(var z = 0; z < sch[i].slots.length; z++){
+		    if(sch[i].slots[z].slot_class.indexOf("afternoon1") >= 0){
+			sch[i].slots.splice(z, 0, slot.slot)
+			break;
+		    }
+		}
+	    } else sch[i].slots.push(slot.slot);
 	    return;
 	}
     }
@@ -541,6 +837,18 @@ function writeSessions(sessions, chairs){
     for(var s in keynoteSessions){
 	output[s] = keynoteSessions[s];
     }
+    
+    for(var s in previewSessions){
+	output[s] = previewSessions[s];
+    }
+    
+    for(var s in townhallSession){
+	output[s] = townhallSession[s];
+    }
+    for(var s in showcaseSession){
+	output[s] = showcaseSession[s];
+    }
+    
     sessionOutput = output;
     fs.writeFile(SESSIONFILE, 'sessions='+JSON.stringify(output, null, 4), function(err) {});
 }

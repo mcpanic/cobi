@@ -1104,29 +1104,6 @@
         }
     },
     {
-        "authorId": "auth12108",
-        "type": "author",
-        "id": "crs160",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Toni",
-        "familyName": "Robertson",
-        "email": "Toni.Robertson@uts.edu.au",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "University of Technology, Sydney",
-            "city": "Sydney",
-            "country": "Australia"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
         "authorId": "auth1588",
         "type": "author",
         "id": "crs161",
@@ -1186,6 +1163,29 @@
             "dept": "",
             "institution": "Dray & Associates, Inc.",
             "city": "Oakland",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1149",
+        "type": "author",
+        "id": "crs163",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Elizabeth",
+        "familyName": "Churchill",
+        "email": "churchill@acm.org",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "eBay Research Lab, eBay Inc.",
+            "city": "San Jose",
             "country": "United States"
         },
         "secondary": {

@@ -3404,29 +3404,6 @@
         }
     },
     {
-        "authorId": "auth12108",
-        "type": "author",
-        "id": "crs160",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Toni",
-        "familyName": "Robertson",
-        "email": "Toni.Robertson@uts.edu.au",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "University of Technology, Sydney",
-            "city": "Sydney",
-            "country": "Australia"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
         "authorId": "auth1588",
         "type": "author",
         "id": "crs161",
@@ -3486,6 +3463,29 @@
             "dept": "",
             "institution": "Dray & Associates, Inc.",
             "city": "Oakland",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1149",
+        "type": "author",
+        "id": "crs163",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Elizabeth",
+        "familyName": "Churchill",
+        "email": "churchill@acm.org",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "eBay Research Lab, eBay Inc.",
+            "city": "San Jose",
             "country": "United States"
         },
         "secondary": {
@@ -3651,10 +3651,10 @@
         "email": "ed.price@imtc.gatech.edu",
         "role": "",
         "primary": {
-            "dept": "Georgia Tech, Atlanta, Georgia, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Institute for People and Technology",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -5331,10 +5331,10 @@
         "email": "simon.harper@manchester.ac.uk",
         "role": "",
         "primary": {
-            "dept": "School  of Computer Science, University of Manchester, Manchester, United Kingdom",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "School  of Computer Science",
+            "institution": "The University of Manchester",
+            "city": "Manchester",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -5379,16 +5379,16 @@
         "email": "mrosson@psu.edu",
         "role": "",
         "primary": {
-            "dept": "Center for Human-Computer Interaction, http://www.chiplace.org/content/Members/show-profile.jsp?id=213, University Park, Pennsylvania, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Center for Human-Computer Interaction",
+            "institution": "Pennsylvania State University",
+            "city": "University Park",
+            "country": "United States"
         },
         "secondary": {
-            "dept": "College of Information Sciences and Technology, The Pennsylvania State University, University Park, Pennsylvania, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Center for Human-Computer Interaction",
+            "institution": "Pennsylvania State University",
+            "city": "University Park",
+            "country": "United States"
         }
     },
     {
@@ -5788,9 +5788,9 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Yahoo Labs",
-            "city": "Sunnyvale",
-            "country": "United States"
+            "institution": "Telefonica Research",
+            "city": "Barcelona",
+            "country": "Spain"
         },
         "secondary": {
             "dept": "",
@@ -5812,9 +5812,9 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Zurich",
-            "country": "Switzerland"
+            "institution": "Telefonica Research",
+            "city": "Barcelona",
+            "country": "Spain"
         },
         "secondary": {
             "dept": "",
@@ -5986,7 +5986,7 @@
         },
         "secondary": {
             "dept": "",
-            "institution": "Delft University of Technology, Industrial Design",
+            "institution": "Delft University of Technology",
             "city": "Delft",
             "country": "The Netherlands"
         }
@@ -6003,10 +6003,10 @@
         "email": "D.j.vaneijk@tudelft.nl",
         "role": "",
         "primary": {
-            "dept": "Industrial Design",
+            "dept": "",
             "institution": "Delft University of Technology",
             "city": "Delft",
-            "country": "Netherlands"
+            "country": "The Netherlands"
         },
         "secondary": {
             "dept": "",
@@ -6561,10 +6561,10 @@
             "country": "Germany"
         },
         "secondary": {
-            "dept": "create",
-            "institution": "Telecom ParisTech",
-            "city": "Paris",
-            "country": "France"
+            "dept": "",
+            "institution": "University of Munich (LMU)",
+            "city": "Munich",
+            "country": "Germany"
         }
     },
     {
@@ -7155,10 +7155,10 @@
         "email": "kash@diku.dk",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "University of Copenhagen",
-            "city": "Copenhagen",
-            "country": "Denmark"
+            "dept": "University of Copenhagen, Copenhagen, Denmark",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -8907,10 +8907,10 @@
         "email": "luileito@upv.es",
         "role": "",
         "primary": {
-            "dept": "ITI/DSIC, Universitat Politècnica de València, Valencia, Spain",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "ITI/DSIC",
+            "institution": "Universitat Politècnica de València",
+            "city": "Valencia",
+            "country": "Spain"
         },
         "secondary": {
             "dept": "",
@@ -13083,10 +13083,10 @@
         "email": "luileito@upv.es",
         "role": "",
         "primary": {
-            "dept": "ITI/DSIC, Universitat Politècnica de València, Valencia, Spain",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "ITI/DSIC",
+            "institution": "Universitat Politècnica de València",
+            "city": "Valencia",
+            "country": "Spain"
         },
         "secondary": {
             "dept": "",
@@ -13392,7 +13392,7 @@
         "givenName": "Martin",
         "middleInitial": "",
         "familyName": "Schuessler",
-        "email": "research@mschuessler.de",
+        "email": "schuesslerm@acm.org",
         "role": "",
         "primary": {
             "dept": "Quality and Usability Lab",
@@ -13468,7 +13468,7 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Univ Paris-Sud",
+            "institution": "Univ Paris-Sud, CNRS",
             "city": "Orsay",
             "country": "France"
         },
@@ -13516,7 +13516,7 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Univ Paris-Sud",
+            "institution": "Univ Paris-Sud, CNRS",
             "city": "Orsay",
             "country": "France"
         },
@@ -22371,10 +22371,10 @@
         "email": "tanvir@uw.edu",
         "role": "",
         "primary": {
-            "dept": "University of Washington, Seattle, Washington, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Computer Science and Engineering",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -24723,8 +24723,8 @@
         "email": "nchen@microsoft.com",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Microsoft Research",
+            "dept": "Microsoft Research",
+            "institution": "",
             "city": "Cambridge",
             "country": "United Kingdom"
         },
@@ -27891,10 +27891,10 @@
         "email": "greismm@studi.informatik.uni-stuttgart.de",
         "role": "",
         "primary": {
-            "dept": "University of Stuttgart, Stuttgart, Germany",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "",
+            "institution": "University of Stuttgart",
+            "city": "Stuttgart",
+            "country": "Germany"
         },
         "secondary": {
             "dept": "",
@@ -33633,9 +33633,9 @@
             "country": "Japan"
         },
         "secondary": {
-            "dept": "",
-            "institution": "JSPS Research Fellow",
-            "city": "",
+            "dept": "JSPS Research Fellow, Tokyo, Japan",
+            "institution": "JSPS",
+            "city": "Tokyo",
             "country": "Japan"
         }
     },
@@ -35457,10 +35457,10 @@
             "country": "Finland"
         },
         "secondary": {
-            "dept": "Department of Computer Science, University of Helsinki, Helsinki, Finland",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "Department of Computer Science",
+            "institution": "University of Helsinki",
+            "city": "Helsinki",
+            "country": "Finland"
         }
     },
     {
@@ -37707,7 +37707,7 @@
         "email": "alexander.meschtscherjakov@sbg.ac.at",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "University of Salzburg, Salzburg, Austria",
             "institution": "University of Salzburg",
             "city": "Salzburg",
             "country": "Austria"
@@ -37755,7 +37755,7 @@
         "email": "manfred.tscheligi@sbg.ac.at",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "ICT&S Center",
             "institution": "University of Salzburg",
             "city": "Salzburg",
             "country": "Austria"
@@ -47091,8 +47091,8 @@
         "email": "hrl@indiana.edu",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Indiana University Bloomington",
+            "dept": "Indiana University Bloomington, Bloomington, Indiana, United States",
+            "institution": "Indiana University",
             "city": "Bloomington",
             "country": "United States"
         },
@@ -49539,10 +49539,10 @@
         "email": "greg.trafton@nrl.navy.mil",
         "role": "",
         "primary": {
-            "dept": "AI Center, Naval Research Laboratory, Washington, DC, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "AI Center",
+            "institution": "Naval Research Laboratory",
+            "city": "Washington",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -50369,9 +50369,9 @@
         "role": "",
         "primary": {
             "dept": "Philips Healthcare, Andover, Massachusetts, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Philips Healthcare",
+            "city": "Andover",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -50392,9 +50392,9 @@
         "role": "",
         "primary": {
             "dept": "Ontario College of Art and Design University , Toronto, Ontario, Canada",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Ontario College of Art and Design University",
+            "city": "Toronto",
+            "country": "Canada"
         },
         "secondary": {
             "dept": "",
@@ -50415,9 +50415,9 @@
         "role": "",
         "primary": {
             "dept": "University Health Network, Toronto, Ontario, Canada",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "University Health Network",
+            "city": "Toronto",
+            "country": "Canada"
         },
         "secondary": {
             "dept": "",
@@ -50438,9 +50438,9 @@
         "role": "",
         "primary": {
             "dept": "Patients Canada, Toronto, Ontario, Canada",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Patients Canada",
+            "city": "Toronto",
+            "country": "Canada"
         },
         "secondary": {
             "dept": "",
@@ -50461,9 +50461,9 @@
         "role": "",
         "primary": {
             "dept": "Healthcare Human Factors, Toronto, Ontario, Canada",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Healthcare Human Factors",
+            "city": "Toronto",
+            "country": "Canada"
         },
         "secondary": {
             "dept": "",
@@ -52467,10 +52467,10 @@
             "country": "Japan"
         },
         "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "SDM Institute",
+            "institution": "Keio University",
+            "city": "Yokohama City",
+            "country": "Japan"
         }
     },
     {
