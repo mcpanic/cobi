@@ -358,6 +358,26 @@ body.loading .modal {
     color: #bbbbbb;
 }
 
+.main .cell .display .popularity {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.main .cell .display .popularity-high {
+    color: red;
+    font-weight: bold;
+}
+
+.main .cell .display .popularity-medium {
+    color: #FF8A00;
+    font-weight: bold;
+}
+
+.main .cell .display .popularity-low {
+    color: #bbbbbb;
+}
+
+
 .main .cell .conflicts .icon {
     width: 24px;
 }
@@ -500,9 +520,9 @@ body.loading .modal {
    ========================================================================== */
 .chair-display {
     margin-top: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-bottom:thick solid #888888;
+    margin-bottom: 5px !important;
+/*    padding: 10px; */
+/*    border-bottom:thick solid #888888; */
     /*padding-left: 5px;
     padding-right: 7px;*/
 }

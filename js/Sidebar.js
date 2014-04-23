@@ -448,7 +448,15 @@ var Sidebar = function() {
                          });
                     } else
                          Conflicts.updateConflicts(true, true, "preference");
-               break;   
+               break;  
+               case "c_and_p":
+                    if (MoveMode.isOn){
+                         $(".slot:not('.unavailable')").each(function(index, item){
+                              $(item).find(".display").html($(item).find(".conflicts").html());
+                         });
+                    } else
+                         Conflicts.updateConflicts(true, true, "c+p");
+               break;  
                case "chair-conflict":
                     if (MoveMode.isOn){
                          $(".slot:not('.unavailable')").each(function(index, item){
@@ -542,9 +550,70 @@ var Sidebar = function() {
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
                          var id = $(item).attr("id").substr(8);
                          var session = allSessions[id];
-                         $(item).find(".display").html(keys(session.personas).map(function(x) {return personaHash[x]}));
+                         // $(item).find(".display").html(keys(session.personas).map(function(x) {return personaHash[x]}));
+                         $(item).find(".display").html(session.personas);
                     });
                break;
+               case "author-interests":
+                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+                         var id = $(item).attr("id").substr(8);
+                         var session = allSessions[id];
+                         var i, submission;
+                         var score = 0;
+                         for (i=0; i<session.submissions.length; i++){
+                              submission = session.submissions[i]["id"];
+                              if (submission in CCOps.authorsourcingInterestedCounts){
+                                   score += CCOps.authorsourcingInterestedCounts[submission];
+                              }
+                         }
+                         var $score = $("<span/>").addClass("popularity").html(score);
+                         if (score >= 40)
+                              $score.addClass("popularity-high");
+                         else if (score >= 20)
+                              $score.addClass("popularity-medium");
+                         else
+                              $score.addClass("popularity-low");
+                         $(item).find(".display").html($score);                         
+                    });  
+                    // sort papers by authorsourcing popularity  
+                    // var sortable = [];
+                    // for (var v in CCOps.authorsourcingInterestedCounts) 
+                    //      sortable.push([v, CCOps.authorsourcingInterestedCounts[v]]);
+                    // sortable.sort(function(a,b) { return b[1] - a[1]; });
+                    // for (i=1; i<sortable.length; i++){ 
+                    //      console.log(sortable[i][0], sortable[i][1]); 
+                    // }                            
+               break;
+               case "confer-interests":
+                    $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
+                         var id = $(item).attr("id").substr(8);
+                         var session = allSessions[id];
+                         var i, submission;
+                         var score = 0;
+                         for (i=0; i<session.submissions.length; i++){
+                              submission = session.submissions[i]["id"];
+                              if (submission in CCOps.conferInterestedCounts){
+                                   score += CCOps.conferInterestedCounts[submission];
+                              }
+                         }
+                         var $score = $("<span/>").addClass("popularity").html(score);
+                         if (score >= 40)
+                              $score.addClass("popularity-high");
+                         else if (score >= 20)
+                              $score.addClass("popularity-medium");
+                         else
+                              $score.addClass("popularity-low");
+                         $(item).find(".display").html($score);                         
+                    });         
+                    // sort papers by Confer popularity  
+                    // var sortable = [];
+                    // for (var v in CCOps.conferInterestedCounts) 
+                    //      sortable.push([v, CCOps.conferInterestedCounts[v]]);
+                    // sortable.sort(function(a,b) { return b[1] - a[1]; });
+                    // for (i=1; i<sortable.length; i++){ 
+                    //      console.log(sortable[i][0], sortable[i][1]); 
+                    // }      
+               break;           
                default:
                break;
           }

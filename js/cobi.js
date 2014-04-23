@@ -17,163 +17,37 @@ var userData = new userInfo(null, "Anon", null, "rookie");
 var allUsers = {};
 var transactions = [];
 var localTransactions = [];
-var roomCapacity = [
-    {   "Blue": "Amphitheater, 862p"},
-    {   "Bordeaux": "Amphitheater, 650p"},
-    {   "252B": "Theater, 220p"},
-    {   "352AB": "Theater, 380p"},
-    {   "Havane": "Amphitheater, 373p"},
-    {   "241": "Theater, 220p"},
-    {   "342A": "Theater, 220p"},
-    {   "251": "Theater, 220p"},
-    {   "351": "Theater, 220p"},
-    {   "242AB": "Theater, 280p"},
-    {   "242A": "Theater, ??p"},
-    {   "242B": "Theater, ??p"},
-    {   "243": "Classroom, 60p"},
-    {   "253": "Classroom, 60p"},
-    {   "343": "Classroom, 60p"},
-    {   "252A": "Theater, 120p"},
-    {   "361": "Conference, 24p"},
-    {   "362/363": "Conference, 32p"},
-    {   "221/221M": "Conference, 64p"}
-];
+var roomCapacity = {
+	"Exhibit Hall": "650",
+	"718A": "300",
+	"718B": "300",
+	"701A": "420",
+	"701B": "420",
+	"801A": "350",
+	"801B": "350",
+	"803AB": "320",
+	"716A": "220",
+	"716B": "220",
+	"714AB": "450",
+	"717AB": "325",
+	"802AB": "150",
+	"715A": "130",
+	"715B": "130",
+	"713AB": "325",
+	"707": "120",
+	"709": "120",
+	"711": "120",
+	"Plenary": "600"
+};
 
-var desiredRoomOrder = [
-    "GB56",
-    "GB5",
-    "GB6",
-    "GB12",
-    "GB34",
-    "GB78",
-    "GB910",
-    "160T",
-    "102C",
-    "Dover AB",
-    "100T",
-    "Dover C",
-    "Bristol"];
+var desiredRoomOrder = ["718A","718B","701A","701B","801A","801B","803AB","716A","716B","714AB","717AB","802AB","715A","715B","713AB","707","709","711","Plenary", "Exhibit Hall"];
 
 var personaList = [
-"Collaborative information retrieval",
-"Collaborative software development",
-"Community analysis and support, virtual or physical",
-"Computer-Mediated Communication",
-"Concurrency control",
-"Cross-cultural Systems or Studies",
-"Crowdsourcing",
-"Distributed/virtual teams",
-"E-Learning and Education",
-"Entertainment/games",
-"Location-based and context-aware computing",
-"Machine Learning and Data Mining",
-"Medical and health support",
-"Organization/office/workplace support",
-"Other domain-specific support",
-"Social Computing and Social Navigation",
-"Social Networking Site Design and Use",
-"Telepresence/video/desktop conferencing",
-    "User experience/interaction design"];
+];
+    
+var fullpersonaList = personaList;
 
-var fullpersonaList = ["B2B / information systems",
-		   "Collaboration architectures",
-		   "Collaborative information retrieval",
-		   "Collaborative software development",
-		   "Collaborative visualization",
-		   "Community analysis and support, virtual or physical",
-		   "Computer-Mediated Communication",
-		   "Concurrency control",
-		   "Cross-cultural Systems or Studies",
-		   "Crowdsourcing",
-		   "Development Tools / Toolkits / Programming Environments",
-		   "Distributed/virtual teams",
-		   "E-Learning and Education",
-		   "Empirical Methods, Qualitative",
-		   "Empirical Methods, Quantitative",
-		   "Entertainment/games",
-		   "Home/family/intimacy support",
-		   "Legal/historical/philosophical aspects",
-		   "Location-based and context-aware computing",
-		   "Machine Learning and Data Mining",
-		   "Medical and health support",
-		   "Mobile and embedded devices",
-		   "Organization/office/workplace support",
-		   "Other domain-specific support",
-		   "Participatory Design / Cooperative Design",
-		   "Privacy/access control/trust",
-		   "Recommender and Filtering Systems",
-		   "Social Computing and Social Navigation",
-		   "Social Networking Site Design and Use",
-		   "Social network analysis",
-		   "Studies of Wikipedia/Web",
-		   "Tabletop and Large Wall Displays",
-		   "Telepresence/video/desktop conferencing",
-		   "User experience/interaction design",
-		   "Virtual Worlds/Avatars/Proxies",
-		   "Workflow management"];
-
-var communityList = [ 'Asking in Social Networks',
-		      'citizen science',
-		      'civic participation',
-		      'Collaboration architectures',
-		      'Collaborative information retrieval',
-		      'Collaborative software development',
-		      'Community analysis and support, virtual or physical',
-		      'Computer-Mediated Communication',
-		      'Concurrency control',
-		      'consumer applications',
-		      'coordination',
-		      'Corporate Research',
-		      'creativity',
-		      'Cross-cultural Systems or Studies',
-		      'Crowdfunding',
-		      'Crowdsourcing',
-		      'design',
-		      'distance',
-		      'Distributed/virtual teams',
-		      'E-Learning and Education',
-		      'Empirical Methods, Qualitative',
-		      'enterprise',
-		      'Entertainment/games',
-		      'Facebook',
-		      'Family on Social Networks',
-		      'friendsourcing',
-		      'home',
-		      'Home/family/intimacy support',
-		      'Infrastructure',
-		      'leaders',
-		      'Legal/historical/philosophical aspects',
-		      'Location-based and context-aware computing',
-		      'Machine Learning and Data Mining',
-		      'Medical and health support',
-		      'Mobile and embedded devices',
-		      'MOOCs',
-		      'online support groups',
-		      'Organization/office/workplace support',
-		      'Other domain-specific support',
-		      'paid crowdsourcing',
-		      'Participation motivations',
-		      'persuasion',
-		      'Politics/Social Media',
-		      'Privacy/access control/trust',
-		      'Q&A',
-		      'Scientific work',
-		      'search process',
-		      'Self-disclosure and identity',
-		      'Social Computing and Social Navigation',
-		      'Social Media Offline',
-		      'Social network analysis',
-		      'Social Networking Site Design and Use',
-		      'Sustainability',
-		      'Telepresence/video/desktop conferencing',
-		      'trust',
-		      'twitter',
-		      'User experience/interaction design',
-		      'values',
-		      'Virtual Worlds/Avatars/Proxies',
-		      'worker bees',
-		      'Workflow management',
-		      'youth' ];
+var communityList = [];
 
 var DataOps = function() {
     function handleFailedTransaction(t){
@@ -1310,6 +1184,15 @@ function initialize(){
     db.loadUsers();
 }
 
+function isEmpty(map) {
+    for(var key in map) {
+	if (map.hasOwnProperty(key)) {
+            return false;
+	}
+    }
+    return true;
+}
+
 // Populates all of the above variables and attaches personas
 // once the schedule is loaded from server 
 function initAfterScheduleLoads(m){
@@ -1321,8 +1204,9 @@ function initAfterScheduleLoads(m){
     allChairs = m['chairs'];
     unscheduledChairs = {};
     for(var i in allChairs){
-	if(allChairs[i].id == '')
-	    unscheduledChairs[i] = allChairs[i];
+	if('unscheduled' in allChairs[i]){
+	    unscheduledChairs[i] = allChairs[i]['unscheduled'];
+	}
     }
     allRooms = getAllRooms();
     allSessions = getAllSessions();

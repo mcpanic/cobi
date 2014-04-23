@@ -3,26 +3,6 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
 include "../settings/settings.php";
 
-function checkDupKey($k){
-  $dups = array(
-		'auth29797' =>		'auth1132' ,
-		'auth28194' => 'auth11521' ,
-		'auth34702' => 'auth1220' ,
-		'auth29796' => 'auth1508' ,
-		'auth32501' => 'auth22371' ,
-		'auth27369' => 'auth23564' ,
-		'auth29438' => 'auth24484' ,
-		'auth34954' => 'auth26514' ,
-		'auth6155' => 'auth28619' ,
-		'auth3090' => 'auth29726' ,
-		'auth3496' => 'auth32954' ,
-		'auth4635' => 'auth34701' );
-  
-  if(array_key_exists($k, $dups)){
-    return $dups[$k];
-  }
-  return $k;
-}
 
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
@@ -56,7 +36,7 @@ echo mysqli_error($mysqli);
 $chairs = array();
 while ($row = $chairsTable->fetch_assoc()){
   $row['affinity'] = json_decode($row['affinity']);
-  $chairs[$row['authorId']] = $row;
+  $chairs[$row['authorId']][$row['id']] = $row;
 }
 
 // Reconstruct the JSON
@@ -73,20 +53,18 @@ while ($row = $entityTable->fetch_assoc()) {
       if (array_key_exists('id', $author)){
 	$authorKey = $author['id'];
       }
-      $inst = "";
-      if(array_key_exists('primary', $author) and !is_null($author['primary'])){
-	if(array_key_exists('institution', $author['primary']) and !is_null($author['primary'])){
-	  $inst = $author['primary']['institution'];
-	}
+          
+      $email = "";
+      if(array_key_exists('email', $author)){
+	$email = $author['email'];
       }
-      
       $authorData = array(
-			  "affiliations" => array(array("country"=> "", "name" => $inst)),
-			  "email" => $author['email'],
+			  "affiliations" => $author['primary'],
+			  "email" => $email,
 			  "firstName" => $author['givenName'],
 			  "lastName" => $author['familyName'],
 			  "middleName" => "",
-			  "authorId" => checkDupKey($authorKey)
+			  "authorId" => $authorKey
 			  );
       if(array_key_exists('role', $author)){
 	$authorData['role'] = $author['role'];
@@ -94,13 +72,12 @@ while ($row = $entityTable->fetch_assoc()) {
       if(array_key_exists('middleInitial', $author)){
 	$authorData['middleName'] = $author['middleInitial'];
       }
-      $authors[checkDupKey($authorKey)] = $authorData;
+      $authors[$authorKey] = $authorData;
     }
   }
   $row['authors'] = $authors;
   //  var_dump($authors);
   $row['keywords'] = json_decode($row['keywords']);
-  
   $row['bestPaperAward'] = (bool)$row['bestPaperAward'];
   $row['bestPaperNominee'] = (bool)$row['bestPaperNominee'];
   

@@ -1,315 +1,1411 @@
 schedule=[
     {
-        "date": "Monday, Feb 17th",
+        "date": "April 28th, 2014",
         "day": "Monday",
         "slots": [
             {
-                "slot_id": "Monday__Feb_17th_8_45_10_15",
-                "time": "8:45-10:15",
+                "slot_id": "Monday_9_00_10_20",
+                "time": "9:00 - 10:20",
                 "slot_class": "morning1",
                 "sessions": [
                     {
-                        "session": "s220"
+                        "session": "6664",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "6816",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "6923",
+                        "room": "701A"
+                    },
+                    {
+                        "session": "7009",
+                        "room": "701B"
+                    },
+                    {
+                        "session": "7062",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "7108",
+                        "room": "801B"
+                    },
+                    {
+                        "session": "7156",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7235",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7274",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7331",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7366",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "6873",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7427",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7443",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "7459",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7561",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7578",
+                        "room": "709"
+                    },
+                    {
+                        "session": "7596",
+                        "room": "711"
+                    },
+                    {
+                        "session": "8661",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "7473",
+                        "room": "Exhibit Hall"
                     }
                 ]
             },
             {
-                "slot_id": "Monday__Feb_17th_10_45_12_00",
-                "time": "10:45-12:00",
+                "slot_id": "Monday_11_00_12_20",
+                "time": "11:00 - 12:20",
                 "slot_class": "morning2",
                 "sessions": [
                     {
-                        "session": "s111"
+                        "session": "6666",
+                        "room": "718A"
                     },
                     {
-                        "session": "s107"
+                        "session": "6829",
+                        "room": "718B"
                     },
                     {
-                        "session": "s128"
+                        "session": "6931",
+                        "room": "701A"
                     },
                     {
-                        "session": "s100"
+                        "session": "7066",
+                        "room": "701B"
                     },
                     {
-                        "session": "s210"
+                        "session": "7010",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "7109",
+                        "room": "801B"
+                    },
+                    {
+                        "session": "7158",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7237",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7275",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7333",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7367",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "6951",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7428",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7444",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "7460",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7562",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7580",
+                        "room": "709"
+                    },
+                    {
+                        "session": "7840",
+                        "room": "711"
+                    },
+                    {
+                        "session": "8662",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "7474",
+                        "room": "Exhibit Hall"
                     }
                 ]
             },
             {
-                "slot_id": "Monday__Feb_17th_14_00_15_15",
-                "time": "14:00-15:15",
+                "slot_id": "Monday_14_00_15_20",
+                "time": "14:00 - 15:20",
                 "slot_class": "afternoon1",
                 "sessions": [
                     {
-                        "session": "s110"
+                        "session": "6672",
+                        "room": "718A"
                     },
                     {
-                        "session": "s130"
+                        "session": "6830",
+                        "room": "718B"
                     },
                     {
-                        "session": "s133"
+                        "session": "6928",
+                        "room": "701A"
                     },
                     {
-                        "session": "s106"
+                        "session": "7017",
+                        "room": "701B"
                     },
                     {
-                        "session": "s121"
+                        "session": "7070",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "7113",
+                        "room": "801B"
+                    },
+                    {
+                        "session": "7167",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7238",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7279",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7346",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7371",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7065",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7429",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7445",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "7463",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7563",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7582",
+                        "room": "709"
+                    },
+                    {
+                        "session": "7841",
+                        "room": "711"
+                    },
+                    {
+                        "session": "8663",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "7852",
+                        "room": "Exhibit Hall"
                     }
                 ]
             },
             {
-                "slot_id": "Monday__Feb_17th_15_45_17_00",
-                "time": "15:45-17:00",
+                "slot_id": "Monday_16_00_17_20",
+                "time": "16:00 - 17:20",
                 "slot_class": "afternoon2",
                 "sessions": [
                     {
-                        "session": "s213"
+                        "session": "6705",
+                        "room": "718A"
                     },
                     {
-                        "session": "s214"
+                        "session": "6834",
+                        "room": "718B"
                     },
                     {
-                        "session": "s212"
+                        "session": "6933",
+                        "room": "701A"
                     },
                     {
-                        "session": "s211"
+                        "session": "7019",
+                        "room": "701B"
                     },
                     {
-                        "session": "s215"
-                    }
-                ]
-            },
-            {
-                "slot_id": "Monday__Feb_17th_17_00_19_00",
-                "time": "17:00-19:00",
-                "slot_class": "afternoon3",
-                "sessions": [
+                        "session": "7071",
+                        "room": "801A"
+                    },
                     {
-                        "session": "s216"
+                        "session": "7120",
+                        "room": "801B"
+                    },
+                    {
+                        "session": "7174",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7239",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7283",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7349",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7376",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7161",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7430",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7446",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "7533",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7564",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7583",
+                        "room": "709"
+                    },
+                    {
+                        "session": "7842",
+                        "room": "711"
+                    },
+                    {
+                        "session": "8664",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "7862",
+                        "room": "Exhibit Hall"
                     }
                 ]
             }
         ]
     },
     {
-        "date": "Tuesday, Feb 18th",
+        "date": "April 29th, 2014",
         "day": "Tuesday",
         "slots": [
             {
-                "slot_id": "Tuesday__Feb_18th_9_00_10_15",
-                "time": "9:00-10:15",
+                "slot_id": "Tuesday_9_00_10_20",
+                "time": "9:00 - 10:20",
                 "slot_class": "morning1",
                 "sessions": [
                     {
-                        "session": "s219"
+                        "session": "6709",
+                        "room": "718A"
                     },
                     {
-                        "session": "s125"
+                        "session": "6839",
+                        "room": "718B"
                     },
                     {
-                        "session": "s131"
+                        "session": "6935",
+                        "room": "701A"
                     },
                     {
-                        "session": "s126"
+                        "session": "7020",
+                        "room": "701B"
                     },
                     {
-                        "session": "s109"
+                        "session": "7072",
+                        "room": "801A"
                     },
                     {
-                        "session": "s105"
+                        "session": "7121",
+                        "room": "801B"
                     },
                     {
-                        "session": "s114"
+                        "session": "7180",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7240",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7289",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7354",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7382",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7205",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7431",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7447",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "7617",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7565",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7584",
+                        "room": "709"
+                    },
+                    {
+                        "session": "7843",
+                        "room": "711"
+                    },
+                    {
+                        "session": "8665",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "7863",
+                        "room": "Exhibit Hall"
                     }
                 ]
             },
             {
-                "slot_id": "Tuesday__Feb_18th_10_45_12_00",
-                "time": "10:45-12:00",
+                "slot_id": "Tuesday_11_00_12_20",
+                "time": "11:00 - 12:20",
                 "slot_class": "morning2",
                 "sessions": [
                     {
-                        "session": "s122"
+                        "session": "6725",
+                        "room": "718A"
                     },
                     {
-                        "session": "s205"
+                        "session": "6855",
+                        "room": "718B"
                     },
                     {
-                        "session": "s200"
+                        "session": "6938",
+                        "room": "701A"
                     },
                     {
-                        "session": "s115"
+                        "session": "7024",
+                        "room": "701B"
                     },
                     {
-                        "session": "s116"
+                        "session": "7074",
+                        "room": "801A"
                     },
                     {
-                        "session": "s208"
+                        "session": "7126",
+                        "room": "801B"
+                    },
+                    {
+                        "session": "7184",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7242",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7292",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7549",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7383",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7214",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7432",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7448",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "8680",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7566",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7585",
+                        "room": "709"
+                    },
+                    {
+                        "session": "7844",
+                        "room": "711"
+                    },
+                    {
+                        "session": "7477",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "8649",
+                        "room": "Exhibit Hall"
                     }
                 ]
             },
             {
-                "slot_id": "Tuesday__Feb_18th_14_00_15_15",
-                "time": "14:00-15:15",
+                "slot_id": "Tuesday_14_00_15_20",
+                "time": "14:00 - 15:20",
                 "slot_class": "afternoon1",
                 "sessions": [
                     {
-                        "session": "s217"
+                        "session": "6745",
+                        "room": "718A"
                     },
                     {
-                        "session": "s103"
+                        "session": "6863",
+                        "room": "718B"
                     },
                     {
-                        "session": "s123"
+                        "session": "6945",
+                        "room": "701A"
                     },
                     {
-                        "session": "s132"
+                        "session": "7027",
+                        "room": "701B"
                     },
                     {
-                        "session": "s127"
+                        "session": "7076",
+                        "room": "801A"
                     },
                     {
-                        "session": "s117"
+                        "session": "7128",
+                        "room": "801B"
                     },
                     {
-                        "session": "s209"
+                        "session": "7188",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7245",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7301",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7598",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7384",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7327",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7433",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7449",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "8686",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7567",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7586",
+                        "room": "709"
+                    },
+                    {
+                        "session": "8646",
+                        "room": "711"
+                    },
+                    {
+                        "session": "7478",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "8882",
+                        "room": "Exhibit Hall"
                     }
                 ]
             },
             {
-                "slot_id": "Tuesday__Feb_18th_15_45_16_45",
-                "time": "15:45-16:45",
+                "slot_id": "Tuesday_16_00_17_20",
+                "time": "16:00 - 17:20",
                 "slot_class": "afternoon2",
                 "sessions": [
                     {
-                        "session": "s221"
-                    }
-                ]
-            },
-            {
-                "slot_id": "Tuesday__Feb_18th_16_45_17_45",
-                "time": "16:45-17:45",
-                "slot_class": "afternoon3",
-                "sessions": [
+                        "session": "6759",
+                        "room": "718A"
+                    },
                     {
-                        "session": "s222"
-                    }
-                ]
-            },
-            {
-                "slot_id": "Tuesday__Feb_18th_18_00_19_00",
-                "time": "18:00-19:00",
-                "slot_class": "evening1",
-                "sessions": [
+                        "session": "6882",
+                        "room": "718B"
+                    },
                     {
-                        "session": "s223"
-                    }
-                ]
-            },
-            {
-                "slot_id": "Tuesday__Feb_18th_19_00_22_00",
-                "time": "19:00-22:00",
-                "slot_class": "evening2",
-                "sessions": [
+                        "session": "6948",
+                        "room": "701A"
+                    },
                     {
-                        "session": "s224"
+                        "session": "7028",
+                        "room": "701B"
+                    },
+                    {
+                        "session": "7084",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "7130",
+                        "room": "801B"
+                    },
+                    {
+                        "session": "7189",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7247",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7307",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7599",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7387",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7335",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7434",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7450",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "8688",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7568",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7587",
+                        "room": "709"
+                    },
+                    {
+                        "session": "8678",
+                        "room": "711"
+                    },
+                    {
+                        "session": "7480",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "8884",
+                        "room": "Exhibit Hall"
                     }
                 ]
             }
         ]
     },
     {
-        "date": "Wednesday, Feb 19th",
+        "date": "April 30th, 2014",
         "day": "Wednesday",
         "slots": [
             {
-                "slot_id": "Wednesday__Feb_19th_9_00_10_15",
-                "time": "9:00-10:15",
+                "slot_id": "Wednesday_9_00_10_20",
+                "time": "9:00 - 10:20",
                 "slot_class": "morning1",
                 "sessions": [
                     {
-                        "session": "s2111"
+                        "session": "6761",
+                        "room": "718A"
                     },
                     {
-                        "session": "s101"
+                        "session": "6890",
+                        "room": "718B"
                     },
                     {
-                        "session": "s207"
+                        "session": "6960",
+                        "room": "701A"
                     },
                     {
-                        "session": "s129"
+                        "session": "7033",
+                        "room": "701B"
                     },
                     {
-                        "session": "s104"
+                        "session": "7092",
+                        "room": "801A"
                     },
                     {
-                        "session": "s203"
+                        "session": "7131",
+                        "room": "801B"
+                    },
+                    {
+                        "session": "7197",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7250",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7311",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7600",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7388",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7504",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7435",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7451",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "8695",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7569",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7588",
+                        "room": "709"
+                    },
+                    {
+                        "session": "8682",
+                        "room": "711"
+                    },
+                    {
+                        "session": "7482",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "8886",
+                        "room": "Exhibit Hall"
                     }
                 ]
             },
             {
-                "slot_id": "Wednesday__Feb_19th_10_45_12_00",
-                "time": "10:45-12:00",
+                "slot_id": "Wednesday_11_00_12_20",
+                "time": "11:00 - 12:20",
                 "slot_class": "morning2",
                 "sessions": [
                     {
-                        "session": "s2110"
+                        "session": "6765",
+                        "room": "718A"
                     },
                     {
-                        "session": "s118"
+                        "session": "6893",
+                        "room": "718B"
                     },
                     {
-                        "session": "s202"
+                        "session": "6975",
+                        "room": "701A"
                     },
                     {
-                        "session": "s201"
+                        "session": "7037",
+                        "room": "701B"
                     },
                     {
-                        "session": "s119"
+                        "session": "7093",
+                        "room": "801A"
                     },
                     {
-                        "session": "s102"
+                        "session": "7132",
+                        "room": "801B"
                     },
                     {
-                        "session": "s112"
+                        "session": "7199",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7253",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7312",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "6946",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7390",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7505",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7436",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7452",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "7396",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7570",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7589",
+                        "room": "709"
+                    },
+                    {
+                        "session": "7497",
+                        "room": "711"
+                    },
+                    {
+                        "session": "7483",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "7475",
+                        "room": "Exhibit Hall"
                     }
                 ]
             },
             {
-                "slot_id": "Wednesday__Feb_19th_14_00_15_15",
-                "time": "14:00-15:15",
+                "slot_id": "Wednesday_14_00_15_20",
+                "time": "14:00 - 15:20",
                 "slot_class": "afternoon1",
                 "sessions": [
                     {
-                        "session": "s218"
+                        "session": "6769",
+                        "room": "718A"
                     },
                     {
-                        "session": "s206"
+                        "session": "6899",
+                        "room": "718B"
                     },
                     {
-                        "session": "s124"
+                        "session": "6978",
+                        "room": "701A"
                     },
                     {
-                        "session": "s108"
+                        "session": "7041",
+                        "room": "701B"
                     },
                     {
-                        "session": "s120"
+                        "session": "7094",
+                        "room": "801A"
                     },
                     {
-                        "session": "s113"
+                        "session": "7137",
+                        "room": "801B"
                     },
                     {
-                        "session": "s204"
+                        "session": "7201",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7254",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7315",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7080",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7397",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7506",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7437",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7453",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "7553",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7571",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7590",
+                        "room": "709"
+                    },
+                    {
+                        "session": "7498",
+                        "room": "711"
+                    },
+                    {
+                        "session": "7484",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "7855",
+                        "room": "Exhibit Hall"
                     }
                 ]
             },
             {
-                "slot_id": "Wednesday__Feb_19th_15_45_17_15",
-                "time": "15:45-17:15",
+                "slot_id": "Wednesday_16_00_17_20",
+                "time": "16:00 - 17:20",
                 "slot_class": "afternoon2",
                 "sessions": [
                     {
-                        "session": "s225"
+                        "session": "6770",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "6906",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "6986",
+                        "room": "701A"
+                    },
+                    {
+                        "session": "7042",
+                        "room": "701B"
+                    },
+                    {
+                        "session": "7096",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "7138",
+                        "room": "801B"
+                    },
+                    {
+                        "session": "7211",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7255",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7318",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7352",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7398",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7422",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7438",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7454",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "7555",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7572",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7591",
+                        "room": "709"
+                    },
+                    {
+                        "session": "7502",
+                        "room": "711"
+                    },
+                    {
+                        "session": "7485",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "7856",
+                        "room": "Exhibit Hall"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "date": "May 1st, 2014",
+        "day": "Thursday",
+        "slots": [
+            {
+                "slot_id": "Thursday_9_00_10_20",
+                "time": "9:00 - 10:20",
+                "slot_class": "morning1",
+                "sessions": [
+                    {
+                        "session": "6784",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "6907",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "6987",
+                        "room": "701A"
+                    },
+                    {
+                        "session": "7045",
+                        "room": "701B"
+                    },
+                    {
+                        "session": "7102",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "7143",
+                        "room": "801B"
+                    },
+                    {
+                        "session": "7222",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7265",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7319",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7358",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7407",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7423",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7439",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7455",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "7556",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7573",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7592",
+                        "room": "709"
+                    },
+                    {
+                        "session": "7870",
+                        "room": "711"
+                    },
+                    {
+                        "session": "7534",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "7857",
+                        "room": "Exhibit Hall"
+                    }
+                ]
+            },
+            {
+                "slot_id": "Thursday_11_00_12_20",
+                "time": "11:00 - 12:20",
+                "slot_class": "morning2",
+                "sessions": [
+                    {
+                        "session": "6794",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "6917",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "6990",
+                        "room": "701A"
+                    },
+                    {
+                        "session": "7049",
+                        "room": "701B"
+                    },
+                    {
+                        "session": "7103",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "7144",
+                        "room": "801B"
+                    },
+                    {
+                        "session": "7224",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7266",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7320",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7360",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7408",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7424",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7440",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7456",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "7557",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7574",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7593",
+                        "room": "709"
+                    },
+                    {
+                        "session": "7886",
+                        "room": "711"
+                    },
+                    {
+                        "session": "7535",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "7858",
+                        "room": "Exhibit Hall"
+                    }
+                ]
+            },
+            {
+                "slot_id": "Thursday_14_00_15_20",
+                "time": "14:00 - 15:20",
+                "slot_class": "afternoon1",
+                "sessions": [
+                    {
+                        "session": "6807",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "6918",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "7006",
+                        "room": "701A"
+                    },
+                    {
+                        "session": "7052",
+                        "room": "701B"
+                    },
+                    {
+                        "session": "7105",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "7147",
+                        "room": "801B"
+                    },
+                    {
+                        "session": "7225",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7269",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7322",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7361",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "7414",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7425",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7441",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7457",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "7558",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7575",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7594",
+                        "room": "709"
+                    },
+                    {
+                        "session": "8659",
+                        "room": "711"
+                    },
+                    {
+                        "session": "7471",
+                        "room": "Plenary"
+                    },
+                    {
+                        "session": "7859",
+                        "room": "Exhibit Hall"
+                    }
+                ]
+            },
+            {
+                "slot_id": "Thursday_16_00_17_20",
+                "time": "16:00 - 17:20",
+                "slot_class": "afternoon2",
+                "sessions": [
+                    {
+                        "session": "6809",
+                        "room": "718A"
+                    },
+                    {
+                        "session": "6922",
+                        "room": "718B"
+                    },
+                    {
+                        "session": "7008",
+                        "room": "701A"
+                    },
+                    {
+                        "session": "7056",
+                        "room": "701B"
+                    },
+                    {
+                        "session": "7107",
+                        "room": "801A"
+                    },
+                    {
+                        "session": "7149",
+                        "room": "801B"
+                    },
+                    {
+                        "session": "7230",
+                        "room": "803AB"
+                    },
+                    {
+                        "session": "7273",
+                        "room": "716A"
+                    },
+                    {
+                        "session": "7324",
+                        "room": "716B"
+                    },
+                    {
+                        "session": "7363",
+                        "room": "714AB"
+                    },
+                    {
+                        "session": "6651",
+                        "room": "717AB"
+                    },
+                    {
+                        "session": "7426",
+                        "room": "802AB"
+                    },
+                    {
+                        "session": "7442",
+                        "room": "715A"
+                    },
+                    {
+                        "session": "7458",
+                        "room": "715B"
+                    },
+                    {
+                        "session": "7559",
+                        "room": "713AB"
+                    },
+                    {
+                        "session": "7576",
+                        "room": "707"
+                    },
+                    {
+                        "session": "7595",
+                        "room": "709"
+                    },
+                    {
+                        "session": "8660",
+                        "room": "711"
+                    },
+                    {
+                        "session": "7472",
+                        "room": "Plenary"
                     }
                 ]
             }

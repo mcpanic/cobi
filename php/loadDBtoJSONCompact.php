@@ -49,12 +49,12 @@ while ($row = $sessionUnscheduledTable->fetch_assoc()) {
 }
 
 // Get chairs
-$chairsQ = "select authorId from sessionChairs";
+$chairsQ = "select authorId,id from sessionChairs";
 $chairsTable = mysqli_query($mysqli, $chairsQ);
 echo mysqli_error($mysqli);
 $chairs = array();
 while ($row = $chairsTable->fetch_assoc()){
-  $chairs[$row['authorId']] = $row;
+  $chairs[$row['authorId']][$row['id']] = $row;
 }
 
 // Get unscheduled sessions

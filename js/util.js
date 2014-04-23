@@ -47,8 +47,9 @@ function getPaperCellLinkByID(id, paperId){
 
 function getChairCellLinkByID(id, chairId){
 	var name;
-	if (chairId != ""){
-		name = displayChairName(allChairs[chairId], false);
+    console.log(chairId);
+        if (chairId != ""){
+		name = displayChairName(allChairs[chairId][id], false);
 		name = (name.length > 30) ? (name.substring(0, 30) + "...") : name; 
 	} else {
 		name = allSessions[id].title;
@@ -124,26 +125,15 @@ function getSessionDuration(session){
 }
 
 function displayChairName(chair, includePrefix){
-	var name = includePrefix ? "Chair: " : "";
-	if (typeof chair === "undefined" || chair == null || typeof chair.familyName === "undefined" || typeof chair.givenName === "undefined")
-		return name + "N/A";
-	return name  + chair.givenName + " " + chair.familyName;
+    
+
+    if (typeof chair === "undefined" || chair == null || typeof chair.familyName === "undefined" || typeof chair.givenName === "undefined")
+		return "No chair assigned";
+    var name = includePrefix ? chair.role + ": " : "";
+    return name  + chair.givenName + " " + chair.familyName;
 }
 
 function shortenDate(date){
-	/*
-	var str = "";
-	
-	if (date == "May 7, 2012")
-	   str = "MON 5/7";
-	else if (date == "May 8, 2012")
-	   str = "TUE 5/8";
-	else if (date == "May 9, 2012")
-	   str = "WED 5/9";
-	else if (date == "May 10, 2012")
-	   str = "THU 5/10";
-	*/
-	// Monday -> Mon
 	return date.substring(0,3); 
 }	
 

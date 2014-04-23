@@ -24,7 +24,7 @@
         scheduleChair: "scheduled chair",
         swapChair: "swapped chairs",
         moveChair: "moved chair",
-        swapWithUnscheduledChair: "swapped with unscheduled chair"        
+        swapWithUnscheduledChair: "swapped with unscheduled chair"
     }
 
     var dateList = {
@@ -38,9 +38,9 @@
     };
 
     var timeList = {
-        "9:00-10:20": 0, 
-        "11:00-12:20": 1, 
-        "14:00-15:20": 2, 
+        "9:00-10:20": 0,
+        "11:00-12:20": 1,
+        "14:00-15:20": 2,
         "16:00-17:20": 3
     };
 
@@ -65,25 +65,41 @@
         "Havane": {floor: "2", size: "", type: ""}
     };
 
-    var roomTypeList = ["Amphitheater", "Theater", "Classroom", "Conference"];
-    var sessionTypeList = ["paper", "course", "special", "panel", "casestudy", "SIG", "bof", "altchi"];
-    var submissionTypeList = ["paper", "TOCHI", "course", "panel", "casestudy", "SIG"];
+var sessionTypeList = [
+    "Symposia",
+    "Clinics",
+    "Career Development Workshops",
+    "Seminars",
+    "Business Meetings",
+    "Special Events",
+    "Special Sessions",
+    "Topical Lectures",
+    "Plenary Lectures",
+    "Exhibitor-Sponsored Workshops",
+    "President's Address",
+    "Associated Public Events",
+]
 
-    var submissionOrderList = ["first", "second (if exists)", "third (if exists)", "fourth (if exists)", "last"];
-    var authorRoleList = ["presenter", "backup presenter"];
+var roomTypeList = ["Amphitheater", "Theater", "Classroom", "Conference"];
+var submissionTypeList = ["Symposia", "Seminars", "Special Events"];  
+var submissionOrderList = ["first", "second (if exists)", "third (if exists)", "fourth (if exists)", "last"];
+var authorRoleList = ["presenter", "backup presenter"];
 
-    var optionsList = [
-    {"id": "conflicts", "label": "Conflict"}, 
-    {"id": "preferences", "label": "Preference"}, 
-    {"id": "chair-conflict", "label": "Session Chair Conflict"}, 
-    {"id": "chair-name", "label": "Session Chair Names"}, 
-    {"id": "session-type", "label": "Session Type"}, 
-    //{"id": "popularity", "label": "Popularity"}, 
-    {"id": "num-papers", "label": "Number of Papers"}, 
-    {"id": "duration", "label": "Duration"}, 
-    {"id": "awards", "label": "Best Paper"}, 
-    {"id": "honorable-mentions", "label": "Honorable Mention"}
-    /*{"id": "persona", "label": "Tracks"} */
+var optionsList = [
+    {"id": "conflicts", "label": "Conflict"},
+        {"id": "preferences", "label": "Preference"},
+        {"id": "c_and_p", "label": "Conflicts + Preferences"},
+        {"id": "chair-conflict", "label": "Session Chair Conflict"},
+        {"id": "chair-name", "label": "Session Chair Names"},
+        {"id": "session-type", "label": "Session Type"},
+        //{"id": "popularity", "label": "Popularity"},
+        {"id": "num-papers", "label": "Number of Papers"},
+        {"id": "duration", "label": "Duration"},
+        {"id": "awards", "label": "Best Paper"},
+        {"id": "honorable-mentions", "label": "Honorable Mention"},
+        {"id": "persona", "label": "Persona"},
+        {"id": "author-interests", "label": "Authorsourcing Interests"},
+        {"id": "confer-interests", "label": "Confer Interests"}
     ];
 
 var constraints_list = [
@@ -93,16 +109,16 @@ var constraints_list = [
      "importance": -10,
      "severity": "high",
      // "color": "#913A52", //#C76A61", //#8C489F", //#a55194",
-     "type": "authorInTwoSessions" 
+     "type": "authorInTwoSessions"
  },
  {
      "id": "2",
      "description": "simultaneous sessions for a persona",
      "importance": -4,
-     "severity": "medium",     
+     "severity": "medium",
      // "color": "#C77F77", //#FAB99A", //#ff9896",
      "type": "personaInTwoSessions"
- }   
+ }
 ];
 
 // var communities_list = [
@@ -123,16 +139,16 @@ var personas_list = [
 {"id": "uist", "label": "UIST", "color": "#443266"},
 {"id": "social", "label": "Social", "color": "#C3C3E5"},
 {"id": "design", "label": "Design", "color": "#F1F0FF"},
-{"id": "game", "label": "Game", "color": "#8C489F"}, 
+{"id": "game", "label": "Game", "color": "#8C489F"},
 {"id": "ict4d", "label": "ICT4D", "color": "#008888"}
 ];
 */
 
 // var color_palette_2 = ["#A69E86", "#F2D9BB"];
 
-// var color_palette_1 = ["#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78", "#2ca02c", 
-// "#98df8a", "#d62728", "#ff9896", "#9467bd", "#c5b0d5", 
-// "#8c564b", "#c49c94", "#e377c2", "#f7b6d2", "#7f7f7f", 
+// var color_palette_1 = ["#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78", "#2ca02c",
+// "#98df8a", "#d62728", "#ff9896", "#9467bd", "#c5b0d5",
+// "#8c564b", "#c49c94", "#e377c2", "#f7b6d2", "#7f7f7f",
 // "#c7c7c7", "#bcbd22", "#dbdb8d", "#17becf", "#9edae5"]
 
 
