@@ -1,0 +1,2378 @@
+[
+    {
+        "id": "alt101",
+        "title": "Abba-Dabba-Ooga-Booga-Hoojee-Goojee-Yabba-Dabba-Doo: Stupidity, Ignorance & Nonsense as Tools for Nurturing Creative Thinking",
+        "abstract": "Despite the present abundance of approaches and information related to creative thinking, three basic human traits have been completely overlooked although that, if cautiously used, can considerably contribute to the creative process. Not coincidentally, these traits are also the ones that education has traditionally demonized and designated as its major enemies: stupidity, ignorance and nonsense. The aim of this paper is to shed light on the positive aspects of these defamed traits but also provide practical advice on how they can be used for sparking and nurturing creative thinking and innovative design.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth9440",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Dimitris",
+                "middleInitial": "",
+                "familyName": "Grammenos",
+                "primary": {
+                    "dept": "",
+                    "institution": "Foundation for Research and Technology - Hellas",
+                    "city": "Heraklion",
+                    "country": "Greece"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This paper sheds light on the positive aspects of stupidity, ignorance and nonsense and also provides some advice on how they can be used for sparking and nurturing creative thinking.",
+        "contactEmail": "gramenos@ics.forth.gr",
+        "contactFirstName": "Dimitris",
+        "contactLastName": "Grammenos",
+        "venue": "altchi",
+        "session": "s-alt3",
+        "communities": []
+    },
+    {
+        "id": "alt104",
+        "title": "Building Castles in Quicksand: Blueprint for a Crowdsourced Study",
+        "abstract": "Finding participants for experiments has always been a challenge. As technology advanced, running experiments online became a viable way to carry out research that did not require anything more than a personal computer. The natural next step in this progression emerged as crowdsourcing became an option. We report on our experience of joining this new wave of practice, and the difficulties and challenges we encountered when crowdsourcing a study. This led us to re-evaluate the validity of crowdsourced research. We report our findings, and conclude with guidelines for crowdsourced experiments.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth40683",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Arne",
+                "middleInitial": "",
+                "familyName": "Renkema-Padmos",
+                "primary": {
+                    "dept": "SecUSo",
+                    "institution": "CASED / TU Darmstadt",
+                    "city": "Darmstadt",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth38846",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Melanie",
+                "middleInitial": "",
+                "familyName": "Volkamer",
+                "primary": {
+                    "dept": "SecUso",
+                    "institution": "CASED / TU Darmstadt",
+                    "city": "Darmstadt",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth6035",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Karen",
+                "middleInitial": "",
+                "familyName": "Renaud",
+                "primary": {
+                    "dept": "School of Computing Science",
+                    "institution": "University of Glasgow",
+                    "city": "Glasgow",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We identified bugs in a major crowdsourcing platform, and synthesised guidelines for replicable and valid crowdsourced studies in HCI.",
+        "contactEmail": "arne.renkema-padmos@cased.de",
+        "contactFirstName": "Arne",
+        "contactLastName": "Renkema-Padmos",
+        "venue": "altchi",
+        "session": "s-alt2",
+        "communities": []
+    },
+    {
+        "id": "alt105",
+        "title": "Mining Online Software Tutorials: Challenges and Open Problems",
+        "abstract": "Web-based software tutorials contain a wealth of information describing software tasks and workflows. There is growing interest in mining these resources for task modeling, automation, machine-guided help, interface search, and other applications. As a first step, past work has shown success in extracting individual commands from textual instructions. In this paper, we ask: How much further do we have to go to more fully interpret or automate a tutorial? We take a bottom-up approach, asking what it would take to: (1) interpret individual steps, (2) follow sequences of steps, and (3) locate procedural content in larger texts.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth11718",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Adam",
+                "middleInitial": "",
+                "familyName": "Fourney",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Waterloo",
+                    "city": "Waterloo",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth5895",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Michael",
+                "middleInitial": "",
+                "familyName": "Terry",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Waterloo",
+                    "city": "Waterloo",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "Web tutorials contain a wealth of information describing software workflows. This paper presents a roadmap for the challenges that must be tackled for more complete machine understanding of these documents.",
+        "contactEmail": "afourney@cs.uwaterloo.ca",
+        "contactFirstName": "Adam",
+        "contactLastName": "Fourney",
+        "venue": "altchi",
+        "session": "s-alt1",
+        "communities": []
+    },
+    {
+        "id": "alt107",
+        "title": "CHI 2039: Speculative Research Visions",
+        "abstract": "This paper presents a curated collection of fictional abstracts for papers that could appear in the proceedings of the 2039 CHI Conference. It provides an opportunity to consider the various visions guiding work in HCI, the futures toward which we (believe we) are working, and how research in the field might relate with broader social, political, and cultural changes over the next quarter century.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth7663",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Eric",
+                "middleInitial": "P. S.",
+                "familyName": "Baumer",
+                "primary": {
+                    "dept": "Communication Department",
+                    "institution": "Cornell University",
+                    "city": "Ithaca",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "Information Science Department",
+                    "institution": "Cornell University",
+                    "city": "Ithaca",
+                    "country": "United States"
+                }
+            },
+            {
+                "id": "auth21212",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "June",
+                "middleInitial": "",
+                "familyName": "Ahn",
+                "primary": {
+                    "dept": "Human-Computer Interaction Lab",
+                    "institution": "University of Maryland, College Park",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40742",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Mei",
+                "middleInitial": "",
+                "familyName": "Bie",
+                "primary": {
+                    "dept": "Human-Computer Interaction Lab",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth15706",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Elizabeth",
+                "middleInitial": "M",
+                "familyName": "Bonsignore",
+                "primary": {
+                    "dept": "",
+                    "institution": "Human-Computer Interaction Lab",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40743",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 5,
+                "givenName": "Ahmet",
+                "middleInitial": "",
+                "familyName": "Börütecene",
+                "primary": {
+                    "dept": "Design Lab",
+                    "institution": "Koç University",
+                    "city": "Istanbul",
+                    "country": "Turkey"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40744",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 6,
+                "givenName": "Oğuz Turan",
+                "middleInitial": "",
+                "familyName": "Buruk",
+                "primary": {
+                    "dept": "Design Lab",
+                    "institution": "Koç University",
+                    "city": "Istanbul",
+                    "country": "Turkey"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40102",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 7,
+                "givenName": "Tamara",
+                "middleInitial": "",
+                "familyName": "Clegg",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth1070",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 8,
+                "givenName": "Allison",
+                "middleInitial": "",
+                "familyName": "Druin",
+                "primary": {
+                    "dept": "",
+                    "institution": "HCIL",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth9500",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 9,
+                "givenName": "Florian",
+                "middleInitial": "",
+                "familyName": "Echtler",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Regensburg",
+                    "city": "Regensburg",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth2227",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 10,
+                "givenName": "Dan",
+                "middleInitial": "",
+                "familyName": "Gruen",
+                "primary": {
+                    "dept": "",
+                    "institution": "IBM Research",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth9212",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 11,
+                "givenName": "Mona Leigh",
+                "middleInitial": "",
+                "familyName": "Guha",
+                "primary": {
+                    "dept": "HCIL",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40745",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 12,
+                "givenName": "Chelsea",
+                "middleInitial": "",
+                "familyName": "Hordatt",
+                "primary": {
+                    "dept": "Human-Computer Interaction Lab",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth6436",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 13,
+                "givenName": "Antonio",
+                "middleInitial": "",
+                "familyName": "Krüger",
+                "primary": {
+                    "dept": "",
+                    "institution": "DFKI GmbH",
+                    "city": "Saarbrucken",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth37044",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 14,
+                "givenName": "shachar",
+                "middleInitial": "",
+                "familyName": "maidenbaum",
+                "primary": {
+                    "dept": "IMRIC",
+                    "institution": "Hebrew university of Jerusalem",
+                    "city": "Jerusalem",
+                    "country": "Israel"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth22431",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 15,
+                "givenName": "Meethu",
+                "middleInitial": "",
+                "familyName": "Malu",
+                "primary": {
+                    "dept": "Department of Computer Science",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth20357",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 16,
+                "givenName": "Brenna",
+                "middleInitial": "",
+                "familyName": "McNally",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth1047",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 17,
+                "givenName": "Michael",
+                "middleInitial": "",
+                "familyName": "Muller",
+                "primary": {
+                    "dept": "",
+                    "institution": "IBM T.J. Watson Research",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40748",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 18,
+                "givenName": "Leyla",
+                "middleInitial": "",
+                "familyName": "Norooz",
+                "primary": {
+                    "dept": "iSchool, Human-Computer Interaction Lab, Makeability Lab",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth29432",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 19,
+                "givenName": "Juliet",
+                "middleInitial": "",
+                "familyName": "Norton",
+                "primary": {
+                    "dept": "Department of Informatics",
+                    "institution": "University of California, Irvine",
+                    "city": "Irvine",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth34016",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 20,
+                "givenName": "Oguzhan",
+                "middleInitial": "",
+                "familyName": "Ozcan",
+                "primary": {
+                    "dept": "Design Lab",
+                    "institution": "Koç University",
+                    "city": "Istanbul",
+                    "country": "Turkey"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth6028",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 21,
+                "givenName": "Donald",
+                "middleInitial": "J",
+                "familyName": "Patterson",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of California, Irvine",
+                    "city": "Irvine",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth18895",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 22,
+                "givenName": "Andreas",
+                "middleInitial": "",
+                "familyName": "Riener",
+                "primary": {
+                    "dept": "",
+                    "institution": "Johannes Kepler University Linz, Austria",
+                    "city": "Linz",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth4449",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 23,
+                "givenName": "Steven",
+                "middleInitial": "I",
+                "familyName": "Ross",
+                "primary": {
+                    "dept": "",
+                    "institution": "IBM Research",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40747",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 24,
+                "givenName": "Karen",
+                "middleInitial": "",
+                "familyName": "Rust",
+                "primary": {
+                    "dept": "Human-Computer Interaction Lab",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth28768",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 25,
+                "givenName": "Johannes",
+                "middleInitial": "",
+                "familyName": "Schöning",
+                "primary": {
+                    "dept": "Expertise Centre for Digital Media",
+                    "institution": "Hasselt University - tUL - iMinds",
+                    "city": "Diepenbeek",
+                    "country": "Belgium"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth22891",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 26,
+                "givenName": "M.",
+                "middleInitial": "Six",
+                "familyName": "Silberman",
+                "primary": {
+                    "dept": "Informatics",
+                    "institution": "University of California, Irvine",
+                    "city": "Irvine",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth4917",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 27,
+                "givenName": "Bill",
+                "middleInitial": "",
+                "familyName": "Tomlinson",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of California, Irvine",
+                    "city": "Irvine",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth23842",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 28,
+                "givenName": "Jason",
+                "middleInitial": "",
+                "familyName": "Yip",
+                "primary": {
+                    "dept": "",
+                    "institution": "HCIL",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This paper presents a collection of abstracts for fictional papers from the proceedings of CHI 2039. It offers the opportunity to consider how visions of the future influence today's research.",
+        "contactEmail": "ericpsb@cornell.edu",
+        "contactFirstName": "Eric",
+        "contactLastName": "Baumer",
+        "venue": "altchi",
+        "session": "s-alt4",
+        "communities": []
+    },
+    {
+        "id": "alt109",
+        "title": "Reflections on a Synergistic Format for Disseminating Research Through Design",
+        "abstract": "Research through design as a form of research inquiry is becoming a more common approach within HCI and Design. However, questions as to how research generated through this approach is validated, disseminated and perceived are of current debate. This paper describes the ethos and approach of a recent conference (Research Through Design (RTD)), which introduced a novel format foregrounding the research artifact through both exhibition and dialogical round-table discussion sessions. We document critical reflections from organizers and delegates, which demonstrate how this format offers a more synergistic approach for the dissemination of ‘research through design’, and discuss key practical and philosophical challenges therein, contributing to a broader discussion of what it means to practice research through design as a form of inquiry.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth22495",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Jayne",
+                "middleInitial": "",
+                "familyName": "Wallace",
+                "primary": {
+                    "dept": "DJCAD",
+                    "institution": "University of Dundee",
+                    "city": "Dundee",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth6865",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Joyce",
+                "middleInitial": "",
+                "familyName": "Yee",
+                "primary": {
+                    "dept": "Northumbria University",
+                    "institution": "Northumbria University",
+                    "city": "Newcastle upon Tyne",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth9649",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Abigail",
+                "middleInitial": "",
+                "familyName": "Durrant",
+                "primary": {
+                    "dept": "",
+                    "institution": "Newcastle University",
+                    "city": "Newcastle upon Tyne",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We present critical reflections from organizers and delegates of Research Through Design conference 2013, which sought to offer a synergistic format for the presentation and discussion of research through design.",
+        "contactEmail": "s.j.wallace@dundee.ac.uk",
+        "contactFirstName": "Jayne",
+        "contactLastName": "Wallace",
+        "venue": "altchi",
+        "session": "s-alt6",
+        "communities": []
+    },
+    {
+        "id": "alt112",
+        "title": "Reliability of NIRS-Based BCIs: a Placebo-Controlled Replication and Reanalysis of Brainput",
+        "abstract": "Previously, we contributed to the development of a brain-computer interface (BCI), Brainput, using functional near infrared spectroscopy (NIRS). Initially Brainput was found to improve performance on a human-robot team task by adapting a robot's autonomy using NIRS-based classifications of the user's multitasking states. However, the failure to find any performance improvements in a follow-up study prompted reinvestigation of the original system via a reanalysis of Brainput's signal processing on a larger NIRS dataset and a placebo-controlled replication using random (instead of NIRS-based) state classifications. This reinvestigation revealed confounds in the original study responsible for the initial performance improvements, thus indicating that further work in signal processing is necessary to achieve reliable NIRS-based BCIs.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth18434",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Megan",
+                "middleInitial": "",
+                "familyName": "Strait",
+                "primary": {
+                    "dept": "Human-Robot Interaction Lab",
+                    "institution": "Tufts University",
+                    "city": "Medford",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth30860",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Cody",
+                "middleInitial": "",
+                "familyName": "Canning",
+                "primary": {
+                    "dept": "Human-Robot Interaction Lab",
+                    "institution": "Tufts University",
+                    "city": "Medford",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth12988",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Matthias",
+                "middleInitial": "",
+                "familyName": "Scheutz",
+                "primary": {
+                    "dept": "Human-Robot Interaction Lab",
+                    "institution": "Tufts University",
+                    "city": "Medford",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "A recent brain-computer interface improved performance on human-robot team tasks by adapting based on the user's multitasking state. However, reanalysis via a placebo-controlled replication revealed confounds responsible for the improvements.",
+        "contactEmail": "megan.strait@tufts.edu",
+        "contactFirstName": "Megan",
+        "contactLastName": "Strait",
+        "venue": "altchi",
+        "session": "s-alt2",
+        "communities": []
+    },
+    {
+        "id": "alt116",
+        "title": "Hot Topics in CHI: Trend Maps for Visualising Research",
+        "abstract": "The aim of this paper is to introduce a novel method of identifying and visualising research trends in an automated, unbiased way. The output of this we call a ‘Trend Map’, and in this paper we use it to present an at-a-glance overview of the CHI research area, showing which areas are ‘hot’, ‘cold’, and ‘stable’. This specimen Trend Map was created using the past five years of CHI publications as our only input. We hope that providing this at-a-glance overview of the recent CHI area will encourage introspection and discussion within the community.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth28737",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Stefano",
+                "middleInitial": "",
+                "familyName": "Padilla",
+                "primary": {
+                    "dept": "School of Mathematical & Computer Sciences",
+                    "institution": "Heriot Watt University",
+                    "city": "Edinburgh",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth41363",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Thomas",
+                "middleInitial": "S",
+                "familyName": "Methven",
+                "primary": {
+                    "dept": "School of Mathematical & Computer Sciences",
+                    "institution": "Heriot-Watt University",
+                    "city": "Edinburgh",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth41364",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "David",
+                "middleInitial": "W",
+                "familyName": "Corne",
+                "primary": {
+                    "dept": "School of Mathematical & Computer Sciences",
+                    "institution": "Heriot-Watt University",
+                    "city": "Edinburgh",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth41365",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Mike",
+                "middleInitial": "J",
+                "familyName": "Chantler",
+                "primary": {
+                    "dept": "School of Mathematical & Computer Sciences",
+                    "institution": "Heriot-Watt University",
+                    "city": "Edinburgh",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We hope to provide an at-a-glance overview of the recent CHI area to encourage introspection and discussion within the community.",
+        "contactEmail": "S.Padilla@hw.ac.uk",
+        "contactFirstName": "Stefano",
+        "contactLastName": "Padilla",
+        "venue": "altchi",
+        "session": "s-alt6",
+        "communities": []
+    },
+    {
+        "id": "alt119",
+        "title": "None of a CHInd: Relationship Counselling for HCI and Speech Technology",
+        "abstract": "It's an old story. A relationship built on promises turns to bitterness and recriminations. But speech technology has changed: Yes, we know we hurt you, we know things didn't turn out the way we hoped, but can't we put the past behind us? We need you, we need design. And you? You need us. How can you fulfill a dream of pervasive technology without us? So let's look at what went wrong. Let's see how we can fix this thing. For the sake of little Siri, she needs a family. She needs to grow into more than a piece of PR, and maybe, if we could only work out our differences, just maybe, think of the magic we might make together.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth20910",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Matthew",
+                "middleInitial": "P",
+                "familyName": "Aylett",
+                "primary": {
+                    "dept": "School of Informatics",
+                    "institution": "University of Edinburgh",
+                    "city": "Edinburgh",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "CereProc Ltd.",
+                    "city": "Edinburgh",
+                    "country": "United Kingdom"
+                }
+            },
+            {
+                "id": "auth3496",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Per",
+                "middleInitial": "Ola",
+                "familyName": "Kristensson",
+                "primary": {
+                    "dept": "School of Computer Science",
+                    "institution": "University of St Andrews",
+                    "city": "St Andrews",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth13221",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Steve",
+                "middleInitial": "",
+                "familyName": "Whittaker",
+                "primary": {
+                    "dept": "HCI Lab",
+                    "institution": "University of California at Santa Cruz",
+                    "city": "Santa Cruz",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth12656",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Yolanda",
+                "middleInitial": "",
+                "familyName": "Vazquez-Alvarez",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Glasgow",
+                    "city": "Glasgow",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "A relationship built on promises turns to bitterness and recriminations. But speech technology has changed: Yes, we know we hurt you,  but can't we put the past behind us? ",
+        "contactEmail": "matthewa@cereproc.com",
+        "contactFirstName": "Matthew",
+        "contactLastName": "Aylett",
+        "venue": "altchi",
+        "session": "s-alt4",
+        "communities": []
+    },
+    {
+        "id": "alt121",
+        "title": "HCI Over Multiple Screens",
+        "abstract": "  Mobile devices are playing an increasingly important role in leisure \\   activities, including TV viewing. Broadcasters see this as an \\   opportunity to enhance a TV programme through the provision of \\   additional information to the `second screen', but determining how \\   to optimise this experience is one of the grand challenges currently \\   facing content providers. Addressing this issue requires a detailed \\   understanding of interaction with both the TV and the secondary \\   device, but this new form of HCI, as much about passive consumption \\   as active interaction, is not well represented by typical task-based \\   paradigms. This paper describes experiments that use eye tracking to \\   understand one of the key components of this new area of study --- \\   determining which device is currently receiving the user's attention \\   -- and discusses the considerable challenge of accurately monitoring \\   attention while maintaining ecological validity. \\ ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth40469",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Andy",
+                "middleInitial": "",
+                "familyName": "Brown",
+                "primary": {
+                    "dept": "School of Computer Science",
+                    "institution": "University of Manchester",
+                    "city": "Manchester",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth24409",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Michael",
+                "middleInitial": "",
+                "familyName": "Evans",
+                "primary": {
+                    "dept": "",
+                    "institution": "British Broadcasting Corporation",
+                    "city": "Manchester",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth6061",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Caroline",
+                "middleInitial": "",
+                "familyName": "Jay",
+                "primary": {
+                    "dept": "School of Computer Science",
+                    "institution": "University of Manchester, UK",
+                    "city": "Manchester",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth28789",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Maxine",
+                "middleInitial": "",
+                "familyName": "Glancy",
+                "primary": {
+                    "dept": "BBC Research & Development",
+                    "institution": "British Broadcasting Corporation",
+                    "city": "Manchester",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40822",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 5,
+                "givenName": "Rhianne",
+                "middleInitial": "",
+                "familyName": "Jones",
+                "primary": {
+                    "dept": "BBC Research and Development",
+                    "institution": "BBC",
+                    "city": "Manchester",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth6079",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 6,
+                "givenName": "Simon",
+                "middleInitial": "",
+                "familyName": "Harper",
+                "primary": {
+                    "dept": "School  of Computer Science",
+                    "institution": "The University of Manchester",
+                    "city": "Manchester",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "A report on an initial investigation into attentional allocation \\ across multiple devices in situations that combine passive and active \\ interaction, in this case TV and a companion tablet app.",
+        "contactEmail": "andrew.brown@cs.manchester.ac.uk",
+        "contactFirstName": "Andy",
+        "contactLastName": "Brown",
+        "venue": "altchi",
+        "session": "s-alt1",
+        "communities": []
+    },
+    {
+        "id": "alt133",
+        "title": "Gamified Co-design with Cooperative Learning",
+        "abstract": "Co-design is an ideal approach to design with mixed teams that include learners and teachers. However, in modern learning contexts, learning and engagement are both key goals, and that poses several challenges to co-design.  \\ This paper investigates such challenges after outlining co-design and situating it in current user experience design trends. Then the paper uses the challenges to derive requirements for co-design, and shows how to meet requirements, fostering engagement as well as learning, by blending co-design with gamification and cooperative learning.  \\ It ends by showcasing a study that uses the blended co-design approach, and by outlining how this led to novel challenges and work.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth40905",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Gabriella",
+                "middleInitial": "",
+                "familyName": "Dodero",
+                "primary": {
+                    "dept": "Faculty of Computer Science",
+                    "institution": "Free University of Bozen-Bolzano",
+                    "city": "Bolzano",
+                    "country": "Italy"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39753",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Rosella",
+                "middleInitial": "",
+                "familyName": "Gennari",
+                "primary": {
+                    "dept": "Faculty of Computer Science",
+                    "institution": "Free University of Bozen-Bolzano",
+                    "city": "Bolzano",
+                    "country": "Italy"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40906",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Alessandra",
+                "middleInitial": "",
+                "familyName": "Melonio",
+                "primary": {
+                    "dept": "Faculty of Computer Science",
+                    "institution": "Free University of Bozen-Bolzano",
+                    "city": "Bolzano",
+                    "country": "Italy"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40907",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Santina",
+                "middleInitial": "",
+                "familyName": "Torello",
+                "primary": {
+                    "dept": "Faculty of Computer Science",
+                    "institution": "Free University of Bozen-Bolzano",
+                    "city": "Bolzano",
+                    "country": "Italy"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "Co-design faces challenges when situated in nowadays schools. This paper takes them up and refines co-design with gamification, for playfully engaging, and cooperative learning, for fostering learning and social skills. ",
+        "contactEmail": "gennari@inf.unibz.it",
+        "contactFirstName": "Rosella",
+        "contactLastName": "Gennari",
+        "venue": "altchi",
+        "session": "s-alt3",
+        "communities": []
+    },
+    {
+        "id": "alt143",
+        "title": "Quantification in Alt.Chi Open Review: Liking and Ticking on a Likert Scale",
+        "abstract": "We analyze quantification in the open review process of Alt.Chi panels. We find that reviewers differ systematically regarding their activity patterns. We distinguish 'critical', 'supportive', 'discerning' and 'keen' reviewers, with distinctive contributions for two resources of meaningful numeric evaluation: intersubjectivity and intra-personal commensurability. The acceptance decision is associated with the average paper grade and, to a lesser extent, with the number of paper reviews. We identify four categories of articles that reflect the article distribution of reviewer types.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth27883",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Răzvan",
+                "middleInitial": "",
+                "familyName": "Rughiniș",
+                "primary": {
+                    "dept": "",
+                    "institution": "University POLITEHNICA of Bucharest",
+                    "city": "Bucharest",
+                    "country": "Romania"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth38226",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Cosima",
+                "middleInitial": "",
+                "familyName": "Rughiniș",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Bucharest",
+                    "city": "Bucharest",
+                    "country": "Romania"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth41025",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Alina Petra",
+                "middleInitial": "",
+                "familyName": "Marinescu Nenciu",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Bucharest",
+                    "city": "Bucharest",
+                    "country": "Romania"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We analyze the Alt.Chi open review process. We distinguish 'critical', 'supportive', 'discerning' and 'keen' reviewers, with distinctive contributions for meaningful numeric evaluation and paper acceptance. ",
+        "contactEmail": "razvan.rughinis@gmail.com",
+        "contactFirstName": "Razvan",
+        "contactLastName": "Rughinis",
+        "venue": "altchi",
+        "session": "s-alt6",
+        "communities": []
+    },
+    {
+        "id": "alt145",
+        "title": "Teaching Digital Craft",
+        "abstract": "At the overlap of maker culture, ubiquitous computing, critical making, and novel interfaces, digital craft emerges as a new research and teaching domain. It offers new opportunities in interaction design but it also poses particular challenges to academic curricula. This paper first discusses the value and challenges connected to digital craft. Then, based on our experience with exploring digital craft in a research university’s teaching environment, we highlight viable approaches and teaching practices in this new field. It closes with a discussion of the prototype results achieved in those classes.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth41024",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Michael",
+                "middleInitial": "",
+                "familyName": "Nitsche",
+                "primary": {
+                    "dept": "Digital Media",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States of America"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth31164",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Andrew",
+                "middleInitial": "",
+                "familyName": "Quitmeyer",
+                "primary": {
+                    "dept": "Digital Media",
+                    "institution": "Georgia Tech",
+                    "city": "Atlanta",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth41037",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Kate",
+                "middleInitial": "",
+                "familyName": "Farina",
+                "primary": {
+                    "dept": "Digital Media",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth41045",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Samuel",
+                "middleInitial": "",
+                "familyName": "Zwaan",
+                "primary": {
+                    "dept": "Digital Media",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth14879",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 5,
+                "givenName": "Hye Yeon",
+                "middleInitial": "",
+                "familyName": "Nam",
+                "primary": {
+                    "dept": "",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We describe approaches to teach digital craft that combines digital technology with traditional craft materials and practices. It relates to issues in critical making, physical computing, and experimental interaction design.",
+        "contactEmail": "michael.nitsche@lmc.gatech.edu",
+        "contactFirstName": "Michael",
+        "contactLastName": "Nitsche",
+        "venue": "altchi",
+        "session": "s-alt3",
+        "communities": []
+    },
+    {
+        "id": "alt146",
+        "title": "Concordance: Design Ideal for Facilitating Situated Negotiations in Out-of-clinic Healthcare",
+        "abstract": "Healthcare HCI research has explored various designs that encourage people to follow prescribed treatments, mostly adopting compliance and adherence as design ideals. However, within the medical sciences the notion of concordance also exists. Concordance promotes negotiation between the patient and healthcare professional for forging a therapeutic alliance. However, the HCI community has still not adopted concordance as a design ideal. This paper revisits four old design-cases to explore the role of concordance in out-of-clinic healthcare. We argue that concordance, as a design ideal, can guide new designs that promote a more active patient-role both at the clinic and beyond.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth15364",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Naveen",
+                "middleInitial": "L",
+                "familyName": "Bagalkot",
+                "primary": {
+                    "dept": "Srishti Labs",
+                    "institution": "Srishti School of Art, Design and Technology",
+                    "city": "Bangalore",
+                    "country": "India"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth13324",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Erik",
+                "middleInitial": "",
+                "familyName": "Grönvall",
+                "primary": {
+                    "dept": "",
+                    "institution": "IT University of Copenhagen",
+                    "city": "Copenhagen",
+                    "country": "Denmark"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth5228",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Tomas",
+                "middleInitial": "",
+                "familyName": "Sokoler",
+                "primary": {
+                    "dept": "Interaction Design Group",
+                    "institution": "IT University of Copenhagen",
+                    "city": "Copenhagen",
+                    "country": "Denmark"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This paper revisits four old design-cases to argue that concordance, as a design ideal, can guide new designs that promote more active patient-roles in out-of-clinic healthcare.",
+        "contactEmail": "naveen@srishti.ac.in",
+        "contactFirstName": "Naveen",
+        "contactLastName": "bagalkot",
+        "venue": "altchi",
+        "session": "s-alt5",
+        "communities": []
+    },
+    {
+        "id": "alt153",
+        "title": "Fifty Shades of CHI: The Perverse and Humiliating Human-Computer Relationship",
+        "abstract": "This paper presents a critical lens on the nature of the relationship between people and contemporary technology. Specifically, the form and language of erotic BDSM romance fiction, a genre that deals specifically with the nature of power in relationships, and which has proved extremely popular recently, are used as a means for provoking reflection on the nature of power in the human-computer relationship. Three sexually explicit scenarios are presented, in which technology is portrayed in a dominant and controlling role, highlighting the often subservient and apologetic nature of human interaction with technology. We suggest that readers offended by graphic and explicit descriptions of sexual behaviour do not read further than this abstract.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth41154",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Laura",
+                "middleInitial": "",
+                "familyName": "Buttrick",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Lincoln",
+                    "city": "Lincoln",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth13937",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Conor",
+                "middleInitial": "",
+                "familyName": "Linehan",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Lincoln",
+                    "city": "Lincoln",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth10649",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Ben",
+                "middleInitial": "",
+                "familyName": "Kirman",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Lincoln",
+                    "city": "Lincoln",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth41155",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Dan",
+                "middleInitial": "",
+                "familyName": "O'Hara",
+                "primary": {
+                    "dept": "",
+                    "institution": "Birmingham City University",
+                    "city": "Birmingham",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This paper uses the form and language of erotic BDSM romance fiction to present a critical lens on the nature of power in the relationship between people and contemporary technology",
+        "contactEmail": "clinehan@lincoln.ac.uk",
+        "contactFirstName": "Conor",
+        "contactLastName": "Linehan",
+        "venue": "altchi",
+        "session": "s-alt5",
+        "communities": []
+    },
+    {
+        "id": "alt155",
+        "title": "A Funny Thing Happened On The Way To The Website: Telling About Browsing",
+        "abstract": "This paper describes an approach to the narrative organisation and experience of browser history. It can be difficult to remember where you have been online and consequently hard to get a sense of how much time you have spent, what you did, and why. Web browsers are limited to bookmarks and browser history for retrospective examination. This study is focused specifically on a narrative construction of browser history and the resolution of the resulting experience. The paper establishes a methodological and theoretical connection between expressions of browsing activity and the tradition of narrative enquiry and suggests a range of experimental outputs.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth33045",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "John",
+                "middleInitial": "P",
+                "familyName": "Fass",
+                "primary": {
+                    "dept": "Visual Communication",
+                    "institution": "Royal College of Art",
+                    "city": "London",
+                    "country": "UK"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "Research that uses the example of the browser history list to state the moral and political case for narratively oriented expressions of what people do online.   ",
+        "contactEmail": "john.fass@gmail.com",
+        "contactFirstName": "John",
+        "contactLastName": "Fass",
+        "venue": "altchi",
+        "session": "s-alt1",
+        "communities": []
+    },
+    {
+        "id": "alt156",
+        "title": "A three-dimensional mirror augmented by medical imaging: Questioning self-portraying at the limit of intimacy",
+        "abstract": "With the rapid developments of medical imaging, our personal inner body can be unveiled as never before. Medical images are usually considered as ordinary objects and their potential intimate value is never really considered. In this paper, we present an exploratory installation which anticipates prospective issues when medical and self-images interfere with each other. Primary Intimacy of being acts as a digital mirror reflecting the users' bodies with three-dimensional avatars, which are computed in real time from three medical imaging modalities (Fig. 1). A first evaluation reveals individual differences between users with respect to their personal privacy concerns while interacting with the installation. Thereafter, these issues may be probed in the scope of self-portraying. ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth32200",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Tom",
+                "middleInitial": "",
+                "familyName": "Giraud",
+                "primary": {
+                    "dept": "LIMSI-CNRS",
+                    "institution": "CNRS",
+                    "city": "Orsay",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth30981",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Matthieu",
+                "middleInitial": "",
+                "familyName": "Courgeon",
+                "primary": {
+                    "dept": "Lab-STICC ",
+                    "institution": "University of South Brittany, European Center of Virtual Reality ",
+                    "city": "Brest",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth41186",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Marion",
+                "middleInitial": "",
+                "familyName": "Tardieu",
+                "primary": {
+                    "dept": "IR4M",
+                    "institution": "CNRS – Univ Paris-Sud",
+                    "city": "Orsay",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth41187",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Alexandra",
+                "middleInitial": "",
+                "familyName": "Roatis",
+                "primary": {
+                    "dept": "INRIA",
+                    "institution": "Univ Paris-Sud",
+                    "city": "Orsay",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth41188",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 5,
+                "givenName": "Xavier",
+                "middleInitial": "",
+                "familyName": "Maitre",
+                "primary": {
+                    "dept": "IR4M",
+                    "institution": "CNRS – Univ Paris-Sud",
+                    "city": "Orsay",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We present a prospective application which acts as a digital mirror augmented by medical imaging.  Intimacy issues raised by such a system are explored.",
+        "contactEmail": "tom.giraud@limsi.fr",
+        "contactFirstName": "Tom",
+        "contactLastName": "Giraud",
+        "venue": "altchi",
+        "session": "s-alt5",
+        "communities": []
+    },
+    {
+        "id": "alt163",
+        "title": "Translation from Text to Touch -- Touching a “Japanese Old Tale”",
+        "abstract": "The character display and interface through visual and auditory senses have been the focus of the Computer Human Interaction and also tactile sense interface has been studied. We propose a method for integrating character information and tactile sense, by focusing on the structure of texts and phonetic aspects of language. By using this method, we extract the tactile elements of “The Tale of the Heike, which has been handed down in Japan over a thousand years. Also, we extract the tactile elements of the English version of the tale and a passage from Hamlet and compare their tactile characteristics. ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth41247",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "yasuhiro",
+                "middleInitial": "",
+                "familyName": "suzuki",
+                "primary": {
+                    "dept": "Information Science",
+                    "institution": "Nagoya University",
+                    "city": "Nagoya",
+                    "country": "Japan"
+                },
+                "secondary": {
+                    "dept": "System Design Management",
+                    "institution": "Keio",
+                    "city": "Yokohama",
+                    "country": "Japan"
+                }
+            },
+            {
+                "id": "auth42649",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "RIeko",
+                "middleInitial": "",
+                "familyName": "Suzuki",
+                "primary": {
+                    "dept": "",
+                    "institution": "Face Therapie, Co. Ltd. ",
+                    "city": "Tokyo",
+                    "country": "Japan"
+                },
+                "secondary": {
+                    "dept": "SDM Institute",
+                    "institution": "Keio University",
+                    "city": "Yokohama City",
+                    "country": "Japan"
+                }
+            },
+            {
+                "id": "auth42650",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Junji",
+                "middleInitial": "",
+                "familyName": "Watanabe",
+                "primary": {
+                    "dept": "NTT Communication Science Lab.",
+                    "institution": "Nippon Telegraph and Telephone Corporationtion",
+                    "city": "Atsugi city, Kanagawa perfecture",
+                    "country": "Japan"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We propose the method of extracting tactile sense from text and describing into the Tactile score, which is a method of describing tactile sense such as massage",
+        "contactEmail": "ysuzuki@nagoya-u.jp",
+        "contactFirstName": "yasuhiro",
+        "contactLastName": "suzuki",
+        "venue": "altchi",
+        "session": "s-alt1",
+        "communities": []
+    },
+    {
+        "id": "alt168",
+        "title": "The Minimal Effective Dose of Reminder Technology",
+        "abstract": "Remembering to take one's medication on time is hard work. This is true for younger people with no chronic illness as well as older people with many co-morbid conditions that require a complex medication regime. Many technological solutions have been proposed to help with this problem, but is more IT really the solution? In this paper, I argue that technological help should be limited to the minimal effective dose, which depends on the person and their living situation, and may well be zero.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth9794",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Maria",
+                "middleInitial": "K",
+                "familyName": "Wolters",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Edinburgh",
+                    "city": "Edinburgh",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "Remembering to take your medication is all about making sure that medication taking is as little work as possible. Alarms are a tool to be used sparingly, if at all.",
+        "contactEmail": "maria.wolters@ed.ac.uk",
+        "contactFirstName": "Maria",
+        "contactLastName": "Wolters",
+        "venue": "altchi",
+        "session": "s-alt4",
+        "communities": []
+    },
+    {
+        "id": "alt170",
+        "title": "Designing for the Internet of Things: Prototyping Material Interactions",
+        "abstract": "The Internet of Things (IoT) offers fertile ground to consider the nature of electronic prototyping, especially in building systems from the lowest level. While constructing artifacts to interact directly with everyday materials and contexts, we’ve found it important to approach the IoT from the very lowest levels of hardware to avoid both abstracting away from real knowledge of the platform itself as well as to reduce implementation cost for massive deployment. \\  \\ Building new, inexpensive platforms that augment everyday objects in minimal ways is our proposal for an alternative to top-down control of IoT devices. We intend to move towards interactions among and between things as a bottom-up design study into ubiquitous small-scale computing and its potential aesthetic applications. \\ ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth26937",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Tom",
+                "middleInitial": "",
+                "familyName": "Jenkins",
+                "primary": {
+                    "dept": "",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth31325",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Ian",
+                "middleInitial": "",
+                "familyName": "Bogost",
+                "primary": {
+                    "dept": "",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "Inexpensive platforms minimally augment everyday objects, providing alternatives to top-down, centralized IoT devices. Interactions among and between things produce bottom-up design studies into ubiquitous small-scale computing and its aesthetic applications.",
+        "contactEmail": "tom.jenkins@gatech.edu",
+        "contactFirstName": "Tom",
+        "contactLastName": "Jenkins",
+        "venue": "altchi",
+        "session": "s-alt3",
+        "communities": []
+    },
+    {
+        "id": "alt172",
+        "title": "Never Mind the Bollocks, I Wanna Be AnarCHI: A Manifesto for Punk HCI",
+        "abstract": "This paper presents two fingers to the HCI establishment. We reject the status quo that defines what language and forms are appropriate “contributions” for this staid “community” of quasi-scientific poseurs. We argue that CHI in particular is a tool that serves to reinforce the political and ideological status quo, favouring sell-out researchers wielding arcane verbiage and p-values, all paid for by corporate and government interests that reward the building of systems that distract, subdue and subjugate. We present our manifesto for Punk HCI, which celebrates principles of anarchy and freedom in exploring the impact of technology on human culture, values, social structures and psychology. We encourage research motivated by passion and dissent over patents.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth13937",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Conor",
+                "middleInitial": "",
+                "familyName": "Linehan",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Lincoln",
+                    "city": "Lincoln",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth10649",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Ben",
+                "middleInitial": "",
+                "familyName": "Kirman",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Lincoln",
+                    "city": "Lincoln",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This paper presents two fingers to the HCI establishment. ",
+        "contactEmail": "clinehan@lincoln.ac.uk",
+        "contactFirstName": "Conor",
+        "contactLastName": "Linehan",
+        "venue": "altchi",
+        "session": "s-alt4",
+        "communities": []
+    },
+    {
+        "id": "alt174",
+        "title": "Running an HCI Experiment in Multiple Parallel Universes",
+        "abstract": "We experimentally evaluated a haptic touch slider in 8 parallel universes. The results were overall similar but exhibited surprisingly high variability in terms of statistical significance patterns. We discuss the general implications of these findings for empirical HCI research.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth4560",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Pierre",
+                "middleInitial": "",
+                "familyName": "Dragicevic",
+                "primary": {
+                    "dept": "",
+                    "institution": "INRIA",
+                    "city": "Saclay",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth41376",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Fanny",
+                "middleInitial": "",
+                "familyName": "Chevalier",
+                "primary": {
+                    "dept": "",
+                    "institution": "INRIA",
+                    "city": "Lille",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth4580",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Stephane",
+                "middleInitial": "",
+                "familyName": "Huot",
+                "primary": {
+                    "dept": "",
+                    "institution": "Université Paris-Sud",
+                    "city": "Orsay",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We conducted an HCI experiment in 8 parallel universes and found surprisingly high variability in terms of statistical significance patterns. We discuss the implications for HCI research.",
+        "contactEmail": "pierre.dragice@gmail.com",
+        "contactFirstName": "Pierre",
+        "contactLastName": "Dragicevic",
+        "venue": "altchi",
+        "session": "s-alt2",
+        "communities": []
+    },
+    {
+        "id": "alt179",
+        "title": "Brave New Interactions: Performance-Enhancing Drugs for Human-Computer Interaction",
+        "abstract": "In sports, some athletes resort to performance enhancing drugs to gain an advantage. Similarly, people use pharmaceutical drugs to aid learning, dexterity, or concentration. We look at how such drugs could potentially be used to enhance interactions. We envision that in the future, people might take pills along with their vitamins in the morning to improve how they can interact over the day. In addition to performance boosts this, e.g., could also include improvements in enjoyment or fatigue.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth17146",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Henning",
+                "middleInitial": "",
+                "familyName": "Pohl",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Hannover",
+                    "city": "Hannover",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We open up the question of how performance-enhancing drugs could impact the field of HCI. This could, e.g., mean designing systems for users who have enhanced memorization capabilities.",
+        "contactEmail": "HenningPohl@gmail.com",
+        "contactFirstName": "Henning",
+        "contactLastName": "Pohl",
+        "venue": "altchi",
+        "session": "s-alt5",
+        "communities": []
+    },
+    {
+        "id": "alt188",
+        "title": "A Path to Understanding the Effects of Algorithm Awareness",
+        "abstract": "The rise in prevalence of algorithmically curated feeds in online news and social media sites raises a new question for designers, critics, and scholars of media: how aware are users of the role of algorithms and filters in their news sources? This paper situates this problem within the history of design for interaction, with an emphasis on the contemporary challenges of studying, and designing for, the algorithmic \"curation\" of feeds. Such a problem presents particular challenges when, as is common, neither the user nor the researcher has access to the actual proprietary algorithms at work.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth39156",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Kevin",
+                "middleInitial": "",
+                "familyName": "Hamilton",
+                "primary": {
+                    "dept": "Center for People and Infrastructures",
+                    "institution": "University of Illinois",
+                    "city": "Urbana",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth2527",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Karrie",
+                "middleInitial": "",
+                "familyName": "Karahalios",
+                "primary": {
+                    "dept": "Center for People and Infrastructures",
+                    "institution": "University of Illinois",
+                    "city": "Urbana",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth28128",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Christian",
+                "middleInitial": "",
+                "familyName": "Sandvig",
+                "primary": {
+                    "dept": "Dept. of Communication Studies and School of Information",
+                    "institution": "University of Michigan",
+                    "city": "Ann Arbor",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39158",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Motahhare",
+                "middleInitial": "",
+                "familyName": "Eslami",
+                "primary": {
+                    "dept": "Computer Science",
+                    "institution": "University of Illinois at Urbana-Champaign",
+                    "city": "Urbana",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This paper situates recent debates about algorithmic information sources within a call for new design and perception studies.",
+        "contactEmail": "kham@illinois.edu",
+        "contactFirstName": "Kevin",
+        "contactLastName": "Hamilton",
+        "venue": "altchi",
+        "session": "s-alt2",
+        "communities": []
+    },
+    {
+        "id": "alt191",
+        "title": "QnDReview: Read 100 CHI Papers in 7 Hours",
+        "abstract": "In 2013, 392 research papers and notes were published in the CHI conference (The ACM CHI Conference on Human Factors in Computing Systems) and even more papers in the domain of Human-Computer Interaction (HCI) are constantly published in various conferences and journals. It is quite arduous, if not impossible, to read all of these papers. One approach to deal with this information deluge is to focus on skimming through lots of papers in a short period of time, so that one can more wisely choose what to read before investing time in them. In order to teach such a skimming technique, I have taught a technique, called \"Quick and Dirty Review (QnDReview),\" in a graduate-level HCI course. The method has been employed in the course for five semesters, and students' responses were collected and analyzed. Results showed that students spent, on average, 4.3 minutes per paper and believed that they got the gist of each paper. However, the largest benefit I noticed is that students get the overall pictures of the fields while exposing themselves to various new ideas through this approach.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth7535",
+                "type": "author",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Ji Soo",
+                "middleInitial": "",
+                "familyName": "Yi",
+                "primary": {
+                    "dept": "School of Industrial Engineering",
+                    "institution": "Purdue University",
+                    "city": "West Lafayette",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This paper introduces an education method, \"QnDReview,\" which helps HCI students to read 100 papers in 7 hours.",
+        "contactEmail": "yij@purdue.edu",
+        "contactFirstName": "Ji Soo",
+        "contactLastName": "Yi",
+        "venue": "altchi",
+        "session": "s-alt6",
+        "communities": []
+    }
+]

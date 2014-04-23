@@ -1,0 +1,194 @@
+[
+    {
+        "authorId": "auth42683",
+        "type": "author",
+        "id": "key100",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "Scott",
+        "middleInitial": "",
+        "familyName": "Jenson",
+        "email": "scottj@google.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Google",
+            "city": "Palo Alto",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13221",
+        "type": "author",
+        "id": "key101",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "Steve",
+        "middleInitial": "",
+        "familyName": "Whittaker",
+        "email": "swhittak@ucsc.edu",
+        "role": "",
+        "primary": {
+            "dept": "HCI Lab",
+            "institution": "University of California at Santa Cruz",
+            "city": "Santa Cruz",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1149",
+        "type": "author",
+        "id": "key102",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "Elizabeth",
+        "middleInitial": "F.",
+        "familyName": "Churchill",
+        "email": "churchill@acm.org",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "eBay Research Lab, eBay Inc.",
+            "city": "San Jose",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth42684",
+        "type": "author",
+        "id": "key103",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "Scooter",
+        "middleInitial": "",
+        "familyName": "Morris",
+        "email": "scooter@cgl.ucsf.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of California",
+            "city": "San Francisco",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth42685",
+        "type": "author",
+        "id": "key104",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "Nathan",
+        "middleInitial": "",
+        "familyName": "Eagle",
+        "email": "chi2014albrecht@hcilab.org",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Jana Mobile Inc",
+            "city": "Boston",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth11957",
+        "type": "author",
+        "id": "key105",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "Richard",
+        "middleInitial": "",
+        "familyName": "Ladner",
+        "email": "ladner@cs.washington.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth42729",
+        "type": "author",
+        "id": "key106",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "Margaret",
+        "middleInitial": "",
+        "familyName": "Atwood",
+        "email": "technicalprogram@chi2014.acm.org",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "O.W. Toad",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth42830",
+        "type": "author",
+        "id": "key107",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "Gillian",
+        "middleInitial": "",
+        "familyName": "Crampton Smith",
+        "email": "Gillian.Crampton-Smith@interaction-venice.com",
+        "role": "",
+        "primary": {
+            "dept": "Interface Design Programme,  Design Department",
+            "institution": "University of Applied Sciences, Potsdam",
+            "city": "Potsdam",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    }
+]

@@ -1,0 +1,2210 @@
+[
+    {
+        "authorId": "auth9440",
+        "type": "author",
+        "id": "alt101",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Dimitris",
+        "middleInitial": "",
+        "familyName": "Grammenos",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Foundation for Research and Technology - Hellas",
+            "city": "Heraklion",
+            "country": "Greece"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40683",
+        "type": "author",
+        "id": "alt104",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Arne",
+        "middleInitial": "",
+        "familyName": "Renkema-Padmos",
+        "role": "",
+        "primary": {
+            "dept": "SecUSo",
+            "institution": "CASED / TU Darmstadt",
+            "city": "Darmstadt",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth38846",
+        "type": "author",
+        "id": "alt104",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Melanie",
+        "middleInitial": "",
+        "familyName": "Volkamer",
+        "role": "",
+        "primary": {
+            "dept": "SecUso",
+            "institution": "CASED / TU Darmstadt",
+            "city": "Darmstadt",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6035",
+        "type": "author",
+        "id": "alt104",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Karen",
+        "middleInitial": "",
+        "familyName": "Renaud",
+        "role": "",
+        "primary": {
+            "dept": "School of Computing Science",
+            "institution": "University of Glasgow",
+            "city": "Glasgow",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth11718",
+        "type": "author",
+        "id": "alt105",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Adam",
+        "middleInitial": "",
+        "familyName": "Fourney",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Waterloo",
+            "city": "Waterloo",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth5895",
+        "type": "author",
+        "id": "alt105",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Michael",
+        "middleInitial": "A",
+        "familyName": "Terry",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Waterloo",
+            "city": "Waterloo",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7663",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Eric",
+        "middleInitial": "P. S.",
+        "familyName": "Baumer",
+        "role": "",
+        "primary": {
+            "dept": "Communication Department",
+            "institution": "Cornell University",
+            "city": "Ithaca",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "Information Science Department",
+            "institution": "Cornell University",
+            "city": "Ithaca",
+            "country": "United States"
+        }
+    },
+    {
+        "authorId": "auth21212",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "June",
+        "middleInitial": "",
+        "familyName": "Ahn",
+        "role": "",
+        "primary": {
+            "dept": "Human-Computer Interaction Lab",
+            "institution": "University of Maryland, College Park",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40742",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Mei",
+        "middleInitial": "",
+        "familyName": "Bie",
+        "role": "",
+        "primary": {
+            "dept": "Human-Computer Interaction Lab",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth15706",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Elizabeth",
+        "middleInitial": "M",
+        "familyName": "Bonsignore",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Human-Computer Interaction Lab",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40743",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 5,
+        "givenName": "Ahmet",
+        "middleInitial": "",
+        "familyName": "Börütecene",
+        "role": "",
+        "primary": {
+            "dept": "Design Lab",
+            "institution": "Koç University",
+            "city": "Istanbul",
+            "country": "Turkey"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40744",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 6,
+        "givenName": "Oğuz Turan",
+        "middleInitial": "",
+        "familyName": "Buruk",
+        "role": "",
+        "primary": {
+            "dept": "Design Lab",
+            "institution": "Koç University",
+            "city": "Istanbul",
+            "country": "Turkey"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40102",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 7,
+        "givenName": "Tamara",
+        "middleInitial": "",
+        "familyName": "Clegg",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1070",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 8,
+        "givenName": "Allison",
+        "middleInitial": "",
+        "familyName": "Druin",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "HCIL",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9500",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 9,
+        "givenName": "Florian",
+        "middleInitial": "",
+        "familyName": "Echtler",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Regensburg",
+            "city": "Regensburg",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2227",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 10,
+        "givenName": "Dan",
+        "middleInitial": "",
+        "familyName": "Gruen",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM Research",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9212",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 11,
+        "givenName": "Mona Leigh",
+        "middleInitial": "",
+        "familyName": "Guha",
+        "role": "",
+        "primary": {
+            "dept": "HCIL",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40745",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 12,
+        "givenName": "Chelsea",
+        "middleInitial": "",
+        "familyName": "Hordatt",
+        "role": "",
+        "primary": {
+            "dept": "Human-Computer Interaction Lab",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6436",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 13,
+        "givenName": "Antonio",
+        "middleInitial": "",
+        "familyName": "Krüger",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "DFKI GmbH",
+            "city": "Saarbrucken",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth37044",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 14,
+        "givenName": "shachar",
+        "middleInitial": "",
+        "familyName": "maidenbaum",
+        "role": "",
+        "primary": {
+            "dept": "IMRIC",
+            "institution": "Hebrew university of Jerusalem",
+            "city": "Jerusalem",
+            "country": "Israel"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth22431",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 15,
+        "givenName": "Meethu",
+        "middleInitial": "",
+        "familyName": "Malu",
+        "role": "",
+        "primary": {
+            "dept": "Department of Computer Science",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth20357",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 16,
+        "givenName": "Brenna",
+        "middleInitial": "",
+        "familyName": "McNally",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1047",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 17,
+        "givenName": "Michael",
+        "middleInitial": "",
+        "familyName": "Muller",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM T.J. Watson Research",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40748",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 18,
+        "givenName": "Leyla",
+        "middleInitial": "",
+        "familyName": "Norooz",
+        "role": "",
+        "primary": {
+            "dept": "Human-Computer Interaction Lab",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth29432",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 19,
+        "givenName": "Juliet",
+        "middleInitial": "",
+        "familyName": "Norton",
+        "role": "",
+        "primary": {
+            "dept": "Department of Informatics",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth34016",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 20,
+        "givenName": "Oguzhan",
+        "middleInitial": "",
+        "familyName": "Ozcan",
+        "role": "",
+        "primary": {
+            "dept": "Design Lab",
+            "institution": "Koç University",
+            "city": "Istanbul",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6028",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 21,
+        "givenName": "Donald",
+        "middleInitial": "J",
+        "familyName": "Patterson",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth18895",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 22,
+        "givenName": "Andreas",
+        "middleInitial": "",
+        "familyName": "Riener",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Johannes Kepler University Linz, Austria",
+            "city": "Linz",
+            "country": "Austria"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4449",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 23,
+        "givenName": "Steven",
+        "middleInitial": "I",
+        "familyName": "Ross",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IBM Research",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40747",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 24,
+        "givenName": "Karen",
+        "middleInitial": "",
+        "familyName": "Rust",
+        "role": "",
+        "primary": {
+            "dept": "Human-Computer Interaction Lab",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth28768",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 25,
+        "givenName": "Johannes",
+        "middleInitial": "",
+        "familyName": "Schöning",
+        "role": "",
+        "primary": {
+            "dept": "Expertise Centre for Digital Media",
+            "institution": "Hasselt University - tUL - iMinds",
+            "city": "Diepenbeek",
+            "country": "Belgium"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth22891",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 26,
+        "givenName": "M.",
+        "middleInitial": "Six",
+        "familyName": "Silberman",
+        "role": "",
+        "primary": {
+            "dept": "Informatics",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4917",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 27,
+        "givenName": "Bill",
+        "middleInitial": "",
+        "familyName": "Tomlinson",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth23842",
+        "type": "author",
+        "id": "alt107",
+        "venue": "altchi",
+        "rank": 28,
+        "givenName": "Jason",
+        "middleInitial": "",
+        "familyName": "Yip",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "HCIL",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth22495",
+        "type": "author",
+        "id": "alt109",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Jayne",
+        "middleInitial": "",
+        "familyName": "Wallace",
+        "role": "",
+        "primary": {
+            "dept": "DJCAD",
+            "institution": "University of Dundee",
+            "city": "Dundee",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6865",
+        "type": "author",
+        "id": "alt109",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Joyce",
+        "middleInitial": "",
+        "familyName": "Yee",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Northumbria University",
+            "city": "Newcastle upon Tyne",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9649",
+        "type": "author",
+        "id": "alt109",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Abigail",
+        "middleInitial": "",
+        "familyName": "Durrant",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Newcastle University",
+            "city": "Newcastle upon Tyne",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth18434",
+        "type": "author",
+        "id": "alt112",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Megan",
+        "middleInitial": "",
+        "familyName": "Strait",
+        "role": "",
+        "primary": {
+            "dept": "Human-Robot Interaction Lab",
+            "institution": "Tufts University",
+            "city": "Medford",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth30860",
+        "type": "author",
+        "id": "alt112",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Cody",
+        "middleInitial": "",
+        "familyName": "Canning",
+        "role": "",
+        "primary": {
+            "dept": "Human-Robot Interaction Lab",
+            "institution": "Tufts University",
+            "city": "Medford",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth12988",
+        "type": "author",
+        "id": "alt112",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Matthias",
+        "middleInitial": "",
+        "familyName": "Scheutz",
+        "role": "",
+        "primary": {
+            "dept": "Human-Robot Interaction Lab",
+            "institution": "Tufts University",
+            "city": "Medford",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth28737",
+        "type": "author",
+        "id": "alt116",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Stefano",
+        "middleInitial": "",
+        "familyName": "Padilla",
+        "role": "",
+        "primary": {
+            "dept": "School of Mathematical & Computer Sciences",
+            "institution": "Heriot Watt University",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41363",
+        "type": "author",
+        "id": "alt116",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Thomas",
+        "middleInitial": "S",
+        "familyName": "Methven",
+        "role": "",
+        "primary": {
+            "dept": "School of Mathematical & Computer Sciences",
+            "institution": "Heriot-Watt University",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41364",
+        "type": "author",
+        "id": "alt116",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "David",
+        "middleInitial": "W",
+        "familyName": "Corne",
+        "role": "",
+        "primary": {
+            "dept": "School of Mathematical & Computer Sciences",
+            "institution": "Heriot-Watt University",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41365",
+        "type": "author",
+        "id": "alt116",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Mike",
+        "middleInitial": "J",
+        "familyName": "Chantler",
+        "role": "",
+        "primary": {
+            "dept": "School of Mathematical & Computer Sciences",
+            "institution": "Heriot-Watt University",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth20910",
+        "type": "author",
+        "id": "alt119",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Matthew",
+        "middleInitial": "P",
+        "familyName": "Aylett",
+        "role": "",
+        "primary": {
+            "dept": "School of Informatics",
+            "institution": "University of Edinburgh",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "CereProc Ltd.",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        }
+    },
+    {
+        "authorId": "auth3496",
+        "type": "author",
+        "id": "alt119",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Per Ola",
+        "middleInitial": "",
+        "familyName": "Kristensson",
+        "role": "",
+        "primary": {
+            "dept": "School of Computer Science",
+            "institution": "University of St Andrews",
+            "city": "St Andrews",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13221",
+        "type": "author",
+        "id": "alt119",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Steve",
+        "middleInitial": "",
+        "familyName": "Whittaker",
+        "role": "",
+        "primary": {
+            "dept": "HCI Lab",
+            "institution": "University of California at Santa Cruz",
+            "city": "Santa Cruz",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth12656",
+        "type": "author",
+        "id": "alt119",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Yolanda",
+        "middleInitial": "",
+        "familyName": "Vazquez-Alvarez",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Glasgow",
+            "city": "Glasgow",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40469",
+        "type": "author",
+        "id": "alt121",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Andy",
+        "middleInitial": "",
+        "familyName": "Brown",
+        "role": "",
+        "primary": {
+            "dept": "School of Computer Science",
+            "institution": "University of Manchester",
+            "city": "Manchester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth24409",
+        "type": "author",
+        "id": "alt121",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Michael",
+        "middleInitial": "",
+        "familyName": "Evans",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "British Broadcasting Corporation",
+            "city": "Manchester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6061",
+        "type": "author",
+        "id": "alt121",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Caroline",
+        "middleInitial": "",
+        "familyName": "Jay",
+        "role": "",
+        "primary": {
+            "dept": "School of Computer Science",
+            "institution": "University of Manchester, UK",
+            "city": "Manchester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth28789",
+        "type": "author",
+        "id": "alt121",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Maxine",
+        "middleInitial": "",
+        "familyName": "Glancy",
+        "role": "",
+        "primary": {
+            "dept": "BBC Research & Development",
+            "institution": "BBC",
+            "city": "Manchester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40822",
+        "type": "author",
+        "id": "alt121",
+        "venue": "altchi",
+        "rank": 5,
+        "givenName": "Rhianne",
+        "middleInitial": "",
+        "familyName": "Jones",
+        "role": "",
+        "primary": {
+            "dept": "BBC Research and Development",
+            "institution": "BBC",
+            "city": "Manchester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6079",
+        "type": "author",
+        "id": "alt121",
+        "venue": "altchi",
+        "rank": 6,
+        "givenName": "Simon",
+        "middleInitial": "",
+        "familyName": "Harper",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Manchester",
+            "city": "Manchester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40905",
+        "type": "author",
+        "id": "alt133",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Gabriella",
+        "middleInitial": "",
+        "familyName": "Dodero",
+        "role": "",
+        "primary": {
+            "dept": "Faculty of Computer Science",
+            "institution": "Free University of Bozen-Bolzano",
+            "city": "Bolzano",
+            "country": "Italy"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth39753",
+        "type": "author",
+        "id": "alt133",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Rosella",
+        "middleInitial": "",
+        "familyName": "Gennari",
+        "role": "",
+        "primary": {
+            "dept": "Faculty of Computer Science",
+            "institution": "Free University of Bozen-Bolzano",
+            "city": "Bolzano",
+            "country": "Italy"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40906",
+        "type": "author",
+        "id": "alt133",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Alessandra",
+        "middleInitial": "",
+        "familyName": "Melonio",
+        "role": "",
+        "primary": {
+            "dept": "Faculty of Computer Science",
+            "institution": "Free University of Bozen-Bolzano",
+            "city": "Bolzano",
+            "country": "Italy"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40907",
+        "type": "author",
+        "id": "alt133",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Santina",
+        "middleInitial": "",
+        "familyName": "Torello",
+        "role": "",
+        "primary": {
+            "dept": "Faculty of Computer Science",
+            "institution": "Free University of Bozen-Bolzano",
+            "city": "Bolzano",
+            "country": "Italy"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth27883",
+        "type": "author",
+        "id": "alt143",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Razvan",
+        "middleInitial": "",
+        "familyName": "Rughinis",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University POLITEHNICA of Bucharest",
+            "city": "Bucharest",
+            "country": "Romania"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth38226",
+        "type": "author",
+        "id": "alt143",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Cosima",
+        "middleInitial": "",
+        "familyName": "Rughinis",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Bucharest",
+            "city": "Bucharest",
+            "country": "Romania"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41025",
+        "type": "author",
+        "id": "alt143",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Alina Petra",
+        "middleInitial": "",
+        "familyName": "Marinescu Nenciu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Bucharest",
+            "city": "Bucharest",
+            "country": "Romania"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41024",
+        "type": "author",
+        "id": "alt145",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Michael",
+        "middleInitial": "",
+        "familyName": "Nitsche",
+        "role": "",
+        "primary": {
+            "dept": "Digital Media",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States of America"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth31164",
+        "type": "author",
+        "id": "alt145",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Andrew",
+        "middleInitial": "",
+        "familyName": "Quitmeyer",
+        "role": "",
+        "primary": {
+            "dept": "Digital Media",
+            "institution": "Georgia Tech",
+            "city": "Atlanta",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41037",
+        "type": "author",
+        "id": "alt145",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Kate",
+        "middleInitial": "",
+        "familyName": "Farina",
+        "role": "",
+        "primary": {
+            "dept": "Digital Media",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41045",
+        "type": "author",
+        "id": "alt145",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Samuel",
+        "middleInitial": "",
+        "familyName": "Zwaan",
+        "role": "",
+        "primary": {
+            "dept": "Digital Media",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14879",
+        "type": "author",
+        "id": "alt145",
+        "venue": "altchi",
+        "rank": 5,
+        "givenName": "Hye Yeon",
+        "middleInitial": "",
+        "familyName": "Nam",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth15364",
+        "type": "author",
+        "id": "alt146",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Naveen",
+        "middleInitial": "L",
+        "familyName": "Bagalkot",
+        "role": "",
+        "primary": {
+            "dept": "Srishti Labs",
+            "institution": "Srishti School of Art, Design and Technology",
+            "city": "Bangalore",
+            "country": "India"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13324",
+        "type": "author",
+        "id": "alt146",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Erik",
+        "middleInitial": "",
+        "familyName": "Grönvall",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IT University of Copenhagen",
+            "city": "Copenhagen",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth5228",
+        "type": "author",
+        "id": "alt146",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Tomas",
+        "middleInitial": "",
+        "familyName": "Sokoler",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "IT University of Copenhagen",
+            "city": "Copenhagen",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41154",
+        "type": "author",
+        "id": "alt153",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Laura",
+        "middleInitial": "",
+        "familyName": "Buttrick",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Lincoln",
+            "city": "Lincoln",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13937",
+        "type": "author",
+        "id": "alt153",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Conor",
+        "middleInitial": "",
+        "familyName": "Linehan",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Lincoln",
+            "city": "Lincoln",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth10649",
+        "type": "author",
+        "id": "alt153",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Ben",
+        "middleInitial": "",
+        "familyName": "Kirman",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Lincoln",
+            "city": "Lincoln",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41155",
+        "type": "author",
+        "id": "alt153",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Dan",
+        "middleInitial": "",
+        "familyName": "O'Hara",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Birmingham City University",
+            "city": "Birmingham",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth33045",
+        "type": "author",
+        "id": "alt155",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "John",
+        "middleInitial": "P",
+        "familyName": "Fass",
+        "role": "",
+        "primary": {
+            "dept": "Visual Communication",
+            "institution": "Royal College of Art",
+            "city": "London",
+            "country": "UK"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth32200",
+        "type": "author",
+        "id": "alt156",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Tom",
+        "middleInitial": "",
+        "familyName": "Giraud",
+        "role": "",
+        "primary": {
+            "dept": "LIMSI-CNRS",
+            "institution": "CNRS",
+            "city": "Orsay",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth30981",
+        "type": "author",
+        "id": "alt156",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Matthieu",
+        "middleInitial": "",
+        "familyName": "Courgeon",
+        "role": "",
+        "primary": {
+            "dept": "Lab-STICC ",
+            "institution": "University of South Brittany",
+            "city": "Brest",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41186",
+        "type": "author",
+        "id": "alt156",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Marion",
+        "middleInitial": "",
+        "familyName": "Tardieu",
+        "role": "",
+        "primary": {
+            "dept": "IR4M",
+            "institution": "UMR8081 CNRS",
+            "city": "Orsay",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41187",
+        "type": "author",
+        "id": "alt156",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Alexandra",
+        "middleInitial": "",
+        "familyName": "Roatis",
+        "role": "",
+        "primary": {
+            "dept": "LRI",
+            "institution": "University Paris South",
+            "city": "Orsay",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41188",
+        "type": "author",
+        "id": "alt156",
+        "venue": "altchi",
+        "rank": 5,
+        "givenName": "Xavier",
+        "middleInitial": "",
+        "familyName": "Maitre",
+        "role": "",
+        "primary": {
+            "dept": "IR4M",
+            "institution": "UMR8081 CNRS",
+            "city": "Orsay",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41247",
+        "type": "author",
+        "id": "alt163",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "yasuhiro",
+        "middleInitial": "",
+        "familyName": "suzuki",
+        "role": "",
+        "primary": {
+            "dept": "Information Science",
+            "institution": "Nagoya University",
+            "city": "Nagoya",
+            "country": "Japan"
+        },
+        "secondary": {
+            "dept": "System Design Management",
+            "institution": "Keio",
+            "city": "Yokohama",
+            "country": "Japan"
+        }
+    },
+    {
+        "authorId": "auth100001",
+        "type": "author",
+        "id": "alt163",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "RIeko",
+        "middleInitial": "",
+        "familyName": "Suzuki",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100002",
+        "type": "author",
+        "id": "alt163",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Junji",
+        "middleInitial": "",
+        "familyName": "Watanabe",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9794",
+        "type": "author",
+        "id": "alt168",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Maria",
+        "middleInitial": "K",
+        "familyName": "Wolters",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Edinburgh",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth26937",
+        "type": "author",
+        "id": "alt170",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Tom",
+        "middleInitial": "",
+        "familyName": "Jenkins",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth31325",
+        "type": "author",
+        "id": "alt170",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Ian",
+        "middleInitial": "",
+        "familyName": "Bogost",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13937",
+        "type": "author",
+        "id": "alt172",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Conor",
+        "middleInitial": "",
+        "familyName": "Linehan",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Lincoln",
+            "city": "Lincoln",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth10649",
+        "type": "author",
+        "id": "alt172",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Ben",
+        "middleInitial": "",
+        "familyName": "Kirman",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Lincoln",
+            "city": "Lincoln",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4560",
+        "type": "author",
+        "id": "alt174",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Pierre",
+        "middleInitial": "",
+        "familyName": "Dragicevic",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "INRIA",
+            "city": "Saclay",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth41376",
+        "type": "author",
+        "id": "alt174",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Fanny",
+        "middleInitial": "",
+        "familyName": "Chevalier",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "INRIA",
+            "city": "Lille",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4580",
+        "type": "author",
+        "id": "alt174",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Stephane",
+        "middleInitial": "",
+        "familyName": "Huot",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Université Paris-Sud",
+            "city": "Orsay",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth17146",
+        "type": "author",
+        "id": "alt179",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Henning",
+        "middleInitial": "",
+        "familyName": "Pohl",
+        "role": "",
+        "primary": {
+            "dept": "FG Mensch-Computer-Interaktion",
+            "institution": "University of Hanover",
+            "city": "Hannover",
+            "country": "Germany"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth39156",
+        "type": "author",
+        "id": "alt188",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Kevin",
+        "middleInitial": "",
+        "familyName": "Hamilton",
+        "role": "",
+        "primary": {
+            "dept": "Center for People and Infrastructures",
+            "institution": "University of Illinois",
+            "city": "Urbana",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2527",
+        "type": "author",
+        "id": "alt188",
+        "venue": "altchi",
+        "rank": 2,
+        "givenName": "Karrie",
+        "middleInitial": "",
+        "familyName": "Karahalios",
+        "role": "",
+        "primary": {
+            "dept": "Center for People and Infrastructures",
+            "institution": "University of Illinois",
+            "city": "Urbana",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth28128",
+        "type": "author",
+        "id": "alt188",
+        "venue": "altchi",
+        "rank": 3,
+        "givenName": "Christian",
+        "middleInitial": "",
+        "familyName": "Sandvig",
+        "role": "",
+        "primary": {
+            "dept": "Dept. of Communication Studies and School of Information",
+            "institution": "University of Michigan",
+            "city": "Ann Arbor",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth39158",
+        "type": "author",
+        "id": "alt188",
+        "venue": "altchi",
+        "rank": 4,
+        "givenName": "Motahhare",
+        "middleInitial": "",
+        "familyName": "Eslami",
+        "role": "",
+        "primary": {
+            "dept": "Computer Science",
+            "institution": "University of Illinois at Urbana-Champaign",
+            "city": "Urbana",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7535",
+        "type": "author",
+        "id": "alt191",
+        "venue": "altchi",
+        "rank": 1,
+        "givenName": "Ji Soo",
+        "middleInitial": "",
+        "familyName": "Yi",
+        "role": "",
+        "primary": {
+            "dept": "School of Industrial Engineering",
+            "institution": "Purdue University",
+            "city": "West Lafayette",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    }
+]

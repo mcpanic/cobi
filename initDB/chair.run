@@ -1,0 +1,10 @@
+model chair.mod;
+data chair.dat;
+option solver "/Users/hq/Downloads/ampl_macosx64/minos";
+solve;
+for {i in CHAIRS}
+    for {j in SESSIONS}
+    	if SessionChair[i,j] > 0.99 then {
+	printf "%s,%s\n", i,j ;
+	}
+

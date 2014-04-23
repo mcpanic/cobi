@@ -1,0 +1,1070 @@
+[
+    {
+        "id": "case115",
+        "title": "Measuring Product “Coolness” -- Developing a Measurement Instrument",
+        "abstract": "Cool products provide a leap in value and they increase a company’s market share. The widespread adoption of iOS and Android devices resulted in a radical change in the role of technology in people’s lives. And anecdotally people exclaimed about how “cool” their devices were; “I can’t go back” to what I had before and “I can’t stop talking about it—it’s so cool!” \\  \\ In 2010 InContext Design launched The Cool Project to understand the underlying principles which make a product “cool.” The research goal was to discover the core drivers of the cool user experience. This consumer research used qualitative research to identify seven core constructs associated with “coolness” that appeared independently of device or software or even technology product. In 2011 SAP became interested in developing a metric to measure “coolness” and in a joint research effort with InContext Design validated the constructs with business users and co-designed a cool metric. The final result is a repeatable process for measuring cool through a quick survey, the results of which provide implications to product teams on how to improve their products to increase “coolness”.  \\  \\ This case study outlines the process of using qualitative data to design a valid quantitative measure.  \\ ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth39471",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Carol",
+                "familyName": "Farnsworth",
+                "email": "carol.farnsworth@sap.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP Labs, LLC",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth31489",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Karen",
+                "familyName": "Holtzblatt",
+                "email": "karen@incontextdesign.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "InContext Design",
+                    "city": "Concord",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth17508",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Shantanu",
+                "familyName": "Pai",
+                "email": "shanritz@gmail.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP Labs, LLC",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth16923",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Theo",
+                "familyName": "Held",
+                "email": "theo.held@sap.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP AG",
+                    "city": "Walldorf",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39472",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Sally",
+                "familyName": "Lawler Kennedy",
+                "email": "sally.lawler.kennedy@sap.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP Labs, LLC",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39473",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Eli",
+                "familyName": "Wylen",
+                "email": "eli.wylen@incontextdesign.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "InContext Design",
+                    "city": "Concord",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth31582",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 7,
+                "givenName": "Pallavi",
+                "familyName": "Kutty",
+                "email": "pallavi.kutty@sap.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "SAP",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth31048",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 8,
+                "givenName": "Kelley",
+                "familyName": "Wagg",
+                "email": "kelley.wagg@incontextdesign.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "InContext Design",
+                    "city": "Concord",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This case study outlines the process that used qualitative data to design a valid quantitative measure for what makes a product “cool”, providing implications on how to improve a product.",
+        "contactEmail": "shelley@incontextdesign.com",
+        "contactFirstName": "Shelley",
+        "contactLastName": "Wood",
+        "keywords": "Cool; innovation; transformative design; measures; metrics; performance",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case118",
+        "title": "Quick and Participatory: Adopting Users' Designs to Improve a Mobile App",
+        "abstract": "When improving small area or minor functions in mobile app, user research is often skipped or dismissed. In our approach, we suggest a method which combines cafe study and participatory design to capture users’ needs quickly and clearly. We have conducted a 3-day user research with 44 participants in local cafes and asked them to make prototype UI of their ideal design. As a result of the research, we have found 3 patterns in users’ designs and developed prototyping with those concepts. We expect that this method would be useful when improving specific features with limited time and resources.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth42508",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Kate Sangwon",
+                "familyName": "Lee",
+                "email": "kate.lee@navercorp.com",
+                "primary": {
+                    "dept": "Design Research Lab.",
+                    "institution": "Naver Corp.",
+                    "city": "Seongnam-si",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39715",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Sun",
+                "familyName": "Lee",
+                "email": "sun.lee@navercorp.com",
+                "primary": {
+                    "dept": "Design Research Lab.",
+                    "institution": "Naver Corp.",
+                    "city": "Seongnam-si",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth42509",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Hyojung",
+                "familyName": "Kim",
+                "email": "kim.hyojung@navercorp.com",
+                "primary": {
+                    "dept": "Design Research Lab.",
+                    "institution": "Naver Corp.",
+                    "city": "Seongnam-si",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We suggest a mobile UI prototyping and research method which combines cafe study and participatory design to capture users’ needs quickly and clearly.",
+        "contactEmail": "snowwon@gmail.com",
+        "contactFirstName": "Kate Sangwon",
+        "contactLastName": "Lee",
+        "keywords": "Participatory design; Cafe study; User-centered design; User research method; Mobile app; Mobile UI",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case138",
+        "title": "GREYBOX Scheduling:  Designing a Joint Cognitive System  for Sustainable Manufacturing",
+        "abstract": "The aims of this work were to investigate how decision making in production planning happens, to understand how energy efficiency could be included as a manufacturing goal and to design a decision support system that integrates into current work practices. This case study describes the research, design and development this system. An interactive visualisation provides an interface to a flexible optimisation engine and allows experts to interpret, amend and augment system inputs and outputs without the need for programming knowledge. This approach supports collaboration between automated and human agents, working as a joint cognitive system. ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth39544",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Connor",
+                "familyName": "Upton",
+                "email": "connor.upton@intel.com",
+                "primary": {
+                    "dept": "Cloud Services Lab",
+                    "institution": "Intel Labs Europe",
+                    "city": "Leixlip",
+                    "country": "Ireland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39770",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Fergus",
+                "familyName": "Quilligan",
+                "email": "fergus.quilligan@intel.com",
+                "primary": {
+                    "dept": "Irish Centre for Manufacturing Research",
+                    "institution": "Intel",
+                    "city": "Leixlip",
+                    "country": "Ireland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This presentation describes the research, design and development of a software tool for energy efficient scheduling in an industrial environment. The system couples an optimization engine with an interactive visualization. ",
+        "contactEmail": "connor.upton@gmail.com",
+        "contactFirstName": "Connor",
+        "contactLastName": "Upton",
+        "keywords": "Joint Cognitive Systems; Decision Support; Visualisation; Optimisation; Design ",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case147",
+        "title": "HCI Interventions with Nonprofit Organizations: Tactics for Effective Collaboration",
+        "abstract": "Thirty HCI practitioners participated in a CHI 2011 workshop [7], intending to directly engage with the processes, goals, and challenges of six Vancouver area nonprofit organizations. Analysis of the workshop documentation allowed us to track instances of reciprocal interaction between stakeholders. Findings revealed that various design tactics were productive in enabling collaborators to improve their focus on addressing key challenges in the 2-day workshop. This case study contributes new knowledge – tactics to conduct and evaluate HCI Design Interventions with nonprofits, as well as helping to expand the emerging intersection of political computing and human-computer interaction.  ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth18768",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Vicki",
+                "familyName": "Moulder",
+                "email": "vmoulder@sfu.ca",
+                "primary": {
+                    "dept": "",
+                    "institution": "Simon Fraser University",
+                    "city": "Surrey",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth19133",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Lorna",
+                "familyName": "Boschman",
+                "email": "lorna.boschman@gmail.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of British Columbia",
+                    "city": "Vancouver",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth3350",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Ron",
+                "familyName": "Wakkary",
+                "email": "rwakkary@sfu.ca",
+                "primary": {
+                    "dept": "",
+                    "institution": "Simon Fraser University",
+                    "city": "Surrey ",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth8702",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "William",
+                "familyName": "Odom",
+                "email": "wodom@cs.cmu.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "Carnegie Mellon University",
+                    "city": "Pittsburgh",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth12782",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Stacey",
+                "familyName": "Kuznetsov",
+                "email": "stace@cs.cmu.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "Carnegie Mellon University",
+                    "city": "Pittsburgh",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This case study presents design tactics for effective collaboration with Nonprofit Organizations. The authors discuss the use of video sequence analysis to track instances of reciprocal interaction between stakeholders.",
+        "contactEmail": "vmoulder@sfu.ca",
+        "contactFirstName": "Vicki",
+        "contactLastName": "Moulder",
+        "keywords": "Community; Politics; Social Change; Design Intervention; Sustainability; Design Research ",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case150",
+        "title": "User-Centered Design for More Efficient Drill Rig Control System",
+        "abstract": "This case study describes the methods and results from a user-centric research project developing new control system functionality for drill rigs. During the project we conducted contextual inquiries in an operative mine and structured usability tests with a drill rig simulator. As a result, an automatic control mode was developed to meet the rig operators’ needs and will be available in 2014.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth39733",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Katri",
+                "familyName": "Koli",
+                "email": "katri.koli@leadin.fi",
+                "primary": {
+                    "dept": "",
+                    "institution": "Leadin Inc.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth14054",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Tuula",
+                "familyName": "Kärkkäinen",
+                "email": "tuula.karkkainen@gmail.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Leadin Inc.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth11817",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Jaakko",
+                "familyName": "Lehikoinen",
+                "email": "jaakko.t.lehikoinen@nokia.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Leadin Inc.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39747",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Tuomo",
+                "familyName": "Pirinen",
+                "email": "tuomo.pirinen@sandvik.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Sandvik Corp.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39748",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Sami",
+                "familyName": "Hanski",
+                "email": "sami.hanski@sandvik.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Sandvik Corp.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39749",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Juha",
+                "familyName": "Lassila",
+                "email": "juha.lassila@sandvik.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Sandvik Corp.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39750",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 7,
+                "givenName": "Mikko",
+                "familyName": "Loimusalo",
+                "email": "mikko.loimusalo@sandvik.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Sandvik Corp.",
+                    "city": "Tampere",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "Developing a new user-friendly surface drill rig control system. Conducting contextual inquiries at an operative mine. Prototyping new functionality. Organizing structured usability tests with a drill rig simulator.",
+        "contactEmail": "katri.koli@leadin.fi",
+        "contactFirstName": "Katri",
+        "contactLastName": "Koli",
+        "keywords": "User-Centered Design; Contextual Inquiry; Usability Testing; Product Development; Drill Rigs; Control System Functionality",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case163",
+        "title": "Redefinition of Requirements in the Design and Development of the Project Mapocci: from Digital Art to HCI Research",
+        "abstract": "Mapocci is a robotic companion for children, created in the juncture of digital art and HCI practices. It was developed during an art residency program at Telefonica R+D. The dynamics of negotiation and collaboration with the R+D team transformed the objectives and methods of the art project. This case study shows this transformation process as well as the contribution that the digital art methods brought to the R+D team framework and vice versa in the HCI project.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth24287",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Lilia",
+                "familyName": "Villafuerte",
+                "email": "lilia@villafuerte.info",
+                "primary": {
+                    "dept": "",
+                    "institution": "LABoral Art and Industrial Production Center",
+                    "city": "Gijón",
+                    "country": "Spain"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth31606",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Laura",
+                "familyName": "Malinverni",
+                "email": "malinverni.laura@gmail.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Universitat Pompeu Fabra",
+                    "city": "Barcelona",
+                    "country": "Spain"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This case study presents the contributions that the digital art background brought to the R+D team in a HCI project and vice versa, during the development of Mapocci project. \\ ",
+        "contactEmail": "lilia@villafuerte.info",
+        "contactFirstName": "Lilia",
+        "contactLastName": "Villafuerte",
+        "keywords": "Digital Art; Interdisciplinary research",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case170",
+        "title": "An Extended Case Study Methodology for Investigating Influence of Cultural, Organizational, and Automation Factors on Human-Automation Trust",
+        "abstract": "This paper describes the utilization of an extended case methodology to reveal foundational lessons and best practices from real world perspectives about how cultural, organizational, and automation factors influence human-automation trust development. The Air Force Automatic Ground Collision Avoidance System (Auto-GCAS) was used as the context for this case study. The study employs an eclectic set of qualitative and quantitative methodologies including a literature review for secondary data on the history of Auto-GCAS, field observations, surveys, and interviews for primary data. This paper also discusses how our methodologies and methods were adapted to the limited access, and uniqueness of, the participant groups while taking advantage of emerging opportunities. We also discuss lessons learned about the required qualities of the research team, particularly those related to cultural and technical competence, political sensitivity, and trust relationship with participants. ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth39991",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Kolina",
+                "familyName": "Koltai",
+                "email": "kolina.koltai.31@my.csun.edu",
+                "primary": {
+                    "dept": "Systems Engineering Research Laboratory",
+                    "institution": "California State University, Northridge",
+                    "city": "Northridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39990",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Nhut",
+                "familyName": "Ho",
+                "email": "nhut.ho.51@csun.edu",
+                "primary": {
+                    "dept": "Systems Engineering Research Laboratory",
+                    "institution": "California State University, Northridge",
+                    "city": "Northridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40151",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Gina",
+                "familyName": "Masequesmay",
+                "email": "gina.masequesmay@csun.edu",
+                "primary": {
+                    "dept": "Systems Engineering Research Laboratory",
+                    "institution": "California State University, Northridge",
+                    "city": "Northridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39915",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "David",
+                "familyName": "Niedober",
+                "email": "david.niedober.788@my.csun.edu",
+                "primary": {
+                    "dept": "Systems Engineering Research Laboratory",
+                    "institution": "California State University, Northridge",
+                    "city": "Northridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40152",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Mark",
+                "familyName": "Skoog",
+                "email": "mark.a.skoog@nasa.gov",
+                "primary": {
+                    "dept": "NASA Dryden Flight Research Center, CA",
+                    "institution": "NASA",
+                    "city": "Edwards AFB",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40154",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Walter",
+                "familyName": "Johnson",
+                "email": "walter.johnson@nasa.gov",
+                "primary": {
+                    "dept": "",
+                    "institution": "NASA Ames Research Center",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth40153",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 7,
+                "givenName": "Artemio",
+                "familyName": "Cacanindin",
+                "email": "artemio.cacanindin@us.af.mil",
+                "primary": {
+                    "dept": "",
+                    "institution": "Air Force Flight Test Center",
+                    "city": "Edwards",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth42516",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 8,
+                "givenName": "Joseph",
+                "familyName": "Lyons",
+                "email": "joseph.lyons.6@us.af.mil",
+                "primary": {
+                    "dept": "Human Trust and Interaction Division",
+                    "institution": "Air Force Research Laboratory",
+                    "city": "Wright-Patterson AFB",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "Using an extended case study methodology, the project established a methodological foundation for conducting human-automation trust research focusing on culture, organization, an automation capability in military and political environment. ",
+        "contactEmail": "david.niedober.788@my.csun.edu",
+        "contactFirstName": "David",
+        "contactLastName": "Niedober",
+        "keywords": "Trust; culture; organization; ground collision avoidance; extended case methodology; grounded theory; ethnography; politics; bureaucracy; automation",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case173",
+        "title": "Online Microsurveys for User Experience Research",
+        "abstract": "This case study presents a critical analysis of microsurveys as a method for conducting user experience research. We focus specifically on Google Consumer Surveys (GCS) and analyze a combination of log data and GCSs run by the authors to investigate how they are used, who the respondents are, and the quality of the data. We find that such microsurveys can be a great way to quickly and cheaply gather large amounts of survey data, but that there are pitfalls that user experience researchers should be aware of when using the method.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth42517",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Victoria",
+                "familyName": "Schwanda Sosik",
+                "email": "sosik@cs.cornell.edu",
+                "primary": {
+                    "dept": "Cornell University, Ithaca, New York, United States",
+                    "institution": "Cornell University",
+                    "city": "Ithaca",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth38860",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Elie",
+                "familyName": "Bursztein",
+                "email": "elieb@google.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth2938",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Sunny",
+                "familyName": "Consolvo",
+                "email": "sconsolvo@google.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth9100",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "David",
+                "familyName": "Huffaker",
+                "email": "huffaker@google.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth13241",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Gueorgi",
+                "familyName": "Kossinets",
+                "email": "gkossinets@gmail.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39962",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Kerwell",
+                "familyName": "Liao",
+                "email": "kerwell@google.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth39963",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 7,
+                "givenName": "Paul",
+                "familyName": "McDonald",
+                "email": "pmcdonald@google.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "id": "auth31522",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 8,
+                "givenName": "Aaron",
+                "familyName": "Sedley",
+                "email": "asedley@google.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This presentation shows how researchers can use microsurveys to gather insights on user behavior.",
+        "contactEmail": "davetown101@gmail.com",
+        "contactFirstName": "David",
+        "contactLastName": "Huffaker",
+        "keywords": "microsurveys; survey methods; Google Consumer Survey; GCS",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "case176",
+        "title": "Challenges at the Bottom of the Pyramid:  An Ethnographic Study of South African Mobile Users",
+        "abstract": "In this case study, I present some of the challenges that are inherent in large, complex international ethnographic field research studies.  This case describes a study of people from the “bottom of the pyramid” in both urban and rural South Africa.  The team encountered some predictable and many unpredictable challenges.  This case study covers both what the challenges were and also how I addressed them.  ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth11429",
+                "type": "author",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Susan",
+                "familyName": "Dray",
+                "email": "susan.dray@dray.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Dray & Associates, Inc.",
+                    "city": "Oakland",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This case study presents how we solved some common yet challenging issues in international field research based on a study we conducted in urban and rural South Africa.",
+        "contactEmail": "susan.dray@dray.com",
+        "contactFirstName": "Susan",
+        "contactLastName": "Dray",
+        "keywords": "Ethnography; International field research; South Africa: Urban and Rural; Challenges",
+        "venue": "casestudy",
+        "session": "",
+        "communities": []
+    }
+]

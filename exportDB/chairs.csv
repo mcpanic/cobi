@@ -1,0 +1,119 @@
+date,time,room,id,title,givenName,familyName,email
+Thursday,9:00-10:20,716A,s-case-1,"Realities of Fieldwork",Michael,Arent,michael.arent@sbcglobal.net
+Thursday,11:00-12:20,716A,s-case-2,"Cross-Perspective Collaboration",Connor,Upton,connor.upton@gmail.com
+Thursday,14:00-15:20,716A,s-case-3,"Creating Methods",Vicki,Moulder,vmoulder@sfu.ca
+Thursday,11:00-12:20,716B,s100,"Lost and Found in Translation",Tiago,Guerreiro,tjvg@di.fc.ul.pt
+Wednesday,9:00-10:20,701B,s101,"Exergame Design",Sean,Munson,smunson@uw.edu
+Monday,11:00-12:20,718A,s102,"Watches and Small Devices",Yang,Li,yangli@acm.org
+Wednesday,11:00-12:20,718A,s103,"Shape-Changing Interfaces",Abhijit,Karnik,abe.karnik@gmail.com
+Monday,11:00-12:20,701B,s104,"Stress",Yunan,Chen,yunanc@ics.uci.edu
+Thursday,11:00-12:20,718B,s105,"3D Printing and Fabrication",Alex,Olwal,olwal@mit.edu
+Wednesday,11:00-12:20,701A,s106,"Understanding and Using Social Media",Patrick Gage,Kelley,me@patrickgage.com
+Tuesday,16:00-17:20,801A,s107,"The Eyes Have It",JÃ¼rgen,Steimle,steimle@media.mit.edu
+Thursday,14:00-15:20,701B,s108,"Network of Care",Patrick,Olivier,p.l.olivier@ncl.ac.uk
+Tuesday,14:00-15:20,718A,s109,"Novel Keyboards",Kent,Lyons,klyons@yahoo-inc.com
+Tuesday,9:00-10:20,718B,s110,"Touch and Stylus Interaction",Xiang,Cao,xiangcao@acm.org
+Wednesday,16:00-17:20,801A,s111,"Applications of Body Sensing",Susan,Fussell,sfussell@cornell.edu
+Wednesday,11:00-12:20,718B,s113,"Touch Input",Daniel,Wigdor,daniel@dgp.toronto.edu
+Monday,11:00-12:20,701A,s114,"Visualization and Aesthetics",Antonella,De Angeli,deangeli@disi.unitn.it
+Wednesday,14:00-15:20,801A,s115,"Authentication and Passwords",Serge,Egelman,egelman@cs.berkeley.edu
+Monday,16:00-17:20,718A,s116,"Pointing and Cursors",Pourang,Irani,irani@cs.umanitoba.ca
+Thursday,11:00-12:20,701B,s117,"Crowdsourcing",Steven,Dow,spdow@cs.cmu.edu
+Tuesday,14:00-15:20,701A,s118,"Sensemaking and Information in Use",Jeffrey,Bigham,jbigham@cs.cmu.edu
+Wednesday,14:00-15:20,718B,s119,"Multitouch Interaction",Sebastian,Boring,sebastian.boring@di.ku.dk
+Monday,14:00-15:20,801B,s120,"Managing Income",Sarita,Schoenebeck,yardi@umich.edu
+Monday,16:00-17:20,717AB,s121,"Research through Design",Christina,Satchell,christine.satchell@qut.edu.au
+Tuesday,11:00-12:20,718A,s122,"On and Above the Surface",Nadir,Weibel,weibel@ucsd.edu
+Tuesday,11:00-12:20,801B,s123,"Emergency Response",Lorrie,Cranor,lorrie@cmu.edu
+Monday,14:00-15:20,718B,s124,"Hackerspaces, Making and Breaking",Manfred,Tscheligi,manfred.tscheligi@sbg.ac.at
+Wednesday,16:00-17:20,718B,s125,"Head-Worn Displays",Brian,Bailey,bpbailey@illinois.edu
+Thursday,9:00-10:20,716B,s126,"Persuasive Technologies and Applications",Erin,Carroll,erinc@cs.rochester.edu
+Monday,16:00-17:20,701B,s127,"Crowdfunding and Crowd Storage",Michael,Muller,michael_muller@us.ibm.com
+Tuesday,16:00-17:20,801B,s128,"Learning and Education",Deborah,Tatar,dtatar@cs.vt.edu
+Monday,11:00-12:20,801A,s129,"Audio Interaction",Sriram,Subramanian,sriramable@gmail.com
+Thursday,14:00-15:20,718A,s130,"Gesture-Based Interaction",Joerg,Mueller,joerg.mueller@tu-berlin.de
+Tuesday,16:00-17:20,701A,s131,"Studying Visualization",Pierre,Dragicevic,pierre.dragice@gmail.com
+Monday,14:00-15:20,716B,s132,"Studying and Designing Gameplay",Carl,Gutwin,gutwin@cs.usask.ca
+Monday,11:00-12:20,801B,s133,"Sustainability and Everyday Practices",Mike,Hazas,hazas@comp.lancs.ac.uk
+Wednesday,11:00-12:20,714AB,s134,"Programming and Development Tools",Tom,Moher,moher@uic.edu
+Monday,16:00-17:20,701A,s135,"Designing and Understanding Visualizations",Petra,Isenberg,petra.isenberg@inria.fr
+Thursday,14:00-15:20,714AB,s136,"Tutorials",Morgan,Dixon,mdixon@cs.washington.edu
+Tuesday,16:00-17:20,717AB,s137,"Critical Design",Andrea,Parker,a.parker@neu.edu
+Wednesday,9:00-10:20,716B,s138,"Health and Everyday Life",Maria,Wolters,maria.wolters@ed.ac.uk
+Tuesday,9:00-10:20,718A,s139,"Mid-Air Gestures",Shahram,Izadi,shahrami@microsoft.com
+Tuesday,16:00-17:20,714AB,s140,"Narratives and Storytelling",Aisling,Kelliher,aislingk@andrew.cmu.edu
+Tuesday,11:00-12:20,701B,s141,"Crowds and Creativity",Lilly,Irani,lirani@ucsd.edu
+Tuesday,16:00-17:20,718B,s142,"3D Interaction: Modeling and Prototyping",Wolfgang,Stuerzlinger,wolfgang@cse.yorku.ca
+Monday,14:00-15:20,801A,s143,"Activity Recognition",Daniela,Busse,daniela.busse@gmail.com
+Tuesday,14:00-15:20,718B,s144,"DIY and Hacking",Kasper,Hornbaek,kash@diku.dk
+Wednesday,16:00-17:20,714AB,s145,"Decisions, Recommendations, and Machine Learning",Jon,Froehlich,jonf@cs.umd.edu
+Monday,14:00-15:20,714AB,s146,"Image and Animation Authoring",Tomer,Moscovich,tomer@moscovich.net
+Tuesday,11:00-12:20,718B,s147,"Interactive Whiteboards and Public Displays",Andreas,Butz,andreas.butz@ifi.lmu.de
+Tuesday,14:00-15:20,801A,s148,"User Models and Prediction",Duncan,Brumby,Brumby@cs.ucl.ac.uk
+Wednesday,14:00-15:20,714AB,s149,"Cross-Device Interaction",Fabio,PaternÃ²,fabio.paterno@isti.cnr.it
+Thursday,9:00-10:20,801A,s150,"HCI Paradigms: Past, Present and Future",Jeffrey,Bardzell,jbardzel@indiana.edu
+Wednesday,11:00-12:20,716B,s151,"Interactive Technologies for Rehabilitation",Xiaomu,Zhou,xmyzhou@rutgers.edu
+Tuesday,14:00-15:20,714AB,s152,"Presentation Technologies",Shengdong,Zhao,zhaosd@comp.nus.edu.sg
+Monday,16:00-17:20,801B,s153,"Multilingual Communication",Hao-Chuan,Wang,haochuan@cs.nthu.edu.tw
+Thursday,9:00-10:20,718B,s154,"Novel Mobile Displays and Devices",Clifton,Forlines,forlines@alumni.cmu.edu
+Thursday,11:00-12:20,701A,s155,"Location-Based Services and Navigation",Mark,Perry,dr.mark.j.perry@googlemail.com
+Monday,16:00-17:20,801A,s156,"Smart Homes and Sustainability",Ron,Wakkary,rwakkary@sfu.ca
+Wednesday,9:00-10:20,801A,s157,"Privacy",Sameer,Patil,sameer.patil@hiit.fi
+Wednesday,16:00-17:20,801B,s158,"Urban Communities and Social Media",N. Sadat,Shami,sadat@us.ibm.com
+Wednesday,9:00-10:20,701A,s159,"Telepresence and Connecting over Video",Kori,Inkpen,kori@microsoft.com
+Thursday,14:00-15:20,718B,s160,"Interactive Surfaces and Pervasive Displays",Aaron,Quigley,aquigley@st-andrews.ac.uk
+Wednesday,11:00-12:20,701B,s161,"Working Together",Dominic,Furniss,d.furniss@ucl.ac.uk
+Tuesday,9:00-10:20,701B,s162,"Understanding and Designing Games",Lennart,Nacke,Lennart.Nacke@acm.org
+Tuesday,14:00-15:20,717AB,s163,"Design Theory",Steve,Harrison,sharrison@vt.edu
+Monday,14:00-15:20,701A,s164,"Studying Online Communities",Rogerio,de Paula,depaula@acm.org
+Monday,11:00-12:20,714AB,s165,"Social Local Mobile",David,McGookin,davidmcgookin@gmail.com
+Monday,16:00-17:20,714AB,s166,"Novel Approaches to Navigation",Yuichiro,Takeuchi,yutak@acm.org
+Monday,11:00-12:20,718B,s167,"The Third Dimension",Mark,Hancock,mark.hancock@uwaterloo.ca
+Wednesday,14:00-15:20,701A,s168,"Question and Answer Systems",Jeffrey,Nichols,jwnichols@us.ibm.com
+Thursday,14:00-15:20,716B,s169,"Driving Interfaces and Evaluations",David,Kirk,david.kirk@newcastle.ac.uk
+Wednesday,9:00-10:20,718A,s170,"Text Entry and Evaluation",Antti,Oulasvirta,antti.oulasvirta@mpii.de
+Tuesday,14:00-15:20,716B,s171,"Personal Health and Wellbeing",Jina,Huh,jina.huh@gmail.com
+Monday,11:00-12:20,716B,s172,"Coordination and Collaboration",Mark,Rouncefield,m.rouncefield@lancaster.ac.uk
+Thursday,11:00-12:20,801A,s173,"Modeling Users and Interaction",Niklas,Elmqvist,elm@purdue.edu
+Tuesday,11:00-12:20,801A,s174,"Human-Robot Interaction",Wendy,Ju,wendyju@gmail.com
+Tuesday,9:00-10:20,716A,s175,"Enabling Interactive Performances",Claire,O'Malley,com@psychology.nottingham.ac.uk
+Tuesday,11:00-12:20,714AB,s176,"Interacting with the Web",Jennifer,Golbeck,golbeck@cs.umd.edu
+Tuesday,16:00-17:20,716B,s177,"Designing for Older Adults and Demographic Change",Vicki,Hanson,vlh@acm.org
+Wednesday,11:00-12:20,801B,s178,"CHI for Social Development",Nithya,Sambasivan,nithyas@gmail.com
+Thursday,14:00-15:20,701A,s179,"Computer Mediated Intimacy and Romance",John,Thomas,jcthomas@us.ibm.com
+Wednesday,16:00-17:20,701B,s180,"Interruptions and Distractions",Jason,Alexander,j.alexander@lancaster.ac.uk
+Thursday,11:00-12:20,714AB,s181,"Desktop Search and History",Michelle,Zhou,mzhou@us.ibm.com
+Tuesday,11:00-12:20,716B,s182,"Social Media and Health",m.c.,schraefel,mc@ecs.soton.ac.uk
+Wednesday,11:00-12:20,801A,s183,"Risks and Security",Alexander,De Luca,alexander.de.luca@ifi.lmu.de
+Wednesday,14:00-15:20,801B,s184,"Policies and Practice: Doing the Right Thing",Volker,Wulf,volker.wulf@uni-siegen.de
+Thursday,9:00-10:20,701B,s185,"Games and Education",Jodi,Forlizzi,forlizzi@cs.cmu.edu
+Monday,16:00-17:20,718B,s186,"Always Connected: Email and Social Media",Svetlana,Yarosh,lana@research.att.com
+Tuesday,9:00-10:20,701A,s187,"Interactive Visualization and Visual Elements",Eytan,Adar,eadar@umich.edu
+Tuesday,14:00-15:20,801B,s188,"Engage and Educate Children",Julie,Kientz,jkientz@uw.edu
+Tuesday,9:00-10:20,714AB,s189,"Personal Values and Preferences",Katharina,Reinecke,reinecke@seas.harvard.edu
+Tuesday,16:00-17:20,701B,s190,"Exploring Exergames",Darren,Edge,darren.edge@microsoft.com
+Thursday,11:00-12:20,717AB,s191,"Participatory Design",Mona Leigh,Guha,mona@cs.umd.edu
+Wednesday,9:00-10:20,714AB,s192,"Designing and Modeling GUIs",Michael,Nebeling,nebeling@inf.ethz.ch
+Wednesday,14:00-15:20,718A,s194,"Sensory Experiences: Smell and Taste",Jettie,Hoonhout,jettie.hoonhout@philips.com
+Thursday,9:00-10:20,701A,s195,"Social Media Usage",David,Geerts,david.geerts@soc.kuleuven.be
+Thursday,9:00-10:20,801B,s196,"PolitiCHI",Darren,Gergle,dgergle@northwestern.edu
+Tuesday,11:00-12:20,701A,s197,"Navigating Video",Krzysztof,Gajos,kgajos@eecs.harvard.edu
+Wednesday,14:00-15:20,716B,s199,"Exergaming for Health and Fitness",Dan,Morris,dan@microsoft.com
+Wednesday,9:00-10:20,718B,s201,"Emotions and Mobiles",Antonio,Krueger,krueger@dfki.de
+Tuesday,9:00-10:20,801B,s202,"Sustainability Perspectives",Elaine,Huang,elainemayhuang@gmail.com
+Tuesday,9:00-10:20,801A,s203,"Quantified Self",John,Zimmerman,johnz@cs.cmu.edu
+Thursday,14:00-15:20,801A,s204,"Research and Deployment in the Wild",Wendy,Moncur,wmoncur@dundee.ac.uk
+Wednesday,16:00-17:20,701A,s205,"Journalism and Social News",Coye,Cheshire,coye@ischool.berkeley.edu
+Tuesday,11:00-12:20,716A,s206,"Music, Dance, and Television",Mark,Blythe,mark.blythe@northumbria.ac.uk
+Wednesday,16:00-17:20,718A,s207,"Tangible Interactions and Technologies",Erin,Solovey,erin@cs.drexel.edu
+Monday,16:00-17:20,716B,s208,"Interfaces for Care and Support",Jesper,Kjeldskov,jesper@cs.aau.dk
+Monday,14:00-15:20,718A,s209,"Force Input and Haptic Feedback",Ian,Oakley,ian.r.oakley@gmail.com
+Thursday,14:00-15:20,801B,s210,"Social Media for Relationships",William,Odom,wodom@cs.cmu.edu
+Wednesday,16:00-17:20,716B,s211,"Accessibility",Hironobu,Takagi,takagih@jp.ibm.com
+Thursday,11:00-12:20,801B,s212,"Engaging Older Adults Through Technology",Joanna,McGrenere,joanna@cs.ubc.ca
+Thursday,11:00-12:20,718A,s213,"Brain Computer Interfaces",Lynne,Baillie,l.baillie@gcu.ac.uk
+Tuesday,9:00-10:20,716B,s214,"Battery Life and Energy Harvesting",Nicholas,Chen,nchen@microsoft.com
+Tuesday,16:00-17:20,718A,s-float-1,"Understanding and Modeling Touch",Daniel,Vogel,dan@nonsequitoria.com
+Thursday,9:00-10:20,718A,s-float-2,"Whole Body Sensing and Interaction",Otmar,Hilliges,otmar.hilliges@inf.ethz.ch
+Thursday,9:00-10:20,714AB,s-float-4,"Learning and Games",Robert,Miller,rcm@mit.edu
+Wednesday,9:00-10:20,801B,s-float-9,"Issues That Matter",Rob,Comber,robert.comber@newcastle.ac.uk

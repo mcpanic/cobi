@@ -1,0 +1,298 @@
+[
+    {
+        "id": "key100",
+        "title": "The Physical Web",
+        "abstract": "Too often when we discuss \"interaction\" we think of it as a desktop vs tablet vs mobile issue. However, with the plummeting cost of both processing and connectivity, our understanding of a 'smart device' is rapidly changing. The challenge is that this new, amazing category of devices will blind side us, requiring entirely new ways of interacting. This talk will discuss the exploding new area of smart devices, how the Internet of things is a UX disaster, and how we are on the verge of an entirely new way of interacting with devices.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth42683",
+                "type": "author",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "Scott",
+                "middleInitial": "",
+                "familyName": "Jenson",
+                "email": "scottj@google.com",
+                "primary": {
+                    "dept": "",
+                    "institution": "Google",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "tovi.grossman@autodesk.com",
+        "contactFirstName": "Tovi",
+        "contactLastName": "Grossman",
+        "keywords": "",
+        "venue": "keynote",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "key101",
+        "title": "Technology and Memory: from Lifelogging to Strategic Reminiscence",
+        "abstract": "We now have available huge amounts of data about our personal pasts in the form of photos, social media posts, communications, GPS locations, sensor data and so on. But what can we do with all this data? Is it useful to us or is it a problem? The Lifelogging vision argues that such data promotes 'total recall' addressing problems with everyday forgetting. I first show that Lifelogging doesn't live up to these claims, both overgenerating data and failing to focus on what is important. I then explore other problematic memory situations where people actively want to forget aspects of their past in the context of a relationship breakup, or when they have experienced other negative past events. Drawing on literature from psychological and social theories of memory, I describe how rich personal digital data about a breakup can prevent moving on, and present new designs that help people better deal with data relating to their breakup. Finally I explore new designs for technology mediated reflection; these designs promote demonstrable improvements in psychological well-being by helping us to actively process our pasts to understand our emotional patterns and habits.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth13221",
+                "type": "author",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "Steve",
+                "middleInitial": "",
+                "familyName": "Whittaker",
+                "email": "swhittak@ucsc.edu",
+                "primary": {
+                    "dept": "HCI Lab",
+                    "institution": "University of California at Santa Cruz",
+                    "city": "Santa Cruz",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "tovi.grossman@autodesk.com",
+        "contactFirstName": "Tovi",
+        "contactLastName": "Grossman",
+        "keywords": "",
+        "venue": "keynote",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "key102",
+        "title": "Reasons to be Cheerful, Part 4",
+        "abstract": "Reasons to be Cheerful, Part 3 was a song released by the UK's Ian Dury and the Blockheads in 1979. The song simply enumerates a series of reasons for being cheerful: Summer, Buddy Holly... 18-wheeler Scammels, Domenecker camels... The list includes sex, generosity and politeness, yellow socks, breakfast cereal, John Coltrane... and more. \\  \\ In 1979 when the song was released HCI was still in its infancy, starting its 'first wave'. Much focus was on efficiency and on communication as command. Satisfaction was noted, but not central. Frustration was acknowledged but not deeply theorized. \\  \\ Now, in 2014, in the third or perhaps even fourth wave of HCI, we talk about engagement, connection, emotion, enjoyment, delight and joy... Efficiency is still on the table but not dominant. \\  \\ In this talk, I reflect on cheer, on joy and the human capacity for optimism. I will update the Blockheads' list, to include some reasons I believe we should be cheerful about the emerging landscape of mediated interaction and social connection. My list will offer examples from my own collaborative work in the design and development of engaging Internet experiences.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth1149",
+                "type": "author",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "Elizabeth",
+                "middleInitial": "F.",
+                "familyName": "Churchill",
+                "email": "churchill@acm.org",
+                "primary": {
+                    "dept": "",
+                    "institution": "eBay Research Lab, eBay Inc.",
+                    "city": "San Jose",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "tovi.grossman@autodesk.com",
+        "contactFirstName": "Tovi",
+        "contactLastName": "Grossman",
+        "keywords": "",
+        "venue": "keynote",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "key103",
+        "title": "A CHI Story - Past, Present, and the Next Chapters",
+        "abstract": "I became part of the CHI community in 1985, when I signed up to be the first AV Chair for the CHI conference. For the CHI 2014 conference…I’m still the AV Chair (we call it “technology liaison” now). Along the way, I’ve co-chaired a CHI conference, served on the SIGCHI Conference Management Committee for many years, and I’m now the Vice President for Conferences for SIGCHI. What is it about CHI that would induce a bioinformatician and hard-core hacker to become passionate about HCI and devote a significant amount of time and energy to support the field of HCI through service to the CHI conference? In this brief talk, we’ll look at the CHI conference through the eyes of a volunteer who has spent time in the lowest levels of conference operations, chaired the conference, and now is responsible for overseeing all of the SIGCHI conferences. I’ll try to address some or all of the following questions: \\  \\ Where did we come from? What is CHI trying to achieve and have we been successful? If we have been successful, what are the key ingredients to that success? Where are going and how are we going to get there without losing what we currently have? And finally, why should you care? Oh, and along the way, it will probably become clear why I care… \\ ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth42684",
+                "type": "author",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "Scooter",
+                "middleInitial": "",
+                "familyName": "Morris",
+                "email": "scooter@cgl.ucsf.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of California",
+                    "city": "San Francisco",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "tovi.grossman@autodesk.com",
+        "contactFirstName": "Tovi",
+        "contactLastName": "Grossman",
+        "keywords": "",
+        "venue": "keynote",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "key104",
+        "title": "Big Data for Social Good",
+        "abstract": "Petabytes of data about human movements, transactions, and communication patterns are continuously being generated by everyday technologies such as mobile phones and credit cards. This unprecedented volume of information facilitates a novel set of research questions applicable to a wide range of development issues. \\  \\ In a collaboration involving 237 mobile operators across 102 countries, Jana's mobile technology platform can instantly poll and compensate 3.48 billion active mobile subscriptions. This talk will discuss how insights gained from living in Kenya became the genesis of a technology company currently working with global clients in over 50 countries, including P&G, Google, Unilever, Danone, General Mills, Nestle, Johnson & Johnson, Microsoft, the World Bank, and the United Nations. After providing an overview of the mobile and social media landscapes in emerging markets, it will conclude by emphasizing the value of consumer data in underserved and understudied regions of the world.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth42685",
+                "type": "author",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "Nathan",
+                "middleInitial": "",
+                "familyName": "Eagle",
+                "email": "chi2014albrecht@hcilab.org",
+                "primary": {
+                    "dept": "",
+                    "institution": "Jana Mobile Inc",
+                    "city": "Boston",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "tovi.grossman@autodesk.com",
+        "contactFirstName": "Tovi",
+        "contactLastName": "Grossman",
+        "keywords": "",
+        "venue": "keynote",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "key105",
+        "title": "Design for User Empowerment",
+        "abstract": "Approaches to to the design of technology for people with disabilities are surveyed. These include universal design, user centered design, participatory design, ability based design, and finally, design for user empowerment. A key feature of the latter is access to advanced education for disabled scientists and engineers to create the next generation of technology that will benefit them and others like them. AccessComputing, an alliance of more than thirty partners with the common goal of increasing the participation of people with disabilities in computing fields, is discussed.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth11957",
+                "type": "author",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "Richard",
+                "middleInitial": "",
+                "familyName": "Ladner",
+                "email": "ladner@cs.washington.edu",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "tovi.grossman@autodesk.com",
+        "contactFirstName": "Tovi",
+        "contactLastName": "Grossman",
+        "keywords": "",
+        "venue": "keynote",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "key106",
+        "title": "Robotics in my Work and Life",
+        "abstract": "Margaret Atwood is a giant of modern literature who refuses to rest on her laurels. She has anticipated, satirized, and even changed the popular pre-conceptions of our time, and is the rare writer whose work is adored by the public, acclaimed by the critics, and read on university campuses. On stage, Atwood is both serious minded and wickedly funny. \\  \\ A winner of many international literary awards, including the prestigious Booker Prize, Margaret Atwood is the author of more than thirty volumes of poetry, children's literature, fiction, and non-fiction. She is perhaps best known for her novels, which include The Edible Woman, The Handmaid's Tale, The Robber Bride, Alias Grace, The Blind Assassin, Oryx and Crake, and The Year of the Flood. Her non-fiction book Payback: Debt and the Shadow Side of Wealth, part of the Massey Lecture series, was recently made into a documentary. Her new book, Madaddam (the third novel in the Oryx and Crake trilogy), has received rave reviews: \"An extraordinary achievement\" (The Independent); \"A fitting and joyous conclusion\" (The New York Times). \\  \\ Atwood's work has been published in more than forty languages, including Farsi, Japanese, Turkish, Finnish, Korean, Icelandic and Estonian. In 2004, she co-invented the LongPen, a remote signing device that allows someone to write in ink anywhere in the world via tablet PC and the internet. She is also a popular personality on Twitter, with over 300,000 followers. \\  \\ Atwood was born in 1939 in Ottawa and grew up in northern Ontario, Quebec, and Toronto. She received her undergraduate degree from Victoria College at the University of Toronto and her master's degree from Radcliffe College.",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth42729",
+                "type": "author",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "Margaret",
+                "middleInitial": "",
+                "familyName": "Atwood",
+                "email": "technicalprogram@chi2014.acm.org",
+                "primary": {
+                    "dept": "",
+                    "institution": "O.W. Toad",
+                    "city": "Toronto",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "tovi.grossman@autodesk.com",
+        "contactFirstName": "Tovi",
+        "contactLastName": "Grossman",
+        "keywords": "",
+        "venue": "keynote",
+        "session": "",
+        "communities": []
+    },
+    {
+        "id": "key107",
+        "title": "Design: No Longer an Optional Extra",
+        "abstract": "Mark Rettig said interaction design is designing the right thing and designing the thing right. With the recent emphasis on design thinking—finding the right thing to design—design doing—designing the thing right—has rather dropped from view.  \\  \\ As a graphic designer in the early 80s, I realised, starting to program, that simple artist-designer graphic skills and knowledge could make interfaces work better—easier to understand, quicker to use. But with affordable colour graphic screens, designers could really make interfaces sing. They could become a pleasure to use and express character—the difference, for instance, between the Star interface—serious, as befits an office—and the Apple Mac—jaunty, irreverent, appropriate for the Californian college audience it targeted. \\  \\ It is accepted that designers are concerned with form—the optional cost of making something a bit more elegant—but Apple’s unbending commitment to good design is persuading people that design is not an optional extra. However they often do not understand that design is not just about appearance. Apple knows that design is also about the aesthetic of function: a system's behaviour, its interactivity, which, as well as satisfyingly usable, must be elegant, poetic, maybe witty. Design also concerns the implicit meanings that subtly speak to us, that make the difference between a product that works and one that sings.  \\  \\ This presentation will discuss how design works, how it flourishes, and how to grow young designers. \\  \\ As the digital increasingly shapes our world it is not just the profitability of a company that rides on good design. It is the quality of our lives as we experience them. \\ ",
+        "acmLink": "",
+        "authors": [
+            {
+                "id": "auth42830",
+                "type": "author",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "Gillian",
+                "middleInitial": "",
+                "familyName": "Crampton Smith",
+                "email": "Gillian.Crampton-Smith@interaction-venice.com",
+                "primary": {
+                    "dept": "Interface Design Programme,  Design Department",
+                    "institution": "University of Applied Sciences, Potsdam",
+                    "city": "Potsdam",
+                    "country": "Germany"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "contactEmail": "tovi.grossman@autodesk.com",
+        "contactFirstName": "Tovi",
+        "contactLastName": "Grossman",
+        "keywords": "",
+        "venue": "keynote",
+        "session": "",
+        "communities": []
+    }
+]
