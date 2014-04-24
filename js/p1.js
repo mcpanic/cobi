@@ -418,8 +418,8 @@
                 if (submission.bestPaperNominee)
                     $("<span/>").addClass("awards").html("<img src='img/nominee.png' class='icon'/>").appendTo($(element));
             if (!isLocked && !isSpecial){
-                $("<button/>").addClass("btn btn-mini button-paper-unschedule").html("Unschedule").appendTo($(element));
-                $("<button/>").addClass("btn btn-mini button-paper-propose-scheduled").html("Propose Move").appendTo($(element));
+         //       $("<button/>").addClass("btn btn-mini button-paper-unschedule").html("Unschedule").appendTo($(element));
+//                $("<button/>").addClass("btn btn-mini button-paper-propose-scheduled").html("Propose Move").appendTo($(element));
             }
             $("<br/>").appendTo($(element));
             $("<span/>").addClass("submission-title").html(submission.title).appendTo($(element));
@@ -457,9 +457,9 @@
             if (isLocked || isSpecial){
                 element = document.createElement("div");
             } else {
-                element = document.createElement("li");
-                $(element).addClass("submission-empty");
-                $("<button/>").addClass("btn btn-small button-paper-propose-empty").html("<span class='icon-plus'/> Propose a paper to add").appendTo($(element));
+		element = document.createElement("li");
+  //              $(element).addClass("submission-empty");
+//                $("<button/>").addClass("btn btn-small button-paper-propose-empty").html("<span class='icon-plus'/> Propose a paper to add").appendTo($(element));
             }
             // html += "<li class='submission-empty'><button class='btn btn-small button-paper-propose-empty'><span class='icon-plus'/> Propose a paper to add</button></li>";
         } else 
@@ -1095,11 +1095,16 @@
             "Wednesday": 3,
             "Thursday": 4,
             "Friday": 5,
-            "Saturday": 6
+              "Saturday": 6,
+	      "2014-02-14" : 0,
+	      "2014-02-15" : 1,
+	      "2014-02-16" : 2,
+	      "2-14-02-17" : 3
+	      
           }
           //var orderedDates = keys(schedule).sort(function(a,b) {return new Date(a) - new Date(b);});
           //var orderedRooms = keys(allRooms).sort(function(a,b) {return allRooms[a] - allRooms[b];});
-          var orderedDates = keys(schedule).sort(function(a,b) {return days[a] - days[b];});
+         var orderedDates = keys(schedule).sort(function(a,b) {return days[a] - days[b];});
           var orderedRooms = keys(allRooms).sort(function(a, b){
 	       return desiredRoomOrder.indexOf(a) - desiredRoomOrder.indexOf(b);
 	      });
@@ -1124,7 +1129,7 @@
           // Main content
           $.each(orderedDates, function(index, date){
             
-            var orderedTimes = keys(schedule[date]).sort(function(a,b) {return a.split(":")[0] - b.split(":")[0];});
+              var orderedTimes = keys(schedule[date]).sort(function(a,b) {return parseFloat(a.replace(":", ".")) - parseFloat(b.replace(":", "."));});
             $.each(orderedTimes, function(index2, time){
                 // add an extra row for daily borders
                 if (index2 == 0) {
@@ -1139,7 +1144,8 @@
                 var row = document.createElement('tr');
                 var slot = document.createElement('td');
 //              var conflicts = document.createElement('td');
-                $(slot).addClass("cell header-col").append(date + " " + time);
+                $(slot).addClass("cell header-col").append(shortenDate(date) + " " + shortenTime(time));
+
 
                 $(row).append(slot);
                 //console.log(date, time);

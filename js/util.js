@@ -134,8 +134,12 @@ function displayChairName(chair, includePrefix){
 }
 
 function shortenDate(date){
-	return date.substring(0,3); 
+    return date.substring(5); 
 }	
+
+function shortenTime(time){
+    return time.substring(0, time.length - 3).replace(":00-", "-")
+}
 
  function getLength(item) {
       if (item === null || typeof item === "undefined")

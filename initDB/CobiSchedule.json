@@ -1,1193 +1,2801 @@
 [
     {
         "id": "slot100",
-        "date": "2014-02-15",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Columbus KL",
-        "sessionId": "7346"
-    },
-    {
-        "id": "slot101",
-        "date": "2014-02-15",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Columbus KL",
-        "sessionId": "7084"
-    },
-    {
-        "id": "slot102",
-        "date": "2014-02-15",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Columbus KL",
-        "sessionId": "6863"
-    },
-    {
-        "id": "slot103",
-        "date": "2014-02-15",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Columbus KL",
-        "sessionId": "7301"
-    },
-    {
-        "id": "slot104",
         "date": "2014-02-14",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
+        "time": "13:30:00-16:30:00",
         "room": "Columbus KL",
         "sessionId": "6664"
     },
     {
-        "id": "slot105",
+        "id": "slot101",
         "date": "2014-02-14",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus KL",
+        "sessionId": ""
+    },
+    {
+        "id": "slot102",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
         "room": "Columbus KL",
         "sessionId": "7275"
     },
     {
-        "id": "slot106",
-        "date": "2014-02-16",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
+        "id": "slot103",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
         "room": "Columbus KL",
-        "sessionId": "6918"
+        "sessionId": ""
+    },
+    {
+        "id": "slot104",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus KL",
+        "sessionId": ""
+    },
+    {
+        "id": "slot105",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus KL",
+        "sessionId": ""
+    },
+    {
+        "id": "slot106",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus KL",
+        "sessionId": ""
     },
     {
         "id": "slot107",
-        "date": "2014-02-16",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
         "room": "Columbus KL",
-        "sessionId": "6839"
+        "sessionId": "7084"
     },
     {
         "id": "slot108",
-        "date": "2014-02-16",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
         "room": "Columbus KL",
-        "sessionId": "7250"
+        "sessionId": "7346"
     },
     {
         "id": "slot109",
-        "date": "2014-02-16",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
         "room": "Columbus KL",
-        "sessionId": "7147"
+        "sessionId": "6863"
     },
     {
         "id": "slot110",
-        "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "11:15:00",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
         "room": "Columbus KL",
-        "sessionId": "7120"
+        "sessionId": ""
     },
     {
         "id": "slot111",
         "date": "2014-02-15",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Columbus IJ",
-        "sessionId": "7354"
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus KL",
+        "sessionId": "7301"
     },
     {
         "id": "slot112",
-        "date": "2014-02-15",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Columbus IJ",
-        "sessionId": "7121"
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Columbus KL",
+        "sessionId": "6918"
     },
     {
         "id": "slot113",
-        "date": "2014-02-15",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Columbus IJ",
-        "sessionId": "6923"
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus KL",
+        "sessionId": "6839"
     },
     {
         "id": "slot114",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus KL",
+        "sessionId": ""
+    },
+    {
+        "id": "slot115",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus KL",
+        "sessionId": "7250"
+    },
+    {
+        "id": "slot116",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus KL",
+        "sessionId": "7147"
+    },
+    {
+        "id": "slot117",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus KL",
+        "sessionId": ""
+    },
+    {
+        "id": "slot118",
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Columbus KL",
+        "sessionId": ""
+    },
+    {
+        "id": "slot119",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Columbus KL",
+        "sessionId": "7120"
+    },
+    {
+        "id": "slot120",
         "date": "2014-02-14",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus IJ",
+        "sessionId": ""
+    },
+    {
+        "id": "slot121",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
         "room": "Columbus IJ",
         "sessionId": "6666"
     },
     {
-        "id": "slot115",
+        "id": "slot122",
         "date": "2014-02-14",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus IJ",
+        "sessionId": ""
+    },
+    {
+        "id": "slot123",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
         "room": "Columbus IJ",
         "sessionId": "6807"
     },
     {
-        "id": "slot116",
+        "id": "slot124",
         "date": "2014-02-14",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
+        "time": "15:00:00-16:30:00",
         "room": "Columbus IJ",
         "sessionId": "7008"
     },
     {
-        "id": "slot117",
+        "id": "slot125",
         "date": "2014-02-14",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
+        "time": "08:00:00-09:30:00",
         "room": "Columbus IJ",
         "sessionId": "7311"
     },
     {
-        "id": "slot118",
-        "date": "2014-02-16",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Columbus IJ",
-        "sessionId": "7320"
-    },
-    {
-        "id": "slot119",
-        "date": "2014-02-16",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Columbus IJ",
-        "sessionId": "7239"
-    },
-    {
-        "id": "slot120",
-        "date": "2014-02-16",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Columbus IJ",
-        "sessionId": "7349"
-    },
-    {
-        "id": "slot121",
-        "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "11:15:00",
-        "room": "Columbus IJ",
-        "sessionId": "7315"
-    },
-    {
-        "id": "slot122",
-        "date": "2014-02-15",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Crystal Ballroom A",
-        "sessionId": "6990"
-    },
-    {
-        "id": "slot123",
-        "date": "2014-02-15",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Crystal Ballroom A",
-        "sessionId": "6672"
-    },
-    {
-        "id": "slot124",
-        "date": "2014-02-15",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Crystal Ballroom A",
-        "sessionId": "6948"
-    },
-    {
-        "id": "slot125",
-        "date": "2014-02-14",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Crystal Ballroom A",
-        "sessionId": "6759"
-    },
-    {
         "id": "slot126",
-        "date": "2014-02-14",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Crystal Ballroom A",
-        "sessionId": "7144"
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus IJ",
+        "sessionId": ""
     },
     {
         "id": "slot127",
-        "date": "2014-02-16",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Crystal Ballroom A",
-        "sessionId": "6945"
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus IJ",
+        "sessionId": "7354"
     },
     {
         "id": "slot128",
-        "date": "2014-02-16",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Crystal Ballroom A",
-        "sessionId": "7225"
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Columbus IJ",
+        "sessionId": ""
     },
     {
         "id": "slot129",
         "date": "2014-02-15",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Columbus AB",
-        "sessionId": "7066"
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus IJ",
+        "sessionId": "7121"
     },
     {
         "id": "slot130",
         "date": "2014-02-15",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Columbus AB",
-        "sessionId": "7071"
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus IJ",
+        "sessionId": "6923"
     },
     {
         "id": "slot131",
         "date": "2014-02-15",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Columbus AB",
-        "sessionId": "7024"
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus IJ",
+        "sessionId": ""
     },
     {
         "id": "slot132",
-        "date": "2014-02-14",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Columbus AB",
-        "sessionId": "6705"
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Columbus IJ",
+        "sessionId": "7320"
     },
     {
         "id": "slot133",
-        "date": "2014-02-14",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Columbus AB",
-        "sessionId": "7108"
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus IJ",
+        "sessionId": "7239"
     },
     {
         "id": "slot134",
-        "date": "2014-02-14",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Columbus AB",
-        "sessionId": "6933"
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus IJ",
+        "sessionId": "7349"
     },
     {
         "id": "slot135",
         "date": "2014-02-16",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Columbus AB",
-        "sessionId": "6725"
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus IJ",
+        "sessionId": ""
     },
     {
         "id": "slot136",
         "date": "2014-02-16",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Columbus AB",
-        "sessionId": "7027"
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus IJ",
+        "sessionId": ""
     },
     {
         "id": "slot137",
         "date": "2014-02-16",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Columbus AB",
-        "sessionId": "7199"
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus IJ",
+        "sessionId": ""
     },
     {
         "id": "slot138",
         "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "11:15:00",
-        "room": "Columbus AB",
-        "sessionId": "7322"
+        "time": "09:45:00-12:45:00",
+        "room": "Columbus IJ",
+        "sessionId": ""
     },
     {
         "id": "slot139",
-        "date": "2014-02-15",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Grand Ballroom A",
-        "sessionId": "7028"
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Columbus IJ",
+        "sessionId": "7315"
     },
     {
         "id": "slot140",
-        "date": "2014-02-15",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Grand Ballroom A",
-        "sessionId": "6890"
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot141",
         "date": "2014-02-14",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Grand Ballroom A",
-        "sessionId": "6931"
+        "time": "13:00:00-14:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot142",
         "date": "2014-02-14",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Grand Ballroom A",
-        "sessionId": "6709"
+        "time": "08:30:00-11:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot143",
         "date": "2014-02-14",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Grand Ballroom A",
-        "sessionId": "7042"
+        "time": "10:00:00-11:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": "6759"
     },
     {
         "id": "slot144",
-        "date": "2014-02-16",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Grand Ballroom A",
-        "sessionId": "6745"
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot145",
-        "date": "2014-02-16",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Grand Ballroom A",
-        "sessionId": "6784"
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": "7144"
     },
     {
         "id": "slot146",
-        "date": "2014-02-16",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Grand Ballroom A",
-        "sessionId": "6928"
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": "6672"
     },
     {
         "id": "slot147",
-        "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "11:15:00",
-        "room": "Grand Ballroom A",
-        "sessionId": "7201"
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot148",
         "date": "2014-02-15",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Grand Ballroom B",
-        "sessionId": "7247"
+        "time": "10:00:00-11:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": "6990"
     },
     {
         "id": "slot149",
         "date": "2014-02-15",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Grand Ballroom B",
-        "sessionId": "6893"
+        "time": "13:00:00-14:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot150",
         "date": "2014-02-15",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Grand Ballroom B",
-        "sessionId": "7273"
+        "time": "08:30:00-11:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot151",
-        "date": "2014-02-14",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Grand Ballroom B",
-        "sessionId": "6761"
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": "6948"
     },
     {
         "id": "slot152",
         "date": "2014-02-16",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Grand Ballroom B",
-        "sessionId": "7254"
+        "time": "10:00:00-11:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot153",
         "date": "2014-02-16",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Grand Ballroom B",
-        "sessionId": "7130"
+        "time": "08:00:00-09:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot154",
-        "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "12:45:00",
-        "room": "Grand Ballroom B",
-        "sessionId": "7056"
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": "6945"
     },
     {
         "id": "slot155",
-        "date": "2014-02-15",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Grand Ballroom C North",
-        "sessionId": "6765"
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot156",
-        "date": "2014-02-15",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Grand Ballroom C North",
-        "sessionId": "6938"
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot157",
-        "date": "2014-02-15",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Grand Ballroom C North",
-        "sessionId": "7052"
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": "7225"
     },
     {
         "id": "slot158",
-        "date": "2014-02-14",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Grand Ballroom C North",
-        "sessionId": "7266"
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot159",
-        "date": "2014-02-14",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Grand Ballroom C North",
-        "sessionId": "7102"
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Crystal Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot160",
         "date": "2014-02-14",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Grand Ballroom C North",
-        "sessionId": "6769"
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus AB",
+        "sessionId": ""
     },
     {
         "id": "slot161",
-        "date": "2014-02-16",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Grand Ballroom C North",
-        "sessionId": "7230"
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus AB",
+        "sessionId": "6705"
     },
     {
         "id": "slot162",
-        "date": "2014-02-16",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Grand Ballroom C North",
-        "sessionId": "7224"
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus AB",
+        "sessionId": "7108"
     },
     {
         "id": "slot163",
-        "date": "2014-02-16",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Grand Ballroom C North",
-        "sessionId": "6855"
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Columbus AB",
+        "sessionId": ""
     },
     {
         "id": "slot164",
-        "date": "2014-02-16",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Grand Ballroom C North",
-        "sessionId": "6935"
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus AB",
+        "sessionId": "6933"
     },
     {
         "id": "slot165",
-        "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "11:15:00",
-        "room": "Grand Ballroom C North",
-        "sessionId": "7126"
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus AB",
+        "sessionId": ""
     },
     {
         "id": "slot166",
         "date": "2014-02-15",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Comiskey",
-        "sessionId": "6770"
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus AB",
+        "sessionId": "7071"
     },
     {
         "id": "slot167",
         "date": "2014-02-15",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Comiskey",
-        "sessionId": "7094"
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus AB",
+        "sessionId": ""
     },
     {
         "id": "slot168",
-        "date": "2014-02-14",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Comiskey",
-        "sessionId": "7017"
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Columbus AB",
+        "sessionId": "7066"
     },
     {
         "id": "slot169",
-        "date": "2014-02-14",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Comiskey",
-        "sessionId": "7245"
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus AB",
+        "sessionId": ""
     },
     {
         "id": "slot170",
-        "date": "2014-02-16",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Comiskey",
-        "sessionId": "6987"
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus AB",
+        "sessionId": ""
     },
     {
         "id": "slot171",
-        "date": "2014-02-16",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Comiskey",
-        "sessionId": "7138"
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus AB",
+        "sessionId": "7024"
     },
     {
         "id": "slot172",
-        "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "12:45:00",
-        "room": "Comiskey",
-        "sessionId": "7113"
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Columbus AB",
+        "sessionId": "6725"
     },
     {
         "id": "slot173",
-        "date": "2014-02-15",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Columbus CD",
-        "sessionId": "7237"
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus AB",
+        "sessionId": "7027"
     },
     {
         "id": "slot174",
-        "date": "2014-02-15",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Columbus CD",
-        "sessionId": "7167"
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus AB",
+        "sessionId": "7199"
     },
     {
         "id": "slot175",
-        "date": "2014-02-14",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Columbus CD",
-        "sessionId": "6794"
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus AB",
+        "sessionId": ""
     },
     {
         "id": "slot176",
-        "date": "2014-02-14",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Columbus CD",
-        "sessionId": "7197"
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus AB",
+        "sessionId": ""
     },
     {
         "id": "slot177",
-        "date": "2014-02-14",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Columbus CD",
-        "sessionId": "7049"
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus AB",
+        "sessionId": ""
     },
     {
         "id": "slot178",
-        "date": "2014-02-16",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Columbus CD",
-        "sessionId": "7307"
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Columbus AB",
+        "sessionId": ""
     },
     {
         "id": "slot179",
-        "date": "2014-02-16",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Columbus CD",
-        "sessionId": "7188"
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Columbus AB",
+        "sessionId": "7322"
     },
     {
         "id": "slot180",
-        "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "11:15:00",
-        "room": "Columbus CD",
-        "sessionId": "7074"
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot181",
-        "date": "2014-02-15",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Toronto",
-        "sessionId": "6829"
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": "6931"
     },
     {
         "id": "slot182",
-        "date": "2014-02-15",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Toronto",
-        "sessionId": "6978"
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": "6709"
     },
     {
         "id": "slot183",
-        "date": "2014-02-15",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Toronto",
-        "sessionId": "7045"
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot184",
-        "date": "2014-02-15",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Toronto",
-        "sessionId": "7070"
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": "7042"
     },
     {
         "id": "slot185",
         "date": "2014-02-14",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Toronto",
-        "sessionId": "7274"
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot186",
-        "date": "2014-02-14",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Toronto",
-        "sessionId": "7222"
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": "7028"
     },
     {
         "id": "slot187",
-        "date": "2014-02-14",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Toronto",
-        "sessionId": "7174"
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot188",
-        "date": "2014-02-14",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Toronto",
-        "sessionId": "6809"
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot189",
-        "date": "2014-02-16",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Toronto",
-        "sessionId": "7211"
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot190",
-        "date": "2014-02-16",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Toronto",
-        "sessionId": "7312"
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": "6890"
     },
     {
         "id": "slot191",
-        "date": "2014-02-16",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Toronto",
-        "sessionId": "7149"
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot192",
         "date": "2014-02-16",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Toronto",
-        "sessionId": "7143"
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": "6745"
     },
     {
         "id": "slot193",
-        "date": "2014-02-15",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Regency C",
-        "sessionId": "6899"
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": "6784"
     },
     {
         "id": "slot194",
-        "date": "2014-02-15",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Regency C",
-        "sessionId": "6907"
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": "6928"
     },
     {
         "id": "slot195",
-        "date": "2014-02-14",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Regency C",
-        "sessionId": "6816"
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot196",
-        "date": "2014-02-14",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Regency C",
-        "sessionId": "7180"
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot197",
-        "date": "2014-02-14",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Regency C",
-        "sessionId": "7156"
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot198",
-        "date": "2014-02-16",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Regency C",
-        "sessionId": "6830"
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Grand Ballroom A",
+        "sessionId": ""
     },
     {
         "id": "slot199",
-        "date": "2014-02-16",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Regency C",
-        "sessionId": "7132"
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Grand Ballroom A",
+        "sessionId": "7201"
     },
     {
         "id": "slot200",
-        "date": "2014-02-15",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Columbus EF",
-        "sessionId": "7255"
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": "6761"
     },
     {
         "id": "slot201",
-        "date": "2014-02-15",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Columbus EF",
-        "sessionId": "7020"
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot202",
-        "date": "2014-02-15",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Columbus EF",
-        "sessionId": "6882"
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot203",
         "date": "2014-02-14",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Columbus EF",
-        "sessionId": "6834"
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot204",
         "date": "2014-02-14",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Columbus EF",
-        "sessionId": "7242"
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot205",
-        "date": "2014-02-16",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Columbus EF",
-        "sessionId": "7092"
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot206",
-        "date": "2014-02-16",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Columbus EF",
-        "sessionId": "7333"
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": "6893"
     },
     {
         "id": "slot207",
-        "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "11:15:00",
-        "room": "Columbus EF",
-        "sessionId": "7062"
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot208",
         "date": "2014-02-15",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Acapulco",
-        "sessionId": "7319"
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": "7247"
     },
     {
         "id": "slot209",
         "date": "2014-02-15",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Acapulco",
-        "sessionId": "7269"
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot210",
         "date": "2014-02-15",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Acapulco",
-        "sessionId": "6906"
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot211",
-        "date": "2014-02-14",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Acapulco",
-        "sessionId": "7096"
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": "7273"
     },
     {
         "id": "slot212",
-        "date": "2014-02-14",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Acapulco",
-        "sessionId": "7109"
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot213",
-        "date": "2014-02-14",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Acapulco",
-        "sessionId": "7158"
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot214",
         "date": "2014-02-16",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Acapulco",
-        "sessionId": "7318"
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot215",
         "date": "2014-02-16",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Acapulco",
-        "sessionId": "7240"
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": "7254"
     },
     {
         "id": "slot216",
         "date": "2014-02-16",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Acapulco",
-        "sessionId": "7137"
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": "7130"
     },
     {
         "id": "slot217",
-        "date": "2014-02-15",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Regency B",
-        "sessionId": "6917"
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot218",
-        "date": "2014-02-15",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Regency B",
-        "sessionId": "7019"
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Grand Ballroom B",
+        "sessionId": "7056"
     },
     {
         "id": "slot219",
-        "date": "2014-02-14",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Regency B",
-        "sessionId": "7037"
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Grand Ballroom B",
+        "sessionId": ""
     },
     {
         "id": "slot220",
         "date": "2014-02-14",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Regency B",
-        "sessionId": "7292"
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": ""
     },
     {
         "id": "slot221",
-        "date": "2014-02-16",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Regency B",
-        "sessionId": "6986"
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": "7266"
     },
     {
         "id": "slot222",
-        "date": "2014-02-16",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Regency B",
-        "sessionId": "7279"
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": "7102"
     },
     {
         "id": "slot223",
-        "date": "2014-02-15",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Water Tower",
-        "sessionId": "7105"
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": ""
     },
     {
         "id": "slot224",
-        "date": "2014-02-15",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Water Tower",
-        "sessionId": "7010"
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": "6769"
     },
     {
         "id": "slot225",
-        "date": "2014-02-15",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Water Tower",
-        "sessionId": "6922"
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": ""
     },
     {
         "id": "slot226",
         "date": "2014-02-15",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Water Tower",
-        "sessionId": "7238"
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": ""
     },
     {
         "id": "slot227",
-        "date": "2014-02-14",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Water Tower",
-        "sessionId": "7107"
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": "6765"
     },
     {
         "id": "slot228",
-        "date": "2014-02-14",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Water Tower",
-        "sessionId": "7033"
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": ""
     },
     {
         "id": "slot229",
-        "date": "2014-02-14",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Water Tower",
-        "sessionId": "7041"
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": "6938"
     },
     {
         "id": "slot230",
-        "date": "2014-02-16",
-        "time": "13:00:00",
-        "endTime": "14:30:00",
-        "room": "Water Tower",
-        "sessionId": "7072"
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": "7052"
     },
     {
         "id": "slot231",
-        "date": "2014-02-16",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Water Tower",
-        "sessionId": "7331"
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": ""
     },
     {
         "id": "slot232",
         "date": "2014-02-16",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Water Tower",
-        "sessionId": "6960"
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": "7230"
     },
     {
         "id": "slot233",
-        "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "11:15:00",
-        "room": "Water Tower",
-        "sessionId": "7235"
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": "7224"
     },
     {
         "id": "slot234",
-        "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "12:45:00",
-        "room": "Grand Ballroom F",
-        "sessionId": "7253"
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": ""
     },
     {
         "id": "slot235",
-        "date": "2014-02-15",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Regency A",
-        "sessionId": "6975"
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": "6855"
     },
     {
         "id": "slot236",
-        "date": "2014-02-15",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
-        "room": "Regency A",
-        "sessionId": "7009"
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": "6935"
     },
     {
         "id": "slot237",
-        "date": "2014-02-14",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Regency A",
-        "sessionId": "7289"
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": ""
     },
     {
         "id": "slot238",
-        "date": "2014-02-14",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Regency A",
-        "sessionId": "7103"
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": ""
     },
     {
         "id": "slot239",
-        "date": "2014-02-16",
-        "time": "10:00:00",
-        "endTime": "11:30:00",
-        "room": "Regency A",
-        "sessionId": "7128"
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Grand Ballroom C North",
+        "sessionId": "7126"
     },
     {
         "id": "slot240",
-        "date": "2014-02-16",
-        "time": "08:00:00",
-        "endTime": "09:30:00",
-        "room": "Regency A",
-        "sessionId": "7184"
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Comiskey",
+        "sessionId": "7017"
     },
     {
         "id": "slot241",
-        "date": "2014-02-16",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
-        "room": "Regency A",
-        "sessionId": "7189"
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Comiskey",
+        "sessionId": ""
     },
     {
         "id": "slot242",
-        "date": "2014-02-15",
-        "time": "15:00:00",
-        "endTime": "16:30:00",
-        "room": "Grand Ballroom E",
-        "sessionId": "7076"
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Comiskey",
+        "sessionId": "7245"
     },
     {
         "id": "slot243",
         "date": "2014-02-14",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
+        "time": "10:00:00-11:30:00",
+        "room": "Comiskey",
+        "sessionId": ""
+    },
+    {
+        "id": "slot244",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Comiskey",
+        "sessionId": ""
+    },
+    {
+        "id": "slot245",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Comiskey",
+        "sessionId": ""
+    },
+    {
+        "id": "slot246",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Comiskey",
+        "sessionId": "6770"
+    },
+    {
+        "id": "slot247",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Comiskey",
+        "sessionId": ""
+    },
+    {
+        "id": "slot248",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Comiskey",
+        "sessionId": ""
+    },
+    {
+        "id": "slot249",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Comiskey",
+        "sessionId": ""
+    },
+    {
+        "id": "slot250",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Comiskey",
+        "sessionId": "7094"
+    },
+    {
+        "id": "slot251",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Comiskey",
+        "sessionId": ""
+    },
+    {
+        "id": "slot252",
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Comiskey",
+        "sessionId": ""
+    },
+    {
+        "id": "slot253",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Comiskey",
+        "sessionId": ""
+    },
+    {
+        "id": "slot254",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Comiskey",
+        "sessionId": "6987"
+    },
+    {
+        "id": "slot255",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Comiskey",
+        "sessionId": ""
+    },
+    {
+        "id": "slot256",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Comiskey",
+        "sessionId": ""
+    },
+    {
+        "id": "slot257",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Comiskey",
+        "sessionId": "7138"
+    },
+    {
+        "id": "slot258",
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Comiskey",
+        "sessionId": "7113"
+    },
+    {
+        "id": "slot259",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Comiskey",
+        "sessionId": ""
+    },
+    {
+        "id": "slot260",
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus CD",
+        "sessionId": ""
+    },
+    {
+        "id": "slot261",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus CD",
+        "sessionId": "6794"
+    },
+    {
+        "id": "slot262",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus CD",
+        "sessionId": ""
+    },
+    {
+        "id": "slot263",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Columbus CD",
+        "sessionId": ""
+    },
+    {
+        "id": "slot264",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus CD",
+        "sessionId": "7197"
+    },
+    {
+        "id": "slot265",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus CD",
+        "sessionId": "7049"
+    },
+    {
+        "id": "slot266",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus CD",
+        "sessionId": "7237"
+    },
+    {
+        "id": "slot267",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus CD",
+        "sessionId": ""
+    },
+    {
+        "id": "slot268",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Columbus CD",
+        "sessionId": ""
+    },
+    {
+        "id": "slot269",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus CD",
+        "sessionId": ""
+    },
+    {
+        "id": "slot270",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus CD",
+        "sessionId": "7167"
+    },
+    {
+        "id": "slot271",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus CD",
+        "sessionId": ""
+    },
+    {
+        "id": "slot272",
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Columbus CD",
+        "sessionId": "7307"
+    },
+    {
+        "id": "slot273",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus CD",
+        "sessionId": ""
+    },
+    {
+        "id": "slot274",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus CD",
+        "sessionId": "7188"
+    },
+    {
+        "id": "slot275",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus CD",
+        "sessionId": ""
+    },
+    {
+        "id": "slot276",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus CD",
+        "sessionId": ""
+    },
+    {
+        "id": "slot277",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus CD",
+        "sessionId": ""
+    },
+    {
+        "id": "slot278",
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Columbus CD",
+        "sessionId": ""
+    },
+    {
+        "id": "slot279",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Columbus CD",
+        "sessionId": "7074"
+    },
+    {
+        "id": "slot280",
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Toronto",
+        "sessionId": ""
+    },
+    {
+        "id": "slot281",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Toronto",
+        "sessionId": "7274"
+    },
+    {
+        "id": "slot282",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Toronto",
+        "sessionId": ""
+    },
+    {
+        "id": "slot283",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Toronto",
+        "sessionId": "7222"
+    },
+    {
+        "id": "slot284",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Toronto",
+        "sessionId": "7174"
+    },
+    {
+        "id": "slot285",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Toronto",
+        "sessionId": "6809"
+    },
+    {
+        "id": "slot286",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Toronto",
+        "sessionId": ""
+    },
+    {
+        "id": "slot287",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Toronto",
+        "sessionId": "6978"
+    },
+    {
+        "id": "slot288",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Toronto",
+        "sessionId": "6829"
+    },
+    {
+        "id": "slot289",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Toronto",
+        "sessionId": "7045"
+    },
+    {
+        "id": "slot290",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Toronto",
+        "sessionId": ""
+    },
+    {
+        "id": "slot291",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Toronto",
+        "sessionId": "7070"
+    },
+    {
+        "id": "slot292",
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Toronto",
+        "sessionId": "7211"
+    },
+    {
+        "id": "slot293",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Toronto",
+        "sessionId": "7312"
+    },
+    {
+        "id": "slot294",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Toronto",
+        "sessionId": ""
+    },
+    {
+        "id": "slot295",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Toronto",
+        "sessionId": "7149"
+    },
+    {
+        "id": "slot296",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Toronto",
+        "sessionId": "7143"
+    },
+    {
+        "id": "slot297",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Toronto",
+        "sessionId": ""
+    },
+    {
+        "id": "slot298",
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Toronto",
+        "sessionId": ""
+    },
+    {
+        "id": "slot299",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Toronto",
+        "sessionId": ""
+    },
+    {
+        "id": "slot300",
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Regency C",
+        "sessionId": "6816"
+    },
+    {
+        "id": "slot301",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot302",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot303",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Regency C",
+        "sessionId": "7180"
+    },
+    {
+        "id": "slot304",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot305",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Regency C",
+        "sessionId": "7156"
+    },
+    {
+        "id": "slot306",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Regency C",
+        "sessionId": "6899"
+    },
+    {
+        "id": "slot307",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot308",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot309",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot310",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Regency C",
+        "sessionId": "6907"
+    },
+    {
+        "id": "slot311",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot312",
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot313",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot314",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Regency C",
+        "sessionId": "6830"
+    },
+    {
+        "id": "slot315",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot316",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot317",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Regency C",
+        "sessionId": "7132"
+    },
+    {
+        "id": "slot318",
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot319",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Regency C",
+        "sessionId": ""
+    },
+    {
+        "id": "slot320",
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus EF",
+        "sessionId": ""
+    },
+    {
+        "id": "slot321",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus EF",
+        "sessionId": "6834"
+    },
+    {
+        "id": "slot322",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus EF",
+        "sessionId": ""
+    },
+    {
+        "id": "slot323",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Columbus EF",
+        "sessionId": ""
+    },
+    {
+        "id": "slot324",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus EF",
+        "sessionId": "7242"
+    },
+    {
+        "id": "slot325",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus EF",
+        "sessionId": ""
+    },
+    {
+        "id": "slot326",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus EF",
+        "sessionId": ""
+    },
+    {
+        "id": "slot327",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus EF",
+        "sessionId": "7255"
+    },
+    {
+        "id": "slot328",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Columbus EF",
+        "sessionId": ""
+    },
+    {
+        "id": "slot329",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus EF",
+        "sessionId": "7020"
+    },
+    {
+        "id": "slot330",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus EF",
+        "sessionId": "6882"
+    },
+    {
+        "id": "slot331",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus EF",
+        "sessionId": ""
+    },
+    {
+        "id": "slot332",
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Columbus EF",
+        "sessionId": ""
+    },
+    {
+        "id": "slot333",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Columbus EF",
+        "sessionId": ""
+    },
+    {
+        "id": "slot334",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Columbus EF",
+        "sessionId": "7092"
+    },
+    {
+        "id": "slot335",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Columbus EF",
+        "sessionId": ""
+    },
+    {
+        "id": "slot336",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Columbus EF",
+        "sessionId": ""
+    },
+    {
+        "id": "slot337",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Columbus EF",
+        "sessionId": "7333"
+    },
+    {
+        "id": "slot338",
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Columbus EF",
+        "sessionId": ""
+    },
+    {
+        "id": "slot339",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Columbus EF",
+        "sessionId": "7062"
+    },
+    {
+        "id": "slot340",
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Acapulco",
+        "sessionId": "7096"
+    },
+    {
+        "id": "slot341",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Acapulco",
+        "sessionId": ""
+    },
+    {
+        "id": "slot342",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Acapulco",
+        "sessionId": ""
+    },
+    {
+        "id": "slot343",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Acapulco",
+        "sessionId": "7109"
+    },
+    {
+        "id": "slot344",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Acapulco",
+        "sessionId": ""
+    },
+    {
+        "id": "slot345",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Acapulco",
+        "sessionId": "7158"
+    },
+    {
+        "id": "slot346",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Acapulco",
+        "sessionId": "7269"
+    },
+    {
+        "id": "slot347",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Acapulco",
+        "sessionId": ""
+    },
+    {
+        "id": "slot348",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Acapulco",
+        "sessionId": "7319"
+    },
+    {
+        "id": "slot349",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Acapulco",
+        "sessionId": ""
+    },
+    {
+        "id": "slot350",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Acapulco",
+        "sessionId": ""
+    },
+    {
+        "id": "slot351",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Acapulco",
+        "sessionId": "6906"
+    },
+    {
+        "id": "slot352",
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Acapulco",
+        "sessionId": ""
+    },
+    {
+        "id": "slot353",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Acapulco",
+        "sessionId": ""
+    },
+    {
+        "id": "slot354",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Acapulco",
+        "sessionId": ""
+    },
+    {
+        "id": "slot355",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Acapulco",
+        "sessionId": "7318"
+    },
+    {
+        "id": "slot356",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Acapulco",
+        "sessionId": "7240"
+    },
+    {
+        "id": "slot357",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Acapulco",
+        "sessionId": "7137"
+    },
+    {
+        "id": "slot358",
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Acapulco",
+        "sessionId": ""
+    },
+    {
+        "id": "slot359",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Acapulco",
+        "sessionId": ""
+    },
+    {
+        "id": "slot360",
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Regency B",
+        "sessionId": "7037"
+    },
+    {
+        "id": "slot361",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot362",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Regency B",
+        "sessionId": "7292"
+    },
+    {
+        "id": "slot363",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot364",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot365",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot366",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Regency B",
+        "sessionId": "6917"
+    },
+    {
+        "id": "slot367",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot368",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot369",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot370",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Regency B",
+        "sessionId": "7019"
+    },
+    {
+        "id": "slot371",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot372",
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot373",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot374",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Regency B",
+        "sessionId": "6986"
+    },
+    {
+        "id": "slot375",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot376",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot377",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Regency B",
+        "sessionId": "7279"
+    },
+    {
+        "id": "slot378",
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot379",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Regency B",
+        "sessionId": ""
+    },
+    {
+        "id": "slot380",
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Water Tower",
+        "sessionId": ""
+    },
+    {
+        "id": "slot381",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Water Tower",
+        "sessionId": "7107"
+    },
+    {
+        "id": "slot382",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Water Tower",
+        "sessionId": "7033"
+    },
+    {
+        "id": "slot383",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Water Tower",
+        "sessionId": ""
+    },
+    {
+        "id": "slot384",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Water Tower",
+        "sessionId": "7041"
+    },
+    {
+        "id": "slot385",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Water Tower",
+        "sessionId": ""
+    },
+    {
+        "id": "slot386",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Water Tower",
+        "sessionId": ""
+    },
+    {
+        "id": "slot387",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Water Tower",
+        "sessionId": "7010"
+    },
+    {
+        "id": "slot388",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Water Tower",
+        "sessionId": "7105"
+    },
+    {
+        "id": "slot389",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Water Tower",
+        "sessionId": "6922"
+    },
+    {
+        "id": "slot390",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Water Tower",
+        "sessionId": ""
+    },
+    {
+        "id": "slot391",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Water Tower",
+        "sessionId": "7238"
+    },
+    {
+        "id": "slot392",
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Water Tower",
+        "sessionId": ""
+    },
+    {
+        "id": "slot393",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Water Tower",
+        "sessionId": ""
+    },
+    {
+        "id": "slot394",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Water Tower",
+        "sessionId": ""
+    },
+    {
+        "id": "slot395",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Water Tower",
+        "sessionId": "7072"
+    },
+    {
+        "id": "slot396",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Water Tower",
+        "sessionId": "7331"
+    },
+    {
+        "id": "slot397",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Water Tower",
+        "sessionId": "6960"
+    },
+    {
+        "id": "slot398",
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Water Tower",
+        "sessionId": ""
+    },
+    {
+        "id": "slot399",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Water Tower",
+        "sessionId": "7235"
+    },
+    {
+        "id": "slot400",
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Regency A",
+        "sessionId": "7289"
+    },
+    {
+        "id": "slot401",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot402",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot403",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Regency A",
+        "sessionId": "7103"
+    },
+    {
+        "id": "slot404",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot405",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot406",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Regency A",
+        "sessionId": "6975"
+    },
+    {
+        "id": "slot407",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot408",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot409",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot410",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Regency A",
+        "sessionId": "7009"
+    },
+    {
+        "id": "slot411",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot412",
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Regency A",
+        "sessionId": "7128"
+    },
+    {
+        "id": "slot413",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Regency A",
+        "sessionId": "7184"
+    },
+    {
+        "id": "slot414",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Regency A",
+        "sessionId": "7189"
+    },
+    {
+        "id": "slot415",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot416",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot417",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot418",
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot419",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Regency A",
+        "sessionId": ""
+    },
+    {
+        "id": "slot420",
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
         "room": "Grand Ballroom E",
         "sessionId": "7006"
     },
     {
-        "id": "slot244",
+        "id": "slot421",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot422",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot423",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot424",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot425",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot426",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot427",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": "7076"
+    },
+    {
+        "id": "slot428",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot429",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot430",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot431",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot432",
         "date": "2014-02-16",
-        "time": "13:30:00",
-        "endTime": "16:30:00",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot433",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot434",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
         "room": "Grand Ballroom E",
         "sessionId": "7093"
     },
     {
-        "id": "slot245",
+        "id": "slot435",
         "date": "2014-02-16",
-        "time": "08:30:00",
-        "endTime": "11:30:00",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot436",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot437",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
         "room": "Grand Ballroom E",
         "sessionId": "7283"
     },
     {
-        "id": "slot246",
+        "id": "slot438",
         "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "11:15:00",
+        "time": "09:45:00-12:45:00",
+        "room": "Grand Ballroom E",
+        "sessionId": ""
+    },
+    {
+        "id": "slot439",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
         "room": "Grand Ballroom E",
         "sessionId": "7265"
     },
     {
-        "id": "slot247",
+        "id": "slot440",
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot441",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot442",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot443",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot444",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot445",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot446",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot447",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot448",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot449",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot450",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot451",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot452",
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot453",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot454",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot455",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot456",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot457",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot458",
         "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "12:45:00",
+        "time": "09:45:00-12:45:00",
         "room": "Gold Coast",
         "sessionId": "7131"
     },
     {
-        "id": "slot248",
+        "id": "slot459",
         "date": "2014-02-17",
-        "time": "09:45:00",
-        "endTime": "11:15:00",
+        "time": "09:45:00-11:15:00",
+        "room": "Gold Coast",
+        "sessionId": ""
+    },
+    {
+        "id": "slot460",
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot461",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot462",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot463",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot464",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot465",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot466",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot467",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot468",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot469",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot470",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot471",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot472",
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot473",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot474",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot475",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot476",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot477",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot478",
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Grand Ballroom F",
+        "sessionId": "7253"
+    },
+    {
+        "id": "slot479",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
+        "room": "Grand Ballroom F",
+        "sessionId": ""
+    },
+    {
+        "id": "slot480",
+        "date": "2014-02-14",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot481",
+        "date": "2014-02-14",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot482",
+        "date": "2014-02-14",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot483",
+        "date": "2014-02-14",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot484",
+        "date": "2014-02-14",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot485",
+        "date": "2014-02-14",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot486",
+        "date": "2014-02-15",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot487",
+        "date": "2014-02-15",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot488",
+        "date": "2014-02-15",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot489",
+        "date": "2014-02-15",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot490",
+        "date": "2014-02-15",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot491",
+        "date": "2014-02-15",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot492",
+        "date": "2014-02-16",
+        "time": "10:00:00-11:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot493",
+        "date": "2014-02-16",
+        "time": "08:00:00-09:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot494",
+        "date": "2014-02-16",
+        "time": "13:30:00-16:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot495",
+        "date": "2014-02-16",
+        "time": "13:00:00-14:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot496",
+        "date": "2014-02-16",
+        "time": "15:00:00-16:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot497",
+        "date": "2014-02-16",
+        "time": "08:30:00-11:30:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot498",
+        "date": "2014-02-17",
+        "time": "09:45:00-12:45:00",
+        "room": "Grand Ballroom D North",
+        "sessionId": ""
+    },
+    {
+        "id": "slot499",
+        "date": "2014-02-17",
+        "time": "09:45:00-11:15:00",
         "room": "Grand Ballroom D North",
         "sessionId": "7324"
     }

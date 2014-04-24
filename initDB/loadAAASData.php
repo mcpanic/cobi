@@ -56,6 +56,10 @@ function clearTables($mysqli){
 	 mysqli_query($mysqli, $query);
 	 echo mysqli_error($mysqli);
 	 
+	 $query = "delete from sessionChairs";
+	 mysqli_query($mysqli, $query);
+	 echo mysqli_error($mysqli);
+						
 	 $query = "delete from transactions";
 	 mysqli_query($mysqli, $query);
 	 echo mysqli_error($mysqli);
@@ -197,7 +201,6 @@ function getDateTimeRoom($schedule, $id){
 		   "date"  => $slot['date'],
 		   "time"  => $slot['time'],
 		   "room"  => $slot['room'],
-		   "endTime" => $slot['endTime']
 		   );
     }
   }
@@ -205,7 +208,7 @@ function getDateTimeRoom($schedule, $id){
 	       "date"  => "",
 	       "time"  => "",
 	       "room"  => "",
-	       "endTime" => ""
+
 	       );
 }
 
@@ -247,7 +250,7 @@ function createSessionTable($mysqli, $paperSessionHash, $chairSessionHash) {
            $date = $datetimeroom['date'];
 	   $time = $datetimeroom['time'];
 	   $room = $datetimeroom['room'];
-	   $endTime = $datetimeroom['endTime'];
+	   $endTime = "";
 
 	   $chairAffiliations = "";
 	   $chairs = mysqli_real_escape_string($mysqli, getChairs($chairSessionHash, $id));
