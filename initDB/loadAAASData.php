@@ -196,14 +196,16 @@ function getDateTimeRoom($schedule, $id){
       return array(
 		   "date"  => $slot['date'],
 		   "time"  => $slot['time'],
-		   "room"  => $slot['room']
+		   "room"  => $slot['room'],
+		   "endTime" => $slot['endTime']
 		   );
     }
   }
   return array(
 	       "date"  => "",
 	       "time"  => "",
-	       "room"  => ""
+	       "room"  => "",
+	       "endTime" => ""
 	       );
 }
 
@@ -217,6 +219,20 @@ function getChairs($chairSessionHash, $id){
   return implode(",", $chairs);
 }
 
+function getCommunities($topics, $id){
+  if($topics == "") return array();
+  $topics = str_getcsv($topics, ",", "\"");
+  return array_map(function($value){
+      $t = explode("_", $value);
+
+      return $t[1];}, $topics);
+}
+
+function getPersona($topics, $id){
+  if($topics == "") return "";
+  $c = getCommunities($topics, $id);
+  return $c[0];
+}
 
 function createSessionTable($mysqli, $paperSessionHash, $chairSessionHash) {
  	 $sessionFile = file_get_contents(SESSIONFILE);
@@ -231,11 +247,13 @@ function createSessionTable($mysqli, $paperSessionHash, $chairSessionHash) {
            $date = $datetimeroom['date'];
 	   $time = $datetimeroom['time'];
 	   $room = $datetimeroom['room'];
+	   $endTime = $datetimeroom['endTime'];
+
 	   $chairAffiliations = "";
 	   $chairs = mysqli_real_escape_string($mysqli, getChairs($chairSessionHash, $id));
-   	   $coreCommunities = "[]";
+   	   $coreCommunities = mysqli_real_escape_string($mysqli, json_encode(getCommunities($session["Topics"], $id)));
 	   $featuredCommunities = "[]";
-	   $personas = "";
+	   $personas = mysqli_real_escape_string($mysqli, getPersona($session["Topics"], $id));
 	   $hasAward = "";
 	   $hasHonorableMention = "";
 	   $notes = mysqli_real_escape_string($mysqli, $session["Note"]);
@@ -246,7 +264,7 @@ function createSessionTable($mysqli, $paperSessionHash, $chairSessionHash) {
 	   $type = mysqli_real_escape_string($mysqli, $session["Type"]);// New: TYPE
 	   $scheduled = isScheduled($schedule, $session["Key_SessionID"]);
 	   
-   	   $squery = "INSERT INTO session (id, date, time, chairAffiliations, chairs, coreCommunities, featuredCommunities, personas, hasAward, hasHonorableMention, notes, room, submissions, title, venue, scheduled, overview, type) VALUES ('$id', '$date', '$time', '$chairAffiliations', '$chairs', '$coreCommunities', '$featuredCommunities', '$personas', '$hasAward', '$hasHonorableMention', '$notes', '$room', '$submissionKeys', '$title', '$venue', '$scheduled', '$overview', '$type')";
+   	   $squery = "INSERT INTO session (id, date, time, endTime, chairAffiliations, chairs, coreCommunities, featuredCommunities, personas, hasAward, hasHonorableMention, notes, room, submissions, title, venue, scheduled, overview, type) VALUES ('$id', '$date', '$time', '$endTime', '$chairAffiliations', '$chairs', '$coreCommunities', '$featuredCommunities', '$personas', '$hasAward', '$hasHonorableMention', '$notes', '$room', '$submissionKeys', '$title', '$venue', '$scheduled', '$overview', '$type')";
 
 	   mysqli_query($mysqli, $squery);
 	   echo  mysqli_error($mysqli);

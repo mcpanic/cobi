@@ -1139,7 +1139,7 @@
                 var row = document.createElement('tr');
                 var slot = document.createElement('td');
 //              var conflicts = document.createElement('td');
-                $(slot).addClass("cell header-col").append(shortenDate(date) + " " + time);
+                $(slot).addClass("cell header-col").append(date + " " + time);
 
                 $(row).append(slot);
                 //console.log(date, time);
@@ -1186,7 +1186,7 @@
           $(header).addClass("header-row").append(firstcell); //.append(secondcell);
           for(var i = 0; i < orderedRooms.length; i++){
                var cell = document.createElement('td');
-               $(cell).addClass("cell header-cell").append("<div>" + orderedRooms[i] + "<br/>(" + roomCapacity[orderedRooms[i]] + ")</div>");
+               $(cell).addClass("cell header-cell").append("<div>" + orderedRooms[i] + "<br/>" + "</div>");
                $(header).append(cell);
           }
           $("#program").append(header);       

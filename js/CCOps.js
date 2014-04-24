@@ -646,7 +646,7 @@ var CCOps = function(){
     
     function generatePersonaConstraints(){
 	var personaconstraint = new EntityFilterPairConstraint("personaInTwoSessions", 
-							       "topics of interest to a persona in opposing sessions", 
+							       "a topic of interest in opposing sessions", 
 							       function (sessionA, violationA, sessionB, violationB){
 								   return "Someone interested in '" + sessionA.personas + "' may want to see both '" + 
 								       sessionA.title + "' and '" + sessionB.title + "'.";
