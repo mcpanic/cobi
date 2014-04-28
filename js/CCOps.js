@@ -2038,7 +2038,6 @@ var CCOps = function(){
 	var conflictsWithRow = 	computeProtoConflictsWithRow(s);
 	var chairConflictsWithRow = null;
 	if(hasChair(s.id)){
-	    // TODO: bug lives here with chairConflictsWithRow
 	    var chairs = getChairs(s.id);
 	    chairConflictsWithRow = computeChairConflictsWithRow(allChairs[chairs[0]][s.id]);
 	    for(var c = 1; c < chairs.length; c++){
@@ -2048,15 +2047,15 @@ var CCOps = function(){
 			for(var s2 in ccwr[date][time].session){
 			    chairConflictsWithRow[date][time].session[s2] = chairConflictsWithRow[date][time].session[s2].concat(
 				ccwr[date][time].session[s2]);
-			    chairConflictsWithRow[date][time].sum = chairConflictsWithRow[date][time].sum.concat(
-				ccwr[date][time].sum);
 			}
+			chairConflictsWithRow[date][time].sum = chairConflictsWithRow[date][time].sum.concat(ccwr[date][time].sum);
 		    }
 		}
 	    }
 	}
+	
 	var chairConflictsAtRowWithSession = computeChairConflictsAtRowWithSession(s);
-
+	
 	for(var date in schedule){
 	    for(var time in schedule[date]){
 		if(!(s.id in unscheduled) && date == s.date && time == s.time){
