@@ -9,7 +9,7 @@ console.log("....schedule file created.");
 
 function getRooms(sessions){
     var roomMap = {}
-    sessions.map(function(x) { if(x.Room != null && x.Program == "Symposia") roomMap[x.Room] = true})
+    sessions.map(function(x) { if(x.Room != null) roomMap[x.Room] = true})
     var rooms = []
     for(var i in roomMap)
 	rooms.push(i)
@@ -19,11 +19,12 @@ function getRooms(sessions){
 function getDateTime(sessions){
     var datetime = {};
     sessions.map(function(x) { 
-	if(x.Program == "Symposia") {
+//	if(x.Program == "Symposia") {
 	    if (!(x.Key_Date in datetime)) datetime[x.Key_Date] = {};
 	    if (!(x.Key_StartTime in datetime[x.Key_Date]))
 		datetime[x.Key_Date][x.Key_StartTime + "-" +  x.EndTime] = true;
-	}});
+//	}
+    });
     
     var slots = [];
     for(var d in datetime){
@@ -67,10 +68,10 @@ function createScheduleData(sessions){
 		"room" : rooms[i],
 		"sessionId" : (s == null ? "" : s.Key_SessionID)
 	    };
-//	    if(s != null){
+	    if(s != null){
 		schedule.push(slot);
 		slotId+=1;
-//	    }
+	    }
 	    
 	}
     }

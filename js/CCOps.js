@@ -473,7 +473,7 @@ var CCOps = function(){
 	var shared = [];
 	for(var i = 0; i < s1chairs.length; i++){
 	    for(var j = 0; j < s2chairs.length; j++){
-		if(s1chairs[i] == s2chairs[j]){
+		if(s1chairs[i] == s2chairs[j] && s1chairs[i] != ""){
 		    shared.push(s1chairs[i]);
 		}
 	    }
