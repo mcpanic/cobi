@@ -28,8 +28,8 @@ body {
     left:       0;
     height:     3000px; /* 100%; */
     width:      3000px; /* 100%; */
-    background: rgba( 255, 255, 255, .8 ) 
-                url('../img/spinner.gif') 
+    background: rgba( 255, 255, 255, .8 )
+                url('../img/spinner.gif')
                 30% 15%
                 no-repeat;
                 /* 50% 50% */
@@ -37,16 +37,16 @@ body {
 
 /*.spinner {
     z-index: 1000;
-    background: rgba( 100, 100, 100, .8) 
-                url('../img/spinner.gif') 
-                45% 45% 
+    background: rgba( 100, 100, 100, .8)
+                url('../img/spinner.gif')
+                45% 45%
                 no-repeat;
 }*/
 
 /* When the body has the loading class, we turn
    the scrollbar off with overflow:hidden */
 body.loading {
-    overflow: hidden;   
+    overflow: hidden;
 }
 
 /* Anytime the body has the loading class, our
@@ -67,16 +67,16 @@ body.loading .modal {
     max-height: 85%;
     overflow-y: scroll;
     padding-right: 50px;*/
-    -webkit-user-select: none;  
-    -moz-user-select: none;    
-    -ms-user-select: none;      
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
 .popover-inner {
-   /* -webkit-user-select: none;  
-    -moz-user-select: none;    
-    -ms-user-select: none;      
+   /* -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;  */
 }
 
@@ -112,7 +112,7 @@ body.loading .modal {
 }
 
 .left-sidebar li {
-    line-height: 18px;               
+    line-height: 18px;
 }
 
 .view-option-active {
@@ -128,7 +128,7 @@ body.loading .modal {
 }
 
 /*@media (max-width: 950px) {*/
-@media (max-width: 767px) {    
+@media (max-width: 767px) {
     .sidebar-fixed {
         position:static;
         width:auto;
@@ -176,7 +176,7 @@ body.loading .modal {
 }
 
 .dropdown-item li {
-    line-height: 14px;    
+    line-height: 14px;
 }
 
 
@@ -195,7 +195,7 @@ body.loading .modal {
 }
 
 /* ==========================================================================
-   Top Statusbar 
+   Top Statusbar
    ========================================================================== */
 #statusbar .move-cancel-button {
     margin-top: -5px;
@@ -219,6 +219,10 @@ body.loading .modal {
     Main Program Table
 ========================================================================== */
 
+.program-panel {
+    overflow: scroll;
+}
+
 .program-wrapper {
     width: 100%;
 }
@@ -239,6 +243,7 @@ body.loading .modal {
 }
 
 .main .cell {
+    width: 48px;
     font-size: 10px;
     padding: 3px;
     line-height: 12px;
@@ -281,7 +286,7 @@ body.loading .modal {
 
 .main .cell .title {
     /*width: 44px;*/
-    height: 38px;                
+    height: 38px;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -308,7 +313,7 @@ body.loading .modal {
     height: 30px;
     border-top: solid 1px #cccccc;
     overflow-x: hidden;
-    overflow-y: hidden;    
+    overflow-y: hidden;
 }
 
 /* for line alignment when the submission is empty so no paper info is displayed */
@@ -408,7 +413,7 @@ body.loading .modal {
 }
 
 /* to keep high specificity, do not just use .recommended */
-#program .move-src-selected, #unscheduled .move-src-selected, #unscheduled-papers .move-src-selected, #unscheduled-chairs .move-src-selected { 
+#program .move-src-selected, #unscheduled .move-src-selected, #unscheduled-papers .move-src-selected, #unscheduled-chairs .move-src-selected {
     background: yellow; /*!important;*/
     z-index: 1000;
 }
@@ -460,17 +465,17 @@ body.loading .modal {
     float: left;
 }
 
-.unscheduled-panel .left, .unscheduled-papers-panel .left, .unscheduled-chairs-panel .left { 
-    width: 0; 
-    height: 0; 
+.unscheduled-panel .left, .unscheduled-papers-panel .left, .unscheduled-chairs-panel .left {
+    width: 0;
+    height: 0;
     border-top: 47px solid transparent;
     border-bottom: 47px solid transparent;
-    border-right: 20px solid #bbbbbb;    
+    border-right: 20px solid #bbbbbb;
 }
 
 .unscheduled-panel .right, .unscheduled-papers-panel .right, .unscheduled-chairs-panel .right {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-top: 47px solid transparent;
     border-bottom: 47px solid transparent;
     border-left: 20px solid #bbbbbb;
@@ -494,7 +499,7 @@ body.loading .modal {
     /*padding-bottom:20px;*/
 }
 
-#unscheduled .slot, #unscheduled-papers .slot-paper, #unscheduled-chairs .slot-chair {    
+#unscheduled .slot, #unscheduled-papers .slot-paper, #unscheduled-chairs .slot-chair {
     border: solid 1px #dddddd;
     margin-left: 5px;
     margin-right: 5px;
@@ -532,7 +537,7 @@ body.loading .modal {
     float: right;
 }
 
-.chair-display:hover { 
+.chair-display:hover {
     outline: 1px solid #333333;
 }
 
@@ -545,13 +550,13 @@ body.loading .modal {
     margin: 0;
 }
 
-.list-submissions li { 
+.list-submissions li {
     margin-top: 5px;
     padding: 10px;
 }
 
 
-.list-submissions li:hover { 
+.list-submissions li:hover {
     outline: 1px solid #333333;
 }
 
@@ -568,7 +573,7 @@ body.loading .modal {
     background: #f2f2f2;
 }
 
-.list-submissions .submission-type { 
+.list-submissions .submission-type {
     font-weight: bold;
     font-size: 14px;
     margin-bottom:3px;
@@ -633,7 +638,7 @@ body.loading .modal {
     float: left;
     width: 100%;
     height: 0px;
-    border: 1px solid #dddddd;    
+    border: 1px solid #dddddd;
 }
 
 .pref-type-preview{
@@ -664,7 +669,7 @@ body.loading .modal {
     padding-right: 5px;*/
     padding: 3px 6px 3px 6px;
     margin-left: 5px;
-    margin-right: 5px;  
+    margin-right: 5px;
     color: white;
     cursor: pointer;
 /*    display: inline-block;*/
@@ -735,7 +740,7 @@ body.loading .modal {
     Interface misc
    ========================================================================== */
 .locked {
-    background: url('../img/lock.png') 
+    background: url('../img/lock.png')
                 97% 3%
                 no-repeat;
     z-index: 100;
@@ -765,7 +770,7 @@ body.loading .modal {
 }
 
 .popover-inner li {
-    line-height: 14px;  
+    line-height: 14px;
 }
 
 .popover-inner button {
@@ -776,15 +781,15 @@ body.loading .modal {
     Color palette
    ========================================================================== */
 [class*="cell-conflict-high"]{
-    background-color: #913A52;    
+    background-color: #913A52;
 }
 
 [class*="cell-conflict-medium"]{
-    background-color: #C77F77;    
+    background-color: #C77F77;
 }
 
 [class*="cell-conflict-low"]{
-    background-color: #C77F77;    
+    background-color: #C77F77;
 }
 
 [class*="cell-conflict-good"]{
@@ -810,15 +815,15 @@ body.loading .modal {
 .cell-session-type{
     background-color: #ffcf73;
 }
-.cell-type-paper { background-color: #eee;} 
-.cell-type-casestudy { background-color: #aae3ff;} 
-.cell-type-panel { background-color: #ffb5e1;} 
-.cell-type-course { background-color: #faff7e;} 
-.cell-type-SIG { background-color: #83ff87;} 
-.cell-type-altchi { background-color: #aaa;} 
-.cell-type-special { background-color: #ffcf73;} 
+.cell-type-paper { background-color: #eee;}
+.cell-type-casestudy { background-color: #aae3ff;}
+.cell-type-panel { background-color: #ffb5e1;}
+.cell-type-course { background-color: #faff7e;}
+.cell-type-SIG { background-color: #83ff87;}
+.cell-type-altchi { background-color: #aaa;}
+.cell-type-special { background-color: #ffcf73;}
 .cell-type-bof { background-color: #d1ffd2;}
-.cell-type-unavailable { background-color: #333;} 
+.cell-type-unavailable { background-color: #333;}
 
 
 
