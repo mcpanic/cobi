@@ -7,17 +7,17 @@ var assignments = require('./input/assignments');
 //var FRENZYINPUT = "./input/data-final.json";
 var IGNORELIST = [];
 
-var CREATEAUTHORFILE = false;
-var CREATEENTITYFILE = false;
-var CREATESESSIONFILE = false;
+var CREATEAUTHORFILE = true;
+var CREATEENTITYFILE = true;
+var CREATESESSIONFILE = true;
 var CREATESCHEDULEFILE = true;
 var SESSIONSTART = 100;
 
 var PCSINPUT = "";
-var VENUE = "paper";
+// var VENUE = "paper";
 // var VENUE = "TOCHI";
 // var VENUE = "casestudy";
-// var VENUE = "course";
+var VENUE = "course";
 //var VENUE = "SIG";
 //var VENUE = "panel";
 //var VENUE = "altchi";
@@ -336,7 +336,6 @@ function createPaperSessionData(sessionData){
         var submissions = sessionData[i]['submissions'];
         // var allLabels = getLabelsForSubs(sessionData, submissions);
         var title = sessionData[i]['label'];
-        console.log("==", title, submissions);
         var info = sessionLookup(sessionData[i]['id']);
         var session = {
             "id" : sessionData[i]['id'],
@@ -741,15 +740,13 @@ function createEntityData(data, sessionData, venue){
 	    "abstract" : sub["Abstract"],
 	    "acmLink" : "",
 	    "authors" : createEntityAuthors(sub, venue),
-	    "cbStatement" :( (venue == 'altchi') ?
-			     sub["Contribution and Benefit Statement"] :
-			     sub["Contribution & Benefit Statement (Mandatory Field)"]),
+	    "cbStatement" : typeof(sub["Contribution & Benefit Statement (Mandatory Field)"]) === "undefined" ? "" : sub["Contribution & Benefit Statement (Mandatory Field)"],
 	    "contactEmail" : sub["Contact Email"],
 	    "contactFirstName" : sub["Contact given name"],
 	    "contactLastName" : sub["Contact family name"],
-	    "keywords" : sub["Author Keywords"],
+	    "keywords" : typeof(sub["Author Keywords"]) === "undefined" ? "" : sub["Author Keywords"],
 	    "venue" : venue,
-	    "subtype" : sub["Paper or Note"],
+	    "subtype" : typeof(sub["Paper or Note"]) === "undefined" ? "" : sub["Paper or Note"],
 	    "session" : getSession(sessionData, sub["ID"]),
 	    "communities" : "", //getLabels(sessionData, sub["ID"])
 	}

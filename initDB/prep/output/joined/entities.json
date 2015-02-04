@@ -60,6 +60,7 @@
         "contactLastName": "Theodorou",
         "keywords": "Pervasive advertising; Public engagement; Shop- window displays; Face-detection; Case Study",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -148,6 +149,7 @@
         "contactLastName": "Ryokai",
         "keywords": "",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -212,6 +214,7 @@
         "contactLastName": "Kilde",
         "keywords": "STEM; Native American; Pueblo Schools; Peer Learning Communities; Communities of Practice; K-12 Education",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -324,6 +327,7 @@
         "contactLastName": "Shankar",
         "keywords": "CogTool; Cognitive Modeling; User Experience Research; Agile; Enterprise Software; User Modeling, Usability Engineering",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -484,6 +488,7 @@
         "contactLastName": "Beer",
         "keywords": "Multitouch gestures; product development; audio editing; audio routing;",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -548,6 +553,7 @@
         "contactLastName": "Farooq",
         "keywords": "Data Science; Large Software Organizations; Usability; Academia",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -756,6 +762,7 @@
         "contactLastName": "Mentis",
         "keywords": "Voice control; gesture; operating room",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -844,6 +851,7 @@
         "contactLastName": "Son",
         "keywords": "Photo Research; PBO method; User-centered design; User research method; Mobile app; Mobile UI",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1028,6 +1036,7 @@
         "contactLastName": "Taylor",
         "keywords": "Assistive technology; community alarm; community alarm service; participatory design; social care; telecare",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1164,6 +1173,7 @@
         "contactLastName": "Sengupta",
         "keywords": "Population stereotype; representation strategies; icon",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1252,6 +1262,7 @@
         "contactLastName": "Watanabe",
         "keywords": "android robot; field study; sales; conversation; affection; human robot interaction",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1340,6 +1351,7 @@
         "contactLastName": "Kim",
         "keywords": "",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1500,6 +1512,7 @@
         "contactLastName": "Schoessler",
         "keywords": "Tangible User Interfaces; Radical Atoms; Shape Display; Shape Changing Interfaces; Design",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1660,6 +1673,7 @@
         "contactLastName": "Paay",
         "keywords": "Qualitative research; field studies; prototyping; developing countries; electronic payment system.",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1796,6 +1810,7 @@
         "contactLastName": "TARALLE",
         "keywords": "",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1884,6 +1899,7 @@
         "contactLastName": "Woźniak",
         "keywords": "Big data; user experience; data-centred services; data warehousing; case studies; service innovation; data analytics; business insights; telematics",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1972,6 +1988,7 @@
         "contactLastName": "Levillain",
         "keywords": "audience experience; interactive arts; behavioral artworks; engagement; cluster analysis",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2108,6 +2125,7 @@
         "contactLastName": "Blair",
         "keywords": "",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2268,6 +2286,7 @@
         "contactLastName": "Samsel",
         "keywords": "",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2428,6 +2447,7 @@
         "contactLastName": "Hangal",
         "keywords": "",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2468,6 +2488,7 @@
         "contactLastName": "Foehrenbach",
         "keywords": "Paper-pencil sketches; sketching; interaction design; user experience design",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2532,6 +2553,7 @@
         "contactLastName": "Lyons",
         "keywords": "Sound; music; art; interface;  musical interface",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2572,6 +2594,7 @@
         "contactLastName": "Johnson",
         "keywords": "Psychology; perception; cognition; memory; learning; attention; design; user interface; user-centered design; interaction; user experience; human-computer interaction; design guidelines; design heuristics",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2660,6 +2683,7 @@
         "contactLastName": "Baxter",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2724,6 +2748,7 @@
         "contactLastName": "Forlizzi",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2764,6 +2789,7 @@
         "contactLastName": "Garcia",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3020,6 +3046,7 @@
         "contactLastName": "Johnson",
         "keywords": "Conceptual model; software design; user interface; UI; interaction; design process; design methods; design techniques; psychological basis for design methods; task analysis; ontology; information architecture",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3060,6 +3087,7 @@
         "contactLastName": "Johnson",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3148,6 +3176,7 @@
         "contactLastName": "Boy",
         "keywords": "Participatory Design / Agents & Intelligent Systems (primary keyword); Design Methods (Group Elicitation Method, Scenarios, Storyboards, Complexity Analysis); Advanced Interaction Media; Creativity; Design Thinking.",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3212,6 +3241,7 @@
         "contactLastName": "Calvo",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3276,6 +3306,7 @@
         "contactLastName": "Geerts",
         "keywords": "Interactive TV; online video; interaction design",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3340,6 +3371,7 @@
         "contactLastName": "Barbosa",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3380,6 +3412,7 @@
         "contactLastName": "Parush",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3444,6 +3477,7 @@
         "contactLastName": "Billinghurst",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3508,6 +3542,7 @@
         "contactLastName": "Munteanu",
         "keywords": "Speech-based interaction",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3572,6 +3607,7 @@
         "contactLastName": "Nieters",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3660,6 +3696,7 @@
         "contactLastName": "Nacke",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3724,6 +3761,7 @@
         "contactLastName": "Robinson",
         "keywords": "digital reading; interaction design; e-books; reading devices; e-reading apps",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3788,6 +3826,7 @@
         "contactLastName": "Müller",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3852,6 +3891,7 @@
         "contactLastName": "Palanque",
         "keywords": "User Interaction Design; Task description and modeling",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3892,6 +3932,7 @@
         "contactLastName": "Bevan",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3932,6 +3973,7 @@
         "contactLastName": "Paternò",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -3996,6 +4038,7 @@
         "contactLastName": "Read",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -4060,6 +4103,7 @@
         "contactLastName": "Marquardt",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -4124,6 +4168,7 @@
         "contactLastName": "Schiphorst",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -4188,6 +4233,7 @@
         "contactLastName": "Rukzio",
         "keywords": "Mobile HCI; interaction; interface.",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -4372,6 +4418,7 @@
         "contactLastName": "Gould",
         "keywords": "HCI research methods",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -4508,6 +4555,7 @@
         "contactLastName": "Russell",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -4596,6 +4644,7 @@
         "contactLastName": "Ishii",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -4726,10 +4775,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "",
         "contactFirstName": "",
         "contactLastName": "",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s147",
         "communities": ""
     },
@@ -4860,10 +4912,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "",
         "contactFirstName": "",
         "contactLastName": "",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s142",
         "communities": ""
     },
@@ -4946,10 +5001,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "skuttal@cse.unl.edu",
         "contactFirstName": "Sandeep Kaur",
         "contactLastName": "Kuttal",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s114",
         "communities": ""
     },
@@ -5152,10 +5210,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "",
         "contactFirstName": "",
         "contactLastName": "",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s165",
         "communities": ""
     },
@@ -5334,10 +5395,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "jianlong.zhou@nicta.com.au",
         "contactFirstName": "Jianlong",
         "contactLastName": "Zhou",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s116",
         "communities": ""
     },
@@ -5420,10 +5484,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "mentis@umbc.edu",
         "contactFirstName": "Helena",
         "contactLastName": "Mentis",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s109",
         "communities": ""
     },
@@ -5578,10 +5645,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "a0107957@nus.edu.sg",
         "contactFirstName": "Soon Hau",
         "contactLastName": "Chua",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s101",
         "communities": ""
     },
@@ -5712,10 +5782,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "jina.huh@gmail.com",
         "contactFirstName": "Jina",
         "contactLastName": "Huh",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s128",
         "communities": ""
     },
@@ -5798,10 +5871,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "chelsea00ny@gmail.com",
         "contactFirstName": "Sun Young",
         "contactLastName": "Park",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s129",
         "communities": ""
     },
@@ -5932,10 +6008,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "vassilis@ee.oulu.fi",
         "contactFirstName": "Vassilis",
         "contactLastName": "Kostakos",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s155",
         "communities": ""
     },
@@ -6042,10 +6121,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "pbra@itu.dk",
         "contactFirstName": "Pernille",
         "contactLastName": "Bjorn",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s136",
         "communities": ""
     },
@@ -6224,10 +6306,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "carmster@gmail.com",
         "contactFirstName": "Carman",
         "contactLastName": "Neustaedter",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s118",
         "communities": ""
     },
@@ -6382,10 +6467,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "stuart@tropic.org.uk",
         "contactFirstName": "Stuart",
         "contactLastName": "Reeves",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s146",
         "communities": ""
     },
@@ -6516,10 +6604,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "erin.solovey@drexel.edu",
         "contactFirstName": "Erin",
         "contactLastName": "Solovey",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s144",
         "communities": ""
     },
@@ -6626,10 +6717,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "mbachyns@mpi-inf.mpg.de",
         "contactFirstName": "Myroslav",
         "contactLastName": "Bachynskyi",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s141",
         "communities": ""
     },
@@ -6736,10 +6830,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "",
         "contactFirstName": "",
         "contactLastName": "",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s153",
         "communities": ""
     },
@@ -6798,10 +6895,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "",
         "contactFirstName": "",
         "contactLastName": "",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s139",
         "communities": ""
     },
@@ -6884,10 +6984,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "b.caramiaux@gold.ac.uk",
         "contactFirstName": "Baptiste",
         "contactLastName": "Caramiaux",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s141",
         "communities": ""
     },
@@ -6946,10 +7049,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "d.petrelli@shu.ac.uk",
         "contactFirstName": "Daniela",
         "contactLastName": "Petrelli",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s118",
         "communities": ""
     },
@@ -7032,10 +7138,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "oliveirard@yahoo.com.br",
         "contactFirstName": "Rodrigo",
         "contactLastName": "de Oliveira",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s137",
         "communities": ""
     },
@@ -7190,10 +7299,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "",
         "contactFirstName": "",
         "contactLastName": "",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s139",
         "communities": ""
     },
@@ -7252,10 +7364,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "marynel@cmu.edu",
         "contactFirstName": "Marynel",
         "contactLastName": "V��zquez",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s101",
         "communities": ""
     },
@@ -7314,10 +7429,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "erin.cherry@ngc.com",
         "contactFirstName": "Erin",
         "contactLastName": "Cherry",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s114",
         "communities": ""
     },
@@ -7376,10 +7494,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "mikkelrj@diku.dk",
         "contactFirstName": "Mikkel",
         "contactLastName": "Jakobsen",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "s163",
         "communities": ""
     },
@@ -7558,10 +7679,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "jameson@dfki.de",
         "contactFirstName": "Anthony",
         "contactLastName": "Jameson",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -7644,10 +7768,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "mark.billinghurst@hitlabnz.org",
         "contactFirstName": "Mark",
         "contactLastName": "Billinghurst",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -7706,10 +7833,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "jkim2@hanyang.ac.kr",
         "contactFirstName": "Jieun",
         "contactLastName": "Kim",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -7792,10 +7922,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "flore.barcellini@cnam.fr",
         "contactFirstName": "Flore",
         "contactLastName": "Barcellini",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -7926,10 +8059,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "sss12@psu.edu",
         "contactFirstName": "S. Shyam",
         "contactLastName": "Sundar",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -8012,10 +8148,13 @@
                 }
             }
         ],
+        "cbStatement": "",
         "contactEmail": "xjunbi@gmail.com",
         "contactFirstName": "Xiaojun",
         "contactLastName": "Bi",
+        "keywords": "",
         "venue": "TOCHI",
+        "subtype": "",
         "session": "",
         "communities": ""
     },

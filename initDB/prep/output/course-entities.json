@@ -36,6 +36,7 @@
         "contactLastName": "Foehrenbach",
         "keywords": "Paper-pencil sketches; sketching; interaction design; user experience design",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -100,6 +101,7 @@
         "contactLastName": "Lyons",
         "keywords": "Sound; music; art; interface;  musical interface",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -140,6 +142,7 @@
         "contactLastName": "Johnson",
         "keywords": "Psychology; perception; cognition; memory; learning; attention; design; user interface; user-centered design; interaction; user experience; human-computer interaction; design guidelines; design heuristics",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -228,6 +231,7 @@
         "contactLastName": "Baxter",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -292,6 +296,7 @@
         "contactLastName": "Forlizzi",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -332,6 +337,7 @@
         "contactLastName": "Garcia",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -588,6 +594,7 @@
         "contactLastName": "Johnson",
         "keywords": "Conceptual model; software design; user interface; UI; interaction; design process; design methods; design techniques; psychological basis for design methods; task analysis; ontology; information architecture",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -628,6 +635,7 @@
         "contactLastName": "Johnson",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -716,6 +724,7 @@
         "contactLastName": "Boy",
         "keywords": "Participatory Design / Agents & Intelligent Systems (primary keyword); Design Methods (Group Elicitation Method, Scenarios, Storyboards, Complexity Analysis); Advanced Interaction Media; Creativity; Design Thinking.",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -780,6 +789,7 @@
         "contactLastName": "Calvo",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -844,6 +854,7 @@
         "contactLastName": "Geerts",
         "keywords": "Interactive TV; online video; interaction design",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -908,6 +919,7 @@
         "contactLastName": "Barbosa",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -948,6 +960,7 @@
         "contactLastName": "Parush",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1012,6 +1025,7 @@
         "contactLastName": "Billinghurst",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1076,6 +1090,7 @@
         "contactLastName": "Munteanu",
         "keywords": "Speech-based interaction",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1140,6 +1155,7 @@
         "contactLastName": "Nieters",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1228,6 +1244,7 @@
         "contactLastName": "Nacke",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1292,6 +1309,7 @@
         "contactLastName": "Robinson",
         "keywords": "digital reading; interaction design; e-books; reading devices; e-reading apps",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1356,6 +1374,7 @@
         "contactLastName": "Müller",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1420,6 +1439,7 @@
         "contactLastName": "Palanque",
         "keywords": "User Interaction Design; Task description and modeling",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1460,6 +1480,7 @@
         "contactLastName": "Bevan",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1500,6 +1521,7 @@
         "contactLastName": "Paternò",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1564,6 +1586,7 @@
         "contactLastName": "Read",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1628,6 +1651,7 @@
         "contactLastName": "Marquardt",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1692,6 +1716,7 @@
         "contactLastName": "Schiphorst",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1756,6 +1781,7 @@
         "contactLastName": "Rukzio",
         "keywords": "Mobile HCI; interaction; interface.",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1940,6 +1966,7 @@
         "contactLastName": "Gould",
         "keywords": "HCI research methods",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2076,6 +2103,7 @@
         "contactLastName": "Russell",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2164,6 +2192,7 @@
         "contactLastName": "Ishii",
         "keywords": "",
         "venue": "course",
+        "subtype": "",
         "session": "",
         "communities": ""
     }

@@ -60,6 +60,7 @@
         "contactLastName": "Theodorou",
         "keywords": "Pervasive advertising; Public engagement; Shop- window displays; Face-detection; Case Study",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -148,6 +149,7 @@
         "contactLastName": "Ryokai",
         "keywords": "",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -212,6 +214,7 @@
         "contactLastName": "Kilde",
         "keywords": "STEM; Native American; Pueblo Schools; Peer Learning Communities; Communities of Practice; K-12 Education",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -324,6 +327,7 @@
         "contactLastName": "Shankar",
         "keywords": "CogTool; Cognitive Modeling; User Experience Research; Agile; Enterprise Software; User Modeling, Usability Engineering",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -484,6 +488,7 @@
         "contactLastName": "Beer",
         "keywords": "Multitouch gestures; product development; audio editing; audio routing;",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -548,6 +553,7 @@
         "contactLastName": "Farooq",
         "keywords": "Data Science; Large Software Organizations; Usability; Academia",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -756,6 +762,7 @@
         "contactLastName": "Mentis",
         "keywords": "Voice control; gesture; operating room",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -844,6 +851,7 @@
         "contactLastName": "Son",
         "keywords": "Photo Research; PBO method; User-centered design; User research method; Mobile app; Mobile UI",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1028,6 +1036,7 @@
         "contactLastName": "Taylor",
         "keywords": "Assistive technology; community alarm; community alarm service; participatory design; social care; telecare",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1164,6 +1173,7 @@
         "contactLastName": "Sengupta",
         "keywords": "Population stereotype; representation strategies; icon",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1252,6 +1262,7 @@
         "contactLastName": "Watanabe",
         "keywords": "android robot; field study; sales; conversation; affection; human robot interaction",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1340,6 +1351,7 @@
         "contactLastName": "Kim",
         "keywords": "",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1500,6 +1512,7 @@
         "contactLastName": "Schoessler",
         "keywords": "Tangible User Interfaces; Radical Atoms; Shape Display; Shape Changing Interfaces; Design",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1660,6 +1673,7 @@
         "contactLastName": "Paay",
         "keywords": "Qualitative research; field studies; prototyping; developing countries; electronic payment system.",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1796,6 +1810,7 @@
         "contactLastName": "TARALLE",
         "keywords": "",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1884,6 +1899,7 @@
         "contactLastName": "Woźniak",
         "keywords": "Big data; user experience; data-centred services; data warehousing; case studies; service innovation; data analytics; business insights; telematics",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -1972,6 +1988,7 @@
         "contactLastName": "Levillain",
         "keywords": "audience experience; interactive arts; behavioral artworks; engagement; cluster analysis",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2108,6 +2125,7 @@
         "contactLastName": "Blair",
         "keywords": "",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2268,6 +2286,7 @@
         "contactLastName": "Samsel",
         "keywords": "",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     },
@@ -2428,6 +2447,7 @@
         "contactLastName": "Hangal",
         "keywords": "",
         "venue": "casestudy",
+        "subtype": "",
         "session": "",
         "communities": ""
     }
