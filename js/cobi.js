@@ -18,174 +18,25 @@ var allUsers = {};
 var transactions = [];
 var localTransactions = [];
 var roomCapacity = {
-    "Ambassador Room": "0",
-    "Chancellor": "0",
-    "Crystal Room": "0",
-    "Cuvee Room": "0",
-    "Embassy Room": "0",
-    "Gold Room": "0",
-    "Imperial Ballroom": "0",
-    "International Ballroom": "0",
-    "Rouge": "0",
-    "Royal Room": "0",
-    "State Room": "0",
-    "Acapulco": "0",
-    "Addams": "0",
-    "Atlanta": "0",
-    "Buckingham": "0",
-    "Burnham": "0",
-    "Columbian": "0",
-    "Columbus AB": "0",
-    "Columbus CD": "0",
-    "Columbus EF": "0",
-    "Columbus G": "0",
-    "Columbus GH": "0",
-    "Columbus H": "0",
-    "Columbus IJ": "0",
-    "Columbus KL": "0",
-    "Comiskey": "0",
-    "Crystal Ballroom A": "0",
-    "Crystal Ballroom B": "0",
-    "Crystal Ballroom C": "0",
-    "Dusable": "0",
-    "Field": "0",
-    "Gold Coast": "0",
-    "Grand Ballroom A": "0",
-    "Grand Ballroom B": "0",
-    "Grand Ballroom C North": "0",
-    "Grand Ballroom D North": "0",
-    "Grand Ballroom E": "0",
-    "Grand Ballroom EF": "0",
-    "Grand Ballroom F": "0",
-    "Grand Foyer": "0",
-    "Grand Foyer/Desks Registration": "0",
-    "Grand Suite 1": "0",
-    "Grand Suite 2AB": "0",
-    "Grand Suite 3": "0",
-    "Grand Suite 4": "0",
-    "Grand Suite 5": "0",
-    "Grand Suite Office A": "0",
-    "Grand Suite Office B": "0",
-    "Group Office Grand": "0",
-    "Haymarket": "0",
-    "Hong Kong": "0",
-    "Horner": "0",
-    "Mccormick": "0",
-    "New Orleans": "0",
-    "Ogden": "0",
-    "Picasso": "0",
-    "Plaza Ballroom": "0",
-    "Regency A": "0",
-    "Regency B": "0",
-    "Regency C": "0",
-    "Regency D": "0",
-    "Riverside Center": "0",
-    "Rm 19": "0",
-    "San Francisco": "0",
-    "Sandburg": "0",
-    "Skyway 260": "0",
-    "Skyway 261": "0",
-    "Skyway 269": "0",
-    "Skyway 272": "0",
-    "Skyway 273": "0",
-    "Soldier Field": "0",
-    "South Storage Grand": "0",
-    "Toronto": "0",
-    "Truffles": "0",
-    "Water Tower": "0",
-    "Water Tower": "0",
-    "Wright": "0",
-    "Wrigley": "0",
-    "Alpine Ballroom": "0",
-    "Edelweiss": "0",
-    "Lucerne Ballroom": "0",
-    "Zurich ABC": "0"
+"Hall D1": "2700",
+"401": "450",
+"E5": "320",
+"E6": "320",
+"E1/E2": "320",
+"402": "300",
+"E3": "160",
+"E4": "160",
+"403": "140",
+"307ABC": "270",
+"308ABC": "270",
+"317A": "48",
+"317BC": "90",
+"E7": "60",
+"318BC": "100",
+"318A": "50"
 };
 
-var desiredRoomOrder = [
-    "Ambassador Room",
-    "Chancellor",
-    "Crystal Room",
-    "Cuvee Room",
-    "Embassy Room",
-    "Gold Room",
-    "Imperial Ballroom",
-    "International Ballroom",
-    "Rouge",
-    "Royal Room",
-    "State Room",
-    "Acapulco",
-    "Addams",
-    "Atlanta",
-    "Buckingham",
-    "Burnham",
-    "Columbian",
-    "Columbus AB",
-    "Columbus CD",
-    "Columbus EF",
-    "Columbus G",
-    "Columbus GH",
-    "Columbus H",
-    "Columbus IJ",
-    "Columbus KL",
-    "Comiskey",
-    "Crystal Ballroom A",
-    "Crystal Ballroom B",
-    "Crystal Ballroom C",
-    "Dusable",
-    "Field",
-    "Gold Coast",
-    "Grand Ballroom A",
-    "Grand Ballroom B",
-    "Grand Ballroom C North",
-    "Grand Ballroom D North",
-    "Grand Ballroom E",
-    "Grand Ballroom EF",
-    "Grand Ballroom F",
-    "Grand Foyer",
-    "Grand Foyer/Desks Registration",
-    "Grand Suite 1",
-    "Grand Suite 2AB",
-    "Grand Suite 3",
-    "Grand Suite 4",
-    "Grand Suite 5",
-    "Grand Suite Office A",
-    "Grand Suite Office B",
-    "Group Office Grand",
-    "Haymarket",
-    "Hong Kong",
-    "Horner",
-    "Mccormick",
-    "New Orleans",
-    "Ogden",
-    "Picasso",
-    "Plaza Ballroom",
-    "Regency A",
-    "Regency B",
-    "Regency C",
-    "Regency D",
-    "Riverside Center",
-    "Rm 19",
-    "San Francisco",
-    "Sandburg",
-    "Skyway 260",
-    "Skyway 261",
-    "Skyway 269",
-    "Skyway 272",
-    "Skyway 273",
-    "Soldier Field",
-    "South Storage Grand",
-    "Toronto",
-    "Truffles",
-    "Water Tower",
-    "Water Tower",
-    "Wright",
-    "Wrigley",
-    "Alpine Ballroom",
-    "Edelweiss",
-    "Lucerne Ballroom",
-    "Zurich ABC"
-];
+var desiredRoomOrder = ["Hall D1", "401", "E5", "E6", "E1/E2", "402", "E3", "E4", "403", "307ABC", "308ABC", "317A", "317BC", "E7", "318BC", "318A"];
 
 var personaList = [
     "Public Policy",
@@ -210,7 +61,7 @@ var personaList = [
     "Information Technology and Computing",
     "Animal, Plant, and Food Sciences",
     "Chemical Sciences"];
-    
+
 var fullpersonaList = personaList;
 
 var communityList = personaList;
@@ -222,10 +73,10 @@ var DataOps = function() {
 	//	console.log(rollbackTransaction);
 	handleTransaction(rollbackTransaction);
     }
-    
+
     function handleTransaction(t){
 	switch (t.type) {
-   	case 'lock': 
+   	case 'lock':
 	    lockSlot(t.data.date, t.data.time, t.data.room);
 	    break;
 	case 'unlock':
@@ -238,7 +89,7 @@ var DataOps = function() {
 	    scheduleChair(allSessions[t.data.id], allChairs[t.data.chairId]);
 	    break;
 	case 'moveChair':
-	    moveChair(allSessions[t.data.s1id], 
+	    moveChair(allSessions[t.data.s1id],
 		      allChairs[t.data.chairId],
 		      allSessions[t.data.s2id]);
 	    break;
@@ -261,15 +112,15 @@ var DataOps = function() {
 	    unscheduleSession(allSessions[t.data.id]);
 	    break;
 	case 'schedule':
-	    scheduleSession(allSessions[t.data.id], 
-			    t.data.date, 
-			    t.data.time, 
+	    scheduleSession(allSessions[t.data.id],
+			    t.data.date,
+			    t.data.time,
 			    t.data.room);
 	    break;
 	case 'move':
-	    scheduleSession(allSessions[t.data.id], 
-			    t.data.tdate, 
-			    t.data.ttime, 
+	    scheduleSession(allSessions[t.data.id],
+			    t.data.tdate,
+			    t.data.ttime,
 			    t.data.troom);
 	    break;
 	case 'swap':
@@ -312,7 +163,7 @@ var DataOps = function() {
 				     allSessions[t.data.s2id],
 				     allSubmissions[t.data.p2id]);
 	    break;
-	default: 
+	default:
 //	    console.log("Weird, nonexistent operation? " + t.type);
 	}
 //	getAllConflicts();
@@ -323,13 +174,13 @@ var DataOps = function() {
 	    lockSlot(day, time, room);
 	}
     }
-    
+
     function unlockSlotsAtDayTime(day, time){
 	for(var room in scheduleSlots[day][time]){
 	    unlockSlot(day, time, room);
 	}
     }
-    
+
     function lockSlotsInRoom(r){
 	for(var day in scheduleSlots){
 	    for(var time in scheduleSlots[day]){
@@ -341,7 +192,7 @@ var DataOps = function() {
 	    }
 	}
     }
-    
+
     function unlockSlotsInRoom(r){
 	for(var day in scheduleSlots){
 	    for(var time in scheduleSlots[day]){
@@ -353,35 +204,35 @@ var DataOps = function() {
 	    }
 	}
     }
-    
+
     function toggleSlotLock(day, time, room){
-//	console.log("Test: toggling slot: " + day + ", " + time + ", " + room);    
+//	console.log("Test: toggling slot: " + day + ", " + time + ", " + room);
 	scheduleSlots[day][time][room]['locked'] = !scheduleSlots[day][time][room]['locked'];
     }
-    
+
     function lockSlot(day, time, room){
-//	console.log("Test: locking slot: " + day + ", " + time + ", " + room);    
+//	console.log("Test: locking slot: " + day + ", " + time + ", " + room);
 	scheduleSlots[day][time][room]['locked'] = true;
     }
-    
+
     function unlockSlot(day, time, room){
 //	console.log("Test: unlocking slot: " + day + ", " + time + ", " + room);
 	scheduleSlots[day][time][room]['locked'] = false;
     }
-    
+
     function removeSessionFromSlot(s, date, time, room){
 //	console.log("Test: removing session " + s.id + " from " + date + ", " + time + ", " + room);
 	delete schedule[date][time][room][s.id];
     }
-    
+
     function clearSlot(date, time, room){
 //	console.log("Test: removing sessions from " + date + ", " + time + ", " + room);
 	for(s in schedule[date][time][room]){
 	    removeSessionFromSlot(allSessions[s], date, time, room);
 	}
     }
-    
-    
+
+
     function addSessionToSlot(s, date, time, room){
 //	console.log("Test: adding session " + s.id + " to " + date + ", " + time + ", " + room);
 	schedule[date][time][room][s.id] = s;
@@ -405,7 +256,7 @@ var DataOps = function() {
 	c1.id = s2.id;
 	s2.chairs = c1.authorId;
     }
-    
+
     function swapChair(s1, c1, s2, c2){
 	console.log(s1, c1, s2, c2);
 	s1.chairs = c2.authorId;
@@ -424,7 +275,7 @@ var DataOps = function() {
 	c2.id = s1.id;
 	s1.chairs = c2.authorId;
     }
-    
+
     function editSessionTitle(s, t){
 	s.title = t;
     }
@@ -436,30 +287,30 @@ var DataOps = function() {
 	s['time'] = "";
 	s['room'] = "";
     }
-    
+
     function removeFromUnscheduled(s){
 	// remove session from unscheduled
 //	console.log("Test: removing session " + s.id + " from unscheduled list.");
 	delete unscheduled[s.id];
     }
-    
+
     // Unschedule a session
-    function unscheduleSession(s){	
+    function unscheduleSession(s){
 	// todo: doesn't deal with endTime
 	var sdate = s.date;
 	var stime = s.time;
 	var sroom = s.room;
-	
+
 //	console.log("Test: unscheduling session " + s.id + " from " + sdate + ", " + stime + ", " + sroom);
-	
+
 	if(scheduleSlots[sdate][stime][sroom]['locked']){
 	    $(document).trigger('slotLocked', [sdate, stime, sroom]);
 	    return;
 	}
-	
+
 	// remove session from slot
 	removeSessionFromSlot(s, sdate, stime, sroom);
-	
+
 	//console.log("before unscheduling.." + JSON.stringify(unscheduled));
 	// add to unscheduled
 	addToUnscheduled(s);
@@ -472,7 +323,7 @@ var DataOps = function() {
 	    $(document).trigger('slotLocked', [sdate, stime, sroom]);
 	    return;
 	}
-	
+
 //	console.log("Test: scheduling session " + s.id + " to " + sdate + ", " + stime + ", " + sroom);
 
 //	console.log("before scheduling.." + JSON.stringify(unscheduled));
@@ -482,7 +333,7 @@ var DataOps = function() {
 	    removeFromUnscheduled(s);
 	    isUnscheduled = true;
 	}
-	
+
 	// schedule on frontend
 	if(!isUnscheduled){
 	    removeSessionFromSlot(s, s.date, s.time, s.room)
@@ -490,8 +341,8 @@ var DataOps = function() {
 	addSessionToSlot(s, sdate, stime, sroom);
 //	console.log("after scheduling.." + JSON.stringify(unscheduled));
     }
-    
-    
+
+
     // Swaps two sessions into the original schedule data structure
     function swapSessions(s1, s2){
 	var s1date = s1.date;
@@ -500,81 +351,81 @@ var DataOps = function() {
 	var s2date = s2.date;
 	var s2time = s2.time;
 	var s2room = s2.room;
-	
+
 //	console.log("Test: swapping sessions " + s1.id + " and " + s2.id);
-	
+
 	if(scheduleSlots[s1date][s1time][s1room]['locked']){
 	    $(document).trigger('slotLocked', [s1date, s1time, s1room]);
 	    return;
 	}
-	
+
 	if(scheduleSlots[s2date][s2time][s2room]['locked']){
 	    $(document).trigger('slotLocked', [s2date, s2time, s2room]);
 	    return;
 	}
-	
-	
+
+
 	s1.date = s2date;
 	s1.time = s2time;
 	s1.room = s2room;
 	s2.date = s1date;
 	s2.time = s1time;
 	s2.room = s1room;
-	
+
 	// change it's locations in the data structure
 	schedule[s1date][s1time][s1room][s2.id] = s2;
 	delete schedule[s1date][s1time][s1room][s1.id];
-	
+
 	schedule[s2date][s2time][s2room][s1.id] = s1;
 	delete schedule[s2date][s2time][s2room][s2.id];
     }
-    
+
     // Swaps two sessions where first is currently unscheduled
     function swapWithUnscheduledSession(s1, s2){
 	// assume s1 is unscheduled
 	var s2date = s2.date;
 	var s2time = s2.time;
 	var s2room = s2.room;
-	
+
 //	console.log("Test: swapping unscheduled session " + s1.id + " with scheduled session " + s2.id);
-	
+
 	if(scheduleSlots[s2date][s2time][s2room]['locked']){
 	    $(document).trigger('slotLocked', [s2date, s2time, s2room]);
 	    return;
 	}
-	
+
 	removeFromUnscheduled(s1);
 	removeSessionFromSlot(s2, s2date, s2time, s2room);
 	addToUnscheduled(s2);
 	addSessionToSlot(s1, s2date, s2time, s2room);
     }
-    
-    // Example: 
+
+    // Example:
     // flipping first two papers in Mobile keyboard / text entry
     // reorderPapers(allSessions["s254"], ["pn1566","pn1376","pn1360","pn492","pn1936"], ["pn1376","pn1566","pn1360","pn492","pn1936"]);
     // reorderPapers(allSessions["s254"], ["pn1376","pn1566","pn1360","pn492","pn1936"], ["pn1566","pn1376","pn1360","pn492","pn1936"]);
     function reorderPapers(s, newPaperOrder){
 	// assume paperOrder is an array of paper IDs
-	
+
 //	console.log("Test: reordering papers in session " + s.id + " to " + JSON.stringify(newPaperOrder));
 	var submissions = [];
-	
+
 	for(var i = 0; i < newPaperOrder.length; i++){
 	    for(var j = 0; j < s.submissions.length; j++){
 		if(s.submissions[j].id == newPaperOrder[i]){
 		    submissions.push(s.submissions[j]);
 		    break;
-		} 
+		}
 	    }
 	}
-	
-	s.submissions = submissions;	
+
+	s.submissions = submissions;
     }
-    
+
     function isLocked(s1){
 	if(s1.id in unscheduled){
 	    return false;
-	} 
+	}
 	var s1date = s1.date;
 	var s1time = s1.time;
 	var s1room = s1.room;
@@ -584,7 +435,7 @@ var DataOps = function() {
 	}
 	return false;
     }
-    
+
     function paperIsInSession(s1, p1){
 	// make sure keys come from right place
 	var p1ins1 = false;
@@ -595,22 +446,22 @@ var DataOps = function() {
 	}
 	return p1ins1;
     }
-    
-    // Example: 
+
+    // Example:
     // Swapping mobile keyboard  paper with Learning first paper (top row)
     // swapPapers(allSessions['s254'], allSubmissions['pn1566'], allSessions['s288'], allSubmissions['pn2178'])
     // swapPapers(allSessions['s254'], allSubmissions['pn2178'], allSessions['s288'], allSubmissions['pn1566'])
     function swapPapers(s1, p1, s2, p2){
-	
+
 	if(isLocked(s1) || isLocked(s2)) return;
-	
+
 	// make sure types match and papers from their session
 	if(s1.venue != s2.venue) return;
 	if(!(paperIsInSession(s1, p1) && paperIsInSession(s2, p2))) return;
-	
-	
+
+
 //	console.log("Test: swapping papers " + p1.id + " and " + p2.id);
-	
+
 	for(var i = 0; i < s1.submissions.length; i++){
 	    if(s1.submissions[i] == p1){
 		s1.submissions[i] = p2;
@@ -623,7 +474,7 @@ var DataOps = function() {
 		p1.session = s2.id;
 	    }
 	}
-	
+
 	//if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
 	//	    console.log("relying on CCOps");
 	CCOps.updateAllConstraintEntities([s1.id, s2.id]);
@@ -634,34 +485,34 @@ var DataOps = function() {
 
     function clearSession(s){
 	//	console.log("Test: removing papers from " + s.id);
-	s.submissions = []; 
+	s.submissions = [];
     }
-    
+
     function removePaperFromSession(s, p){
 //	console.log("Test: removing paper " + p.id + " from " + s.id);
 	// change it from the session
-	
+
 	// erase paper from list of submissions in session
 	var idx = s.submissions.indexOf(p); // Find the index
 	if(idx !=-1) s.submissions.splice(idx, 1); // Remove it if really found!
-	
+
 	return;
     }
-    
+
     function addToUnscheduledPaper(p){
 //	console.log("Test: adding paper " + p.id + " to unscheduledSubmissions list.");
 	unscheduledSubmissions[p.id] = p;
 	p.session = "null";
     }
-    
+
     // Example:
     // unscheduling improving two-thumb text entry from Mobile keyword / text
     // unschedulePaper(allSessions['s254'], allSubmissions['pn1376']);
     function unschedulePaper(s, p){
 	if(isLocked(s) || !paperIsInSession(s,p)) return;
-	
+
 	//	console.log("Test: unscheduling paper " + p.id + " from " + s.id);
-	
+
 	removePaperFromSession(s, p);
 	addToUnscheduledPaper(p);
 	//	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
@@ -670,7 +521,7 @@ var DataOps = function() {
 	//    updateAuthorConflicts([s.id]);
 	//	}
     }
-    
+
     // note: always add at start of session
     function insertPaperIntoSession(s, p, pos){
 	//	console.log(s);
@@ -684,7 +535,7 @@ var DataOps = function() {
 	}
 	// set paper's session
 	p.session = s.id;
-	
+
 	return;
     }
 
@@ -692,15 +543,15 @@ var DataOps = function() {
 //	console.log("Test: removing paper " + p.id + " from unscheduledSubmissions list.");
 	delete unscheduledSubmissions[p.id];
     }
-    
+
     // Example:
     // scheduling improving two-thumb text entry to Mobile keyword / text
     // schedulePaper(allSessions['s254'], allSubmissions['pn1376']);
     function schedulePaper(s, p, pos){
 	if(isLocked(s) || !(p.id in unscheduledSubmissions)) return;
-	
+
 //	console.log("Test: scheduling paper " + p.id + " into " + s.id);
-	
+
 	insertPaperIntoSession(s, p, pos);
 	removeFromUnscheduledPaper(p);
 //	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
@@ -709,8 +560,8 @@ var DataOps = function() {
 //	    updateAuthorConflicts([s.id]);
 //      }
     }
-    
-    // Example: 
+
+    // Example:
     // Moving mobile keyboard  paper into Learning (top row)
     // movePaper(allSessions['s254'], allSubmissions['pn1376'], allSessions['s288']);
     // movePaper(allSessions['s288'], allSubmissions['pn1376'], allSessions['s254']);
@@ -718,13 +569,13 @@ var DataOps = function() {
     function movePaper(s1, p1, s2, pos){
 //	console.log(s1, p1, s2, pos);
 	if(isLocked(s1) || isLocked(s2)) return;
-	
+
 	// make sure types match and papers from their session
 	if(s1.venue != s2.venue) return;
 	if(!(paperIsInSession(s1, p1)))return;
-	
+
 	//	console.log("Test: moving paper " + p1.id + " from " + s1.id + " to " + s2.id);
-	
+
 	removePaperFromSession(s1, p1);
 	insertPaperIntoSession(s2, p1, pos);
 	//	if(userData.id == '49c8fe6872457b891aaca167dbffcead'){
@@ -732,7 +583,7 @@ var DataOps = function() {
 	    CCOps.updateAllConstraintEntities([s1.id, s2.id]);
 	//	    updateAuthorConflicts([s1.id, s2.id]);
     }
-    
+
     // Example:
     // assuming pn1376 is unscheduled, swap it with paper in Mobile keyword / text that is scheduled
     // swapWithUnscheduledPaper(unscheduledSubmissions['pn1376'], allSessions['s254'], allSubmissions['pn1566']);
@@ -753,9 +604,9 @@ var DataOps = function() {
 	    console.log("what???" , s2, p2);
 	    return;
 	}
-	
+
 //	console.log("Test: swapping unscheduled paper " + p1.id + " with scheduled paper " + p2.id + " in " + s2.id);
-	
+
 	removeFromUnscheduledPaper(p1);
 	for(var i = 0; i < s2.submissions.length; i++){
 	    if(s2.submissions[i] == p2){
@@ -782,8 +633,8 @@ var DataOps = function() {
 // 	console.log(transaction);
 //     });
 
-		     
-////// Functions that change the data schedule 
+
+////// Functions that change the data schedule
 
 /// TODO: don't allow actually changing slots that are locked.
 
@@ -798,25 +649,25 @@ function undo(){
 	var type = transactions[transactions.length -1].type;
 	var previous = transactions[transactions.length -1].previous;
 	$(document).trigger('undoLastStep', [transactions[transactions.length -1]]);
-	
+
 	if(type == "lock"){
-	    toggleSlotLock(previous['date'], 
+	    toggleSlotLock(previous['date'],
 			   previous['time'],
 			   previous['room']);
 	    $(document).trigger('lockChange', [previous['date'], previous['time'], previous['room']]);
 	}else if(type == "unschedule"){
 	    // schedule the session
 	    addSessionToSlot(allSessions[previous['id']],
-			     previous['date'], 
+			     previous['date'],
 			     previous['time'],
 			     previous['room']);
 	    removeFromUnscheduled(allSessions[previous['id']]);
 	    $(document).trigger('slotChange', [previous['date'], previous['time'], previous['room']]);
 	    $(document).trigger('unscheduledChange');
-	    
+
 	}else if(type == "schedule"){
 	    removeSessionFromSlot(allSessions[previous['id']],
-				  previous['date'], 
+				  previous['date'],
 				  previous['time'],
 				  previous['room']);
 	    unscheduled[previous['id']] = allSessions[previous['id']];;
@@ -831,18 +682,18 @@ function undo(){
 	    var s2date = previous['s2date'];
 	    var s2time = previous['s2time'];
 	    var s2room = previous['s2room'];
-	    
+
 	    allSessions[previous['s1id']].date = s2date;
 	    allSessions[previous['s1id']].time = s2time;
 	    allSessions[previous['s1id']].room = s2room;
 	    allSessions[previous['s2id']].date = s1date;
 	    allSessions[previous['s2id']].time = s1time;
 	    allSessions[previous['s2id']].room = s1room;
- 
+
 	    // change it's locations in the data structure
 	    schedule[s1date][s1time][s1room][previous['s2id']] = allSessions[previous['s2id']];
 	    delete schedule[s1date][s1time][s1room][previous['s1id']];
-	    
+
 	    schedule[s2date][s2time][s2room][previous['s1id']] = allSessions[previous['s1id']];
 	    delete schedule[s2date][s2time][s2room][previous['s2id']];
 
@@ -852,7 +703,7 @@ function undo(){
 	    var s2date = previous['s2date'];
 	    var s2time = previous['s2time'];
 	    var s2room = previous['s2room'];
-	    
+
 	    $(document).trigger('slotChange', [s1date, s1time, s1room]);
 	    $(document).trigger('slotChange', [s2date, s2time, s2room]);
 
@@ -861,7 +712,7 @@ function undo(){
 	    var s2date = previous['s2date'];
 	    var s2time = previous['s2time'];
 	    var s2room = previous['s2room'];
-	    
+
 	    scheduleSession(allSessions[previous['s1id']], s2date, s2time, s2room);
 	    unscheduleSession(allSessions[previous['s2id']], s2date, s2time, s2room);
 
@@ -874,13 +725,13 @@ function undo(){
 	    $(document).trigger('slotChange', [previous['sdate'], previous['stime'], previous['sroom']]);
 	    $(document).trigger('slotChange', [previous['tdate'], previous['ttime'], previous['troom']]);
 	}
-	
-		    
+
+
 	// get rid of last transaction
 	transactions.pop();
 
-	// TODO: should really check this first before 
-	// allowing undo in frontend 
+	// TODO: should really check this first before
+	// allowing undo in frontend
 
 	// undo it on the backend
 	db.undo(userData.id);
@@ -892,34 +743,34 @@ function lockSlot(date, time, room){
     var td = { 'date': date,
 	       'time': time,
 	       'room': room };
-    
+
     var tp = { 'date': date,
 	       'time': time,
 	       'room': room };
-    
+
     var t = new TransactionData(userData.id,
 				'lock',
 				td,
 				'unlock',
 				tp);
-    Transact.addTransaction(t);		
+    Transact.addTransaction(t);
 }
 
 function unlockSlot(date, time, room){
     var td = { 'date': date,
 	       'time': time,
 	       'room': room };
-    
+
     var tp = { 'date': date,
 	       'time': time,
 	       'room': room };
-    
+
     var t = new TransactionData(userData.id,
 				'unlock',
 				td,
 				'lock',
 				tp);
-    Transact.addTransaction(t);		
+    Transact.addTransaction(t);
 }
 
 /////////////// CHAIR FUNCTIONALITY //////////////
@@ -986,14 +837,14 @@ function swapChair(s1, c1, s2, c2){
 	       's2id' : s2.id,
 	       'chair2Id': c1.authorId,
 	     };
-    
+
     var t = new TransactionData(userData.id,
 				'swapChair',
 				td,
 				'swapChair',
 				tp);
     Transact.addTransaction(t);
-	    
+
 }
 
 function swapWithUnscheduledChair(s1, c1, c2){
@@ -1046,7 +897,7 @@ function unscheduleSession(s){
 				td,
 				'schedule',
 				tp);
-    Transact.addTransaction(t);		
+    Transact.addTransaction(t);
 }
 
 // schedule a session
@@ -1064,9 +915,9 @@ function scheduleSession(s, tdate, ttime, troom){
 	var t = new TransactionData(userData.id,
 				    'schedule',
 				    td,
-				    'unschedule', 
+				    'unschedule',
 				    tp);
-	Transact.addTransaction(t);		
+	Transact.addTransaction(t);
     }else{
 	// move session
 	var td = { 'id': s.id,
@@ -1088,9 +939,9 @@ function scheduleSession(s, tdate, ttime, troom){
 	var t = new TransactionData(userData.id,
 				    'move',
 				    td,
-				    'move', 
+				    'move',
 				    tp);
-	Transact.addTransaction(t);		
+	Transact.addTransaction(t);
     }
 }
 
@@ -1099,7 +950,7 @@ function swapSessions(s1, s2){
     //    console.log("swapSessions is called by frontend handler");
     //    console.log("s1 from frontend: " + JSON.stringify(s1));
     //    console.log("s2 from frontend: " + JSON.stringify(s2));
-    
+
     var td = { 's1id': s1.id,
 	       's1date': s1.date,
 	       's1time': s1.time,
@@ -1118,13 +969,13 @@ function swapSessions(s1, s2){
 	       's2time': s2.time,
 	       's2room': s2.room
 	     };
-    
+
     var t = new TransactionData(userData.id,
 				'swap',
 				td,
 				'swap',
 				tp);
-    Transact.addTransaction(t);		
+    Transact.addTransaction(t);
 }
 
 // Swaps two sessions where first is currently unscheduled
@@ -1141,13 +992,13 @@ function swapWithUnscheduledSession(s1, s2){
 	       's2time': s2.time,
 	       's2room': s2.room
 	     };
-    
+
     var t = new TransactionData(userData.id,
 				'swapWithUnscheduled',
 				td,
 				'swapWithUnscheduled',
 				tp);
-    Transact.addTransaction(t);		
+    Transact.addTransaction(t);
 }
 
 ///////end of functions for interacting with schedule////////////
@@ -1179,7 +1030,7 @@ function swapWithUnscheduledSession(s1, s2){
 
 
 
-// Example: 
+// Example:
 // flipping first two papers in Mobile keyboard / text entry
 // reorderPapers(allSessions["s254"], ["pn1566","pn1376","pn1360","pn492","pn1936"], ["pn1376","pn1566","pn1360","pn492","pn1936"]);
 // reorderPapers(allSessions["s254"], ["pn1376","pn1566","pn1360","pn492","pn1936"], ["pn1566","pn1376","pn1360","pn492","pn1936"]);
@@ -1195,10 +1046,10 @@ function reorderPapers(s, newPaperOrder, previousPaperOrder){
 				td,
 				'reorderPapers',
 				tp);
-    Transact.addTransaction(t);		
+    Transact.addTransaction(t);
 }
 
-// Example: 
+// Example:
 // Swapping mobile keyboard  paper with Learning first paper (top row)
 // swapPapers(allSessions['s254'], allSubmissions['pn1566'], allSessions['s288'], allSubmissions['pn2178'])
 // swapPapers(allSessions['s254'], allSubmissions['pn2178'], allSessions['s288'], allSubmissions['pn1566'])
@@ -1218,7 +1069,7 @@ function swapPapers(s1, p1, s2, p2){
 				td,
 				'swapPapers',
 				tp);
-    Transact.addTransaction(t);		
+    Transact.addTransaction(t);
 }
 
 function getPaperPosition(s, p){
@@ -1241,7 +1092,7 @@ function unschedulePaper(s, p){
 				td,
 				'schedulePaper',
 				tp);
-    Transact.addTransaction(t);		
+    Transact.addTransaction(t);
 }
 
 // Example:
@@ -1260,10 +1111,10 @@ function schedulePaper(s, p){
 				td,
 				'unschedulePaper',
 				tp);
-    Transact.addTransaction(t);		
+    Transact.addTransaction(t);
 }
 
-// Example: 
+// Example:
 // Moving mobile keyboard  paper into Learning (top row)
 // movePaper(allSessions['s254'], allSubmissions['pn1376'], allSessions['s288']);
 // movePaper(allSessions['s288'], allSubmissions['pn1376'], allSessions['s254']);
@@ -1284,7 +1135,7 @@ function movePaper(s1, p1, s2){
 				td,
 				'movePaper',
 				tp);
-    Transact.addTransaction(t);		
+    Transact.addTransaction(t);
 }
 
 // Example:
@@ -1305,7 +1156,7 @@ function swapWithUnscheduledPaper(p1, s2, p2){
 				td,
 				'swapWithUnscheduledPaper',
 				tp);
-    Transact.addTransaction(t);		
+    Transact.addTransaction(t);
 }
 
 
@@ -1323,7 +1174,7 @@ function arraysEqual(arr1, arr2) {
 
 function keys(obj){
     var keys = [];
-    
+
     for(var key in obj){
 	if(obj.hasOwnProperty(key)){
 	    keys.push(key);
@@ -1360,7 +1211,7 @@ function isEmpty(map) {
 }
 
 // Populates all of the above variables and attaches personas
-// once the schedule is loaded from server 
+// once the schedule is loaded from server
 function initAfterScheduleLoads(m){
     schedule = m['schedule'];
     unscheduled = m['unscheduled'];
@@ -1378,7 +1229,7 @@ function initAfterScheduleLoads(m){
     allSessions = getAllSessions();
     allSubmissions = getAllSubmissions();
     allAuthors = getAllAuthors(); // only used for conflict display
-    
+
     // TODO: deal with personas
     //attachPersonas();  // loads personas from a file into schedule JSON
   //    initializeAuthorConflictsAmongSessions(); // this can be loaded from a file
@@ -1390,7 +1241,7 @@ function initAfterScheduleLoads(m){
     CCOps.initialize();
     //    }
     getAllConflicts();
-    
+
     // Traditional polling for now...
     if(!frontEndOnly){
 	db.refresh();
@@ -1425,7 +1276,7 @@ function unescapeURL(s) {
 
 // record where inconsistencies occur
 // change the internal data to update and bring everythign consistent
-//      
+//
 //
 function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSubmissions, serverSlots, serverTransactions){
     //    console.log(JSON.stringify(serverSchedule));
@@ -1435,10 +1286,10 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
     var unscheduledChange = [];
     var unscheduledSubmissionsChange = [];
     var consistent = true;
-    
+
     // check if there are new transactions
     var newTransactionIndices = [];
-    
+
     // for catching initial corner case
     if(transactions.length == 0 && serverTransactions.length > 0){
 	consistent = false;
@@ -1449,7 +1300,7 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
 	}
     }else{
 	for(var i = 0; i < serverTransactions.length; i++){
-	    if(parseInt(serverTransactions[i]['id']) > 
+	    if(parseInt(serverTransactions[i]['id']) >
 	       parseInt(transactions[transactions.length -1]['id'])){
 		consistent = false;
 		newTransactionIndices.push(transactions.length);
@@ -1458,13 +1309,13 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
 	    }
 	}
     }
-    
+
 //     if(!consistent){
 // 	// changing the data to reflect what's different
 // 	for(var day in schedule){
 // 	    for(var time in schedule[day]){
 // 		for(var room in schedule[day][time]){
-// 		    if(!arraysEqual(keys(schedule[day][time][room]).sort(), 
+// 		    if(!arraysEqual(keys(schedule[day][time][room]).sort(),
 // 				    keys(serverSchedule[day][time][room]).sort())){
 // 			// trigger the change here
 // 			$(document).trigger('slotChange', [day, time, room]);
@@ -1477,7 +1328,7 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
 // 			    }
 // 			    if(arraysEqual(subKeys, serverSchedule[day][time][room][s]['submissions'])){
 // 				// get rid of key where same
-// 				delete serverSchedule[day][time][room];			    
+// 				delete serverSchedule[day][time][room];
 // 			    }else{
 // 				$(document).trigger('sessionChange', [s, day, time, room]);
 // 			    }
@@ -1486,7 +1337,7 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
 // 		}
 // 	    }
 // 	}
-	
+
 // 	// Check for changes to locks
 // 	for(var day in scheduleSlots){
 // 	    for(var time in scheduleSlots[day]){
@@ -1498,30 +1349,30 @@ function checkConsistent(serverSchedule, serverUnscheduled, serverUnscheduledSub
 // 		}
 // 	    }
 // 	}
-	
+
 // 	if(!arraysEqual(keys(unscheduled).sort(),  keys(serverUnscheduled).sort())){
 // 	    // trigger a change in unscheduled data
 // 	    $(document).trigger('unscheduledChange');
 // 	}
-	
+
 // 	///// check if unscheduled papers match
 // 	if(!arraysEqual(keys(unscheduledSubmissions).sort(),  keys(serverUnscheduledSubmissions).sort())){
 // 	    // trigger a change in unscheduled submissions data
 // 	    $(document).trigger('unscheduledSubmissionsChange');
 // 	}
 //     }
-    
+
     if(!consistent){
 	// all changes are in the transactions data itself,
-	// at the new transactions indices. So trigger 
+	// at the new transactions indices. So trigger
 //	console.log("triggering serverScheduleChange with indices: ");
 //	console.log(newTransactionIndices);
-	$(document).trigger('serverScheduleChange', [newTransactionIndices]);    
+	$(document).trigger('serverScheduleChange', [newTransactionIndices]);
 //	for(var i = 0; i < newTransactionIndices.length; i++){
 //	    $(document).trigger('transactionUpdate', transactions[newTransactionIndices[i]]);
 //	}
     }
-    
+
     return { isConsistent: consistent,
 	    scheduleChange: serverSchedule,
 	    unscheduledChange: serverUnscheduled,
@@ -1569,17 +1420,17 @@ function getAllSubmissions(){
 // 	    for(var room in schedule[day][time]){
 // 		for(var session in schedule[day][time][room]){
 // 		    for(var submission in schedule[day][time][room][session]["submissions"]){
-			
-			
+
+
 // 			var id = schedule[day][time][room][session]["submissions"][submission]['id'];
-			
+
 // 			submissions[id] = schedule[day][time][room][session]["submissions"][submission];
 // 		    }
 // 		}
 // 	    }
 // 	}
 //     }
-    
+
 //     // get submissions in unscheduled sessions
 //     for(var s in unscheduled){
 // 	for (var submission in unscheduled[s]["submissions"]){
@@ -1620,7 +1471,7 @@ function randomizeSchedule(){
     //    return output;
 }
 
-// update author conflicts on particular sessions 
+// update author conflicts on particular sessions
 function updateAuthorConflicts(affectedSessions){
     for(var i  = 0; i < affectedSessions.length; i++){
 	var s1 = affectedSessions[i];
@@ -1651,7 +1502,7 @@ function initializeAuthorConflictsAmongSessions(){
 	    var s2 = sessionKeys[j];
 	    authorConflictsAmongSessions[s1][s2] = [];
 	}
-    }    
+    }
 
     // add conflicts
     for(var i  = 0; i < sessionKeys.length; i++){
@@ -1681,7 +1532,7 @@ function initializePersonaConflictsAmongSessions(){
 	    var s2 = sessionKeys[j];
 	    personaConflictsAmongSessions[s1][s2] = [];
 	}
-    }    
+    }
 
     // add conflicts
     for(var i  = 0; i < sessionKeys.length; i++){
@@ -1696,26 +1547,26 @@ function initializePersonaConflictsAmongSessions(){
 }
 
 // Computes a score for every possible session that s can swap with
-// TODO: may want to limit to not be able to swap to certain places (e.g., special sessions, etc.), 
+// TODO: may want to limit to not be able to swap to certain places (e.g., special sessions, etc.),
 //       so may need a filtered list of possible swap locations
 function proposeSwapForUnscheduled(s) {
     var swapValue = [];
 
-    // for each item, compute: 
+    // for each item, compute:
     // 1. number of conflicts caused by moving offending item to there
     // 2. number of conflicts mitigated by removing offeding item from there
     // 3. number of conflicts caused by moving item there to offending location
-    
+
     // calculate number of conflicts caused by moving item into another row
     var conflictsWithRow = {};
-    
+
     for(var day in schedule){
 	conflictsWithRow[day] = {}
 	for(var time in schedule[day]){
 	    conflictsWithRow[day][time] = {};
 	    conflictsWithRow[day][time]["sum"] = [];
 	    conflictsWithRow[day][time]["session"] = {};
-	    
+
 	    for(var room in schedule[day][time]){
 		// in case there are multiple sessions in a room, shouldn't be
 		for(var s2 in schedule[day][time][room]){
@@ -1725,11 +1576,11 @@ function proposeSwapForUnscheduled(s) {
 		    conflictsWithRow[day][time]["sum"] = conflictsWithRow[day][time]["sum"].concat(conflicts);
 		}
 	    }
-	    
+
 	    for(var room in schedule[day][time]){
 		// in case there are multiple sessions in a room, shouldn't be
 		for(var s2 in schedule[day][time][room]){
-		    
+
 		    // 1. number of conflicts caused by moving offending item to there
 		    var conflictsCausedByOffending = [];
 		    for(var i = 0; i < conflictsWithRow[day][time]["sum"].length; i++){
@@ -1741,15 +1592,15 @@ function proposeSwapForUnscheduled(s) {
 
 		    // 2. number of conflicts mitigated by removing offending item from there
 		    var conflictsCausedByCandidate = calculateConflictsCausedBy(allSessions[s2]);
-		            
+
 		    // 3. number of conflicts caused by moving item there to offending location
 		    var conflictsCausedByCandidateAtOffending = [];
-		    
+
 		    // 4. number of conflicts mitigated by moving offending items away
-		    // numConflictsCausedByItem 
-        
-		    var conflictsResolved = conflictsCausedByCandidate.length - 
-			conflictsCausedByOffending.length; 
+		    // numConflictsCausedByItem
+
+		    var conflictsResolved = conflictsCausedByCandidate.length -
+			conflictsCausedByOffending.length;
 		    swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
 						   conflictsResolved,
 						   null,
@@ -1771,16 +1622,16 @@ function proposeSwap(s) {
     // how many conflicts are caused by the offending item
     var conflictsCausedByItem = calculateConflictsCausedBy(s);
     var swapValue = [];
-    
-    // for each item, compute: 
+
+    // for each item, compute:
     // 1. number of conflicts caused by moving offending item to there
     // 2. number of conflicts mitigated by removing offeding item from there
     // 3. number of conflicts caused by moving item there to offending location
-    
-    
+
+
     // calculate number of conflicts caused by moving item into another row
     var conflictsWithRow = {};
-    
+
     for(var day in schedule){
 	conflictsWithRow[day] = {}
 	for(var time in schedule[day]){
@@ -1802,7 +1653,7 @@ function proposeSwap(s) {
 	    conflictsWithRow[day][time] = {};
 	    conflictsWithRow[day][time]["sum"] = [];
 	    conflictsWithRow[day][time]["session"] = {};
-	    
+
 	    for(var room in schedule[day][time]){
 		// in case there are multiple sessions in a room, shouldn't be
 		for(var s2 in schedule[day][time][room]){
@@ -1812,7 +1663,7 @@ function proposeSwap(s) {
 		    conflictsWithRow[day][time]["sum"] = conflictsWithRow[day][time]["sum"].concat(conflicts);
 		}
 	    }
-	    
+
 	    for(var room in schedule[day][time]){
 		// in case there are multiple sessions in a room, shouldn't be
 		for(var s2 in schedule[day][time][room]){
@@ -1830,24 +1681,24 @@ function proposeSwap(s) {
 
 		    // 2. number of conflicts mitigated by removing offending item from there
 		    var conflictsCausedByCandidate = calculateConflictsCausedBy(allSessions[s2]);
-		            
+
 		    // 3. number of conflicts caused by moving item there to offending location
 		    var conflictsCausedByCandidateAtOffending = [];
 		    for(var rs in schedule[s.date][s.time]){
 			if(rs == s.room) continue;
-			
+
 			for(var sk in schedule[s.date][s.time][rs]){
 			    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(authorConflictsAmongSessions[sk][s2]);
 			    conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(personaConflictsAmongSessions[sk][s2]);
 			}
 		    }
-		    
+
 		    // 4. number of conflicts mitigated by moving offending items away
-		    // numConflictsCausedByItem 
-        
-		    var conflictsResolved = conflictsCausedByCandidate.length + 
-			conflictsCausedByItem.length - 
-			conflictsCausedByOffending.length - 
+		    // numConflictsCausedByItem
+
+		    var conflictsResolved = conflictsCausedByCandidate.length +
+			conflictsCausedByItem.length -
+			conflictsCausedByOffending.length -
 			conflictsCausedByCandidateAtOffending.length;
 		    swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
 						   conflictsResolved,
@@ -1860,9 +1711,9 @@ function proposeSwap(s) {
 	    }
 	}
     }
-    
+
     return swapValue;
-    
+
 }
 
 
@@ -1872,12 +1723,12 @@ function proposeSwap(s) {
 function proposeSlot(s) {
     var moveValue = [];
 
-    // for each item, compute: 
+    // for each item, compute:
     // number of conflicts caused by moving offending item to there (empty slot)
-    
+
     // calculate number of conflicts caused by moving item into another row
     var conflictsWithRow = {};
-    
+
     for(var day in schedule){
 	conflictsWithRow[day] = {}
 	for(var time in schedule[day]){
@@ -1885,7 +1736,7 @@ function proposeSlot(s) {
 	    conflictsWithRow[day][time] = {};
 	    conflictsWithRow[day][time]["sum"] = [];
 	    conflictsWithRow[day][time]["session"] = {};
-	    
+
 	    for(var room in schedule[day][time]){
 		// in case there are multiple sessions in a room, shouldn't be
 		for(var s2 in schedule[day][time][room]){
@@ -1895,13 +1746,13 @@ function proposeSlot(s) {
 		    conflictsWithRow[day][time]["sum"] = conflictsWithRow[day][time]["sum"].concat(conflicts);
 		}
 	    }
-	    
+
 	    for(var room in schedule[day][time]){
 		// only consider rooms that are empty
 		if(keys(schedule[day][time][room]).length != 0) continue;
 
 		var conflictsCausedByOffending = conflictsWithRow[day][time]["sum"];
-		var conflictsResolved = -conflictsCausedByOffending.length;		
+		var conflictsResolved = -conflictsCausedByOffending.length;
 		if(s.id in unscheduled){
 		    // 1. number of conflicts caused by moving offending item to there
 		    moveValue.push(new swapDetails(new slot(day, time, room, null),
@@ -1920,7 +1771,7 @@ function proposeSlot(s) {
 						       null,
 						       null,
 						       null));
-		    }else{ // different day/time, consider conflicts removed by moving offending  
+		    }else{ // different day/time, consider conflicts removed by moving offending
 			var conflictsCausedByItem = calculateConflictsCausedBy(s);
 			conflictsResolved += conflictsCausedByItem.length;
 			moveValue.push(new swapDetails(new slot(day, time, room, null),
@@ -1961,7 +1812,7 @@ function proposeSlotAndSwapOld(s){
 	return {slotValue: slotValue,
 		swapValue: swapValue};
     }else {
-	// todo: only works for already scheduled sessions 
+	// todo: only works for already scheduled sessions
 	var slotValue = proposeSlot(s);
 	var swapValue = proposeSwap(s);
 	return {slotValue: slotValue,
@@ -1976,7 +1827,7 @@ function proposeSessionForSlot(day, time, room){
 //    }
 }
 
-function proposeSessionForSlotOld(day, time, room){  
+function proposeSessionForSlotOld(day, time, room){
     var scheduleValue = proposeScheduledSessionForSlot(day,time,room);
     var unscheduleValue = proposeUnscheduledSessionForSlot(day,time,room);
     return {scheduleValue: scheduleValue,
@@ -2006,7 +1857,7 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
 		conflictsWithSession[s] = conflictsWithSession[s].concat(conflicts);
 	    }
 	}
-	
+
 	moveValue.push(new swapDetails(new slot(null, null, null, s),
 				       -conflictsWithSession[s].length,
 				       null,
@@ -2021,10 +1872,10 @@ function proposeUnscheduledSessionForSlot(day, time, room) {
 function proposeScheduledSessionForSlot(sdate, stime, sroom) {
       var swapValue = [];
 
-      // for each item, compute: 
+      // for each item, compute:
       // 2. number of conflicts mitigated by removing offending item from there
       // 3. number of conflicts caused by moving item there to offending location
-      
+
       for(var day in schedule){
 	  for(var time in schedule[day]){
 	      if(day == sdate && time == stime) {
@@ -2041,29 +1892,29 @@ function proposeScheduledSessionForSlot(sdate, stime, sroom) {
 		  }
 		  continue;
 	      }
-	      
+
 	      for(var room in schedule[day][time]){
 		  // in case there are multiple sessions in a room, shouldn't be
 		  for(var s2 in schedule[day][time][room]){
-		      
+
 		      // 2. number of conflicts mitigated by removing offending item from there
 		      var conflictsCausedByCandidate = calculateConflictsCausedBy(allSessions[s2]);
-		            
+
 		      // 3. number of conflicts caused by moving item there to offending location
 		      var conflictsCausedByCandidateAtOffending = [];
 		      for(var rs in schedule[sdate][stime]){
 			  if(rs == sroom) continue;
-			  
+
 			  for(var sk in schedule[sdate][stime][rs]){
 			      conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(authorConflictsAmongSessions[sk][s2]);
 			      conflictsCausedByCandidateAtOffending = conflictsCausedByCandidateAtOffending.concat(personaConflictsAmongSessions[sk][s2]);
 			  }
 		      }
-		      
+
 		      // 4. number of conflicts mitigated by moving offending items away
-		      // numConflictsCausedByItem 
-		      
-		      var conflictsResolved = conflictsCausedByCandidate.length - 
+		      // numConflictsCausedByItem
+
+		      var conflictsResolved = conflictsCausedByCandidate.length -
 			  conflictsCausedByCandidateAtOffending.length;
 		      swapValue.push(new swapDetails(new slot(allSessions[s2].date, allSessions[s2].time, allSessions[s2].room, s2),
 						     conflictsResolved,
@@ -2076,7 +1927,7 @@ function proposeScheduledSessionForSlot(sdate, stime, sroom) {
 	      }
 	  }
       }
-    
+
     return swapValue;
 }
 
@@ -2085,20 +1936,20 @@ function calculateConflictsCausedBy(s){
 
     var conflicts = [];
     // todo: add an error check if s is empty
-      
+
     // assume conflicts already initialized
     // assume allRooms initialized
 
     // look for conflicts at same date and time
     var day = s.date;
     var time = s.time;
-    
+
     for(var room in schedule[day][time]){
 	// in case there are multiple sessions in a room, shouldn't be
 	for(var s2 in schedule[day][time][room]){
 	    if(allSessions[s2] != s){
 		var authorConflicts = computeAuthorConflicts(s, allSessions[s2]);
-		var personaConflicts = computePersonaConflicts(s, allSessions[s2]); 
+		var personaConflicts = computePersonaConflicts(s, allSessions[s2]);
 		// write into conflicts at day, time, room
 		conflicts = conflicts.concat(authorConflicts);
 		conflicts = conflicts.concat(personaConflicts);
@@ -2110,22 +1961,22 @@ function calculateConflictsCausedBy(s){
 
 
 // // Computes a score for every possible session that s can swap with
-// // TODO: may want to limit to not be able to swap to certain places (e.g., special sessions, etc.), 
+// // TODO: may want to limit to not be able to swap to certain places (e.g., special sessions, etc.),
 // //       so may need a filtered list of possible swap locations
 // function proposeSwapValues(s) {
 //     // how many conflicts are caused by the offending item
 //     var numConflictsCausedByItem = calculateNumConflictsCausedBy(s);
 //     var swapValue = {};
 
-//     // for each item, compute: 
+//     // for each item, compute:
 //     // 1. number of conflicts caused by moving offending item to there
 //     // 2. number of conflicts mitigated by removing offeding item from there
 //     // 3. number of conflicts caused by moving item there to offending location
-  
-    
+
+
 //     // calculate number of conflicts caused by moving item into another row
 //     var conflictsWithRow = {};
-    
+
 //     for(var day in schedule){
 // 	conflictsWithRow[day] = {}
 // 	for(var time in schedule[day]){
@@ -2133,52 +1984,52 @@ function calculateConflictsCausedBy(s){
 // 	    conflictsWithRow[day][time] = {};
 // 	    conflictsWithRow[day][time]["sum"] = 0;
 // 	    conflictsWithRow[day][time]["session"] = {};
-	    
+
 // 	    for(var room in schedule[day][time]){
 // 		// in case there are multiple sessions in a room, shouldn't be
 // 		for(var s2 in schedule[day][time][room]){
-// 		    var numConflicts = authorConflictsAmongSessions[s.id][s2].length + 
+// 		    var numConflicts = authorConflictsAmongSessions[s.id][s2].length +
 // 			personaConflictsAmongSessions[s.id][s2].length;
 // 		    conflictsWithRow[day][time]["session"][s2] = numConflicts;
 // 		    conflictsWithRow[day][time]["sum"] += numConflicts;
 // 		}
 // 	    }
-	    
+
 // 	    for(var room in schedule[day][time]){
 // 		// in case there are multiple sessions in a room, shouldn't be
 // 		for(var s2 in schedule[day][time][room]){
-		    
+
 // 		    // 1. number of conflicts caused by moving offending item to there
-// 		    var numConflictsCausedByOffending = conflictsWithRow[day][time]["sum"] - 
+// 		    var numConflictsCausedByOffending = conflictsWithRow[day][time]["sum"] -
 // 			conflictsWithRow[day][time]["session"][s2];
-		    
+
 // 		    // 2. number of conflicts mitigated by removing offending item from there
 // 		    var numConflictsCausedByCandidate = calculateNumConflictsCausedBy(allSessions[s2]);
-		            
+
 // 		    // 3. number of conflicts caused by moving item there to offending location
 // 		    var numConflictsCausedByCandidateAtOffending = 0;
 // 		    for(var rs in schedule[s.date][s.time]){
 // 			if(rs == s.room) continue;
-			
+
 // 			for(var sk in schedule[s.date][s.time][rs]){
 // 			    numConflictsCausedByCandidateAtOffending += authorConflictsAmongSessions[sk][s2].length;
 // 			    numConflictsCausedByCandidateAtOffending += personaConflictsAmongSessions[sk][s2].length;
 // 			}
 // 		    }
-		    
+
 // 		    // 4. number of conflicts mitigated by moving offending items away
-// 		    // numConflictsCausedByItem 
-        
-// 		    var conflictsResolved = numConflictsCausedByCandidate + 
-// 			numConflictsCausedByItem - 
-// 			numConflictsCausedByOffending - 
+// 		    // numConflictsCausedByItem
+
+// 		    var conflictsResolved = numConflictsCausedByCandidate +
+// 			numConflictsCausedByItem -
+// 			numConflictsCausedByOffending -
 // 			numConflictsCausedByCandidateAtOffending;
 // 		    swapValue[s2] = conflictsResolved;
 // 		}
 // 	    }
 // 	}
 //     }
-    
+
 //     return swapValue;
 
 // }
@@ -2187,20 +2038,20 @@ function calculateNumConflictsCausedBy(s){
 
     var numConflicts = 0;
     // todo: add an error check if s is empty
-      
+
     // assume conflicts already initialized
     // assume allRooms initialized
 
     // look for conflicts at same date and time
     var day = s.date;
     var time = s.time;
-    
+
     for(var room in schedule[day][time]){
 	// in case there are multiple sessions in a room, shouldn't be
 	for(var s2 in schedule[day][time][room]){
 	    if(allSessions[s2] != s){
 		var authorConflicts = computeAuthorConflicts(s, allSessions[s2]);
-		var personaConflicts = computePersonaConflicts(s, allSessions[s2]); 
+		var personaConflicts = computePersonaConflicts(s, allSessions[s2]);
 		// write into conflicts at day, time, room
 		numConflicts += authorConflicts.length;
 		numConflicts += personaConflicts.length;
@@ -2215,7 +2066,7 @@ function getAllConflicts(){
 //	console.log("starting getAllConflicts");
     conflictsBySession = CCOps.getAllConflicts().sessions;
     //	console.log("get all conflicts just got called");
-    return;    
+    return;
 }
 
 function getAllConflictsOld(){
@@ -2240,19 +2091,19 @@ function getAllConflictsOld(){
 			// in case there are multiple sessions in a room, shouldn't be
 			for(var s2 in schedule[day][time][roomKeys[j]]){
 			    // no author should be in two rooms at once
-			    			    
+
 			    var authorConflicts = computeAuthorConflicts(allSessions[s1], allSessions[s2]);
-			    var personaConflicts = computePersonaConflicts(allSessions[s1], allSessions[s2]); 
-			
+			    var personaConflicts = computePersonaConflicts(allSessions[s1], allSessions[s2]);
+
 			    // write into conflicts at day, time, room
 			    if(authorConflicts.length > 0){
-				conflicts["datetime"][day][time] = 
+				conflicts["datetime"][day][time] =
 				    conflicts["datetime"][day][time].concat(authorConflicts);
 				conflicts["sessions"][s1] = conflicts["sessions"][s1].concat(authorConflicts);
 				conflicts["sessions"][s2] = conflicts["sessions"][s2].concat(authorConflicts);
 			    }
 			    if(personaConflicts.length > 0){
-				conflicts["datetime"][day][time] = 
+				conflicts["datetime"][day][time] =
 				    conflicts["datetime"][day][time].concat(personaConflicts);
 				conflicts["sessions"][s1] = conflicts["sessions"][s1].concat(personaConflicts);
 				conflicts["sessions"][s2] = conflicts["sessions"][s2].concat(personaConflicts);
@@ -2274,7 +2125,7 @@ function proposePaperSessionAndSwap(p){
 //	console.log("relying on CCOps propose");
 	return CCOps.proposePaperSessionAndSwap(p);
 //    }
-}  
+}
 
 function proposePaperSessionAndSwapOld(p){
     if(p.id in unscheduledSubmissions){
@@ -2283,7 +2134,7 @@ function proposePaperSessionAndSwapOld(p){
 	return {sessionValue: sessionValue,
 		swapValue: swapValue};
     }else {
-	// todo: only works for already scheduled sessions 
+	// todo: only works for already scheduled sessions
 	var sessionValue = proposeSessionForPaper(p);
 	var swapValue = proposeSwapForPaper(p);
 	return {sessionValue: sessionValue,
@@ -2298,7 +2149,7 @@ function proposePaperForSession(s){
 //    }
 }
 
-function proposePaperForSessionOld(s){    
+function proposePaperForSessionOld(s){
     var scheduleValue = proposeScheduledPaperForSession(s);
     var unscheduleValue = proposeUnscheduledPaperForSession(s);
     return {scheduleValue: scheduleValue,
@@ -2313,7 +2164,7 @@ function proposeSessionForPaper(p){
 	    for(var room in schedule[day][time]){
 		for(var session in schedule[day][time][room]){
 		    if ((schedule[day][time][room][session]["venue"] == p.type ||
-			 (p.type == "TOCHI" && schedule[day][time][room][session]["venue"] == "paper")) && 
+			 (p.type == "TOCHI" && schedule[day][time][room][session]["venue"] == "paper")) &&
 			(p.id in unscheduledSubmissions || p.session != session)){
 			swapValue.push(new swapDetails(new sessionPaper(session, null),
 						       0,
@@ -2326,10 +2177,10 @@ function proposeSessionForPaper(p){
 	    }
 	}
     }
-    
+
     for(var session in unscheduled){
 	if ((unscheduled[session]["venue"] == p.type ||
-	     (p.type == "TOCHI" && unscheduled[session]["venue"] == "paper")) && 
+	     (p.type == "TOCHI" && unscheduled[session]["venue"] == "paper")) &&
 	    (p.id in unscheduledSubmissions || p.session != session)){
 	    	swapValue.push(new swapDetails(new sessionPaper(session, null),
 					       0,
@@ -2352,7 +2203,7 @@ function proposeSwapForUnscheduledPaper(p){
 		    if ((schedule[day][time][room][session]["venue"] == p.type ||
 			 (p.type == "TOCHI" && schedule[day][time][room][session]["venue"] == "paper"))){
 			for(var submission in schedule[day][time][room][session]['submissions']){
-			    swapValue.push(new swapDetails(new sessionPaper(session, 
+			    swapValue.push(new swapDetails(new sessionPaper(session,
 									    schedule[day][time][room][session]['submissions'][submission]['id']),
 							   0,
 							   null,
@@ -2370,7 +2221,7 @@ function proposeSwapForUnscheduledPaper(p){
 		    if ((schedule[day][time][room][session]["venue"] == p.type ||
 			 (p.type == "TOCHI" && schedule[day][time][room][session]["venue"] == "paper"))){
 			for(var submission in schedule[day][time][room][session]['submissions']){
-			    swapValue.push(new swapDetails(new sessionPaper(session, 
+			    swapValue.push(new swapDetails(new sessionPaper(session,
 									    schedule[day][time][room][session]['submissions'][submission]['id']),
 							   0,
 							   null,
@@ -2385,7 +2236,7 @@ function proposeSwapForUnscheduledPaper(p){
 	if ((unscheduled[session]["venue"] == p.type ||
 	     (p.type == "TOCHI" && unscheduled[session]["venue"] == "paper"))){
 	    for(var submission in unscheduled[session]["submissions"]){
-	    	swapValue.push(new swapDetails(new sessionPaper(session, 
+	    	swapValue.push(new swapDetails(new sessionPaper(session,
 								unscheduled[session]["submissions"][submission]['id']),
 					       0,
 					       null,
@@ -2407,7 +2258,7 @@ function proposeSwapForPaper(p){
 		for(var session in schedule[day][time][room]){
 
 		    if ((schedule[day][time][room][session]["venue"] == p.type ||
-			 (p.type == "TOCHI" && schedule[day][time][room][session]["venue"] == "paper")) 
+			 (p.type == "TOCHI" && schedule[day][time][room][session]["venue"] == "paper"))
 			&& (p.session != session)){
 			for(var submission in schedule[day][time][room][session]['submissions']){
 			    //    console.log(session,    schedule[day][time][room][session]['submissions'][submission]['id']);
@@ -2432,7 +2283,7 @@ function proposeSwapForPaper(p){
 	if ((unscheduled[session]["venue"] == p.type ||
 	     (p.type == "TOCHI" && unscheduled[session]["venue"] == "paper"))){
 	    for(var submission in unscheduled[session]["submissions"]){
-	    	swapValue.push(new swapDetails(new sessionPaper(session, 
+	    	swapValue.push(new swapDetails(new sessionPaper(session,
 								unscheduled[session]["submissions"][submission]['id']),
 					       0,
 					       null,
@@ -2442,7 +2293,7 @@ function proposeSwapForPaper(p){
 	    }
 	}
     }
-    
+
 
     return swapValue;
 }
@@ -2475,8 +2326,8 @@ function proposeScheduledPaperForSession(s){
 function proposeUnscheduledPaperForSession(s){
     var swapValue = [];
     for (var p in unscheduledSubmissions){
-	if (unscheduledSubmissions[p].type == s.venue || 
-	    (unscheduledSubmissions[p].type == "TOCHI" && s.venue == "paper")){ 
+	if (unscheduledSubmissions[p].type == s.venue ||
+	    (unscheduledSubmissions[p].type == "TOCHI" && s.venue == "paper")){
 
 	    swapValue.push(new swapDetails(new sessionPaper(null, p),
 					   0,
@@ -2513,11 +2364,11 @@ function getSessionAuthors(s){
 	for(var author in s["submissions"][submission]["authors"]){
 	    // Let's return the name of the author
 	    if(!(author in authors)){
-		authors[author] = s["submissions"][submission]["authors"][author]['firstName'] + " " + 
+		authors[author] = s["submissions"][submission]["authors"][author]['firstName'] + " " +
 		    s["submissions"][submission]["authors"][author]['lastName'];
 		    //1;
 	    }else{
-		authors[author] = s["submissions"][submission]["authors"][author]['firstName'] + " " + 
+		authors[author] = s["submissions"][submission]["authors"][author]['firstName'] + " " +
 		    s["submissions"][submission]["authors"][author]['lastName'];
 		//+= 1;
 	    }
@@ -2578,14 +2429,14 @@ function computeAuthorConflicts(s1, s2){
     var conflicts = [];
     var s1authors = getSessionAuthors(s1);
     var s2authors = getSessionAuthors(s2);
-  
+
     for(var s1author in s1authors){
 	for(var s2author in s2authors){
 	    if(s1author == s2author){
-		conflicts.push(new conflictObject([s1.id, s2.id], 
-						  "authorInTwoSessions", 
-						  s1author, 
-						  s1authors[s1author] + " is in both '" + s1.title + 
+		conflicts.push(new conflictObject([s1.id, s2.id],
+						  "authorInTwoSessions",
+						  s1author,
+						  s1authors[s1author] + " is in both '" + s1.title +
 						  "' and '" + s2.title + "'\n"));
 	    }
 	}
@@ -2597,24 +2448,24 @@ function computePersonaConflicts(s1, s2){
     var conflicts = [];
     var s1personas = getSessionPersonas(s1);
     var s2personas = getSessionPersonas(s2);
-  
+
     if(s1personas == s2personas && s1personas != null){
 	// for handling misc persona
 	if(s1personas != 'Misc'){
-	    conflicts.push(new conflictObject([s1.id, s2.id], 
-					      "personaInTwoSessions", 
+	    conflicts.push(new conflictObject([s1.id, s2.id],
+					      "personaInTwoSessions",
 					      s1personas,
-					      "Someone interested in '" + s1personas + "' may want to see both '" + s1.title + 
+					      "Someone interested in '" + s1personas + "' may want to see both '" + s1.title +
 					      "' and '" + s2.title + "'"));
 	}
     }
     //    for(var s1persona in s1personas){
     //	for(var s2persona in s2personas){
     //	    if(s1persona == s2persona){
-    //	conflicts.push(new conflictObject([s1.id, s2.id], 
-    // 					  "personaInTwoSessions", 
+    //	conflicts.push(new conflictObject([s1.id, s2.id],
+    // 					  "personaInTwoSessions",
     // 						  personaHash[s1persona],
-    // 						  "Someone interested in " + personaHash[s1persona] + " may want to see both '" + s1.title + 
+    // 						  "Someone interested in " + personaHash[s1persona] + " may want to see both '" + s1.title +
     // 						  "' and '" + s2.title + "'"));
 // 	    }
 // 	}
@@ -2667,7 +2518,7 @@ function attachPersonas(){
 	 var scheduleMatrix = [];
 	 var rooms = allRooms;
 	 var numRooms = keys(rooms).length;
-	 
+
 	 var days = keys(schedule).sort(function(a,b) {
 		 return parseInt(a.split(' ')[1]) - parseInt(b.split(' ')[1])
 	     });
@@ -2677,7 +2528,7 @@ function attachPersonas(){
 		 var scheduleAtTime = [day, time];
 		 for(var j = 0; j < numRooms; j++){
 		     scheduleAtTime.push("");
-		 }   
+		 }
 		 for(var room in schedule[day][time]){
 		     if(keys(schedule[day][time][room]).length == 0){
 			 scheduleAtTime[rooms[room]+2] = -1;
@@ -2695,9 +2546,9 @@ function attachPersonas(){
 
 function displayProgram(sm){
     var table = document.createElement('table');
-    
+
     var orderedRooms = keys(allRooms).sort(function(a,b) { return allRooms[a] - allRooms[b];});
-    
+
     var header = document.createElement('tr');
     // leave one empty for 1st column
     var firstcell = document.createElement('td');
@@ -2708,21 +2559,21 @@ function displayProgram(sm){
 	$(header).append(cell);
     }
     $(table).append(header);
-    
+
     for(var i = 0; i < sm.length; i++){
 	var row = document.createElement('tr');
-	
+
 	// add the conflicts
 	var conflict = document.createElement('td');
 	$(conflict).append(conflictsByTime[sm[i][0]][sm[i][1]].map(function(co) {return co.description}).join("<br/><br/>"));
-	
+
 	$(row).append(conflict);
-	
+
 
 	var slot = document.createElement('td');
 	$(slot).append(sm[i][0] + ", " + sm[i][1]);
 	$(row).append(slot);
-	
+
 	for(var j = 2; j < sm[i].length; j++){
 	    var cell = document.createElement('td');
 	    if(sm[i][j] != ""){

@@ -19,15 +19,15 @@
             $text.attr("contenteditable", true);
             $text.trigger("focus");
             $(this).html("save");
-        } else {            
+        } else {
             $text.attr("contenteditable", false);
             $(this).html("edit");
             var id = $(this).attr("data-session-id");
             // console.log("change", id, $text.html());
             if (typeof id !== "undefined"){
-                editSessionTitle(allSessions[id], $text.html());    
+                editSessionTitle(allSessions[id], $text.html());
             }
-            
+
         }
     });
 
@@ -47,7 +47,7 @@
 
 
     $("body").on("click", ".session-link", function(){
-        var id = $(this).attr("data-session-id");      
+        var id = $(this).attr("data-session-id");
         var $cell;
         if (typeof id === "undefined" || id == "null") {
             $cell = findCellByDateTimeRoom($(this).attr("data-slot-date"), $(this).attr("data-slot-time"), $(this).attr("data-slot-room"));
@@ -57,9 +57,9 @@
         $("body").animate({
             scrollTop:$cell.offset().top - 100
         }, 500, function(){
-            $cell.css("z-index", "auto");    
+            $cell.css("z-index", "auto");
             $cell.css("position", "static");
-        });         
+        });
         $cell.effect("highlight", {color: "#aec7e8 !important"}, 3000);
         $cell.css("z-index", "1011");
         $cell.css("position", "relative");
@@ -80,14 +80,14 @@
         $("body").animate({
             scrollTop:$cell.offset().top - 100
         }, 500, function(){
-            $cell.css("z-index", "auto");   
-            $cell.css("position", "static"); 
-        });    
-        $cell.effect("highlight", {color: "#aec7e8"}, 3000);  
-        $cell.css("z-index", "1011");          
+            $cell.css("z-index", "auto");
+            $cell.css("position", "static");
+        });
+        $cell.effect("highlight", {color: "#aec7e8"}, 3000);
+        $cell.css("z-index", "1011");
         $cell.css("position", "relative");
         if ($("#" + paperId).length > 0)
-            $("#" + paperId).effect("highlight", {color: "#aec7e8 !important"}, 3000);            
+            $("#" + paperId).effect("highlight", {color: "#aec7e8 !important"}, 3000);
         return false;
     });
 
@@ -103,14 +103,14 @@
         $("body").animate({
             scrollTop:$cell.offset().top - 100
         }, 500, function(){
-            $cell.css("z-index", "auto");   
-            $cell.css("position", "static"); 
-        });    
-        $cell.effect("highlight", {color: "#aec7e8"}, 3000);  
-        $cell.css("z-index", "1011");          
+            $cell.css("z-index", "auto");
+            $cell.css("position", "static");
+        });
+        $cell.effect("highlight", {color: "#aec7e8"}, 3000);
+        $cell.css("z-index", "1011");
         $cell.css("position", "relative");
         if ($("#" + chairId).length > 0)
-            $("#" + chairId).effect("highlight", {color: "#aec7e8 !important"}, 3000);            
+            $("#" + chairId).effect("highlight", {color: "#aec7e8 !important"}, 3000);
         return false;
     });
 
@@ -130,11 +130,11 @@
         var element = document.createElement("ul");
         $(element).addClass("list-submissions");
         $.each(session.submissions, function(index, submission){
-            $(element).append(getSubmissionDetail(mode, "scheduled", submission, srcType, session));                    
+            $(element).append(getSubmissionDetail(mode, "scheduled", submission, srcType, session));
         });
         if (mode != "move") // do not show empty submission when move
-            $(element).append(getSubmissionDetail(mode, "empty", null, srcType, session));    
-        return outerHTML(element); 
+            $(element).append(getSubmissionDetail(mode, "empty", null, srcType, session));
+        return outerHTML(element);
     }
 
     // aggregator for calling getChairDetail
@@ -143,7 +143,7 @@
             return;
         var chairIds = allSessions[session.id].chairs;
         if (chairIds == "")
-            return getChairDetail(mode, "empty", null, srcType, session);    
+            return getChairDetail(mode, "empty", null, srcType, session);
         else{
 	    chairIds = chairIds.split(',');
 	    var details = "";
@@ -189,7 +189,7 @@
         }
 
         // Display conflicts
-        if (typeof session !== "undefined" && session != null && typeof session.id !== "undefined" && session.id != null) {            
+        if (typeof session !== "undefined" && session != null && typeof session.id !== "undefined" && session.id != null) {
             $(element).append(Conflicts.displayViewModeSessionFullConflicts(session.id));
             if (Features.chair)
                 $(element).append(getChairList("view", session));
@@ -232,7 +232,7 @@
                 $(element).append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session)));
                 if (Features.chair){
                     $(element).append(getChairList("move", session));
-                }                
+                }
                 $(element).append(getSubmissionList("move", session));
             } else if (type == "unscheduled"){
                 console.log("Not supported");
@@ -245,7 +245,7 @@
                 }
                 $(element).append($(_getCancelButton())).append("<br>")
                 $(element).append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session)));
-            }             
+            }
         } else if (srcType == "unscheduled") {
             if (type == "scheduled"){
                 if (isLocked)
@@ -256,8 +256,8 @@
                 $(element).append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session)));
                 if (Features.chair){
                     $(element).append(getChairList("move", session));
-                }                
-                $(element).append(getSubmissionList("move", session));                       
+                }
+                $(element).append(getSubmissionList("move", session));
             } else if (type == "unscheduled"){
                 console.log("Not supported");
             } else if (type == "empty"){
@@ -268,7 +268,7 @@
                     .attr("data-date", session.date).attr("data-time", session.time).attr("data-room", session.room).html("Schedule in this slot").appendTo($(element));
                 }
                 $(element).append($(_getCancelButton())).append("<br>")
-                $(element).append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session))); 
+                $(element).append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session)));
             }
         } else if (srcType == "empty") {
             if (type == "scheduled"){
@@ -280,8 +280,8 @@
                 $(element).append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session)));
                 if (Features.chair){
                     $(element).append(getChairList("move", session));
-                }                
-                $(element).append(getSubmissionList("move", session));                       
+                }
+                $(element).append(getSubmissionList("move", session));
             } else if (type == "unscheduled"){
                 if (isLocked)
                     $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
@@ -291,10 +291,10 @@
                 $(element).append(Conflicts.displayMoveModeSessionFullConflicts(MoveMode.getSwapValueBySession(session)))
                 if (Features.chair){
                     $(element).append(getChairList("move", session));
-                }                
-                $(element).append(getSubmissionList("move", session));                    
+                }
+                $(element).append(getSubmissionList("move", session));
             } else if (type == "empty"){
-                console.log("Not supported");   
+                console.log("Not supported");
             }
         }
         //console.log(element.outerHTML);
@@ -311,12 +311,12 @@
         }
         if (isLocked)
             $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
-        
+
         $(element).append($(_getCancelButton())).append("<br>");
         if (Features.chair)
             $(element).append(getChairList("paperMove", session));
         $(element).append(getSubmissionList("paperMove", session, srcType));
-        
+
         /*
         if (srcType == "paper-scheduled"){
             if (type == "scheduled"){
@@ -328,30 +328,30 @@
                 //$("<button/>").attr("id", "move-button").addClass("btn btn-primary")
                 //    .data("date", session.date).data("time", session.time).data("room", session.room).html("Move to this slot").appendTo($(element));
                 $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));
-            } 
+            }
 
         } else if (srcType == "paper-unscheduled") {
             if (type == "scheduled"){
                 //$("<button/>").attr("id", "swap-with-unscheduled-button").addClass("btn btn-primary").data("session-id", session.id).html("Swap with this session").appendTo($(element));
-                $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));                           
+                $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));
             } else if (type == "unscheduled"){
-                $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));    
+                $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));
             } else if (type == "empty"){
                 //$("<button/>").attr("id", "schedule-button").addClass("btn btn-primary")
                 //    .data("date", session.date).data("time", session.time).data("room", session.room).html("Schedule in this slot").appendTo($(element));
-                $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));    
+                $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));
             }
 
         } else if (srcType == "paper-empty") {
             if (type == "scheduled"){
                 //$("<button/>").attr("id", "move-button").addClass("btn btn-primary").data("session-id", session.id).html("Move this session").appendTo($(element));
-                $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));                        
+                $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));
             } else if (type == "unscheduled"){
                 //$("<button/>").attr("id", "schedule-button").addClass("btn btn-primary").data("session-id", session.id).html("Schedule this session").appendTo($(element));
                 $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));
             } else if (type == "empty"){
                 $(element).append($(_getCancelButton())).append("<br>").append(getSubmissionList("paperMove", session, srcType));
-                // console.log("Not supported");   
+                // console.log("Not supported");
             }
         }
         */
@@ -369,7 +369,7 @@
         }
         if (isLocked)
             $("<div/>").addClass("alert alert-info").append("<strong>This is a locked session. Unlock to change the schedule.</strong>").appendTo($(element));
-        
+
         $(element).append($(_getCancelButton())).append("<br>");
         if (Features.chair)
             $(element).append(getChairList("chairMove", session, srcType));
@@ -395,7 +395,8 @@
 
     // get html for a submission in the view mode
     function _getViewSubmissionDetail(type, submission, session){
-        var element; 
+        console.log(submission, session);
+        var element;
         var isLocked = false;
         // if the session is a single submission type special session (sig, panel, bof, ...), do not display buttons
         var isSpecial = false;
@@ -428,7 +429,7 @@
             $(element).append(Conflicts.displayViewModeSubmissionFullConflicts(session, submission));
 
             // html += "<li class='submission' id='" + submission.id
-            //      +"'><span class='reorder-icon'/> <span class='submission-type'>" + type + "</span> <button class='btn btn-mini button-paper-unschedule'>Unschedule</button> <button class='btn btn-mini button-paper-propose-scheduled'>Propose Move</button><br>" 
+            //      +"'><span class='reorder-icon'/> <span class='submission-type'>" + type + "</span> <button class='btn btn-mini button-paper-unschedule'>Unschedule</button> <button class='btn btn-mini button-paper-propose-scheduled'>Propose Move</button><br>"
             //      + "<strong>" + submission.title + "</strong><br>"
             //      + displayAuthors(submission.authors) + "</li>";
         } else if (type == "unscheduled") {
@@ -462,7 +463,7 @@
 //                $("<button/>").addClass("btn btn-small button-paper-propose-empty").html("<span class='icon-plus'/> Propose a paper to add").appendTo($(element));
             }
             // html += "<li class='submission-empty'><button class='btn btn-small button-paper-propose-empty'><span class='icon-plus'/> Propose a paper to add</button></li>";
-        } else 
+        } else
             document.createElement("div");
         return element;
     }
@@ -513,9 +514,9 @@
         // unscheduled: session null, submission id
         if (type == "unscheduled" && session == null){
             isProposed = typeof $("#"+submission.id).attr("data-proposed-swap-paper") !== "undefined";
-            // if (typeof $("#"+submission.id).find(".swap-total").attr("data-best-submission") !== "undefined" 
+            // if (typeof $("#"+submission.id).find(".swap-total").attr("data-best-submission") !== "undefined"
             //     && $("#"+submission.id).find(".swap-total").attr("data-best-submission") == "null")
-            //     isRecommended = true;            
+            //     isRecommended = true;
             // console.log(null, submission.id, isProposed);
         // empty: session id, submission null
         } else if (type == "empty" && submission == null){
@@ -527,7 +528,7 @@
                 // because attr returns all strings, "null" not null is returned.
                 isProposed = $.inArray("null", proposedList) !== -1;
             }
-            if (typeof $session.find(".swap-total").attr("data-best-submission") !== "undefined" 
+            if (typeof $session.find(".swap-total").attr("data-best-submission") !== "undefined"
                 && $session.find(".swap-total").attr("data-best-submission") == "null")
                 isRecommended = true;
             // console.log(session.id, null, isProposed, proposedList);
@@ -540,9 +541,9 @@
                 proposedList = $session.attr("data-proposed-swap-paper").split(",");
                 isProposed = $.inArray(submission.id, proposedList) !== -1;
             }
-            if (typeof $session.find(".swap-total").attr("data-best-submission") !== "undefined" 
+            if (typeof $session.find(".swap-total").attr("data-best-submission") !== "undefined"
                 && $session.find(".swap-total").attr("data-best-submission") == submission.id)
-                isRecommended = true;            
+                isRecommended = true;
             // console.log(session.id, submission.id, isProposed);
         } else {
             // console.log(session, submission, isProposed, type, srcType);
@@ -578,13 +579,13 @@
                 if (isProposed){
                     element = document.createElement("li");
                     $(element).addClass("submission-empty");
-                    if (!isLocked)     
+                    if (!isLocked)
                         $("<button/>").addClass("btn btn-small button-paper-move").html("<span class='icon-plus'/> Move to this slot").appendTo($(element));
                     $(element).append(Conflicts.displayMoveModeSubmissionFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
                 } else {
                     element = document.createElement("div");
                 }
-            } 
+            }
         } else if (srcType == "paper-unscheduled") {
             if (type == "scheduled"){
                 var stype = (submission.type == "paper") ? submission.subtype : submission.type;
@@ -612,7 +613,7 @@
                 if (isProposed) {
                     element = document.createElement("li");
                     $(element).addClass("submission-empty");
-                    if (!isLocked)     
+                    if (!isLocked)
                         $("<button/>").addClass("btn btn-small button-paper-schedule").html("<span class='icon-plus'/> Schedule in this slot").appendTo($(element));
                     $(element).append(Conflicts.displayMoveModeSubmissionFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
                 } else {
@@ -643,15 +644,15 @@
                 if (isProposed) {
                     element = document.createElement("li");
                     // $(element).addClass("submission-empty").css("list-style-type", "none");
-                    $(element).css("list-style-type", "none");  
-                    if (!isLocked)                       
+                    $(element).css("list-style-type", "none");
+                    if (!isLocked)
                         $("<button/>").addClass("btn btn-small button-paper-schedule").html("<span class='icon-plus'/> Schedule this paper").appendTo($(element));
                     $("<br/><br/>").appendTo($(element));
                     if (submission.bestPaperAward)
                         $("<span/>").addClass("awards").html("<img src='img/best-paper.png' class='icon'/>").appendTo($(element));
                     if (submission.bestPaperNominee)
-                        $("<span/>").addClass("awards").html("<img src='img/nominee.png' class='icon'/>").appendTo($(element));                    
-                    $("<span/>").html("<strong>Authors</strong>: " + displayAuthors(submission.authors)).appendTo($(element));                    
+                        $("<span/>").addClass("awards").html("<img src='img/nominee.png' class='icon'/>").appendTo($(element));
+                    $("<span/>").html("<strong>Authors</strong>: " + displayAuthors(submission.authors)).appendTo($(element));
                     $(element).append(Conflicts.displayMoveModeSubmissionFullConflicts(MoveMode.getSwapValueBySubmission(session, submission)));
 
                 } else {
@@ -660,7 +661,7 @@
 
             } else if (type == "empty"){
                 element = document.createElement("div");
-                // console.log("No return");   
+                // console.log("No return");
             }
         }
 
@@ -712,7 +713,7 @@
         else if (mode == "paperMove")
            element = _getPaperMoveSubmissionDetail(type, submission, srcType, session);
         else if (mode == "chairMove")
-           element = _getChairMoveSubmissionDetail(type, submission);       
+           element = _getChairMoveSubmissionDetail(type, submission);
         else
            return "";
         return outerHTML(element);
@@ -722,7 +723,7 @@
     // get html for a chair in the view mode
     function _getViewChairDetail(type, chair, session){
         var element = document.createElement("div");
-        if (typeof chair !== "undefined" && chair != null && typeof chair.authorId !== "undefined" && chair.authorId != null) { // typeof session !== "undefined" && session != null && 
+        if (typeof chair !== "undefined" && chair != null && typeof chair.authorId !== "undefined" && chair.authorId != null) { // typeof session !== "undefined" && session != null &&
            $(element).attr("data-chair-id", chair.authorId);
         }
         var isLocked = false;
@@ -733,15 +734,15 @@
             }
             isSpecial = isSpecialSession(session);
         }
-        
+
         var chairButtonDisplay = "";
         if (type == "scheduled") {
             chairButtonDisplay = "Propose Move";
             $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));
             $(element).addClass("alert alert-info chair-display chair");
             if (!isLocked){
-//                $("<button/>").addClass("btn btn-mini button-chair-unschedule").html("Unschedule").appendTo($(element));                    
-//                $("<button/>").addClass("btn btn-mini button-chair-propose-scheduled").html(chairButtonDisplay).appendTo($(element));   
+//                $("<button/>").addClass("btn btn-mini button-chair-unschedule").html("Unschedule").appendTo($(element));
+//                $("<button/>").addClass("btn btn-mini button-chair-propose-scheduled").html(chairButtonDisplay).appendTo($(element));
             }
             $(element).append(Conflicts.displayViewModeChairFullConflicts(session, chair));
         } else if (type == "unscheduled") {
@@ -768,7 +769,7 @@
     // get html for a chair in the view mode
     function _getMoveChairDetail(type, chair){
         var element = document.createElement("div");
-        if (typeof chair !== "undefined" && chair != null && typeof chair.authorId !== "undefined" && chair.authorId != null) { // typeof session !== "undefined" && session != null && 
+        if (typeof chair !== "undefined" && chair != null && typeof chair.authorId !== "undefined" && chair.authorId != null) { // typeof session !== "undefined" && session != null &&
            $(element).attr("data-chair-id", chair.authorId);
         }
 
@@ -788,7 +789,7 @@
     // get html for a chair in the view mode
     function _getPaperMoveChairDetail(type, chair){
         var element = document.createElement("div");
-        if (typeof chair !== "undefined" && chair != null && typeof chair.authorId !== "undefined" && chair.authorId != null) { // typeof session !== "undefined" && session != null && 
+        if (typeof chair !== "undefined" && chair != null && typeof chair.authorId !== "undefined" && chair.authorId != null) { // typeof session !== "undefined" && session != null &&
            $(element).attr("data-chair-id", chair.authorId);
         }
 
@@ -808,7 +809,7 @@
     // get html for a chair in the view mode
     function _getChairMoveChairDetail(type, chair, srcType, session){
         var element = document.createElement("div");
-        if (typeof chair !== "undefined" && chair != null && typeof chair.authorId !== "undefined" && chair.authorId != null) { // typeof session !== "undefined" && session != null && 
+        if (typeof chair !== "undefined" && chair != null && typeof chair.authorId !== "undefined" && chair.authorId != null) { // typeof session !== "undefined" && session != null &&
            $(element).attr("data-chair-id", chair.authorId);
         }
 
@@ -826,9 +827,9 @@
         // unscheduled: session null, chair id
         if (type == "unscheduled" && session == null){
             isProposed = typeof $("#"+chair.authorId).attr("data-proposed-swap-chair") !== "undefined";
-            // if (typeof $("#"+submission.id).find(".swap-total").attr("data-best-submission") !== "undefined" 
+            // if (typeof $("#"+submission.id).find(".swap-total").attr("data-best-submission") !== "undefined"
             //     && $("#"+submission.id).find(".swap-total").attr("data-best-submission") == "null")
-            //     isRecommended = true;            
+            //     isRecommended = true;
             // console.log(null, submission.id, isProposed);
         // empty: session id, chair null
         } else if (type == "empty" && chair == null){
@@ -847,70 +848,70 @@
         if (srcType == "chair-scheduled"){
             if (type == "scheduled"){
                 $(element).addClass("alert alert-info chair-display chair");
-                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));   
-                if (!isLocked)     
-                    $("<button/>").addClass("btn btn-mini button-chair-swap").html("Swap with this chair").appendTo($(element));  
+                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));
+                if (!isLocked)
+                    $("<button/>").addClass("btn btn-mini button-chair-swap").html("Swap with this chair").appendTo($(element));
                 $(element).append(Conflicts.displayMoveModeChairFullConflicts(MoveMode.getSwapValueByChair(session, chair)));
 
             } else if (type == "unscheduled"){
                 console.log("Now supported");
                 $(element).addClass("alert alert-info chair-display chair");
-                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));     
-                if (!isLocked)                
-                    $("<button/>").addClass("btn btn-mini button-chair-swap-with-unscheduled").html("Swap with this chair").appendTo($(element));  
+                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));
+                if (!isLocked)
+                    $("<button/>").addClass("btn btn-mini button-chair-swap-with-unscheduled").html("Swap with this chair").appendTo($(element));
                 $(element).append(Conflicts.displayMoveModeChairFullConflicts(MoveMode.getSwapValueByChair(session, chair)));
             } else if (type == "empty"){
                 $(element).addClass("alert alert-info chair-display chair");
-                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));    
-                if (isProposed){            
-                    if (!isLocked)     
-                        $("<button/>").addClass("btn btn-mini button-chair-move").html("<span class='icon-plus'/> Move to this slot").appendTo($(element));  
-                } 
+                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));
+                if (isProposed){
+                    if (!isLocked)
+                        $("<button/>").addClass("btn btn-mini button-chair-move").html("<span class='icon-plus'/> Move to this slot").appendTo($(element));
+                }
                 $(element).append(Conflicts.displayMoveModeChairFullConflicts(MoveMode.getSwapValueByChair(session, chair)));
-            } 
+            }
         } else if (srcType == "chair-unscheduled") {
             if (type == "scheduled"){
                 $(element).addClass("alert alert-info chair-display chair");
-                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));     
-                if (!isLocked)                
-                    $("<button/>").addClass("btn btn-mini button-chair-swap-with-unscheduled").html("Swap with this chair").appendTo($(element));  
+                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));
+                if (!isLocked)
+                    $("<button/>").addClass("btn btn-mini button-chair-swap-with-unscheduled").html("Swap with this chair").appendTo($(element));
                 $(element).append(Conflicts.displayMoveModeChairFullConflicts(MoveMode.getSwapValueByChair(session, chair)));
             } else if (type == "unscheduled"){
                 console.log("No return");
             } else if (type == "empty"){
                 $(element).addClass("alert alert-info chair-display chair");
-                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));      
+                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));
                 if (isProposed) {
-                    if (!isLocked)     
-                        $("<button/>").addClass("btn btn-mini button-chair-schedule").html("<span class='icon-plus'/> Schedule in this slot").appendTo($(element));  
-                } 
+                    if (!isLocked)
+                        $("<button/>").addClass("btn btn-mini button-chair-schedule").html("<span class='icon-plus'/> Schedule in this slot").appendTo($(element));
+                }
                 $(element).append(Conflicts.displayMoveModeChairFullConflicts(MoveMode.getSwapValueByChair(session, chair)));
             }
         } else if (srcType == "chair-empty") {
             if (type == "scheduled"){
                 $(element).addClass("alert alert-info chair-display chair");
-                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));        
-                if (!isLocked)             
-                    $("<button/>").addClass("btn btn-mini button-chair-move").html("Move this chair").appendTo($(element));  
+                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));
+                if (!isLocked)
+                    $("<button/>").addClass("btn btn-mini button-chair-move").html("Move this chair").appendTo($(element));
                 $(element).append(Conflicts.displayMoveModeChairFullConflicts(MoveMode.getSwapValueByChair(session, chair)));
             } else if (type == "unscheduled"){
                 $(element).addClass("alert alert-info chair-display chair");
-                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));                    
-                if (isProposed) {          
-                    if (!isLocked)     
-                        $("<button/>").addClass("btn btn-mini button-chair-schedule").html("Schedule this chair").appendTo($(element));  
+                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));
+                if (isProposed) {
+                    if (!isLocked)
+                        $("<button/>").addClass("btn btn-mini button-chair-schedule").html("Schedule this chair").appendTo($(element));
                 }
                 $(element).append(Conflicts.displayMoveModeChairFullConflicts(MoveMode.getSwapValueByChair(session, chair)));
             } else if (type == "empty"){
                 $(element).addClass("alert alert-info chair-display chair");
-                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));      
+                $("<span/>").addClass("chair-text").html(displayChairName(chair, true)).appendTo($(element));
                 $(element).append(Conflicts.displayMoveModeChairFullConflicts(MoveMode.getSwapValueByChair(session, chair)));
             }
         }
         if (isProposed)
             $(element).addClass("proposed-swap-chair");
         return element;
-    }    
+    }
 
     // Getting html for chair details
     function getChairDetail(mode, type, chair, srcType, session){
@@ -922,7 +923,7 @@
         else if (mode == "paperMove")
            element = _getPaperMoveChairDetail(type, chair);
         else if (mode == "chairMove")
-           element = _getChairMoveChairDetail(type, chair, srcType, session);       
+           element = _getChairMoveChairDetail(type, chair, srcType, session);
         else
            return "";
         return outerHTML(element);
@@ -941,26 +942,26 @@
             if(scheduleSlots[slotDate][slotTime][slotRoom]['locked'])
                 $(cell).find(".title").addClass("locked");
 
-            $(cell).addClass("empty").attr("data-date", slotDate).attr("data-time", slotTime).attr("data-room", slotRoom);                   
-            $(cell).find(".title").append("<i class='icon-plus'></i>")     
+            $(cell).addClass("empty").attr("data-date", slotDate).attr("data-time", slotTime).attr("data-room", slotRoom);
+            $(cell).find(".title").append("<i class='icon-plus'></i>")
 
-            // Unavailable / Locked Session                         
+            // Unavailable / Locked Session
         } else if (type == "unavailable" || session == "") {
             $(cell).addClass("unavailable");
-       
+
         // Scheduled / Unscheduled Session
         } else {
             if(type !== "unscheduled" && scheduleSlots[session.date][session.time][session.room]['locked'])
                 $(cell).find(".title").addClass("locked");
-	 	
+
             $(cell).attr("id", "session-" + session.id)
                 .addClass(type)
-                .attr("data-session-id", session.id)                 
+                .attr("data-session-id", session.id)
                 .attr("data-date", slotDate).attr("data-time", slotTime).attr("data-room", slotRoom);
-            
+
             if (typeof session.title !== "undefined")
                 $(cell).find(".title").html(session.title);
-		} 
+		}
 		return cell;
     }
 
@@ -971,9 +972,9 @@
             .append("<div class='user'/><div class='title'/><div class='display'/><div class='conflicts'/>");
 
         // Empty Session
-        if (type == "empty" || submission == -1){   
+        if (type == "empty" || submission == -1){
             console.log("empty submission display: not used");
-        // Unavailable / Locked Session                         
+        // Unavailable / Locked Session
         } else if (type == "unavailable" || submission == "") {
             console.log("unavailable submission display: not used");
         // Scheduled
@@ -984,7 +985,7 @@
             $(cell).attr("id", "" + submission.id).addClass(type);
             if (typeof submission.title !== "undefined")
                  $(cell).find(".title").html(submission.title);
-       } 
+       }
        return cell;
     }
 
@@ -997,7 +998,7 @@
         if (type == "empty" || chair == -1){
             console.log("unavailable chair display: not used");
 
-        // Unavailable / Locked Session                         
+        // Unavailable / Locked Session
         } else if (type == "unavailable" || chair == "") {
             console.log("unavailable chair display: not used");
 
@@ -1007,18 +1008,18 @@
 
         // Unscheduled Session
         } else {
-            $(cell).attr("id", "" + chair.authorId).attr("data-chair-id", chair.authorId).addClass(type);            
+            $(cell).attr("id", "" + chair.authorId).attr("data-chair-id", chair.authorId).addClass(type);
             if (typeof chair !== "undefined")
                 $(cell).find(".title").html(displayChairName(chair, false));
-        } 
+        }
         return cell;
     }
 
      function displayAuthors(authors){
-          var html = "";      
+          var html = "";
           $.each(authors, function(i, author){
                html += author.firstName + " " + author.lastName + ", ";
-          }); 
+          });
           // remove the trailing comma at the end
           return html.slice(0, -2);
      }
@@ -1058,7 +1059,7 @@
 
         if (Features.chair){
           count = $("#unscheduled-chairs .slot-chair").length;
-          $("#unscheduled-chairs-count").html(count);          
+          $("#unscheduled-chairs-count").html(count);
         }
      }
 
@@ -1068,18 +1069,18 @@
           var cell = null;
           keys(unscheduled).map(function(id){
                cell = getSessionCell("unscheduled", allSessions[id]);
-               $("#unscheduled tr").append(cell);         
+               $("#unscheduled tr").append(cell);
           });
 
           keys(unscheduledSubmissions).map(function(id){
                cell = getSubmissionCell("unscheduled", allSubmissions[id]);
-               $("#unscheduled-papers tr").append(cell);         
+               $("#unscheduled-papers tr").append(cell);
           });
 
         if (Features.chair){
           keys(unscheduledChairs).map(function(id){
               cell = getChairCell("unscheduled", allChairs[id]['unscheduled']);
-              $("#unscheduled-chairs tr").append(cell);         
+              $("#unscheduled-chairs tr").append(cell);
           });
         }
           updateUnscheduledCount();
@@ -1100,7 +1101,7 @@
 	      "2014-02-15" : 1,
 	      "2014-02-16" : 2,
 	      "2-14-02-17" : 3
-	      
+
           }
           //var orderedDates = keys(schedule).sort(function(a,b) {return new Date(a) - new Date(b);});
           //var orderedRooms = keys(allRooms).sort(function(a,b) {return allRooms[a] - allRooms[b];});
@@ -1111,7 +1112,7 @@
 
           var i, cell;
           // Table Header
-          var table = document.createElement('table'); 
+          var table = document.createElement('table');
           /*
           var header = document.createElement('tr');
           var firstcell = $(document.createElement('td')).addClass("cell header-col").append("<div>Room/<br>Time</div>");
@@ -1128,7 +1129,7 @@
 
           // Main content
           $.each(orderedDates, function(index, date){
-            
+
               var orderedTimes = keys(schedule[date]).sort(function(a,b) {return parseFloat(a.replace(":", ".")) - parseFloat(b.replace(":", "."));});
             $.each(orderedTimes, function(index2, time){
                 // add an extra row for daily borders
@@ -1165,7 +1166,7 @@
                     } else { // otherwise, mark it unavailable.
                         cell = getSessionCell("unavailable", null);
                     }
-                    $(row).append(cell);                    
+                    $(row).append(cell);
                 });
 
                 $('#program').append(row);
@@ -1182,7 +1183,7 @@
             addBorderRow(orderedRooms);
             addHeaderRow(orderedRooms);
 
-  
+
      }
 
      function addHeaderRow(orderedRooms){
@@ -1195,7 +1196,7 @@
                $(cell).addClass("cell header-cell").append("<div>" + orderedRooms[i] + "<br/>" + "</div>");
                $(header).append(cell);
           }
-          $("#program").append(header);       
+          $("#program").append(header);
      }
 
      function addBorderRow(orderedRooms){
@@ -1207,28 +1208,28 @@
      }
 
     $(document).ready(function() {
-        $("body").addClass("loading"); 
-        Statusbar.initialize(); 
-	    
+        $("body").addClass("loading");
+        Statusbar.initialize();
+
         // triggered once initialize is complete
         // initialize() is async, thus the bind
         $(document).bind("fullyLoaded", function(){
             displayScheduled();
             displayUnscheduled();
-            
+
             // should come before Sidebar initialization because we need to generate the conflicts list from here dynamically
             Conflicts.initialize();
 
-            Sidebar.initialize(); 
+            Sidebar.initialize();
             Searchbox.initialize();
             Polling.initialize();
             // default is view mode.
-            ViewMode.initialize();   
-            UnscheduledPanel.initialize(); 
- 
+            ViewMode.initialize();
+            UnscheduledPanel.initialize();
+
             $(".user-display").append("<span class='icon-user icon-white'/>").append(getUsernameByUID(userData.id));
             Statusbar.display("Select a session for scheduling options and more information.");
-            $("body").removeClass("loading");             
+            $("body").removeClass("loading");
         });
         initialize();
 
