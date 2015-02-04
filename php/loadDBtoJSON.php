@@ -7,17 +7,17 @@ include "../settings/settings.php";
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
 // Get the schedule table
-$scheduleQ = "select * from schedule"; 
+$scheduleQ = "select * from schedule";
 $scheduleTable = mysqli_query($mysqli, $scheduleQ);
 echo mysqli_error($mysqli);
 
 // Get the session table
-$sessionQ = "select * from session"; 
+$sessionQ = "select * from session";
 $sessionTable = mysqli_query($mysqli, $sessionQ);
 echo mysqli_error($mysqli);
 
 // Get the entity table
-$entityQ = "select * from entity"; 
+$entityQ = "select * from entity";
 $entityTable = mysqli_query($mysqli, $entityQ);
 echo mysqli_error($mysqli);
 
@@ -43,7 +43,7 @@ while ($row = $chairsTable->fetch_assoc()){
 while ($row = $entityTable->fetch_assoc()) {
   $row['coreCommunities'] = json_decode($row['coreCommunities']);
   $row['featuredCommunities'] = json_decode($row['featuredCommunities']);
-  
+
   // Process authors into our format
   $authorDB = json_decode($row['authors'], true);
   $authors = array();
@@ -51,9 +51,9 @@ while ($row = $entityTable->fetch_assoc()) {
     foreach ($authorDB as $author) {
       $authorKey = $author['givenName'] . ' ' . $author['familyName'];
       if (array_key_exists('id', $author)){
-	$authorKey = $author['id'];
+	$authorKey = $author['authorId'];
       }
-          
+
       $email = "";
       if(array_key_exists('email', $author)){
 	$email = $author['email'];
@@ -80,21 +80,21 @@ while ($row = $entityTable->fetch_assoc()) {
   $row['keywords'] = json_decode($row['keywords']);
   $row['bestPaperAward'] = (bool)$row['bestPaperAward'];
   $row['bestPaperNominee'] = (bool)$row['bestPaperNominee'];
-  
-  $entity[$row['id']] = $row; 
-  
+
+  $entity[$row['id']] = $row;
+
     if ($row['session'] == "null"){
       $unscheduledSubmissions[$row['id']] = $row;
     }
 }
-  
+
 $unscheduled = array();
 
 while ($row = $sessionTable->fetch_assoc()) {
   $row['chairs'] = $row['chairs'];
   $row['coreCommunities'] = json_decode($row['coreCommunities']);
   $row['personas'] = $row['personas'];
-  
+
   $row['featuredCommunities'] = json_decode($row['featuredCommunities']);
   $row['hasAward'] = (bool)$row['hasAward'];
   $row['hasHonorableMention'] = (bool)$row['hasHonorableMention'];
@@ -105,7 +105,7 @@ while ($row = $sessionTable->fetch_assoc()) {
   foreach ($subKeys as $sub){
     if ($sub == ""){
     }else{
-      if (!array_key_exists($sub, $entity)){ 
+      if (!array_key_exists($sub, $entity)){
 	// SHOULDN"T BE HERE
       }else{
 	  // HQ: changing this to output an array
@@ -116,10 +116,10 @@ while ($row = $sessionTable->fetch_assoc()) {
   }
   //  if (empty($subs)) $subs = (object) null;
   $row['submissions'] = $subs;
-  $ses[$row['id']] = $row; 
-  
+  $ses[$row['id']] = $row;
+
   if (!$row['scheduled']){
-    $unscheduled[$row['id']] = $row; 
+    $unscheduled[$row['id']] = $row;
   }
 }
 
@@ -140,7 +140,7 @@ while ($row = $transTable->fetch_assoc()) {
   array_unshift($transactions, $row);
 }
 
-$output = array('schedule' => $schedule, 
+$output = array('schedule' => $schedule,
 		'unscheduled' => (object)$unscheduled,
 		'unscheduledSubmissions' => (object)$unscheduledSubmissions,
 		'slots' => $slots,
