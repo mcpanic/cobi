@@ -1,0 +1,122 @@
+[
+    {
+        "authorId": "authundefined",
+        "type": "author",
+        "id": "talks100",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "Yongqi",
+        "middleInitial": "",
+        "familyName": "Lou",
+        "email": "lou.yongqi@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "College of Design and Innovation",
+            "institution": "Tongji University",
+            "city": "Shanghai",
+            "country": "China"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "authundefined",
+        "type": "author",
+        "id": "talks101",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "Donghoon",
+        "middleInitial": "",
+        "familyName": "Chang",
+        "email": "jsm.myung@samsung.com",
+        "role": "",
+        "primary": {
+            "dept": "Corporate Design Center",
+            "institution": "Samsung Electronics",
+            "city": "Seoul",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "authundefined",
+        "type": "author",
+        "id": "talks102",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "David",
+        "middleInitial": "",
+        "familyName": "Min",
+        "email": "jmin.park@lge.com",
+        "role": "",
+        "primary": {
+            "dept": "Software Research Center",
+            "institution": "LG Electronics",
+            "city": "Seoul",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "authundefined",
+        "type": "author",
+        "id": "talks103",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "Jai Sang",
+        "middleInitial": "",
+        "familyName": "Park",
+        "email": "hyunkony@ygmail.net",
+        "role": "",
+        "primary": {
+            "dept": "unaffiliated",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "authundefined",
+        "type": "author",
+        "id": "talks104",
+        "venue": "keynote",
+        "rank": 1,
+        "givenName": "Susan",
+        "middleInitial": "T.",
+        "familyName": "Dumais",
+        "email": "sdumais@microsoft.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Microsoft Research",
+            "city": "Redmond",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    }
+]

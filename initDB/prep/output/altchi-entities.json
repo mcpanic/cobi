@@ -1,0 +1,1806 @@
+[
+    {
+        "id": "alt100",
+        "title": "\"I Woke Up as a Newspaper\": Designing-in Interaction Analytics",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth24409",
+                "type": "author",
+                "id": "alt100",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Michael",
+                "middleInitial": "",
+                "familyName": "Evans",
+                "email": "michael.evans@bbc.co.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "British Broadcasting Corporation",
+                    "city": "Manchester",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth49058",
+                "type": "author",
+                "id": "alt100",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Lianne",
+                "middleInitial": "",
+                "familyName": "Kerlin",
+                "email": "lianne.kerlin@bbc.co.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "British Broadcasting Corporation",
+                    "city": "Manchester",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth6061",
+                "type": "author",
+                "id": "alt100",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Caroline",
+                "middleInitial": "",
+                "familyName": "Jay",
+                "email": "caroline.jay@manchester.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "School  of Computer Science",
+                    "institution": "The University of Manchester",
+                    "city": "Manchester",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "michael.evans@bbc.co.uk",
+        "contactFirstName": "Michael",
+        "contactLastName": "Evans",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt107",
+        "title": "Being Reasonable: A Manifesto for the Inclusion of Disabled People in SIGCHI Conferences",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth28808",
+                "type": "author",
+                "id": "alt107",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Reuben",
+                "middleInitial": "",
+                "familyName": "Kirkham",
+                "email": "r.kirkham@newcastle.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Culture Lab",
+                    "institution": "Newcastle University",
+                    "city": "Newcastle upon Tyne",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth21260",
+                "type": "author",
+                "id": "alt107",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "John",
+                "middleInitial": "",
+                "familyName": "Vines",
+                "email": "john.vines@newcastle.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Culture Lab",
+                    "institution": "Newcastle University",
+                    "city": "Newcastle Upon Tyne",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth5105",
+                "type": "author",
+                "id": "alt107",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Patrick",
+                "middleInitial": "",
+                "familyName": "Olivier",
+                "email": "p.l.olivier@ncl.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Culture Lab",
+                    "institution": "Newcastle University",
+                    "city": "Newcastle Upon Tyne",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "r.kirkham@newcastle.ac.uk",
+        "contactFirstName": "Reuben",
+        "contactLastName": "Kirkham",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt118",
+        "title": "Crossing Cultural and Theoretical Borders: towards Mindfulness through a Cigarette and a Torii Gate",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth17781",
+                "type": "author",
+                "id": "alt118",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Yoko",
+                "middleInitial": "",
+                "familyName": "Akama",
+                "email": "yoko.akama@rmit.edu.au",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "RMIT University ",
+                    "city": "Melbourne",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth8157",
+                "type": "author",
+                "id": "alt118",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Ann",
+                "middleInitial": "",
+                "familyName": "Light",
+                "email": "annl@dcs.qmul.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "School of Engineering and Informatics",
+                    "institution": "University of Sussex",
+                    "city": "Falmer",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "yoko.akama@rmit.edu.au",
+        "contactFirstName": "Yoko",
+        "contactLastName": "Akama",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt122",
+        "title": "Design + Ethnography + Futures: surrendering in uncertainty",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth17781",
+                "type": "author",
+                "id": "alt122",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Yoko",
+                "middleInitial": "",
+                "familyName": "Akama",
+                "email": "yoko.akama@rmit.edu.au",
+                "role": "",
+                "primary": {
+                    "dept": "School of Media and Communication",
+                    "institution": "RMIT University",
+                    "city": "Melbourne",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth40576",
+                "type": "author",
+                "id": "alt122",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Sarah",
+                "middleInitial": "",
+                "familyName": "Pink",
+                "email": "sarah.pink@rmit.edu.au",
+                "role": "",
+                "primary": {
+                    "dept": "create, RMIT University, Melbourne, Australia",
+                    "institution": "RMIT University",
+                    "city": "Melbourne",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth48958",
+                "type": "author",
+                "id": "alt122",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Annie",
+                "middleInitial": "",
+                "familyName": "Fergusson",
+                "email": "fergussonannie@mac.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "La Trobe University",
+                    "city": "Melbourne",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "yoko.akama@rmit.edu.au",
+        "contactFirstName": "Yoko",
+        "contactLastName": "Akama",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt127",
+        "title": "Deep Cover HCI: Value, Ethics, and Practice",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth13853",
+                "type": "author",
+                "id": "alt127",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Julie",
+                "middleInitial": "R",
+                "familyName": "Williamson",
+                "email": "Julie.Williamson@glasgow.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Glasgow",
+                    "city": "Glasgow",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth46457",
+                "type": "author",
+                "id": "alt127",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Daniel",
+                "middleInitial": "",
+                "familyName": "Sundén",
+                "email": "daniel@sunden.se",
+                "role": "",
+                "primary": {
+                    "dept": "School of Computing Science",
+                    "institution": "University of Glasgow",
+                    "city": "Glasgow",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "julie@dcs.gla.ac.uk",
+        "contactFirstName": "Julie",
+        "contactLastName": "Williamson",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt129",
+        "title": "Your Paper is Dead! Bringing Life to Research Articles with Animated Figures",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth1476",
+                "type": "author",
+                "id": "alt129",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Tovi",
+                "middleInitial": "",
+                "familyName": "Grossman",
+                "email": "tovi.grossman@autodesk.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Autodesk Research",
+                    "city": "Toronto",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth43372",
+                "type": "author",
+                "id": "alt129",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Fanny",
+                "middleInitial": "",
+                "familyName": "Chevalier",
+                "email": "fanny.chevalier@inria.fr",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Inria",
+                    "city": "Lille",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth17764",
+                "type": "author",
+                "id": "alt129",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Rubaiat Habib",
+                "middleInitial": "",
+                "familyName": "Kazi",
+                "email": "rubaiat.habib@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Autodesk Research",
+                    "city": "Toronto",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "tovi.grossman@autodesk.com",
+        "contactFirstName": "Tovi",
+        "contactLastName": "Grossman",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt130",
+        "title": "Communication in the Changing Dyadic Interaction of Diverse Players",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth9943",
+                "type": "author",
+                "id": "alt130",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Mark",
+                "middleInitial": "",
+                "familyName": "Rice",
+                "email": "mdrice@i2r.a-star.edu.sg",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Institute for Infocomm Research",
+                    "city": "Singapore ",
+                    "country": "Singapore"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth37265",
+                "type": "author",
+                "id": "alt130",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Hong Huei",
+                "middleInitial": "",
+                "familyName": "Tay",
+                "email": "tayhh@i2r.a-star.edu.sg",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Instiute for Infocomm Research ",
+                    "city": "Singapore",
+                    "country": "Singapore"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth8601",
+                "type": "author",
+                "id": "alt130",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Jamie",
+                "middleInitial": "",
+                "familyName": "NG",
+                "email": "jamie@i2r.a-star.edu.sg",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Institute for Infocomm Research",
+                    "city": "Singapore ",
+                    "country": "Singapore"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth32921",
+                "type": "author",
+                "id": "alt130",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Ranieri",
+                "middleInitial": "",
+                "familyName": "Koh",
+                "email": "ranieri-koh@i2r.a-star.edu.sg",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Institute for Infocomm Research ",
+                    "city": "Singapore",
+                    "country": "Singapore"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "mdrice@i2r.a-star.edu.sg",
+        "contactFirstName": "Mark",
+        "contactLastName": "Rice",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt133",
+        "title": "The User Experience Designer’s Charlatan Test: a First Step towards UX Sanity Checking",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth5578",
+                "type": "author",
+                "id": "alt133",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Jonathan",
+                "middleInitial": "S",
+                "familyName": "Arnowitz",
+                "email": "arnoland@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "GE Software",
+                    "city": "San Ramon",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "arnoland@gmail.com",
+        "contactFirstName": "Jonathan",
+        "contactLastName": "Arnowitz",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt136",
+        "title": "Consider the Moon. Human-Computer Bricolage of Extended Objects",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth38226",
+                "type": "author",
+                "id": "alt136",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Cosima",
+                "middleInitial": "",
+                "familyName": "Rughinis",
+                "email": "cosima.rughinis@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Bucharest",
+                    "city": "Bucharest",
+                    "country": "Romania"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth27883",
+                "type": "author",
+                "id": "alt136",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Razvan",
+                "middleInitial": "",
+                "familyName": "Rughinis",
+                "email": "razvan.rughinis@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University POLITEHNICA of Bucharest",
+                    "city": "Bucharest",
+                    "country": "Romania"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "cosima.rughinis@gmail.com",
+        "contactFirstName": "Cosima",
+        "contactLastName": "Rughinis",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt138",
+        "title": "HCI as an Inter-Discipline",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth1789",
+                "type": "author",
+                "id": "alt138",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Alan",
+                "middleInitial": "F.",
+                "familyName": "Blackwell",
+                "email": "afb21@cl.cam.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Computer Laboratory",
+                    "institution": "University of Cambridge",
+                    "city": "Cambridge",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "afb21@cl.cam.ac.uk",
+        "contactFirstName": "Alan",
+        "contactLastName": "Blackwell",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt140",
+        "title": "ChameleonMask: Embodied Physical and Social Telepresence using human surrogates",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth23724",
+                "type": "author",
+                "id": "alt140",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Kana",
+                "middleInitial": "",
+                "familyName": "Misawa",
+                "email": "kana.misawa@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "The University of Tokyo",
+                    "city": "Tokyo",
+                    "country": "Japan"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth2011",
+                "type": "author",
+                "id": "alt140",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Jun",
+                "middleInitial": "",
+                "familyName": "Rekimoto",
+                "email": "rekimoto@acm.org",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Tokyo / Sony CSL",
+                    "city": "Bunkyo-ku",
+                    "country": "Japan"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "kana.misawa@gmail.com",
+        "contactFirstName": "Kana",
+        "contactLastName": "Misawa",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt142",
+        "title": "Reimagining Digital Fabrication as Performance Art",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth24531",
+                "type": "author",
+                "id": "alt142",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Laura",
+                "middleInitial": "",
+                "familyName": "Devendorf",
+                "email": "ldevendorf@ischool.berkeley.edu",
+                "role": "",
+                "primary": {
+                    "dept": "School of Information",
+                    "institution": "University of California, Berkeley",
+                    "city": "Berkeley",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth9749",
+                "type": "author",
+                "id": "alt142",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Daniela",
+                "middleInitial": "K",
+                "familyName": "Rosner",
+                "email": "dkrosner@uw.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Human Centered Design & Engineering",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "ldevendorf@ischool.berkeley.edu",
+        "contactFirstName": "Laura",
+        "contactLastName": "Devendorf",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt149",
+        "title": "The Broken Dream of Pervasive Sentient Ambient Calm Invisible Ubiquitous Computing",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth20910",
+                "type": "author",
+                "id": "alt149",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Matthew",
+                "middleInitial": "P.",
+                "familyName": "Aylett",
+                "email": "matthewa@cereproc.com",
+                "role": "",
+                "primary": {
+                    "dept": "School of Informatics",
+                    "institution": "University of Edinburgh",
+                    "city": "Edinburgh",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "CereProc Ltd.",
+                    "city": "Edinburgh",
+                    "country": "United Kingdom"
+                }
+            },
+            {
+                "authorId": "auth17243",
+                "type": "author",
+                "id": "alt149",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Aaron",
+                "middleInitial": "",
+                "familyName": "Quigley",
+                "email": "aquigley@st-andrews.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "School Of Computer Science",
+                    "institution": "The University of St Andrews",
+                    "city": "St Andrews",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "matthewa@cereproc.com",
+        "contactFirstName": "Matthew",
+        "contactLastName": "Aylett",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt151",
+        "title": "Emergent Interfaces: Constructive Assembly of Identical Units",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth32012",
+                "type": "author",
+                "id": "alt151",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Alexandru",
+                "middleInitial": "",
+                "familyName": "Dancu",
+                "email": "alexandru.dancu@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Dept. of Applied IT",
+                    "institution": "Chalmers University of Technology",
+                    "city": "Gothenburg",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth49841",
+                "type": "author",
+                "id": "alt151",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Stig",
+                "middleInitial": "Anton",
+                "familyName": "Nielsen",
+                "email": "stiganielsen@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Dept. of Architecture",
+                    "institution": "Chalmers University of Technology",
+                    "city": "Gothenburg",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth12491",
+                "type": "author",
+                "id": "alt151",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Kening",
+                "middleInitial": "",
+                "familyName": "Zhu",
+                "email": "kenju850915@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "School of Creative Media",
+                    "institution": "City University of Hong Kong",
+                    "city": "Hong Kong",
+                    "country": "China"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth49778",
+                "type": "author",
+                "id": "alt151",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Ayça",
+                "middleInitial": "",
+                "familyName": "Ünlüer",
+                "email": "ayca.unluer@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Dept. of Applied IT",
+                    "institution": "Chalmers University of Technology",
+                    "city": "Gothenburg",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth49779",
+                "type": "author",
+                "id": "alt151",
+                "venue": "altchi",
+                "rank": 5,
+                "givenName": "Max",
+                "middleInitial": "",
+                "familyName": "Witt",
+                "email": "imax@chalmers.it",
+                "role": "",
+                "primary": {
+                    "dept": "Dept. of Applied IT",
+                    "institution": "Chalmers University of Technology",
+                    "city": "Gothenburg",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth49780",
+                "type": "author",
+                "id": "alt151",
+                "venue": "altchi",
+                "rank": 6,
+                "givenName": "Catherine",
+                "middleInitial": "",
+                "familyName": "Hedler",
+                "email": "catherine.hedler@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Dept. of Applied IT",
+                    "institution": "Chalmers University of Technology",
+                    "city": "Gothenburg",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth49781",
+                "type": "author",
+                "id": "alt151",
+                "venue": "altchi",
+                "rank": 7,
+                "givenName": "Hanna",
+                "middleInitial": "",
+                "familyName": "Frank",
+                "email": "hannaninafrank@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Dept. of Applied IT",
+                    "institution": "Chalmers University of Technology",
+                    "city": "Gothenburg",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth49782",
+                "type": "author",
+                "id": "alt151",
+                "venue": "altchi",
+                "rank": 8,
+                "givenName": "Axel",
+                "middleInitial": "",
+                "familyName": "Pelling",
+                "email": "axelpelling@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Dept. of Applied IT",
+                    "institution": "Chalmers University of Technology",
+                    "city": "Gothenburg",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth49783",
+                "type": "author",
+                "id": "alt151",
+                "venue": "altchi",
+                "rank": 9,
+                "givenName": "Christian",
+                "middleInitial": "",
+                "familyName": "Carlsson",
+                "email": "carlsson.chr@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Dept. of Applied IT",
+                    "institution": "Chalmers University of Technology",
+                    "city": "Gothenburg",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth3938",
+                "type": "author",
+                "id": "alt151",
+                "venue": "altchi",
+                "rank": 10,
+                "givenName": "Morten",
+                "middleInitial": "",
+                "familyName": "Fjeld",
+                "email": "fjeld@chalmers.se",
+                "role": "",
+                "primary": {
+                    "dept": "t2i Lab",
+                    "institution": "Chalmers University of Technology",
+                    "city": "Gothenburg",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "alexandru.dancu@gmail.com",
+        "contactFirstName": "Alexandru",
+        "contactLastName": "Dancu",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt152",
+        "title": "Touch Of The Eye: Does Observation Reflect Haptic Metaphors In Art Drawing?",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth45887",
+                "type": "author",
+                "id": "alt152",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Suk Kyoung",
+                "middleInitial": "",
+                "familyName": "Choi",
+                "email": "choisukc@sfu.ca",
+                "role": "",
+                "primary": {
+                    "dept": "School of Interactive Arts and Technology",
+                    "institution": "Simon Fraser University",
+                    "city": "Surrey",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth3530",
+                "type": "author",
+                "id": "alt152",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Steve",
+                "middleInitial": "",
+                "familyName": "DiPaola",
+                "email": "sdipaola@sfu.ca",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Simon Fraser University",
+                    "city": "Surrey",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "choisukc@sfu.ca",
+        "contactFirstName": "Suk Kyoung",
+        "contactLastName": "Choi",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt153",
+        "title": "A Formal Analysis of the ISO 9241-210 Definition of User Experience",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth49519",
+                "type": "author",
+                "id": "alt153",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Alexander",
+                "middleInitial": "",
+                "familyName": "Mirnig",
+                "email": "alexander.mirnig@sbg.ac.at",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Salzburg",
+                    "city": "Salzburg",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth9353",
+                "type": "author",
+                "id": "alt153",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Alexander",
+                "middleInitial": "",
+                "familyName": "Meschtscherjakov",
+                "email": "alexander.meschtscherjakov@sbg.ac.at",
+                "role": "",
+                "primary": {
+                    "dept": "Contextual Interface Laboratory, ICT&S Center ",
+                    "institution": "Salzburg University",
+                    "city": "Salzburg",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth19332",
+                "type": "author",
+                "id": "alt153",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Daniela",
+                "middleInitial": "",
+                "familyName": "Wurhofer",
+                "email": "daniela.wurhofer@sbg.ac.at",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Salzburg",
+                    "city": "Salzburg",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth26747",
+                "type": "author",
+                "id": "alt153",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Thomas",
+                "middleInitial": "",
+                "familyName": "Meneweger",
+                "email": "thomas.meneweger@sbg.ac.at",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Salzburg",
+                    "city": "Salzburg",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth3460",
+                "type": "author",
+                "id": "alt153",
+                "venue": "altchi",
+                "rank": 5,
+                "givenName": "Manfred",
+                "middleInitial": "",
+                "familyName": "Tscheligi",
+                "email": "manfred.tscheligi@sbg.ac.at",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Salzburg",
+                    "city": "Salzburg",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "alexander.meschtscherjakov@sbg.ac.at",
+        "contactFirstName": "Alexander",
+        "contactLastName": "Meschtscherjakov",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt154",
+        "title": "Not all Days are Equal: Investigating The Meaning In The Digital Calendar",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth43032",
+                "type": "author",
+                "id": "alt154",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Daniel",
+                "middleInitial": "",
+                "familyName": "Buzzo",
+                "email": "daniel.buzzo@uwe.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Computer Science and Creative Technology",
+                    "institution": "University of the West of England",
+                    "city": "Bristol",
+                    "country": "UK"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth49635",
+                "type": "author",
+                "id": "alt154",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Nicolo",
+                "middleInitial": "",
+                "familyName": "Merendino",
+                "email": "chihauccisoilconte@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "STEIM",
+                    "city": "Amsterdam",
+                    "country": "Netherlands"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "dan@buzzo.com",
+        "contactFirstName": "Daniel",
+        "contactLastName": "Buzzo",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt157",
+        "title": "Behind The Scenes at HCI’s Turn To The Arts",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth43751",
+                "type": "author",
+                "id": "alt157",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Rachel",
+                "middleInitial": "",
+                "familyName": "Jacobs",
+                "email": "rachel.jacobs@nottingham.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Mixed Reality Laboratory",
+                    "institution": "The University of Nottingham",
+                    "city": "Nottingham",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "Active Ingredient",
+                    "city": "Nottingham",
+                    "country": "United Kingdom"
+                }
+            },
+            {
+                "authorId": "auth39620",
+                "type": "author",
+                "id": "alt157",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Steve",
+                "middleInitial": "",
+                "familyName": "Benford",
+                "email": "steve.benford@nottingham.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Mixed Reality Lab",
+                    "institution": "University of Nottingham",
+                    "city": "Nottingham",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth29101",
+                "type": "author",
+                "id": "alt157",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Ewa",
+                "middleInitial": "A",
+                "familyName": "Luger",
+                "email": "ewa.luger@hotmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Microsoft Research",
+                    "city": "Cambridge",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "rachel.jacobs@nottingham.ac.uk",
+        "contactFirstName": "Rachel",
+        "contactLastName": "Jacobs",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt159",
+        "title": "Games Against Health: A Player-Centered Design Philosophy",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth13937",
+                "type": "author",
+                "id": "alt159",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Conor",
+                "middleInitial": "",
+                "familyName": "Linehan",
+                "email": "clinehan@lincoln.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Lincoln",
+                    "city": "Lincoln",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth49737",
+                "type": "author",
+                "id": "alt159",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Sabine",
+                "middleInitial": "",
+                "familyName": "Harrer",
+                "email": "Sabine.harrer@univie.ac.at",
+                "role": "",
+                "primary": {
+                    "dept": "Austrian Academy of Science",
+                    "institution": "University of Vienna",
+                    "city": "Vienna",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth10649",
+                "type": "author",
+                "id": "alt159",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "Ben",
+                "middleInitial": "J",
+                "familyName": "Kirman",
+                "email": "bkirman@lincoln.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Lincoln",
+                    "city": "Lincoln",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth3083",
+                "type": "author",
+                "id": "alt159",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Shaun",
+                "middleInitial": "W",
+                "familyName": "Lawson",
+                "email": "slawson@lincoln.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Lincoln",
+                    "city": "Lincoln",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth43692",
+                "type": "author",
+                "id": "alt159",
+                "venue": "altchi",
+                "rank": 5,
+                "givenName": "Marcus",
+                "middleInitial": "",
+                "familyName": "Carter",
+                "email": "marcusc@unimelb.edu.au",
+                "role": "",
+                "primary": {
+                    "dept": "Interaction Design Lab",
+                    "institution": "The University of Melbourne",
+                    "city": "Melbourne",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "clinehan@lincoln.ac.uk",
+        "contactFirstName": "Conor",
+        "contactLastName": "Linehan",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "alt164",
+        "title": "Captchat: A Messaging Tool to Frustrate Ubiquitous Surveillance",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth14149",
+                "type": "author",
+                "id": "alt164",
+                "venue": "altchi",
+                "rank": 1,
+                "givenName": "Paul",
+                "middleInitial": "",
+                "familyName": "Dunphy",
+                "email": "paul.dunphy@ncl.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Culture Lab",
+                    "institution": "Newcastle University",
+                    "city": "Newcastle Upon Tyne",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth28768",
+                "type": "author",
+                "id": "alt164",
+                "venue": "altchi",
+                "rank": 2,
+                "givenName": "Johannes",
+                "middleInitial": "",
+                "familyName": "Schöning",
+                "email": "johannes.schoening@uhasselt.be",
+                "role": "",
+                "primary": {
+                    "dept": "Expertise Centre for Digital Media",
+                    "institution": "Hasselt University - tUL - iMinds",
+                    "city": "Diepenbeek",
+                    "country": "Belgium"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth12634",
+                "type": "author",
+                "id": "alt164",
+                "venue": "altchi",
+                "rank": 3,
+                "givenName": "James",
+                "middleInitial": "",
+                "familyName": "Nicholson",
+                "email": "james.nicholson@newcastle.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Culture Lab",
+                    "institution": "Newcastle University",
+                    "city": "Newcastle Upon Tyne",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth5105",
+                "type": "author",
+                "id": "alt164",
+                "venue": "altchi",
+                "rank": 4,
+                "givenName": "Patrick",
+                "middleInitial": "",
+                "familyName": "Olivier",
+                "email": "p.l.olivier@ncl.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Culture Lab",
+                    "institution": "Newcastle University",
+                    "city": "Newcastle Upon Tyne",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "paulmdunphy@gmail.com",
+        "contactFirstName": "Paul",
+        "contactLastName": "Dunphy",
+        "keywords": "",
+        "venue": "altchi",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    }
+]

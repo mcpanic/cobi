@@ -139,7 +139,7 @@
     {
         "id": "pn5102",
         "title": "An Age Old Problem: Examining the Discourses of Ageing in HCI and Strategies for Future Research",
-        "abstract": "Ageing has become a significant area of interest in HCI in recent years. In this paper we provide a critical analysis of 30 years of ageing research published across the ACM SIGCHI community. Discourse analysis of the content of 644 archival papers highlights how ageing is typically framed as a ���problem�۪ that can be managed by technology. We highlight how ageing is typically defined through an emphasis on the economic and societal impact of health and care needs of older people, concerns around socialisation as people age, and declines in abilities and associated reductions in performance when using technology. We draw from research within the fields of social and critical gerontology to highlight how these discourses in SIGCHI literature represent common stereotypes around old age that have also prevailed in the wider literature in gerontology. We conclude by proposing strategies for future research at the intersection of ageing and HCI.",
+        "abstract": "Ageing has become a significant area of interest in HCI in recent years. In this paper we provide a critical analysis of 30 years of ageing research published across the ACM SIGCHI community. Discourse analysis of the content of 644 archival papers highlights how ageing is typically framed as a ‘problem’ that can be managed by technology. We highlight how ageing is typically defined through an emphasis on the economic and societal impact of health and care needs of older people, concerns around socialisation as people age, and declines in abilities and associated reductions in performance when using technology. We draw from research within the fields of social and critical gerontology to highlight how these discourses in SIGCHI literature represent common stereotypes around old age that have also prevailed in the wider literature in gerontology. We conclude by proposing strategies for future research at the intersection of ageing and HCI.",
         "acmLink": "",
         "authors": [
             {
@@ -276,7 +276,7 @@
     {
         "id": "pn5103",
         "title": "On the benefits of providing versioning support for end users: An empirical study",
-        "abstract": "End users with little formal programming background are creating software in many different forms, including spreadsheets, web macros, and web mashups. Web mashups are particularly popular because they are relatively easy to create, and because many programming environments that support their creation are available. These programming environments, however, provide no support for tracking versions or provenance of mashups. We believe that versioning support can help end users create, understand, and debug mashups. To investigate this belief, we have added versioning support to a popular wire-oriented mashup environment, Yahoo! Pipes. Our enhanced environment, which we call ���Pipes Plumber,�۝ automatically retains versions of pipes and provides an interface with which pipe programmers can browse histories of pipes and retrieve specific versions. We have conducted two studies of this environment: an exploratory study and a larger controlled experiment. Our results provide evidence that versioning helps pipe programmers create and debug mashups. Subsequent qualitative results provide further insights into the barriers faced by pipe programmers, the support for reuse provided by our approach, and the support for debugging provided.",
+        "abstract": "End users with little formal programming background are creating software in many different forms, including spreadsheets, web macros, and web mashups. Web mashups are particularly popular because they are relatively easy to create, and because many programming environments that support their creation are available. These programming environments, however, provide no support for tracking versions or provenance of mashups. We believe that versioning support can help end users create, understand, and debug mashups. To investigate this belief, we have added versioning support to a popular wire-oriented mashup environment, Yahoo! Pipes. Our enhanced environment, which we call “Pipes Plumber,” automatically retains versions of pipes and provides an interface with which pipe programmers can browse histories of pipes and retrieve specific versions. We have conducted two studies of this environment: an exploratory study and a larger controlled experiment. Our results provide evidence that versioning helps pipe programmers create and debug mashups. Subsequent qualitative results provide further insights into the barriers faced by pipe programmers, the support for reuse provided by our approach, and the support for debugging provided.",
         "acmLink": "",
         "authors": [
             {
@@ -365,7 +365,7 @@
     {
         "id": "pn5104",
         "title": "Using Metrics of Curation to Evaluate Information-Based Ideation",
-        "abstract": "We introduce information-based ideation (IBI), a paradigm for investigating performance of open-ended tasks and activities in which users develop new ideas. IBI tasks span imagining, planning and reflecting on a weekend, vacation, outfit, makeover, paper, internship, thesis, design, campaign,  crisis response, career, or invention.  \\  \\ Through engagement in IBI tasks, people create curation products. Curation of digital media incorporates conceptualization, finding and choosing information objects, annotation, and synthesis. To formulate a quantitative methodology for evaluating IBI support tools, we build on prior creative cognition research in engineering design to derive a battery of ideation metrics of curation.  \\  \\ IBI support environments are characterized by the medium they afford for representing curation. An in-depth case study investigates information composition, an art-based medium for representing a curation as a visual semantic connected whole. To evaluate support for creativity, we apply ideation metrics of curation to analyze results from experiments with 44 and 49 participants.  \\  \\ Evaluating creativity support environments is challenging. Some approaches address people�۪s experiences of creativity. The present method measures creativity, across conditions, in the products that people make.  \\  \\ This research introduces information-based ideation (IBI), a paradigm for investigating open-ended tasks and activities in which users develop new ideas. IBI tasks span imagining, planning, and reflecting on a weekend, vacation, outfit, makeover, paper, internship, thesis, design, campaign, crisis response, career, or invention. What products do people create through engagement in IBI? Curation of digital media incorporates conceptualization, finding and choosing information objects, annotation, and synthesis. Through engagement in IBI tasks, people create curation products. This article formulates a quantitative methodology for evaluating IBI support tools, building on prior creative cognition research in engineering design to derive a battery of ideation metrics of curation. Elemental ideation metrics evaluate creativity within curated found objects. Holistic ideation metrics evaluate how a curation puts elements together.  \\  \\ IBI support environments are characterized by their underlying medium of curation. Curation media include lists, such as listicles, and grids, such as the boards of Pinterest.  \\  \\ An in-depth case study investigates information composition, an art-based medium representing a curation as a freeform visual semantic connected whole. We raise two creative cognition challenges for IBI. One challenge is overcoming fixation���for instance, when a person gets stuck in a counterproductive mental set. The other challenge is to bridge information visualization�۪s synthesis gap, by providing support for connecting findings. To address the challenges, we develop mixed-initiative information composition (MI2C), integrating human curation of information composition with automated agents of information retrieval and visualization.  \\  \\ We hypothesize that MI2C generates provocative stimuli that help users overcome fixation to become more creative on IBI tasks. We hypothesize that MI2C�۪s integration of curation and visualization bridges the synthesis gap to help users become more creative. To investigate these hypotheses, we apply ideation metrics of curation to interpret results from experiments with 44 and 49 participants.",
+        "abstract": "We introduce information-based ideation (IBI), a paradigm for investigating performance of open-ended tasks and activities in which users develop new ideas. IBI tasks span imagining, planning and reflecting on a weekend, vacation, outfit, makeover, paper, internship, thesis, design, campaign,  crisis response, career, or invention.  \\  \\ Through engagement in IBI tasks, people create curation products. Curation of digital media incorporates conceptualization, finding and choosing information objects, annotation, and synthesis. To formulate a quantitative methodology for evaluating IBI support tools, we build on prior creative cognition research in engineering design to derive a battery of ideation metrics of curation.  \\  \\ IBI support environments are characterized by the medium they afford for representing curation. An in-depth case study investigates information composition, an art-based medium for representing a curation as a visual semantic connected whole. To evaluate support for creativity, we apply ideation metrics of curation to analyze results from experiments with 44 and 49 participants.  \\  \\ Evaluating creativity support environments is challenging. Some approaches address people’s experiences of creativity. The present method measures creativity, across conditions, in the products that people make.  \\  \\ This research introduces information-based ideation (IBI), a paradigm for investigating open-ended tasks and activities in which users develop new ideas. IBI tasks span imagining, planning, and reflecting on a weekend, vacation, outfit, makeover, paper, internship, thesis, design, campaign, crisis response, career, or invention. What products do people create through engagement in IBI? Curation of digital media incorporates conceptualization, finding and choosing information objects, annotation, and synthesis. Through engagement in IBI tasks, people create curation products. This article formulates a quantitative methodology for evaluating IBI support tools, building on prior creative cognition research in engineering design to derive a battery of ideation metrics of curation. Elemental ideation metrics evaluate creativity within curated found objects. Holistic ideation metrics evaluate how a curation puts elements together.  \\  \\ IBI support environments are characterized by their underlying medium of curation. Curation media include lists, such as listicles, and grids, such as the boards of Pinterest.  \\  \\ An in-depth case study investigates information composition, an art-based medium representing a curation as a freeform visual semantic connected whole. We raise two creative cognition challenges for IBI. One challenge is overcoming fixation—for instance, when a person gets stuck in a counterproductive mental set. The other challenge is to bridge information visualization’s synthesis gap, by providing support for connecting findings. To address the challenges, we develop mixed-initiative information composition (MI2C), integrating human curation of information composition with automated agents of information retrieval and visualization.  \\  \\ We hypothesize that MI2C generates provocative stimuli that help users overcome fixation to become more creative on IBI tasks. We hypothesize that MI2C’s integration of curation and visualization bridges the synthesis gap to help users become more creative. To investigate these hypotheses, we apply ideation metrics of curation to interpret results from experiments with 44 and 49 participants.",
         "acmLink": "",
         "authors": [
             {
@@ -759,7 +759,7 @@
     {
         "id": "pn5106",
         "title": "My Self and You: Tension in Bodily Sharing of Experience",
-        "abstract": "There is a growing interest in designing systems for sharing experience through bodily interaction. To explore this design space, we built a probe system we named the Lega. In our 2-month-long research design process, we noted that the users�۪ attention was set on their own reflective experience, rather than attending to the person(s) with which they were sharing their experience. To explain these findings, we present an inductive analysis of the data through a phenomenological lens to pinpoint what causes such behavior. Our analysis extends our understanding of how to design for social embodied interaction, pointing to how we need to embrace the tension between self-reflection and shared experience, making inward listening and social expression visible acts, accessible to social construction and understanding. It entails experiencing our embodied self as others experience us in order to build a dialogue.",
+        "abstract": "There is a growing interest in designing systems for sharing experience through bodily interaction. To explore this design space, we built a probe system we named the Lega. In our 2-month-long research design process, we noted that the users’ attention was set on their own reflective experience, rather than attending to the person(s) with which they were sharing their experience. To explain these findings, we present an inductive analysis of the data through a phenomenological lens to pinpoint what causes such behavior. Our analysis extends our understanding of how to design for social embodied interaction, pointing to how we need to embrace the tension between self-reflection and shared experience, making inward listening and social expression visible acts, accessible to social construction and understanding. It entails experiencing our embodied self as others experience us in order to build a dialogue.",
         "acmLink": "",
         "authors": [
             {
@@ -818,7 +818,7 @@
                 "rank": 3,
                 "givenName": "Kristina",
                 "middleInitial": "",
-                "familyName": "H̦̦k",
+                "familyName": "Höök",
                 "email": "khook@kth.se",
                 "role": "",
                 "primary": {
@@ -1009,7 +1009,7 @@
     {
         "id": "pn5108",
         "title": "Health Vlogs as Social Support for Chronic Illness Management",
-        "abstract": "Studies have shown positive impact of video blogs (vlogs) on patient education. However, we know little on how patient-initiated vlogs shape the relationships among vloggers and viewers. We qualitatively analyzed 72 vlogs on YouTube by users diagnosed with HIV, diabetes, or cancer and 1,274 comments posted to the vlogs to understand viewers�۪ perspectives on the vlogs. We found that the unique video medium allowed intense and enriched personal and contextual disclosure to the viewers, leading to strong community-building activities and social support among vloggers and commenters, both informationally and emotionally. Furthermore, the unique communication structure of the vlogs allowed ad hoc small groups to form, which showed different group behavior than typical text-based social media, such as online communities. We provide implications to the health care industry and the human-computer interaction community on how future technologies for health vlogs could be designed to further support chronic illness management.",
+        "abstract": "Studies have shown positive impact of video blogs (vlogs) on patient education. However, we know little on how patient-initiated vlogs shape the relationships among vloggers and viewers. We qualitatively analyzed 72 vlogs on YouTube by users diagnosed with HIV, diabetes, or cancer and 1,274 comments posted to the vlogs to understand viewers’ perspectives on the vlogs. We found that the unique video medium allowed intense and enriched personal and contextual disclosure to the viewers, leading to strong community-building activities and social support among vloggers and commenters, both informationally and emotionally. Furthermore, the unique communication structure of the vlogs allowed ad hoc small groups to form, which showed different group behavior than typical text-based social media, such as online communities. We provide implications to the health care industry and the human-computer interaction community on how future technologies for health vlogs could be designed to further support chronic illness management.",
         "acmLink": "",
         "authors": [
             {
@@ -1146,7 +1146,7 @@
     {
         "id": "pn5109",
         "title": "Technological and Organizational Adaptation of EMR Implementation in an Emergency Department",
-        "abstract": "Implementation of large health information technology (HIT) systems is critical to healthcare organizations and has seen heavy investment. However, research has not fully explored the adaptation of HIT systems, particularly the tensions between individual flexibility and organizational needs in the adaptation process. This study analyzes how Emergency Department (ED) clinicians adapted to a new hospital-wide Electronic Medical Records (EMR) system. We present four adaptation cases revealing two interrelated types of adaptations ��� technical and organizational ��� as responses to the new system in use. First, individual clinicians respond to the immediate alteration in workflows caused by the EMR, while the organizational adaptations later mitigate the changes in healthcare quality control resulting from the clinicians�۪ initial adaptation. Our analysis reflects the critical nature and value of both adaptation types, with an emphasis on the triggers and process of organizational adaptation, for the successful implementation of a socio-technical-political system in a healthcare organization.",
+        "abstract": "Implementation of large health information technology (HIT) systems is critical to healthcare organizations and has seen heavy investment. However, research has not fully explored the adaptation of HIT systems, particularly the tensions between individual flexibility and organizational needs in the adaptation process. This study analyzes how Emergency Department (ED) clinicians adapted to a new hospital-wide Electronic Medical Records (EMR) system. We present four adaptation cases revealing two interrelated types of adaptations – technical and organizational – as responses to the new system in use. First, individual clinicians respond to the immediate alteration in workflows caused by the EMR, while the organizational adaptations later mitigate the changes in healthcare quality control resulting from the clinicians’ initial adaptation. Our analysis reflects the critical nature and value of both adaptation types, with an emphasis on the triggers and process of organizational adaptation, for the successful implementation of a socio-technical-political system in a healthcare organization.",
         "acmLink": "",
         "authors": [
             {
@@ -1235,7 +1235,7 @@
     {
         "id": "pn5110",
         "title": "Modelling what friendship patterns on Facebook reveal about personality and social capital",
-        "abstract": "",
+        "abstract": " In this study, we demonstrate how analysis of users’ social network structure—a topic that has remained until recently inconspicuous within Human-Computer Interaction (HCI) research on social systems—can contribute to our understanding of Social Networking Services (SNS) effect on users. Despite a consensus that SNS enhance people’s social capital, prior studies on SNS have provided inconsistent evidence on this process. In a multipronged study, we analyze personality, social capital, and Facebook data from a cohort of participants to model the extent to which one’s SNS reflects aspects of his or personality and affects his bridging social capital. Our empirically validated model shows that empathy and conscientious-ness influence the structural holes in one’s social network, which in turn affects bridging social capital. These findings highlight the importance of network structure as an intermediary between one’s personality and the social benefits one reaps from using SNS. Our work demonstrates how the implicit structural information embedded in users’ social networks can provide key insights into users’ personality and social capital.",
         "acmLink": "",
         "authors": [
             {
@@ -1293,7 +1293,7 @@
                 "venue": "TOCHI",
                 "rank": 3,
                 "givenName": "Jorge",
-                "middleInitial": "Andr̩",
+                "middleInitial": "André",
                 "familyName": "Goncalves",
                 "email": "jgoncalv@ee.oulu.fi",
                 "role": "",
@@ -1372,7 +1372,7 @@
     {
         "id": "pn5111",
         "title": "Does Distance Still Matter? Revisiting the CSCW Fundamentals on Distributed Collaboration",
-        "abstract": "Does distance still matter? Reporting on a comparative analysis of four ethnographic studies of global software development, this paper analyzes the fundamental aspects of distance as depicted in the famous paper ���Distance matters�۪. The results suggest that ��� while common ground, collaboration readiness, and organizational management are still important aspects for distributed collaboration ��� the arguments concerning coupling of work and collaboration technology readiness need to be refined. We argue that in working remotely, closely coupled work tasks encourage the remote workers to spend the extra effort required in articulation of work to make the collaboration function. Also we find that people in distributed software development have already made collaborative technologies part of their work and individuals are comfortable with them, thus collaboration technology readiness takes a different shape in this setting. ",
+        "abstract": "Does distance still matter? Reporting on a comparative analysis of four ethnographic studies of global software development, this paper analyzes the fundamental aspects of distance as depicted in the famous paper ‘Distance matters’. The results suggest that – while common ground, collaboration readiness, and organizational management are still important aspects for distributed collaboration – the arguments concerning coupling of work and collaboration technology readiness need to be refined. We argue that in working remotely, closely coupled work tasks encourage the remote workers to spend the extra effort required in articulation of work to make the collaboration function. Also we find that people in distributed software development have already made collaborative technologies part of their work and individuals are comfortable with them, thus collaboration technology readiness takes a different shape in this setting. ",
         "acmLink": "",
         "authors": [
             {
@@ -1485,7 +1485,7 @@
     {
         "id": "pn5112",
         "title": "Sharing Domestic Life through Long-Term Video Connections",
-        "abstract": "Video chat systems such as Skype, Google+ Hangouts, and FaceTime have been widely adopted by family members and friends to connect with one another over distance. We have conducted a corpus of studies that explore how various demographics make use of such video chat systems where this usage moves beyond the paradigm of conversational support to one in which aspects of everyday life are shared over long periods of time, sometimes in an almost passive manner.  We describe and reflect on studies of long-distance couples, teenagers, and major life events, along with design research focused on new video communication systems���the Family Window, Family Portals, and Perch���that explicitly support ���always-on video�۪ for awareness and communication. Overall, our findings show that people highly value long-term video connections and have appropriated them in a number of different ways.  Designers of future video communication systems need to consider: ways of supporting the sharing of everyday life, rather than just conversation; providing different design solutions for different locations and situations; providing appropriate audio control and feedback; and, supporting expressions of intimacy over distance.",
+        "abstract": "Video chat systems such as Skype, Google+ Hangouts, and FaceTime have been widely adopted by family members and friends to connect with one another over distance. We have conducted a corpus of studies that explore how various demographics make use of such video chat systems where this usage moves beyond the paradigm of conversational support to one in which aspects of everyday life are shared over long periods of time, sometimes in an almost passive manner.  We describe and reflect on studies of long-distance couples, teenagers, and major life events, along with design research focused on new video communication systems—the Family Window, Family Portals, and Perch—that explicitly support ‘always-on video’ for awareness and communication. Overall, our findings show that people highly value long-term video connections and have appropriated them in a number of different ways.  Designers of future video communication systems need to consider: ways of supporting the sharing of everyday life, rather than just conversation; providing different design solutions for different locations and situations; providing appropriate audio control and feedback; and, supporting expressions of intimacy over distance.",
         "acmLink": "",
         "authors": [
             {
@@ -1633,18 +1633,42 @@
                 }
             },
             {
-                "authorId": "auth1033",
+                "authorId": "auth7482",
                 "type": "author",
                 "id": "pn5112",
                 "venue": "TOCHI",
                 "rank": 7,
+                "givenName": "Michael",
+                "middleInitial": "",
+                "familyName": "Massimi",
+                "email": "Mmassimi@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Facebook",
+                    "city": "Menlo Park",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1033",
+                "type": "author",
+                "id": "pn5112",
+                "venue": "TOCHI",
+                "rank": 8,
                 "givenName": "Saul",
                 "middleInitial": "",
                 "familyName": "Greenberg",
                 "email": "saul.greenberg@ucalgary.ca",
                 "role": "",
                 "primary": {
-                    "dept": "Department of Computer Science",
+                    "dept": "",
                     "institution": "University of Calgary",
                     "city": "Calgary",
                     "country": "Canada"
@@ -1670,7 +1694,7 @@
     {
         "id": "pn5113",
         "title": "The Challenges of Using Biodata in Promotional Filmmaking",
-        "abstract": "We present a study of how filmmakers collected and visualised physiological data��Ӊ��biodata�۪���to construct a series of short promotional films depicting people undergoing ���thrilling�۪ experiences. Drawing on ethnographic studies of two major advertising campaigns, we highlight key concerns for integrating sensors and sensor data into film production. Our findings address the perceived benefits of using biodata within narratives; the nature of different on-screen representations of biodata; and the challenges presented when integrating biodata into production processes. Drawing on this, we reconsider the nature of information visualisation in the filmmaking context. Further implications from our case studies provide recommendations for HCI collaborations with filmmaking and broadcast industries, focussing both on the practical matters of fitting sensor technologies into and handling data within production workflows, as well as discussing the broader implications for managing the veracity of that data within professional media production.",
+        "abstract": "We present a study of how filmmakers collected and visualised physiological data—‘biodata’—to construct a series of short promotional films depicting people undergoing ‘thrilling’ experiences. Drawing on ethnographic studies of two major advertising campaigns, we highlight key concerns for integrating sensors and sensor data into film production. Our findings address the perceived benefits of using biodata within narratives; the nature of different on-screen representations of biodata; and the challenges presented when integrating biodata into production processes. Drawing on this, we reconsider the nature of information visualisation in the filmmaking context. Further implications from our case studies provide recommendations for HCI collaborations with filmmaking and broadcast industries, focussing both on the practical matters of fitting sensor technologies into and handling data within production workflows, as well as discussing the broader implications for managing the veracity of that data within professional media production.",
         "acmLink": "",
         "authors": [
             {
@@ -1985,7 +2009,7 @@
                 "primary": {
                     "dept": "",
                     "institution": "Max Planck Institute for Informatics",
-                    "city": "Saarbr�_cken",
+                    "city": "Saarbrücken",
                     "country": "Germany"
                 },
                 "secondary": {
@@ -2081,7 +2105,7 @@
     {
         "id": "pn5118",
         "title": "User Interfaces for Smart Things - A Generative Approach with Semantic Interaction Descriptions",
-        "abstract": "With ever more devices being connected to the Internet and everyday objects becoming ���smart�۝ due to embedded processors and communication capabilities, the provisioning of intuitive user interfaces to control smart things is quickly gaining importance. To address this issue, we present a model-based interface description scheme that enables automatic, modality-independent user interface generation. User interface description languages based on our approach carry enough information to suggest appropriate and intuitive interfaces. Still, they are simple enough to enable developers to describe the interaction semantics of a smart thing using very little, easily producible markup. This is enabled by describing the atomic interactive components of a device rather than the device as a whole, and capturing the high-level semantics of an interaction. As a concrete language based on this approach, we propose a taxonomy of abstract sensing and actuation primitives and present a smartphone application that can act as a ubiquitous device controller. An evaluation of our approach in a laboratory setup, home environments, and a lecture hall automation system as well as the results of a user study highlight the accessibility of the proposed description scheme for application developers, its suitability for controlling smart devices, and its generality with respect to describing heterogeneous smart things.",
+        "abstract": "With ever more devices being connected to the Internet and everyday objects becoming “smart” due to embedded processors and communication capabilities, the provisioning of intuitive user interfaces to control smart things is quickly gaining importance. To address this issue, we present a model-based interface description scheme that enables automatic, modality-independent user interface generation. User interface description languages based on our approach carry enough information to suggest appropriate and intuitive interfaces. Still, they are simple enough to enable developers to describe the interaction semantics of a smart thing using very little, easily producible markup. This is enabled by describing the atomic interactive components of a device rather than the device as a whole, and capturing the high-level semantics of an interaction. As a concrete language based on this approach, we propose a taxonomy of abstract sensing and actuation primitives and present a smartphone application that can act as a ubiquitous device controller. An evaluation of our approach in a laboratory setup, home environments, and a lecture hall automation system as well as the results of a user study highlight the accessibility of the proposed description scheme for application developers, its suitability for controlling smart devices, and its generality with respect to describing heterogeneous smart things.",
         "acmLink": "",
         "authors": [
             {
@@ -2139,7 +2163,7 @@
                 "venue": "TOCHI",
                 "rank": 3,
                 "givenName": "Anind",
-                "middleInitial": "",
+                "middleInitial": "K.",
                 "familyName": "Dey",
                 "email": "anind@cs.cmu.edu",
                 "role": "",
@@ -2194,7 +2218,7 @@
     {
         "id": "pn5119",
         "title": "Motivation as a Lens to Understand Online Learners: Towards Data-Driven Design with the OLEI Scale",
-        "abstract": "Open online learning environments attract an audience with diverse motivations who interact with structured courses in a number of ways. To systematically describe the motivations of these learners, we developed the Online Learning Enrollment Intentions (OLEI) scale, a 13-item questionnaire derived from open-ended responses to capture learners' authentic perspectives. Though motivations varied across courses, we found each motivation to predict key behavioral outcomes for learners (N=71,475 across 14 courses). From learners�۪ motivational and behavioral patterns, we infer a variety of needs they seek to gratify by engaging with the courses, such as meeting new people and learning English. To meet these needs, we propose multiple design directions, including virtual social spaces outside any particular course, improved support for local groups of learners, and modularization to promote accessibility and organization of course content. Motivations thus provide a lens for understanding online learners and designing online courses to better support their needs.",
+        "abstract": "Open online learning environments attract an audience with diverse motivations who interact with structured courses in a number of ways. To systematically describe the motivations of these learners, we developed the Online Learning Enrollment Intentions (OLEI) scale, a 13-item questionnaire derived from open-ended responses to capture learners' authentic perspectives. Though motivations varied across courses, we found each motivation to predict key behavioral outcomes for learners (N=71,475 across 14 courses). From learners’ motivational and behavioral patterns, we infer a variety of needs they seek to gratify by engaging with the courses, such as meeting new people and learning English. To meet these needs, we propose multiple design directions, including virtual social spaces outside any particular course, improved support for local groups of learners, and modularization to promote accessibility and organization of course content. Motivations thus provide a lens for understanding online learners and designing online courses to better support their needs.",
         "acmLink": "",
         "authors": [
             {
@@ -2203,7 +2227,7 @@
                 "id": "pn5119",
                 "venue": "TOCHI",
                 "rank": 1,
-                "givenName": "Ren̩",
+                "givenName": "René",
                 "middleInitial": "F",
                 "familyName": "Kizilcec",
                 "email": "kizilcec@stanford.edu",
@@ -2412,8 +2436,8 @@
     },
     {
         "id": "pn5127",
-        "title": "To Call or to Recall? That�۪s the Research Question",
-        "abstract": "We present findings of a study with 62 subjects who had 796 of their outgoing mobile phone calls recorded and transcribed for their later annotation���by highlighting important information shared during calls. We found that patterns in these calls (numbers, names, interrogative adverbs) as well as some contextual parameters are better indicators of annotation needs than the callers�۪ profile or call quality. Callers highlight information in both parties�۪ turns (caller and callee) more often than highlighting solely information provided by the callee, which is mostly due to annotating questions with contextual information for the highlights in the callee�۪s turns. We discuss how this behavior changes according to call purpose. Finally, we found that annotation needs change over time: while some annotations might not be considered relevant after weeks, others originally considered irrelevant might become important archival notes. We present implications of these findings for the design of mobile phone annotation tools.",
+        "title": "To Call or to Recall? That’s the Research Question",
+        "abstract": "We present findings of a study with 62 subjects who had 796 of their outgoing mobile phone calls recorded and transcribed for their later annotation—by highlighting important information shared during calls. We found that patterns in these calls (numbers, names, interrogative adverbs) as well as some contextual parameters are better indicators of annotation needs than the callers’ profile or call quality. Callers highlight information in both parties’ turns (caller and callee) more often than highlighting solely information provided by the callee, which is mostly due to annotating questions with contextual information for the highlights in the callee’s turns. We discuss how this behavior changes according to call purpose. Finally, we found that annotation needs change over time: while some annotations might not be considered relevant after weeks, others originally considered irrelevant might become important archival notes. We present implications of these findings for the design of mobile phone annotation tools.",
         "acmLink": "",
         "authors": [
             {
@@ -2502,7 +2526,7 @@
     {
         "id": "pn5128",
         "title": "Large-Scale Educational Campaigns",
-        "abstract": "Educational technology requires a delivery mechanism in order to scale. One method which has not yet seen widespread use is the educational campaign: large-scale, short-term events focused on a specific educational topic, such as the Hour of Code campaign. These are designed to generate media coverage and lend themselves nicely to collaborative or competitive goals, thus potentially leveraging social effects and community excitement to increase engagement and reach students who would otherwise not participate. In this paper, we present a case study of three such campaigns we ran to encourage students to play an algebra game, DragonBox Adaptive: the Washington, Norway, and Minnesota Algebra Challenges. We provide several design recommendations for future campaigns based on our experience, including the effects of different incentive schemes, the insertion of ���tests�۝ to fastforward students to levels of appropriate difficulty, and the strengths and weaknesses of campaigns as a method of collecting experimental data.",
+        "abstract": "Educational technology requires a delivery mechanism in order to scale. One method which has not yet seen widespread use is the educational campaign: large-scale, short-term events focused on a specific educational topic, such as the Hour of Code campaign. These are designed to generate media coverage and lend themselves nicely to collaborative or competitive goals, thus potentially leveraging social effects and community excitement to increase engagement and reach students who would otherwise not participate. In this paper, we present a case study of three such campaigns we ran to encourage students to play an algebra game, DragonBox Adaptive: the Washington, Norway, and Minnesota Algebra Challenges. We provide several design recommendations for future campaigns based on our experience, including the effects of different incentive schemes, the insertion of “tests” to fastforward students to levels of appropriate difficulty, and the strengths and weaknesses of campaigns as a method of collecting experimental data.",
         "acmLink": "",
         "authors": [
             {
@@ -2633,7 +2657,7 @@
                 "rank": 6,
                 "givenName": "Zoran",
                 "middleInitial": "",
-                "familyName": "Popovic",
+                "familyName": "Popović",
                 "email": "zoran@cs.washington.edu",
                 "role": "",
                 "primary": {
@@ -2663,7 +2687,7 @@
     {
         "id": "pn5132",
         "title": "An Assisted Photography Framework to Help Visually Impaired Users Properly Aim a Camera",
-        "abstract": "We propose an assisted photography framework to help visually impaired users properly aim a camera and evaluate our implementation in the context of documenting public transportation accessibility. Our framework integrates user interaction during the image capturing process to help users take better pictures in real time. We use an image composition model to evaluate picture quality and suggest providing audiovisual feedback to improve users�۪ aiming position. With our particular framework implementation, blind participants were able to take pictures of similar quality to those taken by low vision participants without assistance. Likewise, our system helped low vision participants take pictures as good as those taken by fully sighted users. Our results also show a positive trend in favor of spoken directions to assist visually impaired users in comparison to tone and silent feedback. Positive usefulness ratings provided by full vision users further suggest that assisted photography has universal appeal.",
+        "abstract": "We propose an assisted photography framework to help visually impaired users properly aim a camera and evaluate our implementation in the context of documenting public transportation accessibility. Our framework integrates user interaction during the image capturing process to help users take better pictures in real time. We use an image composition model to evaluate picture quality and suggest providing audiovisual feedback to improve users’ aiming position. With our particular framework implementation, blind participants were able to take pictures of similar quality to those taken by low vision participants without assistance. Likewise, our system helped low vision participants take pictures as good as those taken by fully sighted users. Our results also show a positive trend in favor of spoken directions to assist visually impaired users in comparison to tone and silent feedback. Positive usefulness ratings provided by full vision users further suggest that assisted photography has universal appeal.",
         "acmLink": "",
         "authors": [
             {
@@ -2674,7 +2698,7 @@
                 "rank": 1,
                 "givenName": "Marynel",
                 "middleInitial": "",
-                "familyName": "V��zquez",
+                "familyName": "Vázquez",
                 "email": "marynel@cmu.edu",
                 "role": "",
                 "primary": {
@@ -2718,7 +2742,7 @@
         "cbStatement": "",
         "contactEmail": "marynel@cmu.edu",
         "contactFirstName": "Marynel",
-        "contactLastName": "V��zquez",
+        "contactLastName": "Vázquez",
         "keywords": "",
         "venue": "TOCHI",
         "subtype": "",
@@ -2793,7 +2817,7 @@
     {
         "id": "pn5134",
         "title": "Up Close and Personal: Collaborative Work on a High-Resolution Multitouch Wall Display",
-        "abstract": "Multitouch wall-sized displays afford new forms of collaboration: They can be used up close by several users simultaneously, offer high resolution, and provide sufficient space for intertwining individual and joint work. The difference to displays without these capabilities is not well understood. To better understand the collaboration of groups around high-resolution multitouch wall displays, we conducted an exploratory study. Pairs collaborated on a problem-solving task using a 2.8m �� 1.2m multitouch display with 24.8 megapixels. The study examines how participants collaborate; navigate relative to the display and to each other; and interact with and share the display. Participants physically navigated among different parts of the display, switched fluidly between parallel and joint work, and shared the display evenly. The results contrast earlier research that suggests difficulties in sharing and collaborating around wall displays. The study suggests that multitouch wall displays can support different collaboration styles and fluid transitions in group work.",
+        "abstract": "Multitouch wall-sized displays afford new forms of collaboration: They can be used up close by several users simultaneously, offer high resolution, and provide sufficient space for intertwining individual and joint work. The difference to displays without these capabilities is not well understood. To better understand the collaboration of groups around high-resolution multitouch wall displays, we conducted an exploratory study. Pairs collaborated on a problem-solving task using a 2.8m × 1.2m multitouch display with 24.8 megapixels. The study examines how participants collaborate; navigate relative to the display and to each other; and interact with and share the display. Participants physically navigated among different parts of the display, switched fluidly between parallel and joint work, and shared the display evenly. The results contrast earlier research that suggests difficulties in sharing and collaborating around wall displays. The study suggests that multitouch wall displays can support different collaboration styles and fluid transitions in group work.",
         "acmLink": "",
         "authors": [
             {
@@ -2828,7 +2852,7 @@
                 "rank": 2,
                 "givenName": "Kasper",
                 "middleInitial": "",
-                "familyName": "Hornb�_k",
+                "familyName": "Hornbæk",
                 "email": "kash@diku.dk",
                 "role": "",
                 "primary": {
@@ -3043,7 +3067,7 @@
     {
         "id": "pn5138",
         "title": "A Survey of Augmented Reality",
-        "abstract": "This paper summarizes almost 50 years of research and development in the field of Augmented \\ Reality (AR). From early research in the1960�۪s until widespread availability by the 2010�۪s there \\ has been steady progress towards the goal of being able to seamlessly combine real and virtual \\ worlds. We provide an overview of the common definitions of AR, and show how AR fits into \\ taxonomies of other related technologies. A history of important milestones in Augmented \\ Reality is followed by sections on the key enabling technologies of tracking, display and input \\ devices. We also review design guidelines and provide some examples of successful AR \\ applications. Finally, we conclude with a summary of directions for future work and a review of \\ some of the areas that are currently being researched.",
+        "abstract": "This paper summarizes almost 50 years of research and development in the field of Augmented Reality (AR). From early research in the 1960’s until widespread availability by the 2010’s there has been steady progress towards the goal of being able to seamlessly combine real and virtual worlds. We provide an overview of the common definitions of AR, and show how AR fits into taxonomies of other related technologies. A history of important milestones in Augmented \\ Reality is followed by sections on the key enabling technologies of tracking, display and input devices. We also review design guidelines and provide some examples of successful AR applications. Finally, we conclude with a summary of directions for future work and a review of some of the areas that are currently being researched.",
         "acmLink": "",
         "authors": [
             {
@@ -3132,7 +3156,7 @@
     {
         "id": "pn5145",
         "title": "A Design Thinking Rationality Framework: Framing and Solving Design Problems in Early Concept Generation",
-        "abstract": "The concept of ���Design Thinking�۝ opens up debate regarding the prevalent human���computer interaction design practice. This article focuses specifically on the cognitive processes of designers during their early design activities. Two groups of designers���experts and novices���were asked to develop a fictitious vacuum cleaner. We then examined the different ways in which these groups manage their design thinking processes and how the groups choose design concepts. The empirical study revealed that expert designers are effective at framing design problems. They make quick decisions (through the use of the affect heuristic) but are more wedded to their own previously developed design concepts, which they do not change in subsequent design stages. In contrast, novice designers are less skilled in framing new design problems but better able to renounce their initial design concepts. These diverse design thinking approaches are linked to potential problems. We then discuss how to address these concerns in conjunction with empathy for the artifact (i.e., artifact empathy via the mediated self) or user (i.e., user empathy via the simulated self), problem framing with second-order semantic connotations, and irrationality when analyzing design solutions. Finally, we propose a design thinking rationality framework that can establish a designer's view of design activities and thereby assist designers educated in both creative and rational design decisions.",
+        "abstract": "The concept of “Design Thinking” opens up debate regarding the prevalent human–computer interaction design practice. This article focuses specifically on the cognitive processes of designers during their early design activities. Two groups of designers—experts and novices—were asked to develop a fictitious vacuum cleaner. We then examined the different ways in which these groups manage their design thinking processes and how the groups choose design concepts. The empirical study revealed that expert designers are effective at framing design problems. They make quick decisions (through the use of the affect heuristic) but are more wedded to their own previously developed design concepts, which they do not change in subsequent design stages. In contrast, novice designers are less skilled in framing new design problems but better able to renounce their initial design concepts. These diverse design thinking approaches are linked to potential problems. We then discuss how to address these concerns in conjunction with empathy for the artifact (i.e., artifact empathy via the mediated self) or user (i.e., user empathy via the simulated self), problem framing with second-order semantic connotations, and irrationality when analyzing design solutions. Finally, we propose a design thinking rationality framework that can establish a designer's view of design activities and thereby assist designers educated in both creative and rational design decisions.",
         "acmLink": "",
         "authors": [
             {
@@ -3261,7 +3285,7 @@
                 "role": "",
                 "primary": {
                     "dept": "",
-                    "institution": "Institut Fran̤ais des Sciences et Technologies des Transports, de l'Am̩nagement et des R̩seaux",
+                    "institution": "Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux",
                     "city": "Versailles",
                     "country": "France"
                 },
@@ -3286,7 +3310,7 @@
     {
         "id": "pn5147",
         "title": "User Experience of On-Screen Interaction Techniques: An Experimental Investigation of Clicking, Sliding, Zooming, Hovering, Dragging, and Flipping",
-        "abstract": "From scrolling and clicking to dragging, flipping, sliding, hovering and zooming, the wide array of interaction techniques has vastly expanded the range of user actions on an interface. Each of these interaction techniques affords a distinct action. But, do these techniques differ in their ability to engage users and contribute to their user experience? Furthermore, do they affect how users view the content and how much they learn from it? We address these questions via two between-subjects laboratory experiments. Study 1 (N = 128) investigated the relative effects of six on-screen interaction techniques (click-to-download, drag, mouseover, slide, zoom and 3D carousel) on users�۪ assessment of���as well as their engagement with���an informational Website. The site for each condition was identical in content and design, except for the interaction technique used, so that we could isolate the effects of each technique on various cognitive, attitudinal and behavioral outcomes. Study 2 (N = 127) examined the relative effects of four combinations of interaction techniques (slide+click, slide+mouseover, drag+mouseover and drag+zoom) on the same dependent variables. Data from Study 1 suggest that while the 3D carousel generates more user action, the slide is better at aiding memory. The zoom-in/out tool was the least favored whereas the mouseover feature fostered greater engagement among power-users. Findings from Study 2, which was conducted with a different content domain, replicated the positive effects of slide and negative effects of drag in influencing user experience. Path analyses, using structural equation modeling, revealed the importance of users�۪ assessment of the interface (perceived levels of natural mapping, intuitiveness and ease of use), which can have significant consequences for user engagement as well as resulting attitudes and behavioral outcomes. Design insights, theories and techniques to test and capture user experience are discussed.",
+        "abstract": "From scrolling and clicking to dragging, flipping, sliding, hovering and zooming, the wide array of interaction techniques has vastly expanded the range of user actions on an interface. Each of these interaction techniques affords a distinct action. But, do these techniques differ in their ability to engage users and contribute to their user experience? Furthermore, do they affect how users view the content and how much they learn from it? We address these questions via two between-subjects laboratory experiments. Study 1 (N = 128) investigated the relative effects of six on-screen interaction techniques (click-to-download, drag, mouseover, slide, zoom and 3D carousel) on users’ assessment of—as well as their engagement with—an informational Website. The site for each condition was identical in content and design, except for the interaction technique used, so that we could isolate the effects of each technique on various cognitive, attitudinal and behavioral outcomes. Study 2 (N = 127) examined the relative effects of four combinations of interaction techniques (slide+click, slide+mouseover, drag+mouseover and drag+zoom) on the same dependent variables. Data from Study 1 suggest that while the 3D carousel generates more user action, the slide is better at aiding memory. The zoom-in/out tool was the least favored whereas the mouseover feature fostered greater engagement among power-users. Findings from Study 2, which was conducted with a different content domain, replicated the positive effects of slide and negative effects of drag in influencing user experience. Path analyses, using structural equation modeling, revealed the importance of users’ assessment of the interface (perceived levels of natural mapping, intuitiveness and ease of use), which can have significant consequences for user engagement as well as resulting attitudes and behavioral outcomes. Design insights, theories and techniques to test and capture user experience are discussed.",
         "acmLink": "",
         "authors": [
             {
@@ -3423,7 +3447,7 @@
     {
         "id": "pn5148",
         "title": "WallTop: Manage Overflowing Windows on a Large Display",
-        "abstract": "With the ever increasing amount of digital information, users desire more screen real estate to process daily desktop computing work, and might well benefit from using a large high-resolution display for information management. Unfortunately, we know very little about users�۪ behaviors when using such a display for daily computing, and current user interfaces are mainly designed for normal-sized desktop monitors, which might not well suit a large display. In this paper, we firstly present a longitudinal study that investigates how users manage overflowing digital information on a wall-sized display in a personal desktop computing context by comparing it with single and dual desktop monitors. Results showed users�۪ unanimous preferences of working on a large display, and revealed large-display users�۪ unique activity patterns of managing windows. Guided by the study results, we designed a set of interaction techniques that provide greater flexibility in managing multiple windows. They include facile methods for selecting, moving and resizing multiple windows using the active window boundary called Fringe, rearranging selected windows using multi- and single-window marking menus, packing/unpacking the selected windows using easily activated icons, and freely adjusting window overlapping order with a Jab-to-Lift operation. We coherently integrated these techniques with traditional operations in a large-display window management prototype called WallTop. Two rounds of usability testing showed that users can quickly and easily learn the new interaction techniques and apply them to realistic window management tasks on a large display with increased efficiency.",
+        "abstract": "With the ever increasing amount of digital information, users desire more screen real estate to process daily desktop computing work, and might well benefit from using a large high-resolution display for information management. Unfortunately, we know very little about users’ behaviors when using such a display for daily computing, and current user interfaces are mainly designed for normal-sized desktop monitors, which might not well suit a large display. In this paper, we firstly present a longitudinal study that investigates how users manage overflowing digital information on a wall-sized display in a personal desktop computing context by comparing it with single and dual desktop monitors. Results showed users’ unanimous preferences of working on a large display, and revealed large-display users’ unique activity patterns of managing windows. Guided by the study results, we designed a set of interaction techniques that provide greater flexibility in managing multiple windows. They include facile methods for selecting, moving and resizing multiple windows using the active window boundary called Fringe, rearranging selected windows using multi- and single-window marking menus, packing/unpacking the selected windows using easily activated icons, and freely adjusting window overlapping order with a Jab-to-Lift operation. We coherently integrated these techniques with traditional operations in a large-display window management prototype called WallTop. Two rounds of usability testing showed that users can quickly and easily learn the new interaction techniques and apply them to realistic window management tasks on a large display with increased efficiency.",
         "acmLink": "",
         "authors": [
             {
@@ -3503,6 +3527,571 @@
         "contactEmail": "xjunbi@gmail.com",
         "contactFirstName": "Xiaojun",
         "contactLastName": "Bi",
+        "keywords": "",
+        "venue": "TOCHI",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "pn5149",
+        "title": "What Designers Talk About When They Talk About Context",
+        "abstract": "Context has long been considered an important component of design, but as technology becomes more capable of inferring the user’s behavior and environment, what constitutes context has become an increasingly pressing concern to designers. Although design frameworks and models have been proposed for context-aware computing systems, there has not yet been research that focuses on understanding context empirically from the perspective of the designer. To address this, we present an analysis of 11 in-depth interviews we conducted with designers of a variety of context-aware systems. Our analysis of the artifacts and interviews reveal five concerns designers address in their work. Furthermore, we present a process model that illustrates how context-aware system designers address these concerns. Our findings demonstrate the central role that designers’ views of context plays in (a) framing a design space, (b) encoding the relevant features of context, (c) unifying possible solutions within that design space, and (d) evaluating designs. These findings suggest that context is a dynamic concept that evolves over the course of a design project, generally from a more phenomenological perspective toward a positivist interpretation. This, and the process by which it occurs, contributes insight into context-aware design with implications for both academics and practitioners.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth14763",
+                "type": "author",
+                "id": "pn5149",
+                "venue": "TOCHI",
+                "rank": 1,
+                "givenName": "Jared",
+                "middleInitial": "S",
+                "familyName": "Bauer",
+                "email": "jaredsb@uw.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1425",
+                "type": "author",
+                "id": "pn5149",
+                "venue": "TOCHI",
+                "rank": 2,
+                "givenName": "Mark",
+                "middleInitial": "W.",
+                "familyName": "Newman",
+                "email": "mwnewman@umich.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Michigan",
+                    "city": "Ann Arbor",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth5566",
+                "type": "author",
+                "id": "pn5149",
+                "venue": "TOCHI",
+                "rank": 3,
+                "givenName": "Julie",
+                "middleInitial": "A",
+                "familyName": "Kientz",
+                "email": "jkientz@uw.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "jaredsb@uw.edu",
+        "contactFirstName": "Jared",
+        "contactLastName": "Bauer",
+        "keywords": "",
+        "venue": "TOCHI",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "pn5150",
+        "title": "Multi-sited Design: An Analytical Lens for Transnational HCI",
+        "abstract": "In this article, we present and articulate the analytical lens of multi-sited \\ design to illuminate transnational connections between sites of design, and \\ aid in the translation of knowledge between designers and ethnographers. This position emerges from the authors’ respective engagements in ethnographic \\ research and design engagements with a slum community center in \\ Bangkok, Thailand, and with ‘‘makers’’ and entrepreneurs in Shanghai and \\ Shenzhen, China. In both cases,we found design to be a site of engagement \\ with and interpretation of wider connections between different locales, \\ and between local and global networks. We identify four crucial aspects \\ of design for the purposes of this discussion: It is normative, concerned \\ with function and the attainment of goals; it is practical, and oriented \\ toward constraints and opportunities; it frames and defines problems \\ concurrently with solving them; and it takes a systems approach that \\ accounts for the broad context of the design situation. Approaching \\ and participating in these aspects of design evolved in concert with our \\ ethnographic fieldwork and analysis, allowing us to take design seriously \\ without sacrificing an ethnographic commitment to nuanced description. \\ We conclude by touching on the epistemological similarities, rather than \\ conflicts, between ethnography and design.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth6203",
+                "type": "author",
+                "id": "pn5150",
+                "venue": "TOCHI",
+                "rank": 1,
+                "givenName": "Amanda",
+                "middleInitial": "M",
+                "familyName": "Williams",
+                "email": "metamanda@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Fabule Fabrications, Inc.",
+                    "city": "Montreal",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth9429",
+                "type": "author",
+                "id": "pn5150",
+                "venue": "TOCHI",
+                "rank": 2,
+                "givenName": "Silvia",
+                "middleInitial": "",
+                "familyName": "Lindtner",
+                "email": "silvia.lindtner@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "School of Information",
+                    "institution": "University of Michigan",
+                    "city": "Ann Arbor",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth2222",
+                "type": "author",
+                "id": "pn5150",
+                "venue": "TOCHI",
+                "rank": 3,
+                "givenName": "ken",
+                "middleInitial": "t",
+                "familyName": "anderson",
+                "email": "ken.anderson@intel.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Intel Corporation",
+                    "city": "Hillsboro",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1113",
+                "type": "author",
+                "id": "pn5150",
+                "venue": "TOCHI",
+                "rank": 4,
+                "givenName": "Paul",
+                "middleInitial": "",
+                "familyName": "Dourish",
+                "email": "jpd@ics.uci.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of California, Irvine",
+                    "city": "Irvine",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "silvia.lindtner@gmail.com",
+        "contactFirstName": "Silvia",
+        "contactLastName": "Lindtner",
+        "keywords": "",
+        "venue": "TOCHI",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "pn5151",
+        "title": "Providing Adaptive Health Updates Across the Personal Social Network",
+        "abstract": "This article presents research conducted to establish how information is shared across the personal social network in the sensitive context of a health crisis. We worked with parents of very sick babies who were cared for in a hospital's Neonatal Unit (NNU). Through a combination of interviews, a focus group, and surveys, we developed a user model of the information that parents wanted to share, and how they adapted this information to individual recipients. We then developed a prototype software tool which created adaptive updates for members of the parents' social network. The updates contained summaries of large volumes of complex medical data about the baby, nonmedical information about the parents, and practical information about the hospital. Updates were automatically adapted to individual members of parents' social networks, based on our user model. The tool was evaluated in a large NNU in the United Kingdom with parents of babies who were currently being cared for in the unit. We found that parents adapted the information that they shared about themselves and their babies based on the emotional proximity of their network members. They gave most detail to those who were emotionally closest to them and least to those who were less close. Parents also adapted information content to the recipient's tendency to worry and empathize. Two adaptive strategies were deployed by parents, (a) benign deceit — not telling the whole truth — and (b) promotion of empathetic members of the social network to a higher level of emotional proximity, so that they were given more information. We generated a number of directions for future work, and issues to consider around designing adaptive mediated communications systems for sensitive contexts. These include the potential to generalize our model to other medical contexts and considerations to apply when deliberately designing deceit into adaptive systems.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth9400",
+                "type": "author",
+                "id": "pn5151",
+                "venue": "TOCHI",
+                "rank": 1,
+                "givenName": "Wendy",
+                "middleInitial": "",
+                "familyName": "Moncur",
+                "email": "wmoncur@dundee.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Duncan of Jordanstone College of Art & Design",
+                    "institution": "University of Dundee",
+                    "city": "Dundee",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth10255",
+                "type": "author",
+                "id": "pn5151",
+                "venue": "TOCHI",
+                "rank": 2,
+                "givenName": "Judith",
+                "middleInitial": "",
+                "familyName": "Masthoff",
+                "email": "j.masthoff@abdn.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Aberdeen",
+                    "city": "Aberdeen",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth11512",
+                "type": "author",
+                "id": "pn5151",
+                "venue": "TOCHI",
+                "rank": 3,
+                "givenName": "Ehud",
+                "middleInitial": "",
+                "familyName": "Reiter",
+                "email": "e.reiter@abdn.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Department of Computer Science",
+                    "institution": "University of Aberdeen",
+                    "city": "Aberdeen",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth50593",
+                "type": "author",
+                "id": "pn5151",
+                "venue": "TOCHI",
+                "rank": 4,
+                "givenName": "Yvonne",
+                "middleInitial": "",
+                "familyName": "Freer",
+                "email": "Yvonne.Freer@luht.scot.nhs.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Royal Infirmary of Edinburgh",
+                    "institution": "NHS Lothian",
+                    "city": "Edinburgh",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth50594",
+                "type": "author",
+                "id": "pn5151",
+                "venue": "TOCHI",
+                "rank": 5,
+                "givenName": "Hien",
+                "middleInitial": "",
+                "familyName": "Nguyen",
+                "email": "h.nguyen@abdn.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Department of Computing Science",
+                    "institution": "University of Aberdeen",
+                    "city": "Aberdeen",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "wmoncur@dundee.ac.uk",
+        "contactFirstName": "Wendy",
+        "contactLastName": "Moncur",
+        "keywords": "",
+        "venue": "TOCHI",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "pn5154",
+        "title": "Designing for Healthy Lifestyles: Design Considerations for Mobile Technologies to Encourage Consumer Health and Wellness",
+        "abstract": "As the rates of lifestyle diseases such as obesity, diabetes, and heart disease continue to rise, the development of effective tools that can help people adopt and sustain healthier habits is becoming ever more important. Mobile computing holds great promise for providing effective support for helping people manage their health in everyday life. Yet, for this promise to be realized, mobile wellness systems need to be well designed, not only in terms of how they implement specific behavior-change techniques but also, among other factors, in terms of how much burden they put on the user, how well they integrate into the user’s daily life, and how they address the user’s privacy concerns. Designing for all of these constraints is difficult, and it is often not clear what tradeoffs particular design decisions have on how a wellness application is experienced and used. In this monograph, we provide an account of different design approaches to common features of mobile wellness applications and we discuss the tradeoffs inherent in those approaches. We also outline the key challenges that HCI researchers and designers will need to address to move the state of the art for mobile wellness technologies forward.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth2938",
+                "type": "author",
+                "id": "pn5154",
+                "venue": "TOCHI",
+                "rank": 1,
+                "givenName": "Sunny",
+                "middleInitial": "",
+                "familyName": "Consolvo",
+                "email": "sconsolvo@google.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Google, Inc.",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth8119",
+                "type": "author",
+                "id": "pn5154",
+                "venue": "TOCHI",
+                "rank": 2,
+                "givenName": "Predrag",
+                "middleInitial": "V.",
+                "familyName": "Klasnja",
+                "email": "klasnja@umich.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Michigan",
+                    "city": "Ann Arbor",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1199",
+                "type": "author",
+                "id": "pn5154",
+                "venue": "TOCHI",
+                "rank": 3,
+                "givenName": "David",
+                "middleInitial": "W",
+                "familyName": "McDonald",
+                "email": "dwmc@u.washington.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1472",
+                "type": "author",
+                "id": "pn5154",
+                "venue": "TOCHI",
+                "rank": 4,
+                "givenName": "James",
+                "middleInitial": "A",
+                "familyName": "Landay",
+                "email": "landay@cs.stanford.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Computer Science Department",
+                    "institution": "Stanford University",
+                    "city": "Palo Alto",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "",
+        "contactFirstName": "",
+        "contactLastName": "",
+        "keywords": "",
+        "venue": "TOCHI",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "pn5155",
+        "title": "Augmented Reality Expert Panel Discussion",
+        "abstract": "-",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth3486",
+                "type": "author",
+                "id": "pn5155",
+                "venue": "TOCHI",
+                "rank": 1,
+                "givenName": "Mark",
+                "middleInitial": "",
+                "familyName": "Billinghurst",
+                "email": "mark.billinghurst@hitlabnz.org",
+                "role": "",
+                "primary": {
+                    "dept": "HIT Lab NZ",
+                    "institution": "University of Canterbury",
+                    "city": "Christchurch",
+                    "country": "New Zealand"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth34052",
+                "type": "author",
+                "id": "pn5155",
+                "venue": "TOCHI",
+                "rank": 2,
+                "givenName": "Woontack",
+                "middleInitial": "",
+                "familyName": "Woo",
+                "email": "wwoo@kaist.ac.kr",
+                "role": "",
+                "primary": {
+                    "dept": "GSCT/UVR Lab",
+                    "institution": "KAIST",
+                    "city": "Daejeon",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth3380",
+                "type": "author",
+                "id": "pn5155",
+                "venue": "TOCHI",
+                "rank": 3,
+                "givenName": "Thad",
+                "middleInitial": "",
+                "familyName": "Starner",
+                "email": "thad@cc.gatech.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Georgia Institute of Technology",
+                    "city": "Atlanta",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth6284",
+                "type": "author",
+                "id": "pn5155",
+                "venue": "TOCHI",
+                "rank": 4,
+                "givenName": "Shahram",
+                "middleInitial": "",
+                "familyName": "Izadi",
+                "email": "shahrami@microsoft.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Microsoft Research",
+                    "city": "Cambridge",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "mark.billinghurst@hitlabnz.org",
+        "contactFirstName": "Mark",
+        "contactLastName": "Billinghurst",
         "keywords": "",
         "venue": "TOCHI",
         "subtype": "",

@@ -395,7 +395,6 @@
 
     // get html for a submission in the view mode
     function _getViewSubmissionDetail(type, submission, session){
-        console.log(submission, session);
         var element;
         var isLocked = false;
         // if the session is a single submission type special session (sig, panel, bof, ...), do not display buttons
@@ -1096,12 +1095,11 @@
             "Wednesday": 3,
             "Thursday": 4,
             "Friday": 5,
-              "Saturday": 6,
-	      "2014-02-14" : 0,
-	      "2014-02-15" : 1,
-	      "2014-02-16" : 2,
-	      "2-14-02-17" : 3
-
+            "Saturday": 6,
+            "Monday, 04-19": 0,
+            "Tuesday, 04-20": 1,
+            "Wednesday, 04-21": 2,
+            "Thursday, 04-22": 3
           }
           //var orderedDates = keys(schedule).sort(function(a,b) {return new Date(a) - new Date(b);});
           //var orderedRooms = keys(allRooms).sort(function(a,b) {return allRooms[a] - allRooms[b];});

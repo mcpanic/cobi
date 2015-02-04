@@ -1,0 +1,461 @@
+[
+    {
+        "id": "pan106",
+        "title": "Technology Transfer of HCI Research Innovations: Challenges and Opportunities",
+        "abstract": "There has been a longstanding concern within HCI that even though we are accumulating great innovations in the field, we rarely see these innovations develop into products. Our panel brings together HCI researchers from academia and industry who have been directly involved in technology transfer of one or more HCI innovations. They will share their experiences around what it takes to transition an HCI innovation from the lab to the market, including issues around time commitment, funding, resources, and business expertise. More importantly, our panelists will discuss and debate the tensions that we (researchers) face in choosing design and evaluation methods that help us make an HCI research contribution versus what actually matters when we go to market. ",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth11526",
+                "type": "author",
+                "id": "pan106",
+                "venue": "panel",
+                "rank": 1,
+                "givenName": "Parmit",
+                "middleInitial": "K",
+                "familyName": "Chilana",
+                "email": "pchilana@uwaterloo.ca",
+                "role": "",
+                "primary": {
+                    "dept": "Management Sciences",
+                    "institution": "University of Waterloo",
+                    "city": "Waterloo",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1005",
+                "type": "author",
+                "id": "pan106",
+                "venue": "panel",
+                "rank": 2,
+                "givenName": "Mary",
+                "middleInitial": "P.",
+                "familyName": "Czerwinski",
+                "email": "marycz@microsoft.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Microsoft Research",
+                    "city": "Redmond",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1476",
+                "type": "author",
+                "id": "pan106",
+                "venue": "panel",
+                "rank": 3,
+                "givenName": "Tovi",
+                "middleInitial": "",
+                "familyName": "Grossman",
+                "email": "tovi.grossman@autodesk.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Autodesk Research",
+                    "city": "Toronto",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth10923",
+                "type": "author",
+                "id": "pan106",
+                "venue": "panel",
+                "rank": 4,
+                "givenName": "Chris",
+                "middleInitial": "",
+                "familyName": "Harrison",
+                "email": "chris.harrison@cs.cmu.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Human-Computer Interaction Institute",
+                    "institution": "Carnegie Mellon University",
+                    "city": "Pittsburgh",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth13333",
+                "type": "author",
+                "id": "pan106",
+                "venue": "panel",
+                "rank": 5,
+                "givenName": "Ranjitha",
+                "middleInitial": "",
+                "familyName": "Kumar",
+                "email": "ranjitha@illinois.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Computer Science",
+                    "institution": "University of Illinois at Urbana-Champaign",
+                    "city": "Champaign",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth4720",
+                "type": "author",
+                "id": "pan106",
+                "venue": "panel",
+                "rank": 6,
+                "givenName": "Tapan",
+                "middleInitial": "S.",
+                "familyName": "Parikh",
+                "email": "parikh@berkeley.edu",
+                "role": "",
+                "primary": {
+                    "dept": "School of Information",
+                    "institution": "University of California, Berkeley",
+                    "city": "Berkeley",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1220",
+                "type": "author",
+                "id": "pan106",
+                "venue": "panel",
+                "rank": 7,
+                "givenName": "Shumin",
+                "middleInitial": "",
+                "familyName": "Zhai",
+                "email": "zhai@acm.org",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Research @ Google",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "pchilana@uwaterloo.ca",
+        "contactFirstName": "Parmit",
+        "contactLastName": "Chilana",
+        "keywords": "",
+        "venue": "panel",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "pan108",
+        "title": "You've Been Acquired!",
+        "abstract": "Today’s mergers and acquisitions (M&As) are increasingly focused on the user experience and design expertise they bring to the acquiring entity. This panel will share vignettes based on personal M&A experiences that provide suggestions and recommendations for user experience teams on both the acquiring and acquired side of the table. The areas of focus for the discussions will be team, culture and design assimilation and how M&As can impact designers’ work and personal growth as individuals cross over into new organizations. ",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth13433",
+                "type": "author",
+                "id": "pan108",
+                "venue": "panel",
+                "rank": 1,
+                "givenName": "Iram",
+                "middleInitial": "W",
+                "familyName": "Mirza",
+                "email": "iramm@stanfordalumni.org",
+                "role": "",
+                "primary": {
+                    "dept": "UX",
+                    "institution": "Google",
+                    "city": "Mountain View",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth50612",
+                "type": "author",
+                "id": "pan108",
+                "venue": "panel",
+                "rank": 2,
+                "givenName": "Meng ",
+                "middleInitial": "",
+                "familyName": "Chee",
+                "email": "meng.chee@samsung.com",
+                "role": "",
+                "primary": {
+                    "dept": "create",
+                    "institution": "Samsung",
+                    "city": "San Jose",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "iramm@stanfordalumni.org",
+        "contactFirstName": "Iram",
+        "contactLastName": "Mirza",
+        "keywords": "Mergers and Acquisitions; UX Leadership; Team Culture; Design Assimilation",
+        "venue": "panel",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "pan109",
+        "title": "Transdisciplinary Interaction Design in Design Education",
+        "abstract": "Transdisciplinary design—which is the idea of design that transcends disciplinary boundaries—has been proposed as a fourth design paradigm of interaction design education, scholarship, and practice alongside the technical, cognitive, and ethnographic paradigms. As an educational concern in particular, its aim is to teach students how to bring a values orientation to interaction design. Its focuses are design frameworks, values and ethics, design for important themes such as sustainability, equity, adaptation, justice, and social responsibility. This panel maps the state of the art in transdisciplinary interaction design education, considering also design scholarship and practice in relation to design education. The panel collects together a group of educators from chosen to provide a global perspective, with panelists from Canada, Denmark, Hong Kong, Korea, and Taiwan.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth3625",
+                "type": "author",
+                "id": "pan109",
+                "venue": "panel",
+                "rank": 1,
+                "givenName": "Eli",
+                "middleInitial": "",
+                "familyName": "Blevis",
+                "email": "eblevis@indiana.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "School of Informatics & Computing, Indiana University",
+                    "city": "Bloomington",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "School of Design, The Hong Kong Polytechnic University, Hung Hom, Kowloon, Hong Kong",
+                    "institution": "The Hong Kong Polytechnic University",
+                    "city": "Hung Hom",
+                    "country": "Hong Kong"
+                }
+            },
+            {
+                "authorId": "auth6550",
+                "type": "author",
+                "id": "pan109",
+                "venue": "panel",
+                "rank": 2,
+                "givenName": "Ilpo",
+                "middleInitial": "K",
+                "familyName": "Koskinen",
+                "email": "ilpo.koskinen@polyu.edu.hk",
+                "role": "",
+                "primary": {
+                    "dept": "School of Design",
+                    "institution": "The Hong Polytechnic University",
+                    "city": "Hong Hom",
+                    "country": "Hong Kong"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth14592",
+                "type": "author",
+                "id": "pan109",
+                "venue": "panel",
+                "rank": 3,
+                "givenName": "KunPyo",
+                "middleInitial": "",
+                "familyName": "Lee",
+                "email": "kplee@kaist.ac.kr",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Department of Industrial Design, KAIST",
+                    "city": "Daejeon",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1219",
+                "type": "author",
+                "id": "pan109",
+                "venue": "panel",
+                "rank": 4,
+                "givenName": "Susanne",
+                "middleInitial": "",
+                "familyName": "Bødker",
+                "email": "bodker@cs.au.dk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Aarhus University",
+                    "city": "Aarhus",
+                    "country": "Denmark"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1284",
+                "type": "author",
+                "id": "pan109",
+                "venue": "panel",
+                "rank": 5,
+                "givenName": "Lin-Lin",
+                "middleInitial": "",
+                "familyName": "Chen",
+                "email": "llchen@mail.ntust.edu.tw",
+                "role": "",
+                "primary": {
+                    "dept": "Industrial and Commercial Design",
+                    "institution": "National Taiwan University of Science and Technology",
+                    "city": "Taipei",
+                    "country": "Taiwan"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth4583",
+                "type": "author",
+                "id": "pan109",
+                "venue": "panel",
+                "rank": 6,
+                "givenName": "Youn-kyung",
+                "middleInitial": "",
+                "familyName": "Lim",
+                "email": "younlim@kaist.ac.kr",
+                "role": "",
+                "primary": {
+                    "dept": "Industrial Design",
+                    "institution": "KAIST (Korea Advanced Institute of Science and Technology)",
+                    "city": "Daejeon",
+                    "country": "Republic of Korea"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47530",
+                "type": "author",
+                "id": "pan109",
+                "venue": "panel",
+                "rank": 7,
+                "givenName": "Huaxin",
+                "middleInitial": "",
+                "familyName": "Wei",
+                "email": "huaxin.wei@polyu.edu.hk",
+                "role": "",
+                "primary": {
+                    "dept": "School of Design",
+                    "institution": "The Hong Kong Polytechnic University",
+                    "city": "Kowloon",
+                    "country": "Hong Kong"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth3350",
+                "type": "author",
+                "id": "pan109",
+                "venue": "panel",
+                "rank": 8,
+                "givenName": "Ron",
+                "middleInitial": "",
+                "familyName": "Wakkary",
+                "email": "rwakkary@sfu.ca",
+                "role": "",
+                "primary": {
+                    "dept": "School of Interactive Arts + Technology",
+                    "institution": "Simon Fraser University",
+                    "city": "Surrey",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "Eindhoven University of Technology",
+                    "city": "Eindhoven",
+                    "country": "The Netherlands"
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "eblevis@indiana.edu",
+        "contactFirstName": "Eli",
+        "contactLastName": "Blevis",
+        "keywords": "Interaction design; education; transdisciplinary design; computer science; design; cognitive science; ethnographic research  ",
+        "venue": "panel",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    }
+]

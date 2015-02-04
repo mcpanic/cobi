@@ -38,29 +38,30 @@ var roomCapacity = {
 
 var desiredRoomOrder = ["Hall D1", "401", "E5", "E6", "E1/E2", "402", "E3", "E4", "403", "307ABC", "308ABC", "317A", "317BC", "E7", "318BC", "318A"];
 
-var personaList = [
-    "Public Policy",
-    "Global Perspectives and Issues",
-    "Nanotechnology",
-    "Education and Human Resources",
-    "Biological Science and Genomics",
-    "Atmospheric, Hydrospheric, and Oceanic Sciences",
-    "Health and Pharmaceutical Science",
-    "Physics and Astronomy",
-    "Engineering, Industry, and Technology",
-    "Sustainability and Resource Management",
-    "History and Philosophy of Science",
-    "Communications and Public Programs",
-    "Mathematics and Statistics",
-    "Neuroscience",
-    "Geology and Geography",
-    "Behavioral and Social Sciences",
-    "Anthropology, Culture, and Language",
-    "Environment and Ecology",
-    "Energy and Renewable Resources",
-    "Information Technology and Computing",
-    "Animal, Plant, and Food Sciences",
-    "Chemical Sciences"];
+var personaList = [];
+// [
+//     "Public Policy",
+//     "Global Perspectives and Issues",
+//     "Nanotechnology",
+//     "Education and Human Resources",
+//     "Biological Science and Genomics",
+//     "Atmospheric, Hydrospheric, and Oceanic Sciences",
+//     "Health and Pharmaceutical Science",
+//     "Physics and Astronomy",
+//     "Engineering, Industry, and Technology",
+//     "Sustainability and Resource Management",
+//     "History and Philosophy of Science",
+//     "Communications and Public Programs",
+//     "Mathematics and Statistics",
+//     "Neuroscience",
+//     "Geology and Geography",
+//     "Behavioral and Social Sciences",
+//     "Anthropology, Culture, and Language",
+//     "Environment and Ecology",
+//     "Energy and Renewable Resources",
+//     "Information Technology and Computing",
+//     "Animal, Plant, and Food Sciences",
+//     "Chemical Sciences"];
 
 var fullpersonaList = personaList;
 

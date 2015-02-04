@@ -1,0 +1,410 @@
+[
+    {
+        "authorId": "auth11526",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Parmit",
+        "middleInitial": "K",
+        "familyName": "Chilana",
+        "email": "pchilana@uwaterloo.ca",
+        "role": "",
+        "primary": {
+            "dept": "Management Sciences",
+            "institution": "University of Waterloo",
+            "city": "Waterloo",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1005",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Mary",
+        "middleInitial": "P.",
+        "familyName": "Czerwinski",
+        "email": "marycz@microsoft.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Microsoft Research",
+            "city": "Redmond",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1476",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Tovi",
+        "middleInitial": "",
+        "familyName": "Grossman",
+        "email": "tovi.grossman@autodesk.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Autodesk Research",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth10923",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Chris",
+        "middleInitial": "",
+        "familyName": "Harrison",
+        "email": "chris.harrison@cs.cmu.edu",
+        "role": "",
+        "primary": {
+            "dept": "Human-Computer Interaction Institute",
+            "institution": "Carnegie Mellon University",
+            "city": "Pittsburgh",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13333",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Ranjitha",
+        "middleInitial": "",
+        "familyName": "Kumar",
+        "email": "ranjitha@illinois.edu",
+        "role": "",
+        "primary": {
+            "dept": "Computer Science",
+            "institution": "University of Illinois at Urbana-Champaign",
+            "city": "Champaign",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4720",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 6,
+        "givenName": "Tapan",
+        "middleInitial": "S.",
+        "familyName": "Parikh",
+        "email": "parikh@berkeley.edu",
+        "role": "",
+        "primary": {
+            "dept": "School of Information",
+            "institution": "University of California, Berkeley",
+            "city": "Berkeley",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1220",
+        "type": "author",
+        "id": "pan106",
+        "venue": "panel",
+        "rank": 7,
+        "givenName": "Shumin",
+        "middleInitial": "",
+        "familyName": "Zhai",
+        "email": "zhai@acm.org",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Research @ Google",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13433",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Iram",
+        "middleInitial": "W",
+        "familyName": "Mirza",
+        "email": "iramm@stanfordalumni.org",
+        "role": "",
+        "primary": {
+            "dept": "UX",
+            "institution": "Google",
+            "city": "Mountain View",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth50612",
+        "type": "author",
+        "id": "pan108",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Meng ",
+        "middleInitial": "",
+        "familyName": "Chee",
+        "email": "meng.chee@samsung.com",
+        "role": "",
+        "primary": {
+            "dept": "create",
+            "institution": "Samsung",
+            "city": "San Jose",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth3625",
+        "type": "author",
+        "id": "pan109",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Eli",
+        "middleInitial": "",
+        "familyName": "Blevis",
+        "email": "eblevis@indiana.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "School of Informatics & Computing, Indiana University",
+            "city": "Bloomington",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "School of Design, The Hong Kong Polytechnic University, Hung Hom, Kowloon, Hong Kong",
+            "institution": "The Hong Kong Polytechnic University",
+            "city": "Hung Hom",
+            "country": "Hong Kong"
+        }
+    },
+    {
+        "authorId": "auth6550",
+        "type": "author",
+        "id": "pan109",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Ilpo",
+        "middleInitial": "K",
+        "familyName": "Koskinen",
+        "email": "ilpo.koskinen@polyu.edu.hk",
+        "role": "",
+        "primary": {
+            "dept": "School of Design",
+            "institution": "The Hong Polytechnic University",
+            "city": "Hong Hom",
+            "country": "Hong Kong"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14592",
+        "type": "author",
+        "id": "pan109",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "KunPyo",
+        "middleInitial": "",
+        "familyName": "Lee",
+        "email": "kplee@kaist.ac.kr",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Department of Industrial Design, KAIST",
+            "city": "Daejeon",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1219",
+        "type": "author",
+        "id": "pan109",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Susanne",
+        "middleInitial": "",
+        "familyName": "Bødker",
+        "email": "bodker@cs.au.dk",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Aarhus University",
+            "city": "Aarhus",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1284",
+        "type": "author",
+        "id": "pan109",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Lin-Lin",
+        "middleInitial": "",
+        "familyName": "Chen",
+        "email": "llchen@mail.ntust.edu.tw",
+        "role": "",
+        "primary": {
+            "dept": "Industrial and Commercial Design",
+            "institution": "National Taiwan University of Science and Technology",
+            "city": "Taipei",
+            "country": "Taiwan"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4583",
+        "type": "author",
+        "id": "pan109",
+        "venue": "panel",
+        "rank": 6,
+        "givenName": "Youn-kyung",
+        "middleInitial": "",
+        "familyName": "Lim",
+        "email": "younlim@kaist.ac.kr",
+        "role": "",
+        "primary": {
+            "dept": "Industrial Design",
+            "institution": "KAIST (Korea Advanced Institute of Science and Technology)",
+            "city": "Daejeon",
+            "country": "Republic of Korea"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47530",
+        "type": "author",
+        "id": "pan109",
+        "venue": "panel",
+        "rank": 7,
+        "givenName": "Huaxin",
+        "middleInitial": "",
+        "familyName": "Wei",
+        "email": "huaxin.wei@polyu.edu.hk",
+        "role": "",
+        "primary": {
+            "dept": "School of Design",
+            "institution": "The Hong Kong Polytechnic University",
+            "city": "Kowloon",
+            "country": "Hong Kong"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth3350",
+        "type": "author",
+        "id": "pan109",
+        "venue": "panel",
+        "rank": 8,
+        "givenName": "Ron",
+        "middleInitial": "",
+        "familyName": "Wakkary",
+        "email": "rwakkary@sfu.ca",
+        "role": "",
+        "primary": {
+            "dept": "School of Interactive Arts + Technology",
+            "institution": "Simon Fraser University",
+            "city": "Surrey",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "Eindhoven University of Technology",
+            "city": "Eindhoven",
+            "country": "The Netherlands"
+        }
+    }
+]

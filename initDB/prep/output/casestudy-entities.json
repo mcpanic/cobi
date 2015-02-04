@@ -67,7 +67,7 @@
     {
         "id": "case120",
         "title": "Artistic Distance: Body Movements as Launching Points For Art Inquiry",
-        "abstract": "",
+        "abstract": "How does the body matter in art observations? Do physical distances, movements, and perspectives influence the way one appreciates art? Do experts and novices use their body differently in engaging with art objects? We present results of our studies with 22 art experts and novices in two types of art, “Ikebana” (Japanese traditional flower arrangement) and abstract paintings. In both types of art, we observed that experts engaged with the art from multiple perspectives while exhibiting minimal movements around the art. Novices, in contrast, either hovered around the art looking for clues of interpretations or did not move at all due to lack of interest. We discuss implications for design of embodied systems that can support users with various levels of expertise. ",
         "acmLink": "",
         "authors": [
             {
@@ -143,11 +143,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "We present studies with 22 art experts and novices in “Ikebana” and abstract paintings. We discuss design of embodied systems that support users with various levels of expertise.",
         "contactEmail": "kimiko@ischool.berkeley.edu",
         "contactFirstName": "Kimiko",
         "contactLastName": "Ryokai",
-        "keywords": "",
+        "keywords": "Embodied interactions; art appreciation; expert perspectives",
         "venue": "casestudy",
         "subtype": "",
         "session": "",
@@ -302,7 +302,7 @@
                 "id": "case129",
                 "venue": "casestudy",
                 "rank": 4,
-                "givenName": "Colson Rice",
+                "givenName": "Colson",
                 "middleInitial": "",
                 "familyName": "Rice",
                 "email": "colrice@indiana.edu",
@@ -756,7 +756,7 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "We investigated the uses of voice vs. gestural control in the OR. We show that there is a case for building in redundancy in control with both voice and gesture.",
         "contactEmail": "mentis@umbc.edu",
         "contactFirstName": "Helena",
         "contactLastName": "Mentis",
@@ -1076,8 +1076,8 @@
                 "id": "case138",
                 "venue": "casestudy",
                 "rank": 2,
-                "givenName": "Ting Ting, Klarissa",
-                "middleInitial": "",
+                "givenName": "Klarissa",
+                "middleInitial": "T.T.",
                 "familyName": "Chang",
                 "email": "changtt@comp.nus.edu.sg",
                 "role": "",
@@ -1100,7 +1100,7 @@
                 "id": "case138",
                 "venue": "casestudy",
                 "rank": 3,
-                "givenName": "Peng-Hui",
+                "givenName": "Maffee Peng-Hui",
                 "middleInitial": "",
                 "familyName": "Wan",
                 "email": "diswp@nus.edu.sg",
@@ -1134,30 +1134,6 @@
                     "institution": "National University of Singapore",
                     "city": "Singapore",
                     "country": "Singapore"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "authorId": "auth100002",
-                "type": "author",
-                "id": "case138",
-                "venue": "casestudy",
-                "rank": 5,
-                "givenName": "",
-                "middleInitial": "",
-                "familyName": "",
-                "email": "",
-                "role": "",
-                "primary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -1268,12 +1244,12 @@
     },
     {
         "id": "case140",
-        "title": "An Outlook for Content UX in TV",
-        "abstract": "",
+        "title": "An Outlook for Content UX in TV: The Emergence of Augmented Content",
+        "abstract": "This case study describes the findings from our exploration on content user experience for next- generation live TV and VOD (Video-on-Demand) services. First, we introduce our background study on new trends in the TV industry. Based on this study, we list several keywords that characterize the content experience for next-generation TV. We then describe our interviews with six professionals working in content production. These interviews were conducted to verify our derived characteristics, and to collect the thoughts of these experts on the contribution of UX to future content production. Our study led us to a new research topic we call “Augmented Content,” which we believe has significant potential to provide content UX for next- generation television services.",
         "acmLink": "",
         "authors": [
             {
-                "authorId": "auth46063",
+                "authorId": "auth45982",
                 "type": "author",
                 "id": "case140",
                 "venue": "casestudy",
@@ -1281,13 +1257,13 @@
                 "givenName": "Sung Woo",
                 "middleInitial": "",
                 "familyName": "Kim",
-                "email": "caerang@gmail.com",
+                "email": "caerang@kookmin.ac.kr",
                 "role": "",
                 "primary": {
-                    "dept": "Graduate School of TechoDesign",
+                    "dept": "Graduate School of Techno Design",
                     "institution": "Kookmin University",
                     "city": "Seoul",
-                    "country": "Republic of Korea"
+                    "country": "Republic of Korea "
                 },
                 "secondary": {
                     "dept": "",
@@ -1302,9 +1278,9 @@
                 "id": "case140",
                 "venue": "casestudy",
                 "rank": 2,
-                "givenName": "",
+                "givenName": "Eun Hye",
                 "middleInitial": "",
-                "familyName": "",
+                "familyName": "Park",
                 "email": "eunhye7070@gmail.com",
                 "role": "",
                 "primary": {
@@ -1326,10 +1302,82 @@
                 "id": "case140",
                 "venue": "casestudy",
                 "rank": 3,
-                "givenName": "YAE EUN",
+                "givenName": "Yae Eun",
                 "middleInitial": "",
-                "familyName": "LEE",
+                "familyName": "Lee",
                 "email": "yenn2201@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Graduate School of Techno Design",
+                    "institution": "Kookmin University",
+                    "city": "Seoul",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47678",
+                "type": "author",
+                "id": "case140",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Jong Sung",
+                "middleInitial": "",
+                "familyName": "Lee",
+                "email": "jslee0587@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Graduate School of Techno Design",
+                    "institution": "Kookmin University",
+                    "city": "Seoul",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47679",
+                "type": "author",
+                "id": "case140",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Da Hee",
+                "middleInitial": "",
+                "familyName": "Lee",
+                "email": "yd4429@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Graduate School of Techno Design",
+                    "institution": "Kookmin University",
+                    "city": "Seoul",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47680",
+                "type": "author",
+                "id": "case140",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Eun Jin",
+                "middleInitial": "",
+                "familyName": "Kim",
+                "email": "kej85823@gmail.com",
                 "role": "",
                 "primary": {
                     "dept": "Graduate School of Techno Design",
@@ -1345,11 +1393,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Our case study introduces a new research topic of “Augmented Content,” which we believe has significant potential to provide content UX for next- generation television services.",
         "contactEmail": "caerang@gmail.com",
         "contactFirstName": "Sung Woo",
         "contactLastName": "Kim",
-        "keywords": "",
+        "keywords": "TV; Content UX; Multi Source Multi Use",
         "venue": "casestudy",
         "subtype": "",
         "session": "",
@@ -1397,10 +1445,10 @@
                 "email": "daniell@media.mit.edu",
                 "role": "",
                 "primary": {
-                    "dept": "MIT Media Lab",
-                    "institution": "MIT",
-                    "city": "Cambridge",
-                    "country": "United States"
+                    "dept": "MIT Media Lab, MIT, Cambridge, Massachusetts, United States",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
                 },
                 "secondary": {
                     "dept": "",
@@ -1680,7 +1728,7 @@
     {
         "id": "case155",
         "title": "A consensual and non-ambiguous set of gestures to interact with UAV in infantrymen",
-        "abstract": "",
+        "abstract": "In the context of using an Unmanned Aerial Vehicle (UAV) in hostile environments, gestures allow to free the operator of bulky control interfaces. Since a navigation plan is defined before the mission, only a few commands have to be activated during the mission. This allows a gestural symbolic interaction that maps commands to a set of gestures. Nevertheless, as gestures are not universal, this asks the question of choosing the proper gestures that are easy to learn memorize and perform. We propose a four step methodology for eliciting a gestural vocabulary, and apply it to this use case. The methodology consists of 4 steps: (1) collecting gestures through user creativity sessions, (2) extracting candidate gestures to build a catalogue, (3) electing the gesture vocabulary and (3) evaluating the non-ambiguity of it. We then discuss the relevance of the GV.",
         "acmLink": "",
         "authors": [
             {
@@ -1791,7 +1839,7 @@
                 "email": "christophe.guettier@sagem.com",
                 "role": "",
                 "primary": {
-                    "dept": "",
+                    "dept": "R&T Directorate",
                     "institution": "Sagem Défense et Sécurité",
                     "city": "Massy",
                     "country": "France"
@@ -1804,7 +1852,7 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "A four steps methodology for eliciting a gestural vocabulary is presented. This method is applied to the specific use case of choosing gestures to command a UAV for infantrimen.",
         "contactEmail": "florent.taralle@mines-paristech.fr",
         "contactFirstName": "Florent",
         "contactLastName": "TARALLE",
@@ -1827,7 +1875,7 @@
                 "venue": "casestudy",
                 "rank": 1,
                 "givenName": "Paweł",
-                "middleInitial": "W",
+                "middleInitial": "",
                 "familyName": "Woźniak",
                 "email": "pawelw@chalmers.se",
                 "role": "",
@@ -1995,7 +2043,7 @@
     {
         "id": "case167",
         "title": "Testing the Effectiveness of iPad Math Game: Lessons Learned from Running a Multi-Classroom Study",
-        "abstract": "",
+        "abstract": "Many educational products designed for young children go through extensive user testing, but rarely through a rigorous examination of whether they improve learning. We describe our experiences and lessons learned from conducting a multi-classroom study to examine learning from an iPad math app we developed for preschool and kindergarten children. Focusing on the research experience itself, we describe six common challenges to conducting learning research with technology and young children, as well as six principles to help mitigate the challenges. This paper is intended to help others who wish to assess learning from educational games for children.",
         "acmLink": "",
         "authors": [
             {
@@ -2034,9 +2082,9 @@
                 "email": "pfaffman@stanford.edu",
                 "role": "",
                 "primary": {
-                    "dept": "Stanford Graduate School of Education",
-                    "institution": "Stanford University",
-                    "city": "Stanford",
+                    "dept": "College of Education",
+                    "institution": "University of South Alabama",
+                    "city": "Mobile",
                     "country": "United States"
                 },
                 "secondary": {
@@ -2101,7 +2149,7 @@
                 "venue": "casestudy",
                 "rank": 5,
                 "givenName": "Daniel",
-                "middleInitial": "L",
+                "middleInitial": "",
                 "familyName": "Schwartz",
                 "email": "daniel.schwartz@stanford.edu",
                 "role": "",
@@ -2119,11 +2167,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "We discuss experiences conducting a multi-classroom study of learning from a math app for 4-5 year olds. We describe challenges of conducting learning research and principles to mitigate the challenges.",
         "contactEmail": "kpilner@stanford.edu",
         "contactFirstName": "Kristen",
         "contactLastName": "Blair",
-        "keywords": "",
+        "keywords": "Learning Games; Evaluation Research; Mathematics Learning; Young Children ",
         "venue": "casestudy",
         "subtype": "",
         "session": "",
@@ -2132,7 +2180,7 @@
     {
         "id": "case183",
         "title": "Colormaps that Improve Perception of High-Resolution Ocean Data",
-        "abstract": "",
+        "abstract": "Scientists from the Climate, Ocean and Sea Ice Modeling Team (COSIM) at the Los Alamos National Laboratory (LANL) are interested in gaining a deeper understanding of three primary ocean currents: the Gulf Stream, the Kuroshio Current, and the Agulhas Current & Retroflection. To address these needs, visual artist Francesca Samsel teamed up with experts from the areas of computer science, climate science, statistics, and perceptual science.  By engaging an artist specializing in color, we created colormaps that provide the ability to see greater detail in these high-resolution datasets.  The new colormaps applied to the POP dataset enabled scientists to see areas of interest unclear using standard colormaps.  Improvements in the perceptual range of color allowed scientists to highlight structures within specific ocean currents. Work with the COSIM team members drove development of nested colormaps which provide further detail to the scientists.",
         "acmLink": "",
         "authors": [
             {
@@ -2213,14 +2261,14 @@
                 "id": "case183",
                 "venue": "casestudy",
                 "rank": 4,
-                "givenName": "Gerg",
+                "givenName": "Greg",
                 "middleInitial": "",
                 "familyName": "Abram",
                 "email": "gda@tacc.utexas.edu",
                 "role": "",
                 "primary": {
                     "dept": "TACC",
-                    "institution": "University of Texas",
+                    "institution": "The University of Texas at Austin",
                     "city": "Austin",
                     "country": "United States"
                 },
@@ -2280,11 +2328,11 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "We have built and tested colormaps enabling scientists to see greater detail within their data.",
         "contactEmail": "figs@cat.utexas.edu",
         "contactFirstName": "Francesca",
         "contactLastName": "Samsel",
-        "keywords": "",
+        "keywords": "Colormaps; color theory; color perception; climate science; scientific visualization; high-resolution datasets",
         "venue": "casestudy",
         "subtype": "",
         "session": "",
@@ -2292,8 +2340,8 @@
     },
     {
         "id": "case191",
-        "title": "Historical Research Using Email Archives in Special Collections",
-        "abstract": "",
+        "title": "Historical Research Using Email Archives",
+        "abstract": "Archives of letters and documents belonging to individuals provide valuable insights into history.  In the digital age, such history is being captured in personal digital archives, especially in the form of email. Archival organizations have recognized the importance of email archives and often collect email when they acquire the papers of eminent donors; however they find it difficult to screen, process and provide access to email for research, due to its sheer volume. We describe the considerations we encountered with the email archives of two prominent individuals in the special collections of Stanford University Libraries. We have designed novel approaches to the challenges of (1) Reconciliation with authority records, (2) Making \"finding aids\" of the archive available to the general public, without revealing confidential information, and (3) Browsing an email archive when one may not know what exactly to look for. \\  \\ Our solutions have been implemented in a publicly available and open source system called ePADD. As a result, we enable donors and archival organizations to appraise, process and screen large-scale email archives, thereby unlocking the historical value embedded in them. \\ ",
         "acmLink": "",
         "authors": [
             {
@@ -2357,7 +2405,7 @@
                 "role": "",
                 "primary": {
                     "dept": "",
-                    "institution": "iXora Technologies",
+                    "institution": "Ixora Technology",
                     "city": "Mountain View",
                     "country": "United States"
                 },
@@ -2399,7 +2447,7 @@
                 "venue": "casestudy",
                 "rank": 5,
                 "givenName": "Monica",
-                "middleInitial": "",
+                "middleInitial": "S",
                 "familyName": "Lam",
                 "email": "lam@cs.stanford.edu",
                 "role": "",
@@ -2428,9 +2476,9 @@
                 "email": "gedwards@stanford.edu",
                 "role": "",
                 "primary": {
-                    "dept": "Stanford University Libraries",
+                    "dept": "Special Collections, Stanford University Libraries",
                     "institution": "Stanford University",
-                    "city": "Stanford",
+                    "city": "Palo Alto",
                     "country": "United States"
                 },
                 "secondary": {
@@ -2441,7 +2489,7 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "We present ePADD, a system with novel techniques to enable historical research using long-term email archives of eminent individuals.",
         "contactEmail": "hangal@cs.stanford.edu",
         "contactFirstName": "Sudheendra",
         "contactLastName": "Hangal",

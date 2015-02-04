@@ -1,37 +1,61 @@
 [
     {
-        "id": "s-case-1",
+        "id": "s-case1",
         "date": "",
         "time": "",
         "room": "",
         "communities": [],
         "persona": "",
         "submissions": "",
-        "title": "Case Study Session 1",
+        "title": "temp name",
         "venue": "casestudy",
         "scheduled": 0
     },
     {
-        "id": "s-case-2",
+        "id": "s-case2",
         "date": "",
         "time": "",
         "room": "",
         "communities": [],
         "persona": "",
         "submissions": "",
-        "title": "Case Study Session 2",
+        "title": "temp name",
         "venue": "casestudy",
         "scheduled": 0
     },
     {
-        "id": "s-case-3",
+        "id": "s-case3",
         "date": "",
         "time": "",
         "room": "",
         "communities": [],
         "persona": "",
         "submissions": "",
-        "title": "Case Study Session 3",
+        "title": "temp name",
+        "venue": "casestudy",
+        "scheduled": 0
+    },
+    {
+        "id": "s-case4",
+        "date": "",
+        "time": "",
+        "room": "",
+        "communities": [],
+        "persona": "",
+        "submissions": "",
+        "title": "temp name",
+        "venue": "casestudy",
+        "scheduled": 0
+    },
+    {
+        "id": "s-case5",
+        "date": "",
+        "time": "",
+        "room": "",
+        "communities": [],
+        "persona": "",
+        "submissions": "",
+        "title": "temp name",
         "venue": "casestudy",
         "scheduled": 0
     }

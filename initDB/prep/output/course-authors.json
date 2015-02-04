@@ -168,54 +168,6 @@
         }
     },
     {
-        "authorId": "auth1028",
-        "type": "author",
-        "id": "crs105",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Jodi",
-        "middleInitial": "",
-        "familyName": "Forlizzi",
-        "email": "forlizzi@cs.cmu.edu",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Carnegie Mellon University",
-            "city": "Pittsburgh",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth1917",
-        "type": "author",
-        "id": "crs105",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "John",
-        "middleInitial": "",
-        "familyName": "Zimmerman",
-        "email": "johnz@cs.cmu.edu",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Carnegie Mellon University",
-            "city": "Pittsburgh",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
         "authorId": "auth40493",
         "type": "author",
         "id": "crs106",
@@ -240,7 +192,7 @@
         }
     },
     {
-        "authorId": "auth100001",
+        "authorId": "auth1111",
         "type": "author",
         "id": "crs107",
         "venue": "course",
@@ -248,235 +200,19 @@
         "givenName": "Jeff",
         "middleInitial": "A",
         "familyName": "Johnson",
-        "email": "jjohnson@uiwizards.com",
-        "role": "",
-        "primary": {
-            "dept": "UI Wizards, Inc, San Francisco, California, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
-        },
-        "secondary": {
-            "dept": "Wiser Usability, Inc., Cupertino, California, United States",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth100002",
-        "type": "author",
-        "id": "crs107",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "",
-        "middleInitial": "",
-        "familyName": "Johnson",
-        "email": "jjohnson@uiwizards.com",
+        "email": "jeffjohnson@uiwizards.com",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "UI Wizards, Inc",
+            "city": "San Francisco",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth100003",
-        "type": "author",
-        "id": "crs107",
-        "venue": "course",
-        "rank": 3,
-        "givenName": "",
-        "middleInitial": "",
-        "familyName": "Johnson",
-        "email": "jjohnson@uiwizards.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth100004",
-        "type": "author",
-        "id": "crs107",
-        "venue": "course",
-        "rank": 4,
-        "givenName": "",
-        "middleInitial": "",
-        "familyName": "Johnson",
-        "email": "jjohnson@uiwizards.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth100005",
-        "type": "author",
-        "id": "crs107",
-        "venue": "course",
-        "rank": 5,
-        "givenName": "",
-        "middleInitial": "",
-        "familyName": "Johnson",
-        "email": "jjohnson@uiwizards.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth100006",
-        "type": "author",
-        "id": "crs107",
-        "venue": "course",
-        "rank": 6,
-        "givenName": "",
-        "middleInitial": "",
-        "familyName": "Johnson",
-        "email": "jjohnson@uiwizards.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth100007",
-        "type": "author",
-        "id": "crs107",
-        "venue": "course",
-        "rank": 7,
-        "givenName": "",
-        "middleInitial": "",
-        "familyName": "Johnson",
-        "email": "jjohnson@uiwizards.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth100008",
-        "type": "author",
-        "id": "crs107",
-        "venue": "course",
-        "rank": 8,
-        "givenName": "",
-        "middleInitial": "",
-        "familyName": "Johnson",
-        "email": "jjohnson@uiwizards.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth100009",
-        "type": "author",
-        "id": "crs107",
-        "venue": "course",
-        "rank": 9,
-        "givenName": "",
-        "middleInitial": "",
-        "familyName": "Johnson",
-        "email": "jjohnson@uiwizards.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth100010",
-        "type": "author",
-        "id": "crs107",
-        "venue": "course",
-        "rank": 10,
-        "givenName": "",
-        "middleInitial": "",
-        "familyName": "Johnson",
-        "email": "jjohnson@uiwizards.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Wiser Usability, Inc.",
+            "city": "Cupertino",
+            "country": "United States"
         }
     },
     {
@@ -510,7 +246,7 @@
         "venue": "course",
         "rank": 1,
         "givenName": "Guy",
-        "middleInitial": "A",
+        "middleInitial": "André",
         "familyName": "Boy",
         "email": "gboy@fit.edu",
         "role": "",
@@ -1020,7 +756,7 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Google, Inc.",
+            "institution": "Google Australia",
             "city": "Sydney",
             "country": "Australia"
         },
@@ -1158,7 +894,7 @@
         "venue": "course",
         "rank": 1,
         "givenName": "Janet",
-        "middleInitial": "",
+        "middleInitial": "C",
         "familyName": "Read",
         "email": "jcread@uclan.ac.uk",
         "role": "",
@@ -1494,7 +1230,7 @@
         "venue": "course",
         "rank": 7,
         "givenName": "Effie",
-        "middleInitial": "L.-C.",
+        "middleInitial": "",
         "familyName": "Law",
         "email": "elaw@mcs.le.ac.uk",
         "role": "",
@@ -1644,9 +1380,9 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "institution": "Massachusetts Institute of Technology",
+            "city": "Cambridge",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -1656,21 +1392,21 @@
         }
     },
     {
-        "authorId": "auth100011",
+        "authorId": "auth16013",
         "type": "author",
         "id": "crs138",
         "venue": "course",
         "rank": 2,
-        "givenName": "Mary",
-        "middleInitial": "Tran",
-        "familyName": "Niskala",
-        "email": "mniskala@media.mit.edu",
+        "givenName": "Daniel",
+        "middleInitial": "",
+        "familyName": "Leithinger",
+        "email": "daniell@media.mit.edu",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
+            "dept": "MIT Media Lab",
+            "institution": "Massachusetts Institute of Technology",
+            "city": "Cambridge",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -1680,15 +1416,63 @@
         }
     },
     {
-        "authorId": "auth39102",
+        "authorId": "auth15323",
         "type": "author",
         "id": "crs138",
         "venue": "course",
         "rank": 3,
-        "givenName": "Philipp",
+        "givenName": "Sean",
         "middleInitial": "",
-        "familyName": "Schoessler",
-        "email": "phil_s@media.mit.edu",
+        "familyName": "Follmer",
+        "email": "sfollmer@media.mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "MIT Media Lab",
+            "institution": "Massachusetts Institute of Technology",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth20548",
+        "type": "author",
+        "id": "crs138",
+        "venue": "course",
+        "rank": 4,
+        "givenName": "Lining",
+        "middleInitial": "",
+        "familyName": "Yao",
+        "email": "liningy@media.mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Massachusetts Institute of Technology",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth34463",
+        "type": "author",
+        "id": "crs138",
+        "venue": "course",
+        "rank": 5,
+        "givenName": "Jifei",
+        "middleInitial": "",
+        "familyName": "Ou",
+        "email": "JIFEI@MIT.EDU",
         "role": "",
         "primary": {
             "dept": "",

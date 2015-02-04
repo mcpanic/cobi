@@ -1,0 +1,530 @@
+[
+    {
+        "authorId": "auth18800",
+        "type": "author",
+        "id": "sig102",
+        "venue": "SIG",
+        "rank": 1,
+        "givenName": "Tuomo",
+        "middleInitial": "",
+        "familyName": "Kujala",
+        "email": "tuomo.kujala@jyu.fi",
+        "role": "",
+        "primary": {
+            "dept": "Department of Computer Science and Information Systems",
+            "institution": "University of Jyväskylä",
+            "city": "Jyväskylä",
+            "country": "Finland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth44289",
+        "type": "author",
+        "id": "sig104",
+        "venue": "SIG",
+        "rank": 1,
+        "givenName": "Weiyu",
+        "middleInitial": "",
+        "familyName": "Zhang",
+        "email": "weiyu.zhang@nus.edu.sg",
+        "role": "",
+        "primary": {
+            "dept": "Communications and New Media, Faculty of Arts and Social Science",
+            "institution": "National University of Singapore",
+            "city": "Singapore",
+            "country": "Singapore"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth16320",
+        "type": "author",
+        "id": "sig104",
+        "venue": "SIG",
+        "rank": 2,
+        "givenName": "Lu",
+        "middleInitial": "",
+        "familyName": "Xiao",
+        "email": "lxiao24@uwo.ca",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "The University of Western Ontario",
+            "city": "London",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth49136",
+        "type": "author",
+        "id": "sig104",
+        "venue": "SIG",
+        "rank": 3,
+        "givenName": "Anna",
+        "middleInitial": "",
+        "familyName": "Przybylska",
+        "email": "a.przybylska@uw.edu.pl",
+        "role": "",
+        "primary": {
+            "dept": "Center for Deliberation, Institute of Sociology",
+            "institution": "University of Warsaw",
+            "city": "Warsaw",
+            "country": "Poland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth21682",
+        "type": "author",
+        "id": "sig104",
+        "venue": "SIG",
+        "rank": 4,
+        "givenName": "Anna",
+        "middleInitial": "",
+        "familyName": "De Liddo",
+        "email": "a.deliddo@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "The Open University",
+            "city": "Milton Keynes",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2518",
+        "type": "author",
+        "id": "sig104",
+        "venue": "SIG",
+        "rank": 5,
+        "givenName": "Gregorio",
+        "middleInitial": "",
+        "familyName": "Convertino",
+        "email": "gconvertino@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Informatica Corporation",
+            "city": "Redwood City",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4462",
+        "type": "author",
+        "id": "sig104",
+        "venue": "SIG",
+        "rank": 6,
+        "givenName": "Todd",
+        "middleInitial": "",
+        "familyName": "Davies",
+        "email": "davies@stanford.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Stanford University",
+            "city": "Stanford",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth28152",
+        "type": "author",
+        "id": "sig104",
+        "venue": "SIG",
+        "rank": 7,
+        "givenName": "Mark",
+        "middleInitial": "",
+        "familyName": "Klein",
+        "email": "m_klein@mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "MIT",
+            "city": "Cambridge",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2060",
+        "type": "author",
+        "id": "sig105",
+        "venue": "SIG",
+        "rank": 1,
+        "givenName": "Florian",
+        "middleInitial": "",
+        "familyName": "Mueller",
+        "email": "floyd@floydmueller.com",
+        "role": "",
+        "primary": {
+            "dept": "Exertion Games Lab",
+            "institution": "RMIT University",
+            "city": "Melbourne",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7924",
+        "type": "author",
+        "id": "sig105",
+        "venue": "SIG",
+        "rank": 2,
+        "givenName": "Joe",
+        "middleInitial": "",
+        "familyName": "Marshall",
+        "email": "joe.marshall@nottingham.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "Mixed Reality Lab",
+            "institution": "The University of Nottingham",
+            "city": "Nottingham",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth10580",
+        "type": "author",
+        "id": "sig105",
+        "venue": "SIG",
+        "rank": 3,
+        "givenName": "Rohit Ashok",
+        "middleInitial": "",
+        "familyName": "Khot",
+        "email": "rohit@exertiongameslab.org",
+        "role": "",
+        "primary": {
+            "dept": "Exertion games lab",
+            "institution": "RMIT University",
+            "city": "Melbourne",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4751",
+        "type": "author",
+        "id": "sig105",
+        "venue": "SIG",
+        "rank": 4,
+        "givenName": "Stina",
+        "middleInitial": "",
+        "familyName": "Nylander",
+        "email": "stny@sics.se",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Mobile Life @ SICS",
+            "city": "Kista",
+            "country": "Sweden"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6222",
+        "type": "author",
+        "id": "sig105",
+        "venue": "SIG",
+        "rank": 5,
+        "givenName": "Jakob",
+        "middleInitial": "",
+        "familyName": "Tholander",
+        "email": "jakobth@dsv.su.se",
+        "role": "",
+        "primary": {
+            "dept": "Mobile Life",
+            "institution": "Stockholm University",
+            "city": "Stockholm",
+            "country": "Sweden"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1299",
+        "type": "author",
+        "id": "sig108",
+        "venue": "SIG",
+        "rank": 1,
+        "givenName": "Margaret",
+        "middleInitial": "M",
+        "familyName": "Burnett",
+        "email": "burnett@eecs.oregonstate.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Oregon State University",
+            "city": "Corvallis",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1149",
+        "type": "author",
+        "id": "sig108",
+        "venue": "SIG",
+        "rank": 2,
+        "givenName": "Elizabeth",
+        "middleInitial": "F",
+        "familyName": "Churchill",
+        "email": "churchill@acm.org",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Google ",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth17039",
+        "type": "author",
+        "id": "sig108",
+        "venue": "SIG",
+        "rank": 3,
+        "givenName": "Michael",
+        "middleInitial": "J",
+        "familyName": "Lee",
+        "email": "mjslee@uw.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2823",
+        "type": "author",
+        "id": "sig109",
+        "venue": "SIG",
+        "rank": 1,
+        "givenName": "Janet",
+        "middleInitial": "C",
+        "familyName": "Read",
+        "email": "jcread@uclan.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Central Lancashire",
+            "city": "Preston",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1924",
+        "type": "author",
+        "id": "sig109",
+        "venue": "SIG",
+        "rank": 2,
+        "givenName": "Juan Pablo",
+        "middleInitial": "",
+        "familyName": "Hourcade",
+        "email": "juanpablo-hourcade@uiowa.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Iowa",
+            "city": "Iowa City",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1070",
+        "type": "author",
+        "id": "sig109",
+        "venue": "SIG",
+        "rank": 3,
+        "givenName": "Allison",
+        "middleInitial": "",
+        "familyName": "Druin",
+        "email": "allisond@umiacs.umd.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Maryland",
+            "city": "College Park",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1348",
+        "type": "author",
+        "id": "sig109",
+        "venue": "SIG",
+        "rank": 4,
+        "givenName": "Panos",
+        "middleInitial": "",
+        "familyName": "Markopoulos",
+        "email": "P.Markopoulos@tue.nl",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Eindhoven University of Technology",
+            "city": "Eindhoven",
+            "country": "The Netherlands"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth10714",
+        "type": "author",
+        "id": "sig109",
+        "venue": "SIG",
+        "rank": 5,
+        "givenName": "Tilde",
+        "middleInitial": "",
+        "familyName": "Bekker",
+        "email": "m.m.bekker@tue.nl",
+        "role": "",
+        "primary": {
+            "dept": "Department of Industrial Design",
+            "institution": "Technische Universiteit Eindhoven",
+            "city": "Eindhoven",
+            "country": "The Netherlands"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth24491",
+        "type": "author",
+        "id": "sig109",
+        "venue": "SIG",
+        "rank": 6,
+        "givenName": "Ole",
+        "middleInitial": "Sejer",
+        "familyName": "Iversen",
+        "email": "oiversen@cs.au.dk",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Aarhus",
+            "city": "Aarhus",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    }
+]

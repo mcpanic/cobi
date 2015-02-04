@@ -1,0 +1,207 @@
+[
+    {
+        "id": "talks100",
+        "title": "Opening Keynote — Crossing:  HCI, Design and Sustainability",
+        "abstract": "Two great inventions that opened the era of human-computer interaction design—desktop and mouse—are now disappearing. Computers are becoming smaller and smaller, smarter and smarter. Everyone is now surrounded by many visible and invisible computers, which are all highly connected through the Internet ubiquitously. A new world of artificial intelligence is emerging. When the intelligence of human-being is expanded to his/her surroundings, condensed into a new kind of Intelligent life, the relationship between human-being and the rest of the world has been redefined. How to cross the boundaries and to enable the sustainable interaction between nature (the 1st system), human-beings (the 2nd system), artificial world (the 3rd system), and the cyber world (the 4th system), becomes an interesting proposition and merits new design. But before that, it’s necessary to rethink the anthropocentric view and even design itself. The most attractive feature of design is optimistic. What makes a human being human, lies in that one is not leading a kind of life which merely has needs to be fulfilled, but can also use his/her subjective initiative to control and conduct his/her behavior for a certain common value. Today sustainability is not only a value of ethics, but a value of surviving. How to use and encourage a new kind of HCI design, to generate sustainable behaviors and social changes, further, to redesign the commensalism of the four systems mentioned above will be the main focus of my talk.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "authundefined",
+                "type": "author",
+                "id": "talks100",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "Yongqi",
+                "middleInitial": "",
+                "familyName": "Lou",
+                "email": "lou.yongqi@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "College of Design and Innovation",
+                    "institution": "Tongji University",
+                    "city": "Shanghai",
+                    "country": "China"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "bo@begole.net",
+        "contactFirstName": "Bo",
+        "contactLastName": "Begole",
+        "keywords": "",
+        "venue": "keynote",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "talks101",
+        "title": "Tuesday Keynote: UX Design in the IoT Era",
+        "abstract": "The current advancement of IoT technology has accelerated the era of hyper-connectivity in our lives. This has vastly driven convergence among different fields along with the expansion of our thoughts and behaviors. However, to provide meaningful experiences, these relational expansions and unprecedented possibilities opened up by IoT need to be founded on core human values. Furthermore, harmonious integration between technology and design is also essential. Today, I would like to talk about what must be done in order to foster the IoT as a human-centered innovation and how UX design can realize the well balanced and harmonious IoT environment.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "authundefined",
+                "type": "author",
+                "id": "talks101",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "Donghoon",
+                "middleInitial": "",
+                "familyName": "Chang",
+                "email": "jsm.myung@samsung.com",
+                "role": "",
+                "primary": {
+                    "dept": "Corporate Design Center",
+                    "institution": "Samsung Electronics",
+                    "city": "Seoul",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "bo@begole.net",
+        "contactFirstName": "Bo",
+        "contactLastName": "Begole",
+        "keywords": "",
+        "venue": "keynote",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "talks102",
+        "title": "Wednesday Keynote: Journey to a Better Life",
+        "abstract": "New technologies and devices are coming out every day along with the rapid growth of the internet and enhancement of hardware performance.  These trends are connected and tangled with each other. This era of \"Smart\" brings us great benefits and convenience, but there are still many technical hurdles and interface obstacles to be crossed. Now we are able to access massive amount of data, but at the expense of privacy and security.  How can we untie this knot? \\  \\ We all strive for the same goal: “to make people’s lives better,” no matter how we define our role in life. In this talk, we will present what we do in LG Electronics to address this goal within the aspects of software engineering and UX design, and also discuss what we should care about when delivering innovative products to the world. \\ ",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "authundefined",
+                "type": "author",
+                "id": "talks102",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "David",
+                "middleInitial": "",
+                "familyName": "Min",
+                "email": "jmin.park@lge.com",
+                "role": "",
+                "primary": {
+                    "dept": "Software Research Center",
+                    "institution": "LG Electronics",
+                    "city": "Seoul",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "bo@begole.net",
+        "contactFirstName": "Bo",
+        "contactLastName": "Begole",
+        "keywords": "",
+        "venue": "keynote",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "talks103",
+        "title": "Closing Plenary Keynote",
+        "abstract": "From his experiences in crossing borders, crossing media, and crossing software barriers by breaking record counters, PSY will discuss creativity and designing for cross-global impact with today’s social media technologies.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "authundefined",
+                "type": "author",
+                "id": "talks103",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "Jai Sang",
+                "middleInitial": "",
+                "familyName": "Park",
+                "email": "hyunkony@ygmail.net",
+                "role": "",
+                "primary": {
+                    "dept": "unaffiliated",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "bo@begole.net",
+        "contactFirstName": "Bo",
+        "contactLastName": "Begole",
+        "keywords": "",
+        "venue": "keynote",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "talks104",
+        "title": "ACM-W Athena Lecture — Large-Scale Behavioral Data: Potential and Pitfalls",
+        "abstract": "Over the last decade, the rise of web services has made it possible to gather traces of human behavior in situ at a scale and fidelity previously unimaginable.  Large-scale behavioral data enables researchers and practitioners to detect adverse drug reactions and interactions, to understand how information diffuses through social networks, how people browse and search for information, how individual learning strategies are related to educational outcome, etc.  Using examples from search, I will highlight how observational logs provide a rich new lens onto the diversity of searchers, tasks, and interactivity that characterize information systems today, and how experimental logs have revolutionized the way in which web-based systems are designed and evaluated.  Although logs provide a great deal of information about what people are doing, they provide little insight about why they are doing so or whether they are satisfied.  Complementary methods from observations, laboratory studies and panels are necessary to provide a more complete understanding of and support for search which is increasingly a core fabric of people’s everyday lives.  The CHI community should lead the way in shaping best practices and policy in behavioral log studies.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "authundefined",
+                "type": "author",
+                "id": "talks104",
+                "venue": "keynote",
+                "rank": 1,
+                "givenName": "Susan",
+                "middleInitial": "T.",
+                "familyName": "Dumais",
+                "email": "sdumais@microsoft.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Microsoft Research",
+                    "city": "Redmond",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "bo@begole.net",
+        "contactFirstName": "Bo",
+        "contactLastName": "Begole",
+        "keywords": "search; behavioral data; methodology; personalization; search strategy; user search behavior; query analysis; click analysis; search intent",
+        "venue": "keynote",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    }
+]

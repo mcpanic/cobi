@@ -245,7 +245,7 @@
         "id": "case129",
         "venue": "casestudy",
         "rank": 4,
-        "givenName": "Colson Rice",
+        "givenName": "Colson",
         "middleInitial": "",
         "familyName": "Rice",
         "email": "colrice@indiana.edu",
@@ -917,8 +917,8 @@
         "id": "case138",
         "venue": "casestudy",
         "rank": 2,
-        "givenName": "Ting Ting, Klarissa",
-        "middleInitial": "",
+        "givenName": "Klarissa",
+        "middleInitial": "T.T.",
         "familyName": "Chang",
         "email": "changtt@comp.nus.edu.sg",
         "role": "",
@@ -941,7 +941,7 @@
         "id": "case138",
         "venue": "casestudy",
         "rank": 3,
-        "givenName": "Peng-Hui",
+        "givenName": "Maffee Peng-Hui",
         "middleInitial": "",
         "familyName": "Wan",
         "email": "diswp@nus.edu.sg",
@@ -975,30 +975,6 @@
             "institution": "National University of Singapore",
             "city": "Singapore",
             "country": "Singapore"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth100001",
-        "type": "author",
-        "id": "case138",
-        "venue": "casestudy",
-        "rank": 5,
-        "givenName": "",
-        "middleInitial": "",
-        "familyName": "",
-        "email": "",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -1080,7 +1056,7 @@
         }
     },
     {
-        "authorId": "auth46063",
+        "authorId": "auth45982",
         "type": "author",
         "id": "case140",
         "venue": "casestudy",
@@ -1088,13 +1064,13 @@
         "givenName": "Sung Woo",
         "middleInitial": "",
         "familyName": "Kim",
-        "email": "caerang@gmail.com",
+        "email": "caerang@kookmin.ac.kr",
         "role": "",
         "primary": {
-            "dept": "Graduate School of TechoDesign",
+            "dept": "Graduate School of Techno Design",
             "institution": "Kookmin University",
             "city": "Seoul",
-            "country": "Republic of Korea"
+            "country": "Republic of Korea "
         },
         "secondary": {
             "dept": "",
@@ -1109,9 +1085,9 @@
         "id": "case140",
         "venue": "casestudy",
         "rank": 2,
-        "givenName": "",
+        "givenName": "Eun Hye",
         "middleInitial": "",
-        "familyName": "",
+        "familyName": "Park",
         "email": "eunhye7070@gmail.com",
         "role": "",
         "primary": {
@@ -1133,10 +1109,82 @@
         "id": "case140",
         "venue": "casestudy",
         "rank": 3,
-        "givenName": "YAE EUN",
+        "givenName": "Yae Eun",
         "middleInitial": "",
-        "familyName": "LEE",
+        "familyName": "Lee",
         "email": "yenn2201@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Graduate School of Techno Design",
+            "institution": "Kookmin University",
+            "city": "Seoul",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47678",
+        "type": "author",
+        "id": "case140",
+        "venue": "casestudy",
+        "rank": 4,
+        "givenName": "Jong Sung",
+        "middleInitial": "",
+        "familyName": "Lee",
+        "email": "jslee0587@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Graduate School of Techno Design",
+            "institution": "Kookmin University",
+            "city": "Seoul",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47679",
+        "type": "author",
+        "id": "case140",
+        "venue": "casestudy",
+        "rank": 5,
+        "givenName": "Da Hee",
+        "middleInitial": "",
+        "familyName": "Lee",
+        "email": "yd4429@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Graduate School of Techno Design",
+            "institution": "Kookmin University",
+            "city": "Seoul",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47680",
+        "type": "author",
+        "id": "case140",
+        "venue": "casestudy",
+        "rank": 6,
+        "givenName": "Eun Jin",
+        "middleInitial": "",
+        "familyName": "Kim",
+        "email": "kej85823@gmail.com",
         "role": "",
         "primary": {
             "dept": "Graduate School of Techno Design",
@@ -1187,10 +1235,10 @@
         "email": "daniell@media.mit.edu",
         "role": "",
         "primary": {
-            "dept": "MIT Media Lab",
-            "institution": "MIT",
-            "city": "Cambridge",
-            "country": "United States"
+            "dept": "MIT Media Lab, MIT, Cambridge, Massachusetts, United States",
+            "institution": "",
+            "city": "",
+            "country": ""
         },
         "secondary": {
             "dept": "",
@@ -1547,7 +1595,7 @@
         "email": "christophe.guettier@sagem.com",
         "role": "",
         "primary": {
-            "dept": "",
+            "dept": "R&T Directorate",
             "institution": "Sagem Défense et Sécurité",
             "city": "Massy",
             "country": "France"
@@ -1566,7 +1614,7 @@
         "venue": "casestudy",
         "rank": 1,
         "givenName": "Paweł",
-        "middleInitial": "W",
+        "middleInitial": "",
         "familyName": "Woźniak",
         "email": "pawelw@chalmers.se",
         "role": "",
@@ -1739,9 +1787,9 @@
         "email": "pfaffman@stanford.edu",
         "role": "",
         "primary": {
-            "dept": "Stanford Graduate School of Education",
-            "institution": "Stanford University",
-            "city": "Stanford",
+            "dept": "College of Education",
+            "institution": "University of South Alabama",
+            "city": "Mobile",
             "country": "United States"
         },
         "secondary": {
@@ -1806,7 +1854,7 @@
         "venue": "casestudy",
         "rank": 5,
         "givenName": "Daniel",
-        "middleInitial": "L",
+        "middleInitial": "",
         "familyName": "Schwartz",
         "email": "daniel.schwartz@stanford.edu",
         "role": "",
@@ -1901,14 +1949,14 @@
         "id": "case183",
         "venue": "casestudy",
         "rank": 4,
-        "givenName": "Gerg",
+        "givenName": "Greg",
         "middleInitial": "",
         "familyName": "Abram",
         "email": "gda@tacc.utexas.edu",
         "role": "",
         "primary": {
             "dept": "TACC",
-            "institution": "University of Texas",
+            "institution": "The University of Texas at Austin",
             "city": "Austin",
             "country": "United States"
         },
@@ -2028,7 +2076,7 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "iXora Technologies",
+            "institution": "Ixora Technology",
             "city": "Mountain View",
             "country": "United States"
         },
@@ -2070,7 +2118,7 @@
         "venue": "casestudy",
         "rank": 5,
         "givenName": "Monica",
-        "middleInitial": "",
+        "middleInitial": "S",
         "familyName": "Lam",
         "email": "lam@cs.stanford.edu",
         "role": "",
@@ -2099,9 +2147,9 @@
         "email": "gedwards@stanford.edu",
         "role": "",
         "primary": {
-            "dept": "Stanford University Libraries",
+            "dept": "Special Collections, Stanford University Libraries",
             "institution": "Stanford University",
-            "city": "Stanford",
+            "city": "Palo Alto",
             "country": "United States"
         },
         "secondary": {

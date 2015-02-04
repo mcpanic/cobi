@@ -1,0 +1,615 @@
+[
+    {
+        "id": "sig102",
+        "title": "How and Why to Start and Run a SIGCHI Local Chapter",
+        "abstract": "There is a vast and increasing interest towards local HCI communities around the globe and in particular on geographical areas in which HCI has only recently started to gain increasing interest by local industries as well as academic institutions. A SIGCHI Local Chapter is one of the ways a local HCI community can organize and get visibility and support for their activities. However, many active volunteers in this field might not be aware of this possibility. The main goal of the Chapters’ SIG in CHI’15 is to inform interested parties of SIGCHI Local Chapters and to find ways in which SIGCHI could better support local HCI communities with their various needs all over the world.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth18800",
+                "type": "author",
+                "id": "sig102",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Tuomo",
+                "middleInitial": "",
+                "familyName": "Kujala",
+                "email": "tuomo.kujala@jyu.fi",
+                "role": "",
+                "primary": {
+                    "dept": "Department of Computer Science and Information Systems",
+                    "institution": "University of Jyväskylä",
+                    "city": "Jyväskylä",
+                    "country": "Finland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "tuomo.kujala@jyu.fi",
+        "contactFirstName": "Tuomo",
+        "contactLastName": "Kujala",
+        "keywords": "Human-Computer Interaction (HCI); special interest group; local community",
+        "venue": "SIG",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "sig104",
+        "title": "Design for Online Deliberative Processes and Technologies: Towards a Multidisciplinary Research Agenda",
+        "abstract": "There has been rapidly growing interest in studying and designing online deliberative processes and technologies. This SIG aims at providing a venue for continuous and constructive dialogue between social, political and cognitive sciences as well as computer science, HCI, and CSCW. Through an online community and a modified version of world cafe discussions, we contribute to the definition of the theoretical building blocks, the identification of a research agenda for the CHI community, and the network of individuals from academia, industry, and the public sector who share interests in different aspects of online deliberation.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth44289",
+                "type": "author",
+                "id": "sig104",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Weiyu",
+                "middleInitial": "",
+                "familyName": "Zhang",
+                "email": "weiyu.zhang@nus.edu.sg",
+                "role": "",
+                "primary": {
+                    "dept": "Communications and New Media, Faculty of Arts and Social Science",
+                    "institution": "National University of Singapore",
+                    "city": "Singapore",
+                    "country": "Singapore"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth16320",
+                "type": "author",
+                "id": "sig104",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Lu",
+                "middleInitial": "",
+                "familyName": "Xiao",
+                "email": "lxiao24@uwo.ca",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "The University of Western Ontario",
+                    "city": "London",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth49136",
+                "type": "author",
+                "id": "sig104",
+                "venue": "SIG",
+                "rank": 3,
+                "givenName": "Anna",
+                "middleInitial": "",
+                "familyName": "Przybylska",
+                "email": "a.przybylska@uw.edu.pl",
+                "role": "",
+                "primary": {
+                    "dept": "Center for Deliberation, Institute of Sociology",
+                    "institution": "University of Warsaw",
+                    "city": "Warsaw",
+                    "country": "Poland"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth21682",
+                "type": "author",
+                "id": "sig104",
+                "venue": "SIG",
+                "rank": 4,
+                "givenName": "Anna",
+                "middleInitial": "",
+                "familyName": "De Liddo",
+                "email": "a.deliddo@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "The Open University",
+                    "city": "Milton Keynes",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth2518",
+                "type": "author",
+                "id": "sig104",
+                "venue": "SIG",
+                "rank": 5,
+                "givenName": "Gregorio",
+                "middleInitial": "",
+                "familyName": "Convertino",
+                "email": "gconvertino@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Informatica Corporation",
+                    "city": "Redwood City",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth4462",
+                "type": "author",
+                "id": "sig104",
+                "venue": "SIG",
+                "rank": 6,
+                "givenName": "Todd",
+                "middleInitial": "",
+                "familyName": "Davies",
+                "email": "davies@stanford.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Stanford University",
+                    "city": "Stanford",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth28152",
+                "type": "author",
+                "id": "sig104",
+                "venue": "SIG",
+                "rank": 7,
+                "givenName": "Mark",
+                "middleInitial": "",
+                "familyName": "Klein",
+                "email": "m_klein@mit.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "MIT",
+                    "city": "Cambridge",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "viyucheung@gmail.com",
+        "contactFirstName": "Weiyu",
+        "contactLastName": "Zhang",
+        "keywords": "Argumentation; collective intelligence; deliberation system; ideation; social innovation",
+        "venue": "SIG",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "sig105",
+        "title": "Understanding Sports-HCI by Going Jogging at CH",
+        "abstract": "More and more technologies are emerging that aim to support sports activities, for example there are jogging apps, cycling computers and quadcopters for sportspeople to videorecord their actions. These new technologies appear to become more and more popular, yet interaction design knowledge how to support the associated exertion experiences is still limited. In order to bring practitioners and academics interested in sports-HCI together and examine the topic “in the wild”, we propose to go outside and jog around the CHI venue while using and discussing some of these new technologies. The goal is to investigate and shape the future of the field of sports-HCI.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth2060",
+                "type": "author",
+                "id": "sig105",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Florian",
+                "middleInitial": "",
+                "familyName": "Mueller",
+                "email": "floyd@floydmueller.com",
+                "role": "",
+                "primary": {
+                    "dept": "Exertion Games Lab",
+                    "institution": "RMIT University",
+                    "city": "Melbourne",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth7924",
+                "type": "author",
+                "id": "sig105",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Joe",
+                "middleInitial": "",
+                "familyName": "Marshall",
+                "email": "joe.marshall@nottingham.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Mixed Reality Lab",
+                    "institution": "The University of Nottingham",
+                    "city": "Nottingham",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth10580",
+                "type": "author",
+                "id": "sig105",
+                "venue": "SIG",
+                "rank": 3,
+                "givenName": "Rohit Ashok",
+                "middleInitial": "",
+                "familyName": "Khot",
+                "email": "rohit@exertiongameslab.org",
+                "role": "",
+                "primary": {
+                    "dept": "Exertion games lab",
+                    "institution": "RMIT University",
+                    "city": "Melbourne",
+                    "country": "Australia"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth4751",
+                "type": "author",
+                "id": "sig105",
+                "venue": "SIG",
+                "rank": 4,
+                "givenName": "Stina",
+                "middleInitial": "",
+                "familyName": "Nylander",
+                "email": "stny@sics.se",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Mobile Life @ SICS",
+                    "city": "Kista",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth6222",
+                "type": "author",
+                "id": "sig105",
+                "venue": "SIG",
+                "rank": 5,
+                "givenName": "Jakob",
+                "middleInitial": "",
+                "familyName": "Tholander",
+                "email": "jakobth@dsv.su.se",
+                "role": "",
+                "primary": {
+                    "dept": "Mobile Life",
+                    "institution": "Stockholm University",
+                    "city": "Stockholm",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "floyd@floydmueller.com",
+        "contactFirstName": "Florian",
+        "contactLastName": "Mueller",
+        "keywords": "Sport; exercise; exertion ",
+        "venue": "SIG",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "sig108",
+        "title": "SIG: Gender-Inclusive Software: What We Know About Building It",
+        "abstract": "Recent research has shown that some software that is intended to be gender-neutral is not, in fact, equally inclusive to males and females.  But little is known about how to design software in a gender-aware fashion, and existing research on gender differences relevant to software design is scattered across at least five different academic fields (e.g., psychology, computer science, education, communications, and women's studies).  This research SIG will bring together female and male academics, industry researchers, and practitioners with three goals in mind: (1) to build community across research/practice boundaries; (2) to pool our knowledge on promising practices for design and evaluation of software from a gender perspective; and (3) to begin to build a shared, on-line research and literature base to support solid, well-informed progress on this important issue.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth1299",
+                "type": "author",
+                "id": "sig108",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Margaret",
+                "middleInitial": "M",
+                "familyName": "Burnett",
+                "email": "burnett@eecs.oregonstate.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Oregon State University",
+                    "city": "Corvallis",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1149",
+                "type": "author",
+                "id": "sig108",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Elizabeth",
+                "middleInitial": "F",
+                "familyName": "Churchill",
+                "email": "churchill@acm.org",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Google ",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth17039",
+                "type": "author",
+                "id": "sig108",
+                "venue": "SIG",
+                "rank": 3,
+                "givenName": "Michael",
+                "middleInitial": "J",
+                "familyName": "Lee",
+                "email": "mjslee@uw.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Washington",
+                    "city": "Seattle",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "burnett@eecs.oregonstate.edu",
+        "contactFirstName": "Margaret",
+        "contactLastName": "Burnett",
+        "keywords": "Women; feminism; gender; Gender HCI; system design",
+        "venue": "SIG",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "sig109",
+        "title": "CCI SIG: Interactive Childhood - Crossing Cultures and Continents",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth2823",
+                "type": "author",
+                "id": "sig109",
+                "venue": "SIG",
+                "rank": 1,
+                "givenName": "Janet",
+                "middleInitial": "C",
+                "familyName": "Read",
+                "email": "jcread@uclan.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Central Lancashire",
+                    "city": "Preston",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1924",
+                "type": "author",
+                "id": "sig109",
+                "venue": "SIG",
+                "rank": 2,
+                "givenName": "Juan Pablo",
+                "middleInitial": "",
+                "familyName": "Hourcade",
+                "email": "juanpablo-hourcade@uiowa.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Iowa",
+                    "city": "Iowa City",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1070",
+                "type": "author",
+                "id": "sig109",
+                "venue": "SIG",
+                "rank": 3,
+                "givenName": "Allison",
+                "middleInitial": "",
+                "familyName": "Druin",
+                "email": "allisond@umiacs.umd.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Maryland",
+                    "city": "College Park",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1348",
+                "type": "author",
+                "id": "sig109",
+                "venue": "SIG",
+                "rank": 4,
+                "givenName": "Panos",
+                "middleInitial": "",
+                "familyName": "Markopoulos",
+                "email": "P.Markopoulos@tue.nl",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Eindhoven University of Technology",
+                    "city": "Eindhoven",
+                    "country": "The Netherlands"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth10714",
+                "type": "author",
+                "id": "sig109",
+                "venue": "SIG",
+                "rank": 5,
+                "givenName": "Tilde",
+                "middleInitial": "",
+                "familyName": "Bekker",
+                "email": "m.m.bekker@tue.nl",
+                "role": "",
+                "primary": {
+                    "dept": "Department of Industrial Design",
+                    "institution": "Technische Universiteit Eindhoven",
+                    "city": "Eindhoven",
+                    "country": "The Netherlands"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth24491",
+                "type": "author",
+                "id": "sig109",
+                "venue": "SIG",
+                "rank": 6,
+                "givenName": "Ole",
+                "middleInitial": "Sejer",
+                "familyName": "Iversen",
+                "email": "oiversen@cs.au.dk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Aarhus",
+                    "city": "Aarhus",
+                    "country": "Denmark"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "jcread@uclan.ac.uk",
+        "contactFirstName": "Janet",
+        "contactLastName": "Read",
+        "keywords": "",
+        "venue": "SIG",
+        "subtype": "",
+        "session": "",
+        "communities": ""
+    }
+]

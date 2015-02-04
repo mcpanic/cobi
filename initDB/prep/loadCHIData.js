@@ -16,29 +16,29 @@ var SESSIONSTART = 100;
 var PCSINPUT = "";
 // var VENUE = "paper";
 // var VENUE = "TOCHI";
-// var VENUE = "casestudy";
-var VENUE = "course";
-//var VENUE = "SIG";
-//var VENUE = "panel";
-//var VENUE = "altchi";
-//var VENUE = "keynote";
+var VENUE = "casestudy";
+// var VENUE = "course";
+// var VENUE = "SIG";
+// var VENUE = "panel";
+// var VENUE = "altchi";
+// var VENUE = "keynote";
 
 if(VENUE == "paper"){
     PCSINPUT = "./input/PapersNotes_final_submissions_20150204.csv";
 }else if(VENUE == "TOCHI"){
-    PCSINPUT = "./input/TOCHI_final_submissions_20150128.csv";
+    PCSINPUT = "./input/tochi_final_submissions_20150204.csv";
 }else if(VENUE == "casestudy"){
-    PCSINPUT = "./input/CaseStudies_final_submissions_20150115.csv";
+    PCSINPUT = "./input/casestudies_final_submissions_20150204.csv";
 }else if(VENUE == "course"){
-    PCSINPUT = "./input/Courses_final_submissions_20150115.csv";
+    PCSINPUT = "./input/courses_final_submissions_20150204.csv";
 }else if(VENUE == "SIG"){
-    PCSINPUT = "./input/SIGs-listOfFinalSubmissions.csv";
+    PCSINPUT = "./input/sigs_final_submissions_20150204.csv";
 }else if(VENUE == "panel"){
-    PCSINPUT = "./input/panels-listOfFinalSubmissions.csv";
+    PCSINPUT = "./input/panels_final_submissions_20150204.csv";
 }else if(VENUE == "altchi"){
-    PCSINPUT = "./input/altchi-listOfFinalSubmissions.csv";
+    PCSINPUT = "./input/altchi_final_submissions_20150204.csv";
 }else if(VENUE == "keynote"){
-    PCSINPUT = "./input/invited-listOfFinalSubmissions.csv";
+    PCSINPUT = "./input/special_final_submissions_20150204.csv";
 }
 
 var AUTHORFILE = VENUE + "-authors.json";
@@ -138,97 +138,117 @@ function loadAssignments(as){
     var records = [];
     // courses
     for(var i = 0; i < as.courses.length; i++){
-	var cd = as.courses[i].split(",");
-	var date = cd[0];
-	var time = cd[1];
-	for(var j = 2; j < cd.length; j++){
-	    if(cd[j].indexOf("XXX") == -1){
-		var room = as.courseRooms[j-2];
-		var sessionId = "s-" + cd[j];
-		records.push({
-		    "id": sessionId,
-		    "date": date,
-		    "time": time,
-		    "room": room,
-		});
-	    }
-	}
+    	var cd = as.courses[i].split(",");
+    	var date = cd[0];
+    	var time = cd[1];
+    	for(var j = 2; j < cd.length; j++){
+    	    if(cd[j].indexOf("XXX") == -1){
+    		var room = as.courseRooms[j-2];
+    		var sessionId = "s-" + cd[j];
+    		records.push({
+    		    "id": sessionId,
+    		    "date": date,
+    		    "time": time,
+    		    "room": room,
+    		});
+    	    }
+    	}
     }
 
     // altchi
     for(var i = 0; i < as.altchis.length; i++){
-	var cd = as.altchis[i].split(",");
-	var date = cd[0];
-	var time = cd[1];
-	for(var j = 2; j < cd.length; j++){
-	    if(cd[j].indexOf("XXX") == -1){
-		var room = as.altchiRooms[j-2];
-		var sessionId = "s-" + cd[j];
-		records.push({
-		    "id": sessionId,
-		    "date": date,
-		    "time": time,
-		    "room": room,
-		});
-	    }
-	}
+    	var cd = as.altchis[i].split(",");
+    	var date = cd[0];
+    	var time = cd[1];
+    	for(var j = 2; j < cd.length; j++){
+    	    if(cd[j].indexOf("XXX") == -1){
+    		var room = as.altchiRooms[j-2];
+    		var sessionId = "s-" + cd[j];
+    		records.push({
+    		    "id": sessionId,
+    		    "date": date,
+    		    "time": time,
+    		    "room": room,
+    		});
+    	    }
+    	}
     }
+
+    // casestudies
+    for(var i = 0; i < as.casestudies.length; i++){
+        var cd = as.casestudies[i].split(",");
+        var date = cd[0];
+        var time = cd[1];
+        for(var j = 2; j < cd.length; j++){
+            if(cd[j].indexOf("XXX") == -1){
+            var room = as.casestudiesRooms[j-2];
+            var sessionId = "s-" + cd[j];
+            records.push({
+                "id": sessionId,
+                "date": date,
+                "time": time,
+                "room": room,
+            });
+            }
+        }
+    }
+
 
     // Panels
     for(var i = 0; i < as.panels.length; i++){
-	var cd = as.panels[i].split(",");
-	var date = cd[0];
-	var time = cd[1];
-	for(var j = 2; j < cd.length; j++){
-	    if(cd[j].indexOf("XXX") == -1){
-		var room = as.panelRooms[j-2];
-		var sessionId = "s-" + cd[j];
-		records.push({
-		    "id": sessionId,
-		    "date": date,
-		    "time": time,
-		    "room": room,
-		});
-	    }
-	}
+    	var cd = as.panels[i].split(",");
+    	var date = cd[0];
+    	var time = cd[1];
+    	for(var j = 2; j < cd.length; j++){
+    	    if(cd[j].indexOf("XXX") == -1){
+    		var room = as.panelRooms[j-2];
+    		var sessionId = "s-" + cd[j];
+    		records.push({
+    		    "id": sessionId,
+    		    "date": date,
+    		    "time": time,
+    		    "room": room,
+    		});
+    	    }
+    	}
     }
 
     // SIGs
     for(var i = 0; i < as.sigs.length; i++){
-	var cd = as.sigs[i].split(",");
-	var date = cd[0];
-	var time = cd[1];
-	for(var j = 2; j < cd.length; j++){
-	    if(cd[j].indexOf("XXX") == -1){
-		var room = as.sigRooms[j-2];
-		var sessionId = "s-" + cd[j];
-		records.push({
-		    "id": sessionId,
-		    "date": date,
-		    "time": time,
-		    "room": room,
-		});
-	    }
-	}
+    	var cd = as.sigs[i].split(",");
+    	var date = cd[0];
+    	var time = cd[1];
+    	for(var j = 2; j < cd.length; j++){
+    	    if(cd[j].indexOf("XXX") == -1){
+    		var room = as.sigRooms[j-2];
+    		var sessionId = "s-" + cd[j];
+    		records.push({
+    		    "id": sessionId,
+    		    "date": date,
+    		    "time": time,
+    		    "room": room,
+    		});
+    	    }
+    	}
     }
 
     // papers
     for(var i = 0; i < as.papers.length; i++){
-	var cd = as.papers[i].split(",");
-	var date = cd[0];
-	var time = cd[1];
-	for(var j = 2; j < cd.length; j++){
-	    if(cd[j].indexOf("XXX") == -1){
-		var room = as.paperRooms[j-2];
-		var sessionId = cd[j];
-		records.push({
-		    "id": sessionId,
-		    "date": date,
-		    "time": time,
-		    "room": room,
-		});
-	    }
-	}
+    	var cd = as.papers[i].split(",");
+    	var date = cd[0];
+    	var time = cd[1];
+    	for(var j = 2; j < cd.length; j++){
+    	    if(cd[j].indexOf("XXX") == -1){
+    		var room = as.paperRooms[j-2];
+    		var sessionId = cd[j];
+    		records.push({
+    		    "id": sessionId,
+    		    "date": date,
+    		    "time": time,
+    		    "room": room,
+    		});
+    	    }
+    	}
     }
     return records;
 }
@@ -407,9 +427,22 @@ function createEmptySession(id,title,scheduled){
 
 function createCaseStudySessionData(PCSdata){
     var sessions = [];
-    var numCSsessions = 3;
-    for(var i = 1; i <= 3; i++){
-	sessions.push(createEmptySession("s-case-" + i, "Case Study Session " + i, 0));
+    for(var s in assignments.caseAssigns){
+    var sid = "s-" + s;
+    var info = sessionLookup(sid);
+    var session = {
+        "id" : sid,
+        "date" : info.date,
+        "time" : info.time,
+        "room" : info.room,
+        "communities" : [],
+        "persona" : "",
+        "submissions" : assignments.caseAssigns[s].submissions,
+        "title" : assignments.caseAssigns[s].title,
+        "venue" : VENUE,
+        "scheduled" : ((info.date == "") ? 0 : 1)
+    }
+    sessions.push(session);
     }
     return sessions;
 }
@@ -641,30 +674,22 @@ function createAuthors(sub, venue){
     	    "id" : sub["ID"],
     	    "venue" : venue,
     	    "rank" : i,
-    	    "givenName" : ((venue == "TOCHI") ? sub["Author given first name " + i] : sub["Author given name or first name " + i]),
+    	    "givenName" : ((venue == "TOCHI" || venue == "SIG" || venue == "panel" || venue == "altchi" || venue == "keynote") ? sub["Author given first name " + i] : sub["Author given name or first name " + i]),
     	    "middleInitial" : ((venue == "") ? sub["Author middle initial or name " + i] : sub["Middle initial or name " + i]),
-    	    "familyName" : ((venue == "TOCHI") ? sub["Author last/family name " + i] : sub["Author last name or family name " + i]),
+    	    "familyName" : ((venue == "TOCHI" || venue == "SIG" || venue == "panel" || venue == "altchi" || venue == "keynote") ? sub["Author last/family name " + i] : sub["Author last name or family name " + i]),
     	    "email" : ((venue == "") ? sub["Email " + i] : sub["Valid email address " + i]),
     	    "role" : "",
     	    "primary" : {
-    		"dept" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Primary Affiliation (no labs or dept names in this field) " + i + " - Department/School/Lab"]
-    			  : sub["Primary Affiliation " + i + " - Department/School/Lab"]),
-    		"institution" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Primary Affiliation (no labs or dept names in this field) " + i + " - Institution"]
-    				 : sub["Primary Affiliation " + i + " - Institution"]),
-    		"city" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Primary Affiliation (no labs or dept names in this field) " + i + " - City"]
-    				 : sub["Primary Affiliation " + i + " - City"]),
-    		"country" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Primary Affiliation (no labs or dept names in this field) " + i + " - Country"]
-    				 : sub["Primary Affiliation " + i + " - Country"]),
+        		"dept" : sub["Primary Affiliation (no labs or dept names in this field) " + i + " - Department/School/Lab"],
+        		"institution" : sub["Primary Affiliation (no labs or dept names in this field) " + i + " - Institution"],
+        		"city" : sub["Primary Affiliation (no labs or dept names in this field) " + i + " - City"],
+        		"country" : sub["Primary Affiliation (no labs or dept names in this field) " + i + " - Country"]
     	    },
     	    "secondary" :  {
-    		"dept" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - Department/School/Lab"]
-    			  : sub["Secondary Affiliation (optional) " + i + " - Department/School/Lab"]),
-    		"institution" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - Institution"]
-    				 : sub["Secondary Affiliation (optional) " + i + " - Institution"]),
-    		"city" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - City"]
-    				 : sub["Secondary Affiliation (optional) " + i + " - City"]),
-    		"country" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - Country"]
-    			     : sub["Secondary Affiliation (optional) " + i + " - Country"])
+        		"dept" : sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - Department/School/Lab"],
+        		"institution" : sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - Institution"],
+        		"city" : sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - City"],
+        		"country" : sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - Country"]
             }
 	    }
 	    authors.push(author);
@@ -689,30 +714,22 @@ function createEntityAuthors(sub, venue){
             "id" : sub["ID"],
             "venue" : venue,
             "rank" : i,
-            "givenName" : ((venue == "TOCHI") ? sub["Author given first name " + i] : sub["Author given name or first name " + i]),
+            "givenName" : ((venue == "TOCHI" || venue == "SIG" || venue == "panel" || venue == "altchi" || venue == "keynote") ? sub["Author given first name " + i] : sub["Author given name or first name " + i]),
             "middleInitial" : ((venue == "") ? sub["Author middle initial or name " + i] : sub["Middle initial or name " + i]),
-            "familyName" : ((venue == "TOCHI") ? sub["Author last/family name " + i] : sub["Author last name or family name " + i]),
+            "familyName" : ((venue == "TOCHI" || venue == "SIG" || venue == "panel" || venue == "altchi" || venue == "keynote") ? sub["Author last/family name " + i] : sub["Author last name or family name " + i]),
             "email" : ((venue == "") ? sub["Email " + i] : sub["Valid email address " + i]),
             "role" : "",
             "primary" : {
-            "dept" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Primary Affiliation (no labs or dept names in this field) " + i + " - Department/School/Lab"]
-                  : sub["Primary Affiliation " + i + " - Department/School/Lab"]),
-            "institution" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Primary Affiliation (no labs or dept names in this field) " + i + " - Institution"]
-                     : sub["Primary Affiliation " + i + " - Institution"]),
-            "city" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Primary Affiliation (no labs or dept names in this field) " + i + " - City"]
-                     : sub["Primary Affiliation " + i + " - City"]),
-            "country" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Primary Affiliation (no labs or dept names in this field) " + i + " - Country"]
-                     : sub["Primary Affiliation " + i + " - Country"]),
+                "dept" : sub["Primary Affiliation (no labs or dept names in this field) " + i + " - Department/School/Lab"],
+                "institution" : sub["Primary Affiliation (no labs or dept names in this field) " + i + " - Institution"],
+                "city" : sub["Primary Affiliation (no labs or dept names in this field) " + i + " - City"],
+                "country" : sub["Primary Affiliation (no labs or dept names in this field) " + i + " - Country"]
             },
             "secondary" :  {
-            "dept" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - Department/School/Lab"]
-                  : sub["Secondary Affiliation (optional) " + i + " - Department/School/Lab"]),
-            "institution" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - Institution"]
-                     : sub["Secondary Affiliation (optional) " + i + " - Institution"]),
-            "city" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - City"]
-                     : sub["Secondary Affiliation (optional) " + i + " - City"]),
-            "country" : ((venue == 'paper' || venue == 'casestudy' || venue == 'SIG' || venue == 'course' || venue == 'panel' || venue == 'TOCHI') ? sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - Country"]
-                     : sub["Secondary Affiliation (optional) " + i + " - Country"])
+                "dept" : sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - Department/School/Lab"],
+                "institution" : sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - Institution"],
+                "city" : sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - City"],
+                "country" : sub["Secondary Affiliation (optional) (no labs or dept names in this field) " + i + " - Country"]
             }
         }
 	    authors.push(author);

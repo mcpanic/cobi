@@ -37,7 +37,7 @@
         "keywords": "Paper-pencil sketches; sketching; interaction design; user experience design",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs100",
         "communities": ""
     },
     {
@@ -102,7 +102,7 @@
         "keywords": "Sound; music; art; interface;  musical interface",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs101",
         "communities": ""
     },
     {
@@ -143,13 +143,13 @@
         "keywords": "Psychology; perception; cognition; memory; learning; attention; design; user interface; user-centered design; interaction; user experience; human-computer interaction; design guidelines; design heuristics",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs103",
         "communities": ""
     },
     {
         "id": "crs104",
         "title": "Using Experience Sampling Methodology to Collect Deep Data About Your Users",
-        "abstract": "",
+        "abstract": "Experience Sampling Methodology (ESM) is a type of longitudinal diary study that allows one to understand a person’s experience in the moment. It combines the qualitative richness of longitudinal diary studies, artifacts of a field study, and quantitative data of a large-scale survey or app tracker. Using a free, open-source mobile app called “PACO (Personal Analytics COmpanion),” we can conduct ESM studies with participants anywhere in the world. These studies can be conducted after qualitative studies (e.g., ethnography, interviews) to ascertain how broadly your observations apply to your user population or they can be done in advance to identify insights you want to study in-person, in-depth. By combining these methodologies, you create a, deeper, more holistic understanding of your users. This workshop will give attendees the skills to design, conduct, and analyze data from ESM studies at any scale.",
         "acmLink": "",
         "authors": [
             {
@@ -225,85 +225,20 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Attendees will obtain the skills to design, conduct, and analyze data from an ESM study in order to capture a deeper, more holistic understanding of their users.",
         "contactEmail": "kathykbaxter@gmail.com",
         "contactFirstName": "Kathy",
         "contactLastName": "Baxter",
-        "keywords": "",
+        "keywords": "Experience Sampling Methodology; longitudinal study; mobile; user research",
         "venue": "course",
         "subtype": "",
-        "session": "",
-        "communities": ""
-    },
-    {
-        "id": "crs105",
-        "title": "Designing Multi-Stakeholder Product-Service Systems",
-        "abstract": "",
-        "acmLink": "",
-        "authors": [
-            {
-                "authorId": "auth1028",
-                "type": "author",
-                "id": "crs105",
-                "venue": "course",
-                "rank": 1,
-                "givenName": "Jodi",
-                "middleInitial": "",
-                "familyName": "Forlizzi",
-                "email": "forlizzi@cs.cmu.edu",
-                "role": "",
-                "primary": {
-                    "dept": "",
-                    "institution": "Carnegie Mellon University",
-                    "city": "Pittsburgh",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "authorId": "auth1917",
-                "type": "author",
-                "id": "crs105",
-                "venue": "course",
-                "rank": 2,
-                "givenName": "John",
-                "middleInitial": "",
-                "familyName": "Zimmerman",
-                "email": "johnz@cs.cmu.edu",
-                "role": "",
-                "primary": {
-                    "dept": "",
-                    "institution": "Carnegie Mellon University",
-                    "city": "Pittsburgh",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            }
-        ],
-        "cbStatement": "",
-        "contactEmail": "forlizzi@cs.cmu.edu",
-        "contactFirstName": "Jodi",
-        "contactLastName": "Forlizzi",
-        "keywords": "",
-        "venue": "course",
-        "subtype": "",
-        "session": "",
+        "session": "s-crs104",
         "communities": ""
     },
     {
         "id": "crs106",
         "title": "Practical UX Research Methodologies",
-        "abstract": "",
+        "abstract": "Half-Day course on the practical research methods used to understand the changing technology climate.  Experts from UEGroup, a Silicon Valley research and design company, will lead an interactive discussion and give practical suggestions for developing methodologies including: Ethnography, Out of Box Experiences, and Usability Testing. ",
         "acmLink": "",
         "authors": [
             {
@@ -331,24 +266,24 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Walk away from the course with a more complete understanding of the different methodologies and begin to understand when to incorporate each approach to their unique applications.  ",
         "contactEmail": "sarah@uegroup.com",
         "contactFirstName": "Sarah",
         "contactLastName": "Garcia",
-        "keywords": "",
+        "keywords": "User Experience; Research Methodologies; UX; Media Studies; Ethnography; Out of Box Experience; OOBE; Usability Testing; Benchmark Studies; Interactive ",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs106",
         "communities": ""
     },
     {
         "id": "crs107",
-        "title": "Jeff",
+        "title": "Conceptual Models: Core to Good Design",
         "abstract": "A crucial step in designing a user interface for a software application is to design a coherent, task-focused conceptual model (CM).  With a CM, designers design better, developers develop better, and users learn and use better.  Unfortunately, this step is often skipped, resulting in incoherent, arbitrary, inconsistent, overly-complex applications that impede design, development, learning, understanding, and use.  This course covers what CMs are, how they help, how to develop them, and provides hands-on experience.",
         "acmLink": "",
         "authors": [
             {
-                "authorId": "auth100012",
+                "authorId": "auth1111",
                 "type": "author",
                 "id": "crs107",
                 "venue": "course",
@@ -356,252 +291,36 @@
                 "givenName": "Jeff",
                 "middleInitial": "A",
                 "familyName": "Johnson",
-                "email": "jjohnson@uiwizards.com",
-                "role": "",
-                "primary": {
-                    "dept": "UI Wizards, Inc, San Francisco, California, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                },
-                "secondary": {
-                    "dept": "Wiser Usability, Inc., Cupertino, California, United States",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "authorId": "auth100013",
-                "type": "author",
-                "id": "crs107",
-                "venue": "course",
-                "rank": 2,
-                "givenName": "",
-                "middleInitial": "",
-                "familyName": "Johnson",
-                "email": "jjohnson@uiwizards.com",
+                "email": "jeffjohnson@uiwizards.com",
                 "role": "",
                 "primary": {
                     "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "institution": "UI Wizards, Inc",
+                    "city": "San Francisco",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "authorId": "auth100014",
-                "type": "author",
-                "id": "crs107",
-                "venue": "course",
-                "rank": 3,
-                "givenName": "",
-                "middleInitial": "",
-                "familyName": "Johnson",
-                "email": "jjohnson@uiwizards.com",
-                "role": "",
-                "primary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "authorId": "auth100015",
-                "type": "author",
-                "id": "crs107",
-                "venue": "course",
-                "rank": 4,
-                "givenName": "",
-                "middleInitial": "",
-                "familyName": "Johnson",
-                "email": "jjohnson@uiwizards.com",
-                "role": "",
-                "primary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "authorId": "auth100016",
-                "type": "author",
-                "id": "crs107",
-                "venue": "course",
-                "rank": 5,
-                "givenName": "",
-                "middleInitial": "",
-                "familyName": "Johnson",
-                "email": "jjohnson@uiwizards.com",
-                "role": "",
-                "primary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "authorId": "auth100017",
-                "type": "author",
-                "id": "crs107",
-                "venue": "course",
-                "rank": 6,
-                "givenName": "",
-                "middleInitial": "",
-                "familyName": "Johnson",
-                "email": "jjohnson@uiwizards.com",
-                "role": "",
-                "primary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "authorId": "auth100018",
-                "type": "author",
-                "id": "crs107",
-                "venue": "course",
-                "rank": 7,
-                "givenName": "",
-                "middleInitial": "",
-                "familyName": "Johnson",
-                "email": "jjohnson@uiwizards.com",
-                "role": "",
-                "primary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "authorId": "auth100019",
-                "type": "author",
-                "id": "crs107",
-                "venue": "course",
-                "rank": 8,
-                "givenName": "",
-                "middleInitial": "",
-                "familyName": "Johnson",
-                "email": "jjohnson@uiwizards.com",
-                "role": "",
-                "primary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "authorId": "auth100020",
-                "type": "author",
-                "id": "crs107",
-                "venue": "course",
-                "rank": 9,
-                "givenName": "",
-                "middleInitial": "",
-                "familyName": "Johnson",
-                "email": "jjohnson@uiwizards.com",
-                "role": "",
-                "primary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "authorId": "auth100021",
-                "type": "author",
-                "id": "crs107",
-                "venue": "course",
-                "rank": 10,
-                "givenName": "",
-                "middleInitial": "",
-                "familyName": "Johnson",
-                "email": "jjohnson@uiwizards.com",
-                "role": "",
-                "primary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "institution": "Wiser Usability, Inc.",
+                    "city": "Cupertino",
+                    "country": "United States"
                 }
             }
         ],
-        "cbStatement": "Benefits: In this class, participants will: \\ • Learn the benefits of designing a task-focused conceptual model (CM) of an application before designing its UI. \\ • Learn the components of a CM, and how to create them.  \\ • Gain experience designing a CM for a software application. \\ ",
+        "cbStatement": "Teaches the benefits of designing a conceptual model (CM) of apps before designing the UI, the components of CMs and how to create them, and provides experience designing a CM. \\ ",
         "contactEmail": "jeffjohnson@uiwizards.com",
         "contactFirstName": "Jeff",
         "contactLastName": "Johnson",
         "keywords": "Conceptual model; software design; user interface; UI; interaction; design process; design methods; design techniques; psychological basis for design methods; task analysis; ontology; information architecture",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs107",
         "communities": ""
     },
     {
         "id": "crs108",
         "title": "Designing Websites for Adults 55+: Toward Universal Design",
-        "abstract": "",
+        "abstract": "This course describes age-related factors that affect ability to use the Web, and presents Web design guidelines that reflect the capabilities, usage patterns, and preferences of older Web users.  The course also explains the value of testing websites on older adults.",
         "acmLink": "",
         "authors": [
             {
@@ -629,14 +348,14 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "The ultimate outcome is that the usability of the Web will be improved for older adults.",
         "contactEmail": "jeffjohnson@uiwizards.com",
         "contactFirstName": "Jeff",
         "contactLastName": "Johnson",
-        "keywords": "",
+        "keywords": "Web design; website; design; user interface; user-centered design; interaction; user experience; human-computer interaction; universal design; accessibility; design guidelines; demographics; seniors; elders; elderly; older users; older adults",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs108",
         "communities": ""
     },
     {
@@ -652,7 +371,7 @@
                 "venue": "course",
                 "rank": 1,
                 "givenName": "Guy",
-                "middleInitial": "A",
+                "middleInitial": "André",
                 "familyName": "Boy",
                 "email": "gboy@fit.edu",
                 "role": "",
@@ -725,13 +444,13 @@
         "keywords": "Participatory Design / Agents & Intelligent Systems (primary keyword); Design Methods (Group Elicitation Method, Scenarios, Storyboards, Complexity Analysis); Advanced Interaction Media; Creativity; Design Thinking.",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs109",
         "communities": ""
     },
     {
         "id": "crs110",
         "title": "Introduction to Positive Computing – Technology that fosters wellbeing",
-        "abstract": "",
+        "abstract": "A growing number of HCI professionals are interested in how we might design technology to foster psychological wellbeing.  Meeting such an aim will involve a crossing of disciplines, of methods, and a new way of thinking about what technology should be doing for us. By turning to the well-established research and methods available in psychology, education, neuroscience, and HCI, we can begin to cultivate a field dedicated to the design and development of technology that supports wellbeing and human potential, a field we refer to as positive computing [1]. In this course we will explore multidisciplinary approaches to evaluating and designing for digital experience that supports wellbeing determinants like self-awareness, autonomy, resilience, mindfulness, and altruism. The objective of this course is to provide participants with: a theoretical foundation, a practical framework, a look at the state of the art, and group-generated design strategies to better support wellbeing in their current and future projects.",
         "acmLink": "",
         "authors": [
             {
@@ -783,14 +502,14 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "If we want technology to increase worldwide wellbeing, we have to design for wellbeing directly. Positive computing – the development of technology to support psychological wellbeing and human potential \\ ",
         "contactEmail": "rafael.calvo@sydney.edu.au",
         "contactFirstName": "Rafael",
         "contactLastName": "Calvo",
-        "keywords": "",
+        "keywords": "Design methods; design research; behavior change; self-efficacy; connectedness; emotions",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs110",
         "communities": ""
     },
     {
@@ -855,13 +574,13 @@
         "keywords": "Interactive TV; online video; interaction design",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs111",
         "communities": ""
     },
     {
         "id": "crs112",
         "title": "Introduction to Human-Computer Interaction",
-        "abstract": "",
+        "abstract": "The objective of this course is to provide newcomers to Human-Computer Interaction (HCI) with an introduction and overview of the field. In addition to introducing basic concepts, the course will provide enough structure to help understand how the advanced material in the CHI 2015 technical program fits into the overall field.",
         "acmLink": "",
         "authors": [
             {
@@ -913,20 +632,20 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Newcomers to the field of human-computer interaction will learn basic HCI concepts, processes, methods, and tools, through several real-world examples.",
         "contactEmail": "simone@inf.puc-rio.br",
         "contactFirstName": "Simone",
         "contactLastName": "Barbosa",
-        "keywords": "",
+        "keywords": "HCI design processes and methods; HCI evaluation methods",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs112",
         "communities": ""
     },
     {
         "id": "crs113",
         "title": "Cross-channel Conceptual Design – A Methodology",
-        "abstract": "",
+        "abstract": "Taking the leap from research and requirements to product design is an age-old challenge. This course provides a proven strategy for transforming your research into a Conceptual Model. It provides an iterative process that allows you to build the essential foundation for a successful interactive system, taking into consideration the users’ mental model. It provides one with a framework for envisioning how users perceive, understand, and experience their tasks and processes in the context of your product. This way, one can mold the model to facilitate users’ understanding of their tasks and processes and positively influence their experience, including: functionality - what they do; configuration – where; and navigation - how they go from one place to another within the system.",
         "acmLink": "",
         "authors": [
             {
@@ -954,20 +673,20 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This course provides a proven strategy for transforming your research into a Conceptual Model, taking into consideration the users’ mental model. ",
         "contactEmail": "aparush@ie.technion.ac.il",
         "contactFirstName": "Avi",
         "contactLastName": "Parush",
-        "keywords": "",
+        "keywords": "Conceptual Design; Conceptual Model;",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs113",
         "communities": ""
     },
     {
         "id": "crs115",
         "title": "The Glass Class: Designing Wearable Interfaces",
-        "abstract": "",
+        "abstract": "This course will teach how to design and develop effective interfaces for head mounted or wrist worn wearable computers through the application of user-centered design principles. It will enable existing HCI practitioners to enter the fast growing area of wearable computing. Attendees will gain the knowledge and tools needed to develop prototype applications, and an understanding of the important areas of current research and development.",
         "acmLink": "",
         "authors": [
             {
@@ -1019,14 +738,14 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Attendees will learn how to design effective interfaces for head mounted and body worn wearable computers and will enable HCI practitioners to enter the wearable field and explore research applications.",
         "contactEmail": "mark.billinghurst@hitlabnz.org",
         "contactFirstName": "Mark",
         "contactLastName": "Billinghurst",
-        "keywords": "",
+        "keywords": "Wearable Computing; Interface Design",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs115",
         "communities": ""
     },
     {
@@ -1091,13 +810,13 @@
         "keywords": "Speech-based interaction",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs116",
         "communities": ""
     },
     {
         "id": "crs117",
         "title": "Rapid Design Labs—A Tool to Turbocharge Design-Led Innovation",
-        "abstract": "",
+        "abstract": "We as researchers and User Experience (UX) designers want to identify and create products that change the world and therefore, we choose to engage in strategic research and design. In the real world though, coming up with a breakthrough idea or transformative design doesn’t mean it will automatically be accepted or get to market. By definition, innovative ideas represent new ways of thinking. Organizations by nature seem to have anti-innovation antibodies [1] that often kill new ideas [2]—even disruptive innovations [3] that could help companies differentiate themselves from their competition. As difficult as coming up with a game-changing idea can be, getting an organization to act on the idea often seems impossible. Perhaps we find ourselves in work routines that do not provide space to think differently. Our experience is that practitioners and academics alike need new tools to meet this challenge—tools that empower UX teams in both business and universities to identify transformative new ideas, and then to get these big ideas and designs accepted. This course proposes rapid design labs—a design-led, facilitative, cross-functional, iterative approach to innovation that aligns organizations and generates value at each step. It provides tools and methods that turn attendees into catalysts, who systemically identify new ideas, and align multi-disciplinary teams around their ideas. Attendees learn how to lead workshops that foster ideation, collaboration, trust, and free expression. These workshops enable intensive brainstorming, purposeful play, design, user testing, and rapid prototyping. Learn how innovative companies and universities, such as Splunk, Deutsche Telekom Laboratories, the Berlin Technical University, Yahoo!, Mindjet, zSpace, HP, and more identify, design, and bring great products to market.",
         "acmLink": "",
         "authors": [
             {
@@ -1149,20 +868,20 @@
                 }
             }
         ],
-        "cbStatement": "",
-        "contactEmail": "jnieters@mac.com",
-        "contactFirstName": "Jim",
-        "contactLastName": "Nieters",
-        "keywords": "",
+        "cbStatement": "Rapid design labs are a design-led, cross-functional approach to innovation that enables attendees to identify innovations and align multi-disciplinary teams. They foster ideation, collaboration, design, user testing, and prototyping.",
+        "contactEmail": "carolafthompson@gmail.com",
+        "contactFirstName": "Carola",
+        "contactLastName": "Thompson",
+        "keywords": "Multidisciplinary design; Interdisciplinary Design; Design Methods; User Experience Design; User Experience Design; Games and Play; Participatory Design / Cooperative Design; Innovation",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs117",
         "communities": ""
     },
     {
         "id": "crs118",
         "title": "Actionable Inexpensive Games User Research",
-        "abstract": "",
+        "abstract": "This course will allow people to understand the intricacies of rapid games user research methods. For this we will weave together playtesting exercises and help participants turn player feedback into actionable design recommendations. The course is designed from a user experience (UX) perspective and should allow for people unfamiliar with rapid iteration and user testing to playtesting and basic user research skills.",
         "acmLink": "",
         "authors": [
             {
@@ -1238,14 +957,14 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This course is meant to provide new insights for user experience designers and human-computer interaction (HCI) graduate students interested in game evaluation and games user research. ",
         "contactEmail": "Lennart.Nacke@acm.org",
         "contactFirstName": "Lennart",
         "contactLastName": "Nacke",
-        "keywords": "",
+        "keywords": "Games user research; user testing; playtesting; user experience; game analytics; evaluation; game usability",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs118",
         "communities": ""
     },
     {
@@ -1310,13 +1029,13 @@
         "keywords": "digital reading; interaction design; e-books; reading devices; e-reading apps",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs119",
         "communities": ""
     },
     {
         "id": "crs121",
         "title": "Designing Surveys for HCI Research",
-        "abstract": "",
+        "abstract": "Online surveys are widely used in human-computer interaction (HCI) to gather feedback and measure satisfaction; at a glance many tools are available and the cost of conducting surveys appears low. However, there is a wide gap between quick-and-dirty surveys, and surveys that are properly planned, constructed, and analyzed. This course examines survey research approaches that meet HCI goals, selecting the appropriate sampling method, questionnaire design best practices, identifying and avoiding common survey biases, and questionnaire evaluation. Attendees will gain an appreciation for the breadth and depth of surveys in HCI, combined with keys to conducting valid, reliable, and impactful survey research themselves.",
         "acmLink": "",
         "authors": [
             {
@@ -1332,7 +1051,7 @@
                 "role": "",
                 "primary": {
                     "dept": "",
-                    "institution": "Google, Inc.",
+                    "institution": "Google Australia",
                     "city": "Sydney",
                     "country": "Australia"
                 },
@@ -1368,14 +1087,14 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Through both lecture material and interactive group activities, gain a practical understanding of the survey research lifecycle, including sampling considerations, questionnaire design, questionnaire biases, and evaluation.",
         "contactEmail": "hendrik82@gmail.com",
         "contactFirstName": "Hendrik",
         "contactLastName": "Müller",
-        "keywords": "",
+        "keywords": "Surveys; User Experience; Research Methodology; Questionnaire Design; Questionnaire Biases",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs121",
         "communities": ""
     },
     {
@@ -1440,13 +1159,13 @@
         "keywords": "User Interaction Design; Task description and modeling",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs122",
         "communities": ""
     },
     {
         "id": "crs124",
         "title": "How You Could Benefit from Using ISO Standards",
-        "abstract": "",
+        "abstract": "The course explains how international standards for HCI can provide a sound basis for education and training, can provide authority for design and development, and are a rich source of guidance and reference material.",
         "acmLink": "",
         "authors": [
             {
@@ -1474,20 +1193,20 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Learn how international standards can provide a sound basis for educational and training, can provide authority for design and development, and are a rich source of guidance and reference material.  ",
         "contactEmail": "nigel@nigelbevan.com",
         "contactFirstName": "Nigel",
         "contactLastName": "Bevan",
-        "keywords": "",
+        "keywords": "Standards; usability, user experience; human-centred design; process improvement; risk",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs124",
         "communities": ""
     },
     {
         "id": "crs128",
         "title": "Design and Adaptation for Cross-Device, Context-dependent User Interfaces",
-        "abstract": "",
+        "abstract": "This tutorial aims to help user interface designers and developers to understand the issues involved in multi-device, context-dependent interactive applications, which can be accessed through wearable, mobile and stationary devices even exploiting different interaction modalities. It will provide a discussion of the possible solutions in terms of concepts, techniques, languages, and tools, with particular attention to Web environments. The tutorial will deal with the various strategies in order to adapt, distribute, and migrate the user interface according to the context of use. ",
         "acmLink": "",
         "authors": [
             {
@@ -1515,20 +1234,20 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This tutorial aims to help user interface designers and developers to understand the issues involved in multi-device, context-dependent interactive applications, which can be accessed through wearable, mobile and stationary devices ",
         "contactEmail": "fabio.paterno@isti.cnr.it",
         "contactFirstName": "Fabio",
         "contactLastName": "Paternò",
-        "keywords": "",
+        "keywords": "Multi-device User Interfaces; \\ Distributed and Migratory User Interfaces; \\ Context-dependent Applications",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs128",
         "communities": ""
     },
     {
         "id": "crs129",
         "title": "Research Methods for Child Computer Interaction",
-        "abstract": "",
+        "abstract": "In this course participants will learn about theory and practice of conducting research in children’s HCI. The course is divided into two sessions: basic principles and theory, and best practices. The instructors have multiple years of experience designing, conducting, and analyzing children-computer interaction (CCI) studies, in the UK, USA, and Israel.",
         "acmLink": "",
         "authors": [
             {
@@ -1538,7 +1257,7 @@
                 "venue": "course",
                 "rank": 1,
                 "givenName": "Janet",
-                "middleInitial": "",
+                "middleInitial": "C",
                 "familyName": "Read",
                 "email": "jcread@uclan.ac.uk",
                 "role": "",
@@ -1580,20 +1299,20 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This course introduces participants to ethical and appropriate research with children.  A case study is used to show research methods. The course suits those working with children in HCI.",
         "contactEmail": "jcread@uclan.ac.uk",
         "contactFirstName": "Janet",
         "contactLastName": "Read",
-        "keywords": "",
+        "keywords": "CCI; children; research methods; age-appropriate design; user testing; ethnography",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs129",
         "communities": ""
     },
     {
         "id": "crs131",
-        "title": "Sketching User Experiences: The Hands-on Workshop",
-        "abstract": "",
+        "title": "Sketching User Experiences: The Hands-on Course",
+        "abstract": "When designing novel user interfaces, paper-pencil sketches can support the design thinking process and are valuable for communicating design ideas to others. This hands-on course will demonstrate how to integrate sketching into researchers’ and interaction designers’ everyday practice – with a particular focus on the design of novel user experiences. Participants will learn essential sketching strategies, apply these in practice during many hands-on exercises, and learn the various ways of using sketches as a tool during all stages of the HCI research and design process. Our emphasis is on quick, easy to learn, and easy to apply methods for generating and refining ideas.",
         "acmLink": "",
         "authors": [
             {
@@ -1645,14 +1364,14 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "In this hands-on sketching course participants will learn easy to apply sketching methods for generating and refining ideas for HCI research and design.",
         "contactEmail": "n.marquardt@ucl.ac.uk",
         "contactFirstName": "Nicolai",
         "contactLastName": "Marquardt",
         "keywords": "",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs131",
         "communities": ""
     },
     {
@@ -1717,7 +1436,7 @@
         "keywords": "",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs132",
         "communities": ""
     },
     {
@@ -1782,7 +1501,7 @@
         "keywords": "Mobile HCI; interaction; interface.",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs133",
         "communities": ""
     },
     {
@@ -1942,7 +1661,7 @@
                 "venue": "course",
                 "rank": 7,
                 "givenName": "Effie",
-                "middleInitial": "L.-C.",
+                "middleInitial": "",
                 "familyName": "Law",
                 "email": "elaw@mcs.le.ac.uk",
                 "role": "",
@@ -1967,13 +1686,13 @@
         "keywords": "HCI research methods",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs134",
         "communities": ""
     },
     {
         "id": "crs135",
         "title": "Design for Searching & Finding",
-        "abstract": "",
+        "abstract": "Modern user interfaces often contain a search or find components so the user can search for content in the context of the application.  While there are common practices, what actually works best in these situations?  What kinds of search tasks are the users actually trying to accomplish when they do a search?  In this course, we’ll review the search and findability issues that users confront in the course of their tasks, and ways in which information can be found.  We’ll also discuss the ways in which users seek information in social settings.  You will learn several key design principles for creating your own search interfaces, as well as coming to understand what is driving people to search.  ",
         "acmLink": "",
         "authors": [
             {
@@ -2097,20 +1816,20 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "Search and finding is a common user activity. But do you know the relevant factors to design search interfaces?  This course reviews the theory and practices of search interface design.  ",
         "contactEmail": "dmrussell@gmail.com",
         "contactFirstName": "Daniel",
         "contactLastName": "Russell",
-        "keywords": "",
+        "keywords": "Search; Findability; Search design; Social search; Collaborative search.  ",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs135",
         "communities": ""
     },
     {
         "id": "crs138",
-        "title": "Tangible User Interfaces",
-        "abstract": "",
+        "title": "Vision-Driven: Beyond Tangible Bits, Towards Radical Atoms",
+        "abstract": "Our vision-driven design research is carried out through \\ an artistic approach. Whereas much of today’s \\ mainstream Human Computer Interaction (HCI) \\ research addresses functional concerns – the needs of \\ users, practical applications, and usability evaluation – \\ Tangible Bits and Radical Atoms (transformable \\ physical materials) are driven by vision [Fig.1]. This is \\ because today's technologies will become obsolete in \\ one year, and today's applications will be replaced in 10 \\ years, but true visions – we believe – can last longer \\ than 100 years. This course introduces the trajectory of \\ our vision-driven design research from Tangible Bits \\ towards Radical Atoms, and a variety of interaction \\ design projects that were presented and exhibited in \\ Media Arts, Design, and HCI communities. Especially, \\ we focus on the recent development in the two streams \\ of Radical Atoms: 1) Dynamic Shape Display, and 2) \\ Programmable Materials.",
         "acmLink": "",
         "authors": [
             {
@@ -2126,9 +1845,9 @@
                 "role": "",
                 "primary": {
                     "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "institution": "Massachusetts Institute of Technology",
+                    "city": "Cambridge",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",
@@ -2138,21 +1857,21 @@
                 }
             },
             {
-                "authorId": "auth100022",
+                "authorId": "auth16013",
                 "type": "author",
                 "id": "crs138",
                 "venue": "course",
                 "rank": 2,
-                "givenName": "Mary",
-                "middleInitial": "Tran",
-                "familyName": "Niskala",
-                "email": "mniskala@media.mit.edu",
+                "givenName": "Daniel",
+                "middleInitial": "",
+                "familyName": "Leithinger",
+                "email": "daniell@media.mit.edu",
                 "role": "",
                 "primary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
+                    "dept": "MIT Media Lab",
+                    "institution": "Massachusetts Institute of Technology",
+                    "city": "Cambridge",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",
@@ -2162,15 +1881,63 @@
                 }
             },
             {
-                "authorId": "auth39102",
+                "authorId": "auth15323",
                 "type": "author",
                 "id": "crs138",
                 "venue": "course",
                 "rank": 3,
-                "givenName": "Philipp",
+                "givenName": "Sean",
                 "middleInitial": "",
-                "familyName": "Schoessler",
-                "email": "phil_s@media.mit.edu",
+                "familyName": "Follmer",
+                "email": "sfollmer@media.mit.edu",
+                "role": "",
+                "primary": {
+                    "dept": "MIT Media Lab",
+                    "institution": "Massachusetts Institute of Technology",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth20548",
+                "type": "author",
+                "id": "crs138",
+                "venue": "course",
+                "rank": 4,
+                "givenName": "Lining",
+                "middleInitial": "",
+                "familyName": "Yao",
+                "email": "liningy@media.mit.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Massachusetts Institute of Technology",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth34463",
+                "type": "author",
+                "id": "crs138",
+                "venue": "course",
+                "rank": 5,
+                "givenName": "Jifei",
+                "middleInitial": "",
+                "familyName": "Ou",
+                "email": "JIFEI@MIT.EDU",
                 "role": "",
                 "primary": {
                     "dept": "",
@@ -2186,14 +1953,14 @@
                 }
             }
         ],
-        "cbStatement": "",
+        "cbStatement": "This course introduces the trajectory of our vision-driven research from Tangible Bits towards Radical Atoms, and a variety of design projects presented and exhibited in Arts, Design and HCI communities.",
         "contactEmail": "ishii@media.mit.edu",
         "contactFirstName": "Hiroshi",
         "contactLastName": "Ishii",
-        "keywords": "",
+        "keywords": "Tangible Bits; Tangible User Interfaces; TUI; Radical \\ Atoms; Transformable Material; Shape-Changing \\ Interfaces; Arts; Design; Vision; Trans-Disciplinary",
         "venue": "course",
         "subtype": "",
-        "session": "",
+        "session": "s-crs138",
         "communities": ""
     }
 ]

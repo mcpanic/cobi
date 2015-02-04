@@ -727,7 +727,7 @@
         "rank": 3,
         "givenName": "Kristina",
         "middleInitial": "",
-        "familyName": "H̦̦k",
+        "familyName": "Höök",
         "email": "khook@kth.se",
         "role": "",
         "primary": {
@@ -1134,7 +1134,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Jorge",
-        "middleInitial": "Andr̩",
+        "middleInitial": "André",
         "familyName": "Goncalves",
         "email": "jgoncalv@ee.oulu.fi",
         "role": "",
@@ -1440,18 +1440,42 @@
         }
     },
     {
-        "authorId": "auth1033",
+        "authorId": "auth7482",
         "type": "author",
         "id": "pn5112",
         "venue": "TOCHI",
         "rank": 7,
+        "givenName": "Michael",
+        "middleInitial": "",
+        "familyName": "Massimi",
+        "email": "Mmassimi@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Facebook",
+            "city": "Menlo Park",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1033",
+        "type": "author",
+        "id": "pn5112",
+        "venue": "TOCHI",
+        "rank": 8,
         "givenName": "Saul",
         "middleInitial": "",
         "familyName": "Greenberg",
         "email": "saul.greenberg@ucalgary.ca",
         "role": "",
         "primary": {
-            "dept": "Department of Computer Science",
+            "dept": "",
             "institution": "University of Calgary",
             "city": "Calgary",
             "country": "Canada"
@@ -1741,7 +1765,7 @@
         "primary": {
             "dept": "",
             "institution": "Max Planck Institute for Informatics",
-            "city": "Saarbr�_cken",
+            "city": "Saarbrücken",
             "country": "Germany"
         },
         "secondary": {
@@ -1878,7 +1902,7 @@
         "venue": "TOCHI",
         "rank": 3,
         "givenName": "Anind",
-        "middleInitial": "",
+        "middleInitial": "K.",
         "familyName": "Dey",
         "email": "anind@cs.cmu.edu",
         "role": "",
@@ -1925,7 +1949,7 @@
         "id": "pn5119",
         "venue": "TOCHI",
         "rank": 1,
-        "givenName": "Ren̩",
+        "givenName": "René",
         "middleInitial": "F",
         "familyName": "Kizilcec",
         "email": "kizilcec@stanford.edu",
@@ -2287,7 +2311,7 @@
         "rank": 6,
         "givenName": "Zoran",
         "middleInitial": "",
-        "familyName": "Popovic",
+        "familyName": "Popović",
         "email": "zoran@cs.washington.edu",
         "role": "",
         "primary": {
@@ -2311,7 +2335,7 @@
         "rank": 1,
         "givenName": "Marynel",
         "middleInitial": "",
-        "familyName": "V��zquez",
+        "familyName": "Vázquez",
         "email": "marynel@cmu.edu",
         "role": "",
         "primary": {
@@ -2431,7 +2455,7 @@
         "rank": 2,
         "givenName": "Kasper",
         "middleInitial": "",
-        "familyName": "Hornb�_k",
+        "familyName": "Hornbæk",
         "email": "kash@diku.dk",
         "role": "",
         "primary": {
@@ -2796,7 +2820,7 @@
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Institut Fran̤ais des Sciences et Technologies des Transports, de l'Am̩nagement et des R̩seaux",
+            "institution": "Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux",
             "city": "Versailles",
             "country": "France"
         },
@@ -2991,6 +3015,486 @@
             "institution": "University of Toronto",
             "city": "Toronto",
             "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14763",
+        "type": "author",
+        "id": "pn5149",
+        "venue": "TOCHI",
+        "rank": 1,
+        "givenName": "Jared",
+        "middleInitial": "S",
+        "familyName": "Bauer",
+        "email": "jaredsb@uw.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1425",
+        "type": "author",
+        "id": "pn5149",
+        "venue": "TOCHI",
+        "rank": 2,
+        "givenName": "Mark",
+        "middleInitial": "W.",
+        "familyName": "Newman",
+        "email": "mwnewman@umich.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Michigan",
+            "city": "Ann Arbor",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth5566",
+        "type": "author",
+        "id": "pn5149",
+        "venue": "TOCHI",
+        "rank": 3,
+        "givenName": "Julie",
+        "middleInitial": "A",
+        "familyName": "Kientz",
+        "email": "jkientz@uw.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6203",
+        "type": "author",
+        "id": "pn5150",
+        "venue": "TOCHI",
+        "rank": 1,
+        "givenName": "Amanda",
+        "middleInitial": "M",
+        "familyName": "Williams",
+        "email": "metamanda@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Fabule Fabrications, Inc.",
+            "city": "Montreal",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9429",
+        "type": "author",
+        "id": "pn5150",
+        "venue": "TOCHI",
+        "rank": 2,
+        "givenName": "Silvia",
+        "middleInitial": "",
+        "familyName": "Lindtner",
+        "email": "silvia.lindtner@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "School of Information",
+            "institution": "University of Michigan",
+            "city": "Ann Arbor",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2222",
+        "type": "author",
+        "id": "pn5150",
+        "venue": "TOCHI",
+        "rank": 3,
+        "givenName": "ken",
+        "middleInitial": "t",
+        "familyName": "anderson",
+        "email": "ken.anderson@intel.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Intel Corporation",
+            "city": "Hillsboro",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1113",
+        "type": "author",
+        "id": "pn5150",
+        "venue": "TOCHI",
+        "rank": 4,
+        "givenName": "Paul",
+        "middleInitial": "",
+        "familyName": "Dourish",
+        "email": "jpd@ics.uci.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9400",
+        "type": "author",
+        "id": "pn5151",
+        "venue": "TOCHI",
+        "rank": 1,
+        "givenName": "Wendy",
+        "middleInitial": "",
+        "familyName": "Moncur",
+        "email": "wmoncur@dundee.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "Duncan of Jordanstone College of Art & Design",
+            "institution": "University of Dundee",
+            "city": "Dundee",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth10255",
+        "type": "author",
+        "id": "pn5151",
+        "venue": "TOCHI",
+        "rank": 2,
+        "givenName": "Judith",
+        "middleInitial": "",
+        "familyName": "Masthoff",
+        "email": "j.masthoff@abdn.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Aberdeen",
+            "city": "Aberdeen",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth11512",
+        "type": "author",
+        "id": "pn5151",
+        "venue": "TOCHI",
+        "rank": 3,
+        "givenName": "Ehud",
+        "middleInitial": "",
+        "familyName": "Reiter",
+        "email": "e.reiter@abdn.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "Department of Computer Science",
+            "institution": "University of Aberdeen",
+            "city": "Aberdeen",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth50593",
+        "type": "author",
+        "id": "pn5151",
+        "venue": "TOCHI",
+        "rank": 4,
+        "givenName": "Yvonne",
+        "middleInitial": "",
+        "familyName": "Freer",
+        "email": "Yvonne.Freer@luht.scot.nhs.uk",
+        "role": "",
+        "primary": {
+            "dept": "Royal Infirmary of Edinburgh",
+            "institution": "NHS Lothian",
+            "city": "Edinburgh",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth50594",
+        "type": "author",
+        "id": "pn5151",
+        "venue": "TOCHI",
+        "rank": 5,
+        "givenName": "Hien",
+        "middleInitial": "",
+        "familyName": "Nguyen",
+        "email": "h.nguyen@abdn.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "Department of Computing Science",
+            "institution": "University of Aberdeen",
+            "city": "Aberdeen",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2938",
+        "type": "author",
+        "id": "pn5154",
+        "venue": "TOCHI",
+        "rank": 1,
+        "givenName": "Sunny",
+        "middleInitial": "",
+        "familyName": "Consolvo",
+        "email": "sconsolvo@google.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth8119",
+        "type": "author",
+        "id": "pn5154",
+        "venue": "TOCHI",
+        "rank": 2,
+        "givenName": "Predrag",
+        "middleInitial": "V.",
+        "familyName": "Klasnja",
+        "email": "klasnja@umich.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Michigan",
+            "city": "Ann Arbor",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1199",
+        "type": "author",
+        "id": "pn5154",
+        "venue": "TOCHI",
+        "rank": 3,
+        "givenName": "David",
+        "middleInitial": "W",
+        "familyName": "McDonald",
+        "email": "dwmc@u.washington.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1472",
+        "type": "author",
+        "id": "pn5154",
+        "venue": "TOCHI",
+        "rank": 4,
+        "givenName": "James",
+        "middleInitial": "A",
+        "familyName": "Landay",
+        "email": "landay@cs.stanford.edu",
+        "role": "",
+        "primary": {
+            "dept": "Computer Science Department",
+            "institution": "Stanford University",
+            "city": "Palo Alto",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth3486",
+        "type": "author",
+        "id": "pn5155",
+        "venue": "TOCHI",
+        "rank": 1,
+        "givenName": "Mark",
+        "middleInitial": "",
+        "familyName": "Billinghurst",
+        "email": "mark.billinghurst@hitlabnz.org",
+        "role": "",
+        "primary": {
+            "dept": "HIT Lab NZ",
+            "institution": "University of Canterbury",
+            "city": "Christchurch",
+            "country": "New Zealand"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth34052",
+        "type": "author",
+        "id": "pn5155",
+        "venue": "TOCHI",
+        "rank": 2,
+        "givenName": "Woontack",
+        "middleInitial": "",
+        "familyName": "Woo",
+        "email": "wwoo@kaist.ac.kr",
+        "role": "",
+        "primary": {
+            "dept": "GSCT/UVR Lab",
+            "institution": "KAIST",
+            "city": "Daejeon",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth3380",
+        "type": "author",
+        "id": "pn5155",
+        "venue": "TOCHI",
+        "rank": 3,
+        "givenName": "Thad",
+        "middleInitial": "",
+        "familyName": "Starner",
+        "email": "thad@cc.gatech.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Georgia Institute of Technology",
+            "city": "Atlanta",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6284",
+        "type": "author",
+        "id": "pn5155",
+        "venue": "TOCHI",
+        "rank": 4,
+        "givenName": "Shahram",
+        "middleInitial": "",
+        "familyName": "Izadi",
+        "email": "shahrami@microsoft.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Microsoft Research",
+            "city": "Cambridge",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
