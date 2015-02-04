@@ -1,23 +1,26 @@
 [
     {
         "id": "case115",
-        "title": "Measuring Product “Coolness” -- Developing a Measurement Instrument",
-        "abstract": "Cool products provide a leap in value and they increase a company’s market share. The widespread adoption of iOS and Android devices resulted in a radical change in the role of technology in people’s lives. And anecdotally people exclaimed about how “cool” their devices were; “I can’t go back” to what I had before and “I can’t stop talking about it—it’s so cool!” \\  \\ In 2010 InContext Design launched The Cool Project to understand the underlying principles which make a product “cool.” The research goal was to discover the core drivers of the cool user experience. This consumer research used qualitative research to identify seven core constructs associated with “coolness” that appeared independently of device or software or even technology product. In 2011 SAP became interested in developing a metric to measure “coolness” and in a joint research effort with InContext Design validated the constructs with business users and co-designed a cool metric. The final result is a repeatable process for measuring cool through a quick survey, the results of which provide implications to product teams on how to improve their products to increase “coolness”.  \\  \\ This case study outlines the process of using qualitative data to design a valid quantitative measure.  \\ ",
+        "title": "12 Way Mirror –  Reflecting on Window Displays.",
+        "abstract": "Shop windows are the paradigmatic design environment for attracting and holding people’s attention. They also provide a handy mirror in which people can check their appearance. The 12-way mirror project plays with this duality by building and testing an interactive installation that tracks people’s reflections as they look into a shop window. Three versions of the installation are compared, one with static mirrors, one with moving mirrors and one with face-tracking mirrors. These were tested over a 5 day period in the window display of an Eyewear shop on a busy commercial road in East London. Data were collected on how many people looked in the window, for how long and what they did while looking. The results show that while movement attracts people’s attention and stops them, their own reflection is most effective in keeping their interest.",
         "acmLink": "",
         "authors": [
             {
-                "id": "auth39471",
+                "authorId": "auth47487",
                 "type": "author",
+                "id": "case115",
                 "venue": "casestudy",
                 "rank": 1,
-                "givenName": "Carol",
-                "familyName": "Farnsworth",
-                "email": "carol.farnsworth@sap.com",
+                "givenName": "Lida",
+                "middleInitial": "",
+                "familyName": "Theodorou",
+                "email": "l.theodorou@se13.qmul.ac.uk",
+                "role": "",
                 "primary": {
-                    "dept": "",
-                    "institution": "SAP Labs, LLC",
-                    "city": "Palo Alto",
-                    "country": "United States"
+                    "dept": "Media and Arts technology programme,School of Electronic Engineering and Computer Science",
+                    "institution": "Queen-Mary University of London",
+                    "city": "London",
+                    "country": "United Kingdom"
                 },
                 "secondary": {
                     "dept": "",
@@ -27,144 +30,21 @@
                 }
             },
             {
-                "id": "auth31489",
+                "authorId": "auth11121",
                 "type": "author",
+                "id": "case115",
                 "venue": "casestudy",
                 "rank": 2,
-                "givenName": "Karen",
-                "familyName": "Holtzblatt",
-                "email": "karen@incontextdesign.com",
+                "givenName": "Patrick",
+                "middleInitial": "G. T.",
+                "familyName": "Healey",
+                "email": "ph@eecs.qmul.ac.uk",
+                "role": "",
                 "primary": {
-                    "dept": "",
-                    "institution": "InContext Design",
-                    "city": "Concord",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth17508",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 3,
-                "givenName": "Shantanu",
-                "familyName": "Pai",
-                "email": "shanritz@gmail.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "SAP Labs, LLC",
-                    "city": "Palo Alto",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth16923",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 4,
-                "givenName": "Theo",
-                "familyName": "Held",
-                "email": "theo.held@sap.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "SAP AG",
-                    "city": "Walldorf",
-                    "country": "Germany"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth39472",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 5,
-                "givenName": "Sally",
-                "familyName": "Lawler Kennedy",
-                "email": "sally.lawler.kennedy@sap.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "SAP Labs, LLC",
-                    "city": "Palo Alto",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth39473",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 6,
-                "givenName": "Eli",
-                "familyName": "Wylen",
-                "email": "eli.wylen@incontextdesign.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "InContext Design",
-                    "city": "Concord",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth31582",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 7,
-                "givenName": "Pallavi",
-                "familyName": "Kutty",
-                "email": "pallavi.kutty@sap.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "SAP",
-                    "city": "Palo Alto",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth31048",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 8,
-                "givenName": "Kelley",
-                "familyName": "Wagg",
-                "email": "kelley.wagg@incontextdesign.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "InContext Design",
-                    "city": "Concord",
-                    "country": "United States"
+                    "dept": "School of Electronic Engineering and Computer Science/Cognitive Science Research Group",
+                    "institution": "Queen Mary University of London",
+                    "city": "London",
+                    "country": "United Kingdom"
                 },
                 "secondary": {
                     "dept": "",
@@ -174,34 +54,37 @@
                 }
             }
         ],
-        "cbStatement": "This case study outlines the process that used qualitative data to design a valid quantitative measure for what makes a product “cool”, providing implications on how to improve a product.",
-        "contactEmail": "shelley@incontextdesign.com",
-        "contactFirstName": "Shelley",
-        "contactLastName": "Wood",
-        "keywords": "Cool; innovation; transformative design; measures; metrics; performance",
+        "cbStatement": "Presents a case study of a public display installation that holds people’s attention and enhances their interaction with a shop window display. \\ ",
+        "contactEmail": "l.theodorou@se13.qmul.ac.uk",
+        "contactFirstName": "Lida",
+        "contactLastName": "Theodorou",
+        "keywords": "Pervasive advertising; Public engagement; Shop- window displays; Face-detection; Case Study",
         "venue": "casestudy",
         "session": "",
-        "communities": []
+        "communities": ""
     },
     {
-        "id": "case118",
-        "title": "Quick and Participatory: Adopting Users' Designs to Improve a Mobile App",
-        "abstract": "When improving small area or minor functions in mobile app, user research is often skipped or dismissed. In our approach, we suggest a method which combines cafe study and participatory design to capture users’ needs quickly and clearly. We have conducted a 3-day user research with 44 participants in local cafes and asked them to make prototype UI of their ideal design. As a result of the research, we have found 3 patterns in users’ designs and developed prototyping with those concepts. We expect that this method would be useful when improving specific features with limited time and resources.",
+        "id": "case120",
+        "title": "Artistic Distance: Body Movements as Launching Points For Art Inquiry",
+        "abstract": "",
         "acmLink": "",
         "authors": [
             {
-                "id": "auth42508",
+                "authorId": "auth3175",
                 "type": "author",
+                "id": "case120",
                 "venue": "casestudy",
                 "rank": 1,
-                "givenName": "Kate Sangwon",
-                "familyName": "Lee",
-                "email": "kate.lee@navercorp.com",
+                "givenName": "Kimiko",
+                "middleInitial": "",
+                "familyName": "Ryokai",
+                "email": "kimiko@ischool.berkeley.edu",
+                "role": "",
                 "primary": {
-                    "dept": "Design Research Lab.",
-                    "institution": "Naver Corp.",
-                    "city": "Seongnam-si",
-                    "country": "Korea, Republic of"
+                    "dept": "School of Information",
+                    "institution": "University of California, Berkeley",
+                    "city": "Berkeley",
+                    "country": "United States"
                 },
                 "secondary": {
                     "dept": "",
@@ -211,722 +94,20 @@
                 }
             },
             {
-                "id": "auth39715",
+                "authorId": "auth47464",
                 "type": "author",
+                "id": "case120",
                 "venue": "casestudy",
                 "rank": 2,
-                "givenName": "Sun",
-                "familyName": "Lee",
-                "email": "sun.lee@navercorp.com",
+                "givenName": "Noriko",
+                "middleInitial": "",
+                "familyName": "Misra",
+                "email": "noriko.misra@ischool.berkeley.edu",
+                "role": "",
                 "primary": {
-                    "dept": "Design Research Lab.",
-                    "institution": "Naver Corp.",
-                    "city": "Seongnam-si",
-                    "country": "Korea, Republic of"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth42509",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 3,
-                "givenName": "Hyojung",
-                "familyName": "Kim",
-                "email": "kim.hyojung@navercorp.com",
-                "primary": {
-                    "dept": "Design Research Lab.",
-                    "institution": "Naver Corp.",
-                    "city": "Seongnam-si",
-                    "country": "Korea, Republic of"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            }
-        ],
-        "cbStatement": "We suggest a mobile UI prototyping and research method which combines cafe study and participatory design to capture users’ needs quickly and clearly.",
-        "contactEmail": "snowwon@gmail.com",
-        "contactFirstName": "Kate Sangwon",
-        "contactLastName": "Lee",
-        "keywords": "Participatory design; Cafe study; User-centered design; User research method; Mobile app; Mobile UI",
-        "venue": "casestudy",
-        "session": "",
-        "communities": []
-    },
-    {
-        "id": "case138",
-        "title": "GREYBOX Scheduling:  Designing a Joint Cognitive System  for Sustainable Manufacturing",
-        "abstract": "The aims of this work were to investigate how decision making in production planning happens, to understand how energy efficiency could be included as a manufacturing goal and to design a decision support system that integrates into current work practices. This case study describes the research, design and development this system. An interactive visualisation provides an interface to a flexible optimisation engine and allows experts to interpret, amend and augment system inputs and outputs without the need for programming knowledge. This approach supports collaboration between automated and human agents, working as a joint cognitive system. ",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth39544",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 1,
-                "givenName": "Connor",
-                "familyName": "Upton",
-                "email": "connor.upton@intel.com",
-                "primary": {
-                    "dept": "Cloud Services Lab",
-                    "institution": "Intel Labs Europe",
-                    "city": "Leixlip",
-                    "country": "Ireland"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth39770",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 2,
-                "givenName": "Fergus",
-                "familyName": "Quilligan",
-                "email": "fergus.quilligan@intel.com",
-                "primary": {
-                    "dept": "Irish Centre for Manufacturing Research",
-                    "institution": "Intel",
-                    "city": "Leixlip",
-                    "country": "Ireland"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            }
-        ],
-        "cbStatement": "This presentation describes the research, design and development of a software tool for energy efficient scheduling in an industrial environment. The system couples an optimization engine with an interactive visualization. ",
-        "contactEmail": "connor.upton@gmail.com",
-        "contactFirstName": "Connor",
-        "contactLastName": "Upton",
-        "keywords": "Joint Cognitive Systems; Decision Support; Visualisation; Optimisation; Design ",
-        "venue": "casestudy",
-        "session": "",
-        "communities": []
-    },
-    {
-        "id": "case147",
-        "title": "HCI Interventions with Nonprofit Organizations: Tactics for Effective Collaboration",
-        "abstract": "Thirty HCI practitioners participated in a CHI 2011 workshop [7], intending to directly engage with the processes, goals, and challenges of six Vancouver area nonprofit organizations. Analysis of the workshop documentation allowed us to track instances of reciprocal interaction between stakeholders. Findings revealed that various design tactics were productive in enabling collaborators to improve their focus on addressing key challenges in the 2-day workshop. This case study contributes new knowledge – tactics to conduct and evaluate HCI Design Interventions with nonprofits, as well as helping to expand the emerging intersection of political computing and human-computer interaction.  ",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth18768",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 1,
-                "givenName": "Vicki",
-                "familyName": "Moulder",
-                "email": "vmoulder@sfu.ca",
-                "primary": {
-                    "dept": "",
-                    "institution": "Simon Fraser University",
-                    "city": "Surrey",
-                    "country": "Canada"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth19133",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 2,
-                "givenName": "Lorna",
-                "familyName": "Boschman",
-                "email": "lorna.boschman@gmail.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "University of British Columbia",
-                    "city": "Vancouver",
-                    "country": "Canada"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth3350",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 3,
-                "givenName": "Ron",
-                "familyName": "Wakkary",
-                "email": "rwakkary@sfu.ca",
-                "primary": {
-                    "dept": "",
-                    "institution": "Simon Fraser University",
-                    "city": "Surrey ",
-                    "country": "Canada"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth8702",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 4,
-                "givenName": "William",
-                "familyName": "Odom",
-                "email": "wodom@cs.cmu.edu",
-                "primary": {
-                    "dept": "",
-                    "institution": "Carnegie Mellon University",
-                    "city": "Pittsburgh",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth12782",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 5,
-                "givenName": "Stacey",
-                "familyName": "Kuznetsov",
-                "email": "stace@cs.cmu.edu",
-                "primary": {
-                    "dept": "",
-                    "institution": "Carnegie Mellon University",
-                    "city": "Pittsburgh",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            }
-        ],
-        "cbStatement": "This case study presents design tactics for effective collaboration with Nonprofit Organizations. The authors discuss the use of video sequence analysis to track instances of reciprocal interaction between stakeholders.",
-        "contactEmail": "vmoulder@sfu.ca",
-        "contactFirstName": "Vicki",
-        "contactLastName": "Moulder",
-        "keywords": "Community; Politics; Social Change; Design Intervention; Sustainability; Design Research ",
-        "venue": "casestudy",
-        "session": "",
-        "communities": []
-    },
-    {
-        "id": "case150",
-        "title": "User-Centered Design for More Efficient Drill Rig Control System",
-        "abstract": "This case study describes the methods and results from a user-centric research project developing new control system functionality for drill rigs. During the project we conducted contextual inquiries in an operative mine and structured usability tests with a drill rig simulator. As a result, an automatic control mode was developed to meet the rig operators’ needs and will be available in 2014.",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth39733",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 1,
-                "givenName": "Katri",
-                "familyName": "Koli",
-                "email": "katri.koli@leadin.fi",
-                "primary": {
-                    "dept": "",
-                    "institution": "Leadin Inc.",
-                    "city": "Tampere",
-                    "country": "Finland"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth14054",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 2,
-                "givenName": "Tuula",
-                "familyName": "Kärkkäinen",
-                "email": "tuula.karkkainen@gmail.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Leadin Inc.",
-                    "city": "Tampere",
-                    "country": "Finland"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth11817",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 3,
-                "givenName": "Jaakko",
-                "familyName": "Lehikoinen",
-                "email": "jaakko.t.lehikoinen@nokia.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Leadin Inc.",
-                    "city": "Tampere",
-                    "country": "Finland"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth39747",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 4,
-                "givenName": "Tuomo",
-                "familyName": "Pirinen",
-                "email": "tuomo.pirinen@sandvik.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Sandvik Corp.",
-                    "city": "Tampere",
-                    "country": "Finland"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth39748",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 5,
-                "givenName": "Sami",
-                "familyName": "Hanski",
-                "email": "sami.hanski@sandvik.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Sandvik Corp.",
-                    "city": "Tampere",
-                    "country": "Finland"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth39749",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 6,
-                "givenName": "Juha",
-                "familyName": "Lassila",
-                "email": "juha.lassila@sandvik.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Sandvik Corp.",
-                    "city": "Tampere",
-                    "country": "Finland"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth39750",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 7,
-                "givenName": "Mikko",
-                "familyName": "Loimusalo",
-                "email": "mikko.loimusalo@sandvik.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Sandvik Corp.",
-                    "city": "Tampere",
-                    "country": "Finland"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            }
-        ],
-        "cbStatement": "Developing a new user-friendly surface drill rig control system. Conducting contextual inquiries at an operative mine. Prototyping new functionality. Organizing structured usability tests with a drill rig simulator.",
-        "contactEmail": "katri.koli@leadin.fi",
-        "contactFirstName": "Katri",
-        "contactLastName": "Koli",
-        "keywords": "User-Centered Design; Contextual Inquiry; Usability Testing; Product Development; Drill Rigs; Control System Functionality",
-        "venue": "casestudy",
-        "session": "",
-        "communities": []
-    },
-    {
-        "id": "case163",
-        "title": "Redefinition of Requirements in the Design and Development of the Project Mapocci: from Digital Art to HCI Research",
-        "abstract": "Mapocci is a robotic companion for children, created in the juncture of digital art and HCI practices. It was developed during an art residency program at Telefonica R+D. The dynamics of negotiation and collaboration with the R+D team transformed the objectives and methods of the art project. This case study shows this transformation process as well as the contribution that the digital art methods brought to the R+D team framework and vice versa in the HCI project.",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth24287",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 1,
-                "givenName": "Lilia",
-                "familyName": "Villafuerte",
-                "email": "lilia@villafuerte.info",
-                "primary": {
-                    "dept": "",
-                    "institution": "LABoral Art and Industrial Production Center",
-                    "city": "Gijón",
-                    "country": "Spain"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth31606",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 2,
-                "givenName": "Laura",
-                "familyName": "Malinverni",
-                "email": "malinverni.laura@gmail.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Universitat Pompeu Fabra",
-                    "city": "Barcelona",
-                    "country": "Spain"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            }
-        ],
-        "cbStatement": "This case study presents the contributions that the digital art background brought to the R+D team in a HCI project and vice versa, during the development of Mapocci project. \\ ",
-        "contactEmail": "lilia@villafuerte.info",
-        "contactFirstName": "Lilia",
-        "contactLastName": "Villafuerte",
-        "keywords": "Digital Art; Interdisciplinary research",
-        "venue": "casestudy",
-        "session": "",
-        "communities": []
-    },
-    {
-        "id": "case170",
-        "title": "An Extended Case Study Methodology for Investigating Influence of Cultural, Organizational, and Automation Factors on Human-Automation Trust",
-        "abstract": "This paper describes the utilization of an extended case methodology to reveal foundational lessons and best practices from real world perspectives about how cultural, organizational, and automation factors influence human-automation trust development. The Air Force Automatic Ground Collision Avoidance System (Auto-GCAS) was used as the context for this case study. The study employs an eclectic set of qualitative and quantitative methodologies including a literature review for secondary data on the history of Auto-GCAS, field observations, surveys, and interviews for primary data. This paper also discusses how our methodologies and methods were adapted to the limited access, and uniqueness of, the participant groups while taking advantage of emerging opportunities. We also discuss lessons learned about the required qualities of the research team, particularly those related to cultural and technical competence, political sensitivity, and trust relationship with participants. ",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth39991",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 1,
-                "givenName": "Kolina",
-                "familyName": "Koltai",
-                "email": "kolina.koltai.31@my.csun.edu",
-                "primary": {
-                    "dept": "Systems Engineering Research Laboratory",
-                    "institution": "California State University, Northridge",
-                    "city": "Northridge",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth39990",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 2,
-                "givenName": "Nhut",
-                "familyName": "Ho",
-                "email": "nhut.ho.51@csun.edu",
-                "primary": {
-                    "dept": "Systems Engineering Research Laboratory",
-                    "institution": "California State University, Northridge",
-                    "city": "Northridge",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth40151",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 3,
-                "givenName": "Gina",
-                "familyName": "Masequesmay",
-                "email": "gina.masequesmay@csun.edu",
-                "primary": {
-                    "dept": "Systems Engineering Research Laboratory",
-                    "institution": "California State University, Northridge",
-                    "city": "Northridge",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth39915",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 4,
-                "givenName": "David",
-                "familyName": "Niedober",
-                "email": "david.niedober.788@my.csun.edu",
-                "primary": {
-                    "dept": "Systems Engineering Research Laboratory",
-                    "institution": "California State University, Northridge",
-                    "city": "Northridge",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth40152",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 5,
-                "givenName": "Mark",
-                "familyName": "Skoog",
-                "email": "mark.a.skoog@nasa.gov",
-                "primary": {
-                    "dept": "NASA Dryden Flight Research Center, CA",
-                    "institution": "NASA",
-                    "city": "Edwards AFB",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth40154",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 6,
-                "givenName": "Walter",
-                "familyName": "Johnson",
-                "email": "walter.johnson@nasa.gov",
-                "primary": {
-                    "dept": "",
-                    "institution": "NASA Ames Research Center",
-                    "city": "Mountain View",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth40153",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 7,
-                "givenName": "Artemio",
-                "familyName": "Cacanindin",
-                "email": "artemio.cacanindin@us.af.mil",
-                "primary": {
-                    "dept": "",
-                    "institution": "Air Force Flight Test Center",
-                    "city": "Edwards",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth42516",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 8,
-                "givenName": "Joseph",
-                "familyName": "Lyons",
-                "email": "joseph.lyons.6@us.af.mil",
-                "primary": {
-                    "dept": "Human Trust and Interaction Division",
-                    "institution": "Air Force Research Laboratory",
-                    "city": "Wright-Patterson AFB",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            }
-        ],
-        "cbStatement": "Using an extended case study methodology, the project established a methodological foundation for conducting human-automation trust research focusing on culture, organization, an automation capability in military and political environment. ",
-        "contactEmail": "david.niedober.788@my.csun.edu",
-        "contactFirstName": "David",
-        "contactLastName": "Niedober",
-        "keywords": "Trust; culture; organization; ground collision avoidance; extended case methodology; grounded theory; ethnography; politics; bureaucracy; automation",
-        "venue": "casestudy",
-        "session": "",
-        "communities": []
-    },
-    {
-        "id": "case173",
-        "title": "Online Microsurveys for User Experience Research",
-        "abstract": "This case study presents a critical analysis of microsurveys as a method for conducting user experience research. We focus specifically on Google Consumer Surveys (GCS) and analyze a combination of log data and GCSs run by the authors to investigate how they are used, who the respondents are, and the quality of the data. We find that such microsurveys can be a great way to quickly and cheaply gather large amounts of survey data, but that there are pitfalls that user experience researchers should be aware of when using the method.",
-        "acmLink": "",
-        "authors": [
-            {
-                "id": "auth42517",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 1,
-                "givenName": "Victoria",
-                "familyName": "Schwanda Sosik",
-                "email": "sosik@cs.cornell.edu",
-                "primary": {
-                    "dept": "Cornell University, Ithaca, New York, United States",
-                    "institution": "Cornell University",
-                    "city": "Ithaca",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth38860",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 2,
-                "givenName": "Elie",
-                "familyName": "Bursztein",
-                "email": "elieb@google.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Google, Inc.",
-                    "city": "Mountain View",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth2938",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 3,
-                "givenName": "Sunny",
-                "familyName": "Consolvo",
-                "email": "sconsolvo@google.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Google, Inc.",
-                    "city": "Mountain View",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth9100",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 4,
-                "givenName": "David",
-                "familyName": "Huffaker",
-                "email": "huffaker@google.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Google, Inc.",
-                    "city": "Mountain View",
+                    "dept": "School of Information",
+                    "institution": "UC Berkeley",
+                    "city": "Berkeley",
                     "country": "USA"
                 },
                 "secondary": {
@@ -937,81 +118,21 @@
                 }
             },
             {
-                "id": "auth13241",
+                "authorId": "auth47748",
                 "type": "author",
+                "id": "case120",
                 "venue": "casestudy",
-                "rank": 5,
-                "givenName": "Gueorgi",
-                "familyName": "Kossinets",
-                "email": "gkossinets@gmail.com",
+                "rank": 3,
+                "givenName": "Yoshinori",
+                "middleInitial": "",
+                "familyName": "Hara",
+                "email": "hara@gsm.kyoto-u.ac.jp",
+                "role": "",
                 "primary": {
-                    "dept": "",
-                    "institution": "Google, Inc.",
-                    "city": "Mountain View",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth39962",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 6,
-                "givenName": "Kerwell",
-                "familyName": "Liao",
-                "email": "kerwell@google.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Google, Inc.",
-                    "city": "Mountain View",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth39963",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 7,
-                "givenName": "Paul",
-                "familyName": "McDonald",
-                "email": "pmcdonald@google.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Google, Inc.",
-                    "city": "Mountain View",
-                    "country": "United States"
-                },
-                "secondary": {
-                    "dept": "",
-                    "institution": "",
-                    "city": "",
-                    "country": ""
-                }
-            },
-            {
-                "id": "auth31522",
-                "type": "author",
-                "venue": "casestudy",
-                "rank": 8,
-                "givenName": "Aaron",
-                "familyName": "Sedley",
-                "email": "asedley@google.com",
-                "primary": {
-                    "dept": "",
-                    "institution": "Google, Inc.",
-                    "city": "Mountain View",
-                    "country": "United States"
+                    "dept": "Graduate School of Management",
+                    "institution": "Kyoto University",
+                    "city": "Kyoto",
+                    "country": "Japan"
                 },
                 "secondary": {
                     "dept": "",
@@ -1021,33 +142,60 @@
                 }
             }
         ],
-        "cbStatement": "This presentation shows how researchers can use microsurveys to gather insights on user behavior.",
-        "contactEmail": "davetown101@gmail.com",
-        "contactFirstName": "David",
-        "contactLastName": "Huffaker",
-        "keywords": "microsurveys; survey methods; Google Consumer Survey; GCS",
+        "cbStatement": "",
+        "contactEmail": "kimiko@ischool.berkeley.edu",
+        "contactFirstName": "Kimiko",
+        "contactLastName": "Ryokai",
+        "keywords": "",
         "venue": "casestudy",
         "session": "",
-        "communities": []
+        "communities": ""
     },
     {
-        "id": "case176",
-        "title": "Challenges at the Bottom of the Pyramid:  An Ethnographic Study of South African Mobile Users",
-        "abstract": "In this case study, I present some of the challenges that are inherent in large, complex international ethnographic field research studies.  This case describes a study of people from the “bottom of the pyramid” in both urban and rural South Africa.  The team encountered some predictable and many unpredictable challenges.  This case study covers both what the challenges were and also how I addressed them.  ",
+        "id": "case128",
+        "title": "Connective MOOC for K-12 Teacher Professional Development in Native American Pueblo Schools",
+        "abstract": "This case study describes preliminary work toward developing a teacher training project that is intended to increase STEM proficiency among elementary and high school teachers in Native American Pueblo schools in New Mexico. This project builds upon prior work that trained K-12 teachers to use investigative teaching, which in turn had a significant positive impact on the math and science proficiency of Native American and Hispanic students. The current project seeks to use Connectivist Massive Open Course (cMOOC) technology to capture and scale this professional development through the use of video, imagery, and community building in order to integrate Native American learning processes.  The overall objective is to enable Pueblo teachers to more effectively teach STEM subject matter, as measured by an increase in both teacher and student content knowledge scores.  If successful, the use of these technologies should facilitate rapid expansion of the program in all Native American reservation schools in United States, Canada, and Mexico.",
         "acmLink": "",
         "authors": [
             {
-                "id": "auth11429",
+                "authorId": "auth34821",
                 "type": "author",
+                "id": "case128",
                 "venue": "casestudy",
                 "rank": 1,
-                "givenName": "Susan",
-                "familyName": "Dray",
-                "email": "susan.dray@dray.com",
+                "givenName": "Josephine",
+                "middleInitial": "",
+                "familyName": "Kilde",
+                "email": "josephine.kilde@colorado.edu",
+                "role": "",
                 "primary": {
+                    "dept": "ATLAS Institute",
+                    "institution": "University of Colorado Boulder",
+                    "city": "Boulder",
+                    "country": "United States"
+                },
+                "secondary": {
                     "dept": "",
-                    "institution": "Dray & Associates, Inc.",
-                    "city": "Oakland",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47558",
+                "type": "author",
+                "id": "case128",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Lorenzo",
+                "middleInitial": "",
+                "familyName": "Gonzales",
+                "email": "lxg@lanl.gov",
+                "role": "",
+                "primary": {
+                    "dept": "Los Alamos National Laboratory",
+                    "institution": "Los Alamos National Laboratory",
+                    "city": "Los Alamos",
                     "country": "United States"
                 },
                 "secondary": {
@@ -1058,13 +206,2229 @@
                 }
             }
         ],
-        "cbStatement": "This case study presents how we solved some common yet challenging issues in international field research based on a study we conducted in urban and rural South Africa.",
-        "contactEmail": "susan.dray@dray.com",
-        "contactFirstName": "Susan",
-        "contactLastName": "Dray",
-        "keywords": "Ethnography; International field research; South Africa: Urban and Rural; Challenges",
+        "cbStatement": "Indigenous knowledge is an integral part of learning. Our work explores collaborative technologies for building online Native American teacher communities to bridge the gap between formal and indigenous education.",
+        "contactEmail": "josephine.kilde@colorado.edu",
+        "contactFirstName": "Josephine",
+        "contactLastName": "Kilde",
+        "keywords": "STEM; Native American; Pueblo Schools; Peer Learning Communities; Communities of Practice; K-12 Education",
         "venue": "casestudy",
         "session": "",
-        "communities": []
+        "communities": ""
+    },
+    {
+        "id": "case129",
+        "title": "Rapid Usability Assessment of an Enterprise Application in an Agile Environment with CogTool",
+        "abstract": "Lab based user testing with participants quickly becomes a bottleneck for UX teams in the industry that exist in an Agile software development environment characterized by frequent release cycles and continually changing requirements. For such teams to reduce this testing time and to quickly glean usability insights we leverage human performance modeling via CogTool. Our work compares CogTool’s expert user model’s task time with actual user time from lab sessions in two user studies. In these two studies CogTool’s task time estimates were statistically significantly lower when compared to lab based user times but the two task times were positively correlated. We leverage this correlation between CogTool task times and lab user times to build a predictive user model. Next, we apply this user model to rapidly evaluate two new designs without lab based user testing. Based on these results we provide recommendations for Agile UX teams to harness CogTool for enhancing user research efforts and thereby reduce the bottleneck of lab based user testing.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth47550",
+                "type": "author",
+                "id": "case129",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Anil",
+                "middleInitial": "",
+                "familyName": "Shankar",
+                "email": "anil@platfora.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Platfora Inc.",
+                    "city": "SAN MATEO",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth50071",
+                "type": "author",
+                "id": "case129",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Honray",
+                "middleInitial": "",
+                "familyName": "Lin",
+                "email": "ray@platfora.com",
+                "role": "",
+                "primary": {
+                    "dept": "Platfora Inc, San Mateo, California, United States",
+                    "institution": "Platfora Inc",
+                    "city": "San Mateo",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47595",
+                "type": "author",
+                "id": "case129",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Hans-Frederick",
+                "middleInitial": "",
+                "familyName": "Brown",
+                "email": "hans@platfora.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Platfora Inc",
+                    "city": "San Mateo",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth25314",
+                "type": "author",
+                "id": "case129",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Colson Rice",
+                "middleInitial": "",
+                "familyName": "Rice",
+                "email": "colrice@indiana.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Indiana University Bloomington",
+                    "city": "Bloomington",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We outline an approach for Agile UX teams to reduce the bottleneck of lab based user testing by leveraging CogTool’s human performance modeling of an expert user. ",
+        "contactEmail": "anil@platfora.com",
+        "contactFirstName": "Anil",
+        "contactLastName": "Shankar",
+        "keywords": "CogTool; Cognitive Modeling; User Experience Research; Agile; Enterprise Software; User Modeling, Usability Engineering",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case131",
+        "title": "The 6th Finger: Practical Challenges in the Design of a Multitouch Audio Appliance",
+        "abstract": "Effective multitouch interaction does not reduce itself to a simple tracking of five fingers, there are several emerging effects that could prevent intuitive interaction in industrial appliances. This use-case describes practical challenges that were documented during the design and implementation of a holistic user interaction design in the domain of high-end audio equipments. The engineering process had to combine tangible user interface controls with state-of-the-art multitouch software fader panels in an intuitive way. This work also gives some background information about complex distributed audio routing equipment and user interaction along with technology and usability issues that appear during the design of a multitouch appliance. Several experiments were implemented in order to gain empiric data to substantiate our practical findings.    \\ ",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth45074",
+                "type": "author",
+                "id": "case131",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Wolfgang",
+                "middleInitial": "",
+                "familyName": "Beer",
+                "email": "wolfgang.beer@scch.at",
+                "role": "",
+                "primary": {
+                    "dept": "Software Competence Center Hagenberg GmbH",
+                    "institution": "Software Analytics and Evolution",
+                    "city": "Hagenberg",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47610",
+                "type": "author",
+                "id": "case131",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Christian",
+                "middleInitial": "",
+                "familyName": "Salomon",
+                "email": "christian.salomon@scch.at",
+                "role": "",
+                "primary": {
+                    "dept": "Software Competence Center Hagenberg GmbH",
+                    "institution": "Software Analytics and Evolution",
+                    "city": "Hagenberg",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47611",
+                "type": "author",
+                "id": "case131",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Mario",
+                "middleInitial": "",
+                "familyName": "Winterer",
+                "email": "mario.winterer@scch.at",
+                "role": "",
+                "primary": {
+                    "dept": "Software Competence Center Hagenberg GmbH",
+                    "institution": "Software Analytics and Evolution",
+                    "city": "Hagenberg",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47612",
+                "type": "author",
+                "id": "case131",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Karl",
+                "middleInitial": "",
+                "familyName": "Putzhammer",
+                "email": "putzhammer@acousta.at",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Acousta Engineering",
+                    "city": "Salzburg",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47613",
+                "type": "author",
+                "id": "case131",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Bernhard",
+                "middleInitial": "",
+                "familyName": "Schauer",
+                "email": "schauer@acousta.at",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Acousta Engineering",
+                    "city": "Salzburg",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47614",
+                "type": "author",
+                "id": "case131",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Thomas",
+                "middleInitial": "",
+                "familyName": "Rechberger",
+                "email": "rechberger@acousta.at",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Acousta Engineering",
+                    "city": "Salzburg",
+                    "country": "Austria"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This case study gives a detailed description about practical issues during the design of a multitouch appliance in the domain of audio editing and routing. ",
+        "contactEmail": "wolfgang.beer@scch.at",
+        "contactFirstName": "Wolfgang Beer",
+        "contactLastName": "Beer",
+        "keywords": "Multitouch gestures; product development; audio editing; audio routing;",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case133",
+        "title": "Industry Is Changing, And So Must We",
+        "abstract": "This case study is a call to action for research practitioners and academicians to revamp their skills and curriculum respectively. Failure to evolve will likely marginalize the user research discipline in industry.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth1864",
+                "type": "author",
+                "id": "case133",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Umer",
+                "middleInitial": "",
+                "familyName": "Farooq",
+                "email": "umfarooq@microsoft.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Microsoft Corporation",
+                    "city": "Redmond",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth46241",
+                "type": "author",
+                "id": "case133",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Joseph",
+                "middleInitial": "T",
+                "familyName": "Munko",
+                "email": "jmunko@microsoft.com",
+                "role": "",
+                "primary": {
+                    "dept": "Operating Systems Group User Research",
+                    "institution": "Microsoft Corporation",
+                    "city": "Redmond",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This case study is a call to action for research practitioners and academicians to revamp their skills and curriculum respectively.",
+        "contactEmail": "umfarooq@microsoft.com",
+        "contactFirstName": "Umer",
+        "contactLastName": "Farooq",
+        "keywords": "Data Science; Large Software Organizations; Usability; Academia",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case134",
+        "title": "Voice or Gesture in the Operating Room",
+        "abstract": "This case study represents our efforts to investigate the uses of voice control versus gestural control in the OR.  We present a system we expressly built to allow for both gestural or voice control at the choice of the surgeon. We explain our deployment of this system in the context of cardiothoracic surgery and present a vignette on how the system was used in the moment by the attending surgeon. We learn that, in terms of design, its not just a question of saying voice is better for one type of functionality and gesture is better for another; rather, the benefits are circumstantial. Thus, there is a case for building in redundancy in control with both voice and gesture.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth1960",
+                "type": "author",
+                "id": "case134",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Helena",
+                "middleInitial": "M.",
+                "familyName": "Mentis",
+                "email": "mentis@umbc.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Maryland, Baltimore County",
+                    "city": "Baltimore",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth6210",
+                "type": "author",
+                "id": "case134",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Kenton",
+                "middleInitial": "P",
+                "familyName": "O'Hara",
+                "email": "oharakenton@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Microsoft Research",
+                    "city": "Cambridge",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47673",
+                "type": "author",
+                "id": "case134",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Gerardo",
+                "middleInitial": "",
+                "familyName": "Gonzalez",
+                "email": "gerardo.gonzalez@kcl.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "Dept. of Biomedical Engineering",
+                    "institution": "King's College, London",
+                    "city": "London",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1515",
+                "type": "author",
+                "id": "case134",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Abigail",
+                "middleInitial": "",
+                "familyName": "Sellen",
+                "email": "asellen@microsoft.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Microsoft Research Cambridge",
+                    "city": "Cambridge",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth31452",
+                "type": "author",
+                "id": "case134",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Robert",
+                "middleInitial": "",
+                "familyName": "Corish",
+                "email": "rcorish@microsoft.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Microsoft Research",
+                    "city": "Cambridge",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47674",
+                "type": "author",
+                "id": "case134",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Antonio",
+                "middleInitial": "",
+                "familyName": "Criminisi",
+                "email": "antcrim@microsoft.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Microsoft Research Cambridge",
+                    "city": "Cambridge",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47675",
+                "type": "author",
+                "id": "case134",
+                "venue": "casestudy",
+                "rank": 7,
+                "givenName": "Rikin",
+                "middleInitial": "",
+                "familyName": "Trivedi",
+                "email": "rikin.trivedi@addenbrookes.nhs.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Addenbrookes Hospital",
+                    "city": "Cambridge",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth45990",
+                "type": "author",
+                "id": "case134",
+                "venue": "casestudy",
+                "rank": 8,
+                "givenName": "Pierre",
+                "middleInitial": "",
+                "familyName": "Theodore",
+                "email": "pierre.theodore@ucsfmedctr.org",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of California San Francisco Medical Center",
+                    "city": "San Francisco",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "mentis@umbc.edu",
+        "contactFirstName": "Helena",
+        "contactLastName": "Mentis",
+        "keywords": "Voice control; gesture; operating room",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case136",
+        "title": "Photo Based Observation Method: How to quickly observe the behavior of the user",
+        "abstract": "Although users are still important in ever-changing mobile market, the time for understanding needs of the users is limited. In this context, we have utilized photos in observing the users in PBO method (Photo Based Observation Method) with which the behavioral pattern of the users can be easily and quickly discovered. PBO method has a 5-step research process – prediction, collection, classification, deduction and verification. Our 10 examiners, respectively, have taken photos of easily-witnessed user behaviors around each of them with their own smartphones for 7 days and we have collected and analyzed the photos. As a result, we found out 7 different patterns on how the users utilize their mobile devices. We expect such methodology to be useful in easily and quickly observing and collecting a common behavioral pattern of multiple users, providing us an opportunity to discover the users’ needs through their natural actions. ",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth47632",
+                "type": "author",
+                "id": "case136",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "HeeJeong",
+                "middleInitial": "",
+                "familyName": "Son",
+                "email": "son.hee@navercorp.com",
+                "role": "",
+                "primary": {
+                    "dept": "UX Department",
+                    "institution": "Naver Corp",
+                    "city": "Seongnam-si",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47633",
+                "type": "author",
+                "id": "case136",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Hyunsoo",
+                "middleInitial": "",
+                "familyName": "Kim",
+                "email": "hyunsoo.kim@navercorp.com",
+                "role": "",
+                "primary": {
+                    "dept": "UX Department",
+                    "institution": "Naver Corp",
+                    "city": "Seongnam-si",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth42509",
+                "type": "author",
+                "id": "case136",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Hyojung",
+                "middleInitial": "",
+                "familyName": "Kim",
+                "email": "kim.hyojung@navercorp.com",
+                "role": "",
+                "primary": {
+                    "dept": "UX Department, Naver Corp., Seongnam-si, Korea, Republic of",
+                    "institution": "Naver Corp.",
+                    "city": "Seongnam-si",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This case study suggests a method for easily and quickly observing user’s behavior through the photos collected by examiner without an additional research tool.",
+        "contactEmail": "son.hee@navercorp.com",
+        "contactFirstName": "HeeJeong",
+        "contactLastName": "Son",
+        "keywords": "Photo Research; PBO method; User-centered design; User research method; Mobile app; Mobile UI",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case137",
+        "title": "BodyGuard: A Case Study of Telecare Product Innovation and Development",
+        "abstract": "Telecare is personal and environmental sensors that support people to remain safe and independent in their own home for longer. Telecare plays an important role in addressing the challenges of an ageing population. However, many people do not wear the most common form provided, the community alarm, for reasons that include the way that it looks. In the UK, a contributing factor to this problem is that manufacturers cater to telecare service providers (e.g. local authorities) and as a result, service users are not involved in design processes. This paper describes a redesign of the community alarm by a leading manufacturer, involving participatory design activities with users and the wider public, and design internships. The main innovation of the new community alarm, called BodyGuard, is that it connects with the user’s smartphone to enable it to work outside the home. We report insights and lessons learned during the innovation process, within the context of social care reforms giving people more control and choice over the services that they receive.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth12663",
+                "type": "author",
+                "id": "case137",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Andrea",
+                "middleInitial": "",
+                "familyName": "Taylor",
+                "email": "A.Taylor@gsa.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Glasgow School of Art",
+                    "city": "Glasgow",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47638",
+                "type": "author",
+                "id": "case137",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Lorna",
+                "middleInitial": "",
+                "familyName": "Bernard",
+                "email": "Lorna.Bernard@moray.gov.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Moray Community Health and Social Care Partnership",
+                    "city": "Elgin",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47639",
+                "type": "author",
+                "id": "case137",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Hugh",
+                "middleInitial": "",
+                "familyName": "Pizey",
+                "email": "H.Pizey@gsa.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Glasgow School of Art",
+                    "city": "Glasgow",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47640",
+                "type": "author",
+                "id": "case137",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Craig",
+                "middleInitial": "",
+                "familyName": "Whittet",
+                "email": "C.Whittet@gsa.ac.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Glasgow School of Art",
+                    "city": "Glasgow",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47641",
+                "type": "author",
+                "id": "case137",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Samantha",
+                "middleInitial": "",
+                "familyName": "Davies",
+                "email": "Samantha.Davies@chubb.co.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Chubb Community Care",
+                    "city": "Lancashire",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47642",
+                "type": "author",
+                "id": "case137",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "David",
+                "middleInitial": "",
+                "familyName": "Hammond",
+                "email": "David.Hammond@chubb.co.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Chubb Community Care",
+                    "city": "Lancashire",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47643",
+                "type": "author",
+                "id": "case137",
+                "venue": "casestudy",
+                "rank": 7,
+                "givenName": "Julian",
+                "middleInitial": "",
+                "familyName": "Edge",
+                "email": "Julian.Edge@chubb.co.uk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Chubb Community Care",
+                    "city": "Lancashire",
+                    "country": "United Kingdom"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "Describes the innovation of the telecare community alarm, involving collaboration between academia and industry, participatory design activities with users and the wider public, and design internships.",
+        "contactEmail": "A.Taylor@gsa.ac.uk",
+        "contactFirstName": "Andrea",
+        "contactLastName": "Taylor",
+        "keywords": "Assistive technology; community alarm; community alarm service; participatory design; social care; telecare",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case138",
+        "title": "Representation Strategies Adopted by Participants in a Population Stereotype Hunt: A Case Study for Icon Design",
+        "abstract": "Population Stereotype tells interaction designers just one-half of the complete story. It informs them only about the level of general consensus regarding each representation generated by different participants. It does not provide answers to those questions, which ask how the representation is to be achieved. Identification of different representation strategies adopted by different participants can reveal the rest of the story. In the presence of more than one or no strong contenders (population stereotype), adoption of the right representation strategy can be really beneficial. As most of the representational strategies are complementary to each other, the combination of different representational strategies can lead towards a more representative icon development.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth29809",
+                "type": "author",
+                "id": "case138",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Avijit",
+                "middleInitial": "",
+                "familyName": "Sengupta",
+                "email": "avijit79@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Department of Information Systems, National University of Singapore",
+                    "institution": "Singapore",
+                    "city": "Singapore",
+                    "country": "Singapore"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth29808",
+                "type": "author",
+                "id": "case138",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Ting Ting, Klarissa",
+                "middleInitial": "",
+                "familyName": "Chang",
+                "email": "changtt@comp.nus.edu.sg",
+                "role": "",
+                "primary": {
+                    "dept": "Department of Information Systems",
+                    "institution": "National University of SIngapore",
+                    "city": "Singapore",
+                    "country": "Singapore"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth29767",
+                "type": "author",
+                "id": "case138",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Peng-Hui",
+                "middleInitial": "",
+                "familyName": "Wan",
+                "email": "diswp@nus.edu.sg",
+                "role": "",
+                "primary": {
+                    "dept": "Information Systems",
+                    "institution": "National University of Singapore",
+                    "city": "Singapore",
+                    "country": "Singapore"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth39760",
+                "type": "author",
+                "id": "case138",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Wen Yong",
+                "middleInitial": "",
+                "familyName": "Chua",
+                "email": "wenyong@comp.nus.edu.sg",
+                "role": "",
+                "primary": {
+                    "dept": "Information Systems",
+                    "institution": "National University of Singapore",
+                    "city": "Singapore",
+                    "country": "Singapore"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth100002",
+                "type": "author",
+                "id": "case138",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "",
+                "middleInitial": "",
+                "familyName": "",
+                "email": "",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "Identification of different representation strategies adopted by different participants can reveal an effective and complementary method for designing icons. Know ‘how’ (which strategy to use) along with ‘what’ (representation).",
+        "contactEmail": "avijit79@gmail.com",
+        "contactFirstName": "Avijit",
+        "contactLastName": "Sengupta",
+        "keywords": "Population stereotype; representation strategies; icon",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case139",
+        "title": "Can Androids Be Salespeople in the Real World?",
+        "abstract": "The roles of robots in the real world have become more diverse depending on their bodily properties. In this study, we aim to determine the roles that androids, whose bodily properties resemble humans, could serve in the real world.  \\ Selling and purchasing are common human activities. Therefore, we proposed the use of an android as a salesperson with cognitive and affective strategies utilizing the advantages of online- and counter- selling methods. We conducted a field study to investigate whether androids could sell goods in a department store. As a result, our sales strategies worked well and the android could sell 43 sweaters that cost approximately 100 dollars each for 10 days. These results are important knowledge for determining how androids may serve new roles and communicate with humans in the real world.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth45551",
+                "type": "author",
+                "id": "case139",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Miki",
+                "middleInitial": "",
+                "familyName": "Watanabe",
+                "email": "watanabe.miki@irl.sys.es.osaka-u.ac.jp",
+                "role": "",
+                "primary": {
+                    "dept": "Engineering Science/Osaka University/Ishiguro laboratory",
+                    "institution": "Osaka University",
+                    "city": "Toyonaka",
+                    "country": "Japan"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth9534",
+                "type": "author",
+                "id": "case139",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Kohei",
+                "middleInitial": "",
+                "familyName": "Ogawa",
+                "email": "k.ogawa@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Engineering Science/Osaka University/Ishiguro laboratory",
+                    "institution": "Osaka University",
+                    "city": "Toyonaka",
+                    "country": "Japan"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth29258",
+                "type": "author",
+                "id": "case139",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Hiroshi",
+                "middleInitial": "",
+                "familyName": "Ishiguro",
+                "email": "ishiguro@sys.es.osaka-u.ac.jp",
+                "role": "",
+                "primary": {
+                    "dept": "Engineering Science/Osaka University/Ishiguro Lab",
+                    "institution": "Osaka University",
+                    "city": "Toyonaka",
+                    "country": "Japan"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "Development of androids, human-like appearance robots, that sell clothes in a department store.",
+        "contactEmail": "watanabe.miki@irl.sys.es.osaka-u.ac.jp",
+        "contactFirstName": "Miki",
+        "contactLastName": "Watanabe",
+        "keywords": "android robot; field study; sales; conversation; affection; human robot interaction",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case140",
+        "title": "An Outlook for Content UX in TV",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth46063",
+                "type": "author",
+                "id": "case140",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Sung Woo",
+                "middleInitial": "",
+                "familyName": "Kim",
+                "email": "caerang@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Graduate School of TechoDesign",
+                    "institution": "Kookmin University",
+                    "city": "Seoul",
+                    "country": "Republic of Korea"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47676",
+                "type": "author",
+                "id": "case140",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "",
+                "middleInitial": "",
+                "familyName": "",
+                "email": "eunhye7070@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Graduate School of Techno Design",
+                    "institution": "Kookmin University",
+                    "city": "Seoul",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47677",
+                "type": "author",
+                "id": "case140",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "YAE EUN",
+                "middleInitial": "",
+                "familyName": "LEE",
+                "email": "yenn2201@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Graduate School of Techno Design",
+                    "institution": "Kookmin University",
+                    "city": "Seoul",
+                    "country": "Korea, Republic of"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "caerang@gmail.com",
+        "contactFirstName": "Sung Woo",
+        "contactLastName": "Kim",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case147",
+        "title": "TRANSFORM: Embodiment of “Radical Atoms” at Milano Design Week",
+        "abstract": "RANSFORM fuses technology and design to celebrate the transformation from a piece of static furniture to a dynamic machine driven by streams of data and energy. TRANSFORM aims to inspire viewers with unexpected transformations, as well as the aesthetics of a complex machine in motion. This paper describes the concept, engine, product, and motion design of TRANSFORM, which was first exhibited at LEXUS DESIGN AMAZING 2014 MILAN in April 2014.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth2008",
+                "type": "author",
+                "id": "case147",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Hiroshi",
+                "middleInitial": "",
+                "familyName": "Ishii",
+                "email": "ishii@media.mit.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "MIT Media Lab",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth16013",
+                "type": "author",
+                "id": "case147",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Daniel",
+                "middleInitial": "",
+                "familyName": "Leithinger",
+                "email": "daniell@media.mit.edu",
+                "role": "",
+                "primary": {
+                    "dept": "MIT Media Lab",
+                    "institution": "MIT",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth15323",
+                "type": "author",
+                "id": "case147",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Sean",
+                "middleInitial": "",
+                "familyName": "Follmer",
+                "email": "sfollmer@media.mit.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "MIT Media Lab, Cambridge",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth11607",
+                "type": "author",
+                "id": "case147",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Amit",
+                "middleInitial": "",
+                "familyName": "Zoran",
+                "email": "amitz@media.mit.edu",
+                "role": "",
+                "primary": {
+                    "dept": "MIT Media Lab",
+                    "institution": "MIT",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth39102",
+                "type": "author",
+                "id": "case147",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Philipp",
+                "middleInitial": "",
+                "familyName": "Schoessler",
+                "email": "phil_s@media.mit.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "MIT Media Lab",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47735",
+                "type": "author",
+                "id": "case147",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Jared",
+                "middleInitial": "",
+                "familyName": "Counts",
+                "email": "jcounts@mit.edu",
+                "role": "",
+                "primary": {
+                    "dept": "MIT Media Lab",
+                    "institution": "MIT",
+                    "city": "Cambridge",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "This paper describes the concept, engine, product, and motion design of TRANSFORM, which was first exhibited at LEXUS DESIGN AMAZING 2014 MILAN in April 2014.",
+        "contactEmail": "phil_s@media.mit.edu",
+        "contactFirstName": "Philipp",
+        "contactLastName": "Schoessler",
+        "keywords": "Tangible User Interfaces; Radical Atoms; Shape Display; Shape Changing Interfaces; Design",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case153",
+        "title": "When Value is Greater than Money: a Micropayment System in Uganda",
+        "abstract": "The Pay-E-Safe system is a token-based car battery powered electronic micropayment system for emerging markets in East Africa. This is the story of how it was developed with different ethnic groups in Kasese, Uganda, combining methods from HCI, software development, and business modeling. We created a system that is inexpensive to implement, sensitive to the Ugandan context (e.g. low incomes, unreliable power supplies and unstable Internet connections) and provides benefits to local vendors as well as added value to users and their families. Using observations, interviews and prototype evaluations with local Ugandans we studied people’s spending behaviors and then explored alternative design solutions with them. Along the way, we discovered that a micropayment system could actually add value to the user experience beyond the exchange of money for services. This case study reports on how we designed the system and the additional value it afforded users.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth47761",
+                "type": "author",
+                "id": "case153",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Rasmus",
+                "middleInitial": "",
+                "familyName": "Prentow",
+                "email": "rprentow@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Computer Science",
+                    "institution": "Aalborg University",
+                    "city": "Aalborg East",
+                    "country": "Denmark"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47762",
+                "type": "author",
+                "id": "case153",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Rasmus",
+                "middleInitial": "",
+                "familyName": "Steiniche",
+                "email": "rs@pay-e-safe.com",
+                "role": "",
+                "primary": {
+                    "dept": "Computer Science",
+                    "institution": "Aalborg University",
+                    "city": "Aalborg East",
+                    "country": "Denmark"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47763",
+                "type": "author",
+                "id": "case153",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Simone",
+                "middleInitial": "D",
+                "familyName": "Johansen",
+                "email": "sdj@pay-e-safe.com",
+                "role": "",
+                "primary": {
+                    "dept": "Electronic Systems",
+                    "institution": "aalborg University",
+                    "city": "aalborg East",
+                    "country": "Denmark"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth10250",
+                "type": "author",
+                "id": "case153",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Jeni",
+                "middleInitial": "",
+                "familyName": "Paay",
+                "email": "jeni@cs.aau.dk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Aalborg University",
+                    "city": "Aalborg",
+                    "country": "Denmark"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47764",
+                "type": "author",
+                "id": "case153",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Ivan",
+                "middleInitial": "",
+                "familyName": "Aaen",
+                "email": "ivan@cs.aau.dk",
+                "role": "",
+                "primary": {
+                    "dept": "Computer Science",
+                    "institution": "Aalborg University",
+                    "city": "Aalborg East",
+                    "country": "Denmark"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth1622",
+                "type": "author",
+                "id": "case153",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Jesper",
+                "middleInitial": "",
+                "familyName": "Kjeldskov",
+                "email": "jesper@cs.aau.dk",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Aalborg University",
+                    "city": "Aalborg",
+                    "country": "Denmark"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We created a system that is inexpensive to implement, sensitive to the Ugandan context and provides benefits to local vendors as well as added value to users and their families.",
+        "contactEmail": "jeni@cs.aau.dk",
+        "contactFirstName": "Jeni",
+        "contactLastName": "Paay",
+        "keywords": "Qualitative research; field studies; prototyping; developing countries; electronic payment system.",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case155",
+        "title": "A consensual and non-ambiguous set of gestures to interact with UAV in infantrymen",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth47765",
+                "type": "author",
+                "id": "case155",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Florent",
+                "middleInitial": "",
+                "familyName": "Taralle",
+                "email": "florent.taralle@mines-paristech.fr",
+                "role": "",
+                "primary": {
+                    "dept": "Sagem Defense et Sécurité",
+                    "institution": "Sagem Defense et Sécurité",
+                    "city": "Massy",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "MINES-Paristech",
+                    "institution": "MINES-Paristech",
+                    "city": "Paris",
+                    "country": "France"
+                }
+            },
+            {
+                "authorId": "auth32201",
+                "type": "author",
+                "id": "case155",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Alexis",
+                "middleInitial": "",
+                "familyName": "Paljic",
+                "email": "alexis.paljic@mines-paristech.fr",
+                "role": "",
+                "primary": {
+                    "dept": "CAOR",
+                    "institution": "Mines ParisTech",
+                    "city": "Paris",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth34795",
+                "type": "author",
+                "id": "case155",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Sotiris",
+                "middleInitial": "",
+                "familyName": "Manitsaris",
+                "email": "sotiris.manitsaris@mines-paristech.fr",
+                "role": "",
+                "primary": {
+                    "dept": "Mathématiques et Systèmes/MINES ParisTech/Robotics Lab",
+                    "institution": "Ecole Nationale Supérieure des Mines de Paris",
+                    "city": "Paris",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47884",
+                "type": "author",
+                "id": "case155",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Jordane",
+                "middleInitial": "",
+                "familyName": "Grenier",
+                "email": "jordane.grenier@sagem.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Sagem Défense et Sécurité",
+                    "city": "Massy",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47885",
+                "type": "author",
+                "id": "case155",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Christophe",
+                "middleInitial": "",
+                "familyName": "Guettier",
+                "email": "christophe.guettier@sagem.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Sagem Défense et Sécurité",
+                    "city": "Massy",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "florent.taralle@mines-paristech.fr",
+        "contactFirstName": "Florent",
+        "contactLastName": "TARALLE",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case156",
+        "title": "Volvo Single View of Vehicle: Building a Big Data Service from Scratch in the Automotive Industry",
+        "abstract": "Big data analytics is a major trend affecting business today. Many organizations collect vast amounts of data simply to investigate if its market value can be identified. In this case study, we contribute a practical example of using the big data approach to create innovative services. We describe our work to identify and integrate data sources in order establish what data is available and who may benefit from it. We then show how we worked with users to communicate the vast possibilities created when many data sources are integrated, and participated in building a new big data service. Finally, we share a set of lessons we learned which can guide future big data inquiries. Our work was conducted in the context of the inspection, service, and sale of Volvo trucks, significantly aiding risk management for Volvo Used Trucks EMEA.",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth31311",
+                "type": "author",
+                "id": "case156",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Paweł",
+                "middleInitial": "W",
+                "familyName": "Woźniak",
+                "email": "pawelw@chalmers.se",
+                "role": "",
+                "primary": {
+                    "dept": "t2i Interaction Laboratory",
+                    "institution": "Chalmers University of Technology",
+                    "city": "Gothenburg",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47781",
+                "type": "author",
+                "id": "case156",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Robert",
+                "middleInitial": "",
+                "familyName": "Valton",
+                "email": "robert.valton@volvo.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Volvo Group Telematics",
+                    "city": "Gothenburg",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth3938",
+                "type": "author",
+                "id": "case156",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Morten",
+                "middleInitial": "",
+                "familyName": "Fjeld",
+                "email": "fjeld@chalmers.se",
+                "role": "",
+                "primary": {
+                    "dept": "t2i Lab",
+                    "institution": "Chalmers University of Technology",
+                    "city": "Gothenburg",
+                    "country": "Sweden"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "We contribute a practical example of using the big data approach to create services in the automotive domain by building a truck price estimation tool.",
+        "contactEmail": "pawelw@chalmers.se",
+        "contactFirstName": "Paweł",
+        "contactLastName": "Woźniak",
+        "keywords": "Big data; user experience; data-centred services; data warehousing; case studies; service innovation; data analytics; business insights; telematics",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case163",
+        "title": "Moving on its Own: How do Audience Interacts with an Autonomous Moving Artwork",
+        "abstract": "In contemporary art, a new type of artworks use motion as a material from which to create the illusion of life. These autonomous robotic artworks have a behavioral specificity; they tend to be perceived as living, and by some account intentional entities. To account for this behavioral specifity and how it affects the audience experience, we propose a data-driven approach to reveal specific visit patterns. Through a cluster analysis performed on visitors’ path inside an installation involving autonomous objects, we highlight four different attitudes characterized by patterns of approach or withdrawal, passive observation and exploration. ",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth47792",
+                "type": "author",
+                "id": "case163",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Florent",
+                "middleInitial": "",
+                "familyName": "Levillain",
+                "email": "flevillain@mac.com",
+                "role": "",
+                "primary": {
+                    "dept": "CHART-LUTIN EA 4004",
+                    "institution": "Université Paris 8",
+                    "city": "Paris",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47822",
+                "type": "author",
+                "id": "case163",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Sébastien",
+                "middleInitial": "",
+                "familyName": "Lefort",
+                "email": "sebastien.lefort@lip6.fr",
+                "role": "",
+                "primary": {
+                    "dept": "create",
+                    "institution": "Université Paris 6",
+                    "city": "Paris",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47823",
+                "type": "author",
+                "id": "case163",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Elisabetta",
+                "middleInitial": "",
+                "familyName": "Zibetti",
+                "email": "ezibetti@univ-paris8.fr",
+                "role": "",
+                "primary": {
+                    "dept": "create",
+                    "institution": "Université Paris 8",
+                    "city": "Paris",
+                    "country": "France"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "Autonomous robotic artworks tend to be perceived as living and intentional entities. We explore the way visitors interact with an artistic installation involving this original form of robots.",
+        "contactEmail": "flevillain@mac.com",
+        "contactFirstName": "Florent",
+        "contactLastName": "Levillain",
+        "keywords": "audience experience; interactive arts; behavioral artworks; engagement; cluster analysis",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case167",
+        "title": "Testing the Effectiveness of iPad Math Game: Lessons Learned from Running a Multi-Classroom Study",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth47834",
+                "type": "author",
+                "id": "case167",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Kristen",
+                "middleInitial": "Pilner",
+                "familyName": "Blair",
+                "email": "kpilner@stanford.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Stanford Graduate School Of Education",
+                    "institution": "Stanford University",
+                    "city": "Stanford",
+                    "country": "94305"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47910",
+                "type": "author",
+                "id": "case167",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Jay",
+                "middleInitial": "",
+                "familyName": "Pfaffman",
+                "email": "pfaffman@stanford.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Stanford Graduate School of Education",
+                    "institution": "Stanford University",
+                    "city": "Stanford",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47911",
+                "type": "author",
+                "id": "case167",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Maria",
+                "middleInitial": "",
+                "familyName": "Cutumisu",
+                "email": "cutumisu@stanford.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Stanford Graduate School of Education",
+                    "institution": "Stanford University",
+                    "city": "Stanford",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47912",
+                "type": "author",
+                "id": "case167",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Nicole",
+                "middleInitial": "",
+                "familyName": "Hallinen",
+                "email": "hallinen@stanford.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Stanford Graduate School of Education",
+                    "institution": "Stanford University",
+                    "city": "Stanford",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47913",
+                "type": "author",
+                "id": "case167",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Daniel",
+                "middleInitial": "L",
+                "familyName": "Schwartz",
+                "email": "daniel.schwartz@stanford.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Stanford Graduate School of Education",
+                    "institution": "Stanford University",
+                    "city": "Stanford",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "kpilner@stanford.edu",
+        "contactFirstName": "Kristen",
+        "contactLastName": "Blair",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case183",
+        "title": "Colormaps that Improve Perception of High-Resolution Ocean Data",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth47875",
+                "type": "author",
+                "id": "case183",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Francesca",
+                "middleInitial": "",
+                "familyName": "Samsel",
+                "email": "figs@cat.utexas.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Center for Agile Technology",
+                    "institution": "University of Texas at Austin",
+                    "city": "Austin",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47923",
+                "type": "author",
+                "id": "case183",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Mark",
+                "middleInitial": "",
+                "familyName": "Petersen",
+                "email": "mpetersen@lanl.gov",
+                "role": "",
+                "primary": {
+                    "dept": "COSIM",
+                    "institution": "Los Alamos National Lab",
+                    "city": "Los Alamos",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47922",
+                "type": "author",
+                "id": "case183",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Terece",
+                "middleInitial": "",
+                "familyName": "Geld",
+                "email": "tgeld@cat.utexas.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Center for Agile Technology",
+                    "institution": "University of Texas at Austin",
+                    "city": "Austin",
+                    "country": "USA"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47924",
+                "type": "author",
+                "id": "case183",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Gerg",
+                "middleInitial": "",
+                "familyName": "Abram",
+                "email": "gda@tacc.utexas.edu",
+                "role": "",
+                "primary": {
+                    "dept": "TACC",
+                    "institution": "University of Texas",
+                    "city": "Austin",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47925",
+                "type": "author",
+                "id": "case183",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Joanne",
+                "middleInitial": "",
+                "familyName": "Wendelberger",
+                "email": "joanne@lanl.gov",
+                "role": "",
+                "primary": {
+                    "dept": "Statistic Sciences Group",
+                    "institution": "Los Alamos National Lab",
+                    "city": "Los Alamos",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47926",
+                "type": "author",
+                "id": "case183",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "James",
+                "middleInitial": "",
+                "familyName": "Ahrens",
+                "email": "ahrens@lanl.gov",
+                "role": "",
+                "primary": {
+                    "dept": "Data Science at Scale",
+                    "institution": "Los Alamos National lab",
+                    "city": "Los Alamos",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "figs@cat.utexas.edu",
+        "contactFirstName": "Francesca",
+        "contactLastName": "Samsel",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
+    },
+    {
+        "id": "case191",
+        "title": "Historical Research Using Email Archives in Special Collections",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth12896",
+                "type": "author",
+                "id": "case191",
+                "venue": "casestudy",
+                "rank": 1,
+                "givenName": "Sudheendra",
+                "middleInitial": "",
+                "familyName": "Hangal",
+                "email": "hangal@cs.stanford.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Computer Science",
+                    "institution": "Ashoka University",
+                    "city": "Haryana",
+                    "country": "India"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47787",
+                "type": "author",
+                "id": "case191",
+                "venue": "casestudy",
+                "rank": 2,
+                "givenName": "Vihari",
+                "middleInitial": "",
+                "familyName": "Piratla",
+                "email": "viharipiratla@gmail.com",
+                "role": "",
+                "primary": {
+                    "dept": "Research",
+                    "institution": "Amuse labs",
+                    "city": "Dharward",
+                    "country": "India"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth30319",
+                "type": "author",
+                "id": "case191",
+                "venue": "casestudy",
+                "rank": 3,
+                "givenName": "Chaiyasit",
+                "middleInitial": "",
+                "familyName": "Manovit",
+                "email": "sit@ixoratech.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "iXora Technologies",
+                    "city": "Mountain View",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth24413",
+                "type": "author",
+                "id": "case191",
+                "venue": "casestudy",
+                "rank": 4,
+                "givenName": "Peter",
+                "middleInitial": "",
+                "familyName": "Chan",
+                "email": "pchan3@stanford.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Stanford University",
+                    "city": "Stanford",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth18278",
+                "type": "author",
+                "id": "case191",
+                "venue": "casestudy",
+                "rank": 5,
+                "givenName": "Monica",
+                "middleInitial": "",
+                "familyName": "Lam",
+                "email": "lam@cs.stanford.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Stanford University",
+                    "city": "Stanford",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth47916",
+                "type": "author",
+                "id": "case191",
+                "venue": "casestudy",
+                "rank": 6,
+                "givenName": "Glynn",
+                "middleInitial": "",
+                "familyName": "Edwards",
+                "email": "gedwards@stanford.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Stanford University Libraries",
+                    "institution": "Stanford University",
+                    "city": "Stanford",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "hangal@cs.stanford.edu",
+        "contactFirstName": "Sudheendra",
+        "contactLastName": "Hangal",
+        "keywords": "",
+        "venue": "casestudy",
+        "session": "",
+        "communities": ""
     }
 ]

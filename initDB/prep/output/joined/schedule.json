@@ -1,1864 +1,1570 @@
 [
     {
         "id": "slot100",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "718A",
-        "sessionId": "s102"
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot101",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "718A",
-        "sessionId": "s103"
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot102",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "718A",
-        "sessionId": "s109"
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot103",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "718A",
-        "sessionId": "s116"
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot104",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "718A",
-        "sessionId": "s122"
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot105",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "718A",
-        "sessionId": "s130"
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot106",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "718A",
-        "sessionId": "s139"
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot107",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "718A",
-        "sessionId": "s170"
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot108",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "718A",
-        "sessionId": "s193"
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot109",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "718A",
-        "sessionId": "s194"
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot110",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "718A",
-        "sessionId": "s207"
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot111",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "718A",
-        "sessionId": "s209"
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot112",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "718A",
-        "sessionId": "s213"
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot113",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "718A",
-        "sessionId": "s144"
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "Hall D1",
+        "sessionId": ""
     },
     {
         "id": "slot114",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "718B",
-        "sessionId": "s101"
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot115",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "718B",
-        "sessionId": "s132"
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot116",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "718B",
-        "sessionId": "s162"
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot117",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "718B",
-        "sessionId": "s185"
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot118",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "718B",
-        "sessionId": "s190"
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot119",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "718B",
-        "sessionId": "s105"
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot120",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "718B",
-        "sessionId": "s124"
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot121",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "718B",
-        "sessionId": "s110"
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot122",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "718B",
-        "sessionId": "s113"
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot123",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "718B",
-        "sessionId": "s119"
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot124",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "718B",
-        "sessionId": "s125"
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot125",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "718B",
-        "sessionId": "s147"
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot126",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "718B",
-        "sessionId": "s154"
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot127",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "718B",
-        "sessionId": "s160"
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "401",
+        "sessionId": ""
     },
     {
         "id": "slot128",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "701A",
-        "sessionId": "s114"
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot129",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "701A",
-        "sessionId": "s131"
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot130",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "701A",
-        "sessionId": "s135"
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot131",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "701A",
-        "sessionId": "s187"
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot132",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "701A",
-        "sessionId": "s197"
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot133",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "701A",
-        "sessionId": "s118"
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot134",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "701A",
-        "sessionId": "s106"
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot135",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "701A",
-        "sessionId": "s159"
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot136",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "701A",
-        "sessionId": "s164"
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot137",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "701A",
-        "sessionId": "s168"
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot138",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "701A",
-        "sessionId": "s179"
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot139",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "701A",
-        "sessionId": "s195"
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot140",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "701A",
-        "sessionId": "s200"
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot141",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "701A",
-        "sessionId": "s205"
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "E5",
+        "sessionId": ""
     },
     {
         "id": "slot142",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "701B",
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "E6",
         "sessionId": ""
     },
     {
         "id": "slot143",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "701B",
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "E6",
         "sessionId": ""
     },
     {
         "id": "slot144",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "701B",
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "E6",
         "sessionId": ""
     },
     {
         "id": "slot145",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "701B",
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "E6",
         "sessionId": ""
     },
     {
         "id": "slot146",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "701B",
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "E6",
         "sessionId": ""
     },
     {
         "id": "slot147",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "701B",
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "E6",
         "sessionId": ""
     },
     {
         "id": "slot148",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "701B",
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "E6",
         "sessionId": ""
     },
     {
         "id": "slot149",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "701B",
-        "sessionId": "s121"
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "E6",
+        "sessionId": ""
     },
     {
         "id": "slot150",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "701B",
-        "sessionId": "s137"
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "E6",
+        "sessionId": ""
     },
     {
         "id": "slot151",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "701B",
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "E6",
         "sessionId": ""
     },
     {
         "id": "slot152",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "701B",
-        "sessionId": "s163"
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "E6",
+        "sessionId": ""
     },
     {
         "id": "slot153",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "701B",
-        "sessionId": "s191"
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "E6",
+        "sessionId": ""
     },
     {
         "id": "slot154",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "701B",
-        "sessionId": "s155"
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "E6",
+        "sessionId": ""
     },
     {
         "id": "slot155",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "701B",
-        "sessionId": "s169"
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "E6",
+        "sessionId": ""
     },
     {
         "id": "slot156",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "801A",
-        "sessionId": "s129"
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "E1/E2",
+        "sessionId": ""
     },
     {
         "id": "slot157",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "801A",
-        "sessionId": "s143"
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "E1/E2",
+        "sessionId": ""
     },
     {
         "id": "slot158",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "801A",
-        "sessionId": "s156"
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "E1/E2",
+        "sessionId": ""
     },
     {
         "id": "slot159",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "801A",
-        "sessionId": "s214"
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "E1/E2",
+        "sessionId": ""
     },
     {
         "id": "slot160",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "801A",
-        "sessionId": "s174"
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "E1/E2",
+        "sessionId": ""
     },
     {
         "id": "slot161",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "801A",
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "E1/E2",
         "sessionId": ""
     },
     {
         "id": "slot162",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "801A",
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "E1/E2",
         "sessionId": ""
     },
     {
         "id": "slot163",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "801A",
-        "sessionId": "s176"
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "E1/E2",
+        "sessionId": ""
     },
     {
         "id": "slot164",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "801A",
-        "sessionId": "s198"
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "E1/E2",
+        "sessionId": ""
     },
     {
         "id": "slot165",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "801A",
-        "sessionId": "s107"
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "E1/E2",
+        "sessionId": ""
     },
     {
         "id": "slot166",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "801A",
-        "sessionId": "s148"
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "E1/E2",
+        "sessionId": ""
     },
     {
         "id": "slot167",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "801A",
-        "sessionId": "s150"
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "E1/E2",
+        "sessionId": ""
     },
     {
         "id": "slot168",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "801A",
-        "sessionId": "s173"
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "E1/E2",
+        "sessionId": ""
     },
     {
         "id": "slot169",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "801A",
-        "sessionId": "s204"
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "E1/E2",
+        "sessionId": ""
     },
     {
         "id": "slot170",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "801B",
-        "sessionId": "s100"
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot171",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "801B",
-        "sessionId": "s112"
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot172",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "801B",
-        "sessionId": "s120"
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot173",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "801B",
-        "sessionId": "s123"
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot174",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "801B",
-        "sessionId": "s128"
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot175",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "801B",
-        "sessionId": "s133"
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot176",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "801B",
-        "sessionId": "s153"
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot177",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "801B",
-        "sessionId": "s158"
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot178",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "801B",
-        "sessionId": "s178"
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot179",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "801B",
-        "sessionId": "s184"
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot180",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "801B",
-        "sessionId": "s188"
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot181",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "801B",
-        "sessionId": "s196"
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot182",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "801B",
-        "sessionId": "s202"
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot183",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "801B",
-        "sessionId": "s210"
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "402",
+        "sessionId": ""
     },
     {
         "id": "slot184",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "803AB",
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot185",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "803AB",
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot186",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "803AB",
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot187",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "803AB",
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot188",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "803AB",
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot189",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "803AB",
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot190",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "803AB",
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot191",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "803AB",
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot192",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "803AB",
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot193",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "803AB",
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot194",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "803AB",
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot195",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "803AB",
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot196",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "803AB",
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot197",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "803AB",
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "E3",
         "sessionId": ""
     },
     {
         "id": "slot198",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "716A",
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot199",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "716A",
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot200",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "716A",
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot201",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "716A",
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot202",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "716A",
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot203",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "716A",
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot204",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "716A",
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot205",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "716A",
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot206",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "716A",
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot207",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "716A",
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot208",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "716A",
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot209",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "716A",
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot210",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "716A",
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot211",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "716A",
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "E4",
         "sessionId": ""
     },
     {
         "id": "slot212",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "716B",
-        "sessionId": "s104"
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot213",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "716B",
-        "sessionId": "s108"
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot214",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "716B",
-        "sessionId": "s126"
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot215",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "716B",
-        "sessionId": "s138"
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot216",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "716B",
-        "sessionId": "s151"
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot217",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "716B",
-        "sessionId": "s171"
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot218",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "716B",
-        "sessionId": "s177"
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot219",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "716B",
-        "sessionId": "s182"
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot220",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "716B",
-        "sessionId": "s199"
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot221",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "716B",
-        "sessionId": "s203"
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot222",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "716B",
-        "sessionId": "s208"
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot223",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "716B",
-        "sessionId": "s211"
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot224",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "716B",
-        "sessionId": "s212"
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "403",
+        "sessionId": ""
     },
     {
         "id": "slot225",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "716B",
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "403",
         "sessionId": ""
     },
     {
         "id": "slot226",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "714AB",
-        "sessionId": "s140"
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot227",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "714AB",
-        "sessionId": "s146"
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot228",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "714AB",
-        "sessionId": "s166"
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot229",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "714AB",
-        "sessionId": "s175"
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot230",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "714AB",
-        "sessionId": "s206"
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot231",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "714AB",
-        "sessionId": "s142"
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot232",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "714AB",
-        "sessionId": "s167"
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot233",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "714AB",
-        "sessionId": "s134"
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot234",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "714AB",
-        "sessionId": "s136"
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot235",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "714AB",
-        "sessionId": "s145"
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot236",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "714AB",
-        "sessionId": "s149"
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot237",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "714AB",
-        "sessionId": "s152"
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot238",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "714AB",
-        "sessionId": "s181"
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot239",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "714AB",
-        "sessionId": "s192"
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "307ABC",
+        "sessionId": ""
     },
     {
         "id": "slot240",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "717AB",
-        "sessionId": "s111"
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot241",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "717AB",
-        "sessionId": "s165"
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot242",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "717AB",
-        "sessionId": "s186"
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot243",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "717AB",
-        "sessionId": "s189"
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot244",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "717AB",
-        "sessionId": "s201"
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot245",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "717AB",
-        "sessionId": "s117"
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot246",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "717AB",
-        "sessionId": "s127"
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot247",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "717AB",
-        "sessionId": "s141"
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot248",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "717AB",
-        "sessionId": "s161"
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot249",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "717AB",
-        "sessionId": "s172"
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot250",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "717AB",
-        "sessionId": "s180"
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot251",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "717AB",
-        "sessionId": "s115"
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot252",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "717AB",
-        "sessionId": "s157"
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot253",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "717AB",
-        "sessionId": "s183"
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "308ABC",
+        "sessionId": ""
     },
     {
         "id": "slot254",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "802AB",
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "317A",
         "sessionId": ""
     },
     {
         "id": "slot255",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "802AB",
-        "sessionId": "s-crs108-1"
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot256",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "802AB",
-        "sessionId": "s-crs108-2"
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot257",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "802AB",
-        "sessionId": "s-crs105-1"
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot258",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "802AB",
-        "sessionId": "s-crs105-2"
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot259",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "802AB",
-        "sessionId": "s-crs137-1"
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot260",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "802AB",
-        "sessionId": "s-crs137-2"
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot261",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "802AB",
-        "sessionId": "s-crs106-1"
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot262",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "802AB",
-        "sessionId": "s-crs106-2"
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot263",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "802AB",
-        "sessionId": "s-crs115-1"
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot264",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "802AB",
-        "sessionId": "s-crs115-2"
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot265",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "802AB",
-        "sessionId": "s-crs144-1"
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot266",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "802AB",
-        "sessionId": "s-crs144-2"
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot267",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "802AB",
-        "sessionId": "s-crs136"
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "317A",
+        "sessionId": ""
     },
     {
         "id": "slot268",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "715A",
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "317BC",
         "sessionId": ""
     },
     {
         "id": "slot269",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "715A",
-        "sessionId": "s-sig108"
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "317BC",
+        "sessionId": ""
     },
     {
         "id": "slot270",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "715A",
-        "sessionId": "s-sig109"
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "317BC",
+        "sessionId": ""
     },
     {
         "id": "slot271",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "715A",
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "317BC",
         "sessionId": ""
     },
     {
         "id": "slot272",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "715A",
-        "sessionId": "s-sig117"
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "317BC",
+        "sessionId": ""
     },
     {
         "id": "slot273",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "715A",
-        "sessionId": "s-sig105"
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "317BC",
+        "sessionId": ""
     },
     {
         "id": "slot274",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "715A",
-        "sessionId": "s-sig107"
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "317BC",
+        "sessionId": ""
     },
     {
         "id": "slot275",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "715A",
-        "sessionId": "s-sig119"
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "317BC",
+        "sessionId": ""
     },
     {
         "id": "slot276",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "715A",
-        "sessionId": "s-sig118"
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "317BC",
+        "sessionId": ""
     },
     {
         "id": "slot277",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "715A",
-        "sessionId": "s-sig110"
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "317BC",
+        "sessionId": ""
     },
     {
         "id": "slot278",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "715A",
-        "sessionId": "s-sig103"
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "317BC",
+        "sessionId": ""
     },
     {
         "id": "slot279",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "715A",
-        "sessionId": "s-sig111"
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "317BC",
+        "sessionId": ""
     },
     {
         "id": "slot280",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "715A",
-        "sessionId": "s-sig112"
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "317BC",
+        "sessionId": ""
     },
     {
         "id": "slot281",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "715A",
-        "sessionId": "s-sig114"
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "317BC",
+        "sessionId": ""
     },
     {
         "id": "slot282",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "715B",
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot283",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "715B",
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot284",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "715B",
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot285",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "715B",
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot286",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "715B",
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot287",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "715B",
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot288",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "715B",
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot289",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "715B",
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot290",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "715B",
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot291",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "715B",
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot292",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "715B",
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot293",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "715B",
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot294",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "715B",
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot295",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "715B",
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "E7",
         "sessionId": ""
     },
     {
         "id": "slot296",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "713AB",
-        "sessionId": "s-crs156"
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot297",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "713AB",
-        "sessionId": "s-crs100-1"
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot298",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "713AB",
-        "sessionId": "s-crs100-2"
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot299",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "713AB",
-        "sessionId": "s-crs160"
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot300",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "713AB",
-        "sessionId": "s-crs157"
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot301",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "713AB",
-        "sessionId": "s-crs153-1"
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot302",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "713AB",
-        "sessionId": "s-crs153-2"
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot303",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "713AB",
-        "sessionId": "s-crs161"
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot304",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "713AB",
-        "sessionId": "s-crs158"
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot305",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "713AB",
-        "sessionId": "s-crs123-1"
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot306",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "713AB",
-        "sessionId": "s-crs123-2"
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot307",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "713AB",
-        "sessionId": "s-crs116-1"
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot308",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "713AB",
-        "sessionId": "s-crs116-2"
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot309",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "713AB",
-        "sessionId": "s-crs142"
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "318BC",
+        "sessionId": ""
     },
     {
         "id": "slot310",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "707",
+        "date": "Monday, 04-19",
+        "time": "11:30-12:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot311",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "707",
+        "date": "Monday, 04-19",
+        "time": "14:30-15:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot312",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "707",
+        "date": "Monday, 04-19",
+        "time": "16:30-17:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot313",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "707",
+        "date": "Tuesday, 04-20",
+        "time": "9:30-10:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot314",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "707",
+        "date": "Tuesday, 04-20",
+        "time": "11:30-12:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot315",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "707",
+        "date": "Tuesday, 04-20",
+        "time": "14:30-15:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot316",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "707",
+        "date": "Tuesday, 04-20",
+        "time": "16:30-17:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot317",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "707",
+        "date": "Wednesday, 04-21",
+        "time": "9:30-10:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot318",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "707",
+        "date": "Wednesday, 04-21",
+        "time": "11:30-12:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot319",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "707",
+        "date": "Wednesday, 04-21",
+        "time": "14:30-15:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot320",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "707",
+        "date": "Wednesday, 04-21",
+        "time": "16:30-17:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot321",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "707",
+        "date": "Thursday, 04-22",
+        "time": "9:30-10:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot322",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "707",
+        "date": "Thursday, 04-22",
+        "time": "11:30-12:50",
+        "room": "318A",
         "sessionId": ""
     },
     {
         "id": "slot323",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "707",
-        "sessionId": ""
-    },
-    {
-        "id": "slot324",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "709",
-        "sessionId": ""
-    },
-    {
-        "id": "slot325",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "709",
-        "sessionId": "s-crs101-1"
-    },
-    {
-        "id": "slot326",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "709",
-        "sessionId": "s-crs101-2"
-    },
-    {
-        "id": "slot327",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "709",
-        "sessionId": "s-crs129-1"
-    },
-    {
-        "id": "slot328",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "709",
-        "sessionId": "s-crs129-2"
-    },
-    {
-        "id": "slot329",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "709",
-        "sessionId": "s-crs102-1"
-    },
-    {
-        "id": "slot330",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "709",
-        "sessionId": "s-crs102-2"
-    },
-    {
-        "id": "slot331",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "709",
-        "sessionId": "s-crs147-1"
-    },
-    {
-        "id": "slot332",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "709",
-        "sessionId": "s-crs147-2"
-    },
-    {
-        "id": "slot333",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "709",
-        "sessionId": "s-crs113-1"
-    },
-    {
-        "id": "slot334",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "709",
-        "sessionId": "s-crs113-2"
-    },
-    {
-        "id": "slot335",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "709",
-        "sessionId": "s-crs115R-1"
-    },
-    {
-        "id": "slot336",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "709",
-        "sessionId": "s-crs115R-2"
-    },
-    {
-        "id": "slot337",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "709",
-        "sessionId": ""
-    },
-    {
-        "id": "slot338",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "711",
-        "sessionId": "s-crs124"
-    },
-    {
-        "id": "slot339",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "711",
-        "sessionId": "s-crs111-1"
-    },
-    {
-        "id": "slot340",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "711",
-        "sessionId": "s-crs111-2"
-    },
-    {
-        "id": "slot341",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "711",
-        "sessionId": "s-crs122-1"
-    },
-    {
-        "id": "slot342",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "711",
-        "sessionId": "s-crs122-2"
-    },
-    {
-        "id": "slot343",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "711",
-        "sessionId": "s-crs149-1"
-    },
-    {
-        "id": "slot344",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "711",
-        "sessionId": "s-crs149-2"
-    },
-    {
-        "id": "slot345",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "711",
-        "sessionId": "s-crs143-1"
-    },
-    {
-        "id": "slot346",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "711",
-        "sessionId": "s-crs143-2"
-    },
-    {
-        "id": "slot347",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "711",
-        "sessionId": "s-crs121-1"
-    },
-    {
-        "id": "slot348",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "711",
-        "sessionId": "s-crs121-2"
-    },
-    {
-        "id": "slot349",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "711",
-        "sessionId": "s-crs138-1"
-    },
-    {
-        "id": "slot350",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "711",
-        "sessionId": "s-crs138-2"
-    },
-    {
-        "id": "slot351",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "711",
-        "sessionId": "s-crs146"
-    },
-    {
-        "id": "slot352",
-        "date": "Monday",
-        "time": "11:00-12:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot353",
-        "date": "Monday",
-        "time": "14:00-15:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot354",
-        "date": "Monday",
-        "time": "16:00-17:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot355",
-        "date": "Tuesday",
-        "time": "9:00-10:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot356",
-        "date": "Tuesday",
-        "time": "11:00-12:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot357",
-        "date": "Tuesday",
-        "time": "14:00-15:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot358",
-        "date": "Tuesday",
-        "time": "16:00-17:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot359",
-        "date": "Wednesday",
-        "time": "9:00-10:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot360",
-        "date": "Wednesday",
-        "time": "11:00-12:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot361",
-        "date": "Wednesday",
-        "time": "14:00-15:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot362",
-        "date": "Wednesday",
-        "time": "16:00-17:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot363",
-        "date": "Thursday",
-        "time": "9:00-10:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot364",
-        "date": "Thursday",
-        "time": "11:00-12:20",
-        "room": "Plenary",
-        "sessionId": ""
-    },
-    {
-        "id": "slot365",
-        "date": "Thursday",
-        "time": "14:00-15:20",
-        "room": "Plenary",
+        "date": "Thursday, 04-22",
+        "time": "14:30-15:50",
+        "room": "318A",
         "sessionId": ""
     }
 ]

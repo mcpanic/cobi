@@ -1,19 +1,20 @@
 [
     {
-        "authorId": "auth39471",
+        "authorId": "auth47487",
         "type": "author",
         "id": "case115",
         "venue": "casestudy",
         "rank": 1,
-        "givenName": "Carol",
-        "familyName": "Farnsworth",
-        "email": "carol.farnsworth@sap.com",
+        "givenName": "Lida",
+        "middleInitial": "",
+        "familyName": "Theodorou",
+        "email": "l.theodorou@se13.qmul.ac.uk",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "SAP Labs, LLC",
-            "city": "Palo Alto",
-            "country": "United States"
+            "dept": "Media and Arts technology programme,School of Electronic Engineering and Computer Science",
+            "institution": "Queen-Mary University of London",
+            "city": "London",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -23,20 +24,21 @@
         }
     },
     {
-        "authorId": "auth31489",
+        "authorId": "auth11121",
         "type": "author",
         "id": "case115",
         "venue": "casestudy",
         "rank": 2,
-        "givenName": "Karen",
-        "familyName": "Holtzblatt",
-        "email": "karen@incontextdesign.com",
+        "givenName": "Patrick",
+        "middleInitial": "G. T.",
+        "familyName": "Healey",
+        "email": "ph@eecs.qmul.ac.uk",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "InContext Design",
-            "city": "Concord",
-            "country": "United States"
+            "dept": "School of Electronic Engineering and Computer Science/Cognitive Science Research Group",
+            "institution": "Queen Mary University of London",
+            "city": "London",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -46,156 +48,619 @@
         }
     },
     {
-        "authorId": "auth17508",
+        "authorId": "auth3175",
         "type": "author",
-        "id": "case115",
-        "venue": "casestudy",
-        "rank": 3,
-        "givenName": "Shantanu",
-        "familyName": "Pai",
-        "email": "shanritz@gmail.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "SAP Labs, LLC",
-            "city": "Palo Alto",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth16923",
-        "type": "author",
-        "id": "case115",
-        "venue": "casestudy",
-        "rank": 4,
-        "givenName": "Theo",
-        "familyName": "Held",
-        "email": "theo.held@sap.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "SAP AG",
-            "city": "Walldorf",
-            "country": "Germany"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth39472",
-        "type": "author",
-        "id": "case115",
-        "venue": "casestudy",
-        "rank": 5,
-        "givenName": "Sally",
-        "familyName": "Lawler Kennedy",
-        "email": "sally.lawler.kennedy@sap.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "SAP Labs, LLC",
-            "city": "Palo Alto",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth39473",
-        "type": "author",
-        "id": "case115",
-        "venue": "casestudy",
-        "rank": 6,
-        "givenName": "Eli",
-        "familyName": "Wylen",
-        "email": "eli.wylen@incontextdesign.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "InContext Design",
-            "city": "Concord",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth31582",
-        "type": "author",
-        "id": "case115",
-        "venue": "casestudy",
-        "rank": 7,
-        "givenName": "Pallavi",
-        "familyName": "Kutty",
-        "email": "pallavi.kutty@sap.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "SAP",
-            "city": "Palo Alto",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth31048",
-        "type": "author",
-        "id": "case115",
-        "venue": "casestudy",
-        "rank": 8,
-        "givenName": "Kelley",
-        "familyName": "Wagg",
-        "email": "kelley.wagg@incontextdesign.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "InContext Design",
-            "city": "Concord",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth42508",
-        "type": "author",
-        "id": "case118",
+        "id": "case120",
         "venue": "casestudy",
         "rank": 1,
-        "givenName": "Kate Sangwon",
-        "familyName": "Lee",
-        "email": "kate.lee@navercorp.com",
+        "givenName": "Kimiko",
+        "middleInitial": "",
+        "familyName": "Ryokai",
+        "email": "kimiko@ischool.berkeley.edu",
         "role": "",
         "primary": {
-            "dept": "Design Research Lab.",
-            "institution": "Naver Corp.",
+            "dept": "School of Information",
+            "institution": "University of California, Berkeley",
+            "city": "Berkeley",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47464",
+        "type": "author",
+        "id": "case120",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Noriko",
+        "middleInitial": "",
+        "familyName": "Misra",
+        "email": "noriko.misra@ischool.berkeley.edu",
+        "role": "",
+        "primary": {
+            "dept": "School of Information",
+            "institution": "UC Berkeley",
+            "city": "Berkeley",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47748",
+        "type": "author",
+        "id": "case120",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Yoshinori",
+        "middleInitial": "",
+        "familyName": "Hara",
+        "email": "hara@gsm.kyoto-u.ac.jp",
+        "role": "",
+        "primary": {
+            "dept": "Graduate School of Management",
+            "institution": "Kyoto University",
+            "city": "Kyoto",
+            "country": "Japan"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth34821",
+        "type": "author",
+        "id": "case128",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Josephine",
+        "middleInitial": "",
+        "familyName": "Kilde",
+        "email": "josephine.kilde@colorado.edu",
+        "role": "",
+        "primary": {
+            "dept": "ATLAS Institute",
+            "institution": "University of Colorado Boulder",
+            "city": "Boulder",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47558",
+        "type": "author",
+        "id": "case128",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Lorenzo",
+        "middleInitial": "",
+        "familyName": "Gonzales",
+        "email": "lxg@lanl.gov",
+        "role": "",
+        "primary": {
+            "dept": "Los Alamos National Laboratory",
+            "institution": "Los Alamos National Laboratory",
+            "city": "Los Alamos",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47550",
+        "type": "author",
+        "id": "case129",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Anil",
+        "middleInitial": "",
+        "familyName": "Shankar",
+        "email": "anil@platfora.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Platfora Inc.",
+            "city": "SAN MATEO",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth50071",
+        "type": "author",
+        "id": "case129",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Honray",
+        "middleInitial": "",
+        "familyName": "Lin",
+        "email": "ray@platfora.com",
+        "role": "",
+        "primary": {
+            "dept": "Platfora Inc, San Mateo, California, United States",
+            "institution": "Platfora Inc",
+            "city": "San Mateo",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47595",
+        "type": "author",
+        "id": "case129",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Hans-Frederick",
+        "middleInitial": "",
+        "familyName": "Brown",
+        "email": "hans@platfora.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Platfora Inc",
+            "city": "San Mateo",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth25314",
+        "type": "author",
+        "id": "case129",
+        "venue": "casestudy",
+        "rank": 4,
+        "givenName": "Colson Rice",
+        "middleInitial": "",
+        "familyName": "Rice",
+        "email": "colrice@indiana.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Indiana University Bloomington",
+            "city": "Bloomington",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth45074",
+        "type": "author",
+        "id": "case131",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Wolfgang",
+        "middleInitial": "",
+        "familyName": "Beer",
+        "email": "wolfgang.beer@scch.at",
+        "role": "",
+        "primary": {
+            "dept": "Software Competence Center Hagenberg GmbH",
+            "institution": "Software Analytics and Evolution",
+            "city": "Hagenberg",
+            "country": "Austria"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47610",
+        "type": "author",
+        "id": "case131",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Christian",
+        "middleInitial": "",
+        "familyName": "Salomon",
+        "email": "christian.salomon@scch.at",
+        "role": "",
+        "primary": {
+            "dept": "Software Competence Center Hagenberg GmbH",
+            "institution": "Software Analytics and Evolution",
+            "city": "Hagenberg",
+            "country": "Austria"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47611",
+        "type": "author",
+        "id": "case131",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Mario",
+        "middleInitial": "",
+        "familyName": "Winterer",
+        "email": "mario.winterer@scch.at",
+        "role": "",
+        "primary": {
+            "dept": "Software Competence Center Hagenberg GmbH",
+            "institution": "Software Analytics and Evolution",
+            "city": "Hagenberg",
+            "country": "Austria"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47612",
+        "type": "author",
+        "id": "case131",
+        "venue": "casestudy",
+        "rank": 4,
+        "givenName": "Karl",
+        "middleInitial": "",
+        "familyName": "Putzhammer",
+        "email": "putzhammer@acousta.at",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Acousta Engineering",
+            "city": "Salzburg",
+            "country": "Austria"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47613",
+        "type": "author",
+        "id": "case131",
+        "venue": "casestudy",
+        "rank": 5,
+        "givenName": "Bernhard",
+        "middleInitial": "",
+        "familyName": "Schauer",
+        "email": "schauer@acousta.at",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Acousta Engineering",
+            "city": "Salzburg",
+            "country": "Austria"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47614",
+        "type": "author",
+        "id": "case131",
+        "venue": "casestudy",
+        "rank": 6,
+        "givenName": "Thomas",
+        "middleInitial": "",
+        "familyName": "Rechberger",
+        "email": "rechberger@acousta.at",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Acousta Engineering",
+            "city": "Salzburg",
+            "country": "Austria"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1864",
+        "type": "author",
+        "id": "case133",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Umer",
+        "middleInitial": "",
+        "familyName": "Farooq",
+        "email": "umfarooq@microsoft.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Microsoft Corporation",
+            "city": "Redmond",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth46241",
+        "type": "author",
+        "id": "case133",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Joseph",
+        "middleInitial": "T",
+        "familyName": "Munko",
+        "email": "jmunko@microsoft.com",
+        "role": "",
+        "primary": {
+            "dept": "Operating Systems Group User Research",
+            "institution": "Microsoft Corporation",
+            "city": "Redmond",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1960",
+        "type": "author",
+        "id": "case134",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Helena",
+        "middleInitial": "M.",
+        "familyName": "Mentis",
+        "email": "mentis@umbc.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Maryland, Baltimore County",
+            "city": "Baltimore",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6210",
+        "type": "author",
+        "id": "case134",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Kenton",
+        "middleInitial": "P",
+        "familyName": "O'Hara",
+        "email": "oharakenton@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Microsoft Research",
+            "city": "Cambridge",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47673",
+        "type": "author",
+        "id": "case134",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Gerardo",
+        "middleInitial": "",
+        "familyName": "Gonzalez",
+        "email": "gerardo.gonzalez@kcl.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "Dept. of Biomedical Engineering",
+            "institution": "King's College, London",
+            "city": "London",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1515",
+        "type": "author",
+        "id": "case134",
+        "venue": "casestudy",
+        "rank": 4,
+        "givenName": "Abigail",
+        "middleInitial": "",
+        "familyName": "Sellen",
+        "email": "asellen@microsoft.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Microsoft Research Cambridge",
+            "city": "Cambridge",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth31452",
+        "type": "author",
+        "id": "case134",
+        "venue": "casestudy",
+        "rank": 5,
+        "givenName": "Robert",
+        "middleInitial": "",
+        "familyName": "Corish",
+        "email": "rcorish@microsoft.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Microsoft Research",
+            "city": "Cambridge",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47674",
+        "type": "author",
+        "id": "case134",
+        "venue": "casestudy",
+        "rank": 6,
+        "givenName": "Antonio",
+        "middleInitial": "",
+        "familyName": "Criminisi",
+        "email": "antcrim@microsoft.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Microsoft Research Cambridge",
+            "city": "Cambridge",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47675",
+        "type": "author",
+        "id": "case134",
+        "venue": "casestudy",
+        "rank": 7,
+        "givenName": "Rikin",
+        "middleInitial": "",
+        "familyName": "Trivedi",
+        "email": "rikin.trivedi@addenbrookes.nhs.uk",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Addenbrookes Hospital",
+            "city": "Cambridge",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth45990",
+        "type": "author",
+        "id": "case134",
+        "venue": "casestudy",
+        "rank": 8,
+        "givenName": "Pierre",
+        "middleInitial": "",
+        "familyName": "Theodore",
+        "email": "pierre.theodore@ucsfmedctr.org",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of California San Francisco Medical Center",
+            "city": "San Francisco",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47632",
+        "type": "author",
+        "id": "case136",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "HeeJeong",
+        "middleInitial": "",
+        "familyName": "Son",
+        "email": "son.hee@navercorp.com",
+        "role": "",
+        "primary": {
+            "dept": "UX Department",
+            "institution": "Naver Corp",
             "city": "Seongnam-si",
             "country": "Korea, Republic of"
         },
@@ -207,18 +672,19 @@
         }
     },
     {
-        "authorId": "auth39715",
+        "authorId": "auth47633",
         "type": "author",
-        "id": "case118",
+        "id": "case136",
         "venue": "casestudy",
         "rank": 2,
-        "givenName": "Sun",
-        "familyName": "Lee",
-        "email": "sun.lee@navercorp.com",
+        "givenName": "Hyunsoo",
+        "middleInitial": "",
+        "familyName": "Kim",
+        "email": "hyunsoo.kim@navercorp.com",
         "role": "",
         "primary": {
-            "dept": "Design Research Lab.",
-            "institution": "Naver Corp.",
+            "dept": "UX Department",
+            "institution": "Naver Corp",
             "city": "Seongnam-si",
             "country": "Korea, Republic of"
         },
@@ -232,15 +698,16 @@
     {
         "authorId": "auth42509",
         "type": "author",
-        "id": "case118",
+        "id": "case136",
         "venue": "casestudy",
         "rank": 3,
         "givenName": "Hyojung",
+        "middleInitial": "",
         "familyName": "Kim",
         "email": "kim.hyojung@navercorp.com",
         "role": "",
         "primary": {
-            "dept": "Design Research Lab.",
+            "dept": "UX Department, Naver Corp., Seongnam-si, Korea, Republic of",
             "institution": "Naver Corp.",
             "city": "Seongnam-si",
             "country": "Korea, Republic of"
@@ -253,20 +720,21 @@
         }
     },
     {
-        "authorId": "auth39544",
+        "authorId": "auth12663",
         "type": "author",
-        "id": "case138",
+        "id": "case137",
         "venue": "casestudy",
         "rank": 1,
-        "givenName": "Connor",
-        "familyName": "Upton",
-        "email": "connor.upton@intel.com",
+        "givenName": "Andrea",
+        "middleInitial": "",
+        "familyName": "Taylor",
+        "email": "A.Taylor@gsa.ac.uk",
         "role": "",
         "primary": {
-            "dept": "Cloud Services Lab",
-            "institution": "Intel Labs Europe",
-            "city": "Leixlip",
-            "country": "Ireland"
+            "dept": "",
+            "institution": "Glasgow School of Art",
+            "city": "Glasgow",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -276,66 +744,21 @@
         }
     },
     {
-        "authorId": "auth39770",
+        "authorId": "auth47638",
         "type": "author",
-        "id": "case138",
-        "venue": "casestudy",
-        "rank": 2,
-        "givenName": "Fergus",
-        "familyName": "Quilligan",
-        "email": "fergus.quilligan@intel.com",
-        "role": "",
-        "primary": {
-            "dept": "Irish Centre for Manufacturing Research",
-            "institution": "Intel",
-            "city": "Leixlip",
-            "country": "Ireland"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth18768",
-        "type": "author",
-        "id": "case147",
-        "venue": "casestudy",
-        "rank": 1,
-        "givenName": "Vicki",
-        "familyName": "Moulder",
-        "email": "vmoulder@sfu.ca",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Simon Fraser University",
-            "city": "Surrey",
-            "country": "Canada"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth19133",
-        "type": "author",
-        "id": "case147",
+        "id": "case137",
         "venue": "casestudy",
         "rank": 2,
         "givenName": "Lorna",
-        "familyName": "Boschman",
-        "email": "lorna.boschman@gmail.com",
+        "middleInitial": "",
+        "familyName": "Bernard",
+        "email": "Lorna.Bernard@moray.gov.uk",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "University of British Columbia",
-            "city": "Vancouver",
-            "country": "Canada"
+            "institution": "Moray Community Health and Social Care Partnership",
+            "city": "Elgin",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -345,20 +768,21 @@
         }
     },
     {
-        "authorId": "auth3350",
+        "authorId": "auth47639",
         "type": "author",
-        "id": "case147",
+        "id": "case137",
         "venue": "casestudy",
         "rank": 3,
-        "givenName": "Ron",
-        "familyName": "Wakkary",
-        "email": "rwakkary@sfu.ca",
+        "givenName": "Hugh",
+        "middleInitial": "",
+        "familyName": "Pizey",
+        "email": "H.Pizey@gsa.ac.uk",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Simon Fraser University",
-            "city": "Surrey ",
-            "country": "Canada"
+            "institution": "Glasgow School of Art",
+            "city": "Glasgow",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -368,20 +792,21 @@
         }
     },
     {
-        "authorId": "auth8702",
+        "authorId": "auth47640",
         "type": "author",
-        "id": "case147",
+        "id": "case137",
         "venue": "casestudy",
         "rank": 4,
-        "givenName": "William",
-        "familyName": "Odom",
-        "email": "wodom@cs.cmu.edu",
+        "givenName": "Craig",
+        "middleInitial": "",
+        "familyName": "Whittet",
+        "email": "C.Whittet@gsa.ac.uk",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Carnegie Mellon University",
-            "city": "Pittsburgh",
-            "country": "United States"
+            "institution": "Glasgow School of Art",
+            "city": "Glasgow",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -391,20 +816,21 @@
         }
     },
     {
-        "authorId": "auth12782",
+        "authorId": "auth47641",
         "type": "author",
-        "id": "case147",
+        "id": "case137",
         "venue": "casestudy",
         "rank": 5,
-        "givenName": "Stacey",
-        "familyName": "Kuznetsov",
-        "email": "stace@cs.cmu.edu",
+        "givenName": "Samantha",
+        "middleInitial": "",
+        "familyName": "Davies",
+        "email": "Samantha.Davies@chubb.co.uk",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Carnegie Mellon University",
-            "city": "Pittsburgh",
-            "country": "United States"
+            "institution": "Chubb Community Care",
+            "city": "Lancashire",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -414,135 +840,21 @@
         }
     },
     {
-        "authorId": "auth39733",
+        "authorId": "auth47642",
         "type": "author",
-        "id": "case150",
-        "venue": "casestudy",
-        "rank": 1,
-        "givenName": "Katri",
-        "familyName": "Koli",
-        "email": "katri.koli@leadin.fi",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Leadin Inc.",
-            "city": "Tampere",
-            "country": "Finland"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth14054",
-        "type": "author",
-        "id": "case150",
-        "venue": "casestudy",
-        "rank": 2,
-        "givenName": "Tuula",
-        "familyName": "Kärkkäinen",
-        "email": "tuula.karkkainen@gmail.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Leadin Inc.",
-            "city": "Tampere",
-            "country": "Finland"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth11817",
-        "type": "author",
-        "id": "case150",
-        "venue": "casestudy",
-        "rank": 3,
-        "givenName": "Jaakko",
-        "familyName": "Lehikoinen",
-        "email": "jaakko.t.lehikoinen@nokia.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Leadin Inc.",
-            "city": "Tampere",
-            "country": "Finland"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth39747",
-        "type": "author",
-        "id": "case150",
-        "venue": "casestudy",
-        "rank": 4,
-        "givenName": "Tuomo",
-        "familyName": "Pirinen",
-        "email": "tuomo.pirinen@sandvik.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Sandvik Corp.",
-            "city": "Tampere",
-            "country": "Finland"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth39748",
-        "type": "author",
-        "id": "case150",
-        "venue": "casestudy",
-        "rank": 5,
-        "givenName": "Sami",
-        "familyName": "Hanski",
-        "email": "sami.hanski@sandvik.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Sandvik Corp.",
-            "city": "Tampere",
-            "country": "Finland"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth39749",
-        "type": "author",
-        "id": "case150",
+        "id": "case137",
         "venue": "casestudy",
         "rank": 6,
-        "givenName": "Juha",
-        "familyName": "Lassila",
-        "email": "juha.lassila@sandvik.com",
+        "givenName": "David",
+        "middleInitial": "",
+        "familyName": "Hammond",
+        "email": "David.Hammond@chubb.co.uk",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Sandvik Corp.",
-            "city": "Tampere",
-            "country": "Finland"
+            "institution": "Chubb Community Care",
+            "city": "Lancashire",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -552,20 +864,21 @@
         }
     },
     {
-        "authorId": "auth39750",
+        "authorId": "auth47643",
         "type": "author",
-        "id": "case150",
+        "id": "case137",
         "venue": "casestudy",
         "rank": 7,
-        "givenName": "Mikko",
-        "familyName": "Loimusalo",
-        "email": "mikko.loimusalo@sandvik.com",
+        "givenName": "Julian",
+        "middleInitial": "",
+        "familyName": "Edge",
+        "email": "Julian.Edge@chubb.co.uk",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Sandvik Corp.",
-            "city": "Tampere",
-            "country": "Finland"
+            "institution": "Chubb Community Care",
+            "city": "Lancashire",
+            "country": "United Kingdom"
         },
         "secondary": {
             "dept": "",
@@ -575,20 +888,765 @@
         }
     },
     {
-        "authorId": "auth24287",
+        "authorId": "auth29809",
+        "type": "author",
+        "id": "case138",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Avijit",
+        "middleInitial": "",
+        "familyName": "Sengupta",
+        "email": "avijit79@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Department of Information Systems, National University of Singapore",
+            "institution": "Singapore",
+            "city": "Singapore",
+            "country": "Singapore"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth29808",
+        "type": "author",
+        "id": "case138",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Ting Ting, Klarissa",
+        "middleInitial": "",
+        "familyName": "Chang",
+        "email": "changtt@comp.nus.edu.sg",
+        "role": "",
+        "primary": {
+            "dept": "Department of Information Systems",
+            "institution": "National University of SIngapore",
+            "city": "Singapore",
+            "country": "Singapore"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth29767",
+        "type": "author",
+        "id": "case138",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Peng-Hui",
+        "middleInitial": "",
+        "familyName": "Wan",
+        "email": "diswp@nus.edu.sg",
+        "role": "",
+        "primary": {
+            "dept": "Information Systems",
+            "institution": "National University of Singapore",
+            "city": "Singapore",
+            "country": "Singapore"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth39760",
+        "type": "author",
+        "id": "case138",
+        "venue": "casestudy",
+        "rank": 4,
+        "givenName": "Wen Yong",
+        "middleInitial": "",
+        "familyName": "Chua",
+        "email": "wenyong@comp.nus.edu.sg",
+        "role": "",
+        "primary": {
+            "dept": "Information Systems",
+            "institution": "National University of Singapore",
+            "city": "Singapore",
+            "country": "Singapore"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100001",
+        "type": "author",
+        "id": "case138",
+        "venue": "casestudy",
+        "rank": 5,
+        "givenName": "",
+        "middleInitial": "",
+        "familyName": "",
+        "email": "",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth45551",
+        "type": "author",
+        "id": "case139",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Miki",
+        "middleInitial": "",
+        "familyName": "Watanabe",
+        "email": "watanabe.miki@irl.sys.es.osaka-u.ac.jp",
+        "role": "",
+        "primary": {
+            "dept": "Engineering Science/Osaka University/Ishiguro laboratory",
+            "institution": "Osaka University",
+            "city": "Toyonaka",
+            "country": "Japan"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9534",
+        "type": "author",
+        "id": "case139",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Kohei",
+        "middleInitial": "",
+        "familyName": "Ogawa",
+        "email": "k.ogawa@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Engineering Science/Osaka University/Ishiguro laboratory",
+            "institution": "Osaka University",
+            "city": "Toyonaka",
+            "country": "Japan"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth29258",
+        "type": "author",
+        "id": "case139",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Hiroshi",
+        "middleInitial": "",
+        "familyName": "Ishiguro",
+        "email": "ishiguro@sys.es.osaka-u.ac.jp",
+        "role": "",
+        "primary": {
+            "dept": "Engineering Science/Osaka University/Ishiguro Lab",
+            "institution": "Osaka University",
+            "city": "Toyonaka",
+            "country": "Japan"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth46063",
+        "type": "author",
+        "id": "case140",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Sung Woo",
+        "middleInitial": "",
+        "familyName": "Kim",
+        "email": "caerang@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Graduate School of TechoDesign",
+            "institution": "Kookmin University",
+            "city": "Seoul",
+            "country": "Republic of Korea"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47676",
+        "type": "author",
+        "id": "case140",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "",
+        "middleInitial": "",
+        "familyName": "",
+        "email": "eunhye7070@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Graduate School of Techno Design",
+            "institution": "Kookmin University",
+            "city": "Seoul",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47677",
+        "type": "author",
+        "id": "case140",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "YAE EUN",
+        "middleInitial": "",
+        "familyName": "LEE",
+        "email": "yenn2201@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Graduate School of Techno Design",
+            "institution": "Kookmin University",
+            "city": "Seoul",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2008",
+        "type": "author",
+        "id": "case147",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Hiroshi",
+        "middleInitial": "",
+        "familyName": "Ishii",
+        "email": "ishii@media.mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "MIT Media Lab",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth16013",
+        "type": "author",
+        "id": "case147",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Daniel",
+        "middleInitial": "",
+        "familyName": "Leithinger",
+        "email": "daniell@media.mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "MIT Media Lab",
+            "institution": "MIT",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth15323",
+        "type": "author",
+        "id": "case147",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Sean",
+        "middleInitial": "",
+        "familyName": "Follmer",
+        "email": "sfollmer@media.mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "MIT Media Lab, Cambridge",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth11607",
+        "type": "author",
+        "id": "case147",
+        "venue": "casestudy",
+        "rank": 4,
+        "givenName": "Amit",
+        "middleInitial": "",
+        "familyName": "Zoran",
+        "email": "amitz@media.mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "MIT Media Lab",
+            "institution": "MIT",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth39102",
+        "type": "author",
+        "id": "case147",
+        "venue": "casestudy",
+        "rank": 5,
+        "givenName": "Philipp",
+        "middleInitial": "",
+        "familyName": "Schoessler",
+        "email": "phil_s@media.mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "MIT Media Lab",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47735",
+        "type": "author",
+        "id": "case147",
+        "venue": "casestudy",
+        "rank": 6,
+        "givenName": "Jared",
+        "middleInitial": "",
+        "familyName": "Counts",
+        "email": "jcounts@mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "MIT Media Lab",
+            "institution": "MIT",
+            "city": "Cambridge",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47761",
+        "type": "author",
+        "id": "case153",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Rasmus",
+        "middleInitial": "",
+        "familyName": "Prentow",
+        "email": "rprentow@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Computer Science",
+            "institution": "Aalborg University",
+            "city": "Aalborg East",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47762",
+        "type": "author",
+        "id": "case153",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Rasmus",
+        "middleInitial": "",
+        "familyName": "Steiniche",
+        "email": "rs@pay-e-safe.com",
+        "role": "",
+        "primary": {
+            "dept": "Computer Science",
+            "institution": "Aalborg University",
+            "city": "Aalborg East",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47763",
+        "type": "author",
+        "id": "case153",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Simone",
+        "middleInitial": "D",
+        "familyName": "Johansen",
+        "email": "sdj@pay-e-safe.com",
+        "role": "",
+        "primary": {
+            "dept": "Electronic Systems",
+            "institution": "aalborg University",
+            "city": "aalborg East",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth10250",
+        "type": "author",
+        "id": "case153",
+        "venue": "casestudy",
+        "rank": 4,
+        "givenName": "Jeni",
+        "middleInitial": "",
+        "familyName": "Paay",
+        "email": "jeni@cs.aau.dk",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Aalborg University",
+            "city": "Aalborg",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47764",
+        "type": "author",
+        "id": "case153",
+        "venue": "casestudy",
+        "rank": 5,
+        "givenName": "Ivan",
+        "middleInitial": "",
+        "familyName": "Aaen",
+        "email": "ivan@cs.aau.dk",
+        "role": "",
+        "primary": {
+            "dept": "Computer Science",
+            "institution": "Aalborg University",
+            "city": "Aalborg East",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1622",
+        "type": "author",
+        "id": "case153",
+        "venue": "casestudy",
+        "rank": 6,
+        "givenName": "Jesper",
+        "middleInitial": "",
+        "familyName": "Kjeldskov",
+        "email": "jesper@cs.aau.dk",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Aalborg University",
+            "city": "Aalborg",
+            "country": "Denmark"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47765",
+        "type": "author",
+        "id": "case155",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Florent",
+        "middleInitial": "",
+        "familyName": "Taralle",
+        "email": "florent.taralle@mines-paristech.fr",
+        "role": "",
+        "primary": {
+            "dept": "Sagem Defense et Sécurité",
+            "institution": "Sagem Defense et Sécurité",
+            "city": "Massy",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "MINES-Paristech",
+            "institution": "MINES-Paristech",
+            "city": "Paris",
+            "country": "France"
+        }
+    },
+    {
+        "authorId": "auth32201",
+        "type": "author",
+        "id": "case155",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Alexis",
+        "middleInitial": "",
+        "familyName": "Paljic",
+        "email": "alexis.paljic@mines-paristech.fr",
+        "role": "",
+        "primary": {
+            "dept": "CAOR",
+            "institution": "Mines ParisTech",
+            "city": "Paris",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth34795",
+        "type": "author",
+        "id": "case155",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Sotiris",
+        "middleInitial": "",
+        "familyName": "Manitsaris",
+        "email": "sotiris.manitsaris@mines-paristech.fr",
+        "role": "",
+        "primary": {
+            "dept": "Mathématiques et Systèmes/MINES ParisTech/Robotics Lab",
+            "institution": "Ecole Nationale Supérieure des Mines de Paris",
+            "city": "Paris",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47884",
+        "type": "author",
+        "id": "case155",
+        "venue": "casestudy",
+        "rank": 4,
+        "givenName": "Jordane",
+        "middleInitial": "",
+        "familyName": "Grenier",
+        "email": "jordane.grenier@sagem.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Sagem Défense et Sécurité",
+            "city": "Massy",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47885",
+        "type": "author",
+        "id": "case155",
+        "venue": "casestudy",
+        "rank": 5,
+        "givenName": "Christophe",
+        "middleInitial": "",
+        "familyName": "Guettier",
+        "email": "christophe.guettier@sagem.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Sagem Défense et Sécurité",
+            "city": "Massy",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth31311",
+        "type": "author",
+        "id": "case156",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Paweł",
+        "middleInitial": "W",
+        "familyName": "Woźniak",
+        "email": "pawelw@chalmers.se",
+        "role": "",
+        "primary": {
+            "dept": "t2i Interaction Laboratory",
+            "institution": "Chalmers University of Technology",
+            "city": "Gothenburg",
+            "country": "Sweden"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47781",
+        "type": "author",
+        "id": "case156",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Robert",
+        "middleInitial": "",
+        "familyName": "Valton",
+        "email": "robert.valton@volvo.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Volvo Group Telematics",
+            "city": "Gothenburg",
+            "country": "Sweden"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth3938",
+        "type": "author",
+        "id": "case156",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Morten",
+        "middleInitial": "",
+        "familyName": "Fjeld",
+        "email": "fjeld@chalmers.se",
+        "role": "",
+        "primary": {
+            "dept": "t2i Lab",
+            "institution": "Chalmers University of Technology",
+            "city": "Gothenburg",
+            "country": "Sweden"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47792",
         "type": "author",
         "id": "case163",
         "venue": "casestudy",
         "rank": 1,
-        "givenName": "Lilia",
-        "familyName": "Villafuerte",
-        "email": "lilia@villafuerte.info",
+        "givenName": "Florent",
+        "middleInitial": "",
+        "familyName": "Levillain",
+        "email": "flevillain@mac.com",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "LABoral Art and Industrial Production Center",
-            "city": "Gijón",
-            "country": "Spain"
+            "dept": "CHART-LUTIN EA 4004",
+            "institution": "Université Paris 8",
+            "city": "Paris",
+            "country": "France"
         },
         "secondary": {
             "dept": "",
@@ -598,20 +1656,21 @@
         }
     },
     {
-        "authorId": "auth31606",
+        "authorId": "auth47822",
         "type": "author",
         "id": "case163",
         "venue": "casestudy",
         "rank": 2,
-        "givenName": "Laura",
-        "familyName": "Malinverni",
-        "email": "malinverni.laura@gmail.com",
+        "givenName": "Sébastien",
+        "middleInitial": "",
+        "familyName": "Lefort",
+        "email": "sebastien.lefort@lip6.fr",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Universitat Pompeu Fabra",
-            "city": "Barcelona",
-            "country": "Spain"
+            "dept": "create",
+            "institution": "Université Paris 6",
+            "city": "Paris",
+            "country": "France"
         },
         "secondary": {
             "dept": "",
@@ -621,65 +1680,68 @@
         }
     },
     {
-        "authorId": "auth39991",
+        "authorId": "auth47823",
         "type": "author",
-        "id": "case170",
-        "venue": "casestudy",
-        "rank": 1,
-        "givenName": "Kolina",
-        "familyName": "Koltai",
-        "email": "kolina.koltai.31@my.csun.edu",
-        "role": "",
-        "primary": {
-            "dept": "Systems Engineering Research Laboratory",
-            "institution": "California State University, Northridge",
-            "city": "Northridge",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth39990",
-        "type": "author",
-        "id": "case170",
-        "venue": "casestudy",
-        "rank": 2,
-        "givenName": "Nhut",
-        "familyName": "Ho",
-        "email": "nhut.ho.51@csun.edu",
-        "role": "",
-        "primary": {
-            "dept": "Systems Engineering Research Laboratory",
-            "institution": "California State University, Northridge",
-            "city": "Northridge",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth40151",
-        "type": "author",
-        "id": "case170",
+        "id": "case163",
         "venue": "casestudy",
         "rank": 3,
-        "givenName": "Gina",
-        "familyName": "Masequesmay",
-        "email": "gina.masequesmay@csun.edu",
+        "givenName": "Elisabetta",
+        "middleInitial": "",
+        "familyName": "Zibetti",
+        "email": "ezibetti@univ-paris8.fr",
         "role": "",
         "primary": {
-            "dept": "Systems Engineering Research Laboratory",
-            "institution": "California State University, Northridge",
-            "city": "Northridge",
+            "dept": "create",
+            "institution": "Université Paris 8",
+            "city": "Paris",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47834",
+        "type": "author",
+        "id": "case167",
+        "venue": "casestudy",
+        "rank": 1,
+        "givenName": "Kristen",
+        "middleInitial": "Pilner",
+        "familyName": "Blair",
+        "email": "kpilner@stanford.edu",
+        "role": "",
+        "primary": {
+            "dept": "Stanford Graduate School Of Education",
+            "institution": "Stanford University",
+            "city": "Stanford",
+            "country": "94305"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47910",
+        "type": "author",
+        "id": "case167",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Jay",
+        "middleInitial": "",
+        "familyName": "Pfaffman",
+        "email": "pfaffman@stanford.edu",
+        "role": "",
+        "primary": {
+            "dept": "Stanford Graduate School of Education",
+            "institution": "Stanford University",
+            "city": "Stanford",
             "country": "United States"
         },
         "secondary": {
@@ -690,19 +1752,44 @@
         }
     },
     {
-        "authorId": "auth39915",
+        "authorId": "auth47911",
         "type": "author",
-        "id": "case170",
+        "id": "case167",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Maria",
+        "middleInitial": "",
+        "familyName": "Cutumisu",
+        "email": "cutumisu@stanford.edu",
+        "role": "",
+        "primary": {
+            "dept": "Stanford Graduate School of Education",
+            "institution": "Stanford University",
+            "city": "Stanford",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47912",
+        "type": "author",
+        "id": "case167",
         "venue": "casestudy",
         "rank": 4,
-        "givenName": "David",
-        "familyName": "Niedober",
-        "email": "david.niedober.788@my.csun.edu",
+        "givenName": "Nicole",
+        "middleInitial": "",
+        "familyName": "Hallinen",
+        "email": "hallinen@stanford.edu",
         "role": "",
         "primary": {
-            "dept": "Systems Engineering Research Laboratory",
-            "institution": "California State University, Northridge",
-            "city": "Northridge",
+            "dept": "Stanford Graduate School of Education",
+            "institution": "Stanford University",
+            "city": "Stanford",
             "country": "United States"
         },
         "secondary": {
@@ -713,19 +1800,20 @@
         }
     },
     {
-        "authorId": "auth40152",
+        "authorId": "auth47913",
         "type": "author",
-        "id": "case170",
+        "id": "case167",
         "venue": "casestudy",
         "rank": 5,
-        "givenName": "Mark",
-        "familyName": "Skoog",
-        "email": "mark.a.skoog@nasa.gov",
+        "givenName": "Daniel",
+        "middleInitial": "L",
+        "familyName": "Schwartz",
+        "email": "daniel.schwartz@stanford.edu",
         "role": "",
         "primary": {
-            "dept": "NASA Dryden Flight Research Center, CA",
-            "institution": "NASA",
-            "city": "Edwards AFB",
+            "dept": "Stanford Graduate School of Education",
+            "institution": "Stanford University",
+            "city": "Stanford",
             "country": "United States"
         },
         "secondary": {
@@ -736,157 +1824,20 @@
         }
     },
     {
-        "authorId": "auth40154",
+        "authorId": "auth47875",
         "type": "author",
-        "id": "case170",
-        "venue": "casestudy",
-        "rank": 6,
-        "givenName": "Walter",
-        "familyName": "Johnson",
-        "email": "walter.johnson@nasa.gov",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "NASA Ames Research Center",
-            "city": "Mountain View",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth40153",
-        "type": "author",
-        "id": "case170",
-        "venue": "casestudy",
-        "rank": 7,
-        "givenName": "Artemio",
-        "familyName": "Cacanindin",
-        "email": "artemio.cacanindin@us.af.mil",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Air Force Flight Test Center",
-            "city": "Edwards",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth42516",
-        "type": "author",
-        "id": "case170",
-        "venue": "casestudy",
-        "rank": 8,
-        "givenName": "Joseph",
-        "familyName": "Lyons",
-        "email": "joseph.lyons.6@us.af.mil",
-        "role": "",
-        "primary": {
-            "dept": "Human Trust and Interaction Division",
-            "institution": "Air Force Research Laboratory",
-            "city": "Wright-Patterson AFB",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth42517",
-        "type": "author",
-        "id": "case173",
+        "id": "case183",
         "venue": "casestudy",
         "rank": 1,
-        "givenName": "Victoria",
-        "familyName": "Schwanda Sosik",
-        "email": "sosik@cs.cornell.edu",
+        "givenName": "Francesca",
+        "middleInitial": "",
+        "familyName": "Samsel",
+        "email": "figs@cat.utexas.edu",
         "role": "",
         "primary": {
-            "dept": "Cornell University, Ithaca, New York, United States",
-            "institution": "Cornell University",
-            "city": "Ithaca",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth38860",
-        "type": "author",
-        "id": "case173",
-        "venue": "casestudy",
-        "rank": 2,
-        "givenName": "Elie",
-        "familyName": "Bursztein",
-        "email": "elieb@google.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Mountain View",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth2938",
-        "type": "author",
-        "id": "case173",
-        "venue": "casestudy",
-        "rank": 3,
-        "givenName": "Sunny",
-        "familyName": "Consolvo",
-        "email": "sconsolvo@google.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Mountain View",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth9100",
-        "type": "author",
-        "id": "case173",
-        "venue": "casestudy",
-        "rank": 4,
-        "givenName": "David",
-        "familyName": "Huffaker",
-        "email": "huffaker@google.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Mountain View",
+            "dept": "Center for Agile Technology",
+            "institution": "University of Texas at Austin",
+            "city": "Austin",
             "country": "USA"
         },
         "secondary": {
@@ -897,19 +1848,92 @@
         }
     },
     {
-        "authorId": "auth13241",
+        "authorId": "auth47923",
         "type": "author",
-        "id": "case173",
+        "id": "case183",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Mark",
+        "middleInitial": "",
+        "familyName": "Petersen",
+        "email": "mpetersen@lanl.gov",
+        "role": "",
+        "primary": {
+            "dept": "COSIM",
+            "institution": "Los Alamos National Lab",
+            "city": "Los Alamos",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47922",
+        "type": "author",
+        "id": "case183",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Terece",
+        "middleInitial": "",
+        "familyName": "Geld",
+        "email": "tgeld@cat.utexas.edu",
+        "role": "",
+        "primary": {
+            "dept": "Center for Agile Technology",
+            "institution": "University of Texas at Austin",
+            "city": "Austin",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47924",
+        "type": "author",
+        "id": "case183",
+        "venue": "casestudy",
+        "rank": 4,
+        "givenName": "Gerg",
+        "middleInitial": "",
+        "familyName": "Abram",
+        "email": "gda@tacc.utexas.edu",
+        "role": "",
+        "primary": {
+            "dept": "TACC",
+            "institution": "University of Texas",
+            "city": "Austin",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47925",
+        "type": "author",
+        "id": "case183",
         "venue": "casestudy",
         "rank": 5,
-        "givenName": "Gueorgi",
-        "familyName": "Kossinets",
-        "email": "gkossinets@gmail.com",
+        "givenName": "Joanne",
+        "middleInitial": "",
+        "familyName": "Wendelberger",
+        "email": "joanne@lanl.gov",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Mountain View",
+            "dept": "Statistic Sciences Group",
+            "institution": "Los Alamos National Lab",
+            "city": "Los Alamos",
             "country": "United States"
         },
         "secondary": {
@@ -920,19 +1944,20 @@
         }
     },
     {
-        "authorId": "auth39962",
+        "authorId": "auth47926",
         "type": "author",
-        "id": "case173",
+        "id": "case183",
         "venue": "casestudy",
         "rank": 6,
-        "givenName": "Kerwell",
-        "familyName": "Liao",
-        "email": "kerwell@google.com",
+        "givenName": "James",
+        "middleInitial": "",
+        "familyName": "Ahrens",
+        "email": "ahrens@lanl.gov",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Mountain View",
+            "dept": "Data Science at Scale",
+            "institution": "Los Alamos National lab",
+            "city": "Los Alamos",
             "country": "United States"
         },
         "secondary": {
@@ -943,65 +1968,140 @@
         }
     },
     {
-        "authorId": "auth39963",
+        "authorId": "auth12896",
         "type": "author",
-        "id": "case173",
-        "venue": "casestudy",
-        "rank": 7,
-        "givenName": "Paul",
-        "familyName": "McDonald",
-        "email": "pmcdonald@google.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Mountain View",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth31522",
-        "type": "author",
-        "id": "case173",
-        "venue": "casestudy",
-        "rank": 8,
-        "givenName": "Aaron",
-        "familyName": "Sedley",
-        "email": "asedley@google.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Mountain View",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth11429",
-        "type": "author",
-        "id": "case176",
+        "id": "case191",
         "venue": "casestudy",
         "rank": 1,
-        "givenName": "Susan",
-        "familyName": "Dray",
-        "email": "susan.dray@dray.com",
+        "givenName": "Sudheendra",
+        "middleInitial": "",
+        "familyName": "Hangal",
+        "email": "hangal@cs.stanford.edu",
+        "role": "",
+        "primary": {
+            "dept": "Computer Science",
+            "institution": "Ashoka University",
+            "city": "Haryana",
+            "country": "India"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47787",
+        "type": "author",
+        "id": "case191",
+        "venue": "casestudy",
+        "rank": 2,
+        "givenName": "Vihari",
+        "middleInitial": "",
+        "familyName": "Piratla",
+        "email": "viharipiratla@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Research",
+            "institution": "Amuse labs",
+            "city": "Dharward",
+            "country": "India"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth30319",
+        "type": "author",
+        "id": "case191",
+        "venue": "casestudy",
+        "rank": 3,
+        "givenName": "Chaiyasit",
+        "middleInitial": "",
+        "familyName": "Manovit",
+        "email": "sit@ixoratech.com",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Dray & Associates, Inc.",
-            "city": "Oakland",
+            "institution": "iXora Technologies",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth24413",
+        "type": "author",
+        "id": "case191",
+        "venue": "casestudy",
+        "rank": 4,
+        "givenName": "Peter",
+        "middleInitial": "",
+        "familyName": "Chan",
+        "email": "pchan3@stanford.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Stanford University",
+            "city": "Stanford",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth18278",
+        "type": "author",
+        "id": "case191",
+        "venue": "casestudy",
+        "rank": 5,
+        "givenName": "Monica",
+        "middleInitial": "",
+        "familyName": "Lam",
+        "email": "lam@cs.stanford.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Stanford University",
+            "city": "Stanford",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47916",
+        "type": "author",
+        "id": "case191",
+        "venue": "casestudy",
+        "rank": 6,
+        "givenName": "Glynn",
+        "middleInitial": "",
+        "familyName": "Edwards",
+        "email": "gedwards@stanford.edu",
+        "role": "",
+        "primary": {
+            "dept": "Stanford University Libraries",
+            "institution": "Stanford University",
+            "city": "Stanford",
             "country": "United States"
         },
         "secondary": {

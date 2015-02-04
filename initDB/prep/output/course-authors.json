@@ -1,11 +1,684 @@
 [
     {
-        "authorId": "auth1711",
+        "authorId": "auth31318",
         "type": "author",
         "id": "crs100",
         "venue": "course",
         "rank": 1,
+        "givenName": "Stephanie",
+        "middleInitial": "",
+        "familyName": "Foehrenbach",
+        "email": "stephaniefoehrenbach@googlemail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Zuehlke Engineering AG",
+            "city": "Schlieren",
+            "country": "Switzerland"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1769",
+        "type": "author",
+        "id": "crs101",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Michael",
+        "middleInitial": "J",
+        "familyName": "Lyons",
+        "email": "michael.lyons@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Ritsumeikan University",
+            "city": "Kyoto",
+            "country": "Japan"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1763",
+        "type": "author",
+        "id": "crs101",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Sidney",
+        "middleInitial": "S",
+        "familyName": "Fels",
+        "email": "ssfels@ece.ubc.ca",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of British Columbia",
+            "city": "Vancouver",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1111",
+        "type": "author",
+        "id": "crs103",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Jeff",
+        "middleInitial": "A",
+        "familyName": "Johnson",
+        "email": "jeffjohnson@uiwizards.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "UI Wizards, Inc",
+            "city": "San Francisco",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth5922",
+        "type": "author",
+        "id": "crs104",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Kathy",
+        "middleInitial": "K",
+        "familyName": "Baxter",
+        "email": "kathyb@google.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13495",
+        "type": "author",
+        "id": "crs104",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Anna",
+        "middleInitial": "",
+        "familyName": "Avrekh",
+        "email": "annaa@google.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Google Inc",
+            "city": "New York City",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth31777",
+        "type": "author",
+        "id": "crs104",
+        "venue": "course",
+        "rank": 3,
+        "givenName": "Bob",
+        "middleInitial": "",
+        "familyName": "Evans",
+        "email": "bobevans@google.com",
+        "role": "",
+        "primary": {
+            "dept": "User Experience Research Infrastructure",
+            "institution": "Google, Inc.",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1028",
+        "type": "author",
+        "id": "crs105",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Jodi",
+        "middleInitial": "",
+        "familyName": "Forlizzi",
+        "email": "forlizzi@cs.cmu.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Carnegie Mellon University",
+            "city": "Pittsburgh",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1917",
+        "type": "author",
+        "id": "crs105",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "John",
+        "middleInitial": "",
+        "familyName": "Zimmerman",
+        "email": "johnz@cs.cmu.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Carnegie Mellon University",
+            "city": "Pittsburgh",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth40493",
+        "type": "author",
+        "id": "crs106",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Sarah",
+        "middleInitial": "E",
+        "familyName": "Garcia",
+        "email": "sarah@uegroup.com",
+        "role": "",
+        "primary": {
+            "dept": "Research",
+            "institution": "UEGroup",
+            "city": "San Jose",
+            "country": "USA"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100001",
+        "type": "author",
+        "id": "crs107",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Jeff",
+        "middleInitial": "A",
+        "familyName": "Johnson",
+        "email": "jjohnson@uiwizards.com",
+        "role": "",
+        "primary": {
+            "dept": "UI Wizards, Inc, San Francisco, California, United States",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "Wiser Usability, Inc., Cupertino, California, United States",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100002",
+        "type": "author",
+        "id": "crs107",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "",
+        "middleInitial": "",
+        "familyName": "Johnson",
+        "email": "jjohnson@uiwizards.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100003",
+        "type": "author",
+        "id": "crs107",
+        "venue": "course",
+        "rank": 3,
+        "givenName": "",
+        "middleInitial": "",
+        "familyName": "Johnson",
+        "email": "jjohnson@uiwizards.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100004",
+        "type": "author",
+        "id": "crs107",
+        "venue": "course",
+        "rank": 4,
+        "givenName": "",
+        "middleInitial": "",
+        "familyName": "Johnson",
+        "email": "jjohnson@uiwizards.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100005",
+        "type": "author",
+        "id": "crs107",
+        "venue": "course",
+        "rank": 5,
+        "givenName": "",
+        "middleInitial": "",
+        "familyName": "Johnson",
+        "email": "jjohnson@uiwizards.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100006",
+        "type": "author",
+        "id": "crs107",
+        "venue": "course",
+        "rank": 6,
+        "givenName": "",
+        "middleInitial": "",
+        "familyName": "Johnson",
+        "email": "jjohnson@uiwizards.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100007",
+        "type": "author",
+        "id": "crs107",
+        "venue": "course",
+        "rank": 7,
+        "givenName": "",
+        "middleInitial": "",
+        "familyName": "Johnson",
+        "email": "jjohnson@uiwizards.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100008",
+        "type": "author",
+        "id": "crs107",
+        "venue": "course",
+        "rank": 8,
+        "givenName": "",
+        "middleInitial": "",
+        "familyName": "Johnson",
+        "email": "jjohnson@uiwizards.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100009",
+        "type": "author",
+        "id": "crs107",
+        "venue": "course",
+        "rank": 9,
+        "givenName": "",
+        "middleInitial": "",
+        "familyName": "Johnson",
+        "email": "jjohnson@uiwizards.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100010",
+        "type": "author",
+        "id": "crs107",
+        "venue": "course",
+        "rank": 10,
+        "givenName": "",
+        "middleInitial": "",
+        "familyName": "Johnson",
+        "email": "jjohnson@uiwizards.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1111",
+        "type": "author",
+        "id": "crs108",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Jeff",
+        "middleInitial": "A",
+        "familyName": "Johnson",
+        "email": "jeffjohnson@uiwizards.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Wiser Usability, Inc.",
+            "city": "Cupertino",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "UI Wizards, Inc",
+            "city": "San Francisco",
+            "country": "United States"
+        }
+    },
+    {
+        "authorId": "auth9858",
+        "type": "author",
+        "id": "crs109",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Guy",
+        "middleInitial": "A",
+        "familyName": "Boy",
+        "email": "gboy@fit.edu",
+        "role": "",
+        "primary": {
+            "dept": "Human Centered Design Institute",
+            "institution": "Florida Institute of Technology",
+            "city": "Melbourne",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "NASA Kennedy Space Center",
+            "city": "Kennedy Space Center",
+            "country": "United States"
+        }
+    },
+    {
+        "authorId": "auth47658",
+        "type": "author",
+        "id": "crs109",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Jeffrey",
+        "middleInitial": "M",
+        "familyName": "Bradshaw",
+        "email": "jbradshaw@ihmc.us",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Florida Institute for Human and Machine Cognition",
+            "city": "Pensacola",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth47659",
+        "type": "author",
+        "id": "crs109",
+        "venue": "course",
+        "rank": 3,
+        "givenName": "Soyeon",
+        "middleInitial": "",
+        "familyName": "Yi",
+        "email": "bicky@kaist.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "International Space University",
+            "city": "Strasbourg",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "International Space University",
+            "city": "Strasbourg",
+            "country": "France"
+        }
+    },
+    {
+        "authorId": "auth29236",
+        "type": "author",
+        "id": "crs110",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Rafael",
+        "middleInitial": "A.",
+        "familyName": "Calvo",
+        "email": "rafael.calvo@sydney.edu.au",
+        "role": "",
+        "primary": {
+            "dept": "School of Electrical and Information Engineering",
+            "institution": "The University of Sydney",
+            "city": "Sydney",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth29254",
+        "type": "author",
+        "id": "crs110",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Dorian",
+        "middleInitial": "",
+        "familyName": "Peters",
+        "email": "dorian.peters@sydney.edu.au",
+        "role": "",
+        "primary": {
+            "dept": "School of Electrical and Information Engineering",
+            "institution": "University of Sydney",
+            "city": "Sydney",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth10834",
+        "type": "author",
+        "id": "crs111",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "David",
+        "middleInitial": "",
+        "familyName": "Geerts",
+        "email": "david.geerts@soc.kuleuven.be",
+        "role": "",
+        "primary": {
+            "dept": "CUO ",
+            "institution": "Social Spaces",
+            "city": "KU Leuven, iMinds",
+            "country": "Belgium"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4740",
+        "type": "author",
+        "id": "crs111",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Pablo",
+        "middleInitial": "",
+        "familyName": "Cesar",
+        "email": "p.s.cesar@cwi.nl",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "CWI (Centrum voor Wiskunde en Informatica)",
+            "city": "Amsterdam",
+            "country": "The Netherlands"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1711",
+        "type": "author",
+        "id": "crs112",
+        "venue": "course",
+        "rank": 1,
         "givenName": "Jonathan",
+        "middleInitial": "",
         "familyName": "Lazar",
         "email": "jlazar@towson.edu",
         "role": "",
@@ -25,16 +698,17 @@
     {
         "authorId": "auth1949",
         "type": "author",
-        "id": "crs100",
+        "id": "crs112",
         "venue": "course",
         "rank": 2,
         "givenName": "Simone",
+        "middleInitial": "D J",
         "familyName": "Barbosa",
-        "email": "simonedjb@gmail.com",
+        "email": "simone@inf.puc-rio.br",
         "role": "",
         "primary": {
-            "dept": "Departamento de Informática",
-            "institution": "Pontifical Catholic University of Rio de Janeiro (PUC-Rio)",
+            "dept": "Informatics Department",
+            "institution": "Pontifical Catholic University of Rio de Janeiro",
             "city": "Rio de Janeiro",
             "country": "Brazil"
         },
@@ -46,181 +720,21 @@
         }
     },
     {
-        "authorId": "auth2854",
-        "type": "author",
-        "id": "crs101",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Jon",
-        "familyName": "Kolko",
-        "email": "jkolko@gmail.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Austin Center for Design",
-            "city": "Austin",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth1111",
-        "type": "author",
-        "id": "crs102",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Jeff",
-        "familyName": "Johnson",
-        "email": "jeffjohnson@uiwizards.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "UI Wizards, Inc",
-            "city": "San Francisco",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "Wiser Usability, Inc.",
-            "city": "Cupertino",
-            "country": "United States"
-        }
-    },
-    {
-        "authorId": "auth9174",
-        "type": "author",
-        "id": "crs105",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "William",
-        "familyName": "Hudson",
-        "email": "william.hudson@syntagm.co.uk",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Syntagm Ltd",
-            "city": "Abingdon",
-            "country": "United Kingdom"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth9174",
-        "type": "author",
-        "id": "crs106",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "William",
-        "familyName": "Hudson",
-        "email": "william.hudson@syntagm.co.uk",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Syntagm Ltd",
-            "city": "Abingdon",
-            "country": "United Kingdom"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth10908",
-        "type": "author",
-        "id": "crs108",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Jim",
-        "familyName": "Parker",
-        "email": "jparker@ucalgary.ca",
-        "role": "",
-        "primary": {
-            "dept": "Digital Media Lab, Art Department",
-            "institution": "University of Calgary",
-            "city": "Calgary",
-            "country": "Canada"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth9096",
-        "type": "author",
-        "id": "crs111",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "I. Scott",
-        "familyName": "MacKenzie",
-        "email": "mack@cse.yorku.ca",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "York University",
-            "city": "Toronto",
-            "country": "Canada"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth5947",
-        "type": "author",
-        "id": "crs111",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "Steven",
-        "familyName": "Castellucci",
-        "email": "stevenc@cse.yorku.ca",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "York University",
-            "city": "Toronto",
-            "country": "Canada"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth1769",
+        "authorId": "auth47620",
         "type": "author",
         "id": "crs113",
         "venue": "course",
         "rank": 1,
-        "givenName": "Michael",
-        "familyName": "Lyons",
-        "email": "michael.lyons@gmail.com",
+        "givenName": "Avi",
+        "middleInitial": "",
+        "familyName": "Parush",
+        "email": "aparush@ie.technion.ac.il",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Ritsumeikan University",
-            "city": "Kyoto",
-            "country": "Japan"
+            "dept": "Faculty of Industrial Management and Engineering",
+            "institution": "Israel Institute of Technology",
+            "city": "Haifa",
+            "country": "Israel"
         },
         "secondary": {
             "dept": "",
@@ -230,66 +744,21 @@
         }
     },
     {
-        "authorId": "auth34980",
-        "type": "author",
-        "id": "crs113",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "Axel",
-        "familyName": "Mulder",
-        "email": "Axel@infusionsystems.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Infusion Systems Ltd.",
-            "city": "Montreal",
-            "country": "Canada"
-        },
-        "secondary": {
-            "dept": "School of Music",
-            "institution": "McGill University",
-            "city": "Montreal",
-            "country": "Canada"
-        }
-    },
-    {
-        "authorId": "auth1763",
-        "type": "author",
-        "id": "crs113",
-        "venue": "course",
-        "rank": 3,
-        "givenName": "Sidney",
-        "familyName": "Fels",
-        "email": "ssfels@ece.ubc.ca",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "University of British Columbia",
-            "city": "Vancouver",
-            "country": "Canada"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth16330",
+        "authorId": "auth3486",
         "type": "author",
         "id": "crs115",
         "venue": "course",
         "rank": 1,
-        "givenName": "David",
-        "familyName": "Sirkin",
-        "email": "sirkin@cdr.stanford.edu",
+        "givenName": "Mark",
+        "middleInitial": "",
+        "familyName": "Billinghurst",
+        "email": "mark.billinghurst@canterbury.ac.nz",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "Stanford University",
-            "city": "Palo Alto",
-            "country": "United States"
+            "dept": "Human Interface Technology Laboratory New Zealand",
+            "institution": "University of Canterbury",
+            "city": "Christchurch",
+            "country": "New Zealand"
         },
         "secondary": {
             "dept": "",
@@ -299,19 +768,20 @@
         }
     },
     {
-        "authorId": "auth1438",
+        "authorId": "auth26425",
         "type": "author",
         "id": "crs115",
         "venue": "course",
         "rank": 2,
-        "givenName": "Wendy",
-        "familyName": "Ju",
-        "email": "wendyju@gmail.com",
+        "givenName": "Dr. Thad",
+        "middleInitial": "",
+        "familyName": "Starner",
+        "email": "thad@gatech.edu",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Stanford University",
-            "city": "Palo Alto",
+            "institution": "Georgia Institute of Technology, Atlanta, United States",
+            "city": "Atlanta",
             "country": "United States"
         },
         "secondary": {
@@ -319,417 +789,27 @@
             "institution": "",
             "city": "",
             "country": ""
-        }
-    },
-    {
-        "authorId": "auth31318",
-        "type": "author",
-        "id": "crs116",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Stephanie",
-        "familyName": "Foehrenbach",
-        "email": "stephaniefoehrenbach@googlemail.com",
-        "role": "",
-        "primary": {
-            "dept": "PUR",
-            "institution": "Zühlke Engineering AG",
-            "city": "Schlieren",
-            "country": "Switzerland"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth1070",
-        "type": "author",
-        "id": "crs121",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Allison",
-        "familyName": "Druin",
-        "email": "allisond@umiacs.umd.edu",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "University of Maryland",
-            "city": "College Park",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth4981",
-        "type": "author",
-        "id": "crs121",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "Jerry",
-        "familyName": "Fails",
-        "email": "failsj@mail.montclair.edu",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Montclair State University",
-            "city": "Montclair",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth9212",
-        "type": "author",
-        "id": "crs121",
-        "venue": "course",
-        "rank": 3,
-        "givenName": "Mona Leigh",
-        "familyName": "Guha",
-        "email": "mona@cs.umd.edu",
-        "role": "",
-        "primary": {
-            "dept": "HCIL",
-            "institution": "University of Maryland",
-            "city": "College Park",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth21847",
-        "type": "author",
-        "id": "crs122",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Javier",
-        "familyName": "Gonzalez-Sanchez",
-        "email": "javiergs@asu.edu",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Arizona State University",
-            "city": "Tempe",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth24093",
-        "type": "author",
-        "id": "crs122",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "Maria Elena",
-        "familyName": "Chavez-Echeagaray",
-        "email": "helenchavez@asu.edu",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Arizona State University",
-            "city": "Tempe",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth36798",
-        "type": "author",
-        "id": "crs122",
-        "venue": "course",
-        "rank": 3,
-        "givenName": "Robert",
-        "familyName": "Atkinson",
-        "email": "robert.atkinson@asu.edu",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Arizona State University",
-            "city": "Tempe",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth1836",
-        "type": "author",
-        "id": "crs122",
-        "venue": "course",
-        "rank": 4,
-        "givenName": "Winslow",
-        "familyName": "Burleson",
-        "email": "winslow.burleson@asu.edu",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Arizona State University",
-            "city": "Tempe",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth10834",
-        "type": "author",
-        "id": "crs123",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "David",
-        "familyName": "Geerts",
-        "email": "david.geerts@soc.kuleuven.be",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "KU Leuven - University of Leuven",
-            "city": "Leuven",
-            "country": "Belgium"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "IBBT",
-            "city": "Ghent",
-            "country": "Belgium"
-        }
-    },
-    {
-        "authorId": "auth4740",
-        "type": "author",
-        "id": "crs123",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "Pablo",
-        "familyName": "Cesar",
-        "email": "p.s.cesar@cwi.nl",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "CWI (Centrum voor Wiskunde en Informatica)",
-            "city": "Amsterdam",
-            "country": "The Netherlands"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth11109",
-        "type": "author",
-        "id": "crs124",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Hendrik",
-        "familyName": "Müller",
-        "email": "hendrik82@gmail.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Sydney",
-            "country": "Australia"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth31522",
-        "type": "author",
-        "id": "crs124",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "Aaron",
-        "familyName": "Sedley",
-        "email": "asedley@google.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Mountain View",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth34953",
-        "type": "author",
-        "id": "crs124",
-        "venue": "course",
-        "rank": 3,
-        "givenName": "Elizabeth",
-        "familyName": "Ferrall-Nunge",
-        "email": "enunge@twitter.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Twitter, Inc.",
-            "city": "San Francisco",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth39687",
-        "type": "author",
-        "id": "crs129",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Terrill",
-        "familyName": "Thompson",
-        "email": "tft@uw.edu",
-        "role": "",
-        "primary": {
-            "dept": "Accessible Technology Services, UW-IT",
-            "institution": "University of Washington",
-            "city": "Seattle",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth12596",
-        "type": "author",
-        "id": "crs136",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Brent",
-        "familyName": "Hecht",
-        "email": "bhecht@cs.umn.edu",
-        "role": "",
-        "primary": {
-            "dept": "Computer Science and Engineering",
-            "institution": "University of Minnesota",
-            "city": "Minneapolis",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth9487",
-        "type": "author",
-        "id": "crs136",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "David",
-        "familyName": "Shamma",
-        "email": "aymans@acm.org",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Yahoo! Research",
-            "city": "San Francisco",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth35093",
-        "type": "author",
-        "id": "crs137",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Jim",
-        "familyName": "Parker",
-        "email": "parker@minkhollow.ca",
-        "role": "",
-        "primary": {
-            "dept": "Digital Media Laboratory",
-            "institution": "Uiniversity of Calgary",
-            "city": "Calgary",
-            "country": "Canada"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "Minkhollow Media Ltd",
-            "city": "Cochrane",
-            "country": "Canada"
         }
     },
     {
         "authorId": "auth6242",
         "type": "author",
-        "id": "crs138",
+        "id": "crs116",
         "venue": "course",
         "rank": 1,
         "givenName": "Cosmin",
+        "middleInitial": "",
         "familyName": "Munteanu",
-        "email": "cosmin.munteanu@nrc-cnrc.gc.ca",
+        "email": "cosmin.munteanu@utoronto.ca",
         "role": "",
         "primary": {
-            "dept": "",
-            "institution": "National Research Council Canada",
-            "city": "Fredericton",
+            "dept": "ICCIT",
+            "institution": "University of Toronto Mississauga",
+            "city": "Mississauga",
             "country": "Canada"
         },
         "secondary": {
-            "dept": "",
+            "dept": "Computer Science",
             "institution": "University of Toronto",
             "city": "Toronto",
             "country": "Canada"
@@ -738,10 +818,11 @@
     {
         "authorId": "auth8487",
         "type": "author",
-        "id": "crs138",
+        "id": "crs116",
         "venue": "course",
         "rank": 2,
         "givenName": "Gerald",
+        "middleInitial": "",
         "familyName": "Penn",
         "email": "gpenn@cs.toronto.edu",
         "role": "",
@@ -759,150 +840,13 @@
         }
     },
     {
-        "authorId": "auth1200",
-        "type": "author",
-        "id": "crs142",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Nigel",
-        "familyName": "Bevan",
-        "email": "nigel@nigelbevan.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Professional Usability Services",
-            "city": "London",
-            "country": "United Kingdom"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth6878",
-        "type": "author",
-        "id": "crs143",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Duen Horng (Polo)",
-        "familyName": "Chau",
-        "email": "polo@gatech.edu",
-        "role": "",
-        "primary": {
-            "dept": "College of Computing",
-            "institution": "Georgia Institute of Technology",
-            "city": "Atlanta",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth3486",
-        "type": "author",
-        "id": "crs144",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Mark",
-        "familyName": "Billinghurst",
-        "email": "mark.billinghurst@canterbury.ac.nz",
-        "role": "",
-        "primary": {
-            "dept": "HIT Lab NZ",
-            "institution": "University of Canterbury",
-            "city": "Christchurch",
-            "country": "New Zealand"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth16439",
-        "type": "author",
-        "id": "crs144",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "Hayes",
-        "familyName": "Raffle",
-        "email": "hraffle@gmail.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Google, Inc.",
-            "city": "Mountain View",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth2823",
-        "type": "author",
-        "id": "crs146",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Janet",
-        "familyName": "Read",
-        "email": "jcread@uclan.ac.uk",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "University of Central Lancashire",
-            "city": "Preston",
-            "country": "United Kingdom"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth1348",
-        "type": "author",
-        "id": "crs146",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "Panos",
-        "familyName": "Markopoulos",
-        "email": "P.Markopoulos@tue.nl",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Eindhoven University of Technology",
-            "city": "Eindhoven",
-            "country": "The Netherlands"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
         "authorId": "auth11405",
         "type": "author",
-        "id": "crs147",
+        "id": "crs117",
         "venue": "course",
         "rank": 1,
         "givenName": "Jim",
+        "middleInitial": "E",
         "familyName": "Nieters",
         "email": "jnieters@mac.com",
         "role": "",
@@ -922,17 +866,18 @@
     {
         "authorId": "auth14979",
         "type": "author",
-        "id": "crs147",
+        "id": "crs117",
         "venue": "course",
         "rank": 2,
         "givenName": "Carola",
-        "familyName": "Fellenz Thompson",
+        "middleInitial": "Fellenz",
+        "familyName": "Thompson",
         "email": "carolafthompson@gmail.com",
         "role": "",
         "primary": {
-            "dept": "User Experience",
-            "institution": "zSpace",
-            "city": "Sunnyvale",
+            "dept": "create",
+            "institution": "Splunk, Inc",
+            "city": "San Francisco",
             "country": "United States"
         },
         "secondary": {
@@ -943,19 +888,164 @@
         }
     },
     {
-        "authorId": "auth39570",
+        "authorId": "auth10385",
         "type": "author",
-        "id": "crs149",
+        "id": "crs118",
         "venue": "course",
         "rank": 1,
-        "givenName": "Joseph",
-        "familyName": "Williams",
-        "email": "josephjaywilliams@stanford.edu",
+        "givenName": "Lennart",
+        "middleInitial": "E.",
+        "familyName": "Nacke",
+        "email": "Lennart.Nacke@acm.org",
         "role": "",
         "primary": {
-            "dept": "Office of the Vice Provost of Online Learning",
-            "institution": "Stanford University",
-            "city": "Palo Alto",
+            "dept": "Games and Media Entertainment Research Laboratory",
+            "institution": "University of Ontario Institute of Technology",
+            "city": "Oshawa",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth44803",
+        "type": "author",
+        "id": "crs118",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Steve",
+        "middleInitial": "",
+        "familyName": "Engels",
+        "email": "sengels@cs.utoronto.ca",
+        "role": "",
+        "primary": {
+            "dept": "Computer Science",
+            "institution": "University of Toronto",
+            "city": "Toronto",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth18112",
+        "type": "author",
+        "id": "crs118",
+        "venue": "course",
+        "rank": 3,
+        "givenName": "Pejman",
+        "middleInitial": "",
+        "familyName": "Mirza-Babaei",
+        "email": "pejman.m@acm.org",
+        "role": "",
+        "primary": {
+            "dept": "Games and Media Entertainment Research Laboratory",
+            "institution": "University of Ontario Institute of Technology",
+            "city": "Oshawa",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14952",
+        "type": "author",
+        "id": "crs119",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Jennifer",
+        "middleInitial": "",
+        "familyName": "Pearson",
+        "email": "bagelobagel@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Swansea University",
+            "city": "Swansea",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth11354",
+        "type": "author",
+        "id": "crs119",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Simon",
+        "middleInitial": "",
+        "familyName": "Robinson",
+        "email": "s.n.w.robinson@swansea.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Swansea University",
+            "city": "Swansea",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth11109",
+        "type": "author",
+        "id": "crs121",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Hendrik",
+        "middleInitial": "",
+        "familyName": "Müller",
+        "email": "hendrik82@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "Sydney",
+            "country": "Australia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth31522",
+        "type": "author",
+        "id": "crs121",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Aaron",
+        "middleInitial": "",
+        "familyName": "Sedley",
+        "email": "asedley@google.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "Mountain View",
             "country": "United States"
         },
         "secondary": {
@@ -966,20 +1056,237 @@
         }
     },
     {
-        "authorId": "auth39984",
+        "authorId": "auth1060",
         "type": "author",
-        "id": "crs149",
+        "id": "crs122",
         "venue": "course",
-        "rank": 2,
-        "givenName": "Betsy",
-        "familyName": "Williams",
-        "email": "betsyw@stanford.edu",
+        "rank": 1,
+        "givenName": "Philippe",
+        "middleInitial": "",
+        "familyName": "Palanque",
+        "email": "palanque@irit.fr",
         "role": "",
         "primary": {
-            "dept": "Graduate School of Education",
-            "institution": "Stanford University",
-            "city": "Palo Alto",
-            "country": "United States"
+            "dept": "ICS-IRIT",
+            "institution": "University of Toulouse",
+            "city": "Toulouse",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth19583",
+        "type": "author",
+        "id": "crs122",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Célia",
+        "middleInitial": "",
+        "familyName": "Martinie",
+        "email": "martinie@irit.fr",
+        "role": "",
+        "primary": {
+            "dept": "ICS-IRIT",
+            "institution": "University of Toulouse",
+            "city": "Toulouse",
+            "country": "France"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1200",
+        "type": "author",
+        "id": "crs124",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Nigel",
+        "middleInitial": "",
+        "familyName": "Bevan",
+        "email": "nigel@nigelbevan.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Professional Usability Services",
+            "city": "London",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1464",
+        "type": "author",
+        "id": "crs128",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Fabio",
+        "middleInitial": "",
+        "familyName": "Paternò",
+        "email": "fabio.paterno@isti.cnr.it",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "CNR-ISTI",
+            "city": "Pisa",
+            "country": "Italy"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2823",
+        "type": "author",
+        "id": "crs129",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Janet",
+        "middleInitial": "",
+        "familyName": "Read",
+        "email": "jcread@uclan.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of Central Lancashire",
+            "city": "Preston",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth14699",
+        "type": "author",
+        "id": "crs129",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Shuli",
+        "middleInitial": "",
+        "familyName": "Gilutz",
+        "email": "shulig@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Tel-Aviv University",
+            "city": "Tel - Aviv",
+            "country": "Israel"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth12956",
+        "type": "author",
+        "id": "crs131",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Nicolai",
+        "middleInitial": "",
+        "familyName": "Marquardt",
+        "email": "n.marquardt@ucl.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "UCL Interaction Centre",
+            "institution": "University College London",
+            "city": "London",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1033",
+        "type": "author",
+        "id": "crs131",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Saul",
+        "middleInitial": "",
+        "familyName": "Greenberg",
+        "email": "saul.greenberg@ucalgary.ca",
+        "role": "",
+        "primary": {
+            "dept": "Department of Computer Science",
+            "institution": "University of Calgary",
+            "city": "Calgary",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth3338",
+        "type": "author",
+        "id": "crs132",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Thecla",
+        "middleInitial": "",
+        "familyName": "Schiphorst",
+        "email": "thecla@sfu.ca",
+        "role": "",
+        "primary": {
+            "dept": "School of Interactive Arts and Technology ",
+            "institution": "Simon Fraser University",
+            "city": "Vancouver",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth5378",
+        "type": "author",
+        "id": "crs132",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Lian",
+        "middleInitial": "",
+        "familyName": "Loke",
+        "email": "lian.loke@sydney.edu.au",
+        "role": "",
+        "primary": {
+            "dept": "Design Lab",
+            "institution": "University of Sydney",
+            "city": "Sydney",
+            "country": "Australia"
         },
         "secondary": {
             "dept": "",
@@ -991,10 +1298,11 @@
     {
         "authorId": "auth8383",
         "type": "author",
-        "id": "crs153",
+        "id": "crs133",
         "venue": "course",
         "rank": 1,
         "givenName": "Niels",
+        "middleInitial": "",
         "familyName": "Henze",
         "email": "niels.henze@vis.uni-stuttgart.de",
         "role": "",
@@ -1014,16 +1322,17 @@
     {
         "authorId": "auth9778",
         "type": "author",
-        "id": "crs153",
+        "id": "crs133",
         "venue": "course",
         "rank": 2,
         "givenName": "Enrico",
+        "middleInitial": "",
         "familyName": "Rukzio",
         "email": "enrico.rukzio@uni-ulm.de",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Ulm University",
+            "institution": "Institute of Media Informatics",
             "city": "Ulm",
             "country": "Germany"
         },
@@ -1035,14 +1344,207 @@
         }
     },
     {
-        "authorId": "auth22485",
+        "authorId": "auth22034",
         "type": "author",
-        "id": "crs156",
+        "id": "crs134",
         "venue": "course",
         "rank": 1,
-        "givenName": "WIlliam",
-        "familyName": "Buxton",
-        "email": "bill.buxton@microsoft.com",
+        "givenName": "Sandy",
+        "middleInitial": "J J",
+        "familyName": "Gould",
+        "email": "s.gould@cs.ucl.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University College London",
+            "city": "London",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth6475",
+        "type": "author",
+        "id": "crs134",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Duncan",
+        "middleInitial": "P",
+        "familyName": "Brumby",
+        "email": "Brumby@cs.ucl.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University College London",
+            "city": "London",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth7532",
+        "type": "author",
+        "id": "crs134",
+        "venue": "course",
+        "rank": 3,
+        "givenName": "Anna",
+        "middleInitial": "L",
+        "familyName": "Cox",
+        "email": "anna.cox@ucl.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University College London",
+            "city": "London",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1025",
+        "type": "author",
+        "id": "crs134",
+        "venue": "course",
+        "rank": 4,
+        "givenName": "Geraldine",
+        "middleInitial": "",
+        "familyName": "Fitzpatrick",
+        "email": "geraldine.fitzpatrick@tuwien.ac.at",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Vienna University of Technology",
+            "city": "Vienna",
+            "country": "Austria"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9366",
+        "type": "author",
+        "id": "crs134",
+        "venue": "course",
+        "rank": 5,
+        "givenName": "Jettie",
+        "middleInitial": "",
+        "familyName": "Hoonhout",
+        "email": "jettie.hoonhout@philips.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Philips Research",
+            "city": "Eindhoven",
+            "country": "The Netherlands"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth13681",
+        "type": "author",
+        "id": "crs134",
+        "venue": "course",
+        "rank": 6,
+        "givenName": "David",
+        "middleInitial": "",
+        "familyName": "Lamas",
+        "email": "david.lamas@tlu.ee",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Tallinn University",
+            "city": "Tallinn",
+            "country": "Estonia"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth4890",
+        "type": "author",
+        "id": "crs134",
+        "venue": "course",
+        "rank": 7,
+        "givenName": "Effie",
+        "middleInitial": "L.-C.",
+        "familyName": "Law",
+        "email": "elaw@mcs.le.ac.uk",
+        "role": "",
+        "primary": {
+            "dept": "Computer Science",
+            "institution": "University of Leicester",
+            "city": "Leicester",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2212",
+        "type": "author",
+        "id": "crs135",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Daniel",
+        "middleInitial": "",
+        "familyName": "Russell",
+        "email": "dmrussell@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Google",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2948",
+        "type": "author",
+        "id": "crs135",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Jaime",
+        "middleInitial": "",
+        "familyName": "Teevan",
+        "email": "teevan@microsoft.com",
         "role": "",
         "primary": {
             "dept": "",
@@ -1058,19 +1560,20 @@
         }
     },
     {
-        "authorId": "auth14719",
+        "authorId": "auth2137",
         "type": "author",
-        "id": "crs157",
+        "id": "crs135",
         "venue": "course",
-        "rank": 1,
-        "givenName": "Don",
-        "familyName": "Norman",
-        "email": "don@jnd.org",
+        "rank": 3,
+        "givenName": "Meredith",
+        "middleInitial": "Ringel",
+        "familyName": "Morris",
+        "email": "merrie@microsoft.com",
         "role": "",
         "primary": {
             "dept": "",
-            "institution": "Nielsen Norman Group",
-            "city": "Palo Alto",
+            "institution": "Microsoft Research",
+            "city": "Redmond",
             "country": "United States"
         },
         "secondary": {
@@ -1081,20 +1584,21 @@
         }
     },
     {
-        "authorId": "auth23599",
+        "authorId": "auth37972",
         "type": "author",
-        "id": "crs158",
+        "id": "crs135",
         "venue": "course",
-        "rank": 1,
-        "givenName": "Ronald",
-        "familyName": "Baecker",
-        "email": "ron@taglab.ca",
+        "rank": 4,
+        "givenName": "Marti",
+        "middleInitial": "",
+        "familyName": "Hearst",
+        "email": "hearst@berkeley.edu",
         "role": "",
         "primary": {
-            "dept": "Technologies for Aging Gracefully Laboratory (TAGlab)",
-            "institution": "University of Toronto",
-            "city": "Toronto",
-            "country": "Canada"
+            "dept": "School of Information",
+            "institution": "University of California, Berkeley",
+            "city": "Berkeley",
+            "country": "United States"
         },
         "secondary": {
             "dept": "",
@@ -1104,111 +1608,92 @@
         }
     },
     {
-        "authorId": "auth1588",
+        "authorId": "auth1100",
         "type": "author",
-        "id": "crs161",
+        "id": "crs135",
         "venue": "course",
-        "rank": 1,
-        "givenName": "Judith",
-        "familyName": "Donath",
-        "email": "judith@media.mit.edu",
+        "rank": 5,
+        "givenName": "Ed",
+        "middleInitial": "H",
+        "familyName": "Chi",
+        "email": "edchi@google.com",
         "role": "",
         "primary": {
-            "dept": "Berkman Center",
-            "institution": "Harvard University",
+            "dept": "",
+            "institution": "Google, Inc.",
+            "city": "Mountain View",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth2008",
+        "type": "author",
+        "id": "crs138",
+        "venue": "course",
+        "rank": 1,
+        "givenName": "Hiroshi",
+        "middleInitial": "",
+        "familyName": "Ishii",
+        "email": "ishii@media.mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth100011",
+        "type": "author",
+        "id": "crs138",
+        "venue": "course",
+        "rank": 2,
+        "givenName": "Mary",
+        "middleInitial": "Tran",
+        "familyName": "Niskala",
+        "email": "mniskala@media.mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth39102",
+        "type": "author",
+        "id": "crs138",
+        "venue": "course",
+        "rank": 3,
+        "givenName": "Philipp",
+        "middleInitial": "",
+        "familyName": "Schoessler",
+        "email": "phil_s@media.mit.edu",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "MIT Media Lab",
             "city": "Cambridge",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth2714",
-        "type": "author",
-        "id": "crs162",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Jennifer",
-        "familyName": "Preece",
-        "email": "preece@umd.edu",
-        "role": "",
-        "primary": {
-            "dept": "iSchool",
-            "institution": "University of Maryland",
-            "city": "College Park",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth36482",
-        "type": "author",
-        "id": "crs162",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "Anne",
-        "familyName": "Bowser",
-        "email": "abowser1@umd.edu",
-        "role": "",
-        "primary": {
-            "dept": "College of Information Studies",
-            "institution": "University of Maryland",
-            "city": "College Park",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth11429",
-        "type": "author",
-        "id": "crs163",
-        "venue": "course",
-        "rank": 1,
-        "givenName": "Susan",
-        "familyName": "Dray",
-        "email": "susan.dray@dray.com",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "Dray & Associates, Inc.",
-            "city": "Oakland",
-            "country": "United States"
-        },
-        "secondary": {
-            "dept": "",
-            "institution": "",
-            "city": "",
-            "country": ""
-        }
-    },
-    {
-        "authorId": "auth1149",
-        "type": "author",
-        "id": "crs163",
-        "venue": "course",
-        "rank": 2,
-        "givenName": "Elizabeth",
-        "familyName": "Churchill",
-        "email": "churchill@acm.org",
-        "role": "",
-        "primary": {
-            "dept": "",
-            "institution": "eBay Research Lab, eBay Inc.",
-            "city": "San Jose",
             "country": "United States"
         },
         "secondary": {

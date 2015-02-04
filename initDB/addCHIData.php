@@ -8,10 +8,10 @@ if(count($argv) != 2 or $argv[1] != 'pineapple'){
   exit(1);
 }
 
-define("AUTHORFILE", "new-authors.json");
-define("ENTITYFILE", "new-entities.json");
-define("SESSIONFILE", "new-sessions.json");
-define("SCHEDULEFILE", "new-schedule.json");
+define("AUTHORFILE", "prep/output/joined/authors.json");
+define("ENTITYFILE", "prep/output/joined/entities.json");
+define("SESSIONFILE", "prep/output/joined/sessions.json");
+define("SCHEDULEFILE", "prep/output/joined/schedule.json");
 
 $mysqli = mysqli_connect(COBI_MYSQL_SERVER, COBI_MYSQL_USERNAME, COBI_MYSQL_PASSWORD, COBI_MYSQL_DATABASE);
 
@@ -33,7 +33,7 @@ function createAuthorTable($mysqli) {
 	   if(array_key_exists('middleInitial', $author)){
 	     $middle = $author['middleInitial'];
 	   }
-	   
+
 	   $middleInitial = mysqli_real_escape_string($mysqli, $middle);
 	   $familyName = mysqli_real_escape_string($mysqli, $author["familyName"]);
 	   $email = mysqli_real_escape_string($mysqli, $author["email"]);
@@ -41,25 +41,25 @@ function createAuthorTable($mysqli) {
 	   $role = mysqli_real_escape_string($mysqli, $author["role"]);
 	   $primary =  mysqli_real_escape_string($mysqli, json_encode($author['primary']));
 	   $secondary = mysqli_real_escape_string($mysqli, json_encode($author['secondary']));
-	   
+
 	   $aquery = "INSERT INTO authors (authorId, type, id, venue, rank, givenName, middleInitial, familyName, email, role, primaryAff, secondaryAff) VALUES ('$authorId', '$type', '$id', '$venue', $rank, '$givenName', '$middleInitial', '$familyName', '$email', '$role', '$primary', '$secondary')";
-	   
+
 	   mysqli_query($mysqli, $aquery);
 	   echo  mysqli_error($mysqli);
-	   
+
 	   $authorHash[$authorId][$id] = array(
 					       "id"            => $author['id'],
 					       "givenName"     => $author['givenName'],
 					       "middleInitial" => $middle,
 					       "familyName"    => $author['familyName'],
-					       "email"         => $author['email'],     
+					       "email"         => $author['email'],
 					       "primary"       => $author['primary'],
-					       "secondary"     => $author['secondary'],   
+					       "secondary"     => $author['secondary'],
 					       "rank"          => $author['rank'],
-					       "role"          => $author['role']); 
+					       "role"          => $author['role']);
 	 }
 	 return $authorHash;
-}		      
+}
 
 function createEntityTable($mysqli) {
 	 $entityFile = file_get_contents(ENTITYFILE);
@@ -68,7 +68,7 @@ function createEntityTable($mysqli) {
 	 	$id = mysqli_real_escape_string($mysqli, $sub["id"]);
 		$abstract = mysqli_real_escape_string($mysqli, $sub["abstract"]);
 		$acmLink   = mysqli_real_escape_string($mysqli, $sub["acmLink"]);
-		$authors = mysqli_real_escape_string($mysqli, json_encode($sub["authors"]));		
+		$authors = mysqli_real_escape_string($mysqli, json_encode($sub["authors"]));
 		$bestPaperNominee = 0;
 		$bestPaperAward = 0;
 		$cAndB = "";
@@ -82,7 +82,7 @@ function createEntityTable($mysqli) {
 		$featuredCommunities = mysqli_real_escape_string($mysqli, json_encode(array()));
 		$keywords = "";
 		if(array_key_exists('keywords', $sub)){
-		  $keywords            = mysqli_real_escape_string($mysqli, json_encode($sub['keywords']));       
+		  $keywords            = mysqli_real_escape_string($mysqli, json_encode($sub['keywords']));
 		}
                 $programNumber       = "";
                 $session             = mysqli_real_escape_string($mysqli, $sub['session']);
@@ -95,9 +95,9 @@ function createEntityTable($mysqli) {
 		if(array_key_exists('subtype', $sub)){
 		  $subtype = mysqli_real_escape_string($mysqli, $sub['subtype']            );
 		}
-		
+
                 $equery = "INSERT INTO entity (id, abstract, acmLink, authors, bestPaperAward, bestPaperNominee, cAndB, contactEmail, contactFirstName, contactLastName, coreCommunities, featuredCommunities, keywords, programNumber, session, title, type, subtype) VALUES ('$id', '$abstract', '$acmLink', '$authors', '$bestPaperAward', '$bestPaperNominee', '$cAndB', '$contactEmail', '$contactFirstName', '$contactLastName', '$coreCommunities', '$featuredCommunities', '$keywords', '$programNumber', '$session', '$title', '$type', '$subtype')";
-		  
+
 	        mysqli_query($mysqli, $equery);
                 echo  mysqli_error($mysqli);
 	}
@@ -116,7 +116,7 @@ function createSessionTable($mysqli) {
    	   $coreCommunities = mysqli_real_escape_string($mysqli, json_encode($session['communities']));
 	   $featuredCommunities = mysqli_real_escape_string($mysqli, json_encode(array()));
 	   $personas = mysqli_real_escape_string($mysqli, $session["persona"]);
-	   $hasAward = 0;     
+	   $hasAward = 0;
 	   $hasHonorableMention = 0;
 	   $notes = "";
 	   $submissionKeys = mysqli_real_escape_string($mysqli, $session["submissions"]); // comma delimited list of sub ids
@@ -127,7 +127,7 @@ function createSessionTable($mysqli) {
    	   $squery = "INSERT INTO session (id, date, time, chairAffiliations, chairs, coreCommunities, featuredCommunities, personas, hasAward, hasHonorableMention, notes, room, submissions, title, venue, scheduled) VALUES ('$id', '$date', '$time', '$chairAffiliations', '$chairs', '$coreCommunities', '$featuredCommunities', '$personas', '$hasAward', '$hasHonorableMention', '$notes', '$room', '$submissionKeys', '$title', '$venue', '$scheduled')";
 	   mysqli_query($mysqli, $squery);
 	   echo  mysqli_error($mysqli);
-	 }	 
+	 }
 }
 
 function createScheduleTable($mysqli){
@@ -135,15 +135,15 @@ function createScheduleTable($mysqli){
 	 $schedule = json_decode($scheduleFile, true);
 
 	 foreach ($schedule as $slot) {
-	     $slotId = $slot['id'];  
+	     $slotId = $slot['id'];
              $date = $slot['date'];
              $time = $slot['time'];
              $room = $slot['room'];
 	     $id = $slot['sessionId'];
 
 	     $query = "UPDATE schedule set id='$id' where slotId='$slotId'";
-	     mysqli_query($mysqli, $query); 
-	     echo  mysqli_error($mysqli);  
+	     mysqli_query($mysqli, $query);
+	     echo  mysqli_error($mysqli);
 	 }
 }
 
