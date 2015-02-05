@@ -18,54 +18,63 @@ var allUsers = {};
 var transactions = [];
 var localTransactions = [];
 var roomCapacity = {
-"Hall D1": "2700",
-"401": "450",
-"E5": "320",
-"E6": "320",
-"E1/E2": "320",
-"402": "300",
-"E3": "160",
-"E4": "160",
-"403": "140",
-"307ABC": "270",
-"308ABC": "270",
-"317A": "48",
-"317BC": "90",
-"E7": "60",
-"318BC": "100",
-"318A": "50"
+    "Hall D1": "2700",
+    "401": "450",
+    "E5": "320",
+    "E6": "320",
+    "E1/E2": "320",
+    "402": "300",
+    "E3": "160",
+    "E4": "160",
+    "403": "140",
+    "307ABC": "270",
+    "308ABC": "270",
+    "317A": "48",
+    "317BC": "90",
+    "E7": "60",
+    "318BC": "100",
+    "318A": "50"
 };
 
 var desiredRoomOrder = ["Hall D1", "401", "E5", "E6", "E1/E2", "402", "E3", "E4", "403", "307ABC", "308ABC", "317A", "317BC", "E7", "318BC", "318A"];
 
-var personaList = [];
-// [
-//     "Public Policy",
-//     "Global Perspectives and Issues",
-//     "Nanotechnology",
-//     "Education and Human Resources",
-//     "Biological Science and Genomics",
-//     "Atmospheric, Hydrospheric, and Oceanic Sciences",
-//     "Health and Pharmaceutical Science",
-//     "Physics and Astronomy",
-//     "Engineering, Industry, and Technology",
-//     "Sustainability and Resource Management",
-//     "History and Philosophy of Science",
-//     "Communications and Public Programs",
-//     "Mathematics and Statistics",
-//     "Neuroscience",
-//     "Geology and Geography",
-//     "Behavioral and Social Sciences",
-//     "Anthropology, Culture, and Language",
-//     "Environment and Ecology",
-//     "Energy and Renewable Resources",
-//     "Information Technology and Computing",
-//     "Animal, Plant, and Food Sciences",
-//     "Chemical Sciences"];
+var personaList = [
+    'HCI4D',
+    'Games',
+    'UIST',
+    'Health',
+    'Making',
+    'Social',
+    'Methods and Models',
+    'Touch',
+    'People',
+    'Viz',
+    'Security',
+    'CSCW',
+    'Design',
+    'Displays',
+    'UBI',
+    'Systems',
+    'Art',
+    '3D',
+    'Transportation',
+    'Web'];
 
 var fullpersonaList = personaList;
 
-var communityList = personaList;
+var communityList = ['SC_Applications-B',
+		     'SC_Applications-V',
+		     'SC_Applications-W',
+		     'SC_Beyond Individual',
+		     'SC_Cap & Mod',
+		     'SC_Design-B',
+		     'SC_Design-R',
+		     'SC_Interaction Techniques',
+		     'SC_People-D',
+		     'SC_People-V',
+		     'SC_Systems & Tools',
+		     'SC_TOCHI',
+		     'SC_Usability'];
 
 var DataOps = function() {
     function handleFailedTransaction(t){
@@ -1202,15 +1211,6 @@ function initialize(){
     db.loadUsers();
 }
 
-function isEmpty(map) {
-    for(var key in map) {
-	if (map.hasOwnProperty(key)) {
-            return false;
-	}
-    }
-    return true;
-}
-
 // Populates all of the above variables and attaches personas
 // once the schedule is loaded from server
 function initAfterScheduleLoads(m){
@@ -1222,9 +1222,8 @@ function initAfterScheduleLoads(m){
     allChairs = m['chairs'];
     unscheduledChairs = {};
     for(var i in allChairs){
-	if('unscheduled' in allChairs[i]){
-	    unscheduledChairs[i] = allChairs[i]['unscheduled'];
-	}
+	if(allChairs[i].id == '')
+	    unscheduledChairs[i] = allChairs[i];
     }
     allRooms = getAllRooms();
     allSessions = getAllSessions();

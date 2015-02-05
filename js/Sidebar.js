@@ -469,19 +469,13 @@ var Sidebar = function() {
 
                case "chair-name":
                     $(".slot:not('.unavailable'):not('.empty')").each(function(index, item){
-                        var id = $(item).attr("id").substr(8);
-                        var chair = allSessions[id].chairs;
-                        var $chair = $("<span/>").addClass("chair");
-                        if (chair == ""){
-                            $chair.addClass("chair-not-available").html("N/A");
-			}else{
-			    var chairs = chair.split(',');
-			    var chairNames = "";
-			    for(var c = 0; c < chairs.length - 1; c++){
-				chairNames += displayChairName(allChairs[chairs[c]][id], false) + "\n";
-			    }
-                            $chair.addClass("chair-available").html(chairNames);
-			}
+                         var id = $(item).attr("id").substr(8);
+                         var chair = allSessions[id].chairs;
+                         var $chair = $("<span/>").addClass("chair");
+                         if (chair == "")
+                              $chair.addClass("chair-not-available").html("N/A");
+                         else
+                              $chair.addClass("chair-available").html(displayChairName(allChairs[chair], false));
                          $(item).find(".display").html($chair);                              
                     });
                break;                                              

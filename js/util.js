@@ -26,7 +26,7 @@ function getUsernameByUID(uid){
 
 function getCellLinkByID(id){
     var title = allSessions[id].title;
-    title = (title.length > 30) ? (title.substring(0, 30) + "...") : title;
+    title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 
     return $("<a/>").attr("href", "#").attr("data-session-id", id).addClass("session-link").html(title);
 }
 
@@ -34,10 +34,10 @@ function getPaperCellLinkByID(id, paperId){
 	var title;
 	if (paperId != ""){
 		title = allSubmissions[paperId].title;
-		title = (title.length > 30) ? (title.substring(0, 30) + "...") : title;
+		title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 
 	} else {
 		title = allSessions[id].title;
-		title = (title.length > 30) ? (title.substring(0, 30) + "...") : title;
+		title = (title.length > 30) ? (title.substring(0, 30) + "...") : title; 		
 	}
 	var $cell = $("<a/>").attr("href", "#").attr("data-submission-id", paperId).addClass("submission-link").html(title);
 	if (typeof id !== "undefined")
@@ -47,13 +47,12 @@ function getPaperCellLinkByID(id, paperId){
 
 function getChairCellLinkByID(id, chairId){
 	var name;
-    console.log(chairId);
-        if (chairId != ""){
-		name = displayChairName(allChairs[chairId][id], false);
-		name = (name.length > 30) ? (name.substring(0, 30) + "...") : name;
+	if (chairId != ""){
+		name = displayChairName(allChairs[chairId], false);
+		name = (name.length > 30) ? (name.substring(0, 30) + "...") : name; 
 	} else {
 		name = allSessions[id].title;
-		name = (name.length > 30) ? (name.substring(0, 30) + "...") : name;
+		name = (name.length > 30) ? (name.substring(0, 30) + "...") : name; 		
 	}
 	var $cell = $("<a/>").attr("href", "#").attr("data-chair-id", chairId).addClass("chair-link").html(name);
 	if (typeof id !== "undefined")
@@ -63,7 +62,7 @@ function getChairCellLinkByID(id, chairId){
 
 function getCellLinkByDateTimeRoom(ldate, ltime, lroom){
   	return $("<a/>").attr("href", "#").attr("data-slot-date", ldate).attr("data-slot-time", ltime).attr("data-slot-room", lroom)
-       .addClass("session-link").html(ldate + ", " + ltime + ", " + lroom);
+       .addClass("session-link").html(ldate + ", " + ltime + ", " + lroom); 
 }
 
 
@@ -125,28 +124,33 @@ function getSessionDuration(session){
 }
 
 function displayChairName(chair, includePrefix){
-
-
-    if (typeof chair === "undefined" || chair == null || typeof chair.familyName === "undefined" || typeof chair.givenName === "undefined")
-		return "No chair assigned";
-    var name = includePrefix ? chair.role + ": " : "";
-    return name  + chair.givenName + " " + chair.familyName;
+	var name = includePrefix ? "Chair: " : "";
+	if (typeof chair === "undefined" || chair == null || typeof chair.familyName === "undefined" || typeof chair.givenName === "undefined")
+		return name + "N/A";
+	return name  + chair.givenName + " " + chair.familyName;
 }
 
 function shortenDate(date){
-    //return date.substring(5);
-    return date;
-}
-
-function shortenTime(time){
-    // return time.substring(0, time.length - 3).replace(":00-", "-")
-    return time;
-}
+	/*
+	var str = "";
+	
+	if (date == "May 7, 2012")
+	   str = "MON 5/7";
+	else if (date == "May 8, 2012")
+	   str = "TUE 5/8";
+	else if (date == "May 9, 2012")
+	   str = "WED 5/9";
+	else if (date == "May 10, 2012")
+	   str = "THU 5/10";
+	*/
+	// Monday -> Mon
+	return date.substring(0,3); 
+}	
 
  function getLength(item) {
       if (item === null || typeof item === "undefined")
            return 0;
-      else
+      else 
            return item.length;
  }
 
@@ -155,7 +159,7 @@ function addSign(val){
 		return "+" + val;
 	else
 		return val;
-}
+}   
 
 // Get outerHTML even when outerHTML is not available
 function outerHTML(node){
@@ -196,7 +200,7 @@ function findCellByDateTimeRoom(cellDate, cellTime, cellRoom){
 
 // return a frontend cell with given ID
 function findCellByID(id) {
-    return $("#session-" + id);
+    return $("#session-" + id); 
     /*
     $cell = null;
     $(".slot:not('.unavailable')").each(function(){

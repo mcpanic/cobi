@@ -27,6 +27,7 @@
         swapWithUnscheduledChair: "swapped with unscheduled chair"
     }
 
+    // only used by cc
     var dateList = {
         "Saturday": 0,
         "Sunday": 1,
@@ -37,13 +38,15 @@
         "Friday": 6
     };
 
+    // only used by cc
     var timeList = {
-        "9:30-10:50": 0,
-        "11:30-12:50": 1,
-        "14:30-15:50": 2,
-        "16:30-17:50": 3
+        "9:00-10:20": 0,
+        "11:00-12:20": 1,
+        "14:00-15:20": 2,
+        "16:00-17:20": 3
     };
 
+    // only used by cc
     var roomList = {
         "221/221M": {floor: "2", size: "", type: ""},
         "241": {floor: "2", size: "", type: ""},
@@ -65,28 +68,19 @@
         "Havane": {floor: "2", size: "", type: ""}
     };
 
-var sessionTypeList = [
-    "Symposia",
-    "Clinics",
-    "Career Development Workshops",
-    "Seminars",
-    "Business Meetings",
-    "Special Events",
-    "Special Sessions",
-    "Topical Lectures",
-    "Plenary Lectures",
-    "Exhibitor-Sponsored Workshops",
-    "President's Address",
-    "Associated Public Events",
-]
+    // only used by cc
+    var roomTypeList = ["Amphitheater", "Theater", "Classroom", "Conference"];
 
-var roomTypeList = ["Amphitheater", "Theater", "Classroom", "Conference"];
-var submissionTypeList = ["Symposia", "Seminars", "Special Events"];
-var submissionOrderList = ["first", "second (if exists)", "third (if exists)", "fourth (if exists)", "last"];
-var authorRoleList = ["presenter", "backup presenter"];
+    // used by cc & sidebar
+    var sessionTypeList = ["paper", "course", "special", "panel", "casestudy", "SIG", "bof", "altchi"];
+    // only used by cc
+    var submissionTypeList = ["paper", "TOCHI", "course", "panel", "casestudy", "SIG"];
 
-var optionsList = [
-    {"id": "conflicts", "label": "Conflict"},
+    var submissionOrderList = ["first", "second (if exists)", "third (if exists)", "fourth (if exists)", "last"];
+    var authorRoleList = ["presenter", "backup presenter"];
+
+    var optionsList = [
+        {"id": "conflicts", "label": "Conflict"},
         {"id": "preferences", "label": "Preference"},
         {"id": "c_and_p", "label": "Conflicts + Preferences"},
         {"id": "chair-conflict", "label": "Session Chair Conflict"},
