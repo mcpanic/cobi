@@ -38,10 +38,10 @@
     };
 
     var timeList = {
-        "9:00-10:20": 0,
-        "11:00-12:20": 1,
-        "14:00-15:20": 2,
-        "16:00-17:20": 3
+        "9:30-10:50": 0,
+        "11:30-12:50": 1,
+        "14:30-15:50": 2,
+        "16:30-17:50": 3
     };
 
     var roomList = {
@@ -81,7 +81,7 @@ var sessionTypeList = [
 ]
 
 var roomTypeList = ["Amphitheater", "Theater", "Classroom", "Conference"];
-var submissionTypeList = ["Symposia", "Seminars", "Special Events"];  
+var submissionTypeList = ["Symposia", "Seminars", "Special Events"];
 var submissionOrderList = ["first", "second (if exists)", "third (if exists)", "fourth (if exists)", "last"];
 var authorRoleList = ["presenter", "backup presenter"];
 
