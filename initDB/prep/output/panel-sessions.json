@@ -1,38 +1,86 @@
 [
     {
-        "id": "",
-        "date": "",
-        "time": "",
-        "room": "",
+        "id": "s-panel1",
+        "date": "Monday",
+        "time": "11:30-12:50",
+        "room": "307ABC",
         "communities": [],
         "persona": "",
-        "submissions": "pan106",
-        "title": "Technology Transfer of HCI Research Innovations: Challenges and Opportunities",
+        "submissions": "",
+        "title": "temp panel",
         "venue": "panel",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
-        "id": "",
-        "date": "",
-        "time": "",
-        "room": "",
+        "id": "s-panel2",
+        "date": "Monday",
+        "time": "16:30-17:50",
+        "room": "307ABC",
         "communities": [],
         "persona": "",
-        "submissions": "pan108",
-        "title": "You've Been Acquired!",
+        "submissions": "",
+        "title": "temp panel",
         "venue": "panel",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
-        "id": "",
-        "date": "",
-        "time": "",
-        "room": "",
+        "id": "s-panel3",
+        "date": "Tuesday",
+        "time": "11:30-12:50",
+        "room": "307ABC",
         "communities": [],
         "persona": "",
-        "submissions": "pan109",
-        "title": "Transdisciplinary Interaction Design in Design Education",
+        "submissions": "",
+        "title": "temp panel",
         "venue": "panel",
-        "scheduled": 0
+        "scheduled": 1
+    },
+    {
+        "id": "s-panel4",
+        "date": "Tuesday",
+        "time": "16:30-17:50",
+        "room": "307ABC",
+        "communities": [],
+        "persona": "",
+        "submissions": "",
+        "title": "temp panel",
+        "venue": "panel",
+        "scheduled": 1
+    },
+    {
+        "id": "s-panel5",
+        "date": "Wednesday",
+        "time": "11:30-12:50",
+        "room": "307ABC",
+        "communities": [],
+        "persona": "",
+        "submissions": "",
+        "title": "temp panel",
+        "venue": "panel",
+        "scheduled": 1
+    },
+    {
+        "id": "s-panel6",
+        "date": "Wednesday",
+        "time": "16:30-17:50",
+        "room": "307ABC",
+        "communities": [],
+        "persona": "",
+        "submissions": "",
+        "title": "temp panel",
+        "venue": "panel",
+        "scheduled": 1
+    },
+    {
+        "id": "s-panel7",
+        "date": "Thursday",
+        "time": "11:30-12:50",
+        "room": "307ABC",
+        "communities": [],
+        "persona": "",
+        "submissions": "",
+        "title": "temp panel",
+        "venue": "panel",
+        "scheduled": 1
     }
 ]

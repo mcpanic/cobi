@@ -135,7 +135,7 @@ function displayChairName(chair, includePrefix){
 
 function shortenDate(date){
     //return date.substring(5);
-    return date.substr(-5);
+    return date;
 }
 
 function shortenTime(time){

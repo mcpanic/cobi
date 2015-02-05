@@ -34,11 +34,11 @@ var altchis = [
 ];
 
 var altchiAssigns = {
-    "alt1":{"title":"temp name", "submissions":""},
-    "alt2":{"title":"temp name", "submissions":""},
-    "alt3":{"title":"temp name", "submissions":""},
-    "alt4":{"title":"temp name", "submissions":""},
-    "alt5":{"title":"temp name", "submissions":""}
+    "alt1":{"title":"temp alt.chi", "submissions":""},
+    "alt2":{"title":"temp alt.chi", "submissions":""},
+    "alt3":{"title":"temp alt.chi", "submissions":""},
+    "alt4":{"title":"temp alt.chi", "submissions":""},
+    "alt5":{"title":"temp alt.chi", "submissions":""}
 };
 
 var panelRooms = ["307ABC"];
@@ -53,13 +53,13 @@ var panels = [
 ];
 
 var panelAssigns = {
-    "panel1": {"submissions":""},
-    "panel2": {"submissions":""},
-    "panel3": {"submissions":""},
-    "panel4": {"submissions":""},
-    "panel5": {"submissions":""},
-    "panel6": {"submissions":""},
-    "panel7": {"submissions":""},
+    "panel1": {"title":"temp panel", "submissions":""},
+    "panel2": {"title":"temp panel", "submissions":""},
+    "panel3": {"title":"temp panel", "submissions":""},
+    "panel4": {"title":"temp panel", "submissions":""},
+    "panel5": {"title":"temp panel", "submissions":""},
+    "panel6": {"title":"temp panel", "submissions":""},
+    "panel7": {"title":"temp panel", "submissions":""},
 }
 
 var courseRooms = ["308ABC", "317A", "317BC", "E7", "318BC"];
@@ -81,40 +81,40 @@ var courses = [
 
 var sigRooms = ["318A"];
 var sigs = [
-        "Monday,11:30-12:50,XXX",
-	    "Monday,14:30-15:50,XXX",
-	    "Monday,16:30-17:50,XXX",
-	    "Tuesday,11:30-12:50,XXX",
-	    "Tuesday,16:30-17:50,XXX",
-	    "Wednesday,11:30-12:50,XXX",
-	    "Thursday,11:30-12:50,XXX",
-	    "Thursday,14:30-15:50,XXX"
+        "Monday,11:30-12:50,sig1",
+	    "Monday,14:30-15:50,sig2",
+	    "Monday,16:30-17:50,sig3",
+	    "Tuesday,11:30-12:50,sig4",
+	    "Tuesday,16:30-17:50,sig5",
+	    "Wednesday,11:30-12:50,sig6",
+	    "Thursday,11:30-12:50,sig7",
+	    "Thursday,14:30-15:50,sig8"
 ];
-var sigsAssigns = {
-    "sig1": {"submissions":""},
-    "sig2": {"submissions":""},
-    "sig3": {"submissions":""},
-    "sig4": {"submissions":""},
-    "sig5": {"submissions":""},
-    "sig6": {"submissions":""},
-    "sig7": {"submissions":""},
-    "sig8": {"submissions":""},
+var sigAssigns = {
+    "sig1": {"title":"temp SIG", "submissions":""},
+    "sig2": {"title":"temp SIG", "submissions":""},
+    "sig3": {"title":"temp SIG", "submissions":""},
+    "sig4": {"title":"temp SIG", "submissions":""},
+    "sig5": {"title":"temp SIG", "submissions":""},
+    "sig6": {"title":"temp SIG", "submissions":""},
+    "sig7": {"title":"temp SIG", "submissions":""},
+    "sig8": {"title":"temp SIG", "submissions":""},
 }
 
 var casestudiesRooms = ["308ABC"];
 var casestudies = [
-        "Tuesday,14:30-15:50,XXX",
-        "Wednesday,9:30-10:50,XXX",
-        "Thursday,9:30-10:50,XXX",
-        "Thursday,11:30-12:50,XXX",
-        "Thursday,14:30-15:50,XXX"
+        "Tuesday,14:30-15:50,case1",
+        "Wednesday,9:30-10:50,case2",
+        "Thursday,9:30-10:50,case3",
+        "Thursday,11:30-12:50,case4",
+        "Thursday,14:30-15:50,case5"
 ];
 var caseAssigns = {
-    "case1": {"title":"temp name", "submissions":""},
-    "case2": {"title":"temp name", "submissions":""},
-    "case3": {"title":"temp name", "submissions":""},
-    "case4": {"title":"temp name", "submissions":""},
-    "case5": {"title":"temp name", "submissions":""}
+    "case1": {"title":"temp casestudy", "submissions":""},
+    "case2": {"title":"temp casestudy", "submissions":""},
+    "case3": {"title":"temp casestudy", "submissions":""},
+    "case4": {"title":"temp casestudy", "submissions":""},
+    "case5": {"title":"temp casestudy", "submissions":""}
 }
 
 var paperRooms = ["401", "E5", "E6", "E1/E2", "402", "E3", "E4", "403", "307ABC"];
@@ -163,7 +163,7 @@ module.exports = {
     courses : courses,
     sigRooms : sigRooms,
     sigs : sigs,
-    sigsAssigns: sigsAssigns,
+    sigAssigns: sigAssigns,
     casestudiesRooms: casestudiesRooms,
     casestudies: casestudies,
     caseAssigns: caseAssigns,

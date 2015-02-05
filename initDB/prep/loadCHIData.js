@@ -16,11 +16,11 @@ var SESSIONSTART = 100;
 var PCSINPUT = "";
 // var VENUE = "paper";
 // var VENUE = "TOCHI";
-var VENUE = "casestudy";
+// var VENUE = "casestudy";
 // var VENUE = "course";
 // var VENUE = "SIG";
 // var VENUE = "panel";
-// var VENUE = "altchi";
+var VENUE = "altchi";
 // var VENUE = "keynote";
 
 if(VENUE == "paper"){
@@ -428,104 +428,144 @@ function createEmptySession(id,title,scheduled){
 function createCaseStudySessionData(PCSdata){
     var sessions = [];
     for(var s in assignments.caseAssigns){
-    var sid = "s-" + s;
-    var info = sessionLookup(sid);
-    var session = {
-        "id" : sid,
-        "date" : info.date,
-        "time" : info.time,
-        "room" : info.room,
-        "communities" : [],
-        "persona" : "",
-        "submissions" : assignments.caseAssigns[s].submissions,
-        "title" : assignments.caseAssigns[s].title,
-        "venue" : VENUE,
-        "scheduled" : ((info.date == "") ? 0 : 1)
-    }
-    sessions.push(session);
+        var sid = "s-" + s;
+        var info = sessionLookup(sid);
+        var session = {
+            "id" : sid,
+            "date" : info.date,
+            "time" : info.time,
+            "room" : info.room,
+            "communities" : [],
+            "persona" : "",
+            "submissions" : assignments.caseAssigns[s].submissions,
+            "title" : assignments.caseAssigns[s].title,
+            "venue" : VENUE,
+            "scheduled" : ((info.date == "") ? 0 : 1)
+        }
+        sessions.push(session);
     }
     return sessions;
 }
 
 function createPanelSessionData(PCSdata){
     var sessions = [];
-    for(var i = 0; i < PCSdata.length; i++){
-	var sub = PCSdata[i];
-	var sid = "";
-	for(var s in assignments.panelAssigns){
-	    if(assignments.panelAssigns[s].submissions == sub["ID"]) {
-		sid = "s-" + s;
-		break;
-	    }
-	}
-	var info = sessionLookup(sid);
-	var session = {
-	    "id" : sid,
-	    "date" : info.date,
-	    "time" : info.time,
-	    "room" : info.room,
-	    "communities" : [],
-	    "persona" : "",
-	    "submissions" : sub["ID"],
-	    "title" : ((sub["Title"].indexOf("[NOT SUBMITTED]") == 0) ?
-		       sub["Title"].substring(16) : sub["Title"]),
-	    "venue" : VENUE,
-	    "scheduled" : ((info.date == "") ? 0 : 1)
-	}
-	sessions.push(session);
+    for(var s in assignments.panelAssigns){
+        var sid = "s-" + s;
+        var info = sessionLookup(sid);
+        var session = {
+            "id" : sid,
+            "date" : info.date,
+            "time" : info.time,
+            "room" : info.room,
+            "communities" : [],
+            "persona" : "",
+            "submissions" : assignments.panelAssigns[s].submissions,
+            "title" : assignments.panelAssigns[s].title,
+            "venue" : VENUE,
+            "scheduled" : ((info.date == "") ? 0 : 1)
+        }
+        sessions.push(session);
     }
     return sessions;
+
+    // var sessions = [];
+    // for(var i = 0; i < PCSdata.length; i++){
+    // 	var sub = PCSdata[i];
+    // 	var sid = "";
+    // 	for(var s in assignments.panelAssigns){
+    // 	    if(assignments.panelAssigns[s].submissions == sub["ID"]) {
+    // 		sid = "s-" + s;
+    // 		break;
+    // 	    }
+    // 	}
+    // 	var info = sessionLookup(sid);
+    // 	var session = {
+    // 	    "id" : sid,
+    // 	    "date" : info.date,
+    // 	    "time" : info.time,
+    // 	    "room" : info.room,
+    // 	    "communities" : [],
+    // 	    "persona" : "",
+    // 	    "submissions" : sub["ID"],
+    // 	    "title" : ((sub["Title"].indexOf("[NOT SUBMITTED]") == 0) ?
+    // 		       sub["Title"].substring(16) : sub["Title"]),
+    // 	    "venue" : VENUE,
+    // 	    "scheduled" : ((info.date == "") ? 0 : 1)
+    // 	}
+    // 	sessions.push(session);
+    // }
+    // return sessions;
 }
 
 
 function createSIGSessionData(PCSdata){
     var sessions = [];
-    for(var i = 0; i < PCSdata.length; i++){
-	var sub = PCSdata[i];
-	var info = sessionLookup("s-" + sub['ID']);
-	var session = {
-	    "id" : "s-" + sub["ID"],
-	    "date" : info.date,
-	    "time" : info.time,
-	    "room" : info.room,
-	    "communities" : [],
-	    "persona" : "",
-	    "submissions" : sub["ID"],
-	    "title" : ((sub["Title"].indexOf("[NOT SUBMITTED]") == 0) ?
-		       sub["Title"].substring(16) : sub["Title"]),
-	    "venue" : VENUE,
-	    "scheduled" : ((info.date == "") ? 0 : 1)
-	}
-	sessions.push(session);
+    for(var s in assignments.sigAssigns){
+        var sid = "s-" + s;
+        var info = sessionLookup(sid);
+        var session = {
+            "id" : sid,
+            "date" : info.date,
+            "time" : info.time,
+            "room" : info.room,
+            "communities" : [],
+            "persona" : "",
+            "submissions" : assignments.sigAssigns[s].submissions,
+            "title" : assignments.sigAssigns[s].title,
+            "venue" : VENUE,
+            "scheduled" : ((info.date == "") ? 0 : 1)
+        }
+        sessions.push(session);
     }
     return sessions;
+
+    // var sessions = [];
+    // for(var i = 0; i < PCSdata.length; i++){
+    // 	var sub = PCSdata[i];
+    // 	var info = sessionLookup("s-" + sub['ID']);
+    // 	var session = {
+    // 	    "id" : "s-" + sub["ID"],
+    // 	    "date" : info.date,
+    // 	    "time" : info.time,
+    // 	    "room" : info.room,
+    // 	    "communities" : [],
+    // 	    "persona" : "",
+    // 	    "submissions" : sub["ID"],
+    // 	    "title" : ((sub["Title"].indexOf("[NOT SUBMITTED]") == 0) ?
+    // 		       sub["Title"].substring(16) : sub["Title"]),
+    // 	    "venue" : VENUE,
+    // 	    "scheduled" : ((info.date == "") ? 0 : 1)
+    // 	}
+    // 	sessions.push(session);
+    // }
+    // return sessions;
 }
 
 function createCourseSessionData(PCSdata){
     var sessions = [];
     for(var i = 0; i < PCSdata.length; i++){
-	var sub = PCSdata[i];
-	var matches = roomAssignments.filter(function(x) {
-	    return (x.id.indexOf('s-' + sub['ID']) == 0)});
+    	var sub = PCSdata[i];
+    	var matches = roomAssignments.filter(function(x) {
+    	    return (x.id.indexOf('s-' + sub['ID']) == 0)});
 
-	for(var j = 0; j < matches.length; j++){
-	    var info = matches[j];
-	    var session = {
-		"id" : info.id,
-		"date" : info.date,
-		"time" : info.time,
-		"room" : info.room,
-		"communities" : [],
-		"persona" : "",
-		"submissions" : sub["ID"],
-		"title" : ((sub["Title"].indexOf("[NOT SUBMITTED]") == 0) ?
-			   (sub["Title"].substring(16) + " (" + (j+1) + "/" + matches.length +")") :
-			   (sub["Title"] + " (" + (j+1) + "/" + matches.length +")")),
-		"venue" : VENUE,
-		"scheduled" : ((info.date == "") ? 0 : 1)
-	    }
-	    sessions.push(session);
-	}
+    	for(var j = 0; j < matches.length; j++){
+    	    var info = matches[j];
+    	    var session = {
+    		"id" : info.id,
+    		"date" : info.date,
+    		"time" : info.time,
+    		"room" : info.room,
+    		"communities" : [],
+    		"persona" : "",
+    		"submissions" : sub["ID"],
+    		"title" : ((sub["Title"].indexOf("[NOT SUBMITTED]") == 0) ?
+    			   (sub["Title"].substring(16) + " (" + (j+1) + "/" + matches.length +")") :
+    			   (sub["Title"] + " (" + (j+1) + "/" + matches.length +")")),
+    		"venue" : VENUE,
+    		"scheduled" : ((info.date == "") ? 0 : 1)
+    	    }
+    	    sessions.push(session);
+    	}
     }
     return sessions;
 }
@@ -533,21 +573,21 @@ function createCourseSessionData(PCSdata){
 function createAltchiSessionData(PCSdata){
     var sessions = [];
     for(var s in assignments.altchiAssigns){
-	var sid = "s-" + s;
-	var info = sessionLookup(sid);
-	var session = {
-	    "id" : sid,
-	    "date" : info.date,
-	    "time" : info.time,
-	    "room" : info.room,
-	    "communities" : [],
-	    "persona" : "",
-	    "submissions" : assignments.altchiAssigns[s].submissions,
-	    "title" : assignments.altchiAssigns[s].title,
-	    "venue" : VENUE,
-	    "scheduled" : ((info.date == "") ? 0 : 1)
-	}
-	sessions.push(session);
+    	var sid = "s-" + s;
+    	var info = sessionLookup(sid);
+    	var session = {
+    	    "id" : sid,
+    	    "date" : info.date,
+    	    "time" : info.time,
+    	    "room" : info.room,
+    	    "communities" : [],
+    	    "persona" : "",
+    	    "submissions" : assignments.altchiAssigns[s].submissions,
+    	    "title" : assignments.altchiAssigns[s].title,
+    	    "venue" : VENUE,
+    	    "scheduled" : ((info.date == "") ? 0 : 1)
+    	}
+    	sessions.push(session);
     }
     return sessions;
 }
@@ -599,35 +639,35 @@ function createScheduleData(){
     var rooms = ["Hall D1", "401", "E5", "E6", "E1/E2", "402", "E3", "E4", "403", "307ABC", "308ABC", "317A", "317BC", "E7", "318BC", "318A"];
 
     var slots = [
-            {"date": "Monday, 04-19", "time": "11:30-12:50"},
-            {"date": "Monday, 04-19", "time": "14:30-15:50"},
-            {"date": "Monday, 04-19", "time": "16:30-17:50"},
-            {"date": "Tuesday, 04-20", "time": "9:30-10:50"},
-            {"date": "Tuesday, 04-20", "time": "11:30-12:50"},
-            {"date": "Tuesday, 04-20", "time": "14:30-15:50"},
-            {"date": "Tuesday, 04-20", "time": "16:30-17:50"},
-            {"date": "Wednesday, 04-21", "time": "9:30-10:50"},
-            {"date": "Wednesday, 04-21", "time": "11:30-12:50"},
-            {"date": "Wednesday, 04-21", "time": "14:30-15:50"},
-            {"date": "Wednesday, 04-21", "time": "16:30-17:50"},
-            {"date": "Thursday, 04-22", "time": "9:30-10:50"},
-            {"date": "Thursday, 04-22", "time": "11:30-12:50"},
-            {"date": "Thursday, 04-22", "time": "14:30-15:50"},
+            {"date": "Monday", "time": "11:30-12:50"},
+            {"date": "Monday", "time": "14:30-15:50"},
+            {"date": "Monday", "time": "16:30-17:50"},
+            {"date": "Tuesday", "time": "9:30-10:50"},
+            {"date": "Tuesday", "time": "11:30-12:50"},
+            {"date": "Tuesday", "time": "14:30-15:50"},
+            {"date": "Tuesday", "time": "16:30-17:50"},
+            {"date": "Wednesday", "time": "9:30-10:50"},
+            {"date": "Wednesday", "time": "11:30-12:50"},
+            {"date": "Wednesday", "time": "14:30-15:50"},
+            {"date": "Wednesday", "time": "16:30-17:50"},
+            {"date": "Thursday", "time": "9:30-10:50"},
+            {"date": "Thursday", "time": "11:30-12:50"},
+            {"date": "Thursday", "time": "14:30-15:50"},
     ];
     var slotId = 100;
 
     for(var i = 0; i < rooms.length; i++){
-	for(var j = 0; j < slots.length; j++){
-	    var slot = {
-		"id" : "slot" + slotId,
-		"date" : slots[j].date,
-		"time" : slots[j].time,
-		"room" : rooms[i],
-		"sessionId" : assignmentLookup(slots[j].date, slots[j].time, rooms[i])
-	    };
-	    slotId+=1;
-	    schedule.push(slot);
-	}
+    	for(var j = 0; j < slots.length; j++){
+    	    var slot = {
+        		"id" : "slot" + slotId,
+        		"date" : slots[j].date,
+        		"time" : slots[j].time,
+        		"room" : rooms[i],
+        		"sessionId" : assignmentLookup(slots[j].date, slots[j].time, rooms[i])
+    	    };
+    	    slotId+=1;
+    	    schedule.push(slot);
+    	}
     }
     return schedule;
 }
@@ -650,14 +690,14 @@ function assignmentLookup(date, time, room){
 				     x.time == time &&
 				     x.room == room)});
     if(results.length > 1){
-	console.log("multiple results in same room???");
-	console.log(date , time , room)
-	console.log(results[0]);
-	console.log(results[1]);
-	return results[0].id; //""
+    	console.log("multiple results in same room???");
+    	console.log(date , time , room)
+    	console.log(results[0]);
+    	console.log(results[1]);
+    	return results[0].id; //""
     }
     if(results.length == 1){
-	return results[0].id;
+	   return results[0].id;
     }
     return "";
 }

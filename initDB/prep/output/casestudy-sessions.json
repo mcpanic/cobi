@@ -1,62 +1,62 @@
 [
     {
         "id": "s-case1",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Tuesday",
+        "time": "14:30-15:50",
+        "room": "308ABC",
         "communities": [],
         "persona": "",
         "submissions": "",
-        "title": "temp name",
+        "title": "temp casestudy",
         "venue": "casestudy",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s-case2",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Wednesday",
+        "time": "9:30-10:50",
+        "room": "308ABC",
         "communities": [],
         "persona": "",
         "submissions": "",
-        "title": "temp name",
+        "title": "temp casestudy",
         "venue": "casestudy",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s-case3",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "9:30-10:50",
+        "room": "308ABC",
         "communities": [],
         "persona": "",
         "submissions": "",
-        "title": "temp name",
+        "title": "temp casestudy",
         "venue": "casestudy",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s-case4",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "11:30-12:50",
+        "room": "308ABC",
         "communities": [],
         "persona": "",
         "submissions": "",
-        "title": "temp name",
+        "title": "temp casestudy",
         "venue": "casestudy",
-        "scheduled": 0
+        "scheduled": 1
     },
     {
         "id": "s-case5",
-        "date": "",
-        "time": "",
-        "room": "",
+        "date": "Thursday",
+        "time": "14:30-15:50",
+        "room": "308ABC",
         "communities": [],
         "persona": "",
         "submissions": "",
-        "title": "temp name",
+        "title": "temp casestudy",
         "venue": "casestudy",
-        "scheduled": 0
+        "scheduled": 1
     }
 ]
