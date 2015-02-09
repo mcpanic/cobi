@@ -7,6 +7,15 @@ var SCHEDULEFILE = "schedule.json";
 var makeScheduleCSV = true;
 var sessionIgnore = []//['s-crs115R-1', 's-crs115R-2'];
 
+// var extraChairs = {
+//     "s-alt1" : "Daniela Rosner",
+//     "s-alt2" : "Barry Brown",
+//     "s-alt3" : "Silvia Lindtner",
+//     "s-alt4" : "Morgan Ames",
+//     "s-alt6" : "Lilly Irani",
+//     "s-alt5" : "Conor Linehan"
+// }
+
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
     host     : 'mysql.csail.mit.edu',
@@ -22,6 +31,17 @@ var sessionOutput = null;
 var schedule = null;
 var entity = null;
 
+var caseStudyEntity = {
+    "caseDiscuss": {
+        "title": "Questions & Answers and Discussion",
+        "abstract": "The last 20 minutes of this session will be used for questions and answers, as well as discussions, for all three of the case studies which were presented.",
+        "cAndB": "",
+        "keywords": [],
+        "authors": [],
+        "type": "casestudy",
+        "subtype": "casestudy"
+    },
+}
 
 var previewSchedule = [
     {
@@ -194,15 +214,15 @@ var previewEntities = {
 
 
 var showcaseSchedule = {
-    "day": "Wednesday",
+    "day": "Tuesday",
     "slot": {
-        "slot_id": "Wednesday_17_30_19_00",
+        "slot_id": "Tuesday_17_30_19_00",
         "time": "17:30 - 19:00",
         "slot_class": "evening1",
         "sessions": [
             {
                 "session": "s-showcase",
-                "room" : "718A"
+                "room" : "718AB"
             }
 	]
     }
@@ -211,14 +231,14 @@ var showcaseSchedule = {
 var showcaseSession = {
     "s-showcase": {
         "s_title": "Video Showcase",
-        "room": "718A",
+        "room": "718AB",
         "time": "17:30-19:00",
         "submissions": [
 	    'showcase'
         ],
         "personas": "",
         "venue": "special",
-        "day": "Wednesday",
+        "day": "Tuesday",
         "s_tags": [],
         "type": "special",
         "subtype": "special",
@@ -229,7 +249,7 @@ var showcaseSession = {
 var showcaseEntity = {
     "showcase": {
         "title": "Video Showcase",
-        "abstract": "Video Showcase features engaging videos that offer a variety of perspectives on human-computer interaction, including novel interfaces, reflective pieces and future envisionments. Come and enjoy the best videos on Wednesday (17:30) followed by the Golden Mouse award ceremony.", 
+        "abstract": "Video Showcase features engaging videos that offer a variety of perspectives on human-computer interaction, including novel interfaces, reflective pieces and future envisionments. Come and enjoy the best videos on Tuesday (17:30) followed by the Golden Mouse award ceremony.", 
         "cAndB": "",
         "keywords": [
         ],
@@ -249,7 +269,7 @@ var townhallSchedule =     {
         "sessions": [
             {
                 "session": "s-townhall",
-                "room" : "718A"
+                "room" : "718AB"
             }
 	]
     }
@@ -258,7 +278,7 @@ var townhallSchedule =     {
 var townhallSession = {
     "s-townhall": {
         "s_title": "SIGCHI Town Hall Lunch",
-        "room": "718A",
+        "room": "718AB",
         "time": "12:20-14:00",
         "submissions": [
             "townhall"
@@ -533,6 +553,7 @@ function getAuthors(ent){
     var authors = ent['authors'];
     return JSON.parse(authors).map(function(x) { return {
 	'name': resolveName(x),
+	'id' : x['id'],
 	'dept': (('primary' in x) ? x['primary']['dept'] : ''),
 	'institution': (('primary' in x) ? x['primary']['institution'] : ''),
 	'city' : (('primary' in x) ? x['primary']['city'] : ''),
@@ -619,8 +640,8 @@ function writeEntities(entities){
 	    "authors" : getAuthors(ent),
 	    "type": getType(ent),
 	    "subtype": getSubtype(ent),
-	    //	    "award": ent.bestPaperAward==1,
-	    //            "hm": ent.bestPaperNominee==1
+	    "award": ent.bestPaperAward==1,
+            "hm": ent.bestPaperNominee==1
 	}
     }
     for(var e in keynoteEntity){
@@ -632,7 +653,11 @@ function writeEntities(entities){
     
     for(var e in showcaseEntity){
 	output[e] = showcaseEntity[e];
-    }
+}
+for(var e in caseStudyEntity){
+ output[e] = caseStudyEntity[e]
+}
+
 for(var e in previewEntities){
 output[e] = previewEntities[e];
 }
@@ -663,7 +688,7 @@ function writeSchedule(schedule){
     var output = [];
     var dateIndex = ['Monday','Tuesday','Wednesday','Thursday'];
 
-    var roomIndex = ["Exhibit Hall G", "701A","701B", "707","709","711", "713AB", "714AB","715A","715B", "716A","716B","717AB","718A","718B", "801A","801B","801AB","802AB", "803AB"]
+    var roomIndex = ["Exhibit Hall G", "701A","701B", "707","709","711", "713AB", "714AB","715A","715B", "716A","716B","717AB","718AB","801A","801B","801AB","802AB", "803AB"]
 
 
 //    var roomIndex = ["Exhibit Hall G","718A","718B","701A","701B","801A","801B","803AB","716A","716B","714AB","717AB","802AB","715A","715B","713AB","707","709","711"]; //, "Plenary"];
@@ -827,8 +852,8 @@ function writeSessions(sessions, chairs){
 	    "day": ses.date,
 	    "s_tags": JSON.parse(ses.coreCommunities),
 	    "type": ses.venue,
-//	    "hasAward": ses.hasAward,
-//	    "hasHonorableMention": ses.hasHonorableMention,
+	    "hasAward": ses.hasAward==1,
+	    "hasHonorableMention": ses.hasHonorableMention==1,
 	    "subtype": ses.venue,
 	    "chair": lookupChair(ses, chairs)
 	}
@@ -849,6 +874,14 @@ function writeSessions(sessions, chairs){
 	output[s] = showcaseSession[s];
     }
     
+//    for(var s in extraChairs){
+//	output[s].chair = extraChairs[s]
+//    }
+
+    output['s-case-1'].submissions.push('caseDiscuss')
+    output['s-case-2'].submissions.push('caseDiscuss')
+    output['s-case-3'].submissions.push('caseDiscuss')
+
     sessionOutput = output;
     fs.writeFile(SESSIONFILE, 'sessions='+JSON.stringify(output, null, 4), function(err) {});
 }
