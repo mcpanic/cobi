@@ -36,7 +36,10 @@ echo mysqli_error($mysqli);
 $chairs = array();
 while ($row = $chairsTable->fetch_assoc()){
   $row['affinity'] = json_decode($row['affinity']);
-  $chairs[$row['authorId']][$row['id']] = $row;
+
+  // Juho: not including id now.
+  // $chairs[$row['authorId']][$row['id']] = $row;
+  $chairs[$row['authorId']] = $row;
 }
 
 // Reconstruct the JSON

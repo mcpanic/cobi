@@ -906,6 +906,7 @@
 
     // Getting html for chair details
     function getChairDetail(mode, type, chair, srcType, session){
+        console.log(mode, type, chair);
         var element;
         if (mode == "view")
             element = _getViewChairDetail(type, chair, session);

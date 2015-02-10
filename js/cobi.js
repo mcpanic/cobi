@@ -1222,8 +1222,8 @@ function initAfterScheduleLoads(m){
     allChairs = m['chairs'];
     unscheduledChairs = {};
     for(var i in allChairs){
-	if(allChairs[i].id == '')
-	    unscheduledChairs[i] = allChairs[i];
+    	if(allChairs[i].id == '')
+    	    unscheduledChairs[i] = allChairs[i];
     }
     allRooms = getAllRooms();
     allSessions = getAllSessions();
