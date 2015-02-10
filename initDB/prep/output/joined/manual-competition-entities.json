@@ -1,0 +1,341 @@
+[
+    {
+        "id": "src",
+        "title": "Student Research Competition",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth26425",
+                "type": "author",
+                "id": "src",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "Dr. Thad",
+                "middleInitial": "",
+                "familyName": "Starner",
+                "email": "thad@gatech.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "Georgia Institute of Technology, Atlanta, United States",
+                    "city": "Atlanta",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth3590",
+                "type": "author",
+                "id": "src",
+                "venue": "special",
+                "rank": 2,
+                "givenName": "Regan",
+                "middleInitial": "L",
+                "familyName": "Mandryk",
+                "email": "regan@cs.usask.ca",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Saskatchewan",
+                    "city": "Saskatoon",
+                    "country": "Canada"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth10714",
+                "type": "author",
+                "id": "src",
+                "venue": "special",
+                "rank": 3,
+                "givenName": "Tilde",
+                "middleInitial": "",
+                "familyName": "Bekker",
+                "email": "m.m.bekker@tue.nl",
+                "role": "",
+                "primary": {
+                    "dept": "Department of Industrial Design",
+                    "institution": "Technische Universiteit Eindhoven",
+                    "city": "Eindhoven",
+                    "country": "The Netherlands"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth200001",
+                "type": "author",
+                "id": "src",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "John",
+                "middleInitial": "",
+                "familyName": "Tang",
+                "email": "johntang@microsoft.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth200002",
+                "type": "author",
+                "id": "src",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "Xiangshi",
+                "middleInitial": "",
+                "familyName": "Ren",
+                "email": "ren.xiangshi@kochi-tech.ac.jp",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "",
+        "contactFirstName": "",
+        "contactLastName": "",
+        "keywords": "",
+        "venue": "special",
+        "subtype": "",
+        "session": "s-src",
+        "communities": ""
+    },
+    {
+        "id": "sdc",
+        "title": "Student Design Competition",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth7845",
+                "type": "author",
+                "id": "sdc",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "Elisa",
+                "middleInitial": "",
+                "familyName": "Giaccardi",
+                "email": "e.giaccardi@tudelft.nl",
+                "role": "",
+                "primary": {
+                    "dept": "Department of Industrial Design",
+                    "institution": "Delft University of Technology",
+                    "city": "Delft",
+                    "country": "Netherlands"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth200003",
+                "type": "author",
+                "id": "sdc",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "Will",
+                "middleInitial": "",
+                "familyName": "Odom",
+                "email": "wo@willodom.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth200004",
+                "type": "author",
+                "id": "sdc",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "Zhiyong",
+                "middleInitial": "",
+                "familyName": "Fu",
+                "email": "fuzhiyong@tsinghua.edu.cn",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth200005",
+                "type": "author",
+                "id": "sdc",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "Jung-Joo",
+                "middleInitial": "",
+                "familyName": "Lee",
+                "email": "jjlee@nus.edu.sg",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "",
+        "contactFirstName": "",
+        "contactLastName": "",
+        "keywords": "",
+        "venue": "special",
+        "subtype": "",
+        "session": "s-sdc",
+        "communities": ""
+    },
+    {
+        "id": "sgc",
+        "title": "Student Game Competition",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth34691",
+                "type": "author",
+                "id": "sgc",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "Casper",
+                "middleInitial": "",
+                "familyName": "Harteveld",
+                "email": "c.harteveld@neu.edu",
+                "role": "",
+                "primary": {
+                    "dept": "Game Design Program",
+                    "institution": "Northeastern University",
+                    "city": "Boston",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth200006",
+                "type": "author",
+                "id": "sgc",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "Peter",
+                "middleInitial": "",
+                "familyName": "Lee",
+                "email": "peter@nolgong.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            },
+            {
+                "authorId": "auth200007",
+                "type": "author",
+                "id": "sgc",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "Seth",
+                "middleInitial": "",
+                "familyName": "Cooper",
+                "email": "scooper@cs.washington.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "",
+        "contactFirstName": "",
+        "contactLastName": "",
+        "keywords": "",
+        "venue": "special",
+        "subtype": "",
+        "session": "s-sgc",
+        "communities": ""
+    }
+]

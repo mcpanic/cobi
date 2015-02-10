@@ -9,8 +9,8 @@ var IGNORELIST = [];
 
 var CREATEAUTHORFILE = true;
 var CREATEENTITYFILE = true;
-var CREATESESSIONFILE = true;
-var CREATESCHEDULEFILE = true;
+var CREATESESSIONFILE = false;
+var CREATESCHEDULEFILE = false;
 var SESSIONSTART = 100;
 
 var PCSINPUT = "";
@@ -19,8 +19,8 @@ var PCSINPUT = "";
 // var VENUE = "casestudy";
 // var VENUE = "course";
 // var VENUE = "SIG";
-// var VENUE = "panel";
-var VENUE = "altchi";
+var VENUE = "panel";
+// var VENUE = "altchi";
 // var VENUE = "keynote";
 
 if(VENUE == "paper"){
@@ -34,7 +34,7 @@ if(VENUE == "paper"){
 }else if(VENUE == "SIG"){
     PCSINPUT = "./input/sigs_final_submissions_20150204.csv";
 }else if(VENUE == "panel"){
-    PCSINPUT = "./input/panels_final_submissions_20150204.csv";
+    PCSINPUT = "./input/panels_final_submissions_20150209.csv";
 }else if(VENUE == "altchi"){
     PCSINPUT = "./input/altchi_final_submissions_20150204.csv";
 }else if(VENUE == "keynote"){

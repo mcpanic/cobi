@@ -1,0 +1,125 @@
+[
+    {
+        "id": "award1",
+        "title": "SIGCHI Lifetime Practice Award Talk",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth200008",
+                "type": "author",
+                "id": "award1",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "Susan",
+                "middleInitial": "",
+                "familyName": "Dray",
+                "email": "susan.dray@dray.com",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "susan.dray@dray.com",
+        "contactFirstName": "Susan",
+        "contactLastName": "Dray",
+        "keywords": "",
+        "venue": "special",
+        "subtype": "",
+        "session": "s-award1",
+        "communities": ""
+    },
+    {
+        "id": "award2",
+        "title": "SIGCHI Lifetime Research Award Talk",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth200009",
+                "type": "author",
+                "id": "award2",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "James",
+                "middleInitial": "",
+                "familyName": "Hollan",
+                "email": "hollan@cogsci.ucsd.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "hollan@cogsci.ucsd.edu",
+        "contactFirstName": "James",
+        "contactLastName": "Hollan",
+        "keywords": "",
+        "venue": "special",
+        "subtype": "",
+        "session": "s-award2",
+        "communities": ""
+    },
+    {
+        "id": "award3",
+        "title": "SIGCHI Social Impact Award Talk",
+        "abstract": "",
+        "acmLink": "",
+        "authors": [
+            {
+                "authorId": "auth1076",
+                "type": "author",
+                "id": "award3",
+                "venue": "special",
+                "rank": 1,
+                "givenName": "Leysia",
+                "middleInitial": "",
+                "familyName": "Palen",
+                "email": "Leysia.Palen@colorado.edu",
+                "role": "",
+                "primary": {
+                    "dept": "",
+                    "institution": "University of Colorado Boulder",
+                    "city": "Boulder",
+                    "country": "United States"
+                },
+                "secondary": {
+                    "dept": "",
+                    "institution": "",
+                    "city": "",
+                    "country": ""
+                }
+            }
+        ],
+        "cbStatement": "",
+        "contactEmail": "Leysia.Palen@colorado.edu",
+        "contactFirstName": "Leysia",
+        "contactLastName": "Palen",
+        "keywords": "",
+        "venue": "special",
+        "subtype": "",
+        "session": "s-award3",
+        "communities": ""
+    }
+]

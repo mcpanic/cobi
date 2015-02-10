@@ -406,5 +406,269 @@
             "city": "Eindhoven",
             "country": "The Netherlands"
         }
+    },
+    {
+        "authorId": "auth6095",
+        "type": "author",
+        "id": "pan119",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Morgan",
+        "middleInitial": "G",
+        "familyName": "Ames",
+        "email": "morganya@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "Intel Science and Technology Center",
+            "institution": "University of California, Irvine",
+            "city": "Irvine",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9429",
+        "type": "author",
+        "id": "pan119",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Silvia",
+        "middleInitial": "",
+        "familyName": "Lindtner",
+        "email": "silvia.lindtner@gmail.com",
+        "role": "",
+        "primary": {
+            "dept": "School of Information",
+            "institution": "University of Michigan",
+            "city": "Ann Arbor",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1785",
+        "type": "author",
+        "id": "pan119",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Barry",
+        "middleInitial": "",
+        "familyName": "Brown",
+        "email": "barry@mobilelifecentre.org",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Mobile Life @ Stockholm University",
+            "city": "Kista",
+            "country": "Sweden"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth9749",
+        "type": "author",
+        "id": "pan119",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Daniela",
+        "middleInitial": "K",
+        "familyName": "Rosner",
+        "email": "dkrosner@uw.edu",
+        "role": "",
+        "primary": {
+            "dept": "Human Centered Design & Engineering",
+            "institution": "University of Washington",
+            "city": "Seattle",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1763",
+        "type": "author",
+        "id": "pan119",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Sidney",
+        "middleInitial": "S",
+        "familyName": "Fels",
+        "email": "ssfels@ece.ubc.ca",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "University of British Columbia",
+            "city": "Vancouver",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth1095",
+        "type": "author",
+        "id": "pan119",
+        "venue": "panel",
+        "rank": 6,
+        "givenName": "Roel",
+        "middleInitial": "",
+        "familyName": "Vertegaal",
+        "email": "roel@cs.queensu.ca",
+        "role": "",
+        "primary": {
+            "dept": "Human Media Lab",
+            "institution": "Queen's University",
+            "city": "Kingston",
+            "country": "Canada"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth50866",
+        "type": "author",
+        "id": "pan120",
+        "venue": "panel",
+        "rank": 1,
+        "givenName": "Hwanyong",
+        "middleInitial": "",
+        "familyName": "Lee",
+        "email": "hwanyong.lee@knu.ac.kr",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Kyungpook National University",
+            "city": "Daegu",
+            "country": "Korea, Republic of"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth50867",
+        "type": "author",
+        "id": "pan120",
+        "venue": "panel",
+        "rank": 2,
+        "givenName": "Victor",
+        "middleInitial": "",
+        "familyName": "Erukhimov",
+        "email": "victor.eruhimov@itseez.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Itsees Inc.",
+            "city": "Nizhny Novgorod",
+            "country": "Russian Federation"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth50868",
+        "type": "author",
+        "id": "pan120",
+        "venue": "panel",
+        "rank": 3,
+        "givenName": "Neil",
+        "middleInitial": "",
+        "familyName": "Trevett",
+        "email": "ntrevett@nvidia.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "NVIDIA",
+            "city": "Santa Clara",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth50869",
+        "type": "author",
+        "id": "pan120",
+        "venue": "panel",
+        "rank": 4,
+        "givenName": "Alon",
+        "middleInitial": "",
+        "familyName": "Oh-bach",
+        "email": "alon.ohbach@samsung.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "Samsung",
+            "city": "London",
+            "country": "United Kingdom"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
+    },
+    {
+        "authorId": "auth50870",
+        "type": "author",
+        "id": "pan120",
+        "venue": "panel",
+        "rank": 5,
+        "givenName": "Tom",
+        "middleInitial": "",
+        "familyName": "Olson",
+        "email": "Tom.olson@arm.com",
+        "role": "",
+        "primary": {
+            "dept": "",
+            "institution": "ARM",
+            "city": "San Jose",
+            "country": "United States"
+        },
+        "secondary": {
+            "dept": "",
+            "institution": "",
+            "city": "",
+            "country": ""
+        }
     }
 ]
