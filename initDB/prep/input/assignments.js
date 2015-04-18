@@ -24,7 +24,7 @@
     ];
 */
 // ignore anything with XX
-var altchiRooms = ["308ABC"];
+var altchiRooms = ["308"];
 var altchis = [
     "Monday,11:30-12:50,alt1",
     "Monday,14:30-15:50,alt2",
@@ -41,7 +41,7 @@ var altchiAssigns = {
     "alt5":{"title":"temp alt.chi", "submissions":""}
 };
 
-var panelRooms = ["307ABC"];
+var panelRooms = ["307"];
 var panels = [
     "Monday,11:30-12:50,panel1",
     "Monday,16:30-17:50,panel2",
@@ -62,7 +62,7 @@ var panelAssigns = {
     "panel7": {"title":"temp panel", "submissions":""},
 }
 
-var courseRooms = ["308ABC", "317A", "317BC", "E7", "318BC"];
+var courseRooms = ["308", "317A", "317BC", "E7", "318BC"];
 var courses = [
 	       "Monday,11:30-12:50,XXX,crs108,crs128,crs113,crs132",
 	       "Monday,14:30-15:50,XXX,crs135,crs112,crs118,crs111",
@@ -101,7 +101,7 @@ var sigAssigns = {
     "sig8": {"title":"temp SIG", "submissions":""},
 }
 
-var casestudiesRooms = ["308ABC"];
+var casestudiesRooms = ["308"];
 var casestudies = [
         "Tuesday,14:30-15:50,case1",
         "Wednesday,9:30-10:50,case2",
@@ -117,7 +117,7 @@ var caseAssigns = {
     "case5": {"title":"temp casestudy", "submissions":""}
 }
 
-var paperRooms = ["401", "E5", "E6", "E1/E2", "402", "E3", "E4", "403", "307ABC"];
+var paperRooms = ["401", "E5", "E6", "E1/E2", "402", "E3", "E4", "403", "307"];
 var papersByPersona = [
 	      "Monday,11:30-12:50,XXX,XXX,XXX,XXX,XXX,XXX,XXX,XXX,XXX",
 	      "Monday,14:30-15:50,XXX,XXX,XXX,XXX,XXX,XXX,XXX,XXX,XXX",

@@ -62,7 +62,11 @@ foreach ($lines as $lin){
       mysqli_query($mysqli, $squery);
       echo mysqli_error($mysqli);
 
-      $squery = "update sessionChairs set id='$id' where authorId='$authorId'";
+      // $squery = "update sessionChairs set id='$id' where authorId='$authorId'";
+      // mysqli_query($mysqli, $squery);
+      // echo mysqli_error($mysqli);
+
+      $squery = "update sessionChairs set id='' where authorId='$authorId'";
       mysqli_query($mysqli, $squery);
       echo mysqli_error($mysqli);
 

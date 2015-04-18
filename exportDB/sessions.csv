@@ -1,205 +1,199 @@
-ID,Date,Time,End Time,Track,Title,Chair(s) First Name,Chair(s) Last Name,Chair Affiliation,ChairAffiliation Country,Location,Notes,CHI code,Web Page,Submission ID1,Submission ID2,Submission ID3,Submission ID4,Submission ID5,Submission ID6
-s-sig103,Thursday,11:00,12:20,,"Communicating User Research in Order to Drive Design and Product Decisions",,,,,715A,,,,sig103,,,,,
-s-sig105,Tuesday,14:00,15:20,,"Interaction Science SIG: Overcoming Challenges",,,,,715A,,,,sig105,,,,,
-s-sig107,Tuesday,16:00,17:20,,"Jogging with Technology: Interaction Design Supporting Sport Activities",,,,,715A,,,,sig107,,,,,
-s-sig108,Monday,14:00,15:20,,"Art And Interaction SIG: Cataloging The Digital Arts",,,,,715A,,,,sig108,,,,,
-s-sig109,Tuesday,9:00,10:20,,"Current Issues in Assessing and Improving Information Usability",,,,,715A,,,,sig109,,,,,
-s-sig110,Wednesday,14:00,15:20,,"Community Centered Collaborative HCI Design / Research in Developing Countries",,,,,715A,,,,sig110,,,,,
-s-sig111,Monday,11:00,12:20,,"HCI in Food Product Innovation",,,,,715A,,,,sig111,,,,,
-s-sig112,Wednesday,9:00,10:20,,"Child Computer Interaction SIG: Towards Sustainable Thinking and Being",,,,,716A,,,,sig112,,,,,
-s-sig114,Wednesday,16:00,17:20,,"Interactions Magazine",,,,,715A,,,,sig114,,,,,
-s-sig117,Tuesday,11:00,12:20,,"Games and Entertainment Community SIG: Reaching beyond CHI",,,,,715A,,,,sig117,,,,,
-s-sig118,Wednesday,11:00,12:20,,"The Usability of Text Entry Systems Now and in the Future",,,,,715A,,,,sig118,,,,,
-s-sig119,Thursday,9:00,10:20,,"Managing UX Teams",,,,,715A,,,,sig119,,,,,
-s-case-1,Thursday,9:00,10:20,,"Realities of Fieldwork",Michael,Arent,,,716A,,,,case176,case118,case150,,,
-s-case-2,Thursday,11:00,12:20,,"Cross-Perspective Collaboration",Connor,Upton,,,716A,,,,case147,case163,case170,,,
-s-case-3,Thursday,14:00,15:20,,"Creating Methods",Vicki,Moulder,"Simon Fraser University",Canada,716A,,,,case115,case173,case138,,,
-s-crs100-1,Monday,14:00,15:20,,"Introduction to Human-Computer Interaction (1/2)",,,,,713AB,,,,crs100,,,,,
-s-crs100-2,Monday,16:00,17:20,,"Introduction to Human-Computer Interaction (2/2)",,,,,713AB,,,,crs100,,,,,
-s-crs101-1,Monday,14:00,15:20,,"Methods of Design Synthesis – Moving from Data to Innovation (1/2)",,,,,802AB,,,,crs101,,,,,
-s-crs101-2,Monday,16:00,17:20,,"Methods of Design Synthesis – Moving from Data to Innovation (2/2)",,,,,802AB,,,,crs101,,,,,
-s-crs102-1,Tuesday,14:00,15:20,,"Conceptual Models: Core to Good Design (1/2)",,,,,709,,,,crs102,,,,,
-s-crs102-2,Tuesday,16:00,17:20,,"Conceptual Models: Core to Good Design (2/2)",,,,,709,,,,crs102,,,,,
-s-crs105-1,Tuesday,9:00,10:20,,"Card Sorting for Navigation Design (1/2)",,,,,802AB,,,,crs105,,,,,
-s-crs105-2,Tuesday,11:00,12:20,,"Card Sorting for Navigation Design (2/2)",,,,,802AB,,,,crs105,,,,,
-s-crs106-1,Wednesday,9:00,10:20,,"Agile User Experience and UCD (1/2)",,,,,711,,,,crs106,,,,,
-s-crs106-2,Wednesday,11:00,12:20,,"Agile User Experience and UCD (2/2)",,,,,711,,,,crs106,,,,,
-s-crs108-1,Monday,14:00,15:20,,"HTML5 Game Development (1/2)",,,,,709,,,,crs108,,,,,
-s-crs108-2,Monday,16:00,17:20,,"HTML5 Game Development (2/2)",,,,,709,,,,crs108,,,,,
-s-crs111-1,Monday,14:00,15:20,,"Empirical Research Methods for Human-Computer Interaction (1/2)",,,,,711,,,,crs111,,,,,
-s-crs111-2,Monday,16:00,17:20,,"Empirical Research Methods for Human-Computer Interaction (2/2)",,,,,711,,,,crs111,,,,,
-s-crs113-1,Wednesday,14:00,15:20,,"Introduction to Designing and Building Musical Interfaces (1/2)",,,,,709,,,,crs113,,,,,
-s-crs113-2,Wednesday,16:00,17:20,,"Introduction to Designing and Building Musical Interfaces (2/2)",,,,,709,,,,crs113,,,,,
-s-crs115-1,Wednesday,14:00,15:20,,"Make This! Introduction to Electronics Prototyping Using Arduino (1/2)",,,,,802AB,,,,crs115,,,,,
-s-crs115-2,Wednesday,16:00,17:20,,"Make This! Introduction to Electronics Prototyping Using Arduino (2/2)",,,,,802AB,,,,crs115,,,,,
-s-crs116-1,Thursday,9:00,10:20,,"Hands-on Sketching Course (1/2)",,,,,802AB,,,,crs116,,,,,
-s-crs116-2,Thursday,11:00,12:20,,"Hands-on Sketching Course (2/2)",,,,,802AB,,,,crs116,,,,,
-s-crs121-1,Wednesday,14:00,15:20,,"Including Children in Technology Design Processes: Techniques and Practices (1/2)",,,,,711,,,,crs121,,,,,
-s-crs121-2,Wednesday,16:00,17:20,,"Including Children in Technology Design Processes: Techniques and Practices (2/2)",,,,,711,,,,crs121,,,,,
-s-crs122-1,Tuesday,9:00,10:20,,"Multimodal Detection of Affective States: A Roadmap from Brain-Computer Interfaces, Face-Based Emotion Recognition, Eye Tracking Systems and Other Sensors (1/2)",,,,,711,,,,crs122,,,,,
-s-crs122-2,Tuesday,11:00,12:20,,"Multimodal Detection of Affective States: A Roadmap from Brain-Computer Interfaces, Face-Based Emotion Recognition, Eye Tracking Systems and Other Sensors (2/2)",,,,,711,,,,crs122,,,,,
-s-crs123-1,Wednesday,14:00,15:20,,"Interaction Design for Online Video and Television (1/2)",,,,,713AB,,,,crs123,,,,,
-s-crs123-2,Wednesday,16:00,17:20,,"Interaction Design for Online Video and Television (2/2)",,,,,713AB,,,,crs123,,,,,
-s-crs124,Monday,11:00,12:20,,"Designing Unbiased Surveys for HCI Research (1/1)",,,,,711,,,,crs124,,,,,
-s-crs129-1,Tuesday,9:00,10:20,,"Improving the User Interface for People with Disabilities (1/2)",,,,,709,,,,crs129,,,,,
-s-crs129-2,Tuesday,11:00,12:20,,"Improving the User Interface for People with Disabilities (2/2)",,,,,709,,,,crs129,,,,,
-s-crs136,Thursday,14:00,15:20,,"A Crash Course in Modern Geography for HCI Researchers and Practitioners (1/1)",,,,,802AB,,,,crs136,,,,,
-s-crs137-1,Tuesday,14:00,15:20,,"Computer Vision in interaction and UX (1/2)",,,,,802AB,,,,crs137,,,,,
-s-crs137-2,Tuesday,16:00,17:20,,"Computer Vision in interaction and UX (2/2)",,,,,802AB,,,,crs137,,,,,
-s-crs138-1,Thursday,9:00,10:20,,"Speech-based Interaction: Myths, Challenges, and Opportunities (1/2)",,,,,711,,,,crs138,,,,,
-s-crs138-2,Thursday,11:00,12:20,,"Speech-based Interaction: Myths, Challenges, and Opportunities (2/2)",,,,,711,,,,crs138,,,,,
-s-crs142,Thursday,14:00,15:20,,"How You Could Benefit from Using ISO Standards (1/1)",,,,,709,,,,crs142,,,,,
-s-crs143-1,Wednesday,9:00,10:20,,"HCI Meets Data Mining: Principles and Tools for Big Data Analytics (1/2)",,,,,802AB,,,,crs143,,,,,
-s-crs143-2,Wednesday,11:00,12:20,,"HCI Meets Data Mining: Principles and Tools for Big Data Analytics (2/2)",,,,,802AB,,,,crs143,,,,,
-s-crs144-1,Thursday,9:00,10:20,,"The Glass Class: Designing Wearable Interfaces (1/2)",,,,,713AB,,,,crs144,,,,,
-s-crs144-2,Thursday,11:00,12:20,,"The Glass Class: Designing Wearable Interfaces (2/2)",,,,,713AB,,,,crs144,,,,,
-s-crs146,Thursday,14:00,15:20,,"Evaluating Children’s Interactive Products (1/1)",,,,,711,,,,crs146,,,,,
-s-crs147-1,Wednesday,9:00,10:20,,"Rapid Design Labs—A Tool to Turbocharge Design-Led Innovation (1/2)",,,,,709,,,,crs147,,,,,
-s-crs147-2,Wednesday,11:00,12:20,,"Rapid Design Labs—A Tool to Turbocharge Design-Led Innovation (2/2)",,,,,709,,,,crs147,,,,,
-s-crs149-1,Tuesday,14:00,15:20,,"Online A/B Tests & Experiments: A Practical But Scientifically Informed Introduction (1/2)",,,,,711,,,,crs149,,,,,
-s-crs149-2,Tuesday,16:00,17:20,,"Online A/B Tests & Experiments: A Practical But Scientifically Informed Introduction (2/2)",,,,,711,,,,crs149,,,,,
-s-crs153-1,Tuesday,14:00,15:20,,"Mobile HCI (1/2)",,,,,713AB,,,,crs153,,,,,
-s-crs153-2,Tuesday,16:00,17:20,,"Mobile HCI (2/2)",,,,,713AB,,,,crs153,,,,,
-s-crs156,Monday,11:00,12:20,,"Sampling & Synthesis: The Two Sides of Experience Sketching (1/1)",,,,,713AB,,,,crs156,,,,,
-s-crs157,Tuesday,11:00,12:20,,"Reflections on Design (1/1)",,,,,713AB,,,,crs157,,,,,
-s-crs158,Wednesday,11:00,12:20,,"Designing for Seniors (1/1)",,,,,713AB,,,,crs158,,,,,
-s-crs161,Wednesday,9:00,10:20,,"How social media design reshapes society (1/1)",,,,,713AB,,,,crs161,,,,,
-s100,Thursday,11:00,12:20,,"Lost and Found in Translation",Tiago,Guerreiro,"University of Lisbon",Portugal,716B,,,,pn1414,pn223,pn248,pn216,pn1203,
-s101,Wednesday,9:00,10:20,,"Exergame Design",Sean,Munson,,,701B,,,,pn1626,pn1183,pn122,pn1709,,
-s102,Monday,11:00,12:20,,"Watches and Small Devices",Yang,Li,"Google Research",United States,Exhibit Hall G,,,,pn142,pn1007,pn1488,pn1628,pn372,
-s103,Wednesday,11:00,12:20,,"Shape-Changing Interfaces",Abhijit,Karnik,"University of Bristol",United Kingdom,Exhibit Hall G,,,,pn2150,pn2041,pn385,pn1186,pn313,
-s104,Monday,11:00,12:20,,"Stress",Yunan,Chen,"University of California, Irvine",United States,701B,,,,pn2153,pn1188,pn1514,pn490,,
-s105,Thursday,11:00,12:20,,"3D Printing and Fabrication",Alex,Olwal,"Media Lab",United States,718AB,,,,pn297,pn1034,pn1911,pn736,,
-s106,Wednesday,11:00,12:20,,"Understanding and Using Social Media",Patrick Gage,Kelley,"University of New Mexico",United States,701A,,,,pn1710,pn2159,pn1806,pn653,,
-s107,Tuesday,16:00,17:20,,"The Eyes Have It",Jürgen,Steimle,"Massachusetts Institute of Technology",United States,801A,,,,pn951,pn405,pn718,pn1742,,
-s108,Thursday,14:00,15:20,,"Network of Care",Patrick,Olivier,"Newcastle University",United Kingdom,701B,,,,pn444,pn1896,pn2074,to111,,
-s109,Tuesday,14:00,15:20,,"Novel Keyboards",Kent,Lyons,,,Exhibit Hall G,,,,pn2157,pn1651,pn428,pn1700,pn404,
-s110,Tuesday,9:00,10:20,,"Touch and Stylus Interaction",Xiang,Cao,"Lenovo Research & Technology",China,718AB,,,,pn464,pn425,pn1865,pn438,,
-s111,Wednesday,16:00,17:20,,"Applications of Body Sensing",Susan,Fussell,"Cornell University",United States,801A,,,,pn601,pn420,pn876,pn111,,
-s112,Monday,16:00,17:20,,"Student Research Competition (Closed Judging Session)",,,,,715B,,,,src-judge,,,,,
-s113,Wednesday,11:00,12:20,,"Touch Input",Daniel,Wigdor,"University of Toronto",Canada,718AB,,,,pn1473,pn756,pn988,pn2372,,
-s114,Monday,11:00,12:20,,"Visualization and Aesthetics",Antonella,De Angeli,"University of Trento",Italy,701A,,,,pn1095,pn555,pn2490,pn1503,,
-s115,Wednesday,14:00,15:20,,"Authentication and Passwords",Serge,Egelman,"University of California, Berkeley",United States,801A,,,,pn1097,pn2227,pn757,pn1399,pn2090,
-s116,Monday,16:00,17:20,,"Pointing and Cursors",Pourang,Irani,"University of Manitoba",Canada,Exhibit Hall G,,,,pn264,pn2449,pn2432,pn755,,
-s117,Thursday,11:00,12:20,,"Crowdsourcing",Steven,Dow,"Carnegie Mellon University",United States,701B,,,,pn525,pn263,pn150,pn1103,,
-s118,Tuesday,14:00,15:20,,"Sensemaking and Information in Use",Jeffrey,Bigham,"Carnegie Mellon University",United States,701A,,,,pn116,pn701,pn1295,pn1760,pn2027,
-s119,Wednesday,14:00,15:20,,"Multitouch Interaction",Sebastian,Boring,,,718AB,,,,pn113,pn426,pn1756,pn343,,
-s120,Monday,14:00,15:20,,"Managing Income",Sarita,Schoenebeck,"University of Michigan",United States,801B,,,,pn119,pn2134,pn186,pn905,,
-s121,Monday,16:00,17:20,,"Research through Design",Christina,Satchell,,,717AB,,,,pn118,pn1442,pn758,pn1642,,
-s122,Tuesday,11:00,12:20,,"On and Above the Surface",Nadir,Weibel,"University of California, San Diego",United States,Exhibit Hall G,,,,pn2022,pn896,pn1727,pn1225,pn1936,
-s123,Tuesday,11:00,12:20,,"Emergency Response",Lorrie,Cranor,"Carnegie Mellon University",United States,801B,,,,pn286,pn1014,pn1454,pn1281,,
-s124,Monday,14:00,15:20,,"Hackerspaces, Making and Breaking",Manfred,Tscheligi,"University of Salzburg",Austria,718AB,,,,pn967,pn2011,pn2029,pn1682,pn1428,
-s125,Wednesday,16:00,17:20,,"Head-Worn Displays",Brian,Bailey,"University of Illinois",United States,718AB,,,,pn589,pn222,pn2424,pn621,,
-s126,Thursday,9:00,10:20,,"Persuasive Technologies and Applications",Erin,Cherry,,,716B,,,,pn761,pn121,pn2317,pn2489,,
-s127,Monday,16:00,17:20,,"Crowdfunding and Crowd Storage",Michael,Muller,"IBM T.J. Watson Research",United States,701B,,,,pn810,to107,pn526,pn1161,,
-s128,Tuesday,16:00,17:20,,"Learning and Education",Deborah,Tatar,,,801B,,,,pn1362,pn1182,pn2293,pn1817,,
-s129,Monday,11:00,12:20,,"Audio Interaction",Sriram,Subramanian,"University of Bristol",United Kingdom,801A,,,,pn1360,pn276,pn1586,pn1193,,
-s130,Thursday,14:00,15:20,,"Gesture-Based Interaction",Joerg,Mueller,"Alexander von Humboldt Institute for Internet and Society",Germany,Exhibit Hall G,,,,pn847,pn1425,pn549,pn2216,,
-s131,Tuesday,16:00,17:20,,"Studying Visualization",Pierre,Dragicevic,"INRIA",France,701A,,,,pn845,pn1015,to128,to126,,
-s132,Monday,14:00,15:20,,"Studying and Designing Gameplay",Carl,Gutwin,"University of Saskatchewan",Canada,716B,,,,pn1942,pn2084,pn1987,pn791,,
-s133,Monday,11:00,12:20,,"Sustainability and Everyday Practices",Mike,Hazas,"Lancaster University",United Kingdom,801B,,,,pn1949,to104,to133,to112,,
-s134,Wednesday,11:00,12:20,,"Programming and Development Tools",Fanny,Chevalier,"University of Toronto",Canada,714AB,,,,pn2447,pn271,pn2103,pn664,,
-s135,Monday,16:00,17:20,,"Designing and Understanding Visualizations",Petra,Isenberg,"INRIA",France,701A,,,,pn2442,pn1337,pn1316,pn966,,
-s136,Thursday,14:00,15:20,,"Tutorials",Morgan,Dixon,"University of Washington",United States,714AB,,,,pn1020,pn224,pn2441,pn884,,
-s137,Tuesday,16:00,17:20,,"Critical Design",Andrea,Parker,"Northeastern University",United States,717AB,,,,pn581,pn999,pn1241,pn2129,,
-s138,Wednesday,9:00,10:20,,"Health and Everyday Life",Maria,Wolters,"University of Edinburgh",United Kingdom,716B,,,,pn1377,pn686,pn2284,pn2020,pn639,
-s139,Tuesday,9:00,10:20,,"Mid-Air Gestures",Shahram,Izadi,"Microsoft Research",United Kingdom,Exhibit Hall G,,,,pn965,pn138,pn1092,pn898,,
-s140,Tuesday,16:00,17:20,,"Narratives and Storytelling",Aisling,Kelliher,,,714AB,,,,pn443,to102,pn1820,pn2031,pn1099,
-s141,Tuesday,11:00,12:20,,"Crowds and Creativity",Lilly,Irani,"University of California, San Diego",USA,701B,,,,pn2235,pn2343,pn2208,pn2225,,
-s142,Tuesday,16:00,17:20,,"3D Interaction: Modeling and Prototyping",Wolfgang,Stuerzlinger,"York University",Canada,718AB,,,,pn1423,pn330,pn1262,pn1513,pn147,
-s143,Monday,14:00,15:20,,"Activity Recognition",Daniela,Busse,"Samsung R&D Research Center",United States,801A,,,,pn1426,pn2274,to134,pn1055,,
-s144,Tuesday,14:00,15:20,,"DIY and Hacking",Kasper,Hornbaek,"",,718AB,,,,pn2327,pn1904,pn529,pn1081,,
-s145,Wednesday,16:00,17:20,,"Decisions, Recommendations, and Machine Learning",Jon,Froehlich,"University of Maryland",United States,714AB,,,,pn1398,pn1485,pn650,pn1237,pn340,
-s146,Monday,14:00,15:20,,"Image and Animation Authoring",Tomer,Moscovich,,,714AB,,,,pn614,pn2451,pn1992,pn228,,
-s147,Tuesday,11:00,12:20,,"Interactive Whiteboards and Public Displays",Andreas,Butz,"University of Munich (LMU)",Germany,718AB,,,,pn279,to105,pn166,pn1269,,
-s148,Tuesday,14:00,15:20,,"User Models and Prediction",Duncan,Brumby,"University College London",United Kingdom,801A,,,,pn2119,pn1293,pn2560,pn239,,
-s149,Wednesday,14:00,15:20,,"Cross-Device Interaction",Fabio,Paternò,"CNR-ISTI",Italy,714AB,,,,pn104,pn1200,pn1336,pn205,,
-s150,Thursday,9:00,10:20,,"HCI Paradigms: Past, Present and Future",Jeffrey,Bardzell,"Indiana University Bloomington",United States,801A,,,,pn292,pn1268,pn838,pn164,,
-s151,Wednesday,11:00,12:20,,"Interactive Technologies for Rehabilitation",Xiaomu,Zhou,"Rutgers University",United States,716B,,,,pn2115,pn1736,pn2487,pn739,pn208,
-s152,Tuesday,14:00,15:20,,"Presentation Technologies",Shengdong,Zhao,"National University of Singapore",Singapore,714AB,,,,pn1179,pn1773,pn1587,pn2303,,
-s153,Monday,16:00,17:20,,"Multilingual Communication",Hao-Chuan,Wang,"National Tsing Hua University",Taiwan,801B,,,,pn1347,pn1867,pn1623,pn1375,,
-s154,Thursday,9:00,10:20,,"Novel Mobile Displays and Devices",Clifton,Forlines,"Draper Laboratory",United States,718AB,,,,pn1372,pn1983,pn1883,pn672,,
-s155,Thursday,11:00,12:20,,"Location-Based Services and Navigation",Mark,Perry,,,701A,,,,pn2420,pn288,pn1110,pn1796,pn2203,
-s156,Monday,16:00,17:20,,"Smart Homes and Sustainability",Ron,Wakkary,"Simon Fraser University",Canada,801A,,,,pn2522,pn1192,pn2244,to117,,
-s157,Wednesday,9:00,10:20,,"Privacy",Sameer,Patil,"Aalto University",Finland,801A,,,,pn2525,pn1776,pn2463,pn2112,,
-s158,Wednesday,16:00,17:20,,"Urban Communities and Social Media",N. Sadat,Shami,"IBM",United States,801B,,,,pn1954,pn2401,pn558,pn1675,,
-s159,Wednesday,9:00,10:20,,"Telepresence and Connecting over Video",Kori,Inkpen,"Microsoft Research",United States,701A,,,,pn1199,pn532,pn1333,pn1958,pn883,
-s160,Thursday,14:00,15:20,,"Interactive Surfaces and Pervasive Displays",Aaron,Quigley,"University of St Andrews",United Kingdom,718AB,,,,pn2168,pn654,pn1222,pn389,,
-s161,Wednesday,11:00,12:20,,"Working Together",Dominic,Furniss,,,701B,,,,pn1881,pn514,to137,pn657,,
-s162,Tuesday,9:00,10:20,,"Understanding and Designing Games",Lennart,Nacke,"University of Ontario Institute of Technology",Canada,701B,,,,pn2046,pn683,pn1901,pn1518,pn799,
-s163,Tuesday,14:00,15:20,,"Design Theory",Steve,Harrison,,,717AB,,,,pn2048,pn1667,pn1417,pn687,,
-s164,Monday,14:00,15:20,,"Studying Online Communities",Rogerio,de Paula,,,701A,,,,pn1410,pn1341,pn2095,pn1918,,
-s165,Monday,11:00,12:20,,"Social Local Mobile",David,McGookin,"Heriot-Watt University",United Kingdom,714AB,,,,pn785,pn2399,pn897,pn2094,pn2488,
-s166,Monday,16:00,17:20,,"Novel Approaches to Navigation",Yuichiro,Takeuchi,,,714AB,,,,pn1569,pn395,pn1632,pn1704,pn250,
-s167,Monday,11:00,12:20,,"The Third Dimension",Mark,Hancock,"University of Waterloo",Canada,718AB,,,,pn916,pn1758,pn734,pn977,,
-s168,Wednesday,14:00,15:20,,"Question and Answer Systems",Jeffrey,Nichols,"IBM Research",United States,701A,,,,pn1343,pn1255,pn1490,pn1236,pn691,
-s169,Thursday,14:00,15:20,,"Driving Interfaces and Evaluations",David,Kirk,"Newcastle University",United Kingdom,716B,,,,pn1969,to131,pn648,pn233,,
-s170,Wednesday,9:00,10:20,,"Text Entry and Evaluation",Antti,Oulasvirta,"Max Planck Institute for Informatics",Germany,Exhibit Hall G,,,,pn2464,to118,to135,pn2454,,
-s171,Tuesday,14:00,15:20,,"Personal Health and Wellbeing",Jina,Huh,"Michigan State University",United States,716B,,,,pn1475,pn887,pn677,pn802,,
-s172,Monday,11:00,12:20,,"Coordination and Collaboration",Mark,Rouncefield,,,716B,,,,pn2294,pn1470,pn1123,pn924,,
-s173,Thursday,11:00,12:20,,"Modeling Users and Interaction",Niklas,Elmqvist,"Purdue University",United States,801A,,,,pn750,pn1982,pn2105,pn626,pn272,
-s174,Tuesday,11:00,12:20,,"Human-Robot Interaction",Wendy,Ju,"Stanford University",United States,801A,,,,pn586,pn1252,pn1722,pn1227,pn2358,
-s175,Tuesday,9:00,10:20,,"Enabling Interactive Performances",Claire,O'Malley,,,716A,,,,pn1579,pn547,pn1275,pn541,pn1452,
-s176,Tuesday,11:00,12:20,,"Interacting with the Web",Jennifer,Golbeck,"University of Maryland",United States,714AB,,,,pn455,to120,pn1670,pn1071,,
-s177,Tuesday,16:00,17:20,,"Designing for Older Adults and Demographic Change",Vicki,Hanson,"Rochester Institute of Technology",United States,716B,,,,pn906,to113,pn1850,pn704,pn1923,
-s178,Wednesday,11:00,12:20,,"CHI for Social Development",Ban,Al-Ani,"University of California, Irvine",United States,801B,,,,pn1978,pn1325,pn2226,pn1732,,
-s179,Thursday,14:00,15:20,,"Computer Mediated Intimacy and Romance",John,Thomas,"IBM T. J. Watson Research ",United States,701A,,,,pn941,pn1238,pn2054,pn1190,,
-s180,Wednesday,16:00,17:20,,"Interruptions and Distractions",Jason,Alexander,"Lancaster University",United Kingdom,701B,,,,pn1351,pn806,pn641,pn1282,,
-s181,Thursday,11:00,12:20,,"Desktop Search and History",Huahai,Yang,"IBM Research",United States,714AB,,,,pn2128,pn361,pn400,pn435,,
-s182,Tuesday,11:00,12:20,,"Social Media and Health",m.c.,schraefel,"University of Southampton",United Kingdom,716B,,,,pn1009,pn1036,pn1814,pn1413,,
-s183,Wednesday,11:00,12:20,,"Risks and Security",Alexander,De Luca,"University of Munich (LMU)",Germany,801A,,,,pn1976,pn191,pn2005,pn1811,pn1724,
-s184,Wednesday,14:00,15:20,,"Policies and Practice: Doing the Right Thing",Volker,Wulf,"University of Siegen and Fraunhofer FIT",Germany,801B,,,,to127,pn2193,pn2160,pn602,,
-s185,Thursday,9:00,10:20,,"Games and Education",Jodi,Forlizzi,"Carnegie Mellon University",United States,701B,,,,pn2330,pn1120,pn2328,pn671,,
-s186,Monday,16:00,17:20,,"Always Connected: Email and Social Media",Svetlana,Yarosh,"AT&T Research Labs",United States,718AB,,,,pn2266,pn219,pn1257,pn345,,
-s187,Tuesday,9:00,10:20,,"Interactive Visualization and Visual Elements",Eytan,Adar,"University of Michigan",United States,701A,,,,pn337,pn2242,pn1472,pn1447,,
-s188,Tuesday,14:00,15:20,,"Engage and Educate Children",Julie,Kientz,"University of Washington",United States,801B,,,,pn1745,pn950,pn1354,pn2406,pn431,
-s189,Tuesday,9:00,10:20,,"Personal Values and Preferences",Katharina,Reinecke,"University of Michigan",United States,714AB,,,,pn2380,pn2417,pn1525,pn1763,pn255,pn1242
-s190,Tuesday,16:00,17:20,,"Exploring Exergames",Darren,Edge,"Microsoft Research Asia",China,701B,,,,pn2277,pn1521,pn737,pn2003,,
-s191,Thursday,11:00,12:20,,"Participatory Design",Mona Leigh,Guha,"University of Maryland",United States,717AB,,,,pn1517,pn2368,pn866,pn1859,,
-s192,Wednesday,9:00,10:20,,"Designing and Modeling GUIs",Michael,Nebeling,"ETH Zurich",Switzerland,714AB,,,,pn2096,pn198,pn189,pn171,pn1783,
-s193,Monday,11:00,12:20,,"Student Design Competition (Closed Judging Session)",,,,,715B,,,,sdc-judge,,,,,
-s194,Wednesday,14:00,15:20,,"Sensory Experiences: Smell and Taste",Jettie,Hoonhout,"Philips Research",The Netherlands,Exhibit Hall G,,,,pn320,pn319,pn728,pn419,,
-s195,Thursday,9:00,10:20,,"Social Media Usage",David,Geerts,"KU Leuven - University of Leuven",Belgium,701A,,,,pn190,pn1032,pn2276,pn180,,
-s196,Thursday,9:00,10:20,,"PolitiCHI",Darren,Gergle,"Northwestern University",United States,801B,,,,pn1330,pn763,pn169,pn1915,,
-s197,Tuesday,11:00,12:20,,"Navigating Video",Krzysztof,Gajos,"Harvard University",United States,701A,,,,pn796,pn2268,pn1872,pn1558,pn692,
-s199,Wednesday,14:00,15:20,,"Exergaming for Health and Fitness",Dan,Morris,"Microsoft Research",United States,716B,,,,pn1684,pn1171,pn1290,pn1845,,
-s201,Wednesday,9:00,10:20,,"Emotions and Mobiles",Antonio,Krueger,"German Research Center for Artificial Intelligence (DFKI)",Germany,718AB,,,,pn1818,pn2175,to108,pn643,,
-s202,Tuesday,9:00,10:20,,"Sustainability Perspectives",Elaine,Huang,"University of Zurich",Switzerland,801B,,,,to106,to136,pn155,pn2220,,
-s203,Tuesday,9:00,10:20,,"Quantified Self",John,Zimmerman,"Carnegie Mellon University",United States,801A,,,,to101,pn2214,pn1446,pn493,,
-s204,Thursday,14:00,15:20,,"Research and Deployment in the Wild",Wendy,Moncur,"University of Dundee",United Kingdom,801A,,,,to103,to122,to123,to129,,
-s205,Wednesday,16:00,17:20,,"Journalism and Social News",Coye,Cheshire,"University of California, Berkeley",United States,701A,,,,pn1646,pn576,pn1460,pn862,,
-s206,Tuesday,11:00,12:20,,"Music, Dance, and Television",Mark,Blythe,"Northumbria University",United Kingdom,716A,,,,pn1834,pn2202,pn534,pn1932,,
-s207,Wednesday,16:00,17:20,,"Tangible Interactions and Technologies",Erin,Solovey,"Drexel University",United States,Exhibit Hall G,,,,to114,pn371,pn794,pn241,pn2010,
-s208,Monday,16:00,17:20,,"Interfaces for Care and Support",Jesper,Kjeldskov,,,716B,,,,pn787,pn1821,pn1298,pn2016,,
-s209,Monday,14:00,15:20,,"Force Input and Haptic Feedback",Ian,Oakley,"Ulsan National Institute of Science and Technology",South Korea,Exhibit Hall G,,,,pn1635,pn1583,pn386,pn1046,pn495,
-s210,Thursday,14:00,15:20,,"Social Media for Relationships",William,Odom,"Carnegie Mellon University",United States,801B,,,,pn590,pn1800,pn1617,pn751,,
-s211,Wednesday,16:00,17:20,,"Accessibility",Hironobu,Takagi,"IBM Research",Japan,716B,,,,pn1482,pn2001,pn714,pn2483,,
-s212,Thursday,11:00,12:20,,"Engaging Older Adults Through Technology",Joanna,McGrenere,"University of British Columbia",Canada,801B,,,,pn975,pn1264,pn245,pn1549,,
-s213,Thursday,11:00,12:20,,"Brain Computer Interfaces",Lynne,Baillie,"Glasgow Caledonian University",United Kingdom,Exhibit Hall G,,,,pn366,pn1471,pn183,pn673,,
-s214,Tuesday,9:00,10:20,,"Battery Life and Energy Harvesting",Nicholas,Chen,"",United Kingdom,716B,,,,pn1707,pn1448,pn505,pn983,,
-s-float-1,Tuesday,16:00,17:20,,"Understanding and Modeling Touch",Daniel,Vogel,"University of Waterloo",Canada,Exhibit Hall G,,,,pn1916,pn2117,pn730,pn1057,pn583,pn2394
-s-float-2,Thursday,9:00,10:20,,"Whole Body Sensing and Interaction",Otmar,Hilliges,"ETH Zurich",Switzerland,Exhibit Hall G,,,,pn235,pn521,pn775,pn139,,
-s-float-3,Wednesday,11:00,12:20,,"Student Research Competition",,,,,717AB,,,,src,,,,,
-s-float-4,Thursday,9:00,10:20,,"Learning and Games",Amy,Ogan,"Carnegie Mellon University",United States,714AB,,,,pn2472,pn1421,pn1750,pn2200,,
-s-float-5,Monday,14:00,15:20,,"Social Impact Award: Richard Ladner",Jeffrey,Bigham,"Carnegie Mellon University",United States,701B,,,,key105,,,,,
-s-float-6,Tuesday,14:00,15:20,,"Lifetime Research Award: Steve Whittaker",Judith,Olson,,,701B,,,,key101,,,,,
-s-float-7,Wednesday,14:00,15:20,,"Lifetime Practice Award: Gillian Crampton Smith",Don,Norman,"Nielsen Norman Group",United States,701B,,,,key107,,,,,
-s-float-8,Wednesday,16:00,17:20,,"Student Game Competition",,,,,717AB,,,,sgc,,,,,
-s-float-9,Wednesday,9:00,10:20,,"Issues That Matter",Rob,Comber,"Newcastle University",United Kingdom,801B,,,,pn399,pn2140,to110,pn1296,,
-s-float-10,Wednesday,14:00,15:20,,"Student Design Competition",,,,,717AB,,,,sdc,,,,,
-s-panel1,Monday,11:00,12:20,,"Design Methods for the Future that is NOW: Have Disruptive Technologies Disrupted Our Design Methodologies?",,,,,716A,,,,pan102,,,,,
-s-panel2,Monday,14:00,15:20,,"Designing for the Experiential Body",,,,,716A,,,,pan103,,,,,
-s-panel3,Monday,16:00,17:20,,"Electronic Privacy and Surveillance",,,,,716A,,,,pan106,,,,,
-s-panel4,Thursday,14:00,15:20,,"Can You Do Good and Do Well? Exploring HCI Careers in Development",,,,,715A,,,,pan107,,,,,
-s-panel5,Wednesday,11:00,12:20,,"Making Cultures: Empowerment, Participation, and Democracy – or Not?",,,,,716A,,,,pan108,,,,,
-s-panel6,Wednesday,14:00,15:20,,"CROWDFUNDING: An Emerging Field of Research",,,,,716A,,,,pan110,,,,,
-s-panel7,Wednesday,16:00,17:20,,"The Meaning of Design in Healthcare: the Academia, Industry, HF Consultant, Clinician and Patient Perspectives",,,,,716A,,,,pan114,,,,,
-s-panel8,Tuesday,14:00,15:20,,"Interacting with Digital Individuals: Opportunities and Risks of Discovering Personality Traits from Social Media",,,,,716A,,,,pan118,,,,,
-s-alt1,Monday,14:00,15:20,,"Understanding Interactions",Daniela,Rosner,"University of Washington",United States,717AB,,,,alt105,alt121,alt155,alt163,,
-s-alt2,Monday,11:00,12:20,,"Ways of Knowing in HCI",Barry,Brown,,,717AB,,,,alt174,alt112,alt188,alt104,,
-s-alt3,Tuesday,9:00,10:20,,"Ways of Creating in HCI",Silvia,Lindtner,"University of California, Irvine",United States,717AB,,,,alt101,alt133,alt145,alt170,,
-s-alt4,Tuesday,11:00,12:20,,"Limits and Futures",Morgan,Ames,,,717AB,,,,alt172,alt119,alt107,alt168,,
-s-alt5,Thursday,9:00,10:20,,"Intimate Interfaces",Conor,Linehan,,,717AB,,,,alt153,alt179,alt156,alt146,,
-s-alt6,Wednesday,9:00,10:20,,"Navel Gazing",Lilly,Irani,"University of California, San Diego",USA,717AB,,,,alt109,alt143,alt191,alt116,,
-s-crs162,Tuesday,9:00,10:20,,"Citizen Science: An Introduction",,,,,713AB,,,,crs162,,,,,
-s-crs163,Thursday,14:00,15:20,,"A Conversation with Susan Dray: Uncovering the Ordinary, Inspiring the Extraordinary",,,,,713AB,,,,crs163,,,,,
+ID,Date,Time,End Time,Track,Title,Chair(s),Location,Notes,Web Page,Submission IDs
+1,"Apr 21, 2015",16:30,17:50,N,"SIG: Start and Run a SIGCHI Local Chapter","","318A",,,sig102     
+2,"Apr 22, 2015",11:30,12:50,N,"SIG: Online Deliberative Processes and Tech","","318A",,,sig104     
+3,"Apr 22, 2015",16:30,17:50,N,"SIG: Understanding Sports","","318A",,,sig105     
+4,"Apr 21, 2015",11:30,12:50,N,"SIG: Gender-Inclusive Software","","318A",,,sig108     
+5,"Apr 20, 2015",14:30,15:50,N,"SIG: Interactive Childhood ","","318A",,,sig109     
+6,"Apr 20, 2015",14:30,15:50,K,"Case Studies: Industrial Innovation","Dongwhan Kim","308",,,case115 case133 case137 case156  
+7,"Apr 21, 2015",9:30,10:50,K,"Case Studies: Art &amp; Life","Frisina Chris","308",,,case120 case147 case163 case183  
+8,"Apr 21, 2015",14:30,15:50,K,"Case Studies: Education &amp; Work","Luis A. Leiva","308",,,case128 case129 case167 case191  
+9,"Apr 23, 2015",9:30,10:50,K,"Case Studies:&nbsp; Observation &amp; Interaction","Frank Bentley","308",,,case131 case136 case138 case153  
+10,"Apr 23, 2015",14:30,15:50,K,"Case Studies: Special Environments","Francesca Samsel","308",,,case134 case139 case140 case155  
+11,"Apr 21, 2015",9:30,10:50,M,"Course: Learn to Sketch (Even if You Can’t Draw) 1/2","","317BC",,,crs100     
+12,"Apr 21, 2015",11:30,12:50,M,"Course: Learn to Sketch (Even if You Can’t Draw) 1/2","","317BC",,,crs100     
+13,"Apr 22, 2015",9:30,10:50,L,"Course: Intro to Creating Musical Interfaces 1/2","","317A",,,crs101     
+14,"Apr 22, 2015",11:30,12:50,L,"Course: Intro to Creating Musical Interfaces 1/2","","317A",,,crs101     
+15,"Apr 23, 2015",11:30,12:50,M,"Course: Designing with the Mind in Mind 1/1","","317BC",,,crs103     
+16,"Apr 22, 2015",14:30,15:50,L,"Course: Experience Sampling to Collect Deep Data 1/2","","317A",,,crs104     
+17,"Apr 22, 2015",16:30,17:50,L,"Course: Experience Sampling to Collect Deep Data 1/2","","317A",,,crs104     
+18,"Apr 21, 2015",9:30,10:50,O,"Course: Practical UX Research Methodologies 1/2","","318BC",,,crs106     
+19,"Apr 21, 2015",11:30,12:50,O,"Course: Practical UX Research Methodologies 1/2","","318BC",,,crs106     
+20,"Apr 22, 2015",14:30,15:50,O,"Course: Conceptual Models: Core to Good Design 1/2","","318BC",,,crs107     
+21,"Apr 22, 2015",16:30,17:50,O,"Course: Conceptual Models: Core to Good Design 1/2","","318BC",,,crs107     
+22,"Apr 20, 2015",11:30,12:50,L,"Course: Designing Websites for Adults 55+ 1/1","","317A",,,crs108     
+23,"Apr 21, 2015",14:30,15:50,I,"Course: HCI Lessons: From Earth to Outer Space 1/2","","E7",,,crs109     
+24,"Apr 21, 2015",16:30,17:50,I,"Course: HCI Lessons: From Earth to Outer Space 1/2","","E7",,,crs109     
+25,"Apr 23, 2015",9:30,10:50,O,"Course: Introduction to Positive Computing 1/1","","318BC",,,crs110     
+26,"Apr 20, 2015",14:30,15:50,O,"Course: Design for Online Video &amp; Television 1/2","","318BC",,,crs111     
+27,"Apr 20, 2015",16:30,17:50,O,"Course: Design for Online Video &amp; Television 1/2","","318BC",,,crs111     
+28,"Apr 20, 2015",14:30,15:50,M,"Course: Intro to Human-Computer Interaction 2/2","","317BC",,,crs112     
+29,"Apr 20, 2015",16:30,17:50,M,"Course: Intro to Human-Computer Interaction 2/2","","317BC",,,crs112     
+30,"Apr 20, 2015",11:30,12:50,I,"Course: Cross-channel Conceptual Design 1/1","","E7",,,crs113     
+31,"Apr 22, 2015",14:30,15:50,K,"Course: Designing Wearable Interfaces 1/2","","308",,,crs115     
+32,"Apr 22, 2015",16:30,17:50,K,"Course: Designing Wearable Interfaces 1/2","","308",,,crs115     
+33,"Apr 22, 2015",9:30,10:50,I,"Course: Speech-based Interaction 1/2","","E7",,,crs116     
+34,"Apr 22, 2015",11:30,12:50,I,"Course: Speech-based Interaction 1/2","","E7",,,crs116     
+35,"Apr 22, 2015",14:30,15:50,I,"Course: Rapid Design Labs - Design-Led Innovation 1/2","","E7",,,crs117     
+36,"Apr 22, 2015",16:30,17:50,I,"Course: Rapid Design Labs - Design-Led Innovation 1/2","","E7",,,crs117     
+37,"Apr 20, 2015",14:30,15:50,I,"Course: Actionable Inexpensive Games Research 1/2","","E7",,,crs118     
+38,"Apr 20, 2015",16:30,17:50,I,"Course: Actionable Inexpensive Games Research 1/2","","E7",,,crs118     
+39,"Apr 23, 2015",9:30,10:50,I,"Course: Interaction Design for Reading Devices 1/1","","E7",,,crs119     
+40,"Apr 22, 2015",9:30,10:50,O,"Course: Designing Surveys for HCI Research 1/2","","318BC",,,crs121     
+41,"Apr 22, 2015",11:30,12:50,O,"Course: Designing Surveys for HCI Research 1/2","","318BC",,,crs121     
+42,"Apr 21, 2015",9:30,10:50,L,"Course: Designing &amp; Assessing Task Models 1/2","","317A",,,crs122     
+43,"Apr 21, 2015",11:30,12:50,L,"Course: Designing &amp; Assessing Task Models 1/2","","317A",,,crs122     
+44,"Apr 23, 2015",11:30,12:50,I,"Course: Benefit from Using ISO Standards 1/1","","E7",,,crs124     
+45,"Apr 20, 2015",11:30,12:50,M,"Course: Cross-Device, Context-dependent UI 1/1","","317BC",,,crs128     
+46,"Apr 21, 2015",9:30,10:50,I,"Course:&nbsp;Methods for Child Computer Interaction 1/2","","E7",,,crs129     
+47,"Apr 21, 2015",11:30,12:50,I,"Course:&nbsp;Methods for Child Computer Interaction 1/2","","E7",,,crs129     
+48,"Apr 21, 2015",14:30,15:50,O,"Course: Sketching User Experiences 1/2","","318BC",,,crs131     
+49,"Apr 21, 2015",16:30,17:50,O,"Course: Sketching User Experiences 1/2","","318BC",,,crs131     
+50,"Apr 20, 2015",11:30,12:50,O,"Course: Body, Whys &amp; Videotape: Somatic Approaches 1/1","","318BC",,,crs132     
+51,"Apr 21, 2015",14:30,15:50,M,"Course: Mobile Human-Computer Interaction 1/2","","317BC",,,crs133     
+52,"Apr 21, 2015",16:30,17:50,M,"Course: Mobile Human-Computer Interaction 1/2","","317BC",,,crs133     
+53,"Apr 21, 2015",14:30,15:50,L,"Course: Methods for&nbsp;HCI &nbsp;Research 1/2","","317A",,,crs134     
+54,"Apr 21, 2015",16:30,17:50,L,"Course: Methods for&nbsp;HCI &nbsp;Research 1/2","","317A",,,crs134     
+55,"Apr 20, 2015",14:30,15:50,L,"Course: Design for Searching &amp; Finding 1/2","","317A",,,crs135     
+56,"Apr 20, 2015",16:30,17:50,L,"Course: Design for Searching &amp; Finding 1/2","","317A",,,crs135     
+57,"Apr 23, 2015",9:30,10:50,M,"Course: Vision-Driven: Beyond Tangible Bits 1/1","","317BC",,,crs138     
+58,"Apr 20, 2015",14:30,15:50,B,"Papers: Interaction in 3D Space","Kening Zhu","402",,,pn112 pn1073 pn433 pn263 pn623 
+59,"Apr 22, 2015",9:30,10:50,G,"Papers: Accessibility at Home &amp; on The Go","Hironobu Takagi","E5",,,pn1638 jrn132 pn1559 pn2072  
+60,"Apr 21, 2015",16:30,17:50,H,"Papers: Feeling &amp; Communicating Emotions","Rongrong Wang","E6",,,pn859 pn1195 pn507 pn2050  
+61,"Apr 22, 2015",11:30,12:50,G,"Papers: Quantified&nbsp;Self&nbsp;for Humans &amp;&nbsp;Pets&nbsp;","Rodrigo de Oliveira","E5",,,pn413 pn563 pn688 pn2412  
+62,"Apr 22, 2015",11:30,12:50,D,"Papers: Art &amp; Performance","Thecla Schiphorst","E1/E2",,,pn2300 pn2272 pn682 pn383 pn517 
+63,"Apr 23, 2015",9:30,10:50,A,"Papers: Augmented &amp; Virtual Reality in the Real World&nbsp;","Morten Fjeld","401",,,pn1357 pn525 pn487 pn1936  
+64,"Apr 22, 2015",16:30,17:50,A,"Papers: Using Random Body Parts for Input","Patrick Baudisch","401",,,pn1367 pn1809 pn2131 pn2473 pn979 
+65,"Apr 22, 2015",14:30,15:50,E,"Papers: HCI for Civic Engagement","John Vines","E3",,,pn677 pn1156 pn354 pn2352  
+66,"Apr 20, 2015",14:30,15:50,H,"Papers: Matching &amp; Facilitating Social Interactions","Jofish Kaye","E6",,,pn1541 pn1122 pn1509 pn1023  
+67,"Apr 20, 2015",14:30,15:50,J,"Papers: Reflecting Upon Design Reflection","Ron Wakkary","307",,,pn521 pn583 pn1048 pn1906  
+68,"Apr 20, 2015",16:30,17:50,E,"Papers: Crowdsourcing Fans &amp; Friends","Shaun Lawson","E3",,,pn1808 pn1092 pn555 pn1453  
+69,"Apr 21, 2015",11:30,12:50,H,"Papers: Storytelling in InfoVis","Charles Perin","E6",,,pn1717 pn1606 pn2637 pn1580  
+70,"Apr 23, 2015",14:30,15:50,F,"Papers: Disasters &amp; Humanitarian Events","Tawanna Dillahunt","E4",,,pn710 pn327 pn1018 pn898  
+71,"Apr 21, 2015",16:30,17:50,F,"Papers: Eco-Green: Encouraging Energy Conservation","Germaine Irwin","E4",,,pn849 pn1218 pn1033 pn731 pn2212 
+72,"Apr 23, 2015",9:30,10:50,F,"Papers: Empowering Users","Maarten Thissen","E4",,,jrn133 pn2327 pn2172 jrn103  
+73,"Apr 23, 2015",9:30,10:50,D,"Papers: Digital Collections, Practice &amp; Legacy","Will Odom","E1/E2",,,pn1312 pn594 pn1764 pn910  
+74,"Apr 20, 2015",14:30,15:50,F,"Papers: Privacy, Security &amp; Interruptions","Emilee Rader","E4",,,pn169 pn1266 pn904 pn1501  
+75,"Apr 21, 2015",16:30,17:50,A,"Papers: Design and 3D Object Fabrication","David Kim","401",,,pn2494 pn1055 pn545 pn1316  
+76,"Apr 20, 2015",16:30,17:50,D,"Papers: Family Communication","Siân Lindley","E1/E2",,,pn1174 pn1785 pn930 pn420 pn1583 
+77,"Apr 20, 2015",11:30,12:50,D,"Papers: Improving Game Experiences","Lennart Nacke","E1/E2",,,pn282 pn153 pn1617 pn681 pn708 
+78,"Apr 23, 2015",11:30,12:50,D,"Papers: Understanding Gamers","Toni-Jan Keith Monserrat","E1/E2",,,pn1599 pn1835 pn1874 pn820 pn2213 
+79,"Apr 23, 2015",11:30,12:50,F,"Papers: Gender &amp; Technology","Antonella De Angeli","E4",,,pn2314 pn2234 pn734 pn2146  
+80,"Apr 23, 2015",9:30,10:50,H,"Papers: Interactive &amp; Multi-Surface Maps","Brent Hecht","E6",,,pn1892 pn328 pn134 pn2245  
+81,"Apr 23, 2015",9:30,10:50,B,"Papers: Gesture Elicitation &amp; Recognition","Niels Henze","402",,,pn2504 pn2004 pn2678 pn1184 pn373 
+82,"Apr 20, 2015",11:30,12:50,F,"Papers: Activism in Wikipedia &amp; Beyond","Gary Hsieh","E4",,, pn1135 pn1626 pn323 pn2108 pn2370
+83,"Apr 22, 2015",14:30,15:50,C,"Papers: GUI Size, Resolution &amp; Layout","Enrico Rukzio","403",,,pn1492 pn1361 pn139 pn1284 pn416 
+84,"Apr 23, 2015",11:30,12:50,E,"Papers: Bridging Communities","Edward Cutrell","E3",,,pn824 pn1915 pn687 pn2606  
+85,"Apr 22, 2015",14:30,15:50,G,"Papers: Wellness &amp; Wearables","Marianna Obrist","E5",,,pn1894 pn1336 pn414 pn1280  
+86,"Apr 22, 2015",16:30,17:50,G,"Papers: Understanding Health through Online Behavior","Mary Czerwinski","E5",,,pn808 pn243 pn245 pn2424  
+87,"Apr 23, 2015",11:30,12:50,G,"Papers: Coping &amp; Wellbeing Through HCI","Jina Huh","E5",,,pn2085 pn862 pn1940 pn1368  
+88,"Apr 20, 2015",11:30,12:50,H,"Papers: Visualizing Data","Christophe Hurter","E6",,,pn1552 pn500 pn1684 pn1886  
+89,"Apr 20, 2015",14:30,15:50,E,"Papers: Supporting Change in Developing Countries","Anirudha Joshi","E3",,,pn400 pn685 pn2476 pn2471  
+90,"Apr 21, 2015",9:30,10:50,H,"Papers: I Like What I See - Interface Aesthetics","Simon Bowen","E6",,,pn2480 pn481 pn1550 pn2305 pn768 
+91,"Apr 21, 2015",9:30,10:50,D,"Papers: Kids Haptic, Wearable, Tangible Learning","Shuli Gilutz","E1/E2",,,pn1390 pn919 pn654 pn1391  
+92,"Apr 20, 2015",16:30,17:50,A,"Papers: Makers &amp; Hackers","Ellen Yi-Luen Do","401",,,pn2318 pn1210 pn2165 pn353  
+93,"Apr 21, 2015",11:30,12:50,E,"Papers: Evaluating Crowdsourcing ","Bongwon Suh","E3",,,pn2336 pn1840 pn206 pn2588 pn1837 
+94,"Apr 21, 2015",14:30,15:50,J,"Papers: Innovation in Theories &amp; Products","Volker Wulf","307",,,pn1528 pn496 pn2421 jrn111  
+95,"Apr 22, 2015",14:30,15:50,B,"Papers: Understanding Everyday Use of Mobile Phones","Matt Jones","402",,,pn277 pn1907 pn369 jrn127  
+96,"Apr 21, 2015",14:30,15:50,B,"Papers: Grip, Move &amp; Tilt: Novel Interaction","Jessica Cauchard","402",,,pn1086 pn1577 pn2102 pn380 pn548 
+97,"Apr 21, 2015",14:30,15:50,C,"Papers: Interactive Video &amp; Collaborative Annotations","Amy Ogan","403",,,pn382 pn2492 pn936 pn464 pn738 
+98,"Apr 22, 2015",14:30,15:50,H,"Papers: Task Interruption &amp; Resumption","Martin Halvey","E6",,,pn2281 pn1103 pn1256 pn261 pn2587 
+99,"Apr 21, 2015",9:30,10:50,A,"Papers: Muscle-Computer Interfaces","Chris Harrison","401",,,jrn121 jrn115 pn1980 pn1766  
+100,"Apr 21, 2015",14:30,15:50,D,"Papers: HCI for the Elderly","Maria Wolters","E1/E2",,,jrn102 pn105 pn2570 pn1603  
+101,"Apr 22, 2015",11:30,12:50,H,"Papers: Visualizing Statistics &amp; Graphs ","Benjamin Bach","E6",,,pn697 pn1142 pn592 pn2539 pn1289 
+102,"Apr 22, 2015",16:30,17:50,B,"Papers: Brain &amp; Physiological Data use for HCI","Jacob Robert","402",,,pn1723 jrn105 jrn114 pn1026  
+103,"Apr 22, 2015",16:30,17:50,B,"Papers: Brain &amp; Physiological Data use for HCI","Robert Jacob","402",,,pn1723 jrn105 jrn114 pn1026  
+104,"Apr 22, 2015",16:30,17:50,B,"Papers: Brain &amp; Physiological Data use for HCI","Robert Jacob","402",,,pn1723 jrn105 jrn114 pn1026  
+105,"Apr 22, 2015",16:30,17:50,F,"Papers: Socio-Political Interactions","Liang Gou","E4",,,pn917 pn439 pn1458 pn880  
+106,"Apr 20, 2015",16:30,17:50,F,"Papers: Managing Personal Privacy","Sameer Patil","E4",,,pn466 pn763 pn1480 pn895  
+107,"Apr 22, 2015",16:30,17:50,C,"Papers: Software Engineering Tools","Feng Tian","403",,,pn2575 jrn101 pn1038 pn932  
+108,"Apr 21, 2015",9:30,10:50,B,"Papers: Phones for more than Just Talking &amp; Text&nbsp;","Naomi Yamashita","402",,,pn265 pn1647 pn1129 jrn118 pn462 pn732
+109,"Apr 23, 2015",11:30,12:50,H,"Papers: Interacting with Floors &amp; Situated Displays","Diego Martinez Plasencia","E6",,,pn638 pn667 pn236 pn229  
+110,"Apr 23, 2015",11:30,12:50,A,"Papers: Robot Personalities","Malte Jung","401",,,pn1538 pn2586 pn366 pn2328  
+111,"Apr 21, 2015",9:30,10:50,C,"Papers: Search &amp; Recommendations","Susan Dumais","403",,,pn1958 pn2207 pn532 pn2447  
+112,"Apr 22, 2015",9:30,10:50,F,"Papers: Enhanced Security with Passwords &amp; CAPTCHAs ","Serge Egelman","E4",,,pn602 pn1743 pn114 pn434 pn1221 
+113,"Apr 20, 2015",16:30,17:50,B,"Papers: How Fast Can you Type on your Phone?","Michael Rohs","402",,,pn1991 pn144 pn1356 pn2602  
+114,"Apr 21, 2015",11:30,12:50,A,"Papers: Smartwatch Interaction","Daniel Ashbrook","401",,,pn2218 pn762 pn546 pn488 pn643 
+115,"Apr 20, 2015",11:30,12:50,E,"Papers: Facebook Newsfeeds &amp; Friendships","David Shamma","E3",,,pn2341 pn2339 pn345 jrn110  
+116,"Apr 22, 2015",11:30,12:50,K,"Special: Human Computer Interaction&nbsp;Journal 2","Scott Klemmer","308",,,jrn149 jrn150 jrn145 jrn146  
+117,"Apr 20, 2015",11:30,12:50,B,"Papers: What do I hear? Communicating with Sound","Ian Oakley","402",,,pn1275 pn1355 pn1977 pn1187 pn1966 
+118,"Apr 23, 2015",14:30,15:50,B,"Papers: Speech &amp; Auditory Interfaces","Cosmin Munteanu","402",,,pn2111 pn2228 pn1273 pn1302 pn306 
+119,"Apr 22, 2015",9:30,10:50,H,"Papers: Telepresence Video, Robots, and Walls","John Tang","E6",,,pn271 pn1688 pn2196 jrn112  
+120,"Apr 22, 2015",11:30,12:50,B,"Papers: Tactile Notifications for Phones &amp; Wearables","Max Wilson","402",,,pn1114 pn1149 pn1763 pn399 pn115 
+121,"Apr 21, 2015",11:30,12:50,B,"Papers: Tangible Interactions","Otmar Hilliges","402",,,pn1888 pn453 pn1620 pn451 pn2464 
+122,"Apr 22, 2015",16:30,17:50,H,"Papers: Natural User Interfaces for InfoVis","Bongshin Lee","E6",,,pn365 pn2625 pn650 pn2578 pn123 
+123,"Apr 23, 2015",14:30,15:50,J,"Papers: Interacting with GUIs","David Flatla","307",,,pn142 pn359 pn332 pn1895 pn2296 
+124,"Apr 21, 2015",14:30,15:50,E,"Papers: The Impact of Crowd Work on Workers","Jaime Teevan","E3",,,pn2313 pn807 pn411 pn2032 pn1662 
+125,"Apr 22, 2015",16:30,17:50,J,"Papers: UX Methods 4 ","Benjamin Hanrahan","307",,,pn308 pn1944 pn2491 pn227  
+126,"Apr 22, 2015",9:30,10:50,A,"Papers: HMDs in Augmented &amp; Virtual Reality","Shahram Izadi","401",,,pn954 pn1709 pn273 pn1323 pn182 pn665
+127,"Apr 21, 2015",16:30,17:50,K,"Special: Human Computer Interaction&nbsp;Journal 1","Sharon Oviatt","308",,,jrn151 jrn147 jrn148   
+128,"Apr 20, 2015",11:30,12:50,J,"Panel: Transfer of HCI Research Innovations","","307",,,pan106     
+129,"Apr 21, 2015",11:30,12:50,J,"Panel: You've Been Acquired!","","307",,,pan108     
+130,"Apr 22, 2015",11:30,12:50,J,"Panel: Transdisciplinary Design in Education","","307",,,pan109     
+131,"Apr 22, 2015",14:30,15:50,J,"Panel: 10 Years of alt.chi","","307",,,pan119     
+132,"Apr 23, 2015",9:30,10:50,J,"Panel: Mobile Devices Revolutionizing UI","","307",,,pan120     
+133,"Apr 23, 2015",11:30,12:50,J,"Panel: Why Google cannot be the # 1 in Korea?: In Search for Critical Success Factors from Local User Experience","","307",,,pan121     
+134,"Apr 23, 2015",11:30,12:50,K,"alt.chi: Mindfulness and Care","Silvia Lindtner","308",,,alt107 alt118 alt130 alt164  
+135,"Apr 20, 2015",16:30,17:50,K,"alt.chi: New User Interfaces","Tovi Grossman","308",,,alt151 alt129 alt100 alt154  
+136,"Apr 21, 2015",11:30,12:50,K,"alt.chi: HCI Methodology","Henry Duh","308",,,alt138 alt133 alt122 alt127  
+137,"Apr 22, 2015",9:30,10:50,K,"alt.chi: Arts and Phiolosphy","Morgan Ames","308",,,alt142 alt157 alt152 alt159  
+138,"Apr 20, 2015",11:30,12:50,K,"alt.chi: Augmentation","Aaron Quigley","308",,,alt140 alt136 alt149 alt153  
+139,"Apr 23, 2015",9:30,10:50,G,"Papers: Accessibility for Vision Impaired Users","Xiaojuan Ma","E5",,,pn1077 pn691 pn2486 jrn107  
+140,"Apr 20, 2015",11:30,12:50,G,"Papers: HMDs &amp; Wearables to Overcome Disabilities","Shaun Kane","E5",,,pn388 pn1898 pn1373 pn1881 pn2582 
+141,"Apr 22, 2015",16:30,17:50,D,"Papers: HCI at Home","David Geerts","E1/E2",,,pn2282 pn2611 pn504 pn787  
+142,"Apr 23, 2015",14:30,15:50,C,"Papers: Email &amp; Social Media at Work","Pernille Bjorn","403",,,pn1151 pn1350 pn2247 pn1682 pn410 
+143,"Apr 21, 2015",16:30,17:50,C,"Papers: Sharing &amp; Collaboration @ Work","Steven Drucker","403",,,pn581 pn2126 pn1226 pn973  
+144,"Apr 20, 2015",11:30,12:50,A,"Papers: Non-Rigid Interaction Surfaces","Jörg Müller","401",,,pn2680 pn1217 pn875 pn2604 pn2122 
+145,"Apr 23, 2015",11:30,12:50,B,"Papers: Mid-Air Gestures and Interaction","Yang Li","402",,,pn362 pn147 pn140 pn2607 pn1268 
+146,"Apr 21, 2015",16:30,17:50,B,"Papers: Understanding &amp; Extending Touch Interfaces","Theophanis Tsandilas","402",,,pn2629 pn922 pn1644 pn2495 pn1979 
+147,"Apr 23, 2015",14:30,15:50,A,"Papers: Multi-Device Interaction","Michael Nebeling","401",,,pn479 pn855 pn1715 pn1066  
+148,"Apr 22, 2015",9:30,10:50,E,"Papers: Neighborhoods &amp; Disadvantaged Communities","Katharina Reinecke","E3",,,pn262 pn389 pn1689 pn2238  
+149,"Apr 23, 2015",9:30,10:50,E,"Papers: Multilingual Communication","Hao-Chuan Wang","E3",,,pn1972 pn1497 pn2288 pn1095  
+150,"Apr 21, 2015",9:30,10:50,F,"Papers: Sustainability &amp; Recycling","Adrian Clear","E4",,,pn982 pn833 pn2310 pn569  
+151,"Apr 21, 2015",16:30,17:50,E,"Papers: Understanding Crowdwork in Many Domains","Uichin Lee","E3",,,pn2423 pn1539 pn2626 pn239  
+152,"Apr 21, 2015",9:30,10:50,E,"Papers: Motivation &amp; Participation","Meredith Morris","E3",,,pn1059 pn906 pn2375 pn747  
+153,"Apr 22, 2015",9:30,10:50,J,"Papers: Experience Design for Games","Florian Mueller","307",,,pn1061 pn2483 pn1296 pn1727  
+154,"Apr 22, 2015",9:30,10:50,D,"Papers: Player Performance &amp; Experience in Games&nbsp; ","Jan Smeddinck","E1/E2",,,pn2627 pn448 pn605 pn1687  
+155,"Apr 21, 2015",16:30,17:50,D,"Papers: Families and Their Use of Technology","Jennifer Marlow","E1/E2",,,pn1051 pn450 jrn123 pn716  
+156,"Apr 22, 2015",14:30,15:50,D,"Papers: Kids Social, Emotional &amp; Special Needs","Konstantinos Kazakos","E1/E2",,,pn1337 pn1848 pn1049 pn189 pn1885 pn2134
+157,"Apr 23, 2015",14:30,15:50,D,"Papers: Understanding &amp; Protecting Kids Tech Use","Svetlana Yarosh","E1/E2",,,pn1742 pn598 pn2340 pn1530  
+158,"Apr 21, 2015",16:30,17:50,G,"Papers: Sports Tracking &amp; Training","Hao-Hua Chu","E5",,,pn611 pn2289 pn1856 pn1010  
+159,"Apr 20, 2015",14:30,15:50,G,"Papers: Making &amp; Sharing Assistive Technologies","Suranga Nanayakkara","E5",,,pn885 pn1001 pn1118 pn1124 pn2191 
+160,"Apr 21, 2015",9:30,10:50,G,"Papers: The Value of the Village in Caregiving","Lena Mamykina","E5",,,pn2185 pn1945 jrn108 pn2419 pn248 
+161,"Apr 20, 2015",16:30,17:50,G,"Papers: Health Sensors &amp; Monitoring","Regan Mandryk","E5",,,pn408 pn422 pn1990 pn1424  
+162,"Apr 21, 2015",14:30,15:50,G,"Papers: DIY Healthcare: Apps &amp; Wearables","David Coyle","E5",,,pn780 pn1722 pn1046 pn1058  
+163,"Apr 21, 2015",11:30,12:50,G,"Papers: Healthcare Bias, Engagement &amp; Adaptation","Tae-Jung Yun","E5",,,pn1045 jrn109 pn103 pn2470  
+164,"Apr 23, 2015",14:30,15:50,G,"Papers: Home Physiotherapy &amp; Rehabilitation","Yi-Ping Hung","E5",,,pn1439 pn2000 pn2603 pn1144 pn2481 
+165,"Apr 22, 2015",11:30,12:50,E,"Papers: Bridging People &amp; Beliefs with Social Media","N. Sadat Shami","E3",,,pn409 pn1506 pn1032 pn242  
+166,"Apr 22, 2015",9:30,10:50,C,"Papers: UI Impact on Performance &amp; Decisions","Tom Gross","403",,,pn1889 pn595 pn1571 pn1189  
+167,"Apr 20, 2015",16:30,17:50,J,"Papers: The Value of Things","Mark Blythe","307",,,jrn113 pn1376 pn148 pn1498  
+168,"Apr 20, 2015",16:30,17:50,C,"Papers: Understand &amp; Enhancing Learning","Chris Quintana","403",,,pn1147 pn933 jrn119 jrn128  
+169,"Apr 23, 2015",11:30,12:50,C,"Papers: MOOCS &amp;&nbsp;e-Learning","Juho Kim","403",,,pn1574 pn1167 pn1335 pn727  
+170,"Apr 22, 2015",14:30,15:50,F,"Papers: Security Feedback &amp; Warnings ","Alexander De Luca","E4",,,pn652 pn1047 pn1656 pn2548  
+171,"Apr 21, 2015",11:30,12:50,F,"Papers: Smart Smartphone Authentication","Andrea Bianchi","E4",,,pn136 pn657 pn480 pn1031 pn167 pn298
+172,"Apr 23, 2015",14:30,15:50,H,"Papers: Interaction Techniques for Tables &amp; Walls","Tom Bartindale","E6",,,pn1673 pn1069 pn1016 pn1170 pn1927 
+173,"Apr 23, 2015",14:30,15:50,E,"Papers: Social Media &amp; Citizen Science","Elena Glassman","E3",,,pn1386 pn2224 pn207 pn586 pn1558 pn1257
+174,"Apr 22, 2015",9:30,10:50,B,"Papers: Tangible Interaction with Phones","Shengdong Zhao","402",,,pn1533 pn783 pn1054 pn312  
+175,"Apr 23, 2015",9:30,10:50,C,"Papers: Programming Environments","Joonhwan Lee","403",,,pn1948 pn1618 pn2560 pn160 pn1652 
+176,"Apr 21, 2015",14:30,15:50,F,"Papers: Social Media and Mobile Camera Privacy","Pam Briggs","E4",,,pn2244 pn371 pn287 pn2478 pn655 
+177,"Apr 21, 2015",16:30,17:50,J,"Papers: Critical Design","Giulio Jacucci","307",,,pn1641 pn1426 pn1486 pn1623  
+178,"Apr 21, 2015",9:30,10:50,J,"Papers: Supporting Creativity&nbsp;through UX Design","Luciano Gamberini","307",,,jrn104 pn1419 pn2022 pn234 pn302 
+179,"Apr 20, 2015",14:30,15:50,C,"Papers: Understanding &amp; Evaluating Performance","Richard Davis","403",,,pn2048 pn2620 pn155 pn1596  
+180,"Apr 21, 2015",11:30,12:50,C,"Papers: New Evaluation Approaches","David England","403",,,pn2425 pn1188 pn528 pn1887  
+181,"Apr 20, 2015",11:30,12:50,C,"Papers: Rethinking Evaluation for Today's HCI","Wendy Mackay","403",,,pn1573 pn1166 pn1832 pn2386 pn1893 
+182,"Apr 20, 2015",14:30,15:50,D,"Papers: Music &amp; Art","Jonathan Hook","E1/E2",,,pn1942 pn587 pn1834 pn815  
+183,"Apr 22, 2015",11:30,12:50,C,"Papers: Automation and Interactive&nbsp;Feedback","Davide Spano","403",,,pn2147 pn2651 pn551 pn361  
+184,"Apr 21, 2015",14:30,15:50,H,"Papers: Social Embodied Interaction","Gina Venolia","E6",,,pn1828 pn1258 pn2536 jrn106  
+185,"Apr 20, 2015",16:30,17:50,H,"Papers: Collaborative Tables, Walls &amp; Rooms","Harald Reiterer","E6",,,pn564 jrn134 pn851 pn2005  
+186,"Apr 22, 2015",11:30,12:50,A,"Papers: Digital &amp; Materials Fabrication","Stefanie Mueller","401",,,pn1088 pn1911 pn631 pn2312  
+187,"Apr 22, 2015",16:30,17:50,E,"Papers: Voting &amp; Volunteerism","Andres Monroy-Hernandez","E3",,,pn2348 pn1299 pn699 pn1751  
+188,"Apr 22, 2015",14:30,15:50,A,"Special: SIGCHI Lifetime Practice Award","Jacob Robert","401",,,talks105     
+189,"Apr 22, 2015",14:30,15:50,A,"Special: SIGCHI Lifetime Practice Award","Robert Jacob","401",,,talks105     
+190,"Apr 22, 2015",14:30,15:50,A,"Special: SIGCHI Lifetime Practice Award","Robert Jacob","401",,,talks105     
+191,"Apr 21, 2015",14:30,15:50,A,"Special: SIGCHI Lifetime Research Award","Scott Klemmer","401",,,talks106     
+192,"Apr 21, 2015",14:30,15:50,A,"Special: SIGCHI Lifetime Research Award","Scott Klemmer","401",,,talks106     
+193,"Apr 20, 2015",14:30,15:50,A,"Special: SIGCHI Social Impact Award","Loren Terveen","401",,,talks107     
+194,"Apr 22, 2015",11:30,12:50,M,"Special: Student Research Competition Finals","","317BC",,,src     
+195,"Apr 22, 2015",14:30,15:50,M,"Special: Student Design Competition Finals","","317BC",,,sdc     
+196,"Apr 22, 2015",16:30,17:50,M,"Special: Student Game Competition Finals","","317BC",,,sgc     
+197,"Apr 21, 2015",11:30,12:50,D,"Special: Foundations &amp; Trends in HCI 1","Gregory Abowd","E1/E2",,,jrn138 jrn155    
+198,"Apr 22, 2015",11:30,12:50,F,"Special: Foundations &amp; Trends in HCI 2","Yvonne Rogers","E4",,,jrn137 jrn154    

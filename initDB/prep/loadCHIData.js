@@ -636,7 +636,7 @@ function mode(array)
 
 function createScheduleData(){
     var schedule = [];
-    var rooms = ["Hall D1", "401", "E5", "E6", "E1/E2", "402", "E3", "E4", "403", "307ABC", "308ABC", "317A", "317BC", "E7", "318BC", "318A"];
+    var rooms = ["Hall D1", "401", "E5", "E6", "E1/E2", "402", "E3", "E4", "403", "307", "308", "317A", "317BC", "E7", "318BC", "318A"];
 
     var slots = [
             {"date": "Monday", "time": "11:30-12:50"},

@@ -1,27 +1,21 @@
 var fs = require('fs');
-var csv = require('csv');
+var csv = require('csv-parse');
 var ENTITYFILE = "papers.json";
 var SESSIONFILE = "sessions.json";
 var SCHEDULEFILE = "schedule.json";
+var SCHEDULECSVFILE = "scheduleTable.csv";
+var AWARDCSVFILE = "award.csv";
 
 var makeScheduleCSV = true;
+var makeAwardCSV = true;
 var sessionIgnore = []//['s-crs115R-1', 's-crs115R-2'];
-
-// var extraChairs = {
-//     "s-alt1" : "Daniela Rosner",
-//     "s-alt2" : "Barry Brown",
-//     "s-alt3" : "Silvia Lindtner",
-//     "s-alt4" : "Morgan Ames",
-//     "s-alt6" : "Lilly Irani",
-//     "s-alt5" : "Conor Linehan"
-// }
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
     host     : 'mysql.csail.mit.edu',
     user     : 'cobi',
     password : 'su4Biha',
-    database : 'cobiCHI2014'
+    database : 'cobiCHI2015Dev'
 });
 
 var keynotes = [];
@@ -31,18 +25,10 @@ var sessionOutput = null;
 var schedule = null;
 var entity = null;
 
-var caseStudyEntity = {
-    "caseDiscuss": {
-        "title": "Questions & Answers and Discussion",
-        "abstract": "The last 20 minutes of this session will be used for questions and answers, as well as discussions, for all three of the case studies which were presented.",
-        "cAndB": "",
-        "keywords": [],
-        "authors": [],
-        "type": "casestudy",
-        "subtype": "casestudy"
-    },
-}
 
+// SPECIAL SESSIONS
+// To be added as this year's specific programs get finalized.
+/*
 var previewSchedule = [
     {
 	"day": "Monday",
@@ -226,7 +212,7 @@ var showcaseSchedule = {
             }
 	]
     }
-}; 
+};
 
 var showcaseSession = {
     "s-showcase": {
@@ -249,7 +235,7 @@ var showcaseSession = {
 var showcaseEntity = {
     "showcase": {
         "title": "Video Showcase",
-        "abstract": "Video Showcase features engaging videos that offer a variety of perspectives on human-computer interaction, including novel interfaces, reflective pieces and future envisionments. Come and enjoy the best videos on Tuesday (17:30) followed by the Golden Mouse award ceremony.", 
+        "abstract": "Video Showcase features engaging videos that offer a variety of perspectives on human-computer interaction, including novel interfaces, reflective pieces and future envisionments. Come and enjoy the best videos on Tuesday (17:30) followed by the Golden Mouse award ceremony.",
         "cAndB": "",
         "keywords": [
         ],
@@ -306,6 +292,8 @@ var townhallEntity = {
         "subtype": "special"
     },
 }
+
+
 
 var keynoteSchedule = [
     {
@@ -459,12 +447,16 @@ var keynoteSessions = {
 };
 
 getKeynotes();
+*/
+
+// CHI 2015
+writeOutputs();
 
 function writeOutputs(){
     connection.connect();
-    connection.query("set names 'latin1'", function(err, rows, fields){ 
+    connection.query("set names 'latin1'", function(err, rows, fields){
 	if(err) throw err;
-	
+
 	connection.query('SELECT * from session where scheduled=1', function(err, rows, fields) {
 	    if (err) throw err;
 	    sessions = rows;
@@ -479,11 +471,11 @@ function getEntities(connection){
 	host     : 'mysql.csail.mit.edu',
 	user     : 'cobi',
 	password : 'su4Biha',
-	database : 'cobiCHI2014'
+	database : 'cobiCHI2015Dev'
     });
-    connection2.query("set names 'latin1'", function(err, rows, fields){ 
+    connection2.query("set names 'latin1'", function(err, rows, fields){
 	if(err) throw err;
-	
+
 	connection2.query("SELECT * from entity", function(err, rows, fields) {
 	    if (err) throw err;
 	    entities = rows;
@@ -496,9 +488,9 @@ function getEntities(connection){
 function getSchedule(connection){
     connection.query("SELECT * from schedule where id<>''", function(err, rows, fields) {
 	if (err) throw err;
-	schedule = rows;
-	writeSchedule(schedule);
-	connection.end();
+    	schedule = rows;
+    	writeSchedule(schedule);
+    	connection.end();
     });
 }
 
@@ -531,7 +523,7 @@ function getKeynotes(){
 		    {
 			"name": keynotes[i]['Given name 1'] + " " + keynotes[i]['Family name 1'],
 			"givenName" : keynotes[i]['Given name 1'],
-			"familyName" : keynotes[i]['Family name 1'], 
+			"familyName" : keynotes[i]['Family name 1'],
 			"dept": keynotes[i]['Primary Affiliation 1 - Department/School/Lab'],
 			"institution": keynotes[i]['Primary Affiliation 1 - Institution'],
 			"city": keynotes[i]['Primary Affiliation 1 - City'],
@@ -541,15 +533,21 @@ function getKeynotes(){
 			"location": getLocation(keynotes[i]['Primary Affiliation 1 - City'], keynotes[i]['Primary Affiliation 1 - Country'])
 		    }
 		]
-		
+
 	    };
 	}
 	keynoteEntity = output;
 	writeOutputs();
     });
 }
-	
 
+
+function getAuthorEmails(ent){
+    var authors = ent['authors'];
+    return JSON.parse(authors).map(function(x) {
+        return x.email;
+    });
+}
 
 function getAuthors(ent){
     var authors = ent['authors'];
@@ -562,9 +560,9 @@ function getAuthors(ent){
 	'institution': (('primary' in x) ? x['primary']['institution'] : ''),
 	'city' : (('primary' in x) ? x['primary']['city'] : ''),
 	'country' :(('primary' in x) ? x['primary']['country'] : ''),
-	'affiliation' : (('primary' in x) ? 
+	'affiliation' : (('primary' in x) ?
 			 getAffiliation(x['primary']['dept'], x['primary']['institution']) : ""),
-	'location' : (('primary' in x) ? 
+	'location' : (('primary' in x) ?
 			 getLocation(x['primary']['city'], x['primary']['country']) : "")
     }});
 }
@@ -629,44 +627,80 @@ function getSubtype(ent){
 }
 
 function getCB(ent){
-    return ent['cAndB'].replace(/\\  /g,"").replace(/\\ /g, "").replace(/\\/g,"")    
+    return ent['cAndB'].replace(/\\  /g,"").replace(/\\ /g, "").replace(/\\/g,"")
 }
 
 function writeEntities(entities){
     var output = {};
     for(var e in entities){
-	var ent = entities[e];
-	output[ent.id] = {
-	    "title" : getTitle(ent),
-	    "abstract" : getAbstract(ent),
-	    "cAndB" : getCB(ent),
-	    "keywords" : getKeywords(ent),//JSON.parse(ent['coreCommunities']).join(", "),
-	    "authors" : getAuthors(ent),
-	    "type": getType(ent),
-	    "subtype": getSubtype(ent),
-	    "award": ent.bestPaperAward==1,
-            "hm": ent.bestPaperNominee==1
-	}
+    	var ent = entities[e];
+    	output[ent.id] = {
+    	    "title" : getTitle(ent),
+    	    "abstract" : getAbstract(ent),
+    	    "cAndB" : getCB(ent),
+    	    "keywords" : getKeywords(ent),//JSON.parse(ent['coreCommunities']).join(", "),
+    	    "authors" : getAuthors(ent),
+    	    "type": getType(ent),
+    	    "subtype": getSubtype(ent),
+    	    "award": ent.bestPaperAward==1,
+                "hm": ent.bestPaperNominee==1
+    	}
     }
     for(var e in keynoteEntity){
 	output[e] = keynoteEntity[e];
     }
+/*
     for(var e in townhallEntity){
 	output[e] = townhallEntity[e];
     }
-    
+
     for(var e in showcaseEntity){
 	output[e] = showcaseEntity[e];
-}
-for(var e in caseStudyEntity){
- output[e] = caseStudyEntity[e]
-}
+    }
 
-for(var e in previewEntities){
-output[e] = previewEntities[e];
-}
+    for(var e in previewEntities){
+    output[e] = previewEntities[e];
+    }
+*/
+
+    if(makeAwardCSV){
+        generateAwardCSV(entities);
+    }
+
     fs.writeFile(ENTITYFILE, 'entities='+JSON.stringify(output, null, 4), function(err) {});
 }
+
+function generateAwardCSV(entities) {
+    var table = [];
+    var header = ["Paper ID", "Type of Award", "Paper Title", "Authors", "\n"];
+    table.push(header);
+
+    for(var e in entities){
+        var ent = entities[e];
+        var awardType = "";
+        if (ent.bestPaperAward==1) {
+            awardType = "bp";
+        } else if (ent.bestPaperNominee==1) {
+            awardType = "hm";
+        } else {
+            continue;
+        }
+        var row = [];
+        row.push(ent.id);
+        row.push(awardType);
+        row.push("\"" + getTitle(ent) + "\"");
+        row.push("\"" + getAuthorEmails(ent).join(' ') + "\"");
+        row.push("\n");
+        table.push(row);
+        // console.log(row);
+    }
+    console.log(table.length, table);
+
+    csv(table, {}, function(err, data){
+        fs.writeFile(AWARDCSVFILE, table, function(err) {});
+    });
+}
+
 
 function getId(s){
     s = s.replace(/ /g, "_");
@@ -678,13 +712,14 @@ function getId(s){
 }
 
 function getTimeClass(t){
-    var time = parseFloat((t.split('-'))[0].replace(':', '.'));
-    var classHash = 
+    var time = parseInt((t.split('-'))[0].replace(':', '.'));
+    var classHash =
 	{'9': 'morning1',
 	 '11': 'morning2',
 	 '14': 'afternoon1',
 	 '16': 'afternoon2',
 	};
+    console.log(t, time, classHash[time]);
     return classHash[time];
 }
 
@@ -692,18 +727,18 @@ function writeSchedule(schedule){
     var output = [];
     var dateIndex = ['Monday','Tuesday','Wednesday','Thursday'];
 
-    var roomIndex = ["Exhibit Hall G", "701A","701B", "707","709","711", "713AB", "714AB","715A","715B", "716A","716B","717AB","718AB","801A","801B","801AB","802AB", "803AB"]
+    // var roomIndex = ["Exhibit Hall G", "701A","701B", "707","709","711", "713AB", "714AB","715A","715B", "716A","716B","717AB","718AB","801A","801B","801AB","802AB", "803AB"]
+    var roomIndex = ["Hall D1", "401", "E5", "E6", "E1/E2", "402", "E3", "E4", "403", "307", "308", "317A", "317BC", "E7", "318BC", "318A"];
 
 
-//    var roomIndex = ["Exhibit Hall G","718A","718B","701A","701B","801A","801B","803AB","716A","716B","714AB","717AB","802AB","715A","715B","713AB","707","709","711"]; //, "Plenary"];
-    var dates = ["April 28th, 2014", "April 29th, 2014", "April 30th, 2014", "May 1st, 2014"];
-    
+    var dates = ["April 20, 2015", "April 21, 2015", "April 22, 2015", "April 23, 2015"];
+
     schedule.sort(function (a,b){
 	var dateA = (a.date.split(','))[0];
 	var dateB = (b.date.split(','))[0];
 
 	if(dateA != dateB){
-	    return dateIndex.indexOf(dateA) - 
+	    return dateIndex.indexOf(dateA) -
 		dateIndex.indexOf(dateB);
 	}else{ // same date
 	    var timeA = parseFloat((a.time.split('-'))[0].replace(':', '.'));
@@ -726,27 +761,27 @@ function writeSchedule(schedule){
 		    'slot_class' : getTimeClass(schedule[0].time),
 		    'sessions' : []
 		   };
-    
+
     for(var i = 0; i < schedule.length; i++){
 	if(dates[dateIndex.indexOf(schedule[i].date)] != DD.date){
 	    slots.push(timeSlot);
 	    DD.slots = slots;
 	    SD.push(DD);
-	    
+
 	    DD = {"date": dates[dateIndex.indexOf(schedule[i].date)],// schedule[i].date,
 		  "day" : (schedule[i].date.split(','))[0]
 		 }
 	    slots = [];
 	    timeSlot = {'slot_id' : getId(schedule[i].date + ' ' + schedule[i].time),
 			'time' : schedule[i].time.replace('-', ' - '),
-			'slot_class' : getTimeClass(schedule[i].time),	
+			'slot_class' : getTimeClass(schedule[i].time),
 			'sessions' : []
 		       };
 	}else if(schedule[i].time.replace('-', ' - ') != timeSlot.time){
 	    slots.push(timeSlot);
 	    timeSlot = {'slot_id' : getId(schedule[i].date + ' ' + schedule[i].time),
 			'time' : schedule[i].time.replace('-', ' - '),
-			'slot_class' : getTimeClass(schedule[i].time),	
+			'slot_class' : getTimeClass(schedule[i].time),
 			'sessions' : []
 		       };
 	}
@@ -755,11 +790,11 @@ function writeSchedule(schedule){
 	    'room' : schedule[i].room
 	});
     }
-    
+
     slots.push(timeSlot);
     DD.slots = slots;
     SD.push(DD);
-
+/*
     for(var i = 0; i < keynoteSchedule.length; i++){
 	insertScheduleSlot(keynoteSchedule[i], SD);
     }
@@ -769,9 +804,9 @@ function writeSchedule(schedule){
 
     insertScheduleSlot(townhallSchedule, SD);
     insertScheduleSlot(showcaseSchedule, SD);
-
+*/
     if(makeScheduleCSV){
-	generateScheduleCSV(SD, roomIndex, dates)
+	    generateScheduleCSV(SD, roomIndex, dates)
     }
 
     fs.writeFile(SCHEDULEFILE, 'schedule='+JSON.stringify(SD, null, 4), function(err) {});
@@ -784,22 +819,28 @@ function generateScheduleCSV(sch, rooms, dates){
     for(var i = 0; i < rooms.length; i++)
 	header.push(rooms[i]);
 
-    table.push(header)
+    table.push(header);
     for(var d = 0; d < sch.length; d++){
-	var date = sch[d].day + ", " + sch[d].date;
-	for(var s = 0; s < sch[d].slots.length; s++){
-	    var time = sch[d].slots[s].time
-	    var row = [date, time]
-	    for(var r in rooms) row.push("");
-	    for(var ss = 0; ss < sch[d].slots[s].sessions.length; ss++){
-		var session  = sch[d].slots[s].sessions[ss]
-		
-		row[rooms.indexOf(session.room) +2] = "[" + sessionOutput[session.session].venue + "] " + session.session + ": " + sessionOutput[session.session].s_title
-	    }
-	    table.push(row)
-	}
+    	var date = sch[d].day + ", " + sch[d].date;
+    	for(var s = 0; s < sch[d].slots.length; s++){
+            // console.log(sch[d].slots[s]);
+    	    var time = sch[d].slots[s].time
+    	    var row = [date, time]
+    	    for(var r in rooms) row.push("");
+    	    for(var ss = 0; ss < sch[d].slots[s].sessions.length; ss++){
+        		var session  = sch[d].slots[s].sessions[ss];
+                // console.log(session.session, sessionOutput[session.session]);
+        		row[rooms.indexOf(session.room) +2] = "[" + sessionOutput[session.session].venue + "] " + session.session + ": " + sessionOutput[session.session].s_title;
+    	    }
+    	    table.push(row);
+    	}
     }
-    csv().from(table).to('scheduleTable.csv')
+//    csv().from(table).to(SCHEDULECSVFILE);
+
+
+    csv(table, {}, function(err, data){
+        fs.writeFile(SCHEDULECSVFILE, table, function(err) {});
+    });
 }
 
 function insertScheduleSlot(slot, sch){
@@ -841,13 +882,25 @@ function lookupChair(session, chairs){
     return resolveName(match[0]);
 }
 
+
+// Remove any HTML tag from the text
+function removeHTMLTags(text) {
+    var result = text.replace(/(<([^>]+)>)/ig,"");
+    // console.log(result);
+    return result;
+    // var div = document.createElement("div");
+    // div.innerHTML = text;
+    // return div.textContent || div.innerText || "";
+}
+
+
 function writeSessions(sessions, chairs){
     var output = {};
     for(var s in sessions){
 	if(sessionIgnore.indexOf(sessions[s].id) >= 0) continue;
 	var ses = sessions[s];
 	output[ses.id] = {
-	    "s_title": ses.title,
+	    "s_title": removeHTMLTags(ses.title),
 	    "room": ses.room,
 	    "time": ses.time,
 	    "submissions": getSubmissions(ses),
@@ -862,29 +915,25 @@ function writeSessions(sessions, chairs){
 	    "chair": lookupChair(ses, chairs)
 	}
     }
-
+/*
     for(var s in keynoteSessions){
 	output[s] = keynoteSessions[s];
     }
-    
+
     for(var s in previewSessions){
 	output[s] = previewSessions[s];
     }
-    
+
     for(var s in townhallSession){
 	output[s] = townhallSession[s];
     }
     for(var s in showcaseSession){
 	output[s] = showcaseSession[s];
     }
-    
-//    for(var s in extraChairs){
-//	output[s].chair = extraChairs[s]
-//    }
-
-    output['s-case-1'].submissions.push('caseDiscuss')
-    output['s-case-2'].submissions.push('caseDiscuss')
-    output['s-case-3'].submissions.push('caseDiscuss')
+*/
+    // output['s-case-1'].submissions.push('caseDiscuss')
+    // output['s-case-2'].submissions.push('caseDiscuss')
+    // output['s-case-3'].submissions.push('caseDiscuss')
 
     sessionOutput = output;
     fs.writeFile(SESSIONFILE, 'sessions='+JSON.stringify(output, null, 4), function(err) {});

@@ -943,6 +943,7 @@
 
         // Scheduled / Unscheduled Session
         } else {
+            console.log(scheduleSlots, session, session.date, session.time, session.room);
             if(type !== "unscheduled" && scheduleSlots[session.date][session.time][session.room]['locked'])
                 $(cell).find(".title").addClass("locked");
 
